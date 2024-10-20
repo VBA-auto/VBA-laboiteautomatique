@@ -405,7 +405,7 @@ const SingleVehicleView = ({ params }) => {
                     </div>
                     <div className="text-center">
                       <Link target="_blank" href={selectedType?.payLink}>
-                        <button className="bg-[#2c80efcc] text-white text-[15px] px-10 py-3 rounded-sm shadow-md">
+                        <button className="bg-[#2c80efcc] text-white text-[15px] px-5 py-3 rounded-md shadow-md">
                           Valider la commande
                         </button>
                       </Link>

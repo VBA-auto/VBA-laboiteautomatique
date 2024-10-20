@@ -319,7 +319,7 @@ const SingleSearchView = ({ params }) => {
                             setShowSpinner(false);
                             setShowCoupon(true); // Show coupon after spinner
                           }}
-                          className="bg-gradient-to-r from-blue-400 to-blue-500 text-white px-3 py-3 rounded-sm shadow-lg hover:scale-105 transition-transform duration-300 mt-4 mx-auto block text-[15px]"
+                          className="text-blue-400 hover:text-blue-200  rounded-sm transition-transform duration-300 mt-4 mx-auto block text-[15px]"
                         >
                           Code de reduction disponible
                         </button>
@@ -387,7 +387,7 @@ const SingleSearchView = ({ params }) => {
                     </div>
                     <div className="text-center">
                       <Link target="_blank" href={SearchSingleView?.payLink}>
-                        <button className="bg-[#2c80efcc] text-white text-[15px] px-10 py-3 rounded-sm shadow-md">
+                        <button className="bg-[#2c80efcc] text-white text-[15px] px-5 py-3 rounded-md shadow-md">
                           Valider la commande
                         </button>
                       </Link>

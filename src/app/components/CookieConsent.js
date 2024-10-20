@@ -50,7 +50,7 @@ const CookieConsent = () => {
           </button>
         </div>
 
-        <p>
+        <p className="cokkiP">
           Ce site utilise des cookies. En utilisant notre site, vous consentez à
           l&apos;utilisation de tous les cookies conformément à notre politique
           en matière de cookies.

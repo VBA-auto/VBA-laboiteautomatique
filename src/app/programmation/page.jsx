@@ -61,7 +61,7 @@ const Programmation = () => {
                         <div className="">
                           <Link href="/renault-clio">
                             <p className="bg-gray-100 rounded-md text-center  ">
-                              Clio IV
+                              Megane
                             </p>
                           </Link>
                         </div>
@@ -83,50 +83,53 @@ const Programmation = () => {
                       </ul>
                     </div>
                     <p className="my-3 text-[15px]">Références compatibles :</p>
-                    <div className="flex justify-center ">
-                      <div className="w-full text-gray-600 text-[15px]   instalLaptop">
-                        <p>
-                          310321488R - 310321517R - 310320841R - 310320717R -
-                          310320892R
-                        </p>
-                        <p>
-                          310320721R - 310321520R - 310321561R - A4539006303 -
-                          310321808R
-                        </p>
-                        <p>
-                          310321150R - 310321421R - 310321706R - 310321716R -
-                          310321793R
-                        </p>
-                        <p>
-                          310321662R - 310321524R - 310321994R - 310322059R -
-                          310F93913R
-                        </p>
-                        <p>
-                          310321149R - 310321306R - 310320553R - 310321359R -
-                          310321488R
-                        </p>
-                        <p>
-                          3A2C3074300 - 0310320749R - 310320891R - 310320756R -
-                          310321109R
-                        </p>
-                        <p className="text-[15px]">
-                          A2C30743000 01 K00 - A2C53374830 03 K01 - A2C30743100
-                          - A2C73768907
-                        </p>
+                    <div className=" ">
+                      <div className="grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-6 gap-2 text-gray-600 text-[15px]">
+                        {[
+                          "310321488R",
+                          "310321517R",
+                          "310320841R",
+                          "310320717R",
+                          "310320892R",
+                          "310320721R",
+                          "310321520R",
+                          "310321561R",
+                          "310321808R",
+                          "310321150R",
+                          "310321421R",
+                          "310321706R",
+                          "310321716R",
+                          "310321793R",
+                          "310321662R",
+                          "310321524R",
+                          "310321994R",
+                          "310322059R",
+                          "310F93913R",
+                          "310321149R",
+                          "310321306R",
+                          "310320553R",
+                          "310321359R",
+
+                          "310320749R",
+                          "310320891R",
+                          "310320756R",
+                          "310321109R",
+                          "A2C30743000",
+                          "A2C53374830",
+                        ].map((code) => (
+                          <a
+                            key={code}
+                            href={`/${encodeURIComponent(code)}`}
+                            className="hover:underline"
+                          >
+                            {code}
+                          </a>
+                        ))}
                       </div>
-                      <div className="w-full italic text-gray-600 instalMobile">
-                        <p className="text-[15px]">
-                          3A2C3074300 - 0310320749R - 310320891R <br />{" "}
-                          310320756R - 310321109R - 310321488R <br /> 310321517R
-                          - 310320841R - 310320717R <br /> 310320892R -
-                          310320721R - 310321520R <br /> 310321561R -
-                          A4539006303 - 310321808R <br /> 310321150R -
-                          310321421R - 310321706R <br />
-                          310321716R - 310321793R - 310321662R <br /> 310321524R
-                          - 310321994R - 310322059R <br /> 310F93913R -
-                          310321149R - 310321306R <br /> 310320553R - 310321359R
-                          - 310321488R <br /> A2C30743000 01 K00 - A2C53374830
-                          03 K01 <br /> A2C30743100 - A2C73768907
+                      <div className="">
+                        <p className="text-[15px] mt-2">
+                          A2C30743000 01 K00, A2C53374830 03 K01, A2C30743100,
+                          A2C73768907, A4539006303
                         </p>
                       </div>
                     </div>
@@ -141,7 +144,7 @@ const Programmation = () => {
                   </div>
                 </div>
                 <div className="md:w-[45%]">
-                  <div className="md:h-[396px]">
+                  <div className="md:h-[415px]">
                     <Image
                       width={500}
                       height={500}

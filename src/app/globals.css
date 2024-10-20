@@ -28,6 +28,9 @@ body {
     rgba(255, 255, 255, 1) 100%
   );
 }
+.cokkiP {
+  font-size: 14px;
+}
 /* Style for custom checkboxes */
 input[type="checkbox"] {
   appearance: none; /* Remove default styling */
