@@ -50,7 +50,7 @@ const CookieConsent = () => {
           </button>
         </div>
 
-        <p style={{ fontSize: "14px", color: "#555" }}>
+        <p className="text-[14px] text-[#555]">
           Ce site utilise des cookies. En utilisant notre site, vous consentez à
           l&apos;utilisation de tous les cookies conformément à notre politique
           en matière de cookies.
