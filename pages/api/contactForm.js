@@ -7,8 +7,8 @@ const ContactForm = async (req, res) => {
 
     const transporter = nodemailer.createTransport({
       host: "mail.laboiteautomatique.com",
-      port: 587,
-      secure: false,
+      port: 465,
+      secure: true,
       auth: {
         user: "contact@laboiteautomatique.com",
         pass: "Brice008//@@",
