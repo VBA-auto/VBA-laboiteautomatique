@@ -310,7 +310,7 @@ const SingleSearchView = ({ params }) => {
                     <div className="mt-5">
                       {showCoupon ? (
                         <p className="font-[500] text-normal text-center">
-                          Code reduction ci-dessous
+                          Code réduction ci-dessous
                         </p>
                       ) : (
                         ""

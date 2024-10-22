@@ -381,7 +381,7 @@ const SingleVehicleView = ({ params }) => {
                           }}
                           className="text-blue-400 hover:text-blue-200  rounded-sm transition-transform duration-300 mt-4 mx-auto block text-[15px]"
                         >
-                          Code de reduction disponible
+                          Code de réduction disponible
                         </button>
                       )}
 
