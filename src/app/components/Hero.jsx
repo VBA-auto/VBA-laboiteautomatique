@@ -15,6 +15,7 @@ const Hero = () => {
   const HeadingText = "Vente et reprogrammation de calculateur Renault DC4";
   const secondaryHeadingText =
     "calculateur boite automatique Renault Captur, calculateur boite automatique Renault Clio 4, calculateur boite automatique Renault Mégane, calculateur boite automatique Renault scénic, calculateur boite automatique Renault fluence, calculateur boite automatique Ford Focus";
+  console.log("this is from vercel");
 
   return (
     <>
