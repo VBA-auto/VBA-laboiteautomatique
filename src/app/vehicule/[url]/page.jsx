@@ -17,22 +17,29 @@ const SingleVehicleView = ({ params }) => {
   const [showCoupon, setShowCoupon] = useState(false);
   const [copied, setCopied] = useState(false);
   const url = params?.url;
-  const [stock, setStock] = useState(7);
 
-  // Optimize stock update logic using useCallback
+  const [stock, setStock] = useState(0);
+  useEffect(() => {
+    if (selectedType) {
+      setStock(selectedType.stock);
+    }
+  }, [selectedType]);
+
   const updateStock = useCallback(() => {
-    setStock((prevStock) => (prevStock <= 1 ? 7 : prevStock - 1));
+    setStock((prevStock) => (prevStock <= 0 ? 7 : prevStock - 1)); // Reset to 7 if 1, otherwise decrement
   }, []);
 
-  // Set interval to update stock every 18 hours
   useEffect(() => {
-    const interval = setInterval(updateStock, 18 * 60 * 60 * 1000); // 18 hours
-    return () => clearInterval(interval); // Cleanup interval
+    const interval = setInterval(updateStock, 12 * 60 * 60 * 1000);
+    // For testing, change 18 hours to 1000ms (1 second):
+    // const interval = setInterval(updateStock, 1000);
+
+    return () => clearInterval(interval); // Cleanup interval on component unmount
   }, [updateStock]);
 
-  // Memoize stock formatting to avoid recalculating on each render
+  // 3. Memoize stock formatting to optimize performance
   const formatStock = useMemo(
-    () => (stock) => stock.toString().padStart(2, "0"),
+    () => (value) => value.toString().padStart(2, "0"),
     []
   );
 
@@ -239,10 +246,10 @@ const SingleVehicleView = ({ params }) => {
                     </div>
                     <div className="md:w-1/2 flex items-center md:justify-end justify-center gap-5">
                       <div className="text-center">
-                        {Number(selectedType?.stock) <= 0 ? (
+                        {Number(stock) <= 0 ? (
                           <>
                             <div className="md:flex gap-5 mt-3 md:mt-0 items-center">
-                              <p className="text-[15px] text-[#C33E1D]">
+                              <p className="text-[15px] text-[#5BB853]">
                                 Bientôt disponible
                               </p>
                               <Link href="/contact">

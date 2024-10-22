@@ -46,7 +46,7 @@ const Produits = () => {
                 {/* Produits */}
                 <div className="lg:w-full rounded-md shadow-sm p-5 singleProductCard accent_color bg-white/50">
                   <div className="">
-                    <DynaStock number={7} color="enStock" />
+                    <DynaStock carName="Renault Captur" />
                   </div>
                   <Link href="/renault-captur">
                     <div className="">
@@ -96,7 +96,7 @@ const Produits = () => {
                 {/* Produit 2 */}
                 <div className="lg:w-full rounded-md shadow-sm p-5 bg-white/50 singleProductCard accent_color">
                   <div className="">
-                    <DynaStock number={1} color="danger" />
+                    <DynaStock carName="Renault Clio" />
                   </div>
                   <Link href="/renault-clio">
                     <div className="">
@@ -144,7 +144,7 @@ const Produits = () => {
                 {/* Produit 3 */}
                 <div className="lg:w-full rounded-md shadow-sm p-5 bg-white/50 singleProductCard accent_color">
                   <div className="">
-                    <DynaStock number={2} color="warning" />
+                    <DynaStock carName="Renault megane" />
                   </div>
                   <Link href="/renault-megane">
                     <div className="">
@@ -195,7 +195,7 @@ const Produits = () => {
                 {/* Produit 4 */}
                 <div className="lg:w-full rounded-md shadow-sm p-5 bg-white/50 singleProductCard accent_color">
                   <div className="">
-                    <DynaStock number={1} color="danger" />
+                    <DynaStock carName="Renault Scenic" />
                   </div>
 
                   <Link href="/renault-scenic">
@@ -235,7 +235,7 @@ const Produits = () => {
                 {/* Produit 5 */}
                 <div className="lg:w-full rounded-md shadow-sm p-5 bg-white/50 singleProductCard accent_color">
                   <div className="">
-                    <DynaStock number={1} color="danger" />
+                    <DynaStock carName="Renault Fluence" />
                   </div>
                   <Link href="/renault-fluence">
                     <div className="">
@@ -277,7 +277,7 @@ const Produits = () => {
 
                 <div className="lg:w-full rounded-md  shadow-sm p-5 bg-white/50 singleProductCard accent_color">
                   <div className="">
-                    <DynaStock number={2} color="warning" />
+                    <DynaStock carName="Clio 4 RS" />
                   </div>
                   <Link href="/renault-clio-rs">
                     {" "}

@@ -17,22 +17,29 @@ const SingleSearchView = ({ params }) => {
   const [showSpinner, setShowSpinner] = useState(false);
   const [showCoupon, setShowCoupon] = useState(false);
   const [copied, setCopied] = useState(false);
-  const [stock, setStock] = useState(7);
+
+  const [stock, setStock] = useState(0);
+  useEffect(() => {
+    if (SearchSingleView) {
+      setStock(SearchSingleView.stock);
+    }
+  }, [SearchSingleView]);
 
   const updateStock = useCallback(() => {
-    setStock((prevStock) => (prevStock <= 1 ? 7 : prevStock - 1));
+    setStock((prevStock) => (prevStock <= 0 ? 7 : prevStock - 1)); // Reset to 7 if 1, otherwise decrement
   }, []);
 
-  // Set interval to update stock every 18 hours
   useEffect(() => {
-    const interval = setInterval(updateStock, 18 * 60 * 60 * 1000); // 18 hours
+    const interval = setInterval(updateStock, 12 * 60 * 60 * 1000);
+    // For testing, change 18 hours to 1000ms (1 second):
+    // const interval = setInterval(updateStock, 1000);
 
-    return () => clearInterval(interval); // Cleanup interval on unmount
-  }, [updateStock]); // Re-run effect only if updateStock changes
+    return () => clearInterval(interval); // Cleanup interval on component unmount
+  }, [updateStock]);
 
-  // Memoize stock formatting to improve performance
+  // 3. Memoize stock formatting to optimize performance
   const formatStock = useMemo(
-    () => (stock) => stock.toString().padStart(2, "0"),
+    () => (value) => value.toString().padStart(2, "0"),
     []
   );
 
@@ -68,7 +75,7 @@ const SingleSearchView = ({ params }) => {
     };
 
     fetchArticle();
-  }, [params]); // Re-run fetch if params change
+  }, [params]);
 
   return (
     <main>
@@ -109,7 +116,7 @@ const SingleSearchView = ({ params }) => {
                   <div className="md:w-[400px] bg-white rounded-tr-[5px] border-l-[1px] md:pb-0 pb-5">
                     <div className="flex justify-between items-center px-4 pt-4 pb-1">
                       <ReturnButton />
-                      <div className="">
+                      <div>
                         <p className="text-gray-700 py-1 text-center rounded-md flex justify-center items-center gap-2 text-[15px]">
                           <span
                             className={`w-[12px] h-[12px] ${
@@ -120,7 +127,7 @@ const SingleSearchView = ({ params }) => {
                                 : "bg-[#2aa31fc4]"
                             } rounded-full block`}
                           ></span>
-                          En stock:{" "}
+                          En stock:
                           <span
                             className={`${
                               stock <= 1
@@ -218,10 +225,10 @@ const SingleSearchView = ({ params }) => {
                     </div>
                     <div className="md:w-1/2 flex items-center md:justify-end justify-center gap-5 ">
                       <div className="text-center">
-                        {Number(SearchSingleView?.stock) <= 0 ? (
+                        {Number(stock) <= 0 ? (
                           <>
                             <div className="md:flex gap-5 mt-3 md:mt-0 items-center">
-                              <p className="text-[15px] text-[#C33E1D]">
+                              <p className="text-[15px] text-[#5BB853]">
                                 Bientôt disponible
                               </p>
                               <Link href="/contact">

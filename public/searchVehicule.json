@@ -116,7 +116,7 @@
         "carModel": "Mégane 3",
         "carType": "1.2 Essence",
         "compatibility": "Mégane 3",
-        "vehicule": "Mégane 3 - 1.2 Essence",
+        "vehicule": "Mégane 3 - 1.6 Essence",
         "compliment": "Mégane à partir de 2011",
         "numeroOE": "A2C53374830 03/K03/K02/K01/K00",
         "ogPrice": "1200",
@@ -137,7 +137,7 @@
           "/images/cal-normal-7Ms.webp",
           "/images/cal-normal-7M.webp"
         ],
-        "stock": "00",
+        "stock": "03",
         "url": "renault-megane-essence",
         "payLink": "https://buy.stripe.com/7sI9Ee7FS8thgTe29E"
       }
@@ -175,7 +175,7 @@
           "/images/cal-normal-6.webp",
           "/images/cal-normal-7.webp"
         ],
-        "stock": "01",
+        "stock": "02",
         "url": "renault-clio4-diesel",
         "payLink": "https://buy.stripe.com/14k17I3pC5h50Ug8y1"
       },
@@ -208,7 +208,7 @@
           "/images/cal-normal-6.webp",
           "/images/cal-normal-7.webp"
         ],
-        "stock": "00",
+        "stock": "03",
         "url": "renault-clio4-essence",
         "payLink": "https://buy.stripe.com/dR6bMmaS44d132oaG8"
       }
@@ -247,7 +247,7 @@
           "/images/cal-normal-7Ms.webp",
           "/images/cal-normal-7M.webp"
         ],
-        "stock": "01",
+        "stock": "02",
         "url": "renault-scenic-diesel",
         "payLink": "https://buy.stripe.com/7sI2bMf8keRFgTedSo"
       }
@@ -285,7 +285,7 @@
           "/images/cal-normal-6.webp",
           "/images/cal-normal-7.webp"
         ],
-        "stock": "01",
+        "stock": "02",
         "url": "renault-fluence-diesel",
         "payLink": "https://buy.stripe.com/4gw03E5xK6l9byU6pX"
       }

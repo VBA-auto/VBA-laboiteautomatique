@@ -41,7 +41,7 @@ const RenaultClioRS = () => {
                     Renault Clio RS
                   </h1>
                   <div className="">
-                    <DynaStock number={2} color="warning" />
+                    <DynaStock carName="Clio 4 RS" />
                   </div>
                 </div>
                 <h1 className="text-2xl font-semibold text-center text-gray-700 md:hidden block mt-5">
