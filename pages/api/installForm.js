@@ -7,7 +7,7 @@ const InstallForm = async (req, res) => {
       req.body;
 
     const transporter = nodemailer.createTransport({
-      host: "laboiteautomatique.com",
+      host: "gallo.o2switch.net",
       port: 465,
       secure: true,
       auth: {
