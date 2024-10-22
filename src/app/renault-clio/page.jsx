@@ -73,15 +73,17 @@ const RenaultClio = () => {
                     href="/vehicule/renault-clio4-diesel"
                     className="underline"
                   >
-                    Diesel.
-                  </Link>{" "}
+                    Diesel
+                  </Link>
+                  {". "}
                   N’hésitez pas à nous contacter si vous souhaitez être
                   absolument certain que cette pièce est bien à l’origine du
                   problème. Pour plus d&apos;informations, vous pouvez consulter
                   notre{" "}
                   <Link href="/aide-en-ligne" className="underline">
-                    aide en ligne.
-                  </Link>{" "}
+                    aide en ligne
+                  </Link>
+                  {"."}
                 </p>
                 <div className="grid md:grid-cols-8 grid-cols-3 md:mt-0 mt-3 items-center justify-start">
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">

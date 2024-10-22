@@ -70,8 +70,9 @@ const RenaultClioRS = () => {
                   problème. Pour plus d&apos;informations, vous pouvez consulter
                   notre{" "}
                   <Link href="/aide-en-ligne" className="underline">
-                    aide en ligne.
-                  </Link>{" "}
+                    aide en ligne
+                  </Link>
+                  {"."}
                 </p>
                 <div className="grid md:grid-cols-8 grid-cols-3 md:mt-0 mt-3 items-center justify-center">
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
