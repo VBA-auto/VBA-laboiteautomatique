@@ -10,6 +10,9 @@ import Head from "next/head";
 import Image from "next/image";
 import { BsCopy } from "react-icons/bs";
 
+const STOCK_INTERVAL_HOURS = 12;
+const MAX_STOCK = 7;
+
 const SingleVehicleView = ({ params }) => {
   const [vehicleData, setVehicleData] = useState(null);
   const [selectedType, setSelectedType] = useState(null);
@@ -19,6 +22,20 @@ const SingleVehicleView = ({ params }) => {
   const url = params?.url;
 
   const [stock, setStock] = useState(0);
+
+  // Function to calculate elapsed hours and update stock
+  const calculateStock = (initialStock, lastUpdateTime) => {
+    const now = Date.now();
+    const hoursElapsed = Math.floor((now - lastUpdateTime) / (1000 * 60 * 60)); // Convert milliseconds to hours
+    const intervalsPassed = Math.floor(hoursElapsed / STOCK_INTERVAL_HOURS);
+
+    let newStock = initialStock - intervalsPassed;
+    if (newStock < 0) {
+      newStock = MAX_STOCK + (newStock % (MAX_STOCK + 1)); // Handle negative stock by looping back to 7
+    }
+    return newStock;
+  };
+
   useEffect(() => {
     if (selectedType) {
       setStock(selectedType.stock);
@@ -26,15 +43,13 @@ const SingleVehicleView = ({ params }) => {
   }, [selectedType]);
 
   const updateStock = useCallback(() => {
-    setStock((prevStock) => (prevStock <= 0 ? 7 : prevStock - 1)); // Reset to 7 if 1, otherwise decrement
+    setStock((prevStock) => (prevStock <= 0 ? 7 : prevStock - 1));
   }, []);
 
   useEffect(() => {
     const interval = setInterval(updateStock, 12 * 60 * 60 * 1000);
-    // For testing, change 18 hours to 1000ms (1 second):
-    // const interval = setInterval(updateStock, 1000);
 
-    return () => clearInterval(interval); // Cleanup interval on component unmount
+    return () => clearInterval(interval);
   }, [updateStock]);
 
   // 3. Memoize stock formatting to optimize performance
@@ -53,7 +68,7 @@ const SingleVehicleView = ({ params }) => {
     const fetchVehicle = async () => {
       try {
         const response = await fetch("/searchVehicule.json", {
-          cache: "force-cache", // Cache strategy for better performance
+          cache: "force-cache",
         });
         if (!response.ok) throw new Error("Network response was not ok");
 
@@ -74,6 +89,21 @@ const SingleVehicleView = ({ params }) => {
           if (type) {
             setSelectedType(vehicle.types[type]);
             setVehicleData(vehicle);
+            const savedStock = localStorage.getItem(`${url}-stock`);
+            const savedTime = localStorage.getItem(`${url}-timestamp`);
+            const initialStock = savedStock
+              ? parseInt(savedStock, 10)
+              : selectedVehicle.stock;
+            const lastUpdateTime = savedTime
+              ? parseInt(savedTime, 10)
+              : Date.now();
+
+            const updatedStock = calculateStock(initialStock, lastUpdateTime);
+            setStock(updatedStock);
+
+            // Save new stock and current timestamp to localStorage
+            localStorage.setItem(`${url}-stock`, updatedStock);
+            localStorage.setItem(`${url}-timestamp`, Date.now());
           }
         } else {
           console.error("Vehicle not found for URL:", url);
@@ -85,6 +115,11 @@ const SingleVehicleView = ({ params }) => {
 
     fetchVehicle();
   }, [url]);
+
+  useEffect(() => {
+    localStorage.setItem(`${url}-stock`, stock);
+    localStorage.setItem(`${url}-timestamp`, Date.now());
+  });
 
   return (
     <main>
@@ -328,7 +363,7 @@ const SingleVehicleView = ({ params }) => {
                     <div className="mt-5">
                       {showCoupon ? (
                         <p className="font-[500] text-normal text-center">
-                          Code reduction ci-dessous
+                          Code réduction ci-dessous
                         </p>
                       ) : (
                         ""
@@ -412,7 +447,7 @@ const SingleVehicleView = ({ params }) => {
                     </div>
                     <div className="text-center">
                       <Link target="_blank" href={selectedType?.payLink}>
-                        <button className="bg-[#2c80efcc] text-white text-[15px] px-5 py-3 rounded-md shadow-md">
+                        <button className="bg-[#2c80efcc] text-white text-[15px] px-2 py-2.5 rounded-md shadow-md">
                           Valider la commande
                         </button>
                       </Link>

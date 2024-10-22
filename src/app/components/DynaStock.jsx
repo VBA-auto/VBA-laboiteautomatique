@@ -1,10 +1,26 @@
 "use client";
 import { useEffect, useState } from "react";
 
+const STOCK_INTERVAL_HOURS = 12;
+const MAX_STOCK = 7;
+
 const DynaStock = ({ carName }) => {
   const [stock, setStock] = useState(0); // Initialize stock to 0
 
-  // 1. Fetch data and find matching stock
+  // Function to calculate elapsed hours and adjust stock
+  const calculateStock = (initialStock, lastUpdateTime) => {
+    const now = Date.now();
+    const hoursElapsed = Math.floor((now - lastUpdateTime) / (1000 * 60 * 60)); // Convert milliseconds to hours
+    const intervalsPassed = Math.floor(hoursElapsed / STOCK_INTERVAL_HOURS);
+
+    let newStock = initialStock - intervalsPassed;
+    if (newStock < 0) {
+      newStock = MAX_STOCK + (newStock % (MAX_STOCK + 1)); // Loop back to 7 if needed
+    }
+    return newStock;
+  };
+
+  // Fetch and accumulate stock from all matching car models
   useEffect(() => {
     const fetchStockData = async () => {
       try {
@@ -12,32 +28,38 @@ const DynaStock = ({ carName }) => {
         if (!response.ok) throw new Error("Failed to fetch data");
 
         const data = await response.json();
-        console.log("Fetched Data:", data); // Debug log
-
-        // Initialize total stock
         let totalStock = 0;
 
-        // Find and accumulate stock from matching car models
+        // Loop through all vehicles and accumulate stock
         data.forEach((car) => {
           if (car?.model?.toLowerCase().includes(carName.toLowerCase())) {
-            console.log(`Matching Car: ${car.model}`); // Debug log
             Object.values(car.types || {}).forEach((type) => {
-              totalStock += Number(type.stock) || 0; // Accumulate stock
+              const savedStock = localStorage.getItem(`${type.url}-stock`);
+              const savedTime = localStorage.getItem(`${type.url}-timestamp`);
+
+              const initialStock = savedStock
+                ? parseInt(savedStock, 10)
+                : type.stock; // Use saved stock or default from JSON
+              const lastUpdateTime = savedTime
+                ? parseInt(savedTime, 10)
+                : Date.now(); // Use saved time or now
+
+              // Calculate and accumulate the adjusted stock
+              totalStock += calculateStock(initialStock, lastUpdateTime);
             });
           }
         });
 
-        console.log(`Total Stock for ${carName}: ${totalStock}`); // Debug log
-        setStock(totalStock); // Set the final accumulated stock once
+        setStock(totalStock); // Set the total stock
       } catch (error) {
-        console.error("Error fetching stock data:", error); // Log any error
+        console.error("Error fetching stock data:", error);
       }
     };
 
     fetchStockData();
-  }, [carName]);
+  }, [carName]); // Refetch if the carName changes
 
-  // 2. Render the stock
+  // Render the dynamic stock with colors based on value
   return (
     <div>
       <p className="text-gray-700 py-1 text-center rounded-md flex justify-end items-center gap-2 text-[15px]">

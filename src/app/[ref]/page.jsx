@@ -328,7 +328,7 @@ const SingleSearchView = ({ params }) => {
                           }}
                           className="text-blue-400 hover:text-blue-200  rounded-sm transition-transform duration-300 mt-4 mx-auto block text-[15px]"
                         >
-                          Code de reduction disponible
+                          Code de réduction disponible
                         </button>
                       )}
 
@@ -394,7 +394,7 @@ const SingleSearchView = ({ params }) => {
                     </div>
                     <div className="text-center">
                       <Link target="_blank" href={SearchSingleView?.payLink}>
-                        <button className="bg-[#2c80efcc] text-white text-[15px] px-5 py-3 rounded-md shadow-md">
+                        <button className="bg-[#2c80efcc] text-white text-[15px] px-2 py-2.5 rounded-md shadow-md">
                           Valider la commande
                         </button>
                       </Link>

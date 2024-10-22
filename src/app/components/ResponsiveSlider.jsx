@@ -5,7 +5,7 @@ import React, { useState } from "react";
 const ResponsiveSlider = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0); // Track main image index
   const [thumbnailStartIndex, setThumbnailStartIndex] = useState(0); // Track thumbnail view index
-  const thumbnailsToShow = 3;
+  const thumbnailsToShow = Math.min(3, images.length); // Show up to the available number of images
 
   const handleThumbnailClick = (index) => {
     setCurrentIndex(index); // Update main image to match the thumbnail clicked
@@ -15,14 +15,13 @@ const ResponsiveSlider = ({ images }) => {
     setCurrentIndex((prevIndex) => {
       const newIndex = (prevIndex + direction + images.length) % images.length;
 
-      // Calculate new thumbnail start index based on new main image
-      const newStartIndex =
-        Math.floor(newIndex / thumbnailsToShow) * thumbnailsToShow;
-
-      setThumbnailStartIndex(
-        Math.max(0, Math.min(newStartIndex, images.length - thumbnailsToShow))
+      // Update thumbnailStartIndex based on the direction and new index
+      const newStartIndex = Math.min(
+        Math.max(newIndex - (thumbnailsToShow - 1), 0),
+        images.length - thumbnailsToShow
       );
 
+      setThumbnailStartIndex(newStartIndex); // Update thumbnail start index
       return newIndex;
     });
   };
@@ -43,48 +42,46 @@ const ResponsiveSlider = ({ images }) => {
       </div>
 
       {/* Thumbnails Controls */}
-      <div className="thumbnail-controls mt-5 flex items-center">
+      <div className="thumbnail-controls mt-5 flex items-center justify-center">
         {/* Left Button */}
         <button
           onClick={() => slideThumbnails(-1)}
           disabled={currentIndex === 0}
-          className="bg-white h-[60px] px-1 rounded-md text-[#2C80EF]"
+          className="bg-white h-[60px] px-1 rounded-md text-[#2C80EF] disabled:opacity-50"
         >
           &lt;
         </button>
 
         {/* Thumbnails Container */}
         <div
-          className="thumbnails flex overflow-hidden"
+          className="thumbnails flex overflow-hidden "
           style={{
-            width: "260px", // Ensure container fits 3 thumbnails (3 * thumbnail width + margins)
+            width: `${thumbnailsToShow * 80}px`,
           }}
         >
-          {/* Thumbnails with slide animation */}
           <div
-            className="h-[51px] w-[70px]"
+            className="h-[51px] w-[70px] flex"
             style={{
-              display: "flex",
               transition: "transform 0.5s ease-in-out", // Smooth sliding animation
-              transform: `translateX(-${thumbnailStartIndex * (80 + 10)}px)`, // Calculate slide distance
+              transform: `translateX(-${thumbnailStartIndex * 70}px)`, // Calculate slide distance
             }}
           >
             {images.map((image, index) => (
               <Image
                 key={index}
                 src={image}
-                width={180}
+                width={80}
                 height={65}
                 alt={`Thumbnail ${index}`}
                 onClick={() => handleThumbnailClick(index)}
-                className="mx-2 cursor-pointer rounded object-cover md:min-w-[65px]"
+                className="mx-2 cursor-pointer rounded object-cover"
                 style={{
                   border:
                     currentIndex === index
                       ? "1px solid #2C80EF"
-                      : "1px solid #cfcfcf", // Apply blue border for active thumbnail
+                      : "1px solid #cfcfcf",
                   padding: "5px",
-                  transition: "border 0.3s ease-in-out", // Smooth border transition when changing
+                  transition: "border 0.3s ease-in-out",
                 }}
               />
             ))}
@@ -95,7 +92,7 @@ const ResponsiveSlider = ({ images }) => {
         <button
           onClick={() => slideThumbnails(1)}
           disabled={currentIndex === images.length - 1}
-          className="bg-white h-[60px] px-1 rounded-md text-[#2C80EF]"
+          className="bg-white h-[60px] px-1 rounded-md text-[#2C80EF] disabled:opacity-50"
         >
           &gt;
         </button>

@@ -5,15 +5,6 @@ const ContactForm = async (req, res) => {
   try {
     const { email, phone, name, message, category } = req.body;
 
-    // const transporter = nodemailer.createTransport({
-    //   host: "mail.laboiteautomatique.com",
-    //   port: 465,
-    //   secure: true,
-    //   auth: {
-    //     user: "contact@laboiteautomatique.com",
-    //     pass: "Brice008//@@",
-    //   },
-    // });
     const transporter = nodemailer.createTransport({
       host: "mail.laboiteautomatique.com",
       port: 465,
@@ -23,7 +14,7 @@ const ContactForm = async (req, res) => {
         pass: "Brice008//@@",
       },
       tls: {
-        rejectUnauthorized: false, // This disables certificate validation
+        rejectUnauthorized: false,
       },
     });
 
