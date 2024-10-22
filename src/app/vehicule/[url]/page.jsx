@@ -26,7 +26,7 @@ const SingleVehicleView = ({ params }) => {
   // Function to calculate elapsed hours and update stock
   const calculateStock = (initialStock, lastUpdateTime) => {
     const now = Date.now();
-    const hoursElapsed = Math.floor((now - lastUpdateTime) / (1000 * 60 * 60)); // Convert milliseconds to hours
+    const hoursElapsed = Math.floor((now - lastUpdateTime) / (1000 * 60 * 60));
     const intervalsPassed = Math.floor(hoursElapsed / STOCK_INTERVAL_HOURS);
 
     let newStock = initialStock - intervalsPassed;
