@@ -4,14 +4,12 @@ import Header from "@/components/Header";
 import ReturnButton from "@/components/ReturnButton";
 import SubHeader from "@/components/SubHeader";
 import Link from "next/link";
-import { useEffect, useState, useCallback, useMemo } from "react";
+import { useEffect, useState } from "react";
 import ResponsiveSlider from "@/components/ResponsiveSlider";
 import Head from "next/head";
 import Image from "next/image";
 import { BsCopy } from "react-icons/bs";
-
-const STOCK_INTERVAL_HOURS = 12;
-const MAX_STOCK = 7;
+import VehicleStockDisplay from "@/components/VehicleStockDisplay";
 
 const SingleVehicleView = ({ params }) => {
   const [vehicleData, setVehicleData] = useState(null);
@@ -19,44 +17,48 @@ const SingleVehicleView = ({ params }) => {
   const [showSpinner, setShowSpinner] = useState(false);
   const [showCoupon, setShowCoupon] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [stock, setStock] = useState(0);
   const url = params?.url;
 
-  const [stock, setStock] = useState(0);
-
-  // Function to calculate elapsed hours and update stock
-  const calculateStock = (initialStock, lastUpdateTime) => {
-    const now = Date.now();
-    const hoursElapsed = Math.floor((now - lastUpdateTime) / (1000 * 60 * 60));
-    const intervalsPassed = Math.floor(hoursElapsed / STOCK_INTERVAL_HOURS);
-
-    let newStock = initialStock - intervalsPassed;
-    if (newStock < 0) {
-      newStock = MAX_STOCK + (newStock % (MAX_STOCK + 1)); // Handle negative stock by looping back to 7
-    }
-    return newStock;
-  };
-
   useEffect(() => {
-    if (selectedType) {
-      setStock(selectedType.stock);
-    }
-  }, [selectedType]);
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          "https://vba-blue-server.onrender.com/cars"
+        );
+        if (!response.ok) {
+          throw new Error(`Error: ${response.statusText}`);
+        }
 
-  const updateStock = useCallback(() => {
-    setStock((prevStock) => (prevStock <= 0 ? 7 : prevStock - 1));
-  }, []);
+        const result = await response.json();
 
-  useEffect(() => {
-    const interval = setInterval(updateStock, 12 * 60 * 60 * 1000);
+        // Find the vehicle matching the provided URL
+        const vehicle = result.find((v) =>
+          Object.values(v.types).some((type) => type.url === url)
+        );
 
-    return () => clearInterval(interval);
-  }, [updateStock]);
+        if (vehicle) {
+          // Find the matching type (e.g., diesel or essence)
+          const typeKey = Object.keys(vehicle.types).find(
+            (key) => vehicle.types[key].url === url
+          );
 
-  // 3. Memoize stock formatting to optimize performance
-  const formatStock = useMemo(
-    () => (value) => value.toString().padStart(2, "0"),
-    []
-  );
+          if (typeKey) {
+            const selected = vehicle.types[typeKey];
+            setSelectedType(selected); // Set the selected type
+            setVehicleData(vehicle); // Set the entire vehicle data
+            setStock(selected.stock); // Update the stock value
+          }
+        } else {
+          console.error("Vehicle or type not found for the given URL.");
+        }
+      } catch (err) {
+        console.error("Error fetching data:", err.message);
+      }
+    };
+
+    fetchData(); // Fetch data on component mount
+  }, [url]);
 
   useEffect(() => {
     if (!url) {
@@ -89,21 +91,6 @@ const SingleVehicleView = ({ params }) => {
           if (type) {
             setSelectedType(vehicle.types[type]);
             setVehicleData(vehicle);
-            const savedStock = localStorage.getItem(`${url}-stock`);
-            const savedTime = localStorage.getItem(`${url}-timestamp`);
-            const initialStock = savedStock
-              ? parseInt(savedStock, 10)
-              : selectedVehicle.stock;
-            const lastUpdateTime = savedTime
-              ? parseInt(savedTime, 10)
-              : Date.now();
-
-            const updatedStock = calculateStock(initialStock, lastUpdateTime);
-            setStock(updatedStock);
-
-            // Save new stock and current timestamp to localStorage
-            localStorage.setItem(`${url}-stock`, updatedStock);
-            localStorage.setItem(`${url}-timestamp`, Date.now());
           }
         } else {
           console.error("Vehicle not found for URL:", url);
@@ -115,11 +102,6 @@ const SingleVehicleView = ({ params }) => {
 
     fetchVehicle();
   }, [url]);
-
-  useEffect(() => {
-    localStorage.setItem(`${url}-stock`, stock);
-    localStorage.setItem(`${url}-timestamp`, Date.now());
-  });
 
   return (
     <main>
@@ -173,29 +155,17 @@ const SingleVehicleView = ({ params }) => {
                     <div className="flex justify-between items-center px-4 pt-4 pb-1">
                       <ReturnButton />
                       <div className="">
-                        <p className="text-gray-700 py-1 text-center rounded-md flex justify-center items-center gap-2 text-[15px]">
-                          <span
-                            className={`w-[12px] h-[12px] ${
-                              stock <= 1
-                                ? "bg-red-500"
-                                : stock <= 3
-                                ? "bg-yellow-500"
-                                : "bg-[#2aa31fc4]"
-                            } rounded-full block`}
-                          ></span>
-                          En stock:{" "}
-                          <span
-                            className={`${
-                              stock <= 1
-                                ? "text-red-500"
-                                : stock <= 3
-                                ? "text-yellow-500"
-                                : "text-[#2aa31fc4]"
-                            } font-[500]`}
-                          >
-                            {formatStock(stock)}
-                          </span>
-                        </p>
+                        <VehicleStockDisplay
+                          modelName={vehicleData?.model}
+                          carType={
+                            selectedType
+                              ? Object.keys(vehicleData.types).find(
+                                  (key) =>
+                                    vehicleData.types[key] === selectedType
+                                )
+                              : ""
+                          }
+                        />
                       </div>
                     </div>
 
@@ -232,10 +202,6 @@ const SingleVehicleView = ({ params }) => {
                         <p className="text-[14px] text-gray-400">Garantie</p>
                         <p className="text-[15px]">{selectedType?.garantie}</p>
                       </div>
-                      {/* <div className="px-4 mb-3">
-                        <p className="text-[14px] text-gray-400">Marque</p>
-                        <p className="text-[15px]">{selectedType?.marque}</p>
-                      </div> */}
                       <div className="px-4 mb-3">
                         <p className="text-[14px] text-gray-400">Véhicule</p>
                         <p className="text-[15px]">{selectedType?.vehicule}</p>
@@ -447,7 +413,7 @@ const SingleVehicleView = ({ params }) => {
                     </div>
                     <div className="text-center">
                       <Link target="_blank" href={selectedType?.payLink}>
-                        <button className="bg-[#2c80efcc] text-white text-[15px] px-2 py-2.5 rounded-md shadow-md">
+                        <button className="bg-[#2c80efcc] text-white text-[14px] px-2 py-2.5 rounded-md shadow-md">
                           Valider la commande
                         </button>
                       </Link>

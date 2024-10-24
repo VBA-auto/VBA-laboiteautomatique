@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import React, { useEffect, useState, useCallback, useMemo } from "react";
+import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import SubHeader from "@/components/SubHeader";
 import Header from "@/components/Header";
@@ -11,37 +11,55 @@ import ResponsiveSlider from "@/components/ResponsiveSlider";
 import { BsCopy } from "react-icons/bs";
 
 import Image from "next/image";
+import VehicleRef from "@/components/VehicleRef";
 
 const SingleSearchView = ({ params }) => {
   const [SearchSingleView, setSingleSearchView] = useState(null);
   const [showSpinner, setShowSpinner] = useState(false);
   const [showCoupon, setShowCoupon] = useState(false);
   const [copied, setCopied] = useState(false);
+  const url = params?.url;
 
   const [stock, setStock] = useState(0);
   useEffect(() => {
-    if (SearchSingleView) {
-      setStock(SearchSingleView.stock);
-    }
-  }, [SearchSingleView]);
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          "https://vba-blue-server.onrender.com/refs"
+        );
+        if (!response.ok) {
+          throw new Error(`Error: ${response.statusText}`);
+        }
 
-  const updateStock = useCallback(() => {
-    setStock((prevStock) => (prevStock <= 0 ? 7 : prevStock - 1)); // Reset to 7 if 1, otherwise decrement
-  }, []);
+        const result = await response.json();
 
-  useEffect(() => {
-    const interval = setInterval(updateStock, 12 * 60 * 60 * 1000);
-    // For testing, change 18 hours to 1000ms (1 second):
-    // const interval = setInterval(updateStock, 1000);
+        // Find the vehicle matching the provided URL
+        const vehicle = result.find((v) =>
+          Object.values(v.types).some((type) => type.url === url)
+        );
 
-    return () => clearInterval(interval); // Cleanup interval on component unmount
-  }, [updateStock]);
+        if (vehicle) {
+          // Find the matching type (e.g., diesel or essence)
+          const typeKey = Object.keys(vehicle.types).find(
+            (key) => vehicle.types[key].url === url
+          );
 
-  // 3. Memoize stock formatting to optimize performance
-  const formatStock = useMemo(
-    () => (value) => value.toString().padStart(2, "0"),
-    []
-  );
+          if (typeKey) {
+            const selected = vehicle.types[typeKey];
+            setSelectedType(selected); // Set the selected type
+            setVehicleData(vehicle); // Set the entire vehicle data
+            setStock(selected.stock); // Update the stock value
+          }
+        } else {
+          console.error("Vehicle or type not found for the given URL.");
+        }
+      } catch (err) {
+        console.error("Error fetching data:", err.message);
+      }
+    };
+
+    fetchData(); // Fetch data on component mount
+  }, [url]);
 
   useEffect(() => {
     console.log("Params object:", params); // Log params
@@ -116,30 +134,12 @@ const SingleSearchView = ({ params }) => {
                   <div className="md:w-[400px] bg-white rounded-tr-[5px] border-l-[1px] md:pb-0 pb-5">
                     <div className="flex justify-between items-center px-4 pt-4 pb-1">
                       <ReturnButton />
-                      <div>
-                        <p className="text-gray-700 py-1 text-center rounded-md flex justify-center items-center gap-2 text-[15px]">
-                          <span
-                            className={`w-[12px] h-[12px] ${
-                              stock <= 1
-                                ? "bg-red-500"
-                                : stock <= 3
-                                ? "bg-yellow-500"
-                                : "bg-[#2aa31fc4]"
-                            } rounded-full block`}
-                          ></span>
-                          En stock:
-                          <span
-                            className={`${
-                              stock <= 1
-                                ? "text-red-500"
-                                : stock <= 3
-                                ? "text-yellow-500"
-                                : "text-[#2aa31fc4]"
-                            } font-[500]`}
-                          >
-                            {formatStock(stock)}
-                          </span>
-                        </p>
+                      <div className="">
+                        {/* Here will show the Vehicleref by matching ref code */}
+                        <VehicleRef
+                          modelName={SearchSingleView.title}
+                          refCode={SearchSingleView.ref}
+                        />
                       </div>
                     </div>
 
@@ -225,7 +225,7 @@ const SingleSearchView = ({ params }) => {
                     </div>
                     <div className="md:w-1/2 flex items-center md:justify-end justify-center gap-5 ">
                       <div className="text-center">
-                        {Number(stock) <= 0 ? (
+                        {/* {Number(stock) <= 0 ? (
                           <>
                             <div className="md:flex gap-5 mt-3 md:mt-0 items-center">
                               <p className="text-[15px] text-[#5BB853]">
@@ -250,7 +250,15 @@ const SingleSearchView = ({ params }) => {
                           >
                             Commander
                           </button>
-                        )}
+                        )} */}
+                        <button
+                          onClick={() =>
+                            document.getElementById("my_modal_ref").showModal()
+                          }
+                          className=" bg-[#2C80EF] text-white rounded-md text-center border border-[#2C80EF] py-2 px-5 shadow-2xl hover:text-[#fff] hover:bg-[#2c80efd7] text-[15px] md:my-0 my-5"
+                        >
+                          Commander
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -394,7 +402,7 @@ const SingleSearchView = ({ params }) => {
                     </div>
                     <div className="text-center">
                       <Link target="_blank" href={SearchSingleView?.payLink}>
-                        <button className="bg-[#2c80efcc] text-white text-[15px] px-2 py-2.5 rounded-md shadow-md">
+                        <button className="bg-[#2c80efcc] text-white text-[14px] px-2 py-2.5 rounded-md shadow-md">
                           Valider la commande
                         </button>
                       </Link>
