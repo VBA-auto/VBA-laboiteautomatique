@@ -35,7 +35,7 @@ export default function Dashboard() {
     <div>
       {!isLoggedIn ? (
         <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-          <div className="bg-white shadow-lg rounded-lg md:w-1/4 p-8">
+          <div className="bg-white shadow-lg rounded-lg md:w-1/4 p-8 w-full m-5">
             <h1 className="text-2xl font-semibold text-center mb-6">
               Welcome Back
             </h1>
