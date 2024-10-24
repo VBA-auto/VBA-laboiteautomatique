@@ -10,7 +10,7 @@ const useFetch = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "https://vba-blue-server.onrender.com/cars"
+          "  https://vba-blue-server.onrender.com/cars"
         );
         if (!response.ok) {
           throw new Error(`Error: ${response.statusText}`);

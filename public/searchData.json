@@ -1,7 +1,7 @@
 [
   {
     "ref": "310F93913R",
-    "stock": "02",
+    "stock": 2,
     "title": "Calculateur Mégane",
     "description": "Module de comande (calculateur) pour boite automatique Renault Mégane boite EDC",
     "compatibility": "Mégane 3, Clio IV, Captur",
@@ -30,7 +30,7 @@
   },
   {
     "ref": "310322059R",
-    "stock": "02",
+    "stock": 2,
     "title": "Calculateur Clio V",
     "description": "Module de comande (calculateur) pour boite automatique Renault Clio V Essence",
     "compatibility": "Clio V",
@@ -57,7 +57,7 @@
   },
   {
     "ref": "310321994R",
-    "stock": "03",
+    "stock": 2,
     "title": "Calculateur Clio V / Captur",
     "description": "Module de commande (calculateur) pour boite automatique EDC Renault Clio 4 et Captur",
     "compatibility": "Clio V (RJAB)",
@@ -84,7 +84,7 @@
   },
   {
     "ref": "310321808R",
-    "stock": "03",
+    "stock": 2,
     "title": "Calculateur Megane IV",
     "description": "Module de commande (calculateur) pour boite automatique EDC Renault Megane 4",
     "compatibility": "Megane IV",
@@ -111,7 +111,7 @@
   },
   {
     "ref": "310321716R",
-    "stock": "03",
+    "stock": 2,
     "title": "Calculateur Twingo 3",
     "description": "Module de commande (calculateur) pour boite automatique EDC Renault Twingo 3",
     "compatibility": "Twingo 3",
@@ -136,7 +136,7 @@
   },
   {
     "ref": "310321706R",
-    "stock": "01",
+    "stock": 2,
     "title": "Calculateur Kadjar",
     "description": "Module de commande (calculateur) pour boite automatique EDC Renault Kadjar",
     "compatibility": "Clio 5, Megane 4, Talisman, Kadjar, Captur 2",
@@ -163,7 +163,7 @@
   },
   {
     "ref": "310321662R",
-    "stock": "02",
+    "stock": 2,
     "title": "Calculateur Kadjar",
     "description": "Module de commande (calculateur) pour boite automatique EDC Renault Kadjar",
     "compatibility": "Clio 5, Megane 4, Talisman, Kadjar, Captur 2",
@@ -190,7 +190,7 @@
   },
   {
     "ref": "310321561R",
-    "stock": "00",
+    "stock": 2,
     "title": "Calculateur Twingo 3",
     "description": "Module de commande (calculateur) pour boite automatique EDC Renault Twingo 3",
     "compatibility": "Clio 5, Megane 4, Talisman, Kadjar, Captur 2",
@@ -215,7 +215,7 @@
   },
   {
     "ref": "310321354R",
-    "stock": "01",
+    "stock": 2,
     "title": "Calculateur Kangoo 2",
     "description": "Module de commande (calculateur) pour boite automatique EDC Renault Kangoo 2",
     "compatibility": "Kangoo 2",
@@ -243,7 +243,7 @@
   },
   {
     "ref": "310321517R",
-    "stock": "01",
+    "stock": 2,
     "title": "Calculateur Renault Clio RS",
     "description": "Module de commande (calculateur) pour boite automatique EDC Renault",
     "compatibility": "Clio RS, Captur, Clio 4",
@@ -271,7 +271,7 @@
   },
   {
     "ref": "310321488R",
-    "stock": "05",
+    "stock": 2,
     "title": "Calculateur Clio 4 - Captur",
     "description": "Module de commande (calculateur) pour boite automatique EDC Clio 4 - Captur",
     "compatibility": "Clio 4, Captur, Megane 3, Scénic 3",
@@ -299,7 +299,7 @@
   },
   {
     "ref": "310321306R",
-    "stock": "04",
+    "stock": 2,
     "title": "Calculateur Renault",
     "description": "Module de commande (calculateur) pour boite automatique DW5006",
     "compatibility": "Scenic IV, Espace V, Megane IV",
@@ -326,7 +326,7 @@
   },
   {
     "ref": "310321149R",
-    "stock": "04",
+    "stock": 2,
     "title": "Calculateur Renault",
     "description": "Module de commande (calculateur) pour boite automatique DW5006",
     "compatibility": "Scenic IV, Espace V, Megane IV",
@@ -353,7 +353,7 @@
   },
   {
     "ref": "310321148R",
-    "stock": "00",
+    "stock": 2,
     "title": "Calculateur Clio 4 - Captur",
     "description": "Module de commande (calculateur) pour boite automatique EDC Clio 4 - Captur",
     "compatibility": "Clio 4, Captur",
@@ -381,7 +381,7 @@
   },
   {
     "ref": "310321109R",
-    "stock": "04",
+    "stock": 2,
     "title": "Calculateur Clio 4 - Captur",
     "description": "Module de commande (calculateur) pour boite automatique EDC Clio 4 - Captur",
     "compatibility": "Clio 4 , Captur",
@@ -409,7 +409,7 @@
   },
   {
     "ref": "310320892R",
-    "stock": "04",
+    "stock": 2,
     "title": "Calculateur Captur - Megane 3",
     "description": "Module de commande (calculateur) pour boite automatique EDC Captur - Megane 3",
     "compatibility": "Captur , Megane 3",
@@ -437,7 +437,7 @@
   },
   {
     "ref": "310320891R",
-    "stock": "04",
+    "stock": 2,
     "title": "Calculateur Renault Captur 1.2 TCE 16V EDC",
     "description": "Module de commande (calculateur) pour boite automatique Captur",
     "compatibility": "Captur , Clio 4 (Essence - Diesel)",
@@ -465,7 +465,7 @@
   },
   {
     "ref": "310320841R",
-    "stock": "07",
+    "stock": 2,
     "title": "Calculateur Captur - Clio 4",
     "description": "Module de commande (calculateur) pour boite automatique EDC Captur - Clio 4",
     "compatibility": "Captur , Clio 4 (Essence - Diesel) - Megane 3",
@@ -493,7 +493,7 @@
   },
   {
     "ref": "310320756R",
-    "stock": "05",
+    "stock": 2,
     "title": "Calculateur Captur - Clio 4",
     "description": "Module de commande (calculateur) pour boite automatique EDC Captur - Clio 4",
     "compatibility": "Captur , Clio 4 (Essence - Diesel) - Megane 3",
@@ -521,7 +521,7 @@
   },
   {
     "ref": "310320749R",
-    "stock": "02",
+    "stock": 2,
     "title": "Calculateur Scénic 3 - Megane 3",
     "description": "Module de commande (calculateur) pour boite automatique EDC Scénic 3 - Mégane 3",
     "compatibility": "Scénic 3 , Megane 3 (1.5 Diesel)",
@@ -549,7 +549,7 @@
   },
   {
     "ref": "310320721R",
-    "stock": "03",
+    "stock": 2,
     "title": "Calculateur Captur",
     "description": "Module de commande (calculateur) pour boite automatique EDC Clio 4 - Captur",
     "compatibility": "Captur , Clio 4",
@@ -577,7 +577,7 @@
   },
   {
     "ref": "310320717R",
-    "stock": "03",
+    "stock": 2,
     "title": "Calculateur Captur - Clio 4 - Fluence",
     "description": "Module de commande (calculateur) pour boite automatique EDC Clio 4 - Captur - Clio 4",
     "compatibility": "Captur , Clio 4 , Megane 3 , Fluence",
@@ -605,7 +605,7 @@
   },
   {
     "ref": "310320553R",
-    "stock": "01",
+    "stock": 2,
     "title": "Calculateur Renault Clio RS",
     "description": "Module de commande (calculateur) pour Clio RS",
     "compatibility": "Captur , Clio 4 , Megane 3 , Fluence",
@@ -633,7 +633,7 @@
   },
   {
     "ref": "310320192R",
-    "stock": "01",
+    "stock": 2,
     "title": "Calculateur Scénic 3 - Megane 3",
     "description": "Module de commande (calculateur) pour boite automatique EDC Scénic 3 - Mégane 3",
     "compatibility": "Scénic 3, Megane 3 (1.5 Diesel)",
@@ -661,7 +661,7 @@
   },
   {
     "ref": "310320139R",
-    "stock": "01",
+    "stock": 2,
     "title": "Calculateur Scénic 3",
     "description": "Module de commande (calculateur) pour boite automatique EDC Scénic 3 - Mégane 3",
     "compatibility": "Scénic 3, Megane 3 (1.5 Diesel)",
@@ -689,7 +689,7 @@
   },
   {
     "ref": "310320468R",
-    "stock": "03",
+    "stock": 2,
     "title": "Calculateur Clio 4 - Captur",
     "description": "Module de commande (calculateur) pour boite automatique EDC Clio 4 - Captur",
     "compatibility": "Clio 4 , Captur , Megane 3 , Scénic 3",
@@ -717,7 +717,7 @@
   },
   {
     "ref": "310320408R",
-    "stock": "02",
+    "stock": 2,
     "title": "Calculateur Scénic 3",
     "description": "Module de commande (calculateur) pour boite automatique EDC Scénic 3 - Mégane 3",
     "compatibility": "Scénic 3 , Megane 3 (1.5 Diesel)",
@@ -745,7 +745,7 @@
   },
   {
     "ref": "A2C53374830",
-    "stock": "07",
+    "stock": 2,
     "title": "Calculateur Scénic 3 - Megane 3",
     "description": "Module de commande (calculateur) pour boite automatique EDC Scénic 3 - Mégane 3",
     "compatibility": "Scénic 3 , Megane 3 (1.5 Diesel)",
@@ -777,7 +777,7 @@
   },
   {
     "ref": "A2C30743000",
-    "stock": "00",
+    "stock": 2,
     "title": "Calculateur Clio 4 - Captur",
     "description": "Module de commande (calculateur) pour boite automatique EDC Clio 4 - Captur",
     "compatibility": "Clio 4 , Captur (Essence et Diesel)",

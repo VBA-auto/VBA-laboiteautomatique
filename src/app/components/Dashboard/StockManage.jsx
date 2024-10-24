@@ -11,7 +11,8 @@ export default function StockManage({ handleLogout }) {
   const [cars, setCars] = useState([]);
   const [refs, setRefs] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("Cars");
-  const [stockChanges, setStockChanges] = useState({});
+  const [carStockChanges, setCarStockChanges] = useState({});
+  const [refStockChanges, setRefStockChanges] = useState({});
   const [loading, setLoading] = useState(false);
 
   // Fetch data when the component mounts
@@ -19,7 +20,7 @@ export default function StockManage({ handleLogout }) {
     const fetchCars = async () => {
       try {
         const response = await fetch(
-          "https://vba-blue-server.onrender.com/cars"
+          "  https://vba-blue-server.onrender.com/cars"
         );
         const data = await response.json();
         if (Array.isArray(data)) setCars(data);
@@ -31,7 +32,7 @@ export default function StockManage({ handleLogout }) {
     const fetchRefs = async () => {
       try {
         const response = await fetch(
-          "https://vba-blue-server.onrender.com/refs"
+          "  https://vba-blue-server.onrender.com/refs"
         );
         const data = await response.json();
         if (Array.isArray(data)) setRefs(data);
@@ -44,17 +45,17 @@ export default function StockManage({ handleLogout }) {
     fetchRefs();
   }, []);
 
-  // Handle stock change
-  const handleStockChange = (model, type, newStock) => {
-    setStockChanges((prev) => ({
+  // Handle car stock change
+  const handleCarStockChange = (model, type, newStock) => {
+    setCarStockChanges((prev) => ({
       ...prev,
       [model]: { ...prev[model], [type]: newStock },
     }));
   };
 
-  // Save stock changes (backend integration can be added here)
-  const saveStockChanges = async (model, type) => {
-    const newStock = stockChanges[model]?.[type];
+  // Save car stock changes
+  const saveCarStockChanges = async (model, type) => {
+    const newStock = carStockChanges[model]?.[type];
 
     if (newStock === undefined || newStock === "") {
       alert("Please enter a valid stock value.");
@@ -64,31 +65,80 @@ export default function StockManage({ handleLogout }) {
     try {
       setLoading(true);
       const response = await fetch(
-        `https://vba-blue-server.onrender.com/cars/${model}/${type}`,
+        `  https://vba-blue-server.onrender.com/cars/${model}/${type}`,
         {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({ stock: parseInt(newStock, 10) }), // Ensure stock is a number
+          body: JSON.stringify({ stock: parseInt(newStock, 10) }),
         }
       );
 
       if (response.ok) {
-        const updatedCars = await response.json();
-        toast.success("Stock Updated");
-        // Optionally re-fetch cars to reflect changes immediately
-        const carsData = await fetch(
-          "https://vba-blue-server.onrender.com/cars"
+        toast.success("Car stock updated successfully!");
+        const updatedCars = await fetch(
+          "  https://vba-blue-server.onrender.com/cars"
         ).then((res) => res.json());
-        setCars(carsData);
+        setCars(updatedCars);
       } else {
         const { message } = await response.json();
-        alert(message || "Failed to update stock.");
+        alert(message || "Failed to update car stock.");
       }
     } catch (error) {
-      console.error("Error updating stock:", error);
-      alert("An error occurred while updating the stock.");
+      console.error("Error updating car stock:", error);
+      alert("An error occurred while updating car stock.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // Handle ref stock change
+  const handleRefStockChange = (id, newStock) => {
+    const parsedStock = newStock === "" ? "" : parseInt(newStock, 10); // Allow empty value
+
+    setRefStockChanges((prev) => ({
+      ...prev,
+      [id]: parsedStock, // Ensure it updates correctly with numbers or empty value
+    }));
+  };
+
+  // Save ref stock changes
+  const saveRefStockChanges = async (id) => {
+    const newStock = refStockChanges[id];
+
+    if (newStock === undefined || newStock === "") {
+      alert("Please enter a valid stock value.");
+      return;
+    }
+
+    try {
+      setLoading(true);
+      const response = await fetch(
+        `  https://vba-blue-server.onrender.com/refs/${id}`,
+        {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ stock: newStock }), // Send as a number
+        }
+      );
+
+      if (response.ok) {
+        toast.success("Ref stock updated successfully!");
+
+        const updatedRefs = await fetch(
+          "  https://vba-blue-server.onrender.com/refs"
+        ).then((res) => res.json());
+        setRefs(updatedRefs);
+      } else {
+        const { message } = await response.json();
+        alert(message || "Failed to update ref stock.");
+      }
+    } catch (error) {
+      console.error("Error updating ref stock:", error);
+      alert("An error occurred while updating ref stock.");
     } finally {
       setLoading(false);
     }
@@ -99,9 +149,7 @@ export default function StockManage({ handleLogout }) {
       <Header />
       <div className="container mx-auto p-6">
         <div className="flex-grow">
-          <h1 className="text-3xl font-bold my-8">
-            {selectedCategory} Stock Management
-          </h1>
+          <h1 className="text-2xl my-8">{selectedCategory} Stock Management</h1>
 
           <div className="overflow-y-auto">
             {selectedCategory === "Cars" ? (
@@ -118,57 +166,27 @@ export default function StockManage({ handleLogout }) {
                           {details.carType} - Stock: {details.stock}
                         </h3>
                         <div className="w-full flex gap-2 items-center">
-                          <div className="w-11/12">
-                            <input
-                              type="number"
-                              value={
-                                stockChanges[car.model]?.[type] ?? details.stock
-                              }
-                              onChange={(e) =>
-                                handleStockChange(
-                                  car.model,
-                                  type,
-                                  e.target.value
-                                )
-                              }
-                              className="input input-bordered w-full max-w-xs bg-white"
-                            />
-                          </div>
-                          <div className="w-1/5 border py-2.5  rounded-md  text-center">
-                            {loading ? (
-                              <div className="text-center mx-auto flex justify-center">
-                                <svg
-                                  className="animate-spin h-5 w-5 mr-2 text-[#2C80EF] text-center"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  fill="none"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <circle
-                                    className="opacity-25"
-                                    cx="12"
-                                    cy="12"
-                                    r="10"
-                                    stroke="currentColor"
-                                    strokeWidth="4"
-                                  ></circle>
-                                  <path
-                                    className="opacity-75"
-                                    fill="currentColor"
-                                    d="M4 12a8 8 0 018-8v8H4z"
-                                  ></path>
-                                </svg>
-                              </div>
-                            ) : (
-                              <button
-                                className="text-[#2C80EF]"
-                                onClick={() =>
-                                  saveStockChanges(car.model, type)
-                                }
-                              >
-                                <FaSave />
-                              </button>
-                            )}
-                          </div>
+                          <input
+                            type="number"
+                            value={
+                              carStockChanges[car.model]?.[type] ??
+                              details.stock
+                            }
+                            onChange={(e) =>
+                              handleCarStockChange(
+                                car.model,
+                                type,
+                                e.target.value
+                              )
+                            }
+                            className="input input-bordered w-full bg-white"
+                          />
+                          <button
+                            className="text-[#2C80EF]"
+                            onClick={() => saveCarStockChanges(car.model, type)}
+                          >
+                            <FaSave />
+                          </button>
                         </div>
                       </div>
                     ))}
@@ -176,15 +194,29 @@ export default function StockManage({ handleLogout }) {
                 ))}
               </div>
             ) : (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-24">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-28">
                 {refs.map((ref) => (
                   <div
                     key={ref._id}
-                    className="bg-white p-6 rounded-lg shadow-lg"
+                    className="bg-white p-6 rounded-lg shadow-lg border"
                   >
-                    <h2 className="text-xl font-bold">{ref.ref}</h2>
-                    <p>Stock: {ref.stock}</p>
-                    <button className="btn btn-sm mt-4">Edit Stock</button>
+                    <h2 className="text-xl font-bold mb-4">{ref.ref}</h2>
+                    <div className="w-full flex gap-2 items-center">
+                      <input
+                        type="number"
+                        value={refStockChanges[ref._id] ?? ref.stock}
+                        onChange={(e) =>
+                          handleRefStockChange(ref._id, e.target.value)
+                        }
+                        className="input input-bordered w-full bg-white"
+                      />
+                      <button
+                        className="text-[#2C80EF]"
+                        onClick={() => saveRefStockChanges(ref._id)}
+                      >
+                        <FaSave />
+                      </button>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -230,6 +262,7 @@ export default function StockManage({ handleLogout }) {
             </div>
           </div>
         </div>
+
         <Toaster />
       </div>
     </>

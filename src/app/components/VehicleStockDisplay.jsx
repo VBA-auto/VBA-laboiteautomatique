@@ -16,7 +16,7 @@ const VehicleStockDisplay = ({ modelName, carType }) => {
     const fetchStock = async () => {
       try {
         const response = await fetch(
-          "https://vba-blue-server.onrender.com/cars"
+          "  https://vba-blue-server.onrender.com/cars"
         );
         if (!response.ok) throw new Error(`Error: ${response.statusText}`);
 
@@ -44,7 +44,14 @@ const VehicleStockDisplay = ({ modelName, carType }) => {
     fetchStock();
   }, [modelName, carType]);
 
-  if (loading) return <p>Loading stock...</p>;
+  if (loading)
+    return (
+      <p className="text-gray-700 py-1 text-center rounded-md flex justify-end items-center gap-2 text-[15px]">
+        {" "}
+        <span className="w-[12px] h-[12px] bg-[#2aa31fc4] rounded-full block"></span>
+        En stock: 0
+      </p>
+    );
   if (error) return <p>{error}</p>;
 
   return (

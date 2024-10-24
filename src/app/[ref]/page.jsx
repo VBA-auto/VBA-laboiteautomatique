@@ -20,49 +20,10 @@ const SingleSearchView = ({ params }) => {
   const [copied, setCopied] = useState(false);
   const url = params?.url;
 
-  const [stock, setStock] = useState(0);
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(
-          "https://vba-blue-server.onrender.com/refs"
-        );
-        if (!response.ok) {
-          throw new Error(`Error: ${response.statusText}`);
-        }
-
-        const result = await response.json();
-
-        // Find the vehicle matching the provided URL
-        const vehicle = result.find((v) =>
-          Object.values(v.types).some((type) => type.url === url)
-        );
-
-        if (vehicle) {
-          // Find the matching type (e.g., diesel or essence)
-          const typeKey = Object.keys(vehicle.types).find(
-            (key) => vehicle.types[key].url === url
-          );
-
-          if (typeKey) {
-            const selected = vehicle.types[typeKey];
-            setSelectedType(selected); // Set the selected type
-            setVehicleData(vehicle); // Set the entire vehicle data
-            setStock(selected.stock); // Update the stock value
-          }
-        } else {
-          console.error("Vehicle or type not found for the given URL.");
-        }
-      } catch (err) {
-        console.error("Error fetching data:", err.message);
-      }
-    };
-
-    fetchData(); // Fetch data on component mount
-  }, [url]);
+  const [stock, setStock] = useState();
 
   useEffect(() => {
-    console.log("Params object:", params); // Log params
+    console.log("Params object:", params);
 
     const fetchArticle = async () => {
       try {
@@ -94,6 +55,37 @@ const SingleSearchView = ({ params }) => {
 
     fetchArticle();
   }, [params]);
+
+  useEffect(() => {
+    const fetchStockData = async () => {
+      try {
+        const response = await fetch(
+          "  https://vba-blue-server.onrender.com/refs"
+        );
+        if (!response.ok) throw new Error(`Error: ${response.statusText}`);
+
+        const refs = await response.json();
+
+        // Ensure the matching logic is correct based on the ref or URL
+        const foundRef = refs.find((ref) => ref.ref === params.ref); // Match using params.ref
+
+        if (foundRef) {
+          setStock(foundRef.stock); // Update stock value
+          console.log(
+            `Fetched stock for ref: ${foundRef.ref}, Stock: ${foundRef.stock}`
+          );
+        } else {
+          console.warn(`No matching ref found for: ${params.ref}`);
+          setStock(0); // Default to 0 if not found
+        }
+      } catch (error) {
+        console.error("Error fetching stock:", error.message);
+        setStock(0); // Handle errors gracefully
+      }
+    };
+
+    fetchStockData();
+  }, [params.ref]); // Ensure ref code is used for matching
 
   return (
     <main>
@@ -225,7 +217,7 @@ const SingleSearchView = ({ params }) => {
                     </div>
                     <div className="md:w-1/2 flex items-center md:justify-end justify-center gap-5 ">
                       <div className="text-center">
-                        {/* {Number(stock) <= 0 ? (
+                        {stock <= 0 ? (
                           <>
                             <div className="md:flex gap-5 mt-3 md:mt-0 items-center">
                               <p className="text-[15px] text-[#5BB853]">
@@ -250,15 +242,7 @@ const SingleSearchView = ({ params }) => {
                           >
                             Commander
                           </button>
-                        )} */}
-                        <button
-                          onClick={() =>
-                            document.getElementById("my_modal_ref").showModal()
-                          }
-                          className=" bg-[#2C80EF] text-white rounded-md text-center border border-[#2C80EF] py-2 px-5 shadow-2xl hover:text-[#fff] hover:bg-[#2c80efd7] text-[15px] md:my-0 my-5"
-                        >
-                          Commander
-                        </button>
+                        )}
                       </div>
                     </div>
                   </div>
