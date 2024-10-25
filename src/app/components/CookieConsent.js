@@ -27,7 +27,7 @@ const CookieConsent = () => {
         <div className=" mx-8 border rounded-md bg-white p-5">
           <div className="flex justify-between items-start">
             <div className="w-full">
-              <h2 className="text-lg mb-5 text-center">
+              <h2 className="text-lg mb-3 text-center">
                 Ce site utilise des cookies
               </h2>
             </div>
