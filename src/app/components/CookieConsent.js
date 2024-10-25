@@ -17,118 +17,113 @@ const CookieConsent = () => {
   return (
     <>
       <div
-        className="cookieBanner"
+        className="w-full"
         style={{
           position: "fixed",
           bottom: "20px",
-          left: "20px",
-          width: "300px",
-          backgroundColor: "white",
-          boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-          borderRadius: "8px",
-          padding: "20px",
           zIndex: 1000,
-          fontFamily: "Arial, sans-serif",
         }}
       >
-        <div className="flex justify-between items-start">
-          <h2 style={{ fontSize: "18px", marginBottom: "10px" }}>
-            Ce site utilise des cookies
-          </h2>
-          {/* Close Button */}
-          <button
-            onClick={closeBanner} // Call closeBanner on click
-            style={{
-              background: "none",
-              border: "none",
-              cursor: "pointer",
-              fontSize: "20px",
-              lineHeight: "20px",
-            }}
-          >
-            ✕
-          </button>
-        </div>
-
-        <p className="cokkiP">
-          Ce site utilise des cookies. En utilisant notre site, vous consentez à
-          l&apos;utilisation de tous les cookies conformément à notre politique
-          en matière de cookies.
-        </p>
-
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            gap: "10px",
-            margin: "15px 0",
-          }}
-        >
-          <label className="text-[13px] mb-2 flex items-center">
-            <input type="checkbox" style={{ marginRight: "10px" }} />
-            PERFORMANCE
-          </label>
-          <label className="text-[13px] mb-2 flex items-center">
-            <input type="checkbox" style={{ marginRight: "10px" }} /> CIBLAGE
-          </label>
-          <label className="text-[13px] mb-2 flex items-center">
-            <input type="checkbox" style={{ marginRight: "10px" }} />
-            FONCTIONNALITÉ
-          </label>
-        </div>
-
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            marginTop: "10px",
-          }}
-        >
-          <button
-            onClick={closeBanner}
-            style={{
-              backgroundColor: "#007bff",
-              fontSize: "12px",
-              color: "white",
-              border: "none",
-              padding: "8px 12px",
-              borderRadius: "6px",
-              cursor: "pointer",
-              transition: "background-color 0.3s",
-            }}
-          >
-            ACCEPTER TOUT
-          </button>
-          <button
-            onClick={closeBanner}
-            style={{
-              fontSize: "12px",
-              color: "#2C80EF",
-              border: "1px solid #2C80EF",
-              padding: "8px 12px",
-              borderRadius: "6px",
-              cursor: "pointer",
-              transition: "background-color 0.3s",
-            }}
-          >
-            REFUSER TOUT
-          </button>
-        </div>
-
-        <button
-          style={{
-            fontSize: "12px",
-            color: "#555555",
-            background: "none",
-            border: "none",
-            cursor: "pointer",
-          }}
-          onClick={openModal}
-        >
-          <div className="mt-3 flex justify-center gap-2 items-center">
-            <IoSettingsSharp /> <span>AFFICHER LES DÉTAILS</span>
+        <div className=" mx-8 border rounded-md bg-white p-5">
+          <div className="flex justify-between items-start">
+            <div className="w-full">
+              <h2 className="text-lg mb-5 text-center">
+                Ce site utilise des cookies
+              </h2>
+            </div>
+            <div className="">
+              {/* Close Button */}
+              <button
+                onClick={closeBanner} // Call closeBanner on click
+                style={{
+                  background: "none",
+                  border: "none",
+                  cursor: "pointer",
+                  fontSize: "20px",
+                  lineHeight: "20px",
+                }}
+              >
+                ✕
+              </button>
+            </div>
           </div>
-        </button>
+
+          <p className="cokkiP text-center">
+            Ce site utilise des cookies. En utilisant notre site, vous consentez
+            à l&apos;utilisation de tous les cookies conformément à notre
+            politique en matière de cookies.
+          </p>
+
+          <div className="md:flex justify-center gap-5 my-3">
+            <label className="text-[13px] mb-2 flex items-center">
+              <input type="checkbox" style={{ marginRight: "10px" }} />
+              PERFORMANCE
+            </label>
+            <label className="text-[13px] mb-2 flex items-center">
+              <input type="checkbox" style={{ marginRight: "10px" }} /> CIBLAGE
+            </label>
+            <label className="text-[13px] mb-2 flex items-center">
+              <input type="checkbox" style={{ marginRight: "10px" }} />
+              FONCTIONNALITÉ
+            </label>
+          </div>
+
+          <div
+            style={{
+              display: "flex",
+              gap: "20px",
+              marginTop: "10px",
+              justifyContent: "center",
+            }}
+          >
+            <button
+              onClick={closeBanner}
+              style={{
+                backgroundColor: "#007bff",
+                fontSize: "12px",
+                color: "white",
+                border: "none",
+                padding: "8px 12px",
+                borderRadius: "6px",
+                cursor: "pointer",
+                transition: "background-color 0.3s",
+              }}
+            >
+              ACCEPTER TOUT
+            </button>
+            <button
+              onClick={closeBanner}
+              style={{
+                fontSize: "12px",
+                color: "#2C80EF",
+                border: "1px solid #2C80EF",
+                padding: "8px 17px",
+                borderRadius: "6px",
+                cursor: "pointer",
+                transition: "background-color 0.3s",
+              }}
+            >
+              REFUSER TOUT
+            </button>
+          </div>
+
+          <div className="text-center">
+            <button
+              style={{
+                fontSize: "12px",
+                color: "#555555",
+                background: "none",
+                border: "none",
+                cursor: "pointer",
+              }}
+              onClick={openModal}
+            >
+              <div className="mt-3 flex justify-center gap-2 items-center">
+                <IoSettingsSharp /> <span>AFFICHER LES DÉTAILS</span>
+              </div>
+            </button>
+          </div>
+        </div>
       </div>
 
       {/* Modal Component */}
