@@ -46,13 +46,15 @@ const RenaultClio = () => {
                 <h1 className="text-2xl font-semibold text-center text-gray-700 md:hidden block mt-5">
                   Renault Clio IV
                 </h1>
-                <Image
-                  width={300}
-                  height={290}
-                  src="/images/calculateur_DC4_Renault_Clio4.webp"
-                  className="mx-auto"
-                  alt=""
-                />
+                <div className="my-1.5">
+                  <Image
+                    width={300}
+                    height={280}
+                    src="/images/calculateur_DC4_Renault_Clio4.webp"
+                    className="mx-auto"
+                    alt=""
+                  />
+                </div>
                 <p className="text-justify text-[15px]">
                   Vérifiez la disponibilté de votre module (boite de vitesse à
                   contrôler) pour votre <strong>boite</strong> automatique{" "}

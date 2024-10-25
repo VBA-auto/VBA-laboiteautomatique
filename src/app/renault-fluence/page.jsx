@@ -50,13 +50,15 @@ const RenaultFluence = () => {
                 <h1 className="text-2xl font-semibold text-center text-gray-700 md:hidden block mt-5">
                   Renault Fluence
                 </h1>
-                <Image
-                  width={300}
-                  height={290}
-                  src="/images/calculateur_DC4_renault-fluence.webp"
-                  className="mx-auto"
-                  alt=""
-                />
+                <div className="my-2">
+                  <Image
+                    width={300}
+                    height={290}
+                    src="/images/calculateur_DC4_renault-fluence.webp"
+                    className="mx-auto"
+                    alt=""
+                  />
+                </div>
                 <p className="text-justify text-[15px]">
                   Vérifiez la disponibilté de votre module (boite de vitesse à
                   contrôler) pour votre boite automatique <strong>EDC</strong>{" "}
