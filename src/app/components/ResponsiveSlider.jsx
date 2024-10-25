@@ -62,8 +62,10 @@ const ResponsiveSlider = ({ images }) => {
           <div
             className="h-[51px] w-[70px] flex"
             style={{
-              transition: "transform 0.5s ease-in-out", // Smooth sliding animation
-              transform: `translateX(-${thumbnailStartIndex * 70}px)`, // Calculate slide distance
+              transition: "transform 0.5s ease-in-out",
+              transform: `translateX(-${
+                thumbnailStartIndex * (window.innerWidth < 768 ? 80 : 70)
+              }px)`,
             }}
           >
             {images.map((image, index) => (

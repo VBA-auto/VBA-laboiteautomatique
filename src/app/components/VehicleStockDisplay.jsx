@@ -48,7 +48,7 @@ const VehicleStockDisplay = ({ modelName, carType }) => {
     return (
       <p className="text-gray-700 py-1 text-center rounded-md flex justify-end items-center gap-2 text-[15px]">
         {" "}
-        <span className="w-[12px] h-[12px] bg-[#2aa31fc4] rounded-full block"></span>
+        <span className="md:w-[12px] md:h-[12px] w-[10px] h-[10px] bg-[#2aa31fc4] rounded-full block"></span>
         En stock: 0
       </p>
     );
@@ -58,7 +58,7 @@ const VehicleStockDisplay = ({ modelName, carType }) => {
     <div>
       <p className="text-gray-700 py-1 text-center rounded-md flex justify-end items-center gap-2 text-[15px]">
         <span
-          className={`w-[12px] h-[12px] ${
+          className={`md:w-[12px] md:h-[12px] w-[10px] h-[10px] ${
             stock <= 1
               ? "bg-red-500"
               : stock <= 3
