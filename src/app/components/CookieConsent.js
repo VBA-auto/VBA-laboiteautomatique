@@ -51,7 +51,7 @@ const CookieConsent = () => {
           <p className="cokkiP text-center">
             Ce site utilise des cookies. En utilisant notre site, vous consentez
             à l&apos;utilisation de tous les cookies conformément à notre
-            politique en matière de cookies.
+            politique en matière de cookiess.
           </p>
 
           <div className="md:flex justify-center gap-5 my-3">
