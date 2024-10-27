@@ -29,17 +29,19 @@ const RenaultClio = () => {
             <h1>Calculateur pour Renault Clio IV</h1>
           </div>
           <div className=" justify-center items-start gap-5 ">
-            <div className="md:w-[800px] mx-auto ">
+            <div className="md:w-[800px] md:min-h-[538px] mx-auto ">
               <div className="ms-auto  accent_color py-5 bg-white rounded-md  p-5">
-                <div className="flex justify-between">
-                  <div className="">
+                <div className="flex justify-between  relative">
+                  <div className="absolute left-0">
                     <ReturnButton />
                   </div>
-                  <h1 className="text-2xl font-semibold text-center text-gray-700 md:block hidden">
-                    Renault Clio IV
-                  </h1>
+                  <div className="mx-auto">
+                    <h1 className="text-2xl font-semibold text-center text-gray-700 md:block hidden">
+                      Renault Clio IV
+                    </h1>
+                  </div>
 
-                  <div className="">
+                  <div className="absolute right-0">
                     <DynaStock carName="Renault Clio" />
                   </div>
                 </div>

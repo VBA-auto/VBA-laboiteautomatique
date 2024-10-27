@@ -10,6 +10,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { BsCopy } from "react-icons/bs";
 import VehicleStockDisplay from "@/components/VehicleStockDisplay";
+import { FaArrowCircleRight, FaArrowRight } from "react-icons/fa";
 
 const SingleVehicleView = ({ params }) => {
   const [vehicleData, setVehicleData] = useState(null);
@@ -117,7 +118,7 @@ const SingleVehicleView = ({ params }) => {
                 </title>
                 <meta name="description" content={selectedType.description} />
               </Head>
-              <div className="md:w-3/4 mx-auto">
+              <div className="md:w-3/4 mx-auto md:min-h-[538px]">
                 <div className="md:flex  justify-center">
                   <div className="md:w-[400px] p-4  bg-white rounded-tl-[5px] ">
                     <div className="md:flex items-center">
@@ -250,6 +251,7 @@ const SingleVehicleView = ({ params }) => {
                         {Number(stock) <= 0 ? (
                           <>
                             <div className="md:flex gap-5 mt-3 md:mt-0 items-center">
+                              <FaArrowRight className="text-[14px] text-gray-400 animate-slide-arrow" />
                               <p className="text-[15px] text-[#5BB853]">
                                 Bientôt disponible
                               </p>

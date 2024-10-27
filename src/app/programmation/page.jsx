@@ -82,58 +82,61 @@ const Programmation = () => {
                         </div>
                       </ul>
                     </div>
-                    <p className="my-3 text-[15px]">Références compatibles :</p>
+                    <p className="my-3 text-[15px]">Références compatibles:</p>
                     <div className=" ">
-                      <div className="grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-6 gap-2 text-gray-600 text-[15px]">
-                        {[
-                          "310321488R",
-                          "310321517R",
-                          "310320841R",
-                          "310320717R",
-                          "310320892R",
-                          "310320721R",
-                          "310321561R",
-                          "310321808R",
-                          "310321706R",
-                          "310321716R",
-                          "310321662R",
-                          "310321994R",
-                          "310322059R",
-                          "310F93913R",
-                          "310321149R",
-                          "310321306R",
-                          "310320553R",
-                          "310320749R",
-                          "310320891R",
-                          "310320756R",
-                          "310321109R",
-                          "A2C30743000",
-                          "A2C53374830",
-                        ].map((code) => (
-                          <a
-                            key={code}
-                            href={`/${encodeURIComponent(code)}`}
-                            className="hover:underline"
-                          >
-                            {code}
-                          </a>
-                        ))}
+                      <div class="grid gap-3 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-7 text-gray-600 text-[15px] max-w-5xl mx-auto">
+                        <Link href="/310321488R">310321488R</Link>
+                        <Link href="/310321517R">310321517R</Link>
+                        <Link href="/310320841R">310320841R</Link>
+                        <Link href="/310320717R">310320717R</Link>
+                        <Link href="/310320892R">310320892R</Link>
+                        <Link href="/310320721R">310320721R</Link>
+                        <Link href="/310321561R">310321561R</Link>
+
+                        <Link href="/310321808R">310321808R</Link>
+                        <Link href="/310321706R">310321706R</Link>
+                        <Link href="/310321716R">310321716R</Link>
+                        <Link href="/310321662R">310321662R</Link>
+                        <Link href="/310321994R">310321994R</Link>
+                        <Link href="/310322059R">310322059R</Link>
+                        <Link href="/310F93913R">310F93913R</Link>
+
+                        <Link href="/310321149R">310321149R</Link>
+                        <Link href="/310321306R">310321306R</Link>
+                        <Link href="/310320553R">310320553R</Link>
+                        <Link href="/310320749R">310320749R</Link>
+                        <Link href="/310320891R">310320891R</Link>
+                        <Link href="/310320756R">310320756R</Link>
+                        <Link href="/310321109R">310321109R</Link>
+
+                        <Link href="/310321354R">310321354R</Link>
+                        <Link href="/310321148R">310321148R</Link>
+                        <Link href="/310320192R">310320192R</Link>
+                        <Link href="/310320139R">310320139R</Link>
+                        <Link href="/310320468R">310320468R</Link>
+                        <Link href="/310320408R">310320408R</Link>
+
+                        <Link href="#">310321520R</Link>
+                        <Link href="#">310321150R</Link>
+                        <Link href="#">310321421R</Link>
+                        <Link href="#">310321793R</Link>
                       </div>
-                      <div className="">
-                        <p className="grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-6 gap-2 text-gray-600 text-[15px] mt-2">
-                          <span>310321520R</span>
-                          <span>310321150R</span>
-                          <span>310321421R</span>
-                          <span>310321793R</span>
-                          <span>310321524R</span>
-                          <span>310321359R</span>
-                        </p>
-                      </div>
-                      <div className="">
-                        <p className="text-[15px] mt-2">
-                          A2C30743000 01 K00-A2C53374830 03
-                          K01-A2C30743100-A2C73768907-A4539006303
-                        </p>
+                      <div className="flex gap-5 text-gray-600 text-[15px] mt-2">
+                        <Link className="truncate" href="/A2C30743000">
+                          A2C30743000
+                        </Link>
+                        <Link className="truncate" href="/A2C53374830">
+                          A2C53374830
+                        </Link>
+                        <Link className="truncate" href="#">
+                          A2C30743100
+                        </Link>
+                        <Link className="truncate" href="#">
+                          A2C73768907
+                        </Link>
+                        <Link className="truncate" href="#">
+                          A4539006303
+                        </Link>
                       </div>
                     </div>
                     <p className="mt-2 text-justify text-[15px]">

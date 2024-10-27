@@ -47,9 +47,11 @@ const VehicleStockDisplay = ({ modelName, carType }) => {
   if (loading)
     return (
       <p className="text-gray-700 py-1 text-center rounded-md flex justify-end items-center gap-2 text-[15px]">
-        {" "}
-        <span className="md:w-[12px] md:h-[12px] w-[10px] h-[10px] bg-[#2aa31fc4] rounded-full block"></span>
-        En stock: 0
+        <span
+          className="md:w-[12px] md:h-[12px] w-[10px] h-[10px] bg-gray-300
+          rounded-full block"
+        ></span>
+        En stock: <span className="font-[500]">0</span>
       </p>
     );
   if (error) return <p>{error}</p>;

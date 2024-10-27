@@ -31,6 +31,21 @@ body {
     rgba(255, 255, 255, 1) 100%
   );
 }
+@keyframes slideArrow {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(8px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-arrow {
+  animation: slideArrow 1s ease-in-out infinite; /* Set animation duration and loop */
+}
 .cokkiP {
   font-size: 14px;
 }
