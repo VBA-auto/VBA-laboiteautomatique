@@ -18,7 +18,7 @@ function setAutoRefresh(interval = 1 * 60 * 60 * 1000) {
   }
 }
 
-const ClientAutoRefresh = () => {
+const ClientAR = () => {
   useEffect(() => {
     const cleanup = setAutoRefresh();
 
@@ -28,4 +28,4 @@ const ClientAutoRefresh = () => {
   return null;
 };
 
-export default ClientAutoRefresh;
+export default ClientAR;
