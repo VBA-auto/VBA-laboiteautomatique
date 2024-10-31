@@ -2,6 +2,7 @@ import dynamic from "next/dynamic";
 import "./globals.css";
 import Head from "next/head";
 import Script from "next/script";
+import ClientAutoRefresh from "./components/ClientAutorefresh";
 
 const CookieConsent = dynamic(() => import("./components/CookieConsent"), {
   ssr: false,
@@ -62,7 +63,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
           strategy="afterInteractive"
           async
         />
-
+        <ClientAutoRefresh />
         {children}
         <CookieConsent />
         <GoogleAnalytics />
