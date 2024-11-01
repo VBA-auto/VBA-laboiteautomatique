@@ -251,7 +251,7 @@ const SingleVehicleView = ({ params }) => {
                         {Number(stock) <= 0 ? (
                           <>
                             <div className="md:flex gap-5 mt-3 md:mt-0 items-center">
-                              <FaArrowRight className="text-[14px] text-gray-400 animate-slide-arrow" />
+                              <FaArrowRight className="text-[14px] text-[#2C80EF] animate-slide-arrow" />
                               <p className="text-[15px] text-[#5BB853]">
                                 Bientôt disponible
                               </p>
@@ -361,7 +361,7 @@ const SingleVehicleView = ({ params }) => {
 
                       {showCoupon && (
                         <div className="mt-2 flex flex-col items-center justify-center">
-                          <div className="relative bg-white p-4 rounded-lg border shadow-lg w-[300px] ">
+                          <div className="relative bg-white px-4 py-2.5 rounded-lg border shadow-lg w-[230px] ">
                             <div className="flex justify-between items-center">
                               <p className="text-white">X</p>
                               <p className="font-[500] text-center">

@@ -292,7 +292,7 @@ const AutreFormulaire = () => {
                       E-mail*
                     </label>
                     <input
-                      placeholder="votre adresse mail"
+                      placeholder="Votre adresse mail"
                       type="email"
                       id="email"
                       name="email"

@@ -77,7 +77,7 @@ const Footer = () => {
                   Produits -
                 </Link>
                 <Link
-                  href="/prestations/installation"
+                  href="/installation"
                   className="hover:text-[#2C80EF] text-[15px]"
                 >
                   {" "}

@@ -134,13 +134,46 @@ const RefrerenceCheckerComp = () => {
             <div className="text-center mt-5 text-white">Loading...</div>
           ) : searchData.length > 0 ? (
             <div className="grid md:grid-cols-4 grid-cols-2 gap-5 mt-5">
-              {searchData.slice(0, 8).map((d, i) => (
-                <Link key={i} href={`/${d?.ref}`}>
-                  <div className="border px-2 text-center rounded-md border-blue-200 bg-white">
-                    <span className="text-[15px]">{d?.ref}</span>
-                  </div>
-                </Link>
-              ))}
+              <Link href="/310321488R">
+                <div className="border px-2 text-center rounded-md border-blue-200 bg-white">
+                  <span className="text-[15px]">310321488R</span>
+                </div>
+              </Link>
+              <Link href="/310320749R">
+                <div className="border px-2 text-center rounded-md border-blue-200 bg-white">
+                  <span className="text-[15px]">310320749R</span>
+                </div>
+              </Link>
+              <Link href="/310320721R">
+                <div className="border px-2 text-center rounded-md border-blue-200 bg-white">
+                  <span className="text-[15px]">310320721R</span>
+                </div>
+              </Link>
+              <Link href="/310320756R">
+                <div className="border px-2 text-center rounded-md border-blue-200 bg-white">
+                  <span className="text-[15px]">310320756R</span>
+                </div>
+              </Link>
+              <Link href="/310321808R">
+                <div className="border px-2 text-center rounded-md border-blue-200 bg-white">
+                  <span className="text-[15px]">310321808R</span>
+                </div>
+              </Link>
+              <Link href="/310321306R">
+                <div className="border px-2 text-center rounded-md border-blue-200 bg-white">
+                  <span className="text-[15px]">310321306R</span>
+                </div>
+              </Link>
+              <Link href="#">
+                <div className="border px-2 text-center rounded-md border-blue-200 bg-white">
+                  <span className="text-[15px]">310320254R</span>
+                </div>
+              </Link>
+              <Link href="/310321517R">
+                <div className="border px-2 text-center rounded-md border-blue-200 bg-white">
+                  <span className="text-[15px]">310321517R</span>
+                </div>
+              </Link>
             </div>
           ) : (
             <div className="text-center mt-5">No data available</div>

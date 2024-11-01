@@ -371,7 +371,7 @@ const ComparePage = () => {
             </div>
             <div className="hidden md:block">
               <div className="flex justify-center items-center ">
-                <span className="h-[400px] w-[1px] bg-white"></span>
+                <span className="h-[300px] mt-[55px] w-[1px] bg-white"></span>
               </div>
             </div>
             <div className="md:w-1/2 md:px-0 px-3 md:mt-0 mt-12">
