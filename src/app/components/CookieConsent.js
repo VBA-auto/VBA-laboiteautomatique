@@ -17,7 +17,7 @@ const CookieConsent = () => {
   return (
     <>
       <div
-        className="w-full"
+        className="md:w-1/4"
         style={{
           position: "fixed",
           bottom: "20px",
@@ -27,9 +27,7 @@ const CookieConsent = () => {
         <div className=" mx-8 border rounded-md bg-white p-5">
           <div className="flex justify-between items-start">
             <div className="w-full">
-              <h2 className="text-lg mb-3 text-center">
-                Ce site utilise des cookies
-              </h2>
+              <h2 className="text-md mb-3">Ce site utilise des cookies</h2>
             </div>
             <div className="">
               {/* Close Button */}
@@ -39,7 +37,7 @@ const CookieConsent = () => {
                   background: "none",
                   border: "none",
                   cursor: "pointer",
-                  fontSize: "20px",
+                  fontSize: "17px",
                   lineHeight: "20px",
                 }}
               >
@@ -48,13 +46,13 @@ const CookieConsent = () => {
             </div>
           </div>
 
-          <p className="cokkiP text-center">
+          <p className="cokkiP ">
             Ce site utilise des cookies. En utilisant notre site, vous consentez
             à l&apos;utilisation de tous les cookies conformément à notre
             politique en matière de cookies.
           </p>
 
-          <div className="md:flex justify-center gap-5 my-3">
+          <div className="gap-5 my-3">
             <label className="text-[13px] mb-2 flex items-center">
               <input type="checkbox" style={{ marginRight: "10px" }} />
               PERFORMANCE
@@ -71,7 +69,7 @@ const CookieConsent = () => {
           <div
             style={{
               display: "flex",
-              gap: "20px",
+              gap: "10px",
               marginTop: "10px",
               justifyContent: "center",
             }}
@@ -83,7 +81,7 @@ const CookieConsent = () => {
                 fontSize: "12px",
                 color: "white",
                 border: "none",
-                padding: "8px 12px",
+                padding: "8px 14px",
                 borderRadius: "6px",
                 cursor: "pointer",
                 transition: "background-color 0.3s",
@@ -97,7 +95,7 @@ const CookieConsent = () => {
                 fontSize: "12px",
                 color: "#2C80EF",
                 border: "1px solid #2C80EF",
-                padding: "8px 17px",
+                padding: "8px 18px",
                 borderRadius: "6px",
                 cursor: "pointer",
                 transition: "background-color 0.3s",
@@ -107,7 +105,7 @@ const CookieConsent = () => {
             </button>
           </div>
 
-          <div className="text-center">
+          <div className="">
             <button
               style={{
                 fontSize: "12px",
