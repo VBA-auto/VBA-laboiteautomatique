@@ -11,17 +11,31 @@ import Image from "next/image";
 const pageDescription =
   "Article sur les différentes boites automatiques de chez Renault évolution de la boîte à convertisseur à la boîte automatique double embrayage";
 
-const ArticlePage = ({ params }) => {
+const ArticlePage = ({ params: paramsPromise }) => {
+  const [params, setParams] = useState(null);
   const [article, setArticle] = useState(null);
 
+  // Unwrap the params promise using useEffect
   useEffect(() => {
+    const unwrapParams = async () => {
+      const resolvedParams = await paramsPromise;
+      setParams(resolvedParams);
+    };
+    unwrapParams();
+  }, [paramsPromise]);
+
+  // Fetch the article once params is set
+  useEffect(() => {
+    if (!params?.LinkUrl) return;
+
     const fetchArticle = async () => {
       try {
         const response = await fetch("/article.json");
         const data = await response.json();
 
+        // Ensure fetching by LinkUrl
         const foundArticle = data.find(
-          (article) => article.title === params.title
+          (article) => article.LinkUrl === params.LinkUrl
         );
         setArticle(foundArticle);
       } catch (error) {
@@ -30,7 +44,7 @@ const ArticlePage = ({ params }) => {
     };
 
     fetchArticle();
-  }, [params.title]);
+  }, [params?.LinkUrl]);
 
   return (
     <main>
@@ -49,7 +63,7 @@ const ArticlePage = ({ params }) => {
                 height={500}
                 className="w-full mt-8"
                 src={article.image}
-                alt=""
+                alt={article.title}
               />
             </div>
             <div className="container mx-auto">

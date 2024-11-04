@@ -110,3 +110,78 @@ const handleSearch = (term) => {
 
 //   setIsSearching(false);
 // };
+
+
+
+                      {/* <div>
+                        <div className="blogsCard">
+                          <div className="border p-4 rounded-md bg-white shadow-md">
+                            <div className="mb-5">
+                              <iframe
+                                className="w-full md:h-[397px] rounded-md "
+                                src="https://www.youtube.com/embed/6X72SXZhZ44?si=50iEt0fuIk1i5HeS"
+                                title="YouTube video player"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen
+                              ></iframe>
+                            </div>
+
+                            <h2 className="text-lg  mt-2 text-gray-700 capitalize font-medium">
+                              Démontage/Remontage calculateur
+                            </h2>
+                            <p>
+                              Comment installer un calculateur de boite
+                              automatique (boite EDC) sur une Renault Clio 4,
+                              Captur, Scénic ou Mégane
+                            </p>
+                          </div>
+                        </div>
+                      </div> */}
+                      <div>
+                        {/* <div className="blogsCard">
+                          <div className="border p-4 rounded-md bg-white shadow-md">
+                            <div className="mb-5">
+                              <Image
+                                className="w-full md:h-[397px] rounded-md "
+                                src="/images/blog-2.webp"
+                                alt="bloog-2 iamge"
+                                width={500}
+                                height={500}
+                              />
+                            </div>
+
+                            <h2 className="text-lg  mt-2 text-gray-700 capitalize font-medium">
+                              Exemple d’information calculateur
+                            </h2>
+                            <p>
+                              Vous trouverez ici un exemple où trouver les
+                              informations relatives au calcualteur. Version du
+                              diag - du logiciel – numéro de calibrage ou
+                              étalonnage
+                            </p>
+                          </div>
+                        </div> */}
+                      </div>
+                      <div>
+                        {/* <div className="blogsCard">
+                          <div className="border p-4 rounded-md bg-white shadow-md">
+                            <div className="mb-5">
+                              <iframe
+                                className="w-full md:h-[397px] rounded-md "
+                                src="https://www.youtube.com/embed/EmwXs4AmC64?si=OnO4L_2ssu661hkg"
+                                title="YouTube video player"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen
+                              ></iframe>
+                            </div>
+
+                            <h2 className="text-lg  mt-2 text-gray-700 capitalize font-medium">
+                              Video présentation
+                            </h2>
+                            <p>
+                              Spécialiste en calculateur boite automatique pour
+                              Renault EDC Réparation, programmation, clonage
+                            </p>
+                          </div>
+                        </div> */}
+                      </div>

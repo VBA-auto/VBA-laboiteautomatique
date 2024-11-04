@@ -19,7 +19,7 @@ const nextConfig = {
     optimizePackageImports: ["@mantine/core", "@mantine/hooks"],
   },
   // Enable SWC-based JS minification
-  swcMinify: true,
+  // swcMinify: true,
 };
 
 export default bundleAnalyzer({

@@ -84,7 +84,7 @@ const Programmation = () => {
                     </div>
                     <p className="my-3 text-[15px]">Références compatibles:</p>
                     <div className=" ">
-                      <div class="grid gap-3 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-7 text-gray-600 text-[15px] max-w-5xl mx-auto">
+                      <div className="grid gap-3 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-7 text-gray-600 text-[15px] max-w-5xl mx-auto">
                         <Link href="/310321488R">310321488R</Link>
                         <Link href="/310321517R">310321517R</Link>
                         <Link href="/310320841R">310320841R</Link>

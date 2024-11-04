@@ -226,7 +226,7 @@ const Faq = () => {
         "Quelles sont les différentes références pour le calculateur de boite EDC?",
       content: `Les différentes références qu'il peut y avoir sont les suivantes: <br/>
         310320749R 310320891R 310320756R 310321109R 310321488R 310321517R 310320841R 310320717R 310320892R 310320721R 310321520R 310321561R, A4539006303 310321808R 310321150R 310321421R 310321706R 310321716R 310321793R 310321662R 310321524R 310321994R 310322059R 310F93913R 310321149R 310321306R 310320553R 310321359R, 310321148R, 310321488R.<br/> 
-        Vous pourrez les retrouvez sur ce lien : <a class="text-[#2c80ef]" href="https://laboiteautomatique.com/selectionnez-votre-vehicule" target="_blank" rel="noopener noreferrer">https://laboiteautomatique.com/selectionnez-votre-vehicule</a> <br/> Les références les plus courantes sont <span class="font-semibold underline">310321488R,</span> 310320749R, 310320721R, 310320756R, 310321808R, 310321306R, 310320254R.`,
+        Vous pourrez les retrouvez sur ce lien : <a class="text-[#2c80ef]" href="https://laboiteautomatique.com/selectionnez-votre-vehicule" target="_blank" rel="noopener noreferrer">https://laboiteautomatique.com/selectionnez-votre-vehicule</a> <br/> Les références les plus courantes sont <span class="">310321488R,</span> 310320749R, 310320721R, 310320756R, 310321808R, 310321306R, 310320254R.`,
     },
     {
       title: "Cela peut-il être autre chose que le calculateur ?",

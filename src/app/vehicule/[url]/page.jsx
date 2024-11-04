@@ -10,22 +10,35 @@ import Head from "next/head";
 import Image from "next/image";
 import { BsCopy } from "react-icons/bs";
 import VehicleStockDisplay from "@/components/VehicleStockDisplay";
-import { FaArrowCircleRight, FaArrowRight } from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa";
 
-const SingleVehicleView = ({ params }) => {
+const SingleVehicleView = ({ params: paramsPromise }) => {
+  const [params, setParams] = useState(null); // Initialize params state
   const [vehicleData, setVehicleData] = useState(null);
   const [selectedType, setSelectedType] = useState(null);
   const [showSpinner, setShowSpinner] = useState(false);
   const [showCoupon, setShowCoupon] = useState(false);
   const [copied, setCopied] = useState(false);
   const [stock, setStock] = useState(0);
+
+  // Unwrap params with useEffect and set it to state
+  useEffect(() => {
+    (async () => {
+      const unwrappedParams = await paramsPromise;
+      setParams(unwrappedParams); // Set the resolved params
+    })();
+  }, [paramsPromise]);
+
   const url = params?.url;
 
+  // Fetch vehicle data based on the URL once params are resolved
   useEffect(() => {
+    if (!url) return; // Ensure `url` is defined before fetching data
+
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "  https://vba-blue-server.onrender.com/cars"
+          "https://vba-blue-server.onrender.com/cars"
         );
         if (!response.ok) {
           throw new Error(`Error: ${response.statusText}`);
@@ -51,57 +64,14 @@ const SingleVehicleView = ({ params }) => {
             setStock(selected.stock); // Update the stock value
           }
         } else {
-          console.error("Vehicle or type not found for the given URL.");
+          console.error("Vehicle or type not found for the given URL:", url);
         }
       } catch (err) {
         console.error("Error fetching data:", err.message);
       }
     };
 
-    fetchData(); // Fetch data on component mount
-  }, [url]);
-
-  useEffect(() => {
-    if (!url) {
-      console.error("URL is undefined or null");
-      return;
-    }
-
-    // Fetch vehicle data with error handling and performance improvement
-    const fetchVehicle = async () => {
-      try {
-        const response = await fetch("/searchVehicule.json", {
-          cache: "force-cache",
-        });
-        if (!response.ok) throw new Error("Network response was not ok");
-
-        const data = await response.json();
-        if (!Array.isArray(data) || data.length === 0) {
-          console.error("Fetched data is not an array or is empty");
-          return;
-        }
-
-        const vehicle = data.find((vehicle) =>
-          Object.values(vehicle.types).some((type) => type.url === url)
-        );
-
-        if (vehicle) {
-          const type = Object.keys(vehicle.types).find(
-            (key) => vehicle.types[key].url === url
-          );
-          if (type) {
-            setSelectedType(vehicle.types[type]);
-            setVehicleData(vehicle);
-          }
-        } else {
-          console.error("Vehicle not found for URL:", url);
-        }
-      } catch (error) {
-        console.error("Error fetching vehicle data:", error);
-      }
-    };
-
-    fetchVehicle();
+    fetchData(); // Fetch data on component mount when URL is available
   }, [url]);
 
   return (

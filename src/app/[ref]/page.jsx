@@ -14,17 +14,28 @@ import Image from "next/image";
 import VehicleRef from "@/components/VehicleRef";
 import { FaArrowRight } from "react-icons/fa";
 
-const SingleSearchView = ({ params }) => {
+const SingleSearchView = ({ params: paramsPromise }) => {
+  const [params, setParams] = useState(null);
   const [SearchSingleView, setSingleSearchView] = useState(null);
   const [showSpinner, setShowSpinner] = useState(false);
   const [showCoupon, setShowCoupon] = useState(false);
   const [copied, setCopied] = useState(false);
-  const url = params?.url;
-
   const [stock, setStock] = useState();
 
+  // Unwrap params and set it to state
   useEffect(() => {
-    console.log("Params object:", params);
+    const unwrapParams = async () => {
+      const unwrappedParams = await paramsPromise;
+      setParams(unwrappedParams); // Set unwrapped params
+    };
+    unwrapParams();
+  }, [paramsPromise]);
+
+  const url = params?.url;
+  const ref = params?.ref;
+
+  useEffect(() => {
+    if (!ref) return;
 
     const fetchArticle = async () => {
       try {
@@ -37,38 +48,33 @@ const SingleSearchView = ({ params }) => {
         }
 
         const data = await response.json();
-        console.log("Searching for article with ref:", params.ref);
-
-        const foundArticle = data.find((article) => {
-          console.log("Checking article ref:", article.ref);
-          return article.ref === params.ref;
-        });
+        const foundArticle = data.find((article) => article.ref === ref);
 
         if (!foundArticle) {
-          console.log("No article found with the given ref");
+          console.warn("No article found with the given ref");
         }
 
-        setSingleSearchView(foundArticle);
+        setSingleSearchView(foundArticle || null);
       } catch (error) {
         console.error("Error fetching article:", error);
       }
     };
 
     fetchArticle();
-  }, [params]);
+  }, [ref]);
 
   useEffect(() => {
+    if (!ref) return;
+
     const fetchStockData = async () => {
       try {
         const response = await fetch(
-          "  https://vba-blue-server.onrender.com/refs"
+          "https://vba-blue-server.onrender.com/refs"
         );
         if (!response.ok) throw new Error(`Error: ${response.statusText}`);
 
         const refs = await response.json();
-
-        // Ensure the matching logic is correct based on the ref or URL
-        const foundRef = refs.find((ref) => ref.ref === params.ref); // Match using params.ref
+        const foundRef = refs.find((refData) => refData.ref === ref);
 
         if (foundRef) {
           setStock(foundRef.stock); // Update stock value
@@ -76,7 +82,7 @@ const SingleSearchView = ({ params }) => {
             `Fetched stock for ref: ${foundRef.ref}, Stock: ${foundRef.stock}`
           );
         } else {
-          console.warn(`No matching ref found for: ${params.ref}`);
+          console.warn(`No matching ref found for: ${ref}`);
           setStock(0); // Default to 0 if not found
         }
       } catch (error) {
@@ -86,8 +92,7 @@ const SingleSearchView = ({ params }) => {
     };
 
     fetchStockData();
-  }, [params.ref]); // Ensure ref code is used for matching
-
+  }, [ref]);
   return (
     <main>
       <SubHeader />

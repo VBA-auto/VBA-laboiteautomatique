@@ -3,20 +3,18 @@ import "./globals.css";
 import Head from "next/head";
 import Script from "next/script";
 import ClientAR from "./components/ClientAR";
+import GoogleAnalytics from "./components/GoogleAnalytics";
+import GoogleAnalytics2 from "./components/GoogleAnalytics2";
 
-const CookieConsent = dynamic(() => import("./components/CookieConsent"), {
-  ssr: false,
-});
-
-const GoogleAnalytics = dynamic(() => import("./components/GoogleAnalytics"), {
-  ssr: false,
-});
-const GoogleAnalytics2 = dynamic(
-  () => import("./components/GoogleAnalytics2"),
-  {
-    ssr: false,
-  }
-);
+// const GoogleAnalytics = dynamic(() => import("./components/GoogleAnalytics"), {
+//   ssr: false,
+// });
+// const GoogleAnalytics2 = dynamic(
+//   () => import("./components/GoogleAnalytics2"),
+//   {
+//     ssr: false,
+//   }
+// );
 
 export const metadata = {
   title: "VBA Calculateur Renault",
