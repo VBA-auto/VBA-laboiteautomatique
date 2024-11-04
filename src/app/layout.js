@@ -65,14 +65,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
         />
         <ClientAR />
         {children}
-        <CookieConsent />
+        {/* <CookieConsent /> */}
         <GoogleAnalytics />
         <GoogleAnalytics2 />
-        {/* <script
+        <script
           type="text/javascript"
           src="//cdn.cookie-script.com/s/b44654ce8adaebd84447bda0400a34b2.js"
           defer
-        ></script> */}
+        ></script>
       </body>
     </html>
   );
