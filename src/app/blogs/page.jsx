@@ -106,7 +106,7 @@ const Page = () => {
                               )}
                             </div>
                             <div className="content-container mt-2">
-                              <h2 className="text-lg text-gray-700 font-medium capitalize">
+                              <h2 className="text-lg text-gray-700 font-medium">
                                 {part.video ? (
                                   <span>{part.title}</span> // Non-clickable title for videos
                                 ) : (

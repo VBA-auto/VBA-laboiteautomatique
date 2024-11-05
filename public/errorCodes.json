@@ -236,12 +236,6 @@
   },
   {
     "code": "178094",
-    "description": "Passage rapports tambour selection 1",
-    "subTitle": "Default with clutch 1",
-    "aide": "Problème calculateur (+ moteur embrayage)"
-  },
-  {
-    "code": "178094",
     "description": "Signal moteur embrayage 1",
     "subTitle": "Default with clutch 1",
     "aide": "Problème calculateur (+ moteur embrayage)"

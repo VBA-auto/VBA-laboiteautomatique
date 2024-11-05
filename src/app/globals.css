@@ -502,6 +502,21 @@ option {
   .homeContent {
     display: inherit;
   }
+  .slider-container {
+    width: 100%;
+    max-width: 800px; /* Set max width for centering */
+    margin: 0 auto; /* Center the carousel */
+  }
+  .carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .media-container {
+    width: 100%;
+    height: 400px; /* Set a consistent height for videos and images */
+    overflow: hidden;
+  }
   .sliderContainerMain {
     padding: 0 15px;
   }

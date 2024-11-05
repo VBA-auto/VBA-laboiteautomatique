@@ -195,7 +195,7 @@ const AideenLigneSearch = () => {
             </div>
           ) : (
             <p className="text-gray-500  text-[14px]">
-              Start typing to search for codes...
+              Commencer à saisir les informations (codes ou autre)…
             </p>
           )}
         </div>

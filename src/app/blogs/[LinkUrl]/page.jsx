@@ -69,7 +69,7 @@ const ArticlePage = ({ params: paramsPromise }) => {
             <div className="container mx-auto">
               <div className="md:w-2/3 mx-auto mt-8 mb-16">
                 <div className="">
-                  <h1 className="text-[24px] font-semibold my-3 capitalize">
+                  <h1 className="text-[24px] font-semibold my-3">
                     {article.title}
                   </h1>
                   <p dangerouslySetInnerHTML={{ __html: article.paragraph }} />
