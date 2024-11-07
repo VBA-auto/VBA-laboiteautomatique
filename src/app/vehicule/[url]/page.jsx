@@ -396,7 +396,7 @@ const SingleVehicleView = ({ params: paramsPromise }) => {
             </div>
           ) : (
             <>
-              <div className="h-[65vh] flex flex-col justify-center">
+              <div className="h-[538px] flex flex-col justify-center">
                 <div className="w-1/2 mx-auto mt-8 text-center">
                   <div className="inline-block animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500 mb-4"></div>
                   <p className="text-lg text-white">Recherche en cours...</p>
