@@ -245,5 +245,11 @@
     "description": "Ensemble actionneur embrayage 1",
     "subTitle": "Default with clutch 1",
     "aide": "Problème calculateur (+ moteur embrayage)"
+  },
+  {
+    "code": "DTC186978",
+    "description": "Embrayage 1 incohèrence position",
+    "subTitle": "Clutch 1 default position ",
+    "aide": "Problème calculateur et/ou embrayage"
   }
 ]

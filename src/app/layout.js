@@ -1,20 +1,8 @@
-import dynamic from "next/dynamic";
 import "./globals.css";
 import Head from "next/head";
 import Script from "next/script";
-import ClientAR from "./components/ClientAR";
 import GoogleAnalytics from "./components/GoogleAnalytics";
 import GoogleAnalytics2 from "./components/GoogleAnalytics2";
-
-// const GoogleAnalytics = dynamic(() => import("./components/GoogleAnalytics"), {
-//   ssr: false,
-// });
-// const GoogleAnalytics2 = dynamic(
-//   () => import("./components/GoogleAnalytics2"),
-//   {
-//     ssr: false,
-//   }
-// );
 
 export const metadata = {
   title: "VBA Calculateur Renault",
@@ -37,6 +25,7 @@ const RootLayout = ({ children }) => {
       </Head>
 
       <body>
+        {children}
         <noscript
           dangerouslySetInnerHTML={{
             __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PVVG6XNH"
@@ -61,9 +50,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
           strategy="afterInteractive"
           async
         />
-        <ClientAR />
-        {children}
-        {/* <CookieConsent /> */}
+        <Script
+          id="google-ads"
+          dangerouslySetInnerHTML={{
+            __html: `
+              gtag('config', 'AW-732915422/NLOTCJvL7-YZEN7Nvd0C', {
+                'phone_conversion_number': '0145147254'
+              });
+            `,
+          }}
+          strategy="afterInteractive"
+          async
+        />
         <GoogleAnalytics />
         <GoogleAnalytics2 />
         <script
