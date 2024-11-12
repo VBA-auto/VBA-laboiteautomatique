@@ -9,22 +9,11 @@ import Image from "next/image";
 import SubHeader from "@/components/SubHeader";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { useState, useEffect } from "react";
 
 const pageDescription =
   "bloc, Forum et articles sur les problèmes rencontrés pour les boites automatiques de Captur, Clio 4, Scénic, Mégane. Article sur les différentes boites automatiques de chez Renault évolution de la boîte à convertisseur à la boîte automatique double embrayage";
 
 const Page = () => {
-  const [parts, setParts] = useState([]);
-
-  useEffect(() => {
-    fetch("/article.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setParts(data);
-      });
-  }, []);
-
   const settings = {
     centerMode: true,
     infinite: true,
@@ -82,48 +71,145 @@ const Page = () => {
                 <div className="flex justify-center gap-5">
                   <div className="slider-container">
                     <Slider {...settings}>
-                      {parts.map((part, index) => (
-                        <div key={index} className="carousel-item">
-                          <div className="blogsCard flex flex-col">
-                            <div className="media-container">
-                              {part.video ? (
-                                <div
-                                  className="w-full h-full"
-                                  dangerouslySetInnerHTML={{
-                                    __html: part.video,
-                                  }}
-                                ></div>
-                              ) : (
-                                <Link href={`/blogs/${part.LinkUrl}`}>
-                                  <Image
-                                    width={500}
-                                    height={300}
-                                    src={part.image}
-                                    alt={part.LinkUrl}
-                                    className="rounded-md w-full h-full object-cover"
-                                  />
-                                </Link>
-                              )}
-                            </div>
-                            <div className="content-container mt-2">
-                              <h2 className="text-lg text-gray-700 font-medium">
-                                {part.video ? (
-                                  <>
-                                    {" "}
-                                    {/* <span>{part.title}</span> */}
-                                    <p>{part.title}</p>
-                                  </>
-                                ) : (
-                                  <Link href={`/blogs/${part.LinkUrl}`}>
-                                    {part.title}
-                                  </Link>
-                                )}
-                              </h2>
-                              <p className=" text-gray-600">{part.excerpt}</p>
-                            </div>
+                      {/* Static Content 1 */}
+                      <div className="carousel-item">
+                        <div className="blogsCard flex flex-col">
+                          <div className="media-container">
+                            <Link href="/blogs/renault">
+                              <Image
+                                width={500}
+                                height={300}
+                                src="/images/renault.webp"
+                                alt="renault"
+                                className="rounded-md w-full h-full object-cover"
+                              />
+                            </Link>
+                          </div>
+                          <div className="content-container mt-2">
+                            <h2 className="text-lg text-gray-700 font-medium">
+                              <Link href="/blogs/renault">Renault</Link>
+                            </h2>
+                            <p className=" text-gray-600">
+                              BVA montées sur des véhicules Renault remontent...
+                            </p>
                           </div>
                         </div>
-                      ))}
+                      </div>
+                      {/* Static Content 2 */}
+                      <div className="carousel-item">
+                        <div className="blogsCard flex flex-col">
+                          <div className="media-container">
+                            <Link href="/blogs/calibrage">
+                              <Image
+                                width={500}
+                                height={300}
+                                src="/images/blog-2.webp"
+                                alt="calculateur"
+                                className="rounded-md w-full h-full object-cover"
+                              />
+                            </Link>
+                          </div>
+                          <div className="content-container mt-2">
+                            <h2 className="text-lg text-gray-700 font-medium">
+                              <Link href="/blogs/calibrage">
+                                Exemple d’information calculateur
+                              </Link>
+                            </h2>
+                            <p className=" text-gray-600">
+                              Vous trouverez ici un exemple où trouver les
+                              informations...
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      {/* Static Content 3 (Video Example) */}
+
+                      <div className="carousel-item">
+                        <div className="blogsCard flex flex-col">
+                          <div className="media-container">
+                            <div className="w-full h-full">
+                              <iframe
+                                className="w-full md:h-[397px] rounded-md"
+                                src="https://www.youtube.com/embed/6X72SXZhZ44?si=50iEt0fuIk1i5HeS"
+                                title="YouTube video player"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen
+                              ></iframe>
+                            </div>
+                          </div>
+                          <div className="content-container mt-2">
+                            <Link href="/blogs/remplacement-calculateur">
+                              {" "}
+                              <h2 className="text-lg text-gray-700 font-medium">
+                                Démontage/Remontage calculateur
+                              </h2>
+                              <p className=" text-gray-600">
+                                Comment installer un calculateur de boite
+                                automatique...
+                              </p>
+                            </Link>
+                          </div>
+                        </div>
+                      </div>
+                      {/* Static Content 4 (Video Example) */}
+                      <div className="carousel-item">
+                        <div className="blogsCard flex flex-col">
+                          <div className="media-container">
+                            <div className="w-full h-full">
+                              <iframe
+                                className="w-full md:h-[397px] rounded-md"
+                                src="https://www.youtube.com/embed/EmwXs4AmC64?si=OnO4L_2ssu661hkg"
+                                title="YouTube video player"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen
+                              ></iframe>
+                            </div>
+                          </div>
+
+                          <div className="content-container mt-2">
+                            <Link href="/blogs/presentation-vba">
+                              {" "}
+                              <h2 className="text-lg text-gray-700 font-medium">
+                                Calculateur boîtes de vitesse automatiques
+                              </h2>
+                              <p className=" text-gray-600">
+                                Spécialiste en calculateur boite automatique
+                                pour...
+                              </p>
+                            </Link>
+                          </div>
+                        </div>
+                      </div>
+                      {/* Static Content 5 (Video Example) */}
+                      <div className="carousel-item">
+                        <div className="blogsCard flex flex-col">
+                          <div className="media-container">
+                            <div className="w-full h-full">
+                              <iframe
+                                className="w-full md:h-[397px] rounded-md"
+                                src="https://www.youtube.com/embed/crmyBO1TaK0?autohide=1&controls=1&showinfo=0"
+                                title="YouTube video player"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen
+                              ></iframe>
+                            </div>
+                          </div>
+
+                          <div className="content-container mt-2">
+                            <Link href="/blogs/test-embrayage-edc">
+                              {" "}
+                              <h2 className="text-lg text-gray-700 font-medium">
+                                Vérifier l’état de l’embrayage EDC
+                              </h2>
+                              <p className=" text-gray-600">
+                                Comment vérifier l&apos;état de l&apos;embrayage
+                                sur une boite EDC pour...
+                              </p>
+                            </Link>
+                          </div>
+                        </div>
+                      </div>
+                      {/* Add more static content as needed */}
                     </Slider>
                   </div>
                 </div>

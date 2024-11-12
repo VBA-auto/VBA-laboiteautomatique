@@ -190,9 +190,9 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        {/* <div className="mt-24">
+        <div className="mt-24">
           <Review />
-        </div> */}
+        </div>
       </section>
       <Footer />
     </>

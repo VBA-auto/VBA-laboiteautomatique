@@ -46,29 +46,31 @@ const MiseEnLigne = () => {
                           className="text-blue-400 underline"
                         >
                           Captur
-                        </Link>
-                        ,{" "}
+                        </Link>{" "}
                         <Link
                           href="/renault-megane"
                           className="text-blue-400 underline"
                         >
                           Mégane
-                        </Link>
-                        ,{" "}
+                        </Link>{" "}
                         <Link
                           href="/renault-scenic"
                           className="text-blue-400 underline"
                         >
                           Scénic
-                        </Link>
-                        ,{" "}
+                        </Link>{" "}
                         <Link
                           href="/renault-clio"
                           className="text-blue-400 underline"
                         >
-                          Clio-4
-                        </Link>
-                        ,{" "}
+                          Clio 4
+                        </Link>{" "}
+                        <Link
+                          href="/renault-clio-rs"
+                          className="text-blue-400 underline"
+                        >
+                          Clio RS
+                        </Link>{" "}
                         <Link
                           href="/renault-fluence"
                           className="text-blue-400 underline"
