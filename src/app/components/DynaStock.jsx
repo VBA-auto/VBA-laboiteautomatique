@@ -1,41 +1,49 @@
 "use client";
+
 import { useState, useEffect } from "react";
 import useFetch from "./useFetch"; // Import the custom hook
 
 const DynaStock = ({ carName = "" }) => {
-  const [stock, setStock] = useState(0); // Initialize stock to 0
+  const url = "https://vba-blue-server.onrender.com/cars";
+  const { data: cars, error } = useFetch();
 
-  // Use the custom useFetch hook to get cars data from the backend
-  const { data: cars, loading, error } = useFetch();
+  // Initialize stock state with cached data if available
+  const initialStock = (() => {
+    const cachedData = sessionStorage.getItem(url);
+    if (cachedData && carName) {
+      const parsedData = JSON.parse(cachedData);
+      let totalStock = 0;
+      parsedData.forEach((car) => {
+        if (car?.model?.toLowerCase().includes(carName.toLowerCase())) {
+          Object.values(car.types || {}).forEach((type) => {
+            totalStock += parseInt(type.stock, 10) || 0;
+          });
+        }
+      });
+      return totalStock;
+    }
+    return 0; // Default stock value if no cached data
+  })();
 
-  // Fetch and accumulate stock from matching car models
+  const [stock, setStock] = useState(initialStock);
+
+  // Update stock when fresh data is fetched
   useEffect(() => {
-    if (loading || error || !cars || !carName) return; // Ensure data and carName exist
+    if (error || !cars || !carName) return;
 
     let totalStock = 0;
 
     cars.forEach((car) => {
       if (car?.model?.toLowerCase().includes(carName.toLowerCase())) {
         Object.values(car.types || {}).forEach((type) => {
-          totalStock += parseInt(type.stock, 10); // Accumulate stock
+          totalStock += parseInt(type.stock, 10) || 0;
         });
       }
     });
 
     setStock(totalStock); // Update state with total stock
-  }, [cars, loading, error, carName]); // Recalculate if data or carName changes
+  }, [cars, error, carName]);
 
-  if (loading) {
-    return (
-      <p className="text-gray-700 py-1 text-center rounded-md flex justify-end items-center gap-2 text-[15px]">
-        <span
-          className="md:w-[12px] md:h-[12px] w-[10px] h-[10px] bg-gray-300
-          rounded-full block"
-        ></span>
-        En stock: <span className="font-[500]">0</span>
-      </p>
-    );
-  }
   if (error) return <p>Error: {error}</p>;
 
   return (
@@ -43,7 +51,7 @@ const DynaStock = ({ carName = "" }) => {
       <p className="text-gray-700 py-1 text-center rounded-md flex justify-end items-center gap-2 text-[15px]">
         <span
           className={`md:w-[12px] md:h-[12px] w-[10px] h-[10px] ${
-            stock === null
+            stock <= 0
               ? "bg-gray-300"
               : stock <= 1
               ? "bg-red-500"
@@ -55,7 +63,7 @@ const DynaStock = ({ carName = "" }) => {
         En stock:
         <span
           className={`${
-            stock === null
+            stock <= 0
               ? "text-gray-300"
               : stock <= 1
               ? "text-red-500"
@@ -64,7 +72,7 @@ const DynaStock = ({ carName = "" }) => {
               : "text-[#2aa31fc4]"
           } font-[500]`}
         >
-          {stock === null ? "..." : stock}{" "}
+          {stock}
         </span>
       </p>
     </div>
