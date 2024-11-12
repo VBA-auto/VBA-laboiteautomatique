@@ -251,5 +251,17 @@
     "description": "Embrayage 1 incohèrence position",
     "subTitle": "Clutch 1 default position ",
     "aide": "Problème calculateur et/ou embrayage"
+  },
+  {
+    "code": "DF379",
+    "description": "Circuit moteur tambour selection de vitesse 2 dètection signal hors limite basse ou haute",
+    "subTitle": "Default clutch motor 2",
+    "aide": "Problème calculateur"
+  },
+  {
+    "code": "DF381",
+    "description": "Circuit moteur tambour selection de vitesse 2 signal non plausible",
+    "subTitle": "Default clutch motor 2",
+    "aide": "Problème calculateur"
   }
 ]

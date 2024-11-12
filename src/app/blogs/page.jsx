@@ -108,7 +108,11 @@ const Page = () => {
                             <div className="content-container mt-2">
                               <h2 className="text-lg text-gray-700 font-medium">
                                 {part.video ? (
-                                  <span>{part.title}</span> // Non-clickable title for videos
+                                  <>
+                                    {" "}
+                                    {/* <span>{part.title}</span> */}
+                                    <p>{part.title}</p>
+                                  </>
                                 ) : (
                                   <Link href={`/blogs/${part.LinkUrl}`}>
                                     {part.title}

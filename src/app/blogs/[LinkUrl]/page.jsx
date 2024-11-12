@@ -1,42 +1,27 @@
 "use client";
 
+import { useState, useEffect } from "react";
+import { useParams } from "next/navigation"; // Correct import for Next.js 13 app directory
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
 import Head from "next/head";
+import Image from "next/image";
 import SubHeader from "@/components/SubHeader";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Image from "next/image";
 
-const pageDescription =
-  "Article sur les différentes boites automatiques de chez Renault évolution de la boîte à convertisseur à la boîte automatique double embrayage";
-
-const ArticlePage = ({ params: paramsPromise }) => {
-  const [params, setParams] = useState(null);
+const ArticlePage = () => {
+  const { LinkUrl } = useParams(); // Get dynamic slug from useParams()
   const [article, setArticle] = useState(null);
 
-  // Unwrap the params promise using useEffect
+  // Fetch article based on dynamic `LinkUrl`
   useEffect(() => {
-    const unwrapParams = async () => {
-      const resolvedParams = await paramsPromise;
-      setParams(resolvedParams);
-    };
-    unwrapParams();
-  }, [paramsPromise]);
-
-  // Fetch the article once params is set
-  useEffect(() => {
-    if (!params?.LinkUrl) return;
+    if (!LinkUrl) return;
 
     const fetchArticle = async () => {
       try {
-        const response = await fetch("/article.json");
-        const data = await response.json();
-
-        // Ensure fetching by LinkUrl
-        const foundArticle = data.find(
-          (article) => article.LinkUrl === params.LinkUrl
-        );
+        const res = await fetch("/article.json");
+        const data = await res.json();
+        const foundArticle = data.find((item) => item.LinkUrl === LinkUrl);
         setArticle(foundArticle);
       } catch (error) {
         console.error("Error fetching article:", error);
@@ -44,49 +29,43 @@ const ArticlePage = ({ params: paramsPromise }) => {
     };
 
     fetchArticle();
-  }, [params?.LinkUrl]);
+  }, [LinkUrl]);
+
+  // Display loading while data is being fetched
+  if (!article) return <div className="text-center my-16">Loading...</div>;
 
   return (
     <main>
       <SubHeader />
       <Header />
-      <section className="">
+      <section className="article-content">
         <Head>
-          <title>Article Renault boite automatique évolution</title>
-          <meta name="description" content={pageDescription} />
+          <title>{article.title}</title>
+          <meta name="description" content={article.excerpt} />
         </Head>
-        {article ? (
-          <>
-            <div className="md:w-3/5 mx-auto">
-              <Image
-                width={500}
-                height={500}
-                className="w-full mt-8"
-                src={article.image}
-                alt={article.title}
-              />
+        <div className="container mx-auto">
+          <div className="md:w-3/5 mx-auto">
+            <Image
+              width={500}
+              height={500}
+              className="w-full mt-8"
+              src={article.image}
+              alt={article.title}
+            />
+          </div>
+          <div className="md:w-3/5 mx-auto mt-8 mb-16">
+            <h1 className="text-[24px] font-semibold my-3">{article.title}</h1>
+            <div dangerouslySetInnerHTML={{ __html: article.paragraph }} />
+
+            <div className="mt-[35px]">
+              <Link href="/contact">
+                <button className="buttonCheckBlue">
+                  <span>Contactez-nous</span>
+                </button>
+              </Link>
             </div>
-            <div className="container mx-auto">
-              <div className="md:w-2/3 mx-auto mt-8 mb-16">
-                <div className="">
-                  <h1 className="text-[24px] font-semibold my-3">
-                    {article.title}
-                  </h1>
-                  <p dangerouslySetInnerHTML={{ __html: article.paragraph }} />
-                  <div className="mt-[35px]">
-                    <Link href="/contact">
-                      <button className="buttonCheckBlue">
-                        <span>Contactez-nous</span>
-                      </button>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </>
-        ) : (
-          <div className="text-center my-16">Loading...</div>
-        )}
+          </div>
+        </div>
       </section>
       <Footer />
     </main>

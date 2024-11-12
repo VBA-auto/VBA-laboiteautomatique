@@ -38,7 +38,10 @@ const SingleVehicleView = ({ params: paramsPromise }) => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "https://vba-blue-server.onrender.com/cars"
+          "https://vba-blue-server.onrender.com/cars",
+          {
+            cache: "no-store",
+          }
         );
         if (!response.ok) {
           throw new Error(`Error: ${response.statusText}`);

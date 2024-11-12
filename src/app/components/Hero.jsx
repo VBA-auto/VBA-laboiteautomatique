@@ -8,6 +8,7 @@ import "@/globals.css";
 import HomeSearchVehicle from "./HomeSearchVehicle";
 import { FaWhatsapp } from "react-icons/fa";
 import Footer from "./Footer";
+import Review from "./Review";
 
 const Hero = () => {
   const pageDescription =
@@ -189,6 +190,9 @@ const Hero = () => {
             </div>
           </div>
         </div>
+        {/* <div className="mt-24">
+          <Review />
+        </div> */}
       </section>
       <Footer />
     </>

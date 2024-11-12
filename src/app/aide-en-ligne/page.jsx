@@ -3,6 +3,7 @@ import SubHeader from "@/components/SubHeader";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AideenLigneSearch from "@/components/AideenLigneSearch";
+import Link from "next/link";
 
 const pageDescription =
   "Les différents codes defaults qu&apos;il peut y avoir concernant le calculateur de boite automatique Renault (boite EDC)";
@@ -25,20 +26,6 @@ const MiseEnLigne = () => {
               <meta name="description" content={pageDescription} />
               <meta name="headline" content={HeadingText} />
             </Head>
-            <div style={{ display: "none" }}>
-              <h1>
-                Aide en ligne code defaut renault boite automatique. Moteur /
-                tambour embrayage
-              </h1>
-
-              <h2>court circuit à la masse moteur embrayage 1</h2>
-              <h2>court circuit à la masse moteur embrayage 2</h2>
-              <h2>tambour embrayage 1</h2>
-              <h2>tambour embrayage 2</h2>
-              <h2>défault calculateur interne</h2>
-              <h2>court circuit à la masse</h2>
-              <h2>panne éléctrique</h2>
-            </div>
 
             {/* Partie gauche - Texte initial */}
             <main className="py-[60px]">
@@ -53,14 +40,41 @@ const MiseEnLigne = () => {
                     <div className="accent_color p-3 rounded-md">
                       <p className="mb-6 text-justify text-[15px]">
                         Les boites automatiques (modèles DC4 et 6DCT250)
-                        couramment installées dans les véhicules
-                        <a
-                          className="font-bold text-[#374151]"
-                          href="/produits"
+                        couramment installées dans les véhicules Renault{" "}
+                        <Link
+                          href="/renault-captur"
+                          className="text-blue-400 underline"
                         >
-                          {" "}
-                          Renault Captur, Mégane, Scénic, Clio 4, Fluence{" "}
-                        </a>{" "}
+                          Captur
+                        </Link>
+                        ,{" "}
+                        <Link
+                          href="/renault-megane"
+                          className="text-blue-400 underline"
+                        >
+                          Mégane
+                        </Link>
+                        ,{" "}
+                        <Link
+                          href="/renault-scenic"
+                          className="text-blue-400 underline"
+                        >
+                          Scénic
+                        </Link>
+                        ,{" "}
+                        <Link
+                          href="/renault-clio"
+                          className="text-blue-400 underline"
+                        >
+                          Clio-4
+                        </Link>
+                        ,{" "}
+                        <Link
+                          href="/renault-fluence"
+                          className="text-blue-400 underline"
+                        >
+                          Fluence
+                        </Link>{" "}
                         se composent principalement :
                       </p>
 
