@@ -133,7 +133,10 @@ const RenaultScenic = () => {
                   <div className="md:mt-0 mt-4">
                     <div className="flex justify-center gap-5">
                       <div className="">
-                        <Link href="/vehicule/renault-scenic-diesel">
+                        <Link
+                          href="/vehicule/renault-scenic-diesel"
+                          prefetch={true}
+                        >
                           <button className="rounded-md text-center border border-[#2C80EF] py-2 px-9 shadow-2xl hover:text-[#fff] hover:bg-[#2C80EF] text-[15px]">
                             1.5 Diesel
                           </button>

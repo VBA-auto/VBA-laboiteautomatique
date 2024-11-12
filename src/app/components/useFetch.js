@@ -1,5 +1,3 @@
-// // useFetch.js
-
 import { useState, useEffect } from "react";
 
 const useFetch = () => {
@@ -11,29 +9,12 @@ const useFetch = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // Check if we're in the browser environment before accessing sessionStorage
-        if (typeof window !== "undefined") {
-          // Check if data is available in sessionStorage
-          const cachedData = sessionStorage.getItem(url);
-          if (cachedData) {
-            setData(JSON.parse(cachedData));
-            setLoading(false);
-            return; // Early return if cached data is found
-          }
-        }
-
-        // If no cached data or running on the server, proceed with fetching
+        // Perform the fetch operation
         const response = await fetch(url);
         if (!response.ok) {
           throw new Error(`Error: ${response.statusText}`);
         }
         const result = await response.json();
-
-        // Save the fetched data in sessionStorage for future use (client-side only)
-        if (typeof window !== "undefined") {
-          sessionStorage.setItem(url, JSON.stringify(result));
-        }
-
         setData(result);
       } catch (err) {
         console.error(err.message);

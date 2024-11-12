@@ -135,14 +135,20 @@ const RenaultCapture = () => {
                   <div className="md:mt-0 mt-4">
                     <div className="flex justify-center gap-5">
                       <div className="">
-                        <Link href="/vehicule/renault-captur-essence">
+                        <Link
+                          href="/vehicule/renault-captur-essence"
+                          prefetch={true}
+                        >
                           <button className="rounded-md text-center border border-[#2C80EF] py-2 px-6 shadow-2xl hover:text-[#fff] hover:bg-[#2C80EF] text-[15px]">
                             1.2 Essence
                           </button>
                         </Link>
                       </div>
                       <div className="">
-                        <Link href="/vehicule/renault-captur-diesel">
+                        <Link
+                          href="/vehicule/renault-captur-diesel"
+                          prefetch={true}
+                        >
                           <button className="rounded-md text-center border border-[#2C80EF] py-2 px-8 shadow-2xl hover:text-[#fff] hover:bg-[#2C80EF] text-[15px]">
                             1.5 Diesel
                           </button>
