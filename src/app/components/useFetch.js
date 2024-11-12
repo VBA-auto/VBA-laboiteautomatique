@@ -1,37 +1,5 @@
 // // useFetch.js
-// import { useState, useEffect } from "react";
 
-// const useFetch = () => {
-//   const [data, setData] = useState(null);
-//   const [loading, setLoading] = useState(true);
-//   const [error, setError] = useState(null);
-
-//   useEffect(() => {
-//     const fetchData = async () => {
-//       try {
-//         const response = await fetch(
-//           "  https://vba-blue-server.onrender.com/cars"
-//         );
-//         if (!response.ok) {
-//           throw new Error(`Error: ${response.statusText}`);
-//         }
-//         const result = await response.json();
-//         setData(result);
-//       } catch (err) {
-//         console.error(err.message);
-//         setError(err.message);
-//       } finally {
-//         setLoading(false);
-//       }
-//     };
-
-//     fetchData();
-//   }, []);
-
-//   return { data, loading, error };
-// };
-
-// export default useFetch;
 import { useState, useEffect } from "react";
 
 const useFetch = () => {
@@ -43,23 +11,29 @@ const useFetch = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // Retrieve cached data if available
-        const cachedData = sessionStorage.getItem(url);
-        if (cachedData) {
-          setData(JSON.parse(cachedData));
-          setLoading(false);
-          return;
+        // Check if we're in the browser environment before accessing sessionStorage
+        if (typeof window !== "undefined") {
+          // Check if data is available in sessionStorage
+          const cachedData = sessionStorage.getItem(url);
+          if (cachedData) {
+            setData(JSON.parse(cachedData));
+            setLoading(false);
+            return; // Early return if cached data is found
+          }
         }
 
-        // Fetch new data if not cached
+        // If no cached data or running on the server, proceed with fetching
         const response = await fetch(url);
         if (!response.ok) {
           throw new Error(`Error: ${response.statusText}`);
         }
         const result = await response.json();
 
-        // Save the fetched data in sessionStorage for future use
-        sessionStorage.setItem(url, JSON.stringify(result));
+        // Save the fetched data in sessionStorage for future use (client-side only)
+        if (typeof window !== "undefined") {
+          sessionStorage.setItem(url, JSON.stringify(result));
+        }
+
         setData(result);
       } catch (err) {
         console.error(err.message);
@@ -70,7 +44,7 @@ const useFetch = () => {
     };
 
     fetchData();
-  }, [url]);
+  }, [url]); // Re-fetch if the URL changes
 
   return { data, loading, error };
 };
