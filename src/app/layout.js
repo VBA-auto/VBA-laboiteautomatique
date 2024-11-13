@@ -3,6 +3,7 @@ import Head from "next/head";
 import Script from "next/script";
 import GoogleAnalytics from "./components/GoogleAnalytics";
 import GoogleAnalytics2 from "./components/GoogleAnalytics2";
+import GoogleTag from "./components/GoogleTag";
 
 export const metadata = {
   title: "VBA Calculateur Renault",
@@ -26,6 +27,7 @@ const RootLayout = ({ children }) => {
 
       <body>
         {children}
+        <GoogleTag />
         <noscript
           dangerouslySetInnerHTML={{
             __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PVVG6XNH"

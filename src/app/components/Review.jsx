@@ -67,9 +67,6 @@ const ReviewSlider = () => {
 
   return (
     <div className="container mx-auto p-4 mb-16">
-      <h2 className="text-xl mb-5 font-semibold text-center">
-        What our clients say
-      </h2>
       <Slider {...settings}>
         {reviews?.map((review, index) => (
           <div key={index} className="p-4">
