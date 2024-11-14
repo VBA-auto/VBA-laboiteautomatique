@@ -158,7 +158,11 @@ const HomeSearchVehicle = () => {
                 {searchResults.map((item, index) => (
                   <Link
                     key={index}
-                    href={item.url ? `/vehicule/${item.url}` : `/${item.ref}`}
+                    href={
+                      item.ref
+                        ? `/reference/${item.ref}`
+                        : `/${item.preUrl}/${item.url}`
+                    }
                   >
                     <div className="flex items-center border p-2 rounded-md hover:bg-gray-100 transition-colors mb-3 gap-3 md:gap-0">
                       <div className="md:w-1/6">

@@ -66,7 +66,7 @@ const ReviewSlider = () => {
   };
 
   return (
-    <div className="container mx-auto p-4 mb-16">
+    <div className="container mx-auto p-4 mb-8 review">
       <Slider {...settings}>
         {reviews?.map((review, index) => (
           <div key={index} className="p-4">
@@ -81,7 +81,7 @@ const ReviewSlider = () => {
                   {review?.name.charAt(0).toUpperCase()}
                 </div>
                 <div className="ml-3">
-                  <h2 className="text-[17px] font-semibold">{review?.name}</h2>
+                  <h2 className="text-[16px] font-[500]">{review?.name}</h2>
                   <p className="text-gray-500 text-sm">{review?.date}</p>
                 </div>
                 <div className="absolute right-0 top-1">

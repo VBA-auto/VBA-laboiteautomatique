@@ -66,9 +66,9 @@ const RenaultFluence = () => {
                   contrôler) pour votre boite automatique <strong>EDC</strong>{" "}
                   Renault <strong>Fluence</strong>. Celui-ci peut être livré
                   vierge ou directement programmé (Plug & Play). L’
-                  <Link href="/installation">installation</Link> est possible en
-                  fonction de votre lieu géographique. Il n’existe qu’un modèle
-                  pour Renault Fluence:{" "}
+                  <Link href="/prestation/installation">installation</Link> est
+                  possible en fonction de votre lieu géographique. Il n’existe
+                  qu’un modèle pour Renault Fluence:{" "}
                   <Link
                     href="/vehicule/renault-fluence-diesel"
                     className="underline"
@@ -80,7 +80,7 @@ const RenaultFluence = () => {
                   absolument certain que cette pièce est bien à l’origine du
                   problème. Pour plus d&apos;informations, vous pouvez consulter
                   notre{" "}
-                  <Link href="/aide-en-ligne" className="underline">
+                  <Link href="/ressource/aide-en-ligne" className="underline">
                     aide en ligne
                   </Link>
                   {"."}
@@ -133,10 +133,7 @@ const RenaultFluence = () => {
                   <div className="md:mt-0 mt-4">
                     <div className="flex justify-center gap-5">
                       <div className="">
-                        <Link
-                          href="/vehicule/renault-fluence-diesel"
-                          prefetch={true}
-                        >
+                        <Link href="/fluence/diesel" prefetch={true}>
                           <button className="rounded-md text-center border border-[#2C80EF] py-2 px-8 shadow-2xl hover:text-[#fff] hover:bg-[#2C80EF] text-[15px]">
                             1.5 Diesel
                           </button>

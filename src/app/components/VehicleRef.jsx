@@ -5,6 +5,7 @@ const VehicleRef = ({ modelName, refCode }) => {
   const [stock, setStock] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const url = "https://vba-blue-server.onrender.com/refs";
 
   useEffect(() => {
     if (!modelName || !refCode) {
@@ -15,12 +16,30 @@ const VehicleRef = ({ modelName, refCode }) => {
 
     const fetchStock = async () => {
       try {
-        const response = await fetch(
-          "  https://vba-blue-server.onrender.com/refs"
-        );
-        if (!response.ok) throw new Error(`Error: ${response.statusText}`);
+        const cachedData = sessionStorage.getItem(url);
+        let data;
 
-        const data = await response.json();
+        // Show cached data temporarily while fetching new data
+        if (cachedData) {
+          const cachedParsed = JSON.parse(cachedData);
+          const ref = cachedParsed.find(
+            (item) =>
+              item.title.trim().toLowerCase() ===
+                modelName.trim().toLowerCase() && item.ref === refCode
+          );
+
+          if (ref) setStock(parseInt(ref.stock, 10));
+        }
+
+        // Fetch fresh data to ensure it’s up-to-date
+        const response = await fetch(url);
+        if (!response.ok) throw new Error(`Error: ${response.statusText}`);
+        data = await response.json();
+
+        // Update cache with fresh data
+        sessionStorage.setItem(url, JSON.stringify(data));
+
+        // Find and update the stock for the specific ref code
         const ref = data.find(
           (item) =>
             item.title.trim().toLowerCase() ===
@@ -42,16 +61,7 @@ const VehicleRef = ({ modelName, refCode }) => {
     };
 
     fetchStock(); // Fetch stock on mount
-  }, [modelName, refCode]);
-
-  if (loading) {
-    return (
-      <p className="text-gray-700 py-1 text-center rounded-md flex justify-end items-center gap-2 text-[15px]">
-        <span className="md:w-[12px] md:h-[12px] w-[10px] h-[10px] bg-[#2aa31fc4] rounded-full block"></span>
-        En stock: 0
-      </p>
-    );
-  }
+  }, [modelName, refCode, url]);
 
   if (error) return <p>{error}</p>;
 

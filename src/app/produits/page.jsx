@@ -63,7 +63,7 @@ const Produits = () => {
 
                     <div className="flex  mb-3  justify-center">
                       <h2
-                        className={`mt-3 text-[22px] font-medium text-center transition-transform text-[#374151]`}
+                        className={`mt-3 text-[22px] font-medium text-center transition-transform text-[#374151] hover:text-blue-400`}
                       >
                         Renault Captur
                       </h2>
@@ -72,7 +72,7 @@ const Produits = () => {
                   <div className="flex justify-center gap-5">
                     <div className="w-1/2 accent_color rounded-md text-center py-2 px-2 shadow-sm">
                       <Link
-                        href="/vehicule/renault-captur-essence"
+                        href="/captur/essence"
                         className=" hover:text-[#2C80EF] text-[15px]"
                       >
                         <h2>
@@ -83,7 +83,7 @@ const Produits = () => {
                     <div className="w-1/2 accent_color rounded-md text-center py-2 px-2 shadow-sm">
                       <Link
                         className=" hover:text-[#2C80EF] text-[15px]"
-                        href="/vehicule/renault-captur-diesel"
+                        href="captur/diesel"
                       >
                         <h2>
                           1.5 <br /> Diesel <br />à partir de 2012
@@ -111,7 +111,7 @@ const Produits = () => {
                     </div>
                     <div className="flex  mb-3  justify-center">
                       <h2
-                        className={`mt-3 text-[22px] font-medium text-center transition-transform text-[#374151]`}
+                        className={`mt-3 text-[22px] font-medium text-center transition-transform text-[#374151] hover:text-blue-400`}
                       >
                         Renault Clio IV
                       </h2>
@@ -120,7 +120,7 @@ const Produits = () => {
                   <div className="flex justify-center gap-5">
                     <div className="w-1/2 accent_color rounded-md text-center py-2 px-2 shadow-sm">
                       <Link
-                        href="/vehicule/renault-clio4-essence"
+                        href="clio/essence"
                         className=" hover:text-[#2C80EF] text-[15px]"
                       >
                         <h2>
@@ -131,7 +131,7 @@ const Produits = () => {
                     <div className="w-1/2 accent_color rounded-md text-center py-2 px-2 shadow-sm">
                       <Link
                         className=" hover:text-[#2C80EF] text-[15px]"
-                        href="/vehicule/renault-clio4-diesel"
+                        href="/clio/diesel"
                       >
                         <h2>
                           1.5 <br /> Diesel <br />à partir de 2012
@@ -159,7 +159,7 @@ const Produits = () => {
                     </div>
                     <div className="flex  mb-3  justify-center">
                       <h2
-                        className={`mt-3 text-[22px] font-medium text-center transition-transform text-[#374151]`}
+                        className={`mt-3 text-[22px] font-medium text-center transition-transform text-[#374151] hover:text-blue-400`}
                       >
                         Renault Mégane
                       </h2>
@@ -170,7 +170,7 @@ const Produits = () => {
                     <div className="w-1/2 accent_color rounded-md text-center py-2 px-2 shadow-sm">
                       <Link
                         className=" hover:text-[#2C80EF] text-[15px]"
-                        href="/vehicule/renault-megane-essence"
+                        href="/megane/essence"
                       >
                         <h2>
                           1.2 <br />
@@ -180,7 +180,7 @@ const Produits = () => {
                     </div>
                     <div className="w-1/2 accent_color rounded-md text-center py-2 px-2 shadow-sm">
                       <Link
-                        href="/vehicule/renault-megane-diesel"
+                        href="/megane/diesel"
                         className=" hover:text-[#2C80EF] text-[15px]"
                       >
                         <h2>
@@ -211,7 +211,7 @@ const Produits = () => {
                     </div>
                     <div className="flex  mb-3  justify-center">
                       <h2
-                        className={`mt-3 text-[22px] font-medium text-center transition-transform text-[#374151]`}
+                        className={`mt-3 text-[22px] font-medium text-center transition-transform text-[#374151] hover:text-blue-400`}
                       >
                         Renault Scénic
                       </h2>
@@ -220,7 +220,7 @@ const Produits = () => {
                   <div className="flex justify-start gap-5 ">
                     <div className="w-1/2 accent_color rounded-md text-center py-2 px-2 shadow-sm">
                       <Link
-                        href="/vehicule/renault-scenic-diesel"
+                        href="/scenic/diesel"
                         className=" hover:text-[#2C80EF] text-[15px]"
                       >
                         <h2>
@@ -250,7 +250,7 @@ const Produits = () => {
                     </div>
                     <div className="flex  mb-3  justify-center">
                       <h2
-                        className={`mt-3 text-[22px] font-medium text-center transition-transform text-[#374151]`}
+                        className={`mt-3 text-[22px] font-medium text-center transition-transform text-[#374151] hover:text-blue-400`}
                       >
                         Renault Fluence
                       </h2>
@@ -259,7 +259,7 @@ const Produits = () => {
                   <div className="flex justify-start gap-5">
                     <div className="w-1/2 accent_color rounded-md text-center py-2 px-2 shadow-sm">
                       <Link
-                        href="/vehicule/renault-fluence-diesel"
+                        href="/fluence/diesel"
                         className=" hover:text-[#2C80EF] text-[15px]"
                       >
                         <h2>
@@ -293,7 +293,7 @@ const Produits = () => {
                     </div>
                     <div className="flex  mb-3  justify-center">
                       <h2
-                        className={`mt-3 text-[22px] font-medium text-center transition-transform text-[#374151]`}
+                        className={`mt-3 text-[22px] font-medium text-center transition-transform text-[#374151] hover:text-blue-400`}
                       >
                         Renault Clio RS
                       </h2>
@@ -302,7 +302,7 @@ const Produits = () => {
                   <div className="flex justify-start gap-5 ">
                     <div className="w-1/2 accent_color rounded-md text-center py-2 px-2 shadow-sm">
                       <Link
-                        href="/vehicule/renault-clio4-rs-essence"
+                        href="/clio-rs/essence"
                         className=" hover:text-[#2C80EF] text-[15px]"
                       >
                         <h2>

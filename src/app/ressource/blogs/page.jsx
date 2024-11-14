@@ -75,7 +75,7 @@ const Page = () => {
                       <div className="carousel-item">
                         <div className="blogsCard flex flex-col">
                           <div className="media-container">
-                            <Link href="/blogs/renault">
+                            <Link href="/ressource/blogs/renault">
                               <Image
                                 width={500}
                                 height={300}
@@ -87,7 +87,9 @@ const Page = () => {
                           </div>
                           <div className="content-container mt-2">
                             <h2 className="text-lg text-gray-700 font-medium">
-                              <Link href="/blogs/renault">Renault</Link>
+                              <Link href="/ressource/blogs/renault">
+                                Renault
+                              </Link>
                             </h2>
                             <p className=" text-gray-600">
                               BVA montées sur des véhicules Renault remontent...
@@ -99,7 +101,7 @@ const Page = () => {
                       <div className="carousel-item">
                         <div className="blogsCard flex flex-col">
                           <div className="media-container">
-                            <Link href="/blogs/calibrage">
+                            <Link href="/ressource/blogs/calibrage">
                               <Image
                                 width={500}
                                 height={300}
@@ -111,7 +113,7 @@ const Page = () => {
                           </div>
                           <div className="content-container mt-2">
                             <h2 className="text-lg text-gray-700 font-medium">
-                              <Link href="/blogs/calibrage">
+                              <Link href="/ressource/blogs/calibrage">
                                 Exemple d’information calculateur
                               </Link>
                             </h2>
@@ -138,7 +140,7 @@ const Page = () => {
                             </div>
                           </div>
                           <div className="content-container mt-2">
-                            <Link href="/blogs/remplacement-calculateur">
+                            <Link href="/ressource/blogs/remplacement-calculateur">
                               {" "}
                               <h2 className="text-lg text-gray-700 font-medium">
                                 Démontage/Remontage calculateur
@@ -167,7 +169,7 @@ const Page = () => {
                           </div>
 
                           <div className="content-container mt-2">
-                            <Link href="/blogs/presentation-vba">
+                            <Link href="/ressource/blogs/presentation-vba">
                               {" "}
                               <h2 className="text-lg text-gray-700 font-medium">
                                 Calculateur boîtes de vitesse automatiques
@@ -196,7 +198,7 @@ const Page = () => {
                           </div>
 
                           <div className="content-container mt-2">
-                            <Link href="/blogs/test-embrayage-edc">
+                            <Link href="/ressource/blogs/test-embrayage-edc">
                               {" "}
                               <h2 className="text-lg text-gray-700 font-medium">
                                 Vérifier l’état de l’embrayage EDC

@@ -152,7 +152,7 @@ const Hero = () => {
                   </div>
                   <div className="flex gap-5 justify-center ">
                     <div style={{ width: "150px" }} className="homeButtons">
-                      <Link href="/aide-en-ligne">
+                      <Link href="/ressource/aide-en-ligne">
                         <button className="buttonCheck">
                           <span>Aide en ligne</span>
                         </button>

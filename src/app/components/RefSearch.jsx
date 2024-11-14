@@ -10,7 +10,7 @@ const RefrerenceCheckerComp = () => {
   const [isSearching, setIsSearching] = useState(false);
   const searchRef = useRef(null);
   const [showResults, setShowResults] = useState(false);
-  const [searchTerm, setSearchTerm] = useState(""); // New state for search term
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     fetch("/searchData.json")
@@ -87,7 +87,7 @@ const RefrerenceCheckerComp = () => {
               </h3>
               <div className="h-[200px] overflow-y-scroll">
                 {searchResults.map((item, index) => (
-                  <Link key={index} href={`/${item.ref}`}>
+                  <Link key={index} href={`/reference/${item.ref}`}>
                     <div className="flex items-center border p-2 rounded-md hover:bg-gray-100 transition-colors mb-3">
                       <div className="w-1/6">
                         <Image
@@ -134,32 +134,32 @@ const RefrerenceCheckerComp = () => {
             <div className="text-center mt-5 text-white">Loading...</div>
           ) : searchData.length > 0 ? (
             <div className="grid md:grid-cols-4 grid-cols-2 gap-5 mt-5">
-              <Link href="/310321488R">
+              <Link href="/reference/310321488R">
                 <div className="border px-2 text-center rounded-md border-blue-200 bg-white">
                   <span className="text-[15px]">310321488R</span>
                 </div>
               </Link>
-              <Link href="/310320749R">
+              <Link href="/reference/310320749R">
                 <div className="border px-2 text-center rounded-md border-blue-200 bg-white">
                   <span className="text-[15px]">310320749R</span>
                 </div>
               </Link>
-              <Link href="/310320721R">
+              <Link href="/reference/310320721R">
                 <div className="border px-2 text-center rounded-md border-blue-200 bg-white">
                   <span className="text-[15px]">310320721R</span>
                 </div>
               </Link>
-              <Link href="/310320756R">
+              <Link href="/reference/310320756R">
                 <div className="border px-2 text-center rounded-md border-blue-200 bg-white">
                   <span className="text-[15px]">310320756R</span>
                 </div>
               </Link>
-              <Link href="/310321808R">
+              <Link href="/reference/310321808R">
                 <div className="border px-2 text-center rounded-md border-blue-200 bg-white">
                   <span className="text-[15px]">310321808R</span>
                 </div>
               </Link>
-              <Link href="/310321306R">
+              <Link href="/reference/310321306R">
                 <div className="border px-2 text-center rounded-md border-blue-200 bg-white">
                   <span className="text-[15px]">310321306R</span>
                 </div>
@@ -169,7 +169,7 @@ const RefrerenceCheckerComp = () => {
                   <span className="text-[15px]">310320254R</span>
                 </div>
               </Link>
-              <Link href="/310321517R">
+              <Link href="/reference/310321517R">
                 <div className="border px-2 text-center rounded-md border-blue-200 bg-white">
                   <span className="text-[15px]">310321517R</span>
                 </div>

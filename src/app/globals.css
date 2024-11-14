@@ -153,6 +153,9 @@ tr {
 .orangevba {
   color: #2c80ef;
 }
+.review .slick-dots {
+  display: none !important;
+}
 .slick-dots {
   bottom: -90px !important;
   transform: translate(0, 0) !important;

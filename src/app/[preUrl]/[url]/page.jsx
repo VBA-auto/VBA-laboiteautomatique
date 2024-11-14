@@ -13,28 +13,30 @@ import VehicleStockDisplay from "@/components/VehicleStockDisplay";
 import { FaArrowRight } from "react-icons/fa";
 
 const SingleVehicleView = ({ params: paramsPromise }) => {
-  const [params, setParams] = useState(null); // Initialize params state
+  const [params, setParams] = useState(null);
   const [vehicleData, setVehicleData] = useState(null);
   const [selectedType, setSelectedType] = useState(null);
   const [showSpinner, setShowSpinner] = useState(false);
   const [showCoupon, setShowCoupon] = useState(false);
+  const [data, setData] = useState([]);
   const [copied, setCopied] = useState(false);
   const [stock, setStock] = useState(0);
+  const CACHE_KEY = "vehicleDataCache";
 
-  // Unwrap params with useEffect and set it to state
   useEffect(() => {
-    (async () => {
+    const fetchParams = async () => {
+      if (!paramsPromise) {
+        console.error("Params promise is undefined");
+        return;
+      }
       const unwrappedParams = await paramsPromise;
-      setParams(unwrappedParams); // Set the resolved params
-    })();
+      setParams(unwrappedParams);
+    };
+
+    fetchParams();
   }, [paramsPromise]);
 
-  const url = params?.url;
-
-  // Fetch vehicle data based on the URL once params are resolved
   useEffect(() => {
-    if (!url) return; // Ensure `url` is defined before fetching data
-
     const fetchData = async () => {
       try {
         const response = await fetch(
@@ -48,34 +50,58 @@ const SingleVehicleView = ({ params: paramsPromise }) => {
         }
 
         const result = await response.json();
+        console.log("Fetched Data:", result);
 
-        // Find the vehicle matching the provided URL
-        const vehicle = result.find((v) =>
-          Object.values(v.types).some((type) => type.url === url)
-        );
-
-        if (vehicle) {
-          // Find the matching type (e.g., diesel or essence)
-          const typeKey = Object.keys(vehicle.types).find(
-            (key) => vehicle.types[key].url === url
-          );
-
-          if (typeKey) {
-            const selected = vehicle.types[typeKey];
-            setSelectedType(selected); // Set the selected type
-            setVehicleData(vehicle); // Set the entire vehicle data
-            setStock(selected.stock); // Update the stock value
-          }
-        } else {
-          console.error("Vehicle or type not found for the given URL:", url);
-        }
+        localStorage.setItem(CACHE_KEY, JSON.stringify(result));
       } catch (err) {
         console.error("Error fetching data:", err.message);
       }
     };
 
-    fetchData(); // Fetch data on component mount when URL is available
-  }, [url]);
+    fetchData();
+  }, []);
+
+  useEffect(() => {
+    const cachedData = localStorage.getItem(CACHE_KEY);
+    if (cachedData) {
+      console.log("Using cached data");
+      setData(JSON.parse(cachedData));
+    }
+  }, []);
+
+  useEffect(() => {
+    if (!params || data.length === 0) return;
+
+    const { preUrl, url } = params;
+    const pageUrl = preUrl?.toLowerCase();
+    const typeUrl = url?.toLowerCase();
+    console.log(params);
+    console.log(pageUrl, url);
+
+    const vehicle = data?.find((item) =>
+      item.model2.toLowerCase().includes(pageUrl)
+    );
+
+    if (!vehicle) {
+      console.error("Vehicle not found for the given pageUrl:", pageUrl);
+      return;
+    }
+
+    console.log("Matched Vehicle:", vehicle);
+
+    const vehicleType = Object.values(vehicle.types).find(
+      (type) => type.url.toLowerCase() === typeUrl
+    );
+
+    if (vehicleType) {
+      console.log("Matched Type:", vehicleType);
+      setSelectedType(vehicleType);
+      setVehicleData(vehicle);
+      setStock(vehicleType.stock);
+    } else {
+      console.error("Vehicle type not found for the given URL:", typeUrl);
+    }
+  }, [params, data]);
 
   return (
     <main>

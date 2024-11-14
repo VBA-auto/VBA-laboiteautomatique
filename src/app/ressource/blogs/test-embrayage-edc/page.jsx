@@ -43,8 +43,8 @@ const TestEmbrayageEdc = () => {
               d&apos;embrayage. Il existe aussi des données sur les tolérances
               d&apos;embrayage (important à vérifier - données en général en
               mm). Vérifier d&apos;abord sur{" "}
-              <Link href="/aide-en-ligne" className="text-blue-400">
-                https://laboiteautomatique.com/aide-en-ligne
+              <Link href="/ressource/aide-en-ligne" className="text-blue-400">
+                https://laboiteautomatique.com/ressource/aide-en-ligne
               </Link>{" "}
               vos codes défauts.
             </p>

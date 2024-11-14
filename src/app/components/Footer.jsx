@@ -77,14 +77,14 @@ const Footer = () => {
                   Produits -
                 </Link>
                 <Link
-                  href="/installation"
+                  href="/prestation/installation"
                   className="hover:text-[#2C80EF] text-[15px]"
                 >
                   {" "}
                   Installation -
                 </Link>
                 <Link
-                  href="/aide-en-ligne"
+                  href="/ressource/aide-en-ligne"
                   className="hover:text-[#2C80EF] text-[15px]"
                 >
                   {" "}

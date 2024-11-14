@@ -139,7 +139,7 @@ const Header = () => {
                           {" "}
                           <Link
                             onClick={closeNavbar}
-                            href="/programmation"
+                            href="/prestation/programmation"
                             className="text-[15px] text-[#2C80EF] block p-4 py-2 font-normal"
                           >
                             Programmation
@@ -148,7 +148,7 @@ const Header = () => {
                         <div className="subHeadList">
                           <Link
                             onClick={closeNavbar}
-                            href="/installation"
+                            href="/prestation/installation"
                             className="text-[#2C80EF] text-[15px] block p-4 py-2 font-normal"
                           >
                             Installation
@@ -157,7 +157,7 @@ const Header = () => {
                         <div className="subHeadList">
                           <Link
                             onClick={closeNavbar}
-                            href="/reparation"
+                            href="/prestation/reparation"
                             className="text-[#2C80EF] text-[15px] block p-4 py-2 font-normal"
                           >
                             Réparation
@@ -195,7 +195,7 @@ const Header = () => {
                           {" "}
                           <Link
                             onClick={closeNavbar}
-                            href="/aide-en-ligne"
+                            href="/ressource/aide-en-ligne"
                             className=" text-[15px] block p-4 py-2 font-normal text-[#2C80EF]"
                           >
                             Aide en ligne
@@ -204,7 +204,7 @@ const Header = () => {
                         <div className="subHeadList">
                           <Link
                             onClick={closeNavbar}
-                            href="/faq"
+                            href="/ressource/faq"
                             className=" text-[15px] block p-4 py-2 font-normal text-[#2C80EF]"
                           >
                             FAQ
@@ -213,10 +213,10 @@ const Header = () => {
                         <div className="subHeadList">
                           <Link
                             onClick={closeNavbar}
-                            href="/blogs"
+                            href="/ressource/blogs"
                             className=" text-[15px] block p-4 py-2 font-normal text-[#2C80EF]"
                           >
-                            Tuto / Blog
+                            Tuto - Blog
                           </Link>
                         </div>
                       </div>
@@ -235,7 +235,7 @@ const Header = () => {
 
               <div className="flex gap-5 homeButtonsParent headButton  justify-end">
                 <div style={{ width: "140px" }} className="homeButtons">
-                  <Link href="/aide-en-ligne">
+                  <Link href="/ressource/aide-en-ligne">
                     <button className="buttonCheck">
                       <span>Aide en ligne</span>
                     </button>

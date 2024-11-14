@@ -5,6 +5,7 @@ const VehicleStockDisplay = ({ modelName, carType }) => {
   const [stock, setStock] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const url = "https://vba-blue-server.onrender.com/cars";
 
   useEffect(() => {
     if (!modelName || !carType) {
@@ -15,12 +16,18 @@ const VehicleStockDisplay = ({ modelName, carType }) => {
 
     const fetchStock = async () => {
       try {
-        const response = await fetch(
-          "  https://vba-blue-server.onrender.com/cars"
-        );
-        if (!response.ok) throw new Error(`Error: ${response.statusText}`);
+        const cachedData = sessionStorage.getItem(url);
+        let data;
 
-        const data = await response.json();
+        // Use cached data if available, otherwise fetch from API
+        if (cachedData) {
+          data = JSON.parse(cachedData);
+        } else {
+          const response = await fetch(url);
+          if (!response.ok) throw new Error(`Error: ${response.statusText}`);
+          data = await response.json();
+          sessionStorage.setItem(url, JSON.stringify(data));
+        }
 
         // Find the vehicle by matching the model name
         const vehicle = data.find(
@@ -42,18 +49,8 @@ const VehicleStockDisplay = ({ modelName, carType }) => {
     };
 
     fetchStock();
-  }, [modelName, carType]);
+  }, [modelName, carType, url]);
 
-  if (loading)
-    return (
-      <p className="text-gray-700 py-1 text-center rounded-md flex justify-end items-center gap-2 text-[15px]">
-        <span
-          className="md:w-[12px] md:h-[12px] w-[10px] h-[10px] bg-gray-300
-          rounded-full block"
-        ></span>
-        En stock: <span className="font-[500]">0</span>
-      </p>
-    );
   if (error) return <p>{error}</p>;
 
   return (

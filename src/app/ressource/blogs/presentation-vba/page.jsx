@@ -41,11 +41,11 @@ const PresentationVba = () => {
                 et Clio 4. Vous pouvez aussi consulter l’outil d&apos;aide en
                 ligne:{" "}
                 <Link
-                  href="https://laboiteautomatique.com/aide-en-ligne"
+                  href="https://laboiteautomatique.com/ressource/aide-en-ligne"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  https://laboiteautomatique.com/aide-en-ligne
+                  https://laboiteautomatique.com/ressource/aide-en-ligne
                 </Link>
                 . N’hésitez pas à nous contacter pour acheter un calculateur
                 Renault EDC neuf ou reconditionné.

@@ -1,6 +1,7 @@
 [
   {
     "model": "Renault Captur",
+    "model2": "captur",
     "types": {
       "diesel": {
         "title": "Calculateur Renault Captur 1.5 Diesel",
@@ -32,7 +33,8 @@
           "/images/cal-normal-7.webp"
         ],
         "stock": "03",
-        "url": "renault-captur-diesel",
+        "url": "diesel",
+        "preUrl": "captur",
         "payLink": "https://buy.stripe.com/3cs5nY6BOfVJ5aw29B"
       },
       "essence": {
@@ -65,13 +67,15 @@
           "/images/cal-normal-7.webp"
         ],
         "stock": "04",
-        "url": "renault-captur-essence",
+        "url": "essence",
+        "preUrl": "captur",
         "payLink": "https://buy.stripe.com/9AQ03E9O0cJx9qMeWw"
       }
     }
   },
   {
     "model": "Renault Megane",
+    "model2": "megane",
     "types": {
       "diesel": {
         "title": "Calculateur Renault Mégane 3 - 1.5 Diesel",
@@ -104,7 +108,8 @@
           "/images/cal-normal-7M.webp"
         ],
         "stock": "02",
-        "url": "renault-megane-diesel",
+        "url": "diesel",
+        "preUrl": "megane",
         "payLink": "https://buy.stripe.com/3csaIi1hugZN0Ug7tZ"
       },
       "essence": {
@@ -138,13 +143,15 @@
           "/images/cal-normal-7M.webp"
         ],
         "stock": "03",
-        "url": "renault-megane-essence",
+        "url": "essence",
+        "preUrl": "megane",
         "payLink": "https://buy.stripe.com/7sI9Ee7FS8thgTe29E"
       }
     }
   },
   {
     "model": "Renault Clio 4",
+    "model2": "clio",
     "types": {
       "diesel": {
         "title": "Calculateur Renault Clio 4 - 1.5 Diesel",
@@ -176,7 +183,8 @@
           "/images/cal-normal-7.webp"
         ],
         "stock": "02",
-        "url": "renault-clio4-diesel",
+        "url": "diesel",
+        "preUrl": "clio",
         "payLink": "https://buy.stripe.com/14k17I3pC5h50Ug8y1"
       },
       "essence": {
@@ -209,13 +217,15 @@
           "/images/cal-normal-7.webp"
         ],
         "stock": "03",
-        "url": "renault-clio4-essence",
+        "url": "essence",
+        "preUrl": "clio",
         "payLink": "https://buy.stripe.com/dR6bMmaS44d132oaG8"
       }
     }
   },
   {
     "model": "Renault Scenic",
+    "model2": "scenic",
     "types": {
       "diesel": {
         "title": "Calculateur Renault Scénic 3 - 1.5 Diesel",
@@ -248,13 +258,15 @@
           "/images/cal-normal-7M.webp"
         ],
         "stock": "02",
-        "url": "renault-scenic-diesel",
+        "url": "diesel",
+        "preUrl": "scenic",
         "payLink": "https://buy.stripe.com/7sI2bMf8keRFgTedSo"
       }
     }
   },
   {
     "model": "Renault Fluence",
+    "model2": "fluence",
     "types": {
       "diesel": {
         "title": "Calculateur Renault Fluence 1.5 Diesel",
@@ -286,13 +298,15 @@
           "/images/cal-normal-7.webp"
         ],
         "stock": "02",
-        "url": "renault-fluence-diesel",
+        "url": "diesel",
+        "preUrl": "fluence",
         "payLink": "https://buy.stripe.com/4gw03E5xK6l9byU6pX"
       }
     }
   },
   {
     "model": "Clio 4 RS",
+    "model2": "clio-rs",
     "types": {
       "essence": {
         "title": "Calculateur Renault Clio 4 RS - 1.6 Essence",
@@ -324,7 +338,8 @@
           "/images/cal-normal-7.webp"
         ],
         "stock": "02",
-        "url": "renault-clio4-rs-essence",
+        "url": "essence",
+        "preUrl": "clio-rs",
         "payLink": "https://buy.stripe.com/9AQ2bMbW8eRF32ocOm"
       }
     }

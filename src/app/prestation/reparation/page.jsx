@@ -46,7 +46,8 @@ const Programmation = () => {
                         </strong>
                          Renault pour des références telles que 
                         <strong className="text-blue-400 font-normal">
-                          01 K00 <Link href="/A2C30743000">A2C30743000</Link>
+                          01 K00{" "}
+                          <Link href="/reference/A2C30743000">A2C30743000</Link>
                           , 03 K00, 03 K01, 03 K02 et 03 K03
                         </strong>
                         . Si votre calculateur présente des dysfonctionnements,
@@ -54,7 +55,7 @@ const Programmation = () => {
                         réparer. Si vous n&apos;êtes pas certain que le problème
                         provienne du calculateur, nous offrons une 
                         <Link
-                          href="/aide-en-ligne"
+                          href="/ressource/aide-en-ligne"
                           className="underline text-blue-400"
                         >
                           aide en ligne
