@@ -69,10 +69,7 @@ const RenaultFluence = () => {
                   <Link href="/prestation/installation">installation</Link> est
                   possible en fonction de votre lieu géographique. Il n’existe
                   qu’un modèle pour Renault Fluence:{" "}
-                  <Link
-                    href="/vehicule/renault-fluence-diesel"
-                    className="underline"
-                  >
+                  <Link href="/fluence/diesel" className="underline">
                     Diesel
                   </Link>
                   {". "}

@@ -65,17 +65,11 @@ const RenaultCapture = () => {
                   <Link href="/prestation/installation">installation</Link> est
                   possible en fonction de votre lieu géographique. Choisissez
                   votre modèle pour Renault Captur:{" "}
-                  <Link
-                    href="/vehicule/renault-captur-essence"
-                    className="underline"
-                  >
+                  <Link href="/captur/essence" className="underline">
                     Essence
                   </Link>{" "}
                   ou{" "}
-                  <Link
-                    href="/vehicule/renault-captur-diesel"
-                    className="underline"
-                  >
+                  <Link href="/captur/diesel" className="underline">
                     Diesel
                   </Link>
                   {"."} N’hésitez pas à nous contacter si vous souhaitez être

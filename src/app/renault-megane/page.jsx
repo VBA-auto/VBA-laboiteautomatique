@@ -68,17 +68,11 @@ const RenaultMegane = () => {
                   <Link href="/prestation/installation">installation</Link> est
                   possible en fonction de votre lieu géographique. Choisissez
                   votre modèle pour Renault Mégane 3:{" "}
-                  <Link
-                    href="/vehicule/renault-megane-essence"
-                    className="underline"
-                  >
+                  <Link href="/megane/essence" className="underline">
                     Essence
                   </Link>{" "}
                   ou{" "}
-                  <Link
-                    href="/vehicule/renault-megane-diesel"
-                    className="underline"
-                  >
+                  <Link href="/megane/diesel" className="underline">
                     Diesel
                   </Link>
                   {". "}

@@ -69,10 +69,7 @@ const RenaultScenic = () => {
                   <Link href="/prestation/installation">installation</Link> est
                   possible en fonction de votre lieu géographique. Il n’existe
                   qu’un modèle pour Renault Scénic 3:{" "}
-                  <Link
-                    href="/vehicule/renault-scenic-diesel"
-                    className="underline"
-                  >
+                  <Link href="/scenic/diesel" className="underline">
                     Diesel
                   </Link>
                   {". "}

@@ -66,17 +66,11 @@ const RenaultClio = () => {
                   <Link href="/prestation/installation">installation</Link> est
                   possible en fonction de votre lieu géographique. Choisissez
                   votre modèle pour Renault Clio 4:{" "}
-                  <Link
-                    href="/vehicule/renault-clio4-essence"
-                    className="underline"
-                  >
+                  <Link href="/clio/essence" className="underline">
                     Essence
                   </Link>{" "}
                   ou{" "}
-                  <Link
-                    href="/vehicule/renault-clio4-diesel"
-                    className="underline"
-                  >
+                  <Link href="/clio/diesel" className="underline">
                     Diesel
                   </Link>
                   {". "}

@@ -66,7 +66,7 @@ const RenaultClioRS = () => {
                   <Link href="/prestation/installation">installation</Link> est
                   possible en fonction de votre lieu géographique. Il n’existe
                   qu’un modèle pour Renault Clio 4 RS:{" "}
-                  <Link href="/vehicule/renault-clio4-rs-essence">
+                  <Link href="/clio-rs/essence">
                     <span className="underline">Essence</span> (1.6).
                   </Link>{" "}
                   N’hésitez pas à nous contacter si vous souhaitez être
