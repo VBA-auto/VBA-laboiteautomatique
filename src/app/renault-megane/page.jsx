@@ -93,19 +93,19 @@ const RenaultMegane = () => {
                 </p>
                 <div className="grid md:grid-cols-8 grid-cols-3 md:mt-0 mt-3 items-center justify-start">
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/310F93913R">310F93913R </Link>
+                    <Link href="/reference/310F93913R">310F93913R </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/310320892R">310320892R </Link>
+                    <Link href="/reference/310320892R">310320892R </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/310320721R">310320721R </Link>
+                    <Link href="/reference/310320721R">310320721R </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/310320749R">310320749R </Link>
+                    <Link href="/reference/310320749R">310320749R </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/310321488R">310321488R </Link>
+                    <Link href="/reference/310321488R">310321488R </Link>
                   </p>
                 </div>
                 <div className="md:flex items-center justify-between mt-5">

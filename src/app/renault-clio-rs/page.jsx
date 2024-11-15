@@ -80,16 +80,16 @@ const RenaultClioRS = () => {
                 </p>
                 <div className="grid md:grid-cols-8 grid-cols-3 md:mt-0 mt-3 items-center justify-center">
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/310321517R ">310321517R </Link>
+                    <Link href="/reference/310321517R ">310321517R </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/310320718R">310320718R </Link>
+                    <Link href="/reference/310320718R">310320718R </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/310320553R">310320553R </Link>
+                    <Link href="/reference/310320553R">310320553R </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/310321488R">310321488R </Link>
+                    <Link href="/reference/310321488R">310321488R </Link>
                   </p>
                 </div>
                 <div className="md:flex items-center justify-between mt-5">
