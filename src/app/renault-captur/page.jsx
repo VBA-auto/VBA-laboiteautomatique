@@ -89,28 +89,28 @@ const RenaultCapture = () => {
                 </p>
                 <div className="grid md:grid-cols-8 grid-cols-3 md:mt-0 mt-3  items-center justify-start">
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/310321488R">310321488R </Link>
+                    <Link href="/reference/310321488R">310321488R </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/310321148R">310321148R </Link>
+                    <Link href="/reference/310321148R">310321148R </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/310320891R">310320891R </Link>
+                    <Link href="/reference/310320891R">310320891R </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/310320841R">310320841R </Link>
+                    <Link href="/reference/310320841R">310320841R </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/310320756R">310320756R </Link>
+                    <Link href="/reference/310320756R">310320756R </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/310320717R">310320717R </Link>
+                    <Link href="/reference/310320717R">310320717R </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/310321706R">310321706R </Link>
+                    <Link href="/reference/310321706R">310321706R </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/310321517R">310321517R </Link>
+                    <Link href="/reference/310321517R">310321517R </Link>
                   </p>
                 </div>
                 <div className="md:flex items-center justify-between mt-5">
