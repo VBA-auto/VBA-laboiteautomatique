@@ -6,8 +6,7 @@ import Head from "next/head";
 import { useState } from "react";
 
 const pageDescription =
-  "Nous pouvons intervenir sur place à domicile pour démonter, programmer et iinstaller le calculateur de boite automatique Renault EDC (DC4) ";
-const HeadingText = "Installation montage remontage calculateur Renault";
+  "Diagnostic, Installaltion et montage de votre calculateur boite automatique EDC Renault pour clio 4, clio RS, Captur, megane 3, scenic 3.";
 
 const AutreFormulaire = () => {
   const [isError, setIsError] = useState(false);
@@ -72,14 +71,28 @@ const AutreFormulaire = () => {
             <div className="flex flex-col z-20 items-center md:px-0 px-[15px]">
               <Head>
                 <title>
-                  Installation et montage du calcualteur Renault EDC 6DCT250
+                  Installation et montage calculateur boite EDC Renault
                 </title>
                 <meta name="description" content={pageDescription} />
-                <meta name="headline" content={HeadingText} />
               </Head>
               <div style={{ display: "none" }}>
                 <h1>
-                  Installation et montage du calcualteur Renault EDC 6DCT250
+                  installation et montage Renault Captur boite automatique EDC
+                </h1>
+                <h1>
+                  installation et montage Renault Clio 4 boite automatique EDC{" "}
+                </h1>
+                <h1>
+                  installation et montage Renault Clio RS boite automatique EDC{" "}
+                </h1>
+                <h1>
+                  installation et montage Renault Megane 3 boite automatique EDC{" "}
+                </h1>
+                <h1>
+                  installation et montage Renault Scenic 3 boite automatique EDC{" "}
+                </h1>
+                <h1>
+                  installation et montage Renault Fluence boite automatique EDC{" "}
                 </h1>
               </div>
 

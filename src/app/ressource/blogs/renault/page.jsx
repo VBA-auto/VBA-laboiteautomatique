@@ -5,16 +5,19 @@ import SubHeader from "@/components/SubHeader";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
+const pageDescription =
+  "Article sur les boites automatiques montées sur Renault depuis 1990 jusqu'a maintenant ";
+
 const ArticlePage = () => {
   return (
     <main>
       <SubHeader />
       <Header />
       <section className="article-content">
-        {/* <Head>
-          <title>{article.title}</title>
-          <meta name="description" content={article.excerpt} />
-        </Head> */}
+        <Head>
+          <title>Les différentes type de boites automatiques Renault</title>
+          <meta name="description" content={pageDescription} />
+        </Head>
         <div className="container mx-auto">
           <div className="md:w-3/5 mx-auto">
             <Image

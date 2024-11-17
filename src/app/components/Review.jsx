@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import { FcGoogle } from "react-icons/fc";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Image from "next/image";
 
 const ReviewSlider = () => {
   const [reviews, setReviews] = useState([]);
@@ -69,19 +70,34 @@ const ReviewSlider = () => {
     <div className="container mx-auto p-4 mb-8 review">
       <Slider {...settings}>
         {reviews?.map((review, index) => (
-          <div key={index} className="p-4">
-            <div className="bg-white rounded-lg shadow-md p-4">
+          <div key={index} className="p-2">
+            <div className="bg-white rounded-lg shadow-md p-3">
               <div className="flex items-center mb-2 relative">
-                <div
-                  className="w-10 h-10 flex items-center justify-center rounded-full text-white font-bold"
-                  style={{
-                    backgroundColor: stringToColor(review?.name),
-                  }}
-                >
-                  {review?.name.charAt(0).toUpperCase()}
-                </div>
+                {review?.userImage ? (
+                  <div className="w-10 h-10 flex items-center justify-center rounded-full text-white font-bold">
+                    <Image
+                      src={review.userImage}
+                      width={50}
+                      height={50}
+                      alt="review user image"
+                      className="rounded-full"
+                    />
+                  </div>
+                ) : (
+                  <div
+                    className="w-10 h-10 flex items-center justify-center rounded-full text-white font-bold"
+                    style={{
+                      backgroundColor: stringToColor(review?.name),
+                    }}
+                  >
+                    {review?.name.charAt(0).toUpperCase()}
+                  </div>
+                )}
+
                 <div className="ml-3">
-                  <h2 className="text-[16px] font-[500]">{review?.name}</h2>
+                  <h2 className="text-[15px] text-gray-600 font-[500]">
+                    {review?.name}
+                  </h2>
                   <p className="text-gray-500 text-sm">{review?.date}</p>
                 </div>
                 <div className="absolute right-0 top-1">
@@ -101,8 +117,8 @@ const ReviewSlider = () => {
                 ))}
               </div>
               {/* Sliced Review? Text */}
-              <p className="text-gray-700 text-[15px]">
-                {review?.review.split(" ").slice(0, 13).join(" ")}...
+              <p className="text-gray-600 text-[15px]">
+                {review?.review.slice(0, 60)}...
               </p>
               {/* "See More" Button */}
               <label
@@ -122,19 +138,32 @@ const ReviewSlider = () => {
       <div className="modal">
         <div className="modal-box bg-white">
           <div className="flex items-center mb-2 relative">
-            <div
-              className="w-10 h-10 flex items-center justify-center rounded-full text-white font-bold"
-              style={{
-                backgroundColor: stringToColor(selectedReview?.name),
-              }}
-            >
-              {selectedReview?.name.charAt(0).toUpperCase()}
-            </div>
+            {selectedReview?.userImage ? (
+              <div className="w-10 h-10 flex items-center justify-center rounded-full text-white font-bold">
+                <Image
+                  src={selectedReview.userImage}
+                  width={50}
+                  height={50}
+                  alt="review user image"
+                  className="rounded-full"
+                />
+              </div>
+            ) : (
+              <div
+                className="w-10 h-10 flex items-center justify-center rounded-full text-white font-bold"
+                style={{
+                  backgroundColor: stringToColor(selectedReview?.name),
+                }}
+              >
+                {selectedReview?.name.charAt(0).toUpperCase()}
+              </div>
+            )}
+
             <div className="ml-3">
-              <h2 className="text-[18px] font-semibold">
+              <h2 className="text-[15px] text-gray-600 font-[500]">
                 {selectedReview?.name}
               </h2>
-              <p className="text-gray-500 text-sm">{selectedReview?.date}</p>
+              <p className="text-gray-600 text-sm">{selectedReview?.date}</p>
             </div>
             <div className="absolute right-0 top-1">
               <FcGoogle />
@@ -154,9 +183,11 @@ const ReviewSlider = () => {
               )
             )}
           </div>
-          <p className="pb-1 text-[15px]">{selectedReview?.review}</p>
+          <p className="pb-1 text-[15px] text-gray-600">
+            {selectedReview?.review}
+          </p>
           <div className="modal-action ">
-            <label htmlFor="reviewPopup" className="text-[14px]">
+            <label htmlFor="reviewPopup" className="text-[14px] cursor-pointer">
               Close
             </label>
           </div>

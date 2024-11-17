@@ -5,16 +5,19 @@ import SubHeader from "@/components/SubHeader";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
+const pageDecription =
+  "VBA Calculateur renault: spécialiste en vente et reprogrammation de calculateurs EDC pour Renault clio 4, clio RS, Captur, megane 3 et scenic 3.";
+
 const PresentationVba = () => {
   return (
     <main>
       <SubHeader />
       <Header />
       <section className="article-content">
-        {/* <Head>
-          <title>{article.title}</title>
-          <meta name="description" content={article.excerpt} />
-        </Head> */}
+        <Head>
+          <title>presentation de la société VBA calculateur renault </title>
+          <meta name="description" content={pageDecription} />
+        </Head>
         <div className="container mx-auto mt-8">
           <div className="md:w-3/5 mx-auto">
             <iframe

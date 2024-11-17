@@ -154,7 +154,7 @@ const AideenLigneSearch = () => {
                     Cliquer{" "}
                     <button
                       onClick={() => handleToggleHelp(code.code)}
-                      className="text-blue-400"
+                      className="text-blue-400 underline"
                     >
                       ici
                     </button>{" "}
@@ -167,7 +167,7 @@ const AideenLigneSearch = () => {
                   <div className="my-4">
                     <Link
                       href="/contact"
-                      className="px-2 py-2 text-[14px] border border-blue-400 rounded-md bg-[#2C80EF] hover:bg-[#2c80efc0] text-white"
+                      className="px-2 py-2 text-[14px] border border-blue-400 rounded-md text-[#2C80EF] hover:bg-[#2C80EF] hover:text-white"
                     >
                       Contactez-nous
                     </Link>

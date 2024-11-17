@@ -1,17 +1,18 @@
-import Head from "next/head";
+import Image from "next/image";
 import Link from "next/link";
+import React from "react";
+import Head from "next/head";
 import SubHeader from "@/components/SubHeader";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Image from "next/image";
 import DynaStock from "@/components/DynaStock";
 import ReturnButton from "@/components/ReturnButton";
 
 const pageDescription =
-  "Vérifiez la disponibilté de votre module de commande de boite de vitesse automatique pour votre boite automatique EDC Renault clio 4";
-const HeadingText = "Calculateur pour Renault Clio IV";
+  "Renault clio RS, calculateur boite automatique EDC pour Renault clio RS voir stock";
+const HeadingText = "Calculateur pour  Renault Clio IV ";
 
-const RenaultClio = () => {
+const RenaultClioRS = () => {
   return (
     <main>
       <SubHeader />
@@ -19,61 +20,53 @@ const RenaultClio = () => {
       <section className="py-[60px] produits ">
         <div className="container mx-auto">
           <Head>
-            <title>
-              Calculateur, boîte automatique Renault Clio 4 EDC (DC4)
-            </title>
+            <title>Calculateur EDC pour Renault clio RS disponibililté</title>
             <meta name="description" content={pageDescription} />
             <meta name="headline" content={HeadingText} />
           </Head>
+
           <div style={{ display: "none" }}>
-            <h1>Calculateur pour Renault Clio IV</h1>
+            <h1>Calculateur pour Renault Clio IV </h1>
           </div>
           <div className=" justify-center items-start gap-5 ">
             <div className="md:w-[800px] md:min-h-[538px] mx-auto ">
               <div className="ms-auto  accent_color py-5 bg-white rounded-md  p-5">
-                <div className="flex justify-between  relative">
+                <div className="flex justify-between relative">
                   <div className="absolute left-0">
                     <ReturnButton />
                   </div>
                   <div className="mx-auto">
                     <h1 className="text-2xl font-semibold text-center text-gray-700 md:block hidden">
-                      Renault Clio IV
+                      Renault Clio RS
                     </h1>
                   </div>
-
                   <div className="absolute right-0">
-                    <DynaStock carName="Renault Clio" />
+                    <DynaStock carName="Clio 4 RS" />
                   </div>
                 </div>
                 <h1 className="text-2xl font-semibold text-center text-gray-700 md:hidden block mt-5">
-                  Renault Clio IV
+                  Renault Clio RS
                 </h1>
-                <div className="my-1.5">
+                <div className="my-3">
                   <Image
-                    width={300}
-                    height={280}
-                    src="/images/calculateur_DC4_Renault_Clio4.webp"
-                    className="mx-auto"
+                    width={320}
+                    height={290}
+                    src="/images/calculateur_DC4_clioRS.webp"
+                    className="mx-auto w-[300px] h-[165px] mb-5"
                     alt=""
                   />
                 </div>
-                <p className="text-justify text-[15px]">
+                <p className="text-justify text-[15px] mt-2">
                   Vérifiez la disponibilté de votre module (boite de vitesse à
-                  contrôler) pour votre <strong>boite</strong> automatique{" "}
-                  <strong>EDC </strong>
-                  Renault <strong>Clio 4</strong>. Celui-ci peut être livré
+                  contrôler) pour votre boite automatique <strong>EDC</strong>{" "}
+                  Renault <strong>Clio RS</strong>. Celui-ci peut être livré
                   vierge ou directement programmé (Plug & Play). L’
                   <Link href="/prestation/installation">installation</Link> est
-                  possible en fonction de votre lieu géographique. Choisissez
-                  votre modèle pour Renault Clio 4:{" "}
-                  <Link href="/clio/essence" className="underline">
-                    Essence
+                  possible en fonction de votre lieu géographique. Il n’existe
+                  qu’un modèle pour Renault Clio 4 RS:{" "}
+                  <Link href="/clio-rs/essence">
+                    <span className="underline">Essence</span> (1.6).
                   </Link>{" "}
-                  ou{" "}
-                  <Link href="/clio/diesel" className="underline">
-                    Diesel
-                  </Link>
-                  {". "}
                   N’hésitez pas à nous contacter si vous souhaitez être
                   absolument certain que cette pièce est bien à l’origine du
                   problème. Pour plus d&apos;informations, vous pouvez consulter
@@ -83,30 +76,18 @@ const RenaultClio = () => {
                   </Link>
                   {"."}
                 </p>
-                <div className="grid md:grid-cols-8 grid-cols-3 md:mt-0 mt-3 items-center justify-start">
+                <div className="grid md:grid-cols-8 grid-cols-3 md:mt-0 mt-3 items-center justify-center">
+                  <p className="text-[14px] text-gray-700 italic mt-2 underline">
+                    <Link href="/reference/310321517R ">310321517R </Link>
+                  </p>
+                  <p className="text-[14px] text-gray-700 italic mt-2 underline">
+                    310320718R
+                  </p>
+                  <p className="text-[14px] text-gray-700 italic mt-2 underline">
+                    <Link href="/reference/310320553R">310320553R </Link>
+                  </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
                     <Link href="/reference/310321488R">310321488R </Link>
-                  </p>
-                  <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310321148R">310321148R </Link>
-                  </p>
-                  <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310320891R">310320891R </Link>
-                  </p>
-                  <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310320841R">310320841R </Link>
-                  </p>
-                  <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310320756R">310320756R </Link>
-                  </p>
-                  <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310320717R">310320717R </Link>
-                  </p>
-                  <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310321706R">310321706R </Link>
-                  </p>
-                  <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310321517R">310321517R </Link>
                   </p>
                 </div>
                 <div className="md:flex items-center justify-between mt-5">
@@ -116,31 +97,24 @@ const RenaultClio = () => {
                       height={100}
                       src="https://i.ibb.co/k8C1Y2Y/Group-1074-removebg-preview.png"
                       alt="Calculateur avec carton"
-                      className=""
+                      className="w-[100px] h-[80px]"
                       loading="lazy"
                     />
                     <div className="text-start">
                       <h2 className="text-lg font-semibold text-gray-700">
-                        Renault Clio IV
+                        Renault Clio RS
                       </h2>
                       <p className="text-[14px]">
-                        Calculateur Clio IV pour Essence et Diesel
+                        Calculateur Clio RS pour Essence
                       </p>
                     </div>
                   </div>
                   <div className="md:mt-0 mt-4">
                     <div className="flex justify-center gap-5">
                       <div className="">
-                        <Link href="/clio/essence" prefetch={true}>
+                        <Link href="/clio-rs/essence" prefetch={true}>
                           <button className="rounded-md text-center border border-[#2C80EF] py-2 px-6 shadow-2xl hover:text-[#fff] hover:bg-[#2C80EF] text-[15px]">
-                            1.2 Essence
-                          </button>
-                        </Link>
-                      </div>
-                      <div className="">
-                        <Link href="/clio/diesel" prefetch={true}>
-                          <button className="rounded-md text-center border border-[#2C80EF] py-2 px-8 shadow-2xl hover:text-[#fff] hover:bg-[#2C80EF] text-[15px]">
-                            1.5 Diesel
+                            1.6 Essence
                           </button>
                         </Link>
                       </div>
@@ -157,4 +131,4 @@ const RenaultClio = () => {
   );
 };
 
-export default RenaultClio;
+export default RenaultClioRS;

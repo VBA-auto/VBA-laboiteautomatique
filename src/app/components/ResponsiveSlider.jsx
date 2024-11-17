@@ -76,7 +76,7 @@ const ResponsiveSlider = ({ images }) => {
                 height={65}
                 alt={`Thumbnail ${index}`}
                 onClick={() => handleThumbnailClick(index)}
-                className="mx-2 cursor-pointer rounded object-cover"
+                className="mx-2 cursor-pointer rounded object-cover w-[70px] h-[50px]"
                 style={{
                   border:
                     currentIndex === index

@@ -8,8 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const pageDescription =
-  "Calculateurs pour Renault Megane 1.5 Diesel, Renault scenic 1.5 Diesel,  Renault Captur 1.2 Essence et 1.5 Diesel, Renault Clio 4 1.2 Essence et 1.5 Diesel";
-const HeadingText = "Types de calculateur boite automatique Renault ";
+  "Vous trouverez ici les différents modèles et le stock pour les  calculateurs boites automatiques EDC Renault clio 4, clio RS, Captur, megane 3 et scenic 3.";
 
 const Produits = () => {
   return (
@@ -21,14 +20,41 @@ const Produits = () => {
           <div className="product3rdCont">
             <Head>
               <title>
-                vente et reprogrammation calculateur Renault DC4 6DCT250
+                Les différents calculateur boite automatique EDC renault
+                véhicule
               </title>
               <meta name="description" content={pageDescription} />
-              <meta name="headline" content={HeadingText} />
-              {/* <meta name="secondaryHeading" content={secondaryHeadingText} /> */}
             </Head>
             <div style={{ display: "none" }}>
-              <h1>Types de calculateur boite automatique Renault</h1>
+              <h1>stock produits Calculateur EDC Renault Captur</h1>
+              <h1>stock produits Calculateur EDC Renault Clio 4</h1>
+              <h1>stock produits Calculateur EDC Renault Megane 3</h1>
+              <h1>stock produits Calculateur EDC Renault Scenic 3</h1>
+              <h1>stock produits Calculateur EDC Renault Fluence</h1>
+              <h1>stock produits Calculateur EDC Renault Clio RS</h1>
+              <h2>
+                stock référence Calculateur EDC Renault Captur 1.2 Essence
+              </h2>
+              <h2>stock référence Calculateur EDC Renault Captur 1.5 Diesel</h2>
+              <h2>
+                stock référence Calculateur EDC Renault Clio 4 1.2 Essence
+              </h2>
+              <h2>stock référence Calculateur EDC Renault Clio 4 1.5 Diesel</h2>
+              <h2>
+                stock référence Calculateur EDC Renault Megane 3 1.2 Essence
+              </h2>
+              <h2>
+                stock référence Calculateur EDC Renault Megane 3 1.5 Diesel
+              </h2>
+              <h2>
+                stock référence Calculateur EDC Renault Scenic 3 1.5 Diesel
+              </h2>
+              <h2>
+                stock référence Calculateur EDC Renault Fluence 1.5 Diesel
+              </h2>
+              <h2>
+                stock référence Calculateur EDC Renault Clio RS 1.6 Essence
+              </h2>
             </div>
             <main className="flex  flex-col z-20 relative">
               <div className="productTitle mx-auto bg-white/50">
@@ -48,7 +74,7 @@ const Produits = () => {
                   <div className="">
                     <DynaStock carName="Renault Captur" />
                   </div>
-                  <Link href="/renault-captur">
+                  <Link href="/captur">
                     <div className="">
                       {" "}
                       <Image
@@ -98,7 +124,7 @@ const Produits = () => {
                   <div className="">
                     <DynaStock carName="Renault Clio" />
                   </div>
-                  <Link href="/renault-clio">
+                  <Link href="/clio">
                     <div className="">
                       <Image
                         width={300}
@@ -146,7 +172,7 @@ const Produits = () => {
                   <div className="">
                     <DynaStock carName="Renault megane" />
                   </div>
-                  <Link href="/renault-megane">
+                  <Link href="/megane">
                     <div className="">
                       <Image
                         width={300}
@@ -198,7 +224,7 @@ const Produits = () => {
                     <DynaStock carName="Renault Scenic" />
                   </div>
 
-                  <Link href="/renault-scenic">
+                  <Link href="/scenic">
                     <div className="">
                       <Image
                         width={300}
@@ -237,7 +263,7 @@ const Produits = () => {
                   <div className="">
                     <DynaStock carName="Renault Fluence" />
                   </div>
-                  <Link href="/renault-fluence">
+                  <Link href="/fluence">
                     <div className="">
                       <Image
                         width={300}
@@ -279,7 +305,7 @@ const Produits = () => {
                   <div className="">
                     <DynaStock carName="Clio 4 RS" />
                   </div>
-                  <Link href="/renault-clio-rs">
+                  <Link href="/clio-rs">
                     {" "}
                     <div className="">
                       <Image

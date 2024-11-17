@@ -6,8 +6,7 @@ import Head from "next/head";
 import { useState } from "react";
 
 const pageDescription =
-  "Remplir le formulaire de contact pour calculateur boite automatique Renault double embrayage EDC (DC4) ";
-const HeadingText = "Contactez-nous VBA calculateur Renault boite automatique";
+  "Contactez-nous via cette page, en laissant vos coordonnées et indiquez votre type de véhicule Renault ";
 
 const Contact = () => {
   const [isError, setIsError] = useState(false);
@@ -72,9 +71,8 @@ const Contact = () => {
         <div className="relative">
           <div className="flex flex-col items-center ">
             <Head>
-              <title>Contactez nous ici</title>
+              <title>contacter nous VBA calcualteur Renault</title>
               <meta name="description" content={pageDescription} />
-              <meta name="headline" content={HeadingText} />
             </Head>
 
             <div className="conatctTitleBody accent_color text-[#374151] md:w-[846px] py-5 text-center rounded-md mb-5">

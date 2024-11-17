@@ -5,16 +5,19 @@ import SubHeader from "@/components/SubHeader";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
+const pageDescription =
+  "Video qui explique comment monter et demonter un calculateur pour boite automatique EDC clio 4, clio RS, Captur, megane 3, scenic 3.";
+
 const RemplacmentPage = () => {
   return (
     <main>
       <SubHeader />
       <Header />
       <section className="article-content">
-        {/* <Head>
-          <title>{article.title}</title>
-          <meta name="description" content={article.excerpt} />
-        </Head> */}
+        <Head>
+          <title>video comment demonter remonter calculateur EDC</title>
+          <meta name="description" content={pageDescription} />
+        </Head>
         <div className="container mx-auto">
           <div className="md:w-3/5 mx-auto mt-8">
             <iframe
@@ -52,89 +55,6 @@ const RemplacmentPage = () => {
                 Scenic IV, Grand Scenic IV Possibilité de venir programmer sur
                 place si besoin.
               </p>
-
-              <p className="mb-5">
-                Références disponible 310320749R 310320891R 310320756R
-                310321109R 310321488R 310321517R 310320841R 310320717R
-                310320892R 310320721R 310321520R 310321561R, A4539006303
-                310321808R 310321150R 310321421R 310321706R 310321716R
-                310321793R 310321662R 310321524R 310321994R 310322059R
-                310F93913R 310321149R 310321306R 310320553R 310321359R SP03241,
-                DC4016, 310321148R, 310321488R
-              </p>
-
-              <p className="mb-5">
-                Scenic 1.5 2011, Scenic 1.5 2012, Scenic 1.5 2013, Scenic 1.5
-                2014, Scenic 1.5 2015, Megane 1.5 2011, Megane 1.5 2012, Megane
-                1.5 2013, Megane 1.5 2014, Megane 1.5 2015
-              </p>
-
-              <p className="mb-5">
-                Clio 1.5 2011, Clio 1.5 2012, Clio 1.5 2013, Clio 1.5 2014, Clio
-                1.5 2015, Clio 1.5 2016
-              </p>
-
-              <p className="mb-5">
-                Captur 1.5 dci 2011, Captur 1.5 dci 2012, Captur 1.5 dci 2013,
-                Captur 1.5 dci 2014, Captur 1.5 2015, Captur 1.5 2016, Captur
-                1.5 2017, Captur 1.2 2010, Captur 1.2 2011, Captur 1.2 2012,
-                Captur 1.2 2013, Captur 1.2 2014, Captur 1.2 2015, Captur 1.2
-                2016, Captur 1.2 2017
-              </p>
-
-              <p className="mb-5">
-                Clio 4 IV 1.2 2010, Clio 4 IV 1.2 2011, Clio 4 IV 1.2 2012, Clio
-                4 IV 1.2 2013, Clio 4 IV 1.2 2014, Clio 4 IV 1.2 2015, Clio 4 IV
-                1.2 2016, Clio 4 IV 1.2 2017
-              </p>
-
-              <p className="mb-5">
-                Clio GT 1.2 2010, Clio GT 1.2 2011, Clio GT 1.2 2012, Clio GT
-                1.2 2013, Clio GT 1.2 2014, Clio GT 1.2 2015, Clio GT 1.2 2016,
-                Clio GT 1.2 2017, Clio GT 1.2 2018
-              </p>
-
-              <p className="mb-5">
-                Clio IV Estate 310320891R Unit Elec Programm, calculateur (PA66)
-              </p>
-
-              <p className="mb-5">
-                Clio IV 310320756R Unit Elec Programm, calculateur (PA.64)
-              </p>
-
-              <p className="mb-5">
-                Captur, Clio 310321109R Unit Elec Programm H5FTt (D800)
-              </p>
-
-              <p className="mb-5">
-                Clio 310321488R Unit Elec Programm M5Mt H5FTt K9K
-              </p>
-
-              <p className="mb-5">
-                310321517R Unit Elec Programm B M5Mt (PA57)
-              </p>
-
-              <p className="mb-5">
-                310320841R Unit Elec Programm B H5Ft (B600)
-              </p>
-
-              <p className="mb-5">
-                Captur 310320892R Unit Elec Programm H5Ft (PA.76)
-              </p>
-
-              <p className="mb-5">
-                Captur 310320721R Unit Elec Programm H5Ft (PA.75)
-              </p>
-
-              <p className="mb-5">Clio 310321520R Unit Elec Programm (PA66)</p>
-
-              <p className="mb-5">310321808R MAM Reference B K9K EU6 CMF</p>
-
-              <p className="mb-5">MAM Gen1 C1.9 Renault</p>
-
-              <p className="mb-5">MAM Gen2 C6</p>
-
-              <p className="mb-5">Réf Aluminium: ALSi9Cu3(Fe)(Zn)</p>
 
               <p className="mb-5">Codes defauts utiles :</p>
 

@@ -11,7 +11,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const pageDescription =
-  "bloc, Forum et articles sur les problèmes rencontrés pour les boites automatiques de Captur, Clio 4, Scénic, Mégane. Article sur les différentes boites automatiques de chez Renault évolution de la boîte à convertisseur à la boîte automatique double embrayage";
+  "Tutoriel et blog pour vous aider à réparer les boites automatique EDC Renault clio 4, clio RS, Captur, megane 3 et scenic 3.";
 
 const Page = () => {
   const settings = {
@@ -53,10 +53,7 @@ const Page = () => {
       <Header />
       <section className="installation">
         <Head>
-          <title>
-            Forum, blog et articles sur les problèmes boite EDC Renault. Article
-            Renault boite automatique évolution
-          </title>
+          <title>Tutoriel et blog sur les boite automatiques Renault EDC</title>
           <meta name="description" content={pageDescription} />
         </Head>
         <div className="relative">

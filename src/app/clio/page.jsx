@@ -8,10 +8,10 @@ import DynaStock from "@/components/DynaStock";
 import ReturnButton from "@/components/ReturnButton";
 
 const pageDescription =
-  "Commander ici votre calculateur pour boîte automatique, Renault Captur boîte EDC (DC4))";
-const HeadingText = "Calculateur pour Renault Captur";
+  "Renault Clio 4, calculateur boite automatique EDC pour Renault Clio 4 essence et Clio 4 Diesel voir stock";
+const HeadingText = "Calculateur pour Renault Clio IV";
 
-const RenaultCapture = () => {
+const RenaultClio = () => {
   return (
     <main>
       <SubHeader />
@@ -19,60 +19,60 @@ const RenaultCapture = () => {
       <section className="py-[60px] produits ">
         <div className="container mx-auto">
           <Head>
-            <title>
-              Calculateur, boîte automatique Renault Captur EDC (DC4)
-            </title>
+            <title>Calculateur EDC pour Renault Clio 4 disponibililté</title>
             <meta name="description" content={pageDescription} />
             <meta name="headline" content={HeadingText} />
           </Head>
           <div style={{ display: "none" }}>
-            <h1>Calculateur pour Renault Captur</h1>
+            <h1>Calculateur pour Renault Clio IV</h1>
           </div>
           <div className=" justify-center items-start gap-5 ">
             <div className="md:w-[800px] md:min-h-[538px] mx-auto ">
               <div className="ms-auto  accent_color py-5 bg-white rounded-md  p-5">
-                <div className="flex justify-between relative">
+                <div className="flex justify-between  relative">
                   <div className="absolute left-0">
                     <ReturnButton />
                   </div>
                   <div className="mx-auto">
                     <h1 className="text-2xl font-semibold text-center text-gray-700 md:block hidden">
-                      Renault Captur
+                      Renault Clio IV
                     </h1>
                   </div>
 
                   <div className="absolute right-0">
-                    <DynaStock carName="Renault Captur" />
+                    <DynaStock carName="Renault Clio" />
                   </div>
                 </div>
-                <h1 className="text-2xl font-semibold text-center text-gray-700 md:hidden block mt-5 ">
-                  Renault Captur
+                <h1 className="text-2xl font-semibold text-center text-gray-700 md:hidden block mt-5">
+                  Renault Clio IV
                 </h1>
-                <div className="my-3">
+                <div className="my-1.5">
                   <Image
                     width={300}
-                    height={290}
-                    src="/images/calculateur_DC4_Renault_Capture.webp"
-                    className="mx-auto"
+                    height={280}
+                    src="/images/calculateur_DC4_Renault_Clio4.webp"
+                    className="mx-auto w-[280px] h-[170px] mb-5"
                     alt=""
                   />
                 </div>
                 <p className="text-justify text-[15px]">
                   Vérifiez la disponibilté de votre module (boite de vitesse à
-                  contrôler) pour votre boite automatique <strong>EDC</strong>{" "}
-                  Renault <strong>Captur</strong>. Celui-ci peut être livré
+                  contrôler) pour votre <strong>boite</strong> automatique{" "}
+                  <strong>EDC </strong>
+                  Renault <strong>Clio 4</strong>. Celui-ci peut être livré
                   vierge ou directement programmé (Plug & Play). L’
                   <Link href="/prestation/installation">installation</Link> est
                   possible en fonction de votre lieu géographique. Choisissez
-                  votre modèle pour Renault Captur:{" "}
-                  <Link href="/captur/essence" className="underline">
+                  votre modèle pour Renault Clio 4:{" "}
+                  <Link href="/clio/essence" className="underline">
                     Essence
                   </Link>{" "}
                   ou{" "}
-                  <Link href="/captur/diesel" className="underline">
+                  <Link href="/clio/diesel" className="underline">
                     Diesel
                   </Link>
-                  {"."} N’hésitez pas à nous contacter si vous souhaitez être
+                  {". "}
+                  N’hésitez pas à nous contacter si vous souhaitez être
                   absolument certain que cette pièce est bien à l’origine du
                   problème. Pour plus d&apos;informations, vous pouvez consulter
                   notre{" "}
@@ -81,7 +81,7 @@ const RenaultCapture = () => {
                   </Link>
                   {"."}
                 </p>
-                <div className="grid md:grid-cols-8 grid-cols-3 md:mt-0 mt-3  items-center justify-start">
+                <div className="grid md:grid-cols-8 grid-cols-3 md:mt-0 mt-3 items-center justify-start">
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
                     <Link href="/reference/310321488R">310321488R </Link>
                   </p>
@@ -114,29 +114,29 @@ const RenaultCapture = () => {
                       height={100}
                       src="https://i.ibb.co/k8C1Y2Y/Group-1074-removebg-preview.png"
                       alt="Calculateur avec carton"
-                      className=""
+                      className="w-[100px] h-[80px]"
                       loading="lazy"
                     />
                     <div className="text-start">
                       <h2 className="text-lg font-semibold text-gray-700">
-                        Renault Captur
+                        Renault Clio IV
                       </h2>
                       <p className="text-[14px]">
-                        Calculateur Captur pour Essence et Diesel
+                        Calculateur Clio IV pour Essence et Diesel
                       </p>
                     </div>
                   </div>
                   <div className="md:mt-0 mt-4">
                     <div className="flex justify-center gap-5">
                       <div className="">
-                        <Link href="/captur/essence" prefetch={true}>
+                        <Link href="/clio/essence" prefetch={true}>
                           <button className="rounded-md text-center border border-[#2C80EF] py-2 px-6 shadow-2xl hover:text-[#fff] hover:bg-[#2C80EF] text-[15px]">
                             1.2 Essence
                           </button>
                         </Link>
                       </div>
                       <div className="">
-                        <Link href="/captur/diesel" prefetch={true}>
+                        <Link href="/clio/diesel" prefetch={true}>
                           <button className="rounded-md text-center border border-[#2C80EF] py-2 px-8 shadow-2xl hover:text-[#fff] hover:bg-[#2C80EF] text-[15px]">
                             1.5 Diesel
                           </button>
@@ -155,4 +155,4 @@ const RenaultCapture = () => {
   );
 };
 
-export default RenaultCapture;
+export default RenaultClio;

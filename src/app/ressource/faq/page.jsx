@@ -8,8 +8,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const pageDescription =
-  "Questions sur les différents problèmes sur les boites Renault EDC (DC4): défaut de calculateur, d'embrayage, symptômes pour aider à trouver une solution. ";
-const HeadingText = "Programation calculateur boite automatique Renault";
+  "Vous trouverez ici les questions fréquentes que l'on peut trouver sur les problemes boites automatiques EDC Renault";
 
 const AccordionItem = ({ title, content, image, isOpen, onClick }) => (
   <div className=" mb-3">
@@ -249,14 +248,15 @@ const Faq = () => {
       <section className="installation">
         <div className="relative">
           <Head>
-            <title>
-              Problème fréquent et questions sur problème boite EDC (DC4)
-            </title>
+            <title>Question frequentes sur les problemes boite EDC</title>
             <meta name="description" content={pageDescription} />
-            <meta name="headline" content={HeadingText} />
           </Head>
           <div style={{ display: "none" }}>
-            <h1>Programation calculateur boite automatique Renault</h1>
+            {accordionData.map((item, index) => (
+              <div key={index}>
+                <h1>{item.title}</h1>
+              </div>
+            ))}
           </div>
           {/* Texte au-dessus de l'image */}
           <main className="py-[60px]">

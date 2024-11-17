@@ -1,37 +1,33 @@
-import Image from "next/image";
-import Link from "next/link";
-import React from "react";
 import Head from "next/head";
+import Link from "next/link";
 import SubHeader from "@/components/SubHeader";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Image from "next/image";
 import DynaStock from "@/components/DynaStock";
 import ReturnButton from "@/components/ReturnButton";
 
 const pageDescription =
-  "Vérifiez la disponibilté de votre module de commande de boite de vitesse automatique pour votre boite automatique EDC Renault Scenic";
-const HeadingText = "Calculateur pour Renault Scenic";
+  "Renault Captur, calculateur boite automatique EDC pour Renault Captur essence et Renault Captur Diesel voir stock";
+const HeadingText = "Calculateur pour Renault Captur";
 
-const RenaultScenic = () => {
+const RenaultCapture = () => {
   return (
     <main>
       <SubHeader />
       <Header />
-      <section className="py-[60px] produits">
+      <section className="py-[60px] produits ">
         <div className="container mx-auto">
           <Head>
-            <title>
-              Calculateur pour Renault Scenic Calculateur vierge ou programmé
-            </title>
+            <title>Calculateur EDC pour Renault captur disponibililté</title>
             <meta name="description" content={pageDescription} />
             <meta name="headline" content={HeadingText} />
           </Head>
-
           <div style={{ display: "none" }}>
-            <h1>Calculateur pour Renault Scénic </h1>
+            <h1>Calculateur Renault Captur 1.2 Essence</h1>
+            <h2>Calculateur Renault Captur 1.5 Diesel</h2>
           </div>
-
-          <div className="justify-center items-start gap-5 ">
+          <div className=" justify-center items-start gap-5 ">
             <div className="md:w-[800px] md:min-h-[538px] mx-auto ">
               <div className="ms-auto  accent_color py-5 bg-white rounded-md  p-5">
                 <div className="flex justify-between relative">
@@ -39,41 +35,43 @@ const RenaultScenic = () => {
                     <ReturnButton />
                   </div>
                   <div className="mx-auto">
-                    {" "}
                     <h1 className="text-2xl font-semibold text-center text-gray-700 md:block hidden">
-                      Renault Scénic
+                      Renault Captur
                     </h1>
                   </div>
 
                   <div className="absolute right-0">
-                    <DynaStock carName="Renault Scenic" />
+                    <DynaStock carName="Renault Captur" />
                   </div>
                 </div>
-                <h1 className="text-2xl font-semibold text-center text-gray-700 md:hidden block mt-5">
-                  Renault Scénic
+                <h1 className="text-2xl font-semibold text-center text-gray-700 md:hidden block mt-5 ">
+                  Renault Captur
                 </h1>
-                <div className="my-2.5">
+                <div className="my-3">
                   <Image
-                    width={290}
+                    width={300}
                     height={290}
-                    src="/images/calculateur_DC4_renault_Senic.webp"
-                    className="mx-auto"
+                    src="/images/calculateur_DC4_Renault_Capture.webp"
+                    className="mx-auto w-[300px] h-[170px] mb-4"
                     alt=""
                   />
                 </div>
                 <p className="text-justify text-[15px]">
                   Vérifiez la disponibilté de votre module (boite de vitesse à
                   contrôler) pour votre boite automatique <strong>EDC</strong>{" "}
-                  Renault <strong>Scénic 3</strong>. Celui-ci peut être livré
+                  Renault <strong>Captur</strong>. Celui-ci peut être livré
                   vierge ou directement programmé (Plug & Play). L’
                   <Link href="/prestation/installation">installation</Link> est
-                  possible en fonction de votre lieu géographique. Il n’existe
-                  qu’un modèle pour Renault Scénic 3:{" "}
-                  <Link href="/scenic/diesel" className="underline">
+                  possible en fonction de votre lieu géographique. Choisissez
+                  votre modèle pour Renault Captur:{" "}
+                  <Link href="/captur/essence" className="underline">
+                    Essence
+                  </Link>{" "}
+                  ou{" "}
+                  <Link href="/captur/diesel" className="underline">
                     Diesel
                   </Link>
-                  {". "}
-                  N’hésitez pas à nous contacter si vous souhaitez être
+                  {"."} N’hésitez pas à nous contacter si vous souhaitez être
                   absolument certain que cette pièce est bien à l’origine du
                   problème. Pour plus d&apos;informations, vous pouvez consulter
                   notre{" "}
@@ -82,7 +80,7 @@ const RenaultScenic = () => {
                   </Link>
                   {"."}
                 </p>
-                <div className="grid md:grid-cols-8 grid-cols-3 md:mt-0 mt-3 items-center justify-start">
+                <div className="grid md:grid-cols-8 grid-cols-3 md:mt-0 mt-3  items-center justify-start">
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
                     <Link href="/reference/310321488R">310321488R </Link>
                   </p>
@@ -115,23 +113,30 @@ const RenaultScenic = () => {
                       height={100}
                       src="https://i.ibb.co/k8C1Y2Y/Group-1074-removebg-preview.png"
                       alt="Calculateur avec carton"
-                      className=""
+                      className="w-[100px] h-[80px]"
                       loading="lazy"
                     />
                     <div className="text-start">
                       <h2 className="text-lg font-semibold text-gray-700">
-                        Renault Scénic
+                        Renault Captur
                       </h2>
                       <p className="text-[14px]">
-                        Calculateur Scénic pour Diesel
+                        Calculateur Captur pour Essence et Diesel
                       </p>
                     </div>
                   </div>
                   <div className="md:mt-0 mt-4">
                     <div className="flex justify-center gap-5">
                       <div className="">
-                        <Link href="/scenic/diesel" prefetch={true}>
-                          <button className="rounded-md text-center border border-[#2C80EF] py-2 px-9 shadow-2xl hover:text-[#fff] hover:bg-[#2C80EF] text-[15px]">
+                        <Link href="/captur/essence" prefetch={true}>
+                          <button className="rounded-md text-center border border-[#2C80EF] py-2 px-6 shadow-2xl hover:text-[#fff] hover:bg-[#2C80EF] text-[15px]">
+                            1.2 Essence
+                          </button>
+                        </Link>
+                      </div>
+                      <div className="">
+                        <Link href="/captur/diesel" prefetch={true}>
+                          <button className="rounded-md text-center border border-[#2C80EF] py-2 px-8 shadow-2xl hover:text-[#fff] hover:bg-[#2C80EF] text-[15px]">
                             1.5 Diesel
                           </button>
                         </Link>
@@ -149,4 +154,4 @@ const RenaultScenic = () => {
   );
 };
 
-export default RenaultScenic;
+export default RenaultCapture;

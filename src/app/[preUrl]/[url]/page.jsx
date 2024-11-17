@@ -75,8 +75,6 @@ const SingleVehicleView = ({ params: paramsPromise }) => {
     const { preUrl, url } = params;
     const pageUrl = preUrl?.toLowerCase();
     const typeUrl = url?.toLowerCase();
-    console.log(params);
-    console.log(pageUrl, url);
 
     const vehicle = data?.find((item) =>
       item.model2.toLowerCase().includes(pageUrl)
@@ -105,18 +103,16 @@ const SingleVehicleView = ({ params: paramsPromise }) => {
 
   return (
     <main>
+      <Head>
+        <title>{selectedType?.metaTitle}</title>
+        <meta name="description" content={selectedType?.metaDes} />
+      </Head>
       <SubHeader />
       <Header />
       <section className="produits ">
         <div className="">
           {selectedType ? (
             <div className="container mx-auto">
-              <Head>
-                <title>
-                  {selectedType.title} - {selectedType.marque}
-                </title>
-                <meta name="description" content={selectedType.description} />
-              </Head>
               <div className="md:w-3/4 mx-auto md:min-h-[538px]">
                 <div className="md:flex  justify-center">
                   <div className="md:w-[400px] p-4  bg-white rounded-tl-[5px] ">
@@ -142,7 +138,7 @@ const SingleVehicleView = ({ params: paramsPromise }) => {
                           </span>{" "}
                         </p>
                         <div className="w-full mt-5">
-                          <div className="">
+                          <div className="max-h-[280px]">
                             <ResponsiveSlider images={selectedType?.images} />
                           </div>
                         </div>
@@ -234,7 +230,7 @@ const SingleVehicleView = ({ params: paramsPromise }) => {
                           src={selectedType?.images[0]}
                           width={60}
                           height={50}
-                          className=""
+                          className="w-[60px] h-[40px]"
                           alt=""
                         />
                       </div>

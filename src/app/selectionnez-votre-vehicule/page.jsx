@@ -11,8 +11,7 @@ import Footer from "@/components/Footer";
 import RefrerenceCheckerComp from "@/components/RefSearch";
 
 const pageDescription =
-  "Trouver ici la référence de votre calculateur Renault: A2C30743000 01 K00 - A2C53374830 03 K01 - A2C30743100 - A2C73768907 00 K00 ";
-const HeadingText = "Trouver en fonction du véhicule le calculateur compatible";
+  "Vous pouvez rechercher ici votre modèle de clauclateur boite automatique EDC renault par référence ou par véhicule";
 
 const ComparePage = () => {
   const [selectedBrand, setSelectedBrand] = useState(null);
@@ -26,19 +25,7 @@ const ComparePage = () => {
     Renault: [
       {
         name: "Captur",
-        years: [
-          "2013",
-          "2014",
-          "2015",
-          "2016",
-          "2017",
-          "2018",
-          "2019",
-          "2020",
-          "2021",
-          "2022",
-          "2023",
-        ],
+        years: ["2013", "2014", "2015", "2016", "2017", "2018", "2019"],
         versions: [
           "Essence 0.9L - 0.9 Tce",
           "Essence 1.2L - 1.2 Tce",
@@ -49,20 +36,7 @@ const ComparePage = () => {
       },
       {
         name: "Clio IV",
-        years: [
-          "2012",
-          "2013",
-          "2014",
-          "2015",
-          "2016",
-          "2017",
-          "2018",
-          "2019",
-          "2020",
-          "2021",
-          "2022",
-          "2023",
-        ],
+        years: ["2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019"],
         versions: [
           "Essence 0.9L - 0.9 Tce",
           "Essence 1.2L - 1.2 16v",
@@ -92,11 +66,6 @@ const ComparePage = () => {
           "2016",
           "2017",
           "2018",
-          "2019",
-          "2020",
-          "2021",
-          "2022",
-          "2023",
         ],
         versions: ["Diesel 1.5L - 1.5 dCi"],
         hrefEssence: "/fluence/diesel",
@@ -104,84 +73,35 @@ const ComparePage = () => {
       },
       {
         name: "Scénic III",
-        years: [
-          "2009",
-          "2010",
-          "2011",
-          "2012",
-          "2013",
-          "2014",
-          "2015",
-          "2016",
-          "2017",
-          "2018",
-          "2019",
-          "2020",
-          "2021",
-          "2022",
-          "2023",
-        ],
+        years: ["2009", "2010", "2011", "2012", "2013", "2014"],
         versions: ["Diesel 1.5L - 1.5 dCi"],
         hrefEssence: "/scenic/diesel",
         hrefDiesel: "/scenic/diesel",
       },
       {
         name: "Grand Scénic III",
-        years: [
-          "2009",
-          "2010",
-          "2011",
-          "2012",
-          "2013",
-          "2014",
-          "2015",
-          "2016",
-          "2017",
-          "2018",
-          "2019",
-          "2020",
-          "2021",
-          "2022",
-          "2023",
-        ],
+        years: ["2009", "2010", "2011", "2012", "2013", "2014"],
         versions: ["Diesel 1.5L - 1.5 dCi"],
         hrefEssence: "/scenic/diesel",
         hrefDiesel: "/scenic/diesel",
       },
       {
         name: "Megane 3",
-        years: ["2010", "2011", "2012", "2013", "2014", "2015", "2016"],
+        years: ["2008", "2009", "2010", "2011", "2012", "2013", "2014"],
         versions: ["Essence 1.2L - 1.2 Tce", "Diesel 1.5L - 1.5 dCi"],
         hrefEssence: "/megane/essence",
         hrefDiesel: "/megane/diesel",
       },
       {
         name: "Megane 3 CC",
-        years: ["2010", "2011", "2012", "2013", "2014", "2015", "2016"],
+        years: ["2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015"],
         versions: ["Essence 1.2L - 1.2 Tce", "Diesel 1.5L - 1.5 dCi"],
         hrefEssence: "/megane/essence",
         hrefDiesel: "/megane/diesel",
       },
       {
         name: "Megane 3 Coupé",
-        years: [
-          "2008",
-          "2009",
-          "2010",
-          "2011",
-          "2012",
-          "2013",
-          "2014",
-          "2015",
-          "2016",
-          "2017",
-          "2018",
-          "2019",
-          "2020",
-          "2021",
-          "2022",
-          "2023",
-        ],
+        years: ["2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015"],
         versions: ["Essence 1.2L - 1.2 Tce", "Diesel 1.5L - 1.5 dCi"],
         hrefEssence: "/megane/essence",
         hrefDiesel: "/megane/diesel",
@@ -218,15 +138,13 @@ const ComparePage = () => {
       <section className="compare">
         <div className="container mx-auto">
           <Head>
-            <title>
-              Identifier la référence de votre calculateur Renault ici
-            </title>
+            <title>Recherche calculateur EDC par véhicule ou référence</title>
             <meta name="description" content={pageDescription} />
-            <meta name="headline" content={HeadingText} />
           </Head>
 
           <div style={{ display: "none" }}>
-            <h1>Trouver en fonction du véhicule le calculateur compatible</h1>
+            <h1>Recherche par véhicule, année, modèle, motorisation</h1>
+            <h2>Recherche par référence Renault</h2>
           </div>
           <div className="md:flex gap-12">
             <div className="md:w-1/2">

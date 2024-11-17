@@ -6,8 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const pageDescription =
-  "Main page URLs	https://laboiteautomatique.com/		vente calculateur Renault boite automatique DC4 (EDC) 6DCT250	Société spécialisée dans la vente et la reprogrammation de calculateurs pour boite automatique DC4 (boite EDC) pour Renault clio 4 Captur megane et scenic 																					";
-const HeadingText = "Programation calculateur boite automatique Renault";
+  "Nous pouvons réparer vorte calculateur boite automatique EDC Renault pour clio 4, clio RS, Captur, megane 3, scenic 3.";
 
 const Programmation = () => {
   return (
@@ -17,14 +16,17 @@ const Programmation = () => {
       <section className="installation">
         <div className="relative">
           <Head>
-            <title>
-              Programmation et clonage calculateur Renault DC4 (EDC) 6DCT250
-            </title>
+            <title>Test et réparation calculateur boite automatique EDC</title>
             <meta name="description" content={pageDescription} />
-            <meta name="headline" content={HeadingText} />
           </Head>
           <div style={{ display: "none" }}>
-            <h1>Programation calculateur boite automatique Renault</h1>
+            <h1>Réparation calculatateur Captur boite automatique EDC </h1>
+            <h1>Réparation calculatateur Clio 4 boite automatique EDC </h1>
+            <h1>Réparation calculatateur Clio RS boite automatique EDC </h1>
+            <h1>Réparation calculatateur Clio RS boite automatique EDC </h1>
+            <h1>Réparation calculatateur Megane 3 boite automatique EDC </h1>
+            <h1>Réparation calculatateur Scenic 3 boite automatique EDC </h1>
+            <h1>Réparation calculatateur Scenic 3 boite automatique EDC </h1>
           </div>
           {/* Texte au-dessus de l'image */}
           <main className="py-[60px]">

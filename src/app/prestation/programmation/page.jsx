@@ -6,8 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const pageDescription =
-  "Main page URLs	https://laboiteautomatique.com/		vente calculateur Renault boite automatique DC4 (EDC) 6DCT250	Société spécialisée dans la vente et la reprogrammation de calculateurs pour boite automatique DC4 (boite EDC) pour Renault clio 4 Captur megane et scenic 																					";
-const HeadingText = "Programation calculateur boite automatique Renault";
+  "Nous pouvons programmer et cloner les calculateurs Renault boite automatique EDC pour clio 4, clio RS, Captur, megane 3, megane 4, scenic 3, Kadjar, Scenic 4";
 
 const Programmation = () => {
   return (
@@ -18,13 +17,35 @@ const Programmation = () => {
         <div className="relative">
           <Head>
             <title>
-              Programmation et clonage calculateur Renault DC4 (EDC) 6DCT250
+              Programation calculateur pour boite automatique EDC Renault
             </title>
             <meta name="description" content={pageDescription} />
-            <meta name="headline" content={HeadingText} />
           </Head>
           <div style={{ display: "none" }}>
-            <h1>Programation calculateur boite automatique Renault</h1>
+            <h1>programmation clonage Renault Captur boite automatique EDC </h1>
+            <h1>programmation clonage Renault Clio 4 boite automatique EDC </h1>
+            <h1>
+              programmation clonage Renault Megane 3 boite automatique EDC{" "}
+            </h1>
+            <h1>
+              programmation clonage Renault Scenic 3 boite automatique EDC{" "}
+            </h1>
+            <h1>
+              programmation clonage Renault Fluence boite automatique EDC{" "}
+            </h1>
+            <h1>
+              programmation clonage Renault Clio RS boite automatique EDC{" "}
+            </h1>
+            <h1>
+              programmation clonage Renault Megane 4 boite automatique EDC{" "}
+            </h1>
+            <h1>
+              programmation clonage Renault Scenic 4 boite automatique EDC{" "}
+            </h1>
+            <h1>programmation clonage Renault Kadjar boite automatique EDC </h1>
+            <h1>
+              programmation clonage Renault twingo III boite automatique EDC{" "}
+            </h1>
           </div>
           {/* Texte au-dessus de l'image */}
           <main className="py-[60px]">
@@ -45,21 +66,21 @@ const Programmation = () => {
                       </p>
                       <ul className="grid md:grid-cols-5 grid-cols-2 gap-5  font-[500] mt-2 text-[14px]">
                         <div className="w-full">
-                          <Link href="/renault-captur">
+                          <Link href="/captur">
                             <p className="bg-gray-100 rounded-md text-center ">
                               Captur
                             </p>
                           </Link>
                         </div>
                         <div className="">
-                          <Link href="/renault-clio">
+                          <Link href="/clio">
                             <p className="bg-gray-100 rounded-md text-center  ">
                               Clio IV
                             </p>
                           </Link>
                         </div>
                         <div className="">
-                          <Link href="/renault-megane">
+                          <Link href="/megane">
                             <p className="bg-gray-100 rounded-md text-center  ">
                               Megane
                             </p>
@@ -67,14 +88,14 @@ const Programmation = () => {
                         </div>
 
                         <div className="w-full">
-                          <Link href="/renault-scenic">
+                          <Link href="/scenic">
                             <p className="bg-gray-100 rounded-md text-center  ">
                               Scenic
                             </p>
                           </Link>
                         </div>
                         <div className="w-full">
-                          <Link href="/renault-clio-rs">
+                          <Link href="/clio-rs">
                             <p className="bg-gray-100 rounded-md text-center  px-2">
                               Clio 4 Rs
                             </p>
@@ -115,7 +136,9 @@ const Programmation = () => {
                         <Link href="/reference/310320139R">310320139R</Link>
                         <Link href="/reference/310320468R">310320468R</Link>
                         <Link href="/reference/310320408R">310320408R</Link>
-                        <Link href="#">310321520R</Link>
+                        <Link href="#" className="cursor-default">
+                          310321520R
+                        </Link>
                       </div>
                       <div className="flex gap-5 text-gray-600 text-[15px] mt-2">
                         <Link

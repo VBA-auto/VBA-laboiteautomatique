@@ -12,7 +12,7 @@ import Review from "./Review";
 
 const Hero = () => {
   const pageDescription =
-    "Société spécialisée dans la vente et la reprogrammation de calculateurs pour boite automatique DC4 (boite EDC) pour Renault clio 4 Captur megane et scenic";
+    "Vente et reprogrammation de calculateurs pour boite automatique DC4 (boite EDC) pour Renault clio 4, clio RS, Captur, megane 3 et scenic 3.";
   const HeadingText = "Vente et reprogrammation de calculateur Renault DC4";
   const secondaryHeadingText =
     "calculateur boite automatique Renault Captur, calculateur boite automatique Renault Clio 4, calculateur boite automatique Renault Mégane, calculateur boite automatique Renault scénic, calculateur boite automatique Renault fluence, calculateur boite automatique Ford Focus";
@@ -29,9 +29,27 @@ const Hero = () => {
         <meta name="secondaryHeading" content={secondaryHeadingText} />
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </Head>
+      <div className="hidden">
+        <h1>Vente Calculateur boite automatique EDC Renault neuf</h1>
+        <h1>Vente Calculateur boite automatique EDC Renault reconditionné</h1>
+        <h1>réparation Calculateur boite automatique EDC Renault</h1>
+        <h1>reprogrammation Calculateur boite automatique Renault EDC</h1>
+        <h1>boite de vitesse à controler aide en ligne </h1>
+        <h2>Calculateur boite automatique EDC Renault Captur</h2>
+        <h2>Calculateur boite automatique EDC Renault Clio 4</h2>
+        <h2>Calculateur boite automatique EDC Renault Megane 3</h2>
+        <h2>Calculateur boite automatique EDC Renault Scenic 3 1.5 diesel</h2>
+        <h2>Calculateur boite automatique EDC Renault Clio RS 1.6 essence</h2>
+        <h2>Calculateur boite automatique EDC Renault Fluence</h2>
+        <h3>Calculateur boite automatique EDC Renault Captur 1.2 Essence</h3>
+        <h3>Calculateur boite automatique EDC Renault Captur 1.5 Diesel</h3>
+        <h3>Calculateur boite automatique EDC Renault Clio 4 1.2 Essence</h3>
+        <h3>Calculateur boite automatique EDC Renault Megane 3 1.5 Diesel</h3>
+        <h3>Calculateur boite automatique EDC Renault Megane 3 1.2 Essence</h3>
+      </div>
       <SubHeader />
       <Header />
-      <section className="md:py-[70px] py-[15px]">
+      <section className="md:pt-[70px] pt-[15px]">
         <div className="container mx-auto">
           <div className="flex items-center justify-center">
             <div className="bannerMain flex md:gap-5">
@@ -54,38 +72,38 @@ const Hero = () => {
                   <div className="grid grid-cols-2 gap-5 md:grid-cols-3 ">
                     {[
                       {
-                        href: "/renault-captur",
+                        href: "/captur",
                         src: "/images/calculateur_DC4_Renault_Capture.webp",
                         alt: "Renault Captur",
                         label: "Renault Captur",
                       },
 
                       {
-                        href: "/renault-clio",
+                        href: "/clio",
                         src: "/images/calculateur_DC4_Renault_Clio4.webp",
                         alt: "Renault Clio IV",
                         label: "Renault Clio IV",
                       },
                       {
-                        href: "/renault-megane",
+                        href: "/megane",
                         src: "/images/calculateur_DC4_renault-megane.webp",
                         alt: "Renault Megane",
                         label: "Renault Megane",
                       },
                       {
-                        href: "/renault-scenic",
+                        href: "/scenic",
                         src: "/images/calculateur_DC4_renault_Senic.webp",
                         alt: "Renault Scenic",
                         label: "Renault Scenic",
                       },
                       {
-                        href: "/renault-fluence",
+                        href: "/fluence",
                         src: "/images/calculateur_DC4_renault-fluence.webp",
                         alt: "Renault Fluence",
                         label: "Renault Fluence",
                       },
                       {
-                        href: "/renault-clio-rs",
+                        href: "/clio-rs",
                         src: "/images/calculateur_DC4_clioRS.webp",
                         alt: "Ford Focus",
                         label: "Renault Clio RS",
@@ -190,7 +208,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <div className="mt-24">
+        <div className="my-[60px]">
           <Review />
         </div>
       </section>

@@ -4,17 +4,18 @@ import Image from "next/image";
 import SubHeader from "@/components/SubHeader";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-
+const pageDescription =
+  "informations calculateur boite automatique EDC Renault version diag, etalonage, numero calibrage, numero vdiag, version logiciel";
 const CalibragePage = () => {
   return (
     <main>
       <SubHeader />
       <Header />
       <section className="article-content">
-        {/* <Head>
-          <title>{article.title}</title>
-          <meta name="description" content={article.excerpt} />
-        </Head> */}
+        <Head>
+          <title>exemple informations calcualteur EDC renault</title>
+          <meta name="description" content={pageDescription} />
+        </Head>
         <div className="container mx-auto">
           <div className="md:w-3/5 mx-auto">
             <Image

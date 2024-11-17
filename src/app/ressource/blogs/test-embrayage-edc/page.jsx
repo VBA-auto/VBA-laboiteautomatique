@@ -5,16 +5,19 @@ import SubHeader from "@/components/SubHeader";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
+const pageDescription =
+  "video explicative comment tester et voir si l'embrayage d'une boite automatique Renault EDC est toujours en bon état (limite tolérance)";
+
 const TestEmbrayageEdc = () => {
   return (
     <main>
       <SubHeader />
       <Header />
       <section className="article-content">
-        {/* <Head>
-          <title>{article.title}</title>
-          <meta name="description" content={article.excerpt} />
-        </Head> */}
+        <Head>
+          <title>comment tester embrayage EDC </title>
+          <meta name="description" content={pageDescription} />
+        </Head>
         <div className="container mx-auto mt-8">
           <div className="md:w-3/5 mx-auto">
             <iframe
@@ -28,7 +31,7 @@ const TestEmbrayageEdc = () => {
           <div className="md:w-3/5 mx-auto mt-8 mb-16">
             <h1 className="text-[20px] font-semibold my-3">
               Comment vérifier l&apos;état de l&apos;embrayage sur une boite EDC
-              pour Captur, Scenic 3, Clio 4, Megane 3.
+              pour <br /> Captur, Scenic 3, Clio 4, Megane 3.
             </h1>
             <p className="mb-5">
               Cette vidéo, disponible sur notre site laboiteautomatique.com,
