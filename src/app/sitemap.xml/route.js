@@ -39,7 +39,6 @@ export async function GET() {
     {
       loc: `${baseUrl}`,
       lastmod: new Date().toISOString(),
-      priority: 1,
     },
     {
       loc: `${baseUrl}/produits`,
@@ -343,7 +342,6 @@ export async function GET() {
         <url>
           <loc>${url.loc}</loc>
           <lastmod>${url.lastmod}</lastmod>
-          <priority>${url.priority}</priority>
         </url>
       `
       )
