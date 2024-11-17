@@ -81,10 +81,6 @@ export async function GET() {
       lastmod: new Date().toISOString(),
     },
     {
-      loc: `${baseUrl}/mentions-legales`,
-      lastmod: new Date().toISOString(),
-    },
-    {
       loc: `${baseUrl}/captur`,
       lastmod: new Date().toISOString(),
     },
@@ -242,10 +238,6 @@ export async function GET() {
     },
     {
       loc: `${baseUrl}/images/logovba.webp`,
-      lastmod: new Date().toISOString(),
-    },
-    {
-      loc: `${baseUrl}/images/marcedesA.png`,
       lastmod: new Date().toISOString(),
     },
     {
