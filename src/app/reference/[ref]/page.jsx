@@ -101,10 +101,8 @@ const SingleSearchView = ({ params: paramsPromise }) => {
         {SearchSingleView ? (
           <>
             <Head>
-              <title>
-                {SearchSingleView.title} - {SearchSingleView.brand}
-              </title>
-              <meta name="description" content={SearchSingleView.description} />
+              <title>{SearchSingleView?.metaTitle}</title>
+              <meta name="description" content={SearchSingleView?.metaDes} />
             </Head>
             <div className="container mx-auto">
               <div className="md:w-3/4 mx-auto ">

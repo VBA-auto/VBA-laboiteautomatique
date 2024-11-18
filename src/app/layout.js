@@ -4,12 +4,19 @@ import Script from "next/script";
 import GoogleAnalytics from "./components/GoogleAnalytics";
 import GoogleAnalytics2 from "./components/GoogleAnalytics2";
 import GoogleTag from "./components/GoogleTag";
+import { Poppins } from "next/font/google"; // Importing Poppins
 
 export const metadata = {
   title: "VBA Calculateur Renault",
   description: "Vente de calculateur Renault",
   icon: "/favicon.ico",
 };
+// Load Poppins using `next/font/google`
+const poppins = Poppins({
+  weight: ["400", "500", "600", "700"], // Specify the weights you need
+  subsets: ["latin"], // Specify subsets; use 'latin' or others as needed
+  variable: "--font-poppins",
+});
 
 const RootLayout = ({ children }) => {
   return (
@@ -25,7 +32,7 @@ const RootLayout = ({ children }) => {
         />
       </Head>
 
-      <body>
+      <body className={`${poppins.variable} antialiased`}>
         {children}
         <GoogleTag />
         <noscript
