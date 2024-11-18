@@ -27,6 +27,7 @@ const Produits = () => {
               <meta name="description" content={pageDescription} />
             </Head>
             <div style={{ display: "none" }}>
+              <p>checking from laptop for connection with github</p>
               <h1>stock produits Calculateur EDC Renault Captur</h1>
               <h1>stock produits Calculateur EDC Renault Clio 4</h1>
               <h1>stock produits Calculateur EDC Renault Megane 3</h1>
