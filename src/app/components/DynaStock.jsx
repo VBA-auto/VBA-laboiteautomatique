@@ -16,20 +16,19 @@ const DynaStock = ({ carName = "" }) => {
     setHasMounted(true); // Indicate that client-side code has run
 
     // Retrieve stock from cache if available
-    if (typeof window !== "undefined") {
-      const cachedData = sessionStorage.getItem(url);
-      if (cachedData && carName) {
-        const parsedData = JSON.parse(cachedData);
-        let initialStock = 0;
-        parsedData.forEach((car) => {
-          if (car?.model?.toLowerCase().includes(carName.toLowerCase())) {
-            Object.values(car.types || {}).forEach((type) => {
-              initialStock += parseInt(type.stock, 10) || 0;
-            });
-          }
-        });
-        setStock(initialStock); // Set initial stock value from cache
-      }
+
+    const cachedData = sessionStorage.getItem(url);
+    if (cachedData && carName) {
+      const parsedData = JSON.parse(cachedData);
+      let initialStock = 0;
+      parsedData.forEach((car) => {
+        if (car?.model?.toLowerCase().includes(carName.toLowerCase())) {
+          Object.values(car.types || {}).forEach((type) => {
+            initialStock += parseInt(type.stock, 10) || 0;
+          });
+        }
+      });
+      setStock(initialStock); // Set initial stock value from cache
     }
   }, [carName, url]);
 
@@ -46,10 +45,9 @@ const DynaStock = ({ carName = "" }) => {
       }
     });
 
-    setStock(totalStock); // Update state with new data
-    if (typeof window !== "undefined") {
-      sessionStorage.setItem(url, JSON.stringify(cars));
-    }
+    setStock(totalStock);
+
+    sessionStorage.setItem(url, JSON.stringify(cars));
   }, [cars, error, carName]);
 
   // Prevent rendering on the server and until client-side mounting
