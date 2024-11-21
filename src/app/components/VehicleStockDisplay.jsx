@@ -1,35 +1,21 @@
 "use client";
 import { useState, useEffect } from "react";
 
-const VehicleStockDisplay = ({ modelName, carType }) => {
+const VehicleStockDisplay = ({ modelName, carType, onStockChange }) => {
   const [stock, setStock] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const url = "https://vba-blue-server.onrender.com/cars";
 
   useEffect(() => {
-    if (!modelName || !carType) {
-      setError("Model name or car type is missing.");
-      setLoading(false);
-      return;
-    }
-
     const fetchStock = async () => {
       try {
-        const cachedData = sessionStorage.getItem(url);
-        let data;
+        setLoading(true);
 
-        // Use cached data if available, otherwise fetch from API
-        if (cachedData) {
-          data = JSON.parse(cachedData);
-        } else {
-          const response = await fetch(url);
-          if (!response.ok) throw new Error(`Error: ${response.statusText}`);
-          data = await response.json();
-          sessionStorage.setItem(url, JSON.stringify(data));
-        }
+        const response = await fetch(url);
+        if (!response.ok) throw new Error(`Error: ${response.statusText}`);
+        const data = await response.json();
 
-        // Find the vehicle by matching the model name
         const vehicle = data.find(
           (car) =>
             car.model.trim().toLowerCase() === modelName.trim().toLowerCase()
@@ -37,7 +23,9 @@ const VehicleStockDisplay = ({ modelName, carType }) => {
 
         if (vehicle && vehicle.types[carType.toLowerCase()]) {
           const typeData = vehicle.types[carType.toLowerCase()];
-          setStock(parseInt(typeData.stock, 10));
+          const stockValue = parseInt(typeData.stock, 10);
+          setStock(stockValue);
+          if (onStockChange) onStockChange(stockValue);
         } else {
           setError("Vehicle or type not found.");
         }
@@ -49,9 +37,7 @@ const VehicleStockDisplay = ({ modelName, carType }) => {
     };
 
     fetchStock();
-  }, [modelName, carType, url]);
-
-  if (error) return <p>{error}</p>;
+  }, [modelName, carType, onStockChange, url]);
 
   return (
     <div>

@@ -208,7 +208,7 @@ const SingleSearchView = ({ params: paramsPromise }) => {
                           src={SearchSingleView?.images[0]}
                           width={60}
                           height={50}
-                          className=""
+                          className="w-[60px] h-[40px]"
                           alt=""
                         />
                       </div>
