@@ -20,7 +20,7 @@ export default function StockManage({ handleLogout }) {
     const fetchCars = async () => {
       try {
         const response = await fetch(
-          "  https://vba-blue-server.onrender.com/cars"
+          "https://vba-express-server.vercel.app/cars"
         );
         const data = await response.json();
         if (Array.isArray(data)) setCars(data);
@@ -32,7 +32,7 @@ export default function StockManage({ handleLogout }) {
     const fetchRefs = async () => {
       try {
         const response = await fetch(
-          "  https://vba-blue-server.onrender.com/refs"
+          "https://vba-express-server.vercel.app/refs"
         );
         const data = await response.json();
         if (Array.isArray(data)) setRefs(data);
@@ -65,7 +65,8 @@ export default function StockManage({ handleLogout }) {
     try {
       setLoading(true);
       const response = await fetch(
-        `  https://vba-blue-server.onrender.com/cars/${model}/${type}`,
+        ` https://vba-express-server.vercel.app/cars/${model}/${type}`,
+        // `  https://vba-blue-server.onrender.com/cars/${model}/${type}`,
         {
           method: "PUT",
           headers: {
@@ -78,7 +79,8 @@ export default function StockManage({ handleLogout }) {
       if (response.ok) {
         toast.success("Car stock updated successfully!");
         const updatedCars = await fetch(
-          "  https://vba-blue-server.onrender.com/cars"
+          "https://vba-express-server.vercel.app/cars"
+          // "  https://vba-blue-server.onrender.com/cars"
         ).then((res) => res.json());
         setCars(updatedCars);
       } else {
@@ -115,7 +117,8 @@ export default function StockManage({ handleLogout }) {
     try {
       setLoading(true);
       const response = await fetch(
-        `  https://vba-blue-server.onrender.com/refs/${id}`,
+        ` https://vba-express-server.vercel.app/refs/${id}`,
+        // `  https://vba-blue-server.onrender.com/refs/${id}`,
         {
           method: "PUT",
           headers: {
@@ -129,7 +132,8 @@ export default function StockManage({ handleLogout }) {
         toast.success("Ref stock updated successfully!");
 
         const updatedRefs = await fetch(
-          "  https://vba-blue-server.onrender.com/refs"
+          "https://vba-express-server.vercel.app/refs"
+          // "  https://vba-blue-server.onrender.com/refs"
         ).then((res) => res.json());
         setRefs(updatedRefs);
       } else {

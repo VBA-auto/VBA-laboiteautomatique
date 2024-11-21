@@ -5,7 +5,8 @@ const VehicleRef = ({ modelName, refCode }) => {
   const [stock, setStock] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const url = "https://vba-blue-server.onrender.com/refs";
+  const url = "https://vba-express-server.vercel.app/refs";
+  // const url = "https://vba-blue-server.onrender.com/refs";
 
   useEffect(() => {
     if (!modelName || !refCode) {
@@ -63,7 +64,18 @@ const VehicleRef = ({ modelName, refCode }) => {
     fetchStock(); // Fetch stock on mount
   }, [modelName, refCode, url]);
 
-  if (error) return <p>{error}</p>;
+  if (loading) {
+    return (
+      <p className="text-gray-700 py-1 text-center rounded-md flex justify-end items-center gap-2 text-[15px]">
+        <span
+          className="md:w-[12px] md:h-[12px] w-[10px] h-[10px] 
+
+         bg-gray-100 rounded-full block"
+        ></span>
+        En stock:{" "}
+      </p>
+    );
+  }
 
   return (
     <div>

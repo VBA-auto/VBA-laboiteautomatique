@@ -69,7 +69,8 @@ const SingleSearchView = ({ params: paramsPromise }) => {
     const fetchStockData = async () => {
       try {
         const response = await fetch(
-          "https://vba-blue-server.onrender.com/refs"
+          "https://vba-express-server.vercel.app/refs"
+          // "https://vba-blue-server.onrender.com/refs"
         );
         if (!response.ok) throw new Error(`Error: ${response.statusText}`);
 
@@ -208,7 +209,7 @@ const SingleSearchView = ({ params: paramsPromise }) => {
                           src={SearchSingleView?.images[0]}
                           width={60}
                           height={50}
-                          className=""
+                          className="w-[60px] h-[40px]"
                           alt=""
                         />
                       </div>

@@ -1,35 +1,22 @@
 "use client";
 import { useState, useEffect } from "react";
 
-const VehicleStockDisplay = ({ modelName, carType }) => {
+const VehicleStockDisplay = ({ modelName, carType, onStockChange }) => {
   const [stock, setStock] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const url = "https://vba-blue-server.onrender.com/cars";
+  // const url = "https://vba-blue-server.onrender.com/cars";
+  const url = "https://vba-express-server.vercel.app/cars";
 
   useEffect(() => {
-    if (!modelName || !carType) {
-      setError("Model name or car type is missing.");
-      setLoading(false);
-      return;
-    }
-
     const fetchStock = async () => {
       try {
-        const cachedData = sessionStorage.getItem(url);
-        let data;
+        setLoading(true);
 
-        // Use cached data if available, otherwise fetch from API
-        if (cachedData) {
-          data = JSON.parse(cachedData);
-        } else {
-          const response = await fetch(url);
-          if (!response.ok) throw new Error(`Error: ${response.statusText}`);
-          data = await response.json();
-          sessionStorage.setItem(url, JSON.stringify(data));
-        }
+        const response = await fetch(url);
+        if (!response.ok) throw new Error(`Error: ${response.statusText}`);
+        const data = await response.json();
 
-        // Find the vehicle by matching the model name
         const vehicle = data.find(
           (car) =>
             car.model.trim().toLowerCase() === modelName.trim().toLowerCase()
@@ -37,7 +24,9 @@ const VehicleStockDisplay = ({ modelName, carType }) => {
 
         if (vehicle && vehicle.types[carType.toLowerCase()]) {
           const typeData = vehicle.types[carType.toLowerCase()];
-          setStock(parseInt(typeData.stock, 10));
+          const stockValue = parseInt(typeData.stock, 10);
+          setStock(stockValue);
+          if (onStockChange) onStockChange(stockValue);
         } else {
           setError("Vehicle or type not found.");
         }
@@ -49,9 +38,20 @@ const VehicleStockDisplay = ({ modelName, carType }) => {
     };
 
     fetchStock();
-  }, [modelName, carType, url]);
+  }, [modelName, carType, onStockChange, url]);
 
-  if (error) return <p>{error}</p>;
+  if (loading) {
+    return (
+      <p className="text-gray-700 py-1 text-center rounded-md flex justify-end items-center gap-2 text-[15px]">
+        <span
+          className="md:w-[12px] md:h-[12px] w-[10px] h-[10px] 
+
+         bg-gray-100 rounded-full block"
+        ></span>
+        En stock:{" "}
+      </p>
+    );
+  }
 
   return (
     <div>

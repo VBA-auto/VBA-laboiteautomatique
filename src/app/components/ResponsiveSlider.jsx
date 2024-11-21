@@ -1,11 +1,12 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const ResponsiveSlider = ({ images }) => {
-  const [currentIndex, setCurrentIndex] = useState(0); // Track main image index
-  const [thumbnailStartIndex, setThumbnailStartIndex] = useState(0); // Track thumbnail view index
-  const thumbnailsToShow = Math.min(3, images.length); // Show up to the available number of images
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [thumbnailStartIndex, setThumbnailStartIndex] = useState(0);
+  const thumbnailsToShow = Math.min(3, images.length);
+  const [thumbnailWidth, setThumbnailWidth] = useState(70);
 
   const handleThumbnailClick = (index) => {
     setCurrentIndex(index); // Update main image to match the thumbnail clicked
@@ -25,6 +26,20 @@ const ResponsiveSlider = ({ images }) => {
       return newIndex;
     });
   };
+  useEffect(() => {
+    const handleResize = () => {
+      setThumbnailWidth(window.innerWidth < 768 ? 80 : 70);
+    };
+
+    // Set initial width
+    handleResize();
+
+    // Add event listener
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <div className="mx-auto">
@@ -64,7 +79,7 @@ const ResponsiveSlider = ({ images }) => {
             style={{
               transition: "transform 0.5s ease-in-out",
               transform: `translateX(-${
-                thumbnailStartIndex * (window.innerWidth < 768 ? 80 : 70)
+                thumbnailStartIndex * thumbnailWidth
               }px)`,
             }}
           >

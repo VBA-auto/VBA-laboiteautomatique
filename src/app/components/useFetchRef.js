@@ -10,7 +10,8 @@ const useFetchRef = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "  https://vba-blue-server.onrender.com/refs"
+          " https://vba-express-server.vercel.app/refs"
+          // "  https://vba-blue-server.onrender.com/refs"
         );
         if (!response.ok) {
           throw new Error(`Error: ${response.statusText}`);

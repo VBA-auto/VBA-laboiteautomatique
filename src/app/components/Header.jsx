@@ -58,6 +58,7 @@ const Header = () => {
                     height={100}
                     src="/images/logovba.webp"
                     alt="Logo"
+                    className="w-[100px] h-[60px]"
                     priority
                   />
                 </div>
