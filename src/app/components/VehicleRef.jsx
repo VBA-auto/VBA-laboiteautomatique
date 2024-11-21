@@ -66,7 +66,7 @@ const VehicleRef = ({ modelName, refCode }) => {
 
   if (loading) {
     return (
-      <p className="text-gray-700 py-1 text-center rounded-md flex justify-end items-center gap-2 text-[14px]"></p>
+      <p className="text-gray-700 py-1 text-center rounded-md flex justify-end items-center gap-2 text-[14px] h-[31px]"></p>
     );
   }
 
