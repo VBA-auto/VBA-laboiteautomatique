@@ -35,8 +35,6 @@ const DynaStock = ({ carName = "" }) => {
 
   // Update stock when fresh data is fetched
   useEffect(() => {
-    if (error || !cars || !carName) return;
-
     let totalStock = 0;
     cars.forEach((car) => {
       if (car?.model?.toLowerCase().includes(carName.toLowerCase())) {
@@ -55,8 +53,6 @@ const DynaStock = ({ carName = "" }) => {
   if (!hasMounted) {
     return null; // Avoid rendering content until fully mounted
   }
-
-  if (error) return <p>Error: {error}</p>;
 
   return (
     <div>
