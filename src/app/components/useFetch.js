@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 const useFetch = () => {
-  const url = "https://vba-express-server.vercel.app/cars";
+  const url = "https://vba-blue-server.onrender.com/cars";
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);

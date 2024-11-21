@@ -5,8 +5,8 @@ const VehicleRef = ({ modelName, refCode }) => {
   const [stock, setStock] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const url = "https://vba-express-server.vercel.app/refs";
-  // const url = "https://vba-blue-server.onrender.com/refs";
+  // const url = "https://vba-express-server.vercel.app/refs";
+  const url = "https://vba-blue-server.onrender.com/refs";
 
   useEffect(() => {
     if (!modelName || !refCode) {

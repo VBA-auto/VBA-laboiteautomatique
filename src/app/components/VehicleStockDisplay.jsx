@@ -5,8 +5,8 @@ const VehicleStockDisplay = ({ modelName, carType, onStockChange }) => {
   const [stock, setStock] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  // const url = "https://vba-blue-server.onrender.com/cars";
-  const url = "https://vba-express-server.vercel.app/cars";
+  const url = "https://vba-blue-server.onrender.com/cars";
+  // const url = "https://vba-express-server.vercel.app/cars";
 
   useEffect(() => {
     const fetchStock = async () => {

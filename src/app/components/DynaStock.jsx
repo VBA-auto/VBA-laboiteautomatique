@@ -3,8 +3,8 @@ import { useState, useEffect } from "react";
 import useFetch from "./useFetch";
 
 const DynaStock = ({ carName = "" }) => {
-  // const url = "https://vba-blue-server.onrender.com/cars";
-  const url = "https://vba-express-server.vercel.app/cars";
+  const url = "https://vba-blue-server.onrender.com/cars";
+  // const url = "https://vba-express-server.vercel.app/cars";
 
   // Initialize stock with `null` to indicate no data is loaded initially
   const [stock, setStock] = useState(null);
