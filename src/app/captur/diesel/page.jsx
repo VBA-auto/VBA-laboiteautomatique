@@ -28,6 +28,11 @@ const SingleVehicleView = () => {
   const [showCoupon, setShowCoupon] = useState(false);
   const [data, setData] = useState([]);
   const [copied, setCopied] = useState(false);
+  const [stock, setStock] = useState(null);
+
+  const handleStockChange = (currentStock) => {
+    setStock(currentStock);
+  };
 
   return (
     <main>
@@ -79,7 +84,8 @@ const SingleVehicleView = () => {
                     <div className="">
                     <VehicleStockDisplay
                         modelName="Renault Captur"
-                        carType="diesel"
+                        carType="essence"
+                        onStockChange={handleStockChange}
                       />
                     </div>
                   </div>
@@ -149,7 +155,7 @@ const SingleVehicleView = () => {
                   </div>
                   <div className="md:w-1/2 flex items-center md:justify-end justify-center gap-5">
                     <div className="text-center">
-                      {/* {Number(stock) <= 0 ? (
+                      {stock === 0 ?(
                         <>
                           <div className="md:flex gap-5 mt-3 md:mt-0 items-center">
                             <FaArrowRight className="text-[14px] text-[#2C80EF] animate-slide-arrow" />
@@ -173,15 +179,15 @@ const SingleVehicleView = () => {
                         >
                           Commander
                         </button>
-                      )} */}
-                      <button
+                      )}
+                      {/* <button
                         onClick={() =>
                           document.getElementById("my_modal_3").showModal()
                         }
                         className=" bg-[#2C80EF] text-white rounded-md text-center border border-[#2C80EF] py-2 px-5 shadow-2xl hover:text-[#fff] hover:bg-[#2c80efd7] text-[15px] md:my-0 my-5"
                       >
                         Commander
-                      </button>
+                      </button> */}
                     </div>
                   </div>
                 </div>
