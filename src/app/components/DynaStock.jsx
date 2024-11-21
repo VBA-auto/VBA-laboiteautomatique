@@ -8,11 +8,10 @@ const DynaStock = ({ carName = "" }) => {
 
   // Initialize stock with `null` to indicate no data is loaded initially
   const [stock, setStock] = useState(null);
-  const [hasMounted, setHasMounted] = useState(false); // Track client-side mounting
+  const [hasMounted, setHasMounted] = useState(false);
 
-  const { data: cars, error } = useFetch();
+  const { data: cars, loading } = useFetch();
 
-  // Handle client-side only logic
   useEffect(() => {
     setHasMounted(true); // Indicate that client-side code has run
 
@@ -22,7 +21,7 @@ const DynaStock = ({ carName = "" }) => {
     if (cachedData && carName) {
       const parsedData = JSON.parse(cachedData);
       let initialStock = 0;
-      parsedData.forEach((car) => {
+      parsedData?.forEach((car) => {
         if (car?.model?.toLowerCase().includes(carName.toLowerCase())) {
           Object.values(car.types || {}).forEach((type) => {
             initialStock += parseInt(type.stock, 10) || 0;
@@ -36,7 +35,7 @@ const DynaStock = ({ carName = "" }) => {
   // Update stock when fresh data is fetched
   useEffect(() => {
     let totalStock = 0;
-    cars.forEach((car) => {
+    cars?.forEach((car) => {
       if (car?.model?.toLowerCase().includes(carName.toLowerCase())) {
         Object.values(car.types || {}).forEach((type) => {
           totalStock += parseInt(type.stock, 10) || 0;
@@ -47,13 +46,17 @@ const DynaStock = ({ carName = "" }) => {
     setStock(totalStock);
 
     sessionStorage.setItem(url, JSON.stringify(cars));
-  }, [cars, error, carName]);
+  }, [cars, carName]);
 
   // Prevent rendering on the server and until client-side mounting
   if (!hasMounted) {
-    return null; // Avoid rendering content until fully mounted
+    return null;
   }
-
+  if (loading) {
+    return (
+      <p className="text-gray-700 py-1 text-center rounded-md flex justify-end items-center gap-2 text-[14px]"></p>
+    );
+  }
   return (
     <div>
       <p className="text-gray-700 py-1 text-center rounded-md flex justify-end items-center gap-2 text-[15px]">

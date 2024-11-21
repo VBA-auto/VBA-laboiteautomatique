@@ -2,7 +2,6 @@
 import DynaStock from "@/components/DynaStock";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import SimpleSlider from "@/components/ProductSlider";
 import SubHeader from "@/components/SubHeader";
 import Head from "next/head";
 import Image from "next/image";

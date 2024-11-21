@@ -42,20 +42,13 @@ const VehicleStockDisplay = ({ modelName, carType, onStockChange }) => {
 
   if (loading) {
     return (
-      <p className="text-gray-700 py-1 text-center rounded-md flex justify-end items-center gap-2 text-[15px]">
-        <span
-          className="md:w-[12px] md:h-[12px] w-[10px] h-[10px] 
-
-         bg-gray-100 rounded-full block"
-        ></span>
-        En stock:{" "}
-      </p>
+      <p className="text-gray-700 py-1 text-center rounded-md flex justify-end items-center gap-2 text-[15px]"></p>
     );
   }
 
   return (
     <div>
-      <p className="text-gray-700 py-1 text-center rounded-md flex justify-end items-center gap-2 text-[15px]">
+      <p className="text-gray-700 py-1 text-center rounded-md flex justify-end items-center gap-2 text-[14px]">
         <span
           className={`md:w-[12px] md:h-[12px] w-[10px] h-[10px] ${
             stock <= 1
