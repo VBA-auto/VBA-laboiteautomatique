@@ -74,7 +74,7 @@ const Produits = () => {
                 {/* Produits */}
                 <div className="lg:w-full rounded-md shadow-sm p-5 singleProductCard accent_color bg-white/50">
                   <div className="">
-                    <div className="">
+                    <div className="h-[30px]">
                       <DynaStock carName="Renault Captur" />
                     </div>
                   </div>
@@ -85,7 +85,7 @@ const Produits = () => {
                       src="/images/productImage.webp"
                       alt=""
                       objectFit="cover"
-                      className="mx-auto"
+                      className="mx-auto w-[380px] h-[165px]"
                     />
                   </div>
                   <Link href="/captur">
@@ -125,7 +125,7 @@ const Produits = () => {
                 {/* Produit 2 */}
                 <div className="lg:w-full rounded-md shadow-sm p-5 bg-white/50 singleProductCard accent_color">
                   <div className="">
-                    <div className="">
+                    <div className="h-[30px]">
                       <DynaStock carName="Renault Clio" />
                     </div>
                   </div>
@@ -136,7 +136,7 @@ const Produits = () => {
                       src="/images/productImage.webp"
                       alt=""
                       objectFit="cover"
-                      className="mx-auto"
+                      className="mx-auto w-[380px] h-[165px]"
                     />
                   </div>
                   <Link href="/clio">
@@ -176,7 +176,7 @@ const Produits = () => {
                 {/* Produit 3 */}
                 <div className="lg:w-full rounded-md shadow-sm p-5 bg-white/50 singleProductCard accent_color">
                   <div className="">
-                    <div className="">
+                    <div className="h-[30px]">
                       <DynaStock carName="Renault megane" />
                     </div>
                   </div>
@@ -187,7 +187,7 @@ const Produits = () => {
                       src="/images/productImage.webp"
                       alt=""
                       objectFit="cover"
-                      className="mx-auto"
+                      className="mx-auto w-[380px] h-[165px]"
                     />
                   </div>
                   <Link href="/megane">
@@ -227,7 +227,7 @@ const Produits = () => {
 
                 {/* Produit 4 */}
                 <div className="lg:w-full rounded-md shadow-sm p-5 bg-white/50 singleProductCard accent_color">
-                  <div className="">
+                  <div className="h-[30px]">
                     <DynaStock carName="Renault Scenic" />
                   </div>
                   <div className="">
@@ -237,7 +237,7 @@ const Produits = () => {
                       src="/images/productImage.webp"
                       alt=""
                       objectFit="cover"
-                      className="mx-auto"
+                      className="mx-auto w-[380px] h-[165px]"
                     />
                   </div>
                   <Link href="/scenic">
@@ -271,7 +271,7 @@ const Produits = () => {
 
                 {/* Produit 5 */}
                 <div className="lg:w-full rounded-md shadow-sm p-5 bg-white/50 singleProductCard accent_color">
-                  <div className="">
+                  <div className="h-[30px]">
                     <DynaStock carName="Renault Fluence" />
                   </div>
                   <div className="">
@@ -281,7 +281,7 @@ const Produits = () => {
                       src="/images/productImage.webp"
                       alt=""
                       objectFit="cover"
-                      className="mx-auto"
+                      className="mx-auto w-[380px] h-[165px]"
                     />
                   </div>
                   <Link href="/fluence">
@@ -316,7 +316,7 @@ const Produits = () => {
                 {/* Product 6 */}
 
                 <div className="lg:w-full rounded-md  shadow-sm p-5 bg-white/50 singleProductCard accent_color">
-                  <div className="">
+                  <div className="h-[30px]">
                     <DynaStock carName="Clio 4 RS" />
                   </div>
                   <div className="">
@@ -326,7 +326,7 @@ const Produits = () => {
                       src="/images/productImage.webp"
                       alt=""
                       objectFit="cover"
-                      className="mx-auto"
+                      className="mx-auto w-[380px] h-[165px]"
                     />
                   </div>
                   <Link href="/clio-rs">
