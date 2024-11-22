@@ -40,15 +40,12 @@ const DynaProdStock = ({ carName = "" }) => {
 
   if (loading) {
     return (
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-end">
         <p className="text-gray-700 py-1 text-center rounded-md flex justify-end items-center gap-2 text-[15px]">
           <span className="md:w-[10px] md:h-[10px] w-[10px] h-[10px] bg-gray-300 rounded-full block"></span>
-          stock:
+          unité(s) en stock:
         </p>
-        <div className="flex items-center">
-          <p className="text-[15px]">unité:</p>{" "}
-          <span className="loading loading-ring loading-xs"></span>
-        </div>
+        <span className="loading loading-ring loading-xs"></span>
       </div>
     );
   }
