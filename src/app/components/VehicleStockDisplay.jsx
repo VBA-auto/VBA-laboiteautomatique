@@ -5,8 +5,9 @@ const VehicleStockDisplay = ({ modelName, carType, onStockChange }) => {
   const [stock, setStock] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const url = "https://vba-blue-server.onrender.com/cars";
-  // const url = "https://vba-express-server.vercel.app/cars";
+
+  // Use the Next.js backend API
+  const url = "/api/cars"; // Replace external link with Next.js API route
 
   useEffect(() => {
     const fetchStock = async () => {
@@ -17,6 +18,7 @@ const VehicleStockDisplay = ({ modelName, carType, onStockChange }) => {
         if (!response.ok) throw new Error(`Error: ${response.statusText}`);
         const data = await response.json();
 
+        // Find the vehicle by model and type
         const vehicle = data.find(
           (car) =>
             car.model.trim().toLowerCase() === modelName.trim().toLowerCase()
@@ -26,7 +28,10 @@ const VehicleStockDisplay = ({ modelName, carType, onStockChange }) => {
           const typeData = vehicle.types[carType.toLowerCase()];
           const stockValue = parseInt(typeData.stock, 10);
           setStock(stockValue);
-          if (onStockChange) onStockChange(stockValue);
+
+          if (onStockChange) {
+            onStockChange(stockValue);
+          }
         } else {
           setError("Vehicle or type not found.");
         }
@@ -42,15 +47,22 @@ const VehicleStockDisplay = ({ modelName, carType, onStockChange }) => {
 
   if (loading) {
     return (
-      <p className="text-gray-700 py-1 text-center rounded-md flex justify-end items-center gap-2 text-[15px] h-[29px]"></p>
+      <div className="flex items-center justify-between">
+        <p className="text-gray-700 py-1 text-center rounded-md flex justify-end items-center gap-2 text-[15px]">
+          <span className="md:w-[10px] md:h-[10px] w-[10px] h-[10px] bg-gray-300 rounded-full block"></span>
+          En stock:
+        </p>
+
+        <span className="loading loading-ring loading-xs"></span>
+      </div>
     );
   }
 
   return (
-    <div>
-      <p className="text-gray-700 py-1 text-center rounded-md flex justify-end items-center gap-2 text-[14px]">
+    <div className="">
+      <p className="text-gray-700 py-1 text-center rounded-md flex justify-end items-center gap-2 text-[15px]">
         <span
-          className={`md:w-[12px] md:h-[12px] w-[10px] h-[10px] ${
+          className={`md:w-[10px] md:h-[10px] w-[10px] h-[10px] ${
             stock <= 1
               ? "bg-red-500"
               : stock <= 3

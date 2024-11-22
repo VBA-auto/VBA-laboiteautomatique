@@ -1,60 +1,55 @@
 "use client";
 import { useState, useEffect } from "react";
-import useFetch from "./useFetch";
 
 const DynaProdStock = ({ carName = "" }) => {
-  const url = "https://vba-blue-server.onrender.com/cars";
-  // const url = "https://vba-express-server.vercel.app/cars";
+  //   const url = "https://vba-blue-server.onrender.com/cars";
+  const url = "/api/cars";
 
-  // Initialize stock with `null` to indicate no data is loaded initially
   const [stock, setStock] = useState(null);
-  const [hasMounted, setHasMounted] = useState(false);
-
-  const { data: cars, loading } = useFetch();
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setHasMounted(true); // Indicate that client-side code has run
-
-    // Retrieve stock from cache if available
-
-    const cachedData = sessionStorage.getItem(url);
-    if (cachedData && carName) {
-      const parsedData = JSON.parse(cachedData);
-      let initialStock = 0;
-      parsedData?.forEach((car) => {
-        if (car?.model?.toLowerCase().includes(carName.toLowerCase())) {
-          Object.values(car.types || {}).forEach((type) => {
-            initialStock += parseInt(type.stock, 10) || 0;
-          });
+    async function fetchCars() {
+      try {
+        const response = await fetch(url);
+        if (!response.ok) {
+          throw new Error("Failed to fetch cars data");
         }
-      });
-      setStock(initialStock); // Set initial stock value from cache
+        const cars = await response.json();
+
+        // Calculate stock for the given carName
+        let totalStock = 0;
+        cars?.forEach((car) => {
+          if (car?.model?.toLowerCase().includes(carName.toLowerCase())) {
+            Object.values(car.types || {}).forEach((type) => {
+              totalStock += parseInt(type.stock, 10) || 0;
+            });
+          }
+        });
+
+        setStock(totalStock);
+        setLoading(false);
+      } catch (error) {
+        console.error("Error fetching cars:", error);
+        setLoading(false);
+      }
     }
+
+    fetchCars();
   }, [carName, url]);
 
-  // Update stock when fresh data is fetched
-  useEffect(() => {
-    let totalStock = 0;
-    cars?.forEach((car) => {
-      if (car?.model?.toLowerCase().includes(carName.toLowerCase())) {
-        Object.values(car.types || {}).forEach((type) => {
-          totalStock += parseInt(type.stock, 10) || 0;
-        });
-      }
-    });
-
-    setStock(totalStock);
-
-    sessionStorage.setItem(url, JSON.stringify(cars));
-  }, [cars, carName]);
-
-  // Prevent rendering on the server and until client-side mounting
-  if (!hasMounted) {
-    return null;
-  }
   if (loading) {
     return (
-      <p className="text-gray-700 py-1 text-center rounded-md flex justify-end items-center gap-2 text-[14px]"></p>
+      <div className="flex items-center justify-between">
+        <p className="text-gray-700 py-1 text-center rounded-md flex justify-end items-center gap-2 text-[15px]">
+          <span className="md:w-[10px] md:h-[10px] w-[10px] h-[10px] bg-gray-300 rounded-full block"></span>
+          stock:
+        </p>
+        <div className="flex items-center">
+          <p className="text-[15px]">unité:</p>{" "}
+          <span className="loading loading-ring loading-xs"></span>
+        </div>
+      </div>
     );
   }
   return (
