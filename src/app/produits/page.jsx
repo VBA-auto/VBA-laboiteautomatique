@@ -1,6 +1,5 @@
 "use client";
 import DynaProdStock from "@/components/DynaProdStock";
-import DynaStock from "@/components/DynaStock";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import SubHeader from "@/components/SubHeader";
@@ -79,14 +78,14 @@ const Produits = () => {
                       <DynaProdStock carName="Renault Captur" />
                     </div>
                   </div>
-                  <div className="">
+                  <div className="px-4">
                     <Image
                       width={400}
                       height={300}
                       src="/images/productDefault.webp"
                       alt=""
                       objectFit="cover"
-                      className="mx-auto w-[380px] h-[165px]"
+                      className="mx-auto w-[400px] h-[141px]"
                     />
                   </div>
                   <Link href="/captur">
@@ -130,14 +129,14 @@ const Produits = () => {
                       <DynaProdStock carName="Renault Clio" />
                     </div>
                   </div>
-                  <div className="">
+                  <div className="px-4">
                     <Image
                       width={400}
                       height={300}
                       src="/images/productDefault.webp"
                       alt=""
                       objectFit="cover"
-                      className="mx-auto w-[380px] h-[165px]"
+                      className="mx-auto w-[400px] h-[141px]"
                     />
                   </div>
                   <Link href="/clio">
@@ -181,14 +180,14 @@ const Produits = () => {
                       <DynaProdStock carName="Renault Megane" />
                     </div>
                   </div>
-                  <div className="">
+                  <div className="px-4">
                     <Image
                       width={400}
                       height={300}
                       src="/images/productMegane.webp"
                       alt=""
                       objectFit="cover"
-                      className="mx-auto w-[380px] h-[165px]"
+                      className="mx-auto w-[400px] h-[141px]"
                     />
                   </div>
                   <Link href="/megane">
@@ -231,14 +230,14 @@ const Produits = () => {
                   <div className="h-[30px]">
                     <DynaProdStock carName="Renault Scenic" />
                   </div>
-                  <div className="">
+                  <div className="px-4">
                     <Image
                       width={400}
                       height={300}
                       src="/images/productScenic.webp"
                       alt=""
                       objectFit="cover"
-                      className="mx-auto w-[380px] h-[165px]"
+                      className="mx-auto w-[400px] h-[141px]"
                     />
                   </div>
                   <Link href="/scenic">
@@ -275,14 +274,14 @@ const Produits = () => {
                   <div className="h-[30px]">
                     <DynaProdStock carName="Renault Fluence" />
                   </div>
-                  <div className="">
+                  <div className="px-4">
                     <Image
                       width={400}
                       height={300}
                       src="/images/productDefault.webp"
                       alt=""
                       objectFit="cover"
-                      className="mx-auto w-[380px] h-[165px]"
+                      className="mx-auto w-[400px] h-[141px]"
                     />
                   </div>
                   <Link href="/fluence">
@@ -320,14 +319,14 @@ const Produits = () => {
                   <div className="h-[30px]">
                     <DynaProdStock carName="Clio 4 RS" />
                   </div>
-                  <div className="">
+                  <div className="px-4">
                     <Image
                       width={400}
                       height={300}
                       src="/images/productDefault.webp"
                       alt=""
                       objectFit="cover"
-                      className="mx-auto w-[380px] h-[165px]"
+                      className="mx-auto w-[400px] h-[141px]"
                     />
                   </div>
                   <Link href="/clio-rs">

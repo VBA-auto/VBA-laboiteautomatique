@@ -53,7 +53,7 @@ const DynaProdStock = ({ carName = "" }) => {
     );
   }
   return (
-    <div className="flex items-center justify-between">
+    <div className="">
       <p className="text-gray-700 py-1 text-center rounded-md flex justify-end items-center gap-2 text-[15px]">
         <span
           className={`md:w-[10px] md:h-[10px] w-[10px] h-[10px] ${
@@ -66,10 +66,7 @@ const DynaProdStock = ({ carName = "" }) => {
               : "bg-[#2aa31fc4]"
           } rounded-full block`}
         ></span>
-        stock:
-      </p>
-      <p className="text-[15px]">
-        unité:{" "}
+        unité(s) en stock:
         <span
           className={`${
             stock === null
