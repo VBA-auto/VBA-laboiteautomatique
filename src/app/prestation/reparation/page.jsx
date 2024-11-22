@@ -89,7 +89,7 @@ const Programmation = () => {
                   </div>
                   <div className="text-start mt-5">
                     <Link href="/contact">
-                      <button className="buttonCheckBluePro">
+                      <button className="text-[#2C80EF] bg-transparent text-[15px] border border-[#2c80ef] py-2 px-3 rounded-md hover:bg-[#2C80EF] hover:text-white block">
                         <span>Contactez-nous</span>
                       </button>
                     </Link>

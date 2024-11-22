@@ -1,4 +1,5 @@
 "use client";
+import DynaProdStock from "@/components/DynaProdStock";
 import DynaStock from "@/components/DynaStock";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
@@ -74,14 +75,15 @@ const Produits = () => {
                 <div className="lg:w-full rounded-md shadow-sm p-5 singleProductCard accent_color bg-white/50">
                   <div className="">
                     <div className="h-[30px]">
-                      <DynaStock carName="Renault Captur" />
+                      {/* <DynaStock carName="Renault Captur" /> */}
+                      <DynaProdStock carName="Renault Captur" />
                     </div>
                   </div>
                   <div className="">
                     <Image
                       width={400}
                       height={300}
-                      src="/images/productImage.webp"
+                      src="/images/productDefault.webp"
                       alt=""
                       objectFit="cover"
                       className="mx-auto w-[380px] h-[165px]"
@@ -103,7 +105,7 @@ const Produits = () => {
                         <h2 className="text-[22px] font-medium text-start text-[#374151]">
                           Renault Captur
                         </h2>
-                        <p className="text-sm">a partir de 2012 </p>
+                        <p className="text-sm">à partir de 2012 </p>
                       </div>
                     </div>
                   </Link>
@@ -125,14 +127,14 @@ const Produits = () => {
                 <div className="lg:w-full rounded-md shadow-sm p-5 bg-white/50 singleProductCard accent_color">
                   <div className="">
                     <div className="h-[30px]">
-                      <DynaStock carName="Renault Clio" />
+                      <DynaProdStock carName="Renault Clio" />
                     </div>
                   </div>
                   <div className="">
                     <Image
                       width={400}
                       height={300}
-                      src="/images/productImage.webp"
+                      src="/images/productDefault.webp"
                       alt=""
                       objectFit="cover"
                       className="mx-auto w-[380px] h-[165px]"
@@ -154,7 +156,7 @@ const Produits = () => {
                         <h2 className=" text-[22px] font-medium text-strt  text-[#374151]">
                           Renault Clio IV
                         </h2>
-                        <p className="text-sm">a partir de 2012 </p>
+                        <p className="text-sm">à partir de 2012 </p>
                       </div>
                     </div>
                   </Link>
@@ -176,14 +178,14 @@ const Produits = () => {
                 <div className="lg:w-full rounded-md shadow-sm p-5 bg-white/50 singleProductCard accent_color">
                   <div className="">
                     <div className="h-[30px]">
-                      <DynaStock carName="Renault Megane" />
+                      <DynaProdStock carName="Renault Megane" />
                     </div>
                   </div>
                   <div className="">
                     <Image
                       width={400}
                       height={300}
-                      src="/images/productImage.webp"
+                      src="/images/productMegane.webp"
                       alt=""
                       objectFit="cover"
                       className="mx-auto w-[380px] h-[165px]"
@@ -227,13 +229,13 @@ const Produits = () => {
                 {/* Produit 4 */}
                 <div className="lg:w-full rounded-md shadow-sm p-5 bg-white/50 singleProductCard accent_color">
                   <div className="h-[30px]">
-                    <DynaStock carName="Renault Scenic" />
+                    <DynaProdStock carName="Renault Scenic" />
                   </div>
                   <div className="">
                     <Image
                       width={400}
                       height={300}
-                      src="/images/productImage.webp"
+                      src="/images/productScenic.webp"
                       alt=""
                       objectFit="cover"
                       className="mx-auto w-[380px] h-[165px]"
@@ -255,7 +257,7 @@ const Produits = () => {
                         <h2 className="text-[22px] font-medium text-start transition-transform text-[#374151] ">
                           Renault Scénic
                         </h2>
-                        <p className="text-sm">a partir de 2008</p>
+                        <p className="text-sm">à partir de 2008</p>
                       </div>
                     </div>
                   </Link>
@@ -271,13 +273,13 @@ const Produits = () => {
                 {/* Produit 5 */}
                 <div className="lg:w-full rounded-md shadow-sm p-5 bg-white/50 singleProductCard accent_color">
                   <div className="h-[30px]">
-                    <DynaStock carName="Renault Fluence" />
+                    <DynaProdStock carName="Renault Fluence" />
                   </div>
                   <div className="">
                     <Image
                       width={400}
                       height={300}
-                      src="/images/productImage.webp"
+                      src="/images/productDefault.webp"
                       alt=""
                       objectFit="cover"
                       className="mx-auto w-[380px] h-[165px]"
@@ -299,7 +301,7 @@ const Produits = () => {
                         <h2 className="text-[22px] font-medium text-start transition-transform text-[#374151] ">
                           Renault Fluence
                         </h2>
-                        <p className="text-sm">a partir de 2009</p>
+                        <p className="text-sm">à partir de 2009</p>
                       </div>
                     </div>
                   </Link>
@@ -316,13 +318,13 @@ const Produits = () => {
 
                 <div className="lg:w-full rounded-md  shadow-sm p-5 bg-white/50 singleProductCard accent_color">
                   <div className="h-[30px]">
-                    <DynaStock carName="Clio 4 RS" />
+                    <DynaProdStock carName="Clio 4 RS" />
                   </div>
                   <div className="">
                     <Image
                       width={400}
                       height={300}
-                      src="/images/productImage.webp"
+                      src="/images/productDefault.webp"
                       alt=""
                       objectFit="cover"
                       className="mx-auto w-[380px] h-[165px]"
@@ -344,7 +346,7 @@ const Produits = () => {
                         <h2 className="text-[22px] font-medium text-start transition-transform text-[#374151] ">
                           Renault Clio RS
                         </h2>
-                        <p className="text-sm">a partir de 2010</p>
+                        <p className="text-sm">à partir de 2010</p>
                       </div>
                     </div>
                   </Link>

@@ -4,6 +4,7 @@ import Image from "next/image";
 import SubHeader from "@/components/SubHeader";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ReturnButton from "@/components/ReturnButton";
 
 const pageDescription =
   "video explicative comment tester et voir si l'embrayage d'une boite automatique Renault EDC est toujours en bon état (limite tolérance)";
@@ -18,8 +19,26 @@ const TestEmbrayageEdc = () => {
           <title>comment tester embrayage EDC </title>
           <meta name="description" content={pageDescription} />
         </Head>
-        <div className="container mx-auto mt-8">
-          <div className="md:w-3/5 mx-auto">
+        <div className="container mx-auto mt-[60px]">
+          <div className="md:w-3/5 mx-auto flex justify-between ">
+            <div className="w-1/2">
+              <ReturnButton />
+            </div>
+            <div className="">
+              <p className="text-sm">
+                <Link className="text-gray-400" href="/">
+                  Home /
+                </Link>{" "}
+                <Link className="text-gray-400" href="/ressource/blogs">
+                  Tuto - Blog /
+                </Link>{" "}
+                <Link className="text-blue-400" href="#">
+                  Test-Embrayage-EDC
+                </Link>{" "}
+              </p>
+            </div>
+          </div>
+          <div className="md:w-3/5 mx-auto mt-8">
             <iframe
               className="w-full md:h-[397px] rounded-md"
               src="https://www.youtube.com/embed/crmyBO1TaK0?autohide=1&controls=1&showinfo=0"
@@ -61,7 +80,7 @@ const TestEmbrayageEdc = () => {
 
             <div className="mt-[35px]">
               <Link href="/contact">
-                <button className="buttonCheckBlue">
+                <button className="text-[#2C80EF] bg-transparent text-[15px] border border-[#2c80ef] py-2 px-3 rounded-md hover:bg-[#2C80EF] hover:text-white block">
                   <span>Contactez-nous</span>
                 </button>
               </Link>
