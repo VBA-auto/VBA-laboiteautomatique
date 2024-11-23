@@ -26,7 +26,6 @@ const imagesSlide = [
 const SingleVehicleView = () => {
   const [showSpinner, setShowSpinner] = useState(false);
   const [showCoupon, setShowCoupon] = useState(false);
-  const [data, setData] = useState([]);
   const [copied, setCopied] = useState(false);
   const [stock, setStock] = useState(null);
 

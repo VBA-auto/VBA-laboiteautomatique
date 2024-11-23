@@ -7,8 +7,7 @@ let clientPromise;
 
 if (!client) {
   client = new MongoClient(uri, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
+    serverSelectionTimeoutMS: 10000,
   });
   clientPromise = client.connect();
 }

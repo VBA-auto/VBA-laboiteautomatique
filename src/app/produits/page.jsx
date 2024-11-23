@@ -78,7 +78,7 @@ const Produits = () => {
                       <DynaProdStock carName="Renault Captur" />
                     </div>
                   </div>
-                  <div className="px-4">
+                  <div className="px-4 mt-3">
                     <Image
                       width={400}
                       height={300}
@@ -129,7 +129,7 @@ const Produits = () => {
                       <DynaProdStock carName="Renault Clio" />
                     </div>
                   </div>
-                  <div className="px-4">
+                  <div className="px-4 mt-3">
                     <Image
                       width={400}
                       height={300}
@@ -180,7 +180,7 @@ const Produits = () => {
                       <DynaProdStock carName="Renault Megane" />
                     </div>
                   </div>
-                  <div className="px-4">
+                  <div className="px-4 mt-3">
                     <Image
                       width={400}
                       height={300}
@@ -230,7 +230,7 @@ const Produits = () => {
                   <div className="h-[30px]">
                     <DynaProdStock carName="Renault Scenic" />
                   </div>
-                  <div className="px-4">
+                  <div className="px-4 mt-3">
                     <Image
                       width={400}
                       height={300}
@@ -274,7 +274,7 @@ const Produits = () => {
                   <div className="h-[30px]">
                     <DynaProdStock carName="Renault Fluence" />
                   </div>
-                  <div className="px-4">
+                  <div className="px-4 mt-3">
                     <Image
                       width={400}
                       height={300}
@@ -319,7 +319,7 @@ const Produits = () => {
                   <div className="h-[30px]">
                     <DynaProdStock carName="Clio 4 RS" />
                   </div>
-                  <div className="px-4">
+                  <div className="px-4 mt-3">
                     <Image
                       width={400}
                       height={300}

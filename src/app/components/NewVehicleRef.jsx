@@ -1,16 +1,21 @@
 "use client";
 import { useState, useEffect } from "react";
 
-const VehicleRef = ({ modelName, refCode }) => {
+const NewVehicleRef = ({ modelName, refCode, onStockChange }) => {
   const [stock, setStock] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  // const url = "https://vba-express-server.vercel.app/refs";
-  // const url = "https://vba-blue-server.onrender.com/refs";
 
-  const url = "/api/refsCode";
+  // Use the Next.js backend API
+  const url = "/api/refsCode"; // Local Next.js API route
 
   useEffect(() => {
+    if (!modelName || !refCode) {
+      setError("Model name or ref code is missing.");
+      setLoading(false);
+      return;
+    }
+
     const fetchStock = async () => {
       try {
         setLoading(true);
@@ -30,9 +35,17 @@ const VehicleRef = ({ modelName, refCode }) => {
         if (ref) {
           const stockValue = parseInt(ref.stock, 10); // Ensure numeric value
           setStock(stockValue);
+
+          // Pass the stock value to the parent component via the callback
+          if (onStockChange) {
+            onStockChange(stockValue);
+          }
         } else {
           setError("Vehicle not found for ref code.");
           setStock(0); // Default to 0 if not found
+          if (onStockChange) {
+            onStockChange(0);
+          }
         }
       } catch (err) {
         setError(`Failed to fetch stock: ${err.message}`);
@@ -42,7 +55,7 @@ const VehicleRef = ({ modelName, refCode }) => {
     };
 
     fetchStock(); // Fetch stock on mount
-  }, [modelName, refCode, url]);
+  }, [modelName, refCode, onStockChange, url]);
 
   if (loading) {
     return (
@@ -51,17 +64,16 @@ const VehicleRef = ({ modelName, refCode }) => {
           <span className="md:w-[10px] md:h-[10px] w-[10px] h-[10px] bg-gray-300 rounded-full block"></span>
           En stock:
         </p>
-
         <span className="loading loading-ring loading-xs"></span>
       </div>
     );
   }
 
   return (
-    <div>
+    <div className="">
       <p className="text-gray-700 py-1 text-center rounded-md flex justify-end items-center gap-2 text-[15px]">
         <span
-          className={`md:w-[12px] md:h-[12px] w-[10px] h-[10px] ${
+          className={`md:w-[10px] md:h-[10px] w-[10px] h-[10px] ${
             stock <= 1
               ? "bg-red-500"
               : stock <= 3
@@ -86,4 +98,4 @@ const VehicleRef = ({ modelName, refCode }) => {
   );
 };
 
-export default VehicleRef;
+export default NewVehicleRef;
