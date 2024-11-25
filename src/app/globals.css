@@ -498,6 +498,10 @@ option {
   .homeContentMain {
     display: none;
   }
+  iframe {
+    height: 233px;
+    border-radius: 6px;
+  }
   .homeButtonNew,
   .resCaro {
     justify-content: center;
@@ -517,7 +521,7 @@ option {
   }
   .media-container {
     width: 100%;
-    height: 400px; /* Set a consistent height for videos and images */
+    height: 233px;
     overflow: hidden;
   }
   .sliderContainerMain {

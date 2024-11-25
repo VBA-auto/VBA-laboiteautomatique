@@ -19,13 +19,13 @@ const RemplacmentPage = () => {
           <title>video comment demonter remonter calculateur EDC</title>
           <meta name="description" content={pageDescription} />
         </Head>
-        <div className="container mx-auto mt-[60px]">
+        <div className="container mx-auto mt-[60px] px-6 md:px-0">
           <div className="md:w-3/5 mx-auto flex justify-between ">
-            <div className="w-1/2">
+            <div className="md:w-1/2">
               <ReturnButton />
             </div>
             <div className="">
-              <p className="text-sm">
+              <p className="md:text-sm text-[12px]">
                 <Link className="text-gray-400" href="/">
                   Home /
                 </Link>{" "}

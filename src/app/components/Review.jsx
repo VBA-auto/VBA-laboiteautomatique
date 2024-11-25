@@ -126,7 +126,7 @@ const ReviewSlider = () => {
                 className="text-blue-500 cursor-pointer mt-2 text-[14px]"
                 onClick={() => handleSeeMoreClick(review)}
               >
-                See more
+                voir plus
               </label>
             </div>
           </div>

@@ -208,7 +208,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <div className="my-[60px]">
+        <div className="my-[60px] md:px-0 px-6">
           <Review />
         </div>
       </section>

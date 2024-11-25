@@ -105,7 +105,7 @@ const Programmation = () => {
                     </div>
                     <p className="my-3 text-[15px]">Références compatibles:</p>
                     <div className=" ">
-                      <div className="grid gap-3 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-7 text-gray-600 text-[15px] max-w-5xl mx-auto">
+                      <div className="grid gap-3 grid-cols-3 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-7 text-gray-600 text-[15px] max-w-5xl mx-auto">
                         <Link href="/reference/310321488R">310321488R</Link>
                         <Link href="/reference/310321517R">310321517R</Link>
                         <Link href="/reference/310320841R">310320841R</Link>
@@ -140,7 +140,7 @@ const Programmation = () => {
                           310321520R
                         </Link>
                       </div>
-                      <div className="flex gap-5 text-gray-600 text-[15px] mt-2">
+                      <div className="grid grid-cols-3 md:grid-cols-5 gap-5 text-gray-600 text-[15px] mt-2">
                         <Link
                           className="truncate"
                           href="/reference/A2C30743000"

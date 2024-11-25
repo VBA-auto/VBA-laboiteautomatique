@@ -64,7 +64,7 @@ const Page = () => {
                   Blogs
                 </p>
               </div>
-              <div className="mt-8">
+              <div className="mt-8 px-6 md:px-0">
                 <div className="flex justify-center gap-5">
                   <div className="slider-container">
                     <Slider {...settings}>
