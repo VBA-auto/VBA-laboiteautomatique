@@ -44,7 +44,7 @@ body {
 }
 .media-container {
   width: 100%;
-  height: 400px; /* Set a consistent height for videos and images */
+  height: 432px; /* Set a consistent height for videos and images */
   overflow: hidden;
 }
 iframe,
@@ -54,7 +54,7 @@ iframe,
   object-fit: cover;
 }
 iframe {
-  height: 400px;
+  height: 432px !important;
   border-radius: 6px;
 }
 @keyframes slideArrow {
@@ -499,7 +499,7 @@ option {
     display: none;
   }
   iframe {
-    height: 178px;
+    height: 220px !important;
     border-radius: 6px;
   }
   .homeButtonNew,
