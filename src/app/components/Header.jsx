@@ -56,9 +56,9 @@ const Header = () => {
                   <Image
                     width={100}
                     height={100}
-                    src="/images/logovba.webp"
+                    src="/images/VBAlogo.webp"
                     alt="Logo"
-                    className="w-[100px] h-[60px]"
+                    className="w-[90px] h-[60px]"
                     priority
                   />
                 </div>
