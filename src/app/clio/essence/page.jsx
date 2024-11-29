@@ -37,8 +37,12 @@ const SingleVehicleView = () => {
   return (
     <main>
       <Head>
-        <title></title>
-        <meta name="description" content="" />
+        <title>Calculateur Renault Clio 4 1.2 Essence</title>
+        <meta name="title" content="Calculateur Renault Clio 4 1.2 Essence" />
+        <meta
+          name="description"
+          content="Trouver ici votre calculateur pour boite automatique pour Renault Clio 4 1.2 Essence programmation incluse "
+        />
       </Head>
       <SubHeader />
       <Header />

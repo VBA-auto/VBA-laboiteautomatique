@@ -37,8 +37,12 @@ const SingleVehicleView = () => {
   return (
     <main>
       <Head>
-        <title></title>
-        <meta name="description" content="" />
+        <title>Calculateur Renault Captur 1.2 Essence</title>
+        <meta name="title" content="Calculateur Renault Captur 1.2 Essence" />
+        <meta
+          name="description"
+          content="Trouver ici votre calculateur pour boite automatique pour Renault Captur 1.2 Essence programmation incluse "
+        />
       </Head>
       <SubHeader />
       <Header />
@@ -83,7 +87,7 @@ const SingleVehicleView = () => {
                   <div className="flex justify-between items-center px-4 pt-4 pb-1">
                     <ReturnButton />
                     <div className="">
-                    <VehicleStockDisplay
+                      <VehicleStockDisplay
                         modelName="Renault Captur"
                         carType="essence"
                         onStockChange={handleStockChange}

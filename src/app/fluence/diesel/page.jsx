@@ -36,8 +36,12 @@ const SingleVehicleView = () => {
   return (
     <main>
       <Head>
-        <title></title>
-        <meta name="description" content="" />
+        <title>Calculateur Renault fluence 3 1.5 Diesel</title>
+        <meta name="title" content="Calculateur Renault fluence 3 1.5 Diesel" />
+        <meta
+          name="description"
+          content="Trouver ici votre calculateur pour boite automatique pour Renault fluence 1.5 Diesel programmation incluse"
+        />
       </Head>
       <SubHeader />
       <Header />

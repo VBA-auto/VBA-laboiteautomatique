@@ -46,7 +46,7 @@ const SingleSearchView = () => {
           </title>
           <meta
             name="description"
-            content="Commandez ici votre Calculateur pour boîte automatique EDC Renault référence 310F93913R, programmation incluse. Vérifiez disponibilité."
+            content="Commandez ici votre Calculateur pour boîte automatique EDC Renault référence 310F93913R, programmation incluse. Vérifiez disponibilité.."
           />
         </Head>
         <div className="container mx-auto">

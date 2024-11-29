@@ -37,8 +37,15 @@ const SingleVehicleView = () => {
   return (
     <main>
       <Head>
-        <title></title>
-        <meta name="description" content="" />
+        <title>Calculateur Renault clio RS 4 1.6 essence</title>
+        <meta
+          name="title"
+          content="Calculateur Renault clio RS 4 1.6 essence"
+        />
+        <meta
+          name="description"
+          content="Trouver ici votre calculateur pour boite automatique pour Renault clio RS 1.6 essence programmation incluse"
+        />
       </Head>
       <SubHeader />
       <Header />

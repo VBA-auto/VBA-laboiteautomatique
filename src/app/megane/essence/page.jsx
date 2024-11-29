@@ -37,8 +37,15 @@ const SingleVehicleView = () => {
   return (
     <main>
       <Head>
-        <title></title>
-        <meta name="description" content="" />
+        <title>Calculateur, boîte automatique Renault Megane Essence</title>
+        <meta
+          name="title"
+          content="Calculateur, boîte automatique Renault Megane Essence"
+        />
+        <meta
+          name="description"
+          content="Trouver ici votre calculateur pour boite automatique pour Renault megane 3 1.2 Essence programmation incluse "
+        />
       </Head>
       <SubHeader />
       <Header />
