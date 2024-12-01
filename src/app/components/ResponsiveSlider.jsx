@@ -71,7 +71,7 @@ const ResponsiveSlider = ({ images }) => {
         <div
           className="thumbnails flex overflow-hidden "
           style={{
-            width: `${thumbnailsToShow * 80}px`,
+            width: `${thumbnailsToShow * 0}px`,
           }}
         >
           <div
@@ -97,7 +97,7 @@ const ResponsiveSlider = ({ images }) => {
                     currentIndex === index
                       ? "1px solid #2C80EF"
                       : "1px solid #cfcfcf",
-                  padding: "5px",
+                  padding: "2px",
                   transition: "border 0.3s ease-in-out",
                 }}
               />

@@ -279,13 +279,13 @@ tr {
   border: 1px solid #f1b04e80;
 }
 .slick-dots li.slick-active button:before {
-  color: #2c80ef !important;
+  color: #3b82f6 !important;
   opacity: 1;
 }
 
 .slick-prev:before,
 .slick-next:before {
-  color: #2c80ef !important;
+  color: #3b82f6 !important;
   font-size: 20px !important;
   z-index: 99999;
   opacity: 1 !important;
