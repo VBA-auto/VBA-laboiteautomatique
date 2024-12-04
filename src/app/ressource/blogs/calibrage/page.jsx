@@ -41,10 +41,11 @@ const CalibragePage = () => {
               width={500}
               height={500}
               className="w-full mt-8 rounded-md md:h-[432px]"
-              src="/images/blog-2.webp"
+              src="/images/blog-calib.webp"
               alt="calibrage image from VBA"
             />
           </div>
+
           <div className="md:w-3/5 mx-auto mt-8 mb-16">
             <h1 className="text-[24px] font-semibold my-3">
               Exemple d’information calculateur
@@ -54,7 +55,22 @@ const CalibragePage = () => {
               relatives au calcualteur. <br /> Version du diag - du logiciel –
               numéro de calibrage ou étalonnage
             </p>
-
+            <div className=" mx-auto">
+              <Image
+                width={500}
+                height={500}
+                className="w-full mt-8 rounded-md md:h-[432px]"
+                src="/images/blog-2.webp"
+                alt="calibrage image from VBA"
+              />
+            </div>
+            <p className="mt-5">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam
+              porro quisquam, eum laborum perferendis reiciendis repellat ad
+              inventore dolores pariatur, dicta nulla debitis, incidunt
+              architecto! Nobis nostrum obcaecati quaerat, pariatur placeat
+              reiciendis consequatur, debitis amet et in nemo voluptatem? Sed?
+            </p>
             <div className="mt-[35px]">
               <Link href="/contact">
                 <button className="text-[#2C80EF] bg-transparent text-[15px] border border-[#2c80ef] py-2 px-3 rounded-md hover:bg-[#2C80EF] hover:text-white block">
