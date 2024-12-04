@@ -253,6 +253,12 @@
     "aide": "Problème calculateur et/ou embrayage"
   },
   {
+    "code": "DTC175278",
+    "description": "Embrayage 1 incohérence position",
+    "subTitle": "Clutch 1 wrong position",
+    "aide": "Problème embrayage + butée"
+  },
+  {
     "code": "DF379",
     "description": "Circuit moteur tambour selection de vitesse 2 dètection signal hors limite basse ou haute",
     "subTitle": "Default clutch motor 2",
