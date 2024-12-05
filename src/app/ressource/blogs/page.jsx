@@ -100,11 +100,11 @@ const Page = () => {
                           <div className="media-container">
                             <Link href="/ressource/blogs/calibrage">
                               <Image
-                                width={500}
+                                width={400}
                                 height={300}
-                                src="/images/blog-2.webp"
+                                src="/images/blog-calib.webp"
                                 alt="calculateur"
-                                className="rounded-md w-full h-full object-cover"
+                                className="rounded-md "
                               />
                             </Link>
                           </div>

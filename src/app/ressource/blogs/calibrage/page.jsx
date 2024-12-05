@@ -38,9 +38,9 @@ const CalibragePage = () => {
           </div>
           <div className="md:w-3/5 mx-auto">
             <Image
-              width={500}
-              height={500}
-              className="w-full mt-8 rounded-md md:h-[432px]"
+              width={300}
+              height={200}
+              className="w-full mt-8 rounded-md "
               src="/images/blog-calib.webp"
               alt="calibrage image from VBA"
             />
@@ -65,11 +65,16 @@ const CalibragePage = () => {
               />
             </div>
             <p className="mt-5">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam
-              porro quisquam, eum laborum perferendis reiciendis repellat ad
-              inventore dolores pariatur, dicta nulla debitis, incidunt
-              architecto! Nobis nostrum obcaecati quaerat, pariatur placeat
-              reiciendis consequatur, debitis amet et in nemo voluptatem? Sed?
+              Chaque calculateur possède un « soft » ou « programme ». Il y un
+              numéro fournisseur qui est souvent le même, un numéro de VDIAG, un
+              numéro de programme, un numéro fournisseur, numéro programme,
+              version logiciel et un numéro de calibration ou d’étalonnage. Ci
+              dessus, vous trouverez un exemple avec une valise « CLIP » de chez
+              Renault ainsi que Delphi. Vous trouverez également un exemple des
+              différents « software » pour Renault sur cette page :{" "}
+              <Link className="text-[#2C80EF]" href="/dc4_soft">
+                https://laboiteautomatique.com/dc4_soft
+              </Link>
             </p>
             <div className="mt-[35px]">
               <Link href="/contact">
