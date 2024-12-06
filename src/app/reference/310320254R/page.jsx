@@ -300,7 +300,7 @@ const SingleSearchView = () => {
                 <div className="text-center">
                   <Link
                     target="_blank"
-                    href="https://buy.stripe.com/5kA7w6e4gdNB9qMaGy"
+                    href="https://buy.stripe.com/eVacQq2ly8th6eA2am"
                   >
                     <button className="bg-[#2c80efcc] text-white text-[14px] px-2 py-2.5 rounded-md shadow-md">
                       Valider la commande

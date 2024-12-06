@@ -164,7 +164,7 @@ const RefrerenceCheckerComp = () => {
                   <span className="text-[15px]">310321306R</span>
                 </div>
               </Link>
-              <Link href="#">
+              <Link href="/reference/310320254R">
                 <div className="border px-2 text-center rounded-md border-blue-200 bg-white">
                   <span className="text-[15px]">310320254R</span>
                 </div>
