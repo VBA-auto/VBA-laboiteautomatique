@@ -618,6 +618,36 @@
     ]
   },
   {
+    "ref": "310320254R",
+    "stock": 2,
+    "title": "Calculateur Scénic 3 - Megane 3",
+    "metaTitle": "Calculateur boîte automatique EDC Renault référence 310320254R",
+    "metaDes": "Commandez ici votre Calculateur pour boîte automatique EDC Renault référence 310320254R, programmation incluse. Vérifiez disponibilité.",
+    "description": "Module de commande (calculateur) pour boite automatique EDC Scénic 3 - Mégane 3",
+    "compatibility": "Mégane 3 , Scénic 3 ",
+    "warranty": "12 mois neuf",
+    "brand": "Renault",
+    "ogPrice": 890,
+    "programationPrice": 230,
+    "transportPrice": 19,
+    "save": "08",
+    "finalPrice": 1139,
+    "coupon": "PROG2023",
+    "payLink": "https://buy.stripe.com/5kA7w6e4gdNB9qMaGy",
+    "vehicle": "Scénic 3 - Mégane 3",
+    "Info_complémentaire": "Moteur 1.5 Diesel",
+    "OE_number": "310320254R",
+    "images": [
+      "/images/cal-normal-0.webp",
+      "/images/cal-normal-1.webp",
+      "/images/cal-normal-2.webp",
+      "/images/cal-normal-3.webp",
+      "/images/cal-normal-4.webp",
+      "/images/cal-normal-5.webp",
+      "/images/cal-normal-6.webp"
+    ]
+  },
+  {
     "ref": "310320721R",
     "stock": 2,
     "title": "Calculateur Captur",

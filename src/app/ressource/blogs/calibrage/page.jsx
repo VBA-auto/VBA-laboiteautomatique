@@ -41,7 +41,7 @@ const CalibragePage = () => {
               width={300}
               height={200}
               className="w-full mt-8 rounded-md "
-              src="/images/blog-calib.webp"
+              src="/images/calib-blog.webp"
               alt="calibrage image from VBA"
             />
           </div>

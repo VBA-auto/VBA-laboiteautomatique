@@ -102,7 +102,7 @@ const Page = () => {
                               <Image
                                 width={400}
                                 height={300}
-                                src="/images/blog-calib.webp"
+                                src="/images/calib-blog.webp"
                                 alt="calculateur"
                                 className="rounded-md "
                               />
