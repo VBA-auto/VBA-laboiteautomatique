@@ -29,7 +29,7 @@ const RenaultClioRS = () => {
             <h1>Calculateur pour Renault Clio IV </h1>
           </div>
           <div className=" justify-center items-start gap-5 ">
-            <div className="md:w-[800px] md:min-h-[538px] mx-auto ">
+            <div className="xl:w-[800px] xl:min-h-[538px] mx-auto ">
               <div className="ms-auto  accent_color py-5 bg-white rounded-md  p-5">
                 <div className="flex justify-between relative">
                   <div className="absolute left-0">
@@ -76,7 +76,7 @@ const RenaultClioRS = () => {
                   </Link>
                   {"."}
                 </p>
-                <div className="grid md:grid-cols-8 grid-cols-3 md:mt-0 mt-3 items-center justify-center">
+                <div className="carsef grid md:grid-cols-8 grid-cols-3 md:mt-0 mt-3 items-center justify-center">
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
                     <Link href="/reference/310321517R ">310321517R </Link>
                   </p>

@@ -52,11 +52,11 @@ const SingleVehicleView = () => {
       <section className="produits ">
         <div className="">
           <div className="container mx-auto">
-            <div className="md:w-3/4 mx-auto md:min-h-[538px]">
-              <div className="md:flex  justify-center">
-                <div className="md:w-[400px] p-4  bg-white rounded-tl-[5px] ">
-                  <div className="md:flex items-center">
-                    <div className="md:w-[400px]   rounded-s-md ">
+            <div className="xl:w-3/4 mx-auto xl:min-h-[538px]">
+              <div className="xl:flex  justify-center">
+                <div className="xl:w-[400px] p-4  bg-white rounded-tl-[5px] ">
+                  <div className="xl:flex items-center">
+                    <div className="xl:w-[400px]   rounded-s-md ">
                       <p className="text-[14px] mt-1">
                         <Link href="/">
                           <span className="text-gray-400">Home </span>&gt;
@@ -86,8 +86,8 @@ const SingleVehicleView = () => {
                 </div>
 
                 {/* ///////////////////////////////// */}
-                <div className="md:w-[400px] bg-white rounded-tr-[5px] border-l-[1px] md:pb-0 pb-1">
-                  <div className="flex justify-between items-center px-4 pt-4 pb-1">
+                <div className="xl:w-[400px] bg-white rounded-tr-[5px] border-l-[1px] md:pb-0 pb-1">
+                  <div className="flex justify-between items-center px-4 pt-4 pb-1 singretur">
                     <ReturnButton />
                     <div className="">
                       <VehicleStockDisplay
@@ -147,7 +147,7 @@ const SingleVehicleView = () => {
 
               {/* ////////////////////////// */}
 
-              <div className="bg-white border rounded-b-[5px] md:w-[800px] mx-auto md:pt-0 pt-5">
+              <div className="bg-white border rounded-b-[5px] xl:w-[800px] mx-auto md:pt-0 pt-5">
                 <div className="md:flex md:px-5 px-4 py-1 justify-between">
                   <div className="md:w-1/2 flex items-center gap-5">
                     <div className="border py-2 bg-white rounded-md">

@@ -55,8 +55,8 @@ const Programmation = () => {
                   Programmation - Clonage
                 </p>
               </div>
-              <div className="md:flex md:gap-5 gap-5 mt-8 flexdirection">
-                <div className="md:w-[53%]">
+              <div className="xl:flex md:gap-5 gap-5 mt-8 flexdirection">
+                <div className="xl:w-[53%]">
                   <div className="accent_color p-3 rounded-md">
                     <div className="mb-2 text-lg">
                       <p className="text-justify text-[15px]">
@@ -174,8 +174,8 @@ const Programmation = () => {
                     </p>
                   </div>
                 </div>
-                <div className="md:w-[45%]">
-                  <div className="md:h-[396px]">
+                <div className="xl:w-[45%]">
+                  <div className="xl:h-[396px]">
                     <Image
                       width={500}
                       height={500}

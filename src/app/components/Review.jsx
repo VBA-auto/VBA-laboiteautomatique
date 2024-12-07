@@ -35,6 +35,15 @@ const ReviewSlider = () => {
     autoplaySpeed: 5000,
     responsive: [
       {
+        breakpoint: 1279,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
         breakpoint: 1024,
         settings: {
           slidesToShow: 2,

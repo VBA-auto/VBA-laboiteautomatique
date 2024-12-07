@@ -49,11 +49,11 @@ const Hero = () => {
       </div>
       <SubHeader />
       <Header />
-      <section className="md:pt-[70px] pt-[15px]">
+      <section className="xl:pt-[70px] pt-[15px] heroSection">
         <div className="container mx-auto">
           <div className="flex items-center justify-center">
             <div className="bannerMain flex md:gap-5">
-              <div className="lg:w-1/2">
+              <div className="xl:w-1/2 carssearch">
                 <div className="homeContentMain">
                   <h2 className="heroH1">Calculateur Renault (boite EDC)</h2>
                   <h2 className="text-[24px] font-semibold text-[#374151]">
@@ -63,12 +63,12 @@ const Hero = () => {
                     Garantie constructeur - satisfait ou remboursé
                   </p>
                 </div>
-                <div className="md:w-11/12 mt-5  mb-5 flex gap-2 px-2 md:px-0">
+                <div className="md:w-11/12 mt-5  mb-5 flex gap-2 px-2 md:px-0 searchFilte">
                   <div className="w-full">
                     <HomeSearchVehicle />
                   </div>
                 </div>
-                <div className="md:w-11/12">
+                <div className="md:w-11/12 carss">
                   <div className="grid grid-cols-2 gap-5 md:grid-cols-3 ">
                     {[
                       {

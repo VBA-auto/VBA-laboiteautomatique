@@ -31,7 +31,7 @@ const RenaultFluence = () => {
             </h1>
           </div>
           <div className=" justify-center items-start gap-5 ">
-            <div className="md:w-[800px] md:min-h-[538px] mx-auto ">
+            <div className="xl:w-[800px] xl:min-h-[538px] mx-auto ">
               <div className="ms-auto  accent_color py-5 bg-white rounded-md  p-5">
                 <div className="flex justify-between relative">
                   <div className="absolute left-0">
@@ -80,7 +80,7 @@ const RenaultFluence = () => {
                   </Link>
                   {"."}
                 </p>
-                <div className="grid md:grid-cols-8 grid-cols-3 md:mt-0 mt-3 items-center justify-start">
+                <div className="carsef grid md:grid-cols-8 grid-cols-3 md:mt-0 mt-3 items-center justify-start">
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
                     <Link href="/reference/310321488R">310321488R </Link>
                   </p>

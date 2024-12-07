@@ -6,4 +6,11 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   plugins: [require("daisyui")],
+  theme: {
+    extend: {
+      screens: {
+        "custom-xl": { max: "1279px" }, // Custom breakpoint
+      },
+    },
+  },
 };

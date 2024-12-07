@@ -69,7 +69,7 @@ const Produits = () => {
                 </div>
               </div>
 
-              <div className="productscards grid grid-cols-3 justify-center gap-6 mt-5">
+              <div className="productscards grid xl:grid-cols-3  justify-center gap-6 mt-5">
                 {/* Produits */}
                 <div className="lg:w-full rounded-md shadow-sm p-5 singleProductCard accent_color bg-white/50">
                   <div className="">

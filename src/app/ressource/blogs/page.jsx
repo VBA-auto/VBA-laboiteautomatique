@@ -128,7 +128,7 @@ const Page = () => {
                           <div className="media-container">
                             <div className="w-full h-full">
                               <iframe
-                                className="w-full md:h-[397px] rounded-md"
+                                className="w-full xl:h-[397px] rounded-md"
                                 src="https://www.youtube.com/embed/6X72SXZhZ44?si=50iEt0fuIk1i5HeS"
                                 title="YouTube video player"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

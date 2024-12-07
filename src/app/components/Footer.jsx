@@ -15,7 +15,7 @@ const Footer = () => {
       <hr className="border border-[#c2c2c230]" />
       <div className="container mx-auto">
         <footer className="myFooter bg-[#ffffff] border-[#c9c9c9] text-black py-4">
-          <div className="md:flex flex-wrap justify-between gap-4">
+          <div className="xl:flex flex-wrap justify-between gap-4">
             {/* Left Column */}
             <div>
               <Link href="https://maps.app.goo.gl/p7MQH6a2DYB64of59" passHref>

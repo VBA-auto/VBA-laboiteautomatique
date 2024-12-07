@@ -47,12 +47,13 @@ const Header = () => {
   return (
     <main className="sticky top-[-5px] w-full z-50">
       <hr className="border border-[#c2c2c230]" />
-      <section className="bg-white/90  headerSection ">
-        <div className="container mx-auto">
-          <nav className="">
+      <section className="bg-white/90 headerSection">
+        <div className="container mx-auto lg:px-4">
+          <nav>
             <div className="flex flex-wrap items-center justify-between mx-auto py-2 headerMainCont">
-              <Link rel="preload" href="/" className="">
-                <div className="w-[290px]">
+              {/* Logo */}
+              <Link rel="preload" href="/" className="flex items-center">
+                <div className="lg:w-[290px]">
                   <Image
                     width={100}
                     height={100}
@@ -64,10 +65,11 @@ const Header = () => {
                 </div>
               </Link>
 
+              {/* Mobile Hamburger Button */}
               <button
                 data-collapse-toggle="navbar-default"
                 type="button"
-                className="inline-flex items-center bg-[#2C80EF] p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden hover:bg-[#2C80EF] hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-white dark:hover:bg-[#2C80EF]dark:focus:ring-gray-600"
+                className="inline-flex items-center bg-[#2C80EF] p-2 w-10 h-10 justify-center text-sm text-white rounded-lg xl:hidden hover:bg-[#2C80EF] hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-200"
                 aria-controls="navbar-default"
                 aria-expanded="false"
                 onClick={handleNavbarToggle}
@@ -90,54 +92,41 @@ const Header = () => {
                 </svg>
               </button>
 
+              {/* Navbar Links */}
               <div
-                className={`w-full md:w-auto md:block ${
+                className={`w-full xl:w-auto ${
                   navbar ? "block" : "hidden"
-                } `}
+                } xl:block`}
                 id="navbar-default"
               >
-                <div className=" flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row  md:mt-0 md:border-0">
+                <div className="navItemss flex flex-col md:flex-row md:items-center md:space-x-4 p-4 md:p-0 mt-4 md:mt-0 border border-gray-100 rounded-lg md:border-0">
                   <Link
                     onClick={closeNavbar}
                     href="/"
-                    className="block text-[15px] py-1 text-black  hover:bg-[#d7d7d745] hover:text-[#2C80EF] rounded-md px-4"
+                    className="block text-[15px] py-1 text-black hover:bg-[#d7d7d745] hover:text-[#2C80EF] rounded-md px-4"
                   >
                     Home
                   </Link>
                   <Link
                     onClick={closeNavbar}
                     href="/produits"
-                    className="block text-[15px] py-1 text-black  hover:bg-[#d7d7d745] hover:text-[#2C80EF] rounded-md px-4"
+                    className="block text-[15px] py-1 text-black hover:bg-[#d7d7d745] hover:text-[#2C80EF] rounded-md px-4"
                   >
                     Produits
                   </Link>
 
+                  {/* Prestation Dropdown */}
                   <div ref={dropdownRef} className="relative group">
                     <button
-                      style={{
-                        display: "flex",
-
-                        alignItems: "center",
-                      }}
                       onClick={handlePrestationToggle}
-                      className="subMenuHeader text-[15px] block py-1 text-black hover:text-[#2C80EF] hover:bg-[#d7d7d745] rounded-md px-4"
+                      className="subMenuHeader text-[15px]  py-1 text-black hover:text-[#2C80EF] hover:bg-[#d7d7d745] rounded-md px-4 flex items-center"
                     >
-                      Prestation{" "}
-                      <span
-                        style={{
-                          display: "inline-block",
-
-                          marginLeft: "3px",
-                        }}
-                      >
-                        <FaAngleDown />
-                      </span>
+                      Prestation <FaAngleDown className="ml-2" />
                     </button>
 
                     {prestationDropdown && (
                       <div className="navSubParent absolute mt-2 border bg-[#fff] rounded-md shadow-lg z-40">
                         <div className="subHeadList">
-                          {" "}
                           <Link
                             onClick={closeNavbar}
                             href="/prestation/programmation"
@@ -168,36 +157,22 @@ const Header = () => {
                     )}
                   </div>
 
+                  {/* Ressource Dropdown */}
                   <div ref={dropdownRefResource} className="relative group">
                     <button
-                      style={{
-                        display: "flex",
-
-                        alignItems: "center",
-                      }}
                       onClick={handleResourceToggle}
-                      className="subMenuHeader text-[15px] block py-1 text-black hover:text-[#2C80EF] hover:bg-[#d7d7d745] rounded-md px-4"
+                      className="subMenuHeader text-[15px]  py-1 text-black hover:text-[#2C80EF] hover:bg-[#d7d7d745] rounded-md px-4 flex items-center"
                     >
-                      Ressource
-                      <span
-                        style={{
-                          display: "inline-block",
-
-                          marginLeft: "3px",
-                        }}
-                      >
-                        <FaAngleDown />
-                      </span>
+                      Ressource <FaAngleDown className="ml-2" />
                     </button>
 
                     {resourceDropdown && (
-                      <div className="navSubParent w-max absolute mt-2  border bg-[#fff] rounded-md shadow-lg z-10">
+                      <div className="navSubParent absolute mt-2 border bg-[#fff] rounded-md shadow-lg z-10">
                         <div className="subHeadList">
-                          {" "}
                           <Link
                             onClick={closeNavbar}
                             href="/ressource/aide-en-ligne"
-                            className=" text-[15px] block p-4 py-2 font-normal text-[#2C80EF]"
+                            className="text-[15px] block p-4 py-2 font-normal text-[#2C80EF]"
                           >
                             Aide en ligne
                           </Link>
@@ -206,7 +181,7 @@ const Header = () => {
                           <Link
                             onClick={closeNavbar}
                             href="/ressource/faq"
-                            className=" text-[15px] block p-4 py-2 font-normal text-[#2C80EF]"
+                            className="text-[15px] block p-4 py-2 font-normal text-[#2C80EF]"
                           >
                             FAQ
                           </Link>
@@ -215,7 +190,7 @@ const Header = () => {
                           <Link
                             onClick={closeNavbar}
                             href="/ressource/blogs"
-                            className=" text-[15px] block p-4 py-2 font-normal text-[#2C80EF]"
+                            className="text-[15px] block p-4 py-2 font-normal text-[#2C80EF]"
                           >
                             Tuto - Blog
                           </Link>
@@ -234,15 +209,16 @@ const Header = () => {
                 </div>
               </div>
 
-              <div className="flex gap-5 homeButtonsParent headButton  justify-end">
-                <div style={{ width: "140px" }} className="homeButtons">
+              {/* Buttons */}
+              <div className="flex gap-3 md:gap-5 headButton">
+                <div className="homeButtons">
                   <Link href="/ressource/aide-en-ligne">
                     <button className="buttonCheck">
                       <span>Aide en ligne</span>
                     </button>
                   </Link>
                 </div>
-                <div style={{ width: "140px" }} className="homeButtons">
+                <div className="homeButtons">
                   <Link href="/selectionnez-votre-vehicule">
                     <button className="buttonCheckBlue">
                       <span>Disponibilité</span>

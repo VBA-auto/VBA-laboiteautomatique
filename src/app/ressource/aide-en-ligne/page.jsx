@@ -37,7 +37,7 @@ const MiseEnLigne = () => {
                   </p>
                 </div>
                 <div className="md:flex md:gap-10 gap-5 mt-8 flexdirection">
-                  <div className="md:w-1/2">
+                  <div className="xl:w-1/2">
                     <div className="accent_color p-3 rounded-md">
                       <p className="mb-6 text-justify text-[15px]">
                         Les boites automatiques (modèles DC4 et 6DCT250)
@@ -118,7 +118,7 @@ const MiseEnLigne = () => {
                       </p>
                     </div>
                   </div>
-                  <div className="md:w-1/2">
+                  <div className="xl:w-1/2">
                     <AideenLigneSearch />
                   </div>
                 </div>

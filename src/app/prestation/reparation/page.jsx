@@ -37,7 +37,7 @@ const Programmation = () => {
                 </p>
               </div>
               <div className="md:flex md:gap-5 gap-5 mt-8 flexdirection">
-                <div className="md:w-2/3">
+                <div className="xl:w-2/3">
                   <div className="accent_color p-3 rounded-md">
                     <div className="mb-2 text-lg">
                       <p className="text-justify text-[15px]">
@@ -95,12 +95,12 @@ const Programmation = () => {
                     </Link>
                   </div>
                 </div>
-                <div className="md:w-1/3 ">
+                <div className="xl:w-1/3 ">
                   <div className="">
                     <Image
                       width={365}
                       height={200}
-                      className="rounded-md mx-auto w-full md:h-[287px]"
+                      className="rounded-md mx-auto w-full xl:h-[287px] md:h-[300px]"
                       src="/images/repa.webp"
                       alt=""
                     />
