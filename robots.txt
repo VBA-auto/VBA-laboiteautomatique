@@ -1,0 +1,26 @@
+# Allow all crawlers
+User-agent: *
+
+# Block unnecessary pages or directories
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /api/
+Disallow: /temp/
+Disallow: /cart/
+Disallow: /user/settings/
+Disallow: /test/
+Disallow: /login/
+Disallow: /reference/
+Disallow: /search/
+Disallow: /*?*  # Block all URLs with query parameters (e.g., filters)
+
+# Allow these important sections explicitly
+Allow: /
+Allow: /produits/
+Allow: /ressource/
+Allow: /prestation/
+Allow: /contact/
+Allow: /selectionnez-votre-vehicule/
+
+# Sitemap location
+Sitemap: https://laboiteautomatique.com/sitemap.xml

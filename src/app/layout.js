@@ -5,6 +5,7 @@ import GoogleAnalytics from "./components/GoogleAnalytics";
 import GoogleAnalytics2 from "./components/GoogleAnalytics2";
 import GoogleTag from "./components/GoogleTag";
 import { Poppins } from "next/font/google"; // Importing Poppins
+import ChatWidget from "./components/botLogic/ChatWidget";
 
 export const metadata = {
   title: "VBA Calculateur Renault",
@@ -35,6 +36,7 @@ const RootLayout = ({ children }) => {
       <body className={`${poppins.variable} antialiased`}>
         {children}
         <GoogleTag />
+        {/* <ChatWidget /> */}
         <noscript
           dangerouslySetInnerHTML={{
             __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PVVG6XNH"
