@@ -248,20 +248,18 @@ const SingleVehicleView = () => {
                       ""
                     )}
 
-                    {!showCoupon && ( // Add this condition to hide the button when the coupon is shown
+                    {!showCoupon && (
                       <button
                         onClick={async () => {
                           setShowSpinner(true);
                           await new Promise((resolve) =>
                             setTimeout(resolve, 1000)
-                          ); // Show spinner for 1 second
+                          );
                           setShowSpinner(false);
-                          setShowCoupon(true); // Show coupon after spinner
+                          setShowCoupon(true);
                         }}
                         className="text-blue-400 hover:text-blue-200  rounded-sm transition-transform duration-300 mt-4 mx-auto block text-[15px]"
-                      >
-                        Code de réduction
-                      </button>
+                      ></button>
                     )}
 
                     {showSpinner && (
@@ -280,7 +278,7 @@ const SingleVehicleView = () => {
                               onClick={() => {
                                 navigator.clipboard.writeText(PROG2023);
                                 setCopied(true);
-                                setTimeout(() => setCopied(false), 1500); // Reset after 1.5 seconds
+                                setTimeout(() => setCopied(false), 1500);
                               }}
                               className=" text-[#2C80EF] text-[15px] bg-gray-100 p-1 rounded-md"
                             >
@@ -323,8 +321,8 @@ const SingleVehicleView = () => {
                       target="_blank"
                       href="https://buy.stripe.com/3cs5nY6BOfVJ5aw29B"
                     >
-                      <button className="bg-[#2c80efcc] text-white text-[14px] px-2 py-2.5 rounded-md shadow-md">
-                        Valider la commande
+                      <button className="bg-[#2c80efcc] text-white text-[14px] px-12 py-2.5 rounded-md shadow-md">
+                        Valider
                       </button>
                     </Link>
                   </div>

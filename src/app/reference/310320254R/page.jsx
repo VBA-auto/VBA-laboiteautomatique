@@ -238,9 +238,7 @@ const SingleSearchView = () => {
                         setShowCoupon(true); // Show coupon after spinner
                       }}
                       className="text-blue-400 hover:text-blue-200  rounded-sm transition-transform duration-300 mt-4 mx-auto block text-[15px]"
-                    >
-                      Code de réduction
-                    </button>
+                    ></button>
                   )}
 
                   {showSpinner && (
@@ -302,8 +300,8 @@ const SingleSearchView = () => {
                     target="_blank"
                     href="https://buy.stripe.com/eVacQq2ly8th6eA2am"
                   >
-                    <button className="bg-[#2c80efcc] text-white text-[14px] px-2 py-2.5 rounded-md shadow-md">
-                      Valider la commande
+                    <button className="bg-[#2c80efcc] text-white text-[14px] px-12 py-2.5 rounded-md shadow-md">
+                      Valider
                     </button>
                   </Link>
                 </div>

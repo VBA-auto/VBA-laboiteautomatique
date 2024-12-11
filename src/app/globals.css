@@ -283,8 +283,17 @@ tr {
   opacity: 1;
 }
 
-.slick-prev:before,
+.slick-prev:before {
+  content: "<" !important;
+  font-family: poppins !important ;
+  font-size: 20px !important;
+  color: #3b82f6 !important;
+  z-index: 99999;
+  opacity: 1 !important;
+}
 .slick-next:before {
+  content: ">" !important;
+  font-family: poppins !important ;
   color: #3b82f6 !important;
   font-size: 20px !important;
   z-index: 99999;
