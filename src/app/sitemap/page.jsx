@@ -11,15 +11,15 @@ const Sitemap = () => {
       links: [
         { href: "/", label: "Home" },
         { href: "/contact", label: "Contact" },
-        { href: "/aide-en-ligne", label: "Aide en Ligne" },
-        { href: "/disponibilite", label: "Disponibilité" },
+        { href: "/ressource/aide-en-ligne", label: "Aide en Ligne" },
+        { href: "/selectionnez-votre-vehicule", label: "Disponibilité" },
       ],
     },
     {
       title: "Produits & Prestation",
       links: [
         { href: "/produits", label: "Produits" },
-        { href: "/prestation/programming", label: "Programmation" },
+        { href: "/prestation/programmation", label: "Programmation" },
         { href: "/prestation/installation", label: "Installation" },
         { href: "/prestation/reparation", label: "Réparation" },
       ],
@@ -29,7 +29,7 @@ const Sitemap = () => {
       links: [
         { href: "/ressource/aide-en-ligne", label: "Aide en Ligne" },
         { href: "/ressource/faq", label: "FAQ" },
-        { href: "/ressource/tuto-blog", label: "Tuto-Blog" },
+        { href: "/ressource/blogs", label: "Tuto-Blog" },
       ],
     },
   ];
@@ -37,6 +37,7 @@ const Sitemap = () => {
   const carModels = [
     {
       label: "Captur",
+      parentLink: "/captur",
       children: [
         { href: "/captur/essence", label: "Essence" },
         { href: "/captur/diesel", label: "Diesel" },
@@ -44,38 +45,34 @@ const Sitemap = () => {
     },
     {
       label: "Clio 4",
+      parentLink: "/clio",
       children: [
-        { href: "/clio4/essence", label: "Essence" },
-        { href: "/clio4/diesel", label: "Diesel" },
+        { href: "/clio/essence", label: "Essence" },
+        { href: "/clio/diesel", label: "Diesel" },
       ],
     },
     {
-      label: "Megane",
+      label: "Mégane",
+      parentLink: "/megane",
       children: [
         { href: "/megane/essence", label: "Essence" },
         { href: "/megane/diesel", label: "Diesel" },
       ],
     },
     {
-      label: "Scenic",
-      children: [
-        { href: "Fluence", label: "Essence" },
-        { href: "Fluence", label: "Diesel" },
-      ],
+      label: "Scénic",
+      parentLink: "/scenic",
+      children: [{ href: "/scenic/diesel", label: "Diesel" }],
     },
     {
       label: "Fluence",
-      children: [
-        { href: "Fluence", label: "Essence" },
-        { href: "Fluence", label: "Diesel" },
-      ],
+      parentLink: "/fluence",
+      children: [{ href: "/fluence/diesel", label: "Diesel" }],
     },
     {
       label: "Clio RS",
-      children: [
-        { href: "Fluence", label: "Essence" },
-        { href: "Fluence", label: "Diesel" },
-      ],
+      parentLink: "/clio-rs",
+      children: [{ href: "/clio-rs/essence", label: "Essence" }],
     },
   ];
 
@@ -91,7 +88,7 @@ const Sitemap = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             {sections.map((section, sectionIndex) => (
               <div key={sectionIndex} className="space-y-4">
-                <h3 className="text-lg font-semibold text-gray-700 border-b border-gray-300 pb-2">
+                <h3 className="text-normal font-semibold text-gray-700 border-b border-gray-300 pb-2">
                   {section.title}
                 </h3>
                 <ul className="space-y-2">
@@ -99,7 +96,7 @@ const Sitemap = () => {
                     <li key={linkIndex}>
                       <Link
                         href={link.href}
-                        className="text-blue-600 hover:text-blue-800 hover:underline"
+                        className="text-blue-600 hover:text-blue-800 hover:underline text-[15px]"
                       >
                         {link.label}
                       </Link>
@@ -117,9 +114,16 @@ const Sitemap = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {carModels.map((model, index) => (
               <div key={index} className="">
+                {/* Parent Link */}
                 <h4 className="text-[16px] font-medium text-gray-800 mb-2">
-                  {model.label}
+                  <Link
+                    href={model.parentLink || "#"} // Default to "#" if no parentLink is provided
+                    className="text-blue-600 hover:text-blue-800 hover:underline"
+                  >
+                    {model.label}
+                  </Link>
                 </h4>
+                {/* Child Links */}
                 <ul className="space-y-2">
                   {model.children.map((child, childIndex) => (
                     <li key={childIndex}>

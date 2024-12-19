@@ -88,13 +88,13 @@ const Hero = () => {
                         href: "/megane",
                         src: "/images/calculateur_DC4_renault-megane.webp",
                         alt: "Renault Megane",
-                        label: "Renault Megane",
+                        label: "Renault Mégane",
                       },
                       {
                         href: "/scenic",
                         src: "/images/calculateur_DC4_renault_Senic.webp",
                         alt: "Renault Scenic",
-                        label: "Renault Scenic",
+                        label: "Renault Scénic",
                       },
                       {
                         href: "/fluence",
