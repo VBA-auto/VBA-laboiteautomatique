@@ -50,6 +50,11 @@ export async function GET() {
       priority: 0.8,
     },
     {
+      loc: `${baseUrl}/sitemap`,
+      lastmod: new Date().toISOString(),
+      priority: 0.8,
+    },
+    {
       loc: `${baseUrl}/contact`,
       lastmod: new Date().toISOString(),
       priority: 0.8,
