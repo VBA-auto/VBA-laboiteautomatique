@@ -69,13 +69,13 @@ const Header = () => {
               <button
                 data-collapse-toggle="navbar-default"
                 type="button"
-                className="inline-flex items-center bg-[#2C80EF] p-2 w-10 h-10 justify-center text-sm text-white rounded-lg xl:hidden hover:bg-[#2C80EF] hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-200"
+                className="inline-flex items-center  p-2  justify-center text-sm  rounded-lg xl:hidden "
                 aria-controls="navbar-default"
                 aria-expanded="false"
                 onClick={handleNavbarToggle}
               >
                 <span className="sr-only">Open main menu</span>
-                <svg
+                {/* <svg
                   className="w-5 h-5"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
@@ -89,7 +89,8 @@ const Header = () => {
                     strokeWidth="2"
                     d="M4 6h16M4 12h16m-7 6h7"
                   ></path>
-                </svg>
+                </svg> */}
+                <p className="border px-2 rounded-md text-[#2C80EF]">Menu</p>
               </button>
 
               {/* Navbar Links */}

@@ -290,6 +290,36 @@
     ]
   },
   {
+    "ref": "310320728R",
+    "stock": 2,
+    "title": "Calculateur Renault Clio RS",
+    "metaTitle": "Calculateur boîte automatique EDC Renault référence 310320728R",
+    "metaDes": "Commandez ici votre Calculateur pour boîte automatique EDC Renault référence 310320728R, programmation incluse. Vérifiez disponibilité.",
+    "description": "Module de commande (calculateur) pour boite automatique EDC Renault Clio RS",
+    "compatibility": "Clio RS",
+    "warranty": "12 mois neuf",
+    "brand": "Renault",
+    "ogPrice": 890,
+    "programationPrice": 230,
+    "transportPrice": 19,
+    "save": "08",
+    "finalPrice": 1139,
+    "coupon": "PROG2023",
+    "payLink": "https://buy.stripe.com/00gaIi0dqcJxfPaaGo",
+    "vehicle": "Clio RS 1.6 Essence",
+    "Info_complémentaire": "pas de données",
+    "OE_number": "310320728R",
+    "images": [
+      "/images/cal-normal-0.webp",
+      "/images/cal-normal-1.webp",
+      "/images/cal-normal-2.webp",
+      "/images/cal-normal-3.webp",
+      "/images/cal-normal-4.webp",
+      "/images/cal-normal-5.webp",
+      "/images/cal-normal-6.webp"
+    ]
+  },
+  {
     "ref": "310321488R",
     "stock": 2,
     "title": "Calculateur Clio 4 - Captur",

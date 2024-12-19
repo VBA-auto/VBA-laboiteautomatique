@@ -63,7 +63,7 @@ const Hero = () => {
                     Garantie constructeur - satisfait ou remboursé
                   </p>
                 </div>
-                <div className="md:w-11/12 mt-5  mb-5 flex gap-2 px-2 md:px-0 searchFilte">
+                <div className="md:w-11/12 mt-5  mb-5 flex gap-2  md:px-0 searchFilte">
                   <div className="w-full">
                     <HomeSearchVehicle />
                   </div>

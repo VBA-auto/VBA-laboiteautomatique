@@ -81,13 +81,7 @@ const RenaultClioRS = () => {
                     <Link href="/reference/310321517R ">310321517R </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    310320718R
-                  </p>
-                  <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310320553R">310320553R </Link>
-                  </p>
-                  <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310321488R">310321488R </Link>
+                    <Link href="/reference/310320728R ">310320728R </Link>
                   </p>
                 </div>
                 <div className="md:flex items-center justify-between mt-5">

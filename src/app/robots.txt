@@ -10,7 +10,6 @@ Disallow: /cart/
 Disallow: /user/settings/
 Disallow: /test/
 Disallow: /login/
-Disallow: /reference/
 Disallow: /search/
 Disallow: /*?*  # Block all URLs with query parameters (e.g., filters)
 

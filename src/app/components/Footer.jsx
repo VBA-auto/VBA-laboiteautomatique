@@ -186,11 +186,15 @@ const Footer = () => {
                   </Link>
                 </div>
               </div>
-              <h1 className="pt-5 text-[15px]">
+              <div className="pt-5 text-[15px]">
                 <Link href="/mentions-legales" className="hover:text-[#2C80EF]">
                   Mentions Légales
                 </Link>
-              </h1>
+                <span> | </span>
+                <Link href="/sitemap" className="hover:text-[#2C80EF]">
+                  Sitemap
+                </Link>
+              </div>
               <span className="hidden">
                 Développé par{" "}
                 <Link
