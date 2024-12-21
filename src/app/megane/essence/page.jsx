@@ -169,10 +169,12 @@ const SingleVehicleView = () => {
                       {stock === 0 ? (
                         <>
                           <div className="md:flex gap-5 mt-3 md:mt-0 items-center">
-                            <FaArrowRight className="text-[14px] text-[#2C80EF] animate-slide-arrow" />
-                            <p className="text-[15px] text-[#5BB853]">
-                              Bientôt disponible
-                            </p>
+                            <div className="flex gap-3 items-center mb-3 md:mb-0">
+                              <FaArrowRight className="text-[14px] text-[#2C80EF] animate-slide-arrow" />
+                              <p className="text-[15px] text-[#5BB853]">
+                                Bientôt disponible
+                              </p>
+                            </div>
                             <Link href="/contact">
                               {" "}
                               <button className="text-[#2C80EF] bg-transparent text-[15px] border border-[#2c80ef] py-2 px-2 rounded-md hover:bg-[#2C80EF] hover:text-white block mx-auto">
