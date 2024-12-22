@@ -305,9 +305,7 @@ const SingleSearchView = () => {
                     target="_blank"
                     href="https://buy.stripe.com/00g17I5xK10P32o15L"
                   >
-                    <button className="bg-[#2c80efcc] text-white text-[14px] px-12 py-2.5 rounded-md shadow-md">
-                      Valider
-                    </button>
+                    <button className="orderButton">Valider</button>
                   </Link>
                 </div>
               </div>

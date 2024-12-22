@@ -68,7 +68,14 @@ iframe {
     transform: translateX(0);
   }
 }
-
+.orderButton {
+  padding: 9px 48px;
+  background-color: #2c80ef;
+  border-radius: 6px;
+  font-size: 15px;
+  box-shadow: 2p 2px 2px #cfcfcf;
+  color: #fff;
+}
 .animate-slide-arrow {
   animation: slideArrow 1s ease-in-out infinite; /* Set animation duration and loop */
 }

@@ -225,22 +225,25 @@ const SingleVehicleView = () => {
                     </div>
                   </div>
                   <hr />
+
                   <div className="mt-3">
-                    <div className="flex justify-between mb-2">
-                      <p className="text-gray-600 text-[15px]">Prix </p>
-                      <p className="text-[#2C80EF] text-[15px]"> 890 €</p>
+                    <div className="flex items-center justify-between mb-2">
+                      <p className="text-gray-600 text-[15px]">Prix</p>
+                      <hr className="flex-grow mx-3 border-t border-gray-100" />
+                      <p className="text-[#2C80EF] text-[15px]">890.00 €</p>
                     </div>
-                    <div className="flex justify-between mb-2">
-                      <p className="text-gray-600 text-[15px]">
-                        Programmation{" "}
-                      </p>
-                      <p className="text-[#2C80EF] text-[15px]">230 €</p>
+                    <div className="flex items-center justify-between mb-2">
+                      <p className="text-gray-600 text-[15px]">Programmation</p>
+                      <hr className="flex-grow mx-3 border-t border-gray-100" />
+                      <p className="text-[#2C80EF] text-[15px]">230.00 €</p>
                     </div>
-                    <div className="flex justify-between mb-2">
-                      <p className="text-gray-600 text-[15px]">Transport </p>
-                      <p className="text-[#2C80EF] text-[15px]">19 €</p>
+                    <div className="flex items-center justify-between mb-2">
+                      <p className="text-gray-600 text-[15px]">Transport</p>
+                      <hr className="flex-grow mx-3 border-t border-gray-100" />
+                      <p className="text-[#2C80EF] text-[15px]">19.00 €</p>
                     </div>
                   </div>
+
                   <div className="mt-5">
                     {showCoupon ? (
                       <p className="font-[500] text-normal text-center">
@@ -301,12 +304,12 @@ const SingleVehicleView = () => {
                   <div className="mt-5">
                     <hr />
                     <div className="flex justify-between my-2 ">
-                      <p className="text-gray-600 text-[15px]">Total </p>
+                      <p className="text-gray-600 text-[15px]">Total</p>
                       {showCoupon ? (
                         <>
                           <div className="flex items-center gap-2">
                             <p className="text-gray-300 text-[15px] line-through">
-                              1139 €
+                              1139.00 €
                             </p>
                             <p className="text-[#2C80EF] text-[17px] bg-gray-50 px-2 rounded-md">
                               {1139 - 50} €
@@ -314,7 +317,7 @@ const SingleVehicleView = () => {
                           </div>
                         </>
                       ) : (
-                        <p className="text-[#2C80EF] text-[15px]">1139 €</p>
+                        <p className="text-[#2C80EF] text-[15px]">1139.00 €</p>
                       )}
                     </div>
                   </div>
@@ -323,9 +326,7 @@ const SingleVehicleView = () => {
                       target="_blank"
                       href="https://buy.stripe.com/3cs5nY6BOfVJ5aw29B"
                     >
-                      <button className="bg-[#2c80efcc] text-white text-[14px] px-12 py-2.5 rounded-md shadow-md">
-                        Valider
-                      </button>
+                      <button className="orderButton">Valider</button>
                     </Link>
                   </div>
                 </div>
