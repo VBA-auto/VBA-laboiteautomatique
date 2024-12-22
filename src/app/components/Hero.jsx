@@ -63,7 +63,7 @@ const Hero = () => {
                     Garantie constructeur - satisfait ou remboursé
                   </p>
                 </div>
-                <div className="md:w-11/12 mt-5  mb-5 flex gap-2  md:px-0 searchFilte">
+                <div className="md:w-11/12 md:mt-5 mt-0  mb-5 flex gap-2  md:px-0 searchFilte">
                   <div className="w-full">
                     <HomeSearchVehicle />
                   </div>
@@ -130,7 +130,7 @@ const Hero = () => {
                   </div>
                 </div>
 
-                <div className="homeButtonNew  mt-[25px] items-center hidden">
+                {/* <div className="homeButtonNew  mt-[25px] items-center ">
                   <div className="flex items-center">
                     <div className="homeButtons">
                       <Link href="/produits">
@@ -152,11 +152,27 @@ const Hero = () => {
                       </button>
                     </Link>
                   </div>
-                </div>
+                </div> */}
               </div>
 
               <div className="viddeo lg:w-1/2">
                 <div className="homeContent">
+                  <div className="flex gap-5 justify-between mb-5">
+                    <div className="homeButtons">
+                      <Link href="/ressource/aide-en-ligne">
+                        <button className="buttonCheckRedHidden">
+                          <span>Aide en ligne</span>
+                        </button>
+                      </Link>
+                    </div>
+                    <div className="homeButtons">
+                      <Link href="/selectionnez-votre-vehicule">
+                        <button className="buttonCheckBlueHidden">
+                          <span>Disponibilité</span>
+                        </button>
+                      </Link>
+                    </div>
+                  </div>
                   <div className="mb-5">
                     <h2 className="text-[23px] text-[#374151] font-semibold">
                       Calculateur Renault (boite EDC)
@@ -167,22 +183,6 @@ const Hero = () => {
                     <p className="text-[16px] text-[#374151] mt-1">
                       Garantie constructeur - satisfait ou remboursé
                     </p>
-                  </div>
-                  <div className="flex gap-5 justify-center ">
-                    <div style={{ width: "150px" }} className="homeButtons">
-                      <Link href="/ressource/aide-en-ligne">
-                        <button className="buttonCheck">
-                          <span>Aide en ligne</span>
-                        </button>
-                      </Link>
-                    </div>
-                    <div style={{ width: "150px" }} className="homeButtons">
-                      <Link href="/selectionnez-votre-vehicule">
-                        <button className="buttonCheckBlue">
-                          <span>Disponibilité</span>
-                        </button>
-                      </Link>
-                    </div>
                   </div>
                 </div>
                 <div className="relative">
@@ -208,7 +208,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <div className="my-[60px] md:px-0 px-6">
+        <div className="md:my-[60px] my-[30px] md:px-0 px-6">
           <Review />
         </div>
       </section>
