@@ -15,12 +15,10 @@ import { FaArrowRight } from "react-icons/fa";
 import NewVehicleRef from "@/components/NewVehicleRef";
 
 const imagesSlide = [
-  "/images/plat-1.webp",
-  "/images/plat-2.webp",
-  "/images/plat-3.webp",
-  "/images/plat-4.webp",
-  "/images/plat-5.webp",
-  "/images/plat-6.webp",
+  "/images/strie-1.webp",
+  "/images/strie-2.webp",
+  "/images/strie-3.webp",
+  "/images/strie-4.webp",
 ];
 
 const SingleSearchView = () => {
