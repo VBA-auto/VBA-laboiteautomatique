@@ -229,18 +229,24 @@ const SingleVehicleView = () => {
                   <div className="mt-3">
                     <div className="flex items-center justify-between mb-2">
                       <p className="text-gray-600 text-[15px]">Prix</p>
-                      <hr className="flex-grow mx-3 border-t border-gray-100" />
-                      <p className="text-[#2C80EF] text-[15px]">890.00 €</p>
+                      <hr className="flex-grow mx-2 border-t border-gray-100" />
+                      <p className="text-[#2C80EF] text-[16px] prices">
+                        890.00 €
+                      </p>
                     </div>
                     <div className="flex items-center justify-between mb-2">
                       <p className="text-gray-600 text-[15px]">Programmation</p>
-                      <hr className="flex-grow mx-3 border-t border-gray-100" />
-                      <p className="text-[#2C80EF] text-[15px]">230.00 €</p>
+                      <hr className="flex-grow mx-2 border-t border-gray-100" />
+                      <p className="text-[#2C80EF] text-[16px] prices">
+                        230.00 €
+                      </p>
                     </div>
                     <div className="flex items-center justify-between mb-2">
                       <p className="text-gray-600 text-[15px]">Transport</p>
-                      <hr className="flex-grow mx-3 border-t border-gray-100" />
-                      <p className="text-[#2C80EF] text-[15px]">19.00 €</p>
+                      <hr className="flex-grow mx-2 border-t border-gray-100" />
+                      <p className="text-[#2C80EF] text-[16px] prices">
+                        19.00 €
+                      </p>
                     </div>
                   </div>
 
@@ -308,7 +314,7 @@ const SingleVehicleView = () => {
                       {showCoupon ? (
                         <>
                           <div className="flex items-center gap-2">
-                            <p className="text-gray-300 text-[15px] line-through">
+                            <p className="text-gray-300 text-[16px] prices line-through">
                               1139.00 €
                             </p>
                             <p className="text-[#2C80EF] text-[17px] bg-gray-50 px-2 rounded-md">
@@ -317,7 +323,9 @@ const SingleVehicleView = () => {
                           </div>
                         </>
                       ) : (
-                        <p className="text-[#2C80EF] text-[15px]">1139.00 €</p>
+                        <p className="text-[#2C80EF] text-[16px] prices">
+                          1139.00 €
+                        </p>
                       )}
                     </div>
                   </div>
