@@ -101,7 +101,7 @@ const SingleSearchView = () => {
                         Captur
                       </button>
                       <button className="bg-gray-100  px-2 text-[14px] text-black mt-1 rounded">
-                        Clio 4 (Essence - Diesel) - Megane 3
+                        Clio 4
                       </button>
                     </div>
                   </div>
