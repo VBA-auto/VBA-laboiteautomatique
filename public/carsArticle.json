@@ -1,0 +1,203 @@
+[
+  {
+    "id": 1,
+    "image": "/images/audi.jpeg",
+    "title": "audi",
+    "excerpt": "On retrouve sur Audi différents types de BVA",
+    "paragraph": "<div> <p>On retrouve sur <b>Audi</b> différents types de BVA : des boîtes <b>DSG (S-Tronic)</b> mais aussi des boîtes <b>CVT (Multitronic)</b>, ainsi que les <b>Tiptronic</b>. Les <b>DSG</b> sont des boîtes à double embrayage, plutôt robustes et fiables. Les <b>Tiptronic</b> sont des boîtes longitudinales à convertisseur de couple et les <b>Multitronic</b> sont à variation continue (système CVT). Attention, les huiles à utiliser varient avec la technologie de la boîte.</p> <p class='my-5'>On peut trouver sur les véhicules Audi des boîtes à convertisseur de couple (de type ZF). Certaines des boîtes automatiques Audi sont à double embrayage telles que la <b>DSG6</b>, <b>DSG7</b> ou encore la <b>0B5 (DL501)</b>. Il est important de remplacer l'huile entre <b>60000 et 80000 km</b> afin de lubrifier la mécatronique mais aussi la partie mécanique. Certains modèles disposent de cartouche ou crépine externe qui doit elle aussi être changée. Une opération électronique doit être réalisée après chaque vidange.</p> <div class='container flex justify-center flex-col md:flex-row gap-2 my-5'> <img class='w-full md:w-1/3 object-cover rounded-md mb-5 md:mb-0' src='/images/audiArti.jpeg' alt='Audi'> <img class='w-full md:w-1/3 object-cover rounded-md' src='/images/audiArti2.jpeg' alt='Audi'> </div> <p> Les BVA Audi CVT (Multitronic) sont dépourvues de convertisseur de couple et de crépine externe. Il est judicieux de bien contrôler le volant moteur dans certains cas, surtout après <b>150 000 km</b>. Les boîtes de vitesses CVT sont des BVA à variation continue : elles sont munies de 2 poulies et d’une courroie segmentée en acier.</p> <p class='my-5'> Il faut régulièrement vidanger celle-ci afin de limiter les poussières d'embrayage et de limaille. Chaque <strong>vidange</strong> est suivie d’un réglage de base au niveau du calculateur. Les BVA à double embrayage offrent un confort de conduite, une fluidité lors du passage des vitesses, et sont robustes et fiables.</p> <p> Ces BVA disposent d'une cartouche externe qu'il faut remplacer lors de la vidange en plus du joint et de la crépine. Cela est très important pour éviter toute fuite d'huile au niveau du carter. Les boîtes automatiques Audi nécessitent le changement d’huile complet selon la méthode de rinçage.</p> </div>",
+    "url": "#"
+  },
+  {
+    "id": 2,
+    "image": "/images/chrysler.jpeg",
+    "title": "chrysler",
+    "excerpt": "La première boîte de vitesses automatique Chrysler",
+    "paragraph": "<div class=''> <p>La première boîte de vitesses automatique Chrysler est l’<b>A404</b>. À partir de <b>1989</b>, on rencontre l’<b>Ultra Drive</b>. On retrouve des boîtes de vitesses automatiques à convertisseur de couple hydraulique telles que la <b>62TE</b>. Il est important de remplacer son huile tous les <b>60000 km à 80000 km</b> pour éviter les problèmes d’embrayages. L’huile recommandée est l’huile <b>MOPAR</b> ou <b>Multi ATF</b>. A noter que le groupe Chrysler possède également les marques <b>Jeep</b> et <b>Dodge</b>.</p> <p class='my-5'>La procédure d’une vidange sur une boîte de vitesses automatique Chrysler grand voyager est la suivante. Il faut surélever le véhicule pour accéder au bouchon de vidange de la BVA Chrysler et laisser l’huile s’écouler. Ensuite, il est nécessaire de remplacer la crépine et de bien nettoyer le carter.</p> <p> Il est indispensable de démarrer le moteur, placer le sélecteur de vitesses en position P, et passer toutes les vitesses dans les deux sens. Vérifiez ensuite le niveau d’huile et ajoutez une quantité appropriée pour ramener le niveau de liquide. </p> <p class='mt-5'> La vidange de la boîte de vitesses automatique garantit un meilleur fonctionnement, une longévité accrue de votre BVA, et une conduite plus agréable.</p> </div>",
+    "url": "#"
+  },
+  {
+    "id": 3,
+    "image": "/images/ford.jpeg",
+    "title": "ford",
+    "excerpt": "L’ensemble des véhicules Ford en Europe sont",
+    "paragraph": "<div class=''> <p>L’ensemble des véhicules <b>Ford</b> en Europe sont principalement équipés de boîtes de vitesses automatiques notamment la <b>BVA Powershift</b>, apparue en 2008. Cette BVA à double embrayage est équipée avec un mécatronique (calculateur électronique et une unité de pilotage électrohydraulique). Celui-ci permet un passage des vitesses doux, fluide et sans rupture de charge.</p> <p class='my-5'>La technologie <b>Powershift</b> équipe les modèles <b>Fiesta, Focus, Mondeo, C-Max, S-Max, Kuga</b>. Les BVA Ford doivent être vidangées environ tous les <b>60000 km</b>. L’huile contenue dans la BVA se charge de résidus métalliques, pouvant entraîner une usure prématurée de la BVA. </p> <div class='flex justify-center my-5'> <img class='md:w-1/3 rounded-md mx-auto' src='/images/fordArti.jpeg' alt='Ford'> </div> <p> Vidanger l’huile de la boite de vitesses automatique Ford tous les 3 ans facilite le passage des vitesses. Sur la boîte de vitesses automatique <b>Powershift</b>, il est nécessaire de remplacer la cartouche/filtre externe ainsi que le joint.</p> </div>",
+    "url": "#"
+  },
+  {
+    "id": 4,
+    "image": "/images/lexus.jpeg",
+    "title": "lexus",
+    "excerpt": "Lexus se démarque en proposant des véhicules",
+    "paragraph": "<div class=''> <p><b>Lexus</b> se démarque en proposant des véhicules haut de gamme en version hybride. Les véhicules Lexus sont équipés de boîtes automatiques <b>Toyota</b> ou <b>Aisin Warner</b>. Ces BVA consistent en l’association d’un train épicycloïdal avec une <b>CVT</b>. </p> <p class='my-5'>Cela rend les changements de vitesses fluides et minimise les pertes d’énergie. La BVA présente sur la Lexus LC500 associe une BVA à quatre rapports et une CVT. </p> </div>",
+    "url": "#"
+  },
+  {
+    "id": 5,
+    "image": "/images/nissan.jpeg",
+    "title": "nissan",
+    "excerpt": "On retrouve chez Nissan un désir progressif",
+    "paragraph": "<div class=''> <p>On retrouve chez <b>Nissan</b> un désir progressif d’équiper ses véhicules avec des boîtes de vitesses automatiques. Nissan utilise essentiellement des <b>BVA</b> à variation continue (<b>CVT</b>). Ce sont des boîtes robustes et fiables. Les CVT Nissan offrent un confort de conduite inégalable. </p> <p class='my-5'>En effet, la transmission se fait grâce à deux poulies et une courroie, offrant un nombre de rapports infini. On ne ressent aucun à-coup lors du passage des vitesses. Ces boîtes de vitesses automatiques se retrouvent notamment sur les <b>JUKE, QASHQAI</b>, et d’autres modèles. Nissan a choisi d’équiper <b>25%</b> de ses véhicules de boîtes de vitesses automatiques. La plupart des <b>BVA Nissan</b> sont des CVT, offrant une légèreté de conduite exceptionnelle.</p> <div class='flex justify-center my-5'> <img class='md:w-1/3 rounded-md max-w-sm mx-auto' src='/images/nissanArti.jpeg' alt='Nissan'> </div> <p> Les changements de vitesses sont imperceptibles. La boîte de vitesses automatique la plus répandue chez Nissan est la <b>X-Tronic</b>. Le constructeur japonais équipe la majorité de ses véhicules automatiques de boîtes CVT, réputées pour leur fluidité incomparable. </p> <p class='mt-5'> Nissan et son équipementier <b>Jatco</b> ont développé les boîtes <b>X-Tronic</b>, basées sur l’utilisation d’un variateur. Nissan a considérablement amélioré les performances de la BVA X-Tronic grâce à la technologie <b>D-Step</b>. </p> <p class='mt-5'> La boîte de vitesses automatique X-Tronic offre souplesse et légèreté de conduite. Pour conserver des performances optimales, il est nécessaire de vidanger la BVA Nissan tous les <b>60 000 km</b>. L’utilisation de l’huile <b>Nissan CVT Fluid NS-3</b> est indispensable. </p> <p class='mt-5'> Vidanger l’huile de la boîte automatique permet de conserver une viscosité adaptée aux changements de température et à d’autres caractéristiques nécessaires au bon fonctionnement. Cela supprime également les dépôts de limaille et élimine les à-coups ressentis lors de la conduite. </p> </div>",
+    "url": "#"
+  },
+  {
+    "id": 6,
+    "image": "/images/renault.jpeg",
+    "title": "renault",
+    "excerpt": "BVA montées sur des véhicules Renault remontent",
+    "paragraph": "<div class=''> <p>Les premières <b>BVA</b> montées sur des véhicules <b>Renault</b> remontent aux années <b>90 et 2000</b>. On retiendra des modèles fréquents tels que les <b>MB1/MB3</b> ainsi que les <b>DP0</b> arrivées en <b>1998</b>. Renault s’est ensuite diversifié en équipant ses véhicules de BVA d’autres constructeurs comme <b>Aisin</b> et sa <b>TF-80SC</b> ou la <b>4HP20</b> de ZF.</p> <p class='my-5'>Certaines boîtes ne sont pas composées de convertisseur de couple hydraulique. On peut voir des doubles embrayages sur certains nouveaux modèles (<b>Captur</b>, nouvelle <b>Mégane</b>, <b>Clio</b>, etc.). La <b>DP0/AL4</b> dispose d’un convertisseur de couple hydraulique ainsi qu’un embrayage.</p> <p> Le niveau d’huile doit être contrôlé tous les <b>60 000 km</b>. Par la suite, il est nécessaire d’effectuer une vidange car l’huile s’use et se pollue, ce qui affecte le fonctionnement. </p> <p class='mt-5'> Certaines BVA comme la <b>DP0</b> (ou <b>AL4</b> chez Peugeot et Citroën) disposent d’une crépine interne. Il est fréquent de remplacer le bloc de contrôle hydraulique sur cette BVA. La BVA <b>EDC</b> à double embrayage équipe progressivement plusieurs modèles (<b>Mégane, Clio, Twingo, Captur, Kadjar</b>) depuis <b>2010</b>. </p> </div>",
+    "url": "#"
+  },
+  {
+    "id": 7,
+    "image": "/images/volkswagen.jpeg",
+    "title": "volkswagen",
+    "excerpt": "Le constructeur allemand utilise des BVA",
+    "paragraph": "<div class=''> <p>Le constructeur allemand <b>Volkswagen</b> utilise des BVA à double embrayage de type <b>DL501 / 0B5, DQ200, DQ250</b> et <b>DQ500</b>. Plus connues sous les noms <b>DSG6</b> ou <b>DSG7</b>, ces BVA sont très répandues sur des modèles comme la <b>Polo, Golf, Passat, Touran</b>, et <b>Touareg</b>.</p> <p class='my-5'> Sur d’anciens modèles (avant <b>2009</b>), on retrouve des boîtes automatiques à simple embrayage. Certaines BVA possèdent une crépine interne, et d’autres disposent d’une crépine ou cartouche externe qu’il est indispensable de remplacer.</p> <p> Il est nécessaire de vidanger régulièrement car les embrayages baignent dans l’huile, tout comme la partie hydraulique. Une huile polluée peut nuire au fonctionnement. Suite à la vidange, une phase de <b>reset auto adaptative value</b> est indispensable pour réinitialiser le calculateur et les valeurs adaptatives.</p> <p class='mt-5'> Les modèles récents sont équipés de boîtes à double embrayage “<b>mouillés</b>” ou “<b>à sec</b>” (ex: DSG7). Il faut contrôler le mécatronique sur les DSG7 et remplacer l’huile avec une huile adaptée. À la fin de la vidange, il est conseillé d’utiliser la prise ODB pour effacer les codes défauts. </p> </div>",
+    "url": "#"
+  },
+  {
+    "id": 8,
+    "image": "/images/citroen-ds.jpeg",
+    "title": "citroen-ds",
+    "excerpt": "Depuis 2014, la principale boîte de vitesses",
+    "paragraph": "<div class=''> <p>Depuis <b>2014</b>, la principale boîte de vitesses automatique de <b>Citroën</b> est l’<b>EAT6</b>. C’est une BVA robotisée classique composée d’un convertisseur de couple hydraulique suivi d’un train épicycloïdal. </p> <p class='my-5'> Cette boîte est similaire aux <b>Tiptronic, Steptronic</b>, ou <b>7G-Tronic</b> développées par d’autres constructeurs. Bien que l’<b>EAT6</b> soit la plus répandue, certains modèles comme le <b>C4</b> ou le <b>C4 Picasso</b> sont équipés de boîtes à double embrayage ou CVT.</p><div class='container flex justify-center flex-col md:flex-row gap-2 my-5'> <img class='md:w-1/3 rounded-md' src='/images/citreonArti.jpeg' alt='Citroën'> <img class='md:w-1/3 rounded-md' src='/images/citreonArti2.jpeg' alt='Citroën'> </div> <p> Les boîtes <b>EAT8</b> permettent une réduction de la consommation de carburant de 7% et doivent être vidangées tous les <b>60000 km</b>.</p> <p class='mt-5'> Remplacer l’huile améliore la réactivité des BVA Citroën, rendant le passage des vitesses plus fluide. Une réinitialisation du calculateur est indispensable pour un retour aux réglages initiaux.</p> </div>",
+    "url": "#"
+  },
+  {
+    "id": 9,
+    "image": "/images/hyundai.jpeg",
+    "title": "hyundai",
+    "excerpt": "Le constructeur sud-coréen Hyundai équipe",
+    "paragraph": "<div class=''> <p>Le constructeur sud-coréen <b>Hyundai</b> équipe la plupart de ses véhicules avec des BVA à double embrayage et des systèmes de variation continue (<b>CVT</b>). Hyundai a également développé des BVA à <b>10 rapports</b>.</p> <p class='my-5'> Les modèles récents, comme les <b>i30</b>, sont dotés de la boîte <b>7-DCT</b>, qui réduit les émissions de CO2 et la consommation de carburant. Elle équipe des véhicules tels que le <b>Veloster, Sonata, i30, Tucson</b>, et <b>Ioniq Hybrid</b>.</p> <p> Les boîtes CVT assurent une fluidité incomparable grâce à deux poulies reliées par une courroie. Cela garantit une conduite agréable.</p> <p class='mt-5'> L’huile utilisée dans les BVA Hyundai lubrifie, refroidit, et nettoie la boîte. Une vidange est recommandée tous les <b>60 000 à 90 000 km</b>. Après la vidange, il est conseillé de vérifier le niveau d’huile à chaud et reprogrammer le module de commande électronique. </p> </div>",
+    "url": "#"
+  },
+  {
+    "id": 10,
+    "image": "/images/mercedes.jpeg",
+    "title": "mercedes",
+    "excerpt": "Le constructeur allemand Mercedes utilise",
+    "paragraph": "<div class=''> <p>Le constructeur allemand <b>Mercedes</b> utilise plusieurs modèles de BVA : <b>722.6, 722.8</b> (classe A, B), <b>722.9</b> (classe R, ML), et <b>5G Tronic</b>. Lors de la vidange, il est important de contrôler la température de l’huile et du radiateur.</p> <p class='my-5'> Les <b>BVA 722.6</b> nécessitent un nettoyage avec une machine spécifique (flushing). Les <b>722.8</b>, quant à elles, sont des CVT qui utilisent une huile spéciale adaptée.</p> <div class='flex justify-center gap-5 my-5'> <img class='md:w-1/3 mx-auto mb-5' src='/images/marcedes.jpeg' alt='Mercedes'> </div> <p> Les boîtes automatiques Mercedes, bien que fiables, nécessitent une vidange tous les <b>60000 km</b>. Cela évite que l’huile polluée par des microparticules endommage la boîte.</p> <p class='mt-5'> À la fin de la vidange, des vérifications comme l’absence de fuites et le comportement de l’huile à haute température sont nécessaires pour garantir une conduite optimale.</p> </div>",
+    "url": "#"
+  },
+  {
+    "id": 11,
+    "image": "/images/opel.jpeg",
+    "title": "opel",
+    "excerpt": "Depuis longtemps en partenariat avec General",
+    "paragraph": "<div class=''> <p>Depuis longtemps en partenariat avec <b>General Motors</b>, Opel équipait certains de ses véhicules avec des <b>BVA</b>. Depuis <b>2017</b>, devenu filiale de PSA, Opel a équipé ses véhicules de BVA à convertisseur de couple telle que la <b>Aisin</b>, disposant de six à huit rapports.</p> <p class='my-5'> Les boîtes automatiques Opel nécessitent une vidange tous les <b>60 000 km</b>. Cette vidange élimine les dépôts de limaille dus à l’usure des engrenages, lubrifie, refroidit et nettoie la BVA. </p> <p> Lors des vidanges, il est indispensable de remplacer le fluide par une huile certifiée Opel. Sans cela, des particules d’acier pourraient provoquer une défaillance technique au niveau de la BVA. </p> <p class='mt-5'> Après une vidange, une reprogrammation du module de commande électronique et un recalibrage garantissent un confort de conduite optimal. </p> </div>",
+    "url": "#"
+  },
+  {
+    "id": 12,
+    "image": "/images/skoda.jpeg",
+    "title": "skoda",
+    "excerpt": "La majorité des véhicules de grosse cylindrée",
+    "paragraph": "<div class=''> <p>La majorité des véhicules de grosse cylindrée <b>Skoda</b> sont équipés de <b>BVA</b> à double embrayage. Ces boîtes permettent des changements de rapports fluides, où un embrayage gère les rapports pairs et l’autre les rapports impairs.</p> <p class='my-5'> Les boîtes automatiques <b>DSG</b> nécessitent une vidange tous les <b>60 000 km</b>. Une vérification de la montée en température de l’huile est essentielle, et un recalibrage des embrayages est conseillé après chaque vidange.</p> <p class='mt-5'> Une vidange régulière garantit une meilleure conduite et prolonge la durée de vie de la boîte automatique. Les BVA Skoda doivent être vidangées tous les deux ans pour éviter les pannes dues à la dégradation de l’huile.</p> </div>",
+    "url": "#"
+  },
+  {
+    "id": 13,
+    "image": "/images/volve.jpeg",
+    "title": "volvo",
+    "excerpt": "Volvo équipe une bonne partie de ses véhicules",
+    "paragraph": "<div class=''> <p><b>Volvo</b> équipe une grande partie de ses véhicules avec des BVA appelées <b>Geartronic</b>. Conçues par <b>Aisin Warner</b>, ces boîtes nécessitent une vidange tous les <b>60 000 km</b> pour conserver une viscosité optimale.</p> <div class='flex gap-5 my-5'> <img class='md:w-1/3 mx-auto mb-5' src='/images/volvoArti.jpeg' alt='Volvo'> </div> <p> La technologie Geartronic utilise un convertisseur de couple, similaire aux boîtes <b>Tiptronic</b> de Porsche. Une vidange régulière tous les <b>80 000 km</b> est recommandée pour éviter des difficultés dans le passage des rapports.</p> <p class='mt-5'> Une méthode « Power flush » est conseillée pour les vidanges des BVA <b>TF-72SC, TF-80SC</b>, et <b>TF-82SC</b>. Cela garantit une longévité accrue et prévient les dommages causés par des microparticules métalliques. </p> </div>",
+    "url": "#"
+  },
+  {
+    "id": 14,
+    "image": "/images/bmw.jpeg",
+    "title": "bmw",
+    "excerpt": "Le constructeur Allemand BMW équipe la majorité",
+    "paragraph": "<div class=''> <p><b>BMW</b> équipe la majorité de ses véhicules avec des BVA <b>ZF</b>, souvent munies de convertisseurs de couple ou de doubles embrayages. Le système <b>Steptronic</b> est le plus fiable pour les modèles récents.</p> <p class='my-5'> Les vidanges des BVA BMW nécessitent une attention particulière, comme le remplacement du carter d’huile complet et la vidange à moteur chaud. Cela facilite l’écoulement de l’huile et maintient la performance.</p> <div class='md:flex justify-center gap-5 my-5'> <img class='md:w-1/3 mx-end mb-5' src='/images/bmwArti.jpeg' alt='BMW'> <img class='md:w-1/3 mb-5' src='/images/bmwArti2.jpeg' alt='BMW'> </div> <p> Les modèles récents (ex: <b>Z4 S-drive, 335i, 135i, M3</b>) utilisent des boîtes automatiques doubles embrayages, offrant une conduite fluide et sportive. Les vidanges régulières tous les <b>60 000 km</b> garantissent leur longévité.</p> </div>",
+    "url": "#"
+  },
+  {
+    "id": 15,
+    "image": "/images/dodge.jpeg",
+    "title": "dodge",
+    "excerpt": "Le constructeur américain Dodge est peu présent",
+    "paragraph": "<div class=''> <p><b>Dodge</b> est peu présent en France, mais ses modèles comme les <b>Charger, Challenger</b>, et <b>Durango</b> sont équipés de boîtes automatiques. Une vidange tous les <b>60 000 km</b> est nécessaire pour éviter les pannes causées par des particules métalliques accumulées dans l’huile.</p> <p class='my-5'> Suite à une vidange, il est conseillé de vérifier le niveau et le comportement de l’huile à haute température. Une réinitialisation du calculateur est également recommandée pour optimiser le fonctionnement de la BVA.</p> </div>",
+    "url": "#"
+  },
+  {
+    "id": 16,
+    "image": "/images/jeep.jpeg",
+    "title": "jeep",
+    "excerpt": "Fort d’une expérience de plus de 75 ans, le constructeur",
+    "paragraph": "<div class=''> <p>Fort d’une expérience de plus de <b>75 ans</b>, le constructeur américain <b>Jeep</b> équipe un grand nombre de ses véhicules avec différentes boîtes de vitesses automatiques. Les Jeep Compass sont dotées de boîtes automatiques <b>6 rapports A6MF</b> ou de boîtes à variation continue <b>JF011</b>. L'huile doit être remplacée tous les <b>60 000 à 80 000 km</b> selon le modèle.</p> <p class='my-5'> On retrouve chez Jeep des boîtes de vitesses automatiques Chrysler, ZF, et Mercedes. Il est important de bien lubrifier ces boîtes, en remplaçant l’huile (partie hydraulique et mécanique) environ tous les <b>60 000 km</b>.</p> <p> Une vidange régulière garantit le bon fonctionnement du mécanisme d’embrayage. Il est conseillé de consulter un garage spécialisé pour assurer la durabilité de votre <b>BVA Jeep</b>.</p> <p class='mt-5'> Après remplacement de l’huile et de la crépine, il est important de vérifier le niveau de l’huile à moteur tournant et de réinitialiser le calculateur pour garantir des sensations de conduite optimales.</p> </div>",
+    "url": "#"
+  },
+  {
+    "id": 17,
+    "image": "/images/mini.jpeg",
+    "title": "mini",
+    "excerpt": "La marque anglaise Mini, faisant partie du groupe",
+    "paragraph": "<div class=''> <p>La marque anglaise <b>Mini</b>, faisant partie du groupe <b>BMW</b>, avait opté avant 2017 pour des boîtes de vitesses automatiques à convertisseur de couple. Depuis, Mini s’est orientée vers des boîtes automatiques à double embrayage, fournies principalement par <b>Getrag</b>.</p> <p class='my-5'> En <b>2018</b>, Mini a équipé certaines versions du break <b>Clubman</b> et du SUV <b>Countryman</b> d’une boîte automatique à double embrayage, améliorant l’efficacité et la fluidité des rapports. Il est essentiel de procéder régulièrement à une vidange pour maintenir la qualité de l’huile.</p> <p class='mt-5'> Une fois la vidange effectuée, il faut contrôler la montée en température de l’huile et calibrer les embrayages. Une reprogrammation du boîtier mécatronique prolonge la longévité de la BVA.</p> </div>",
+    "url": "#"
+  },
+  {
+    "id": 18,
+    "image": "/images/peugeot.jpeg",
+    "title": "peugeot",
+    "excerpt": "Le constructeur automobile Peugeot est le premier à ",
+    "paragraph": "<div class=''> <p>Le constructeur automobile <b>Peugeot</b> a popularisé la transmission automatique dans les années <b>30</b> avec la Peugeot 402. Les Peugeot <b>208</b> utilisent des boîtes <b>DP0 / AL4 / AT8</b>, tandis que les modèles <b>2008, 308, et 3008</b> sont équipés des BVA <b>EAT6</b>.</p> <p class='my-5'> En <b>2018</b>, la boîte <b>EAT8</b>, également fournie par <b>Aisin</b>, a été introduite. Dotée de huit rapports et d’un mode roue libre, elle réduit la consommation de carburant. Sur les <b>308</b> et <b>508</b>, on retrouve des boîtes à double embrayage <b>6DCT450</b> et <b>6DCT451</b>.</p> <p class='mt-5'> La vidange est essentielle tous les <b>60 000 km</b> pour préserver les performances. Elle élimine les dépôts de limaille et maintient le bon fonctionnement de la boîte automatique.</p> </div>",
+    "url": "#"
+  },
+  {
+    "id": 19,
+    "image": "/images/smart.jpeg",
+    "title": "smart",
+    "excerpt": "Smart est né d’une collaboration entre le constructeur",
+    "paragraph": "<div class=''> <p><b>Smart</b>, né d’une collaboration entre Mercedes-Benz et Swatch, a récemment adopté des boîtes de vitesses automatiques performantes. Les modèles <b>Fortwo</b> et <b>Forfour</b> sont équipés de la boîte <b>Twinamic</b>, une BVA à double embrayage de <b>Getrag</b>.</p> <p class='my-5'> Cette transmission à <b>6 rapports</b> offre une conduite fluide et optimise la consommation de carburant, réduite de <b>6%</b> par rapport à des véhicules similaires.</p> <p class='mt-5'> Une vidange tous les <b>60 000 km</b> est nécessaire pour éviter l’usure et garantir la performance. Après vidange, vérifiez le niveau d’huile à moteur tournant et réinitialisez le calculateur pour prolonger la durée de vie de la BVA.</p> </div>",
+    "url": "#"
+  },
+  {
+    "id": 20,
+    "image": "/images/chevrolet.jpeg",
+    "title": "chevrolet",
+    "excerpt": "Chevrolet, équipait autrefois ses véhicules de",
+    "paragraph": "<div class=''> <p><b>Chevrolet</b> équipe ses véhicules de boîtes automatiques <b>General Motors</b>, telles que les <b>6L80</b> et <b>8L90</b>. La vidange est nécessaire tous les <b>60 000 km</b> pour maintenir les caractéristiques de l’huile.</p> <p class='my-5'> La <b>8L90</b>, utilisée sur la Corvette C7, est une boîte à convertisseur de couple qui réduit la consommation de carburant de <b>5%</b>. Il est crucial de vidanger régulièrement pour éviter la dégradation de l’huile et les dommages au bloc hydraulique.</p> <p class='mt-5'> Après chaque vidange, une réinitialisation du calculateur et des valeurs adaptatives est indispensable pour préserver les performances et garantir une conduite optimale.</p> </div>",
+    "url": "#"
+  },
+
+  {
+    "id": 21,
+    "image": "/images/fiat.jpeg",
+    "title": "fiat",
+    "excerpt": "Le constructeur italien Fiat utilise des boîtes de",
+    "paragraph": "<div class=''> <p>Le constructeur italien <b>Fiat</b> utilise des boîtes de vitesses automatiques différentes sur ses modèles. Fiat équipe ses automobiles de boîtes automatiques à double embrayage ou à variation continue. Les modèles <b>Fiat 500</b> sont munis de boîtes <b>Aisin Warner</b> de type <b>TF-61SN</b> et <b>TF-70SC</b>.</p> <p class='my-5'> Il est nécessaire de vidanger la boîte automatique tous les <b>60 000 km</b>, car avec les kilomètres, l’huile se pollue en accumulant des microparticules métalliques. Cela permet de préserver les performances de la BVA et d’éviter les pannes.</p> <p> Après le remplacement de l’huile, certains points doivent être vérifiés, comme le niveau d’huile à moteur tournant et la montée en température. Une réinitialisation du calculateur est également indispensable.</p> </div>",
+    "url": "#"
+  },
+  {
+    "id": 22,
+    "image": "/images/land-rover.jpeg",
+    "title": "land-rover",
+    "excerpt": "Land Rover équipe principalement ses véhicules",
+    "paragraph": "<div class=''> <p><b>Land Rover</b> équipe principalement ses véhicules de boîtes automatiques <b>ZF</b>, comme les <b>6HP</b> et <b>8HP</b>, que l’on retrouve sur la plupart des <b>Range Rover</b>. Une vidange tous les <b>60 000 km</b> est nécessaire pour prolonger leur durée de vie.</p> <p class='my-5'> Certains <b>Range Rover Evoque</b> sont dotés de boîtes <b>Powershift</b> de <b>Getrag</b> ou de modèles <b>TF-81SC</b> d’Aisin Warner. Les boîtes Powershift à double embrayage suppriment les à-coups et garantissent une douceur de conduite exceptionnelle. Une vidange régulière est essentielle pour maintenir ces performances.</p> <p class='mt-5'> Après chaque vidange, il est indispensable de remplacer les filtres internes et de réinitialiser le calculateur pour garantir une conduite fluide et prévenir les pannes.</p> </div>",
+    "url": "#"
+  },
+  {
+    "id": 23,
+    "image": "/images/mitsubishi.jpeg",
+    "title": "mitsubishi",
+    "excerpt": "Le constructeur Mitsubishi utilise des boîtes de vitesses",
+    "paragraph": "<div class=''> <p><b>Mitsubishi</b> équipe la majorité de ses modèles de boîtes automatiques <b>CVT</b> à 6 vitesses, conçues pour offrir une conduite confortable et fluide. Ces boîtes utilisent des poulies et une courroie pour garantir une variation continue des rapports.</p> <p class='my-5'> Les boîtes <b>CVT Mitsubishi</b>, fournies par <b>Jatco</b>, nécessitent une vidange tous les <b>60 000 km</b>. L’huile <b>ATF</b> utilisée lubrifie, refroidit et nettoie la boîte, mais elle se dégrade avec le temps, accumulant des particules métalliques qui peuvent endommager la transmission.</p> <p class='mt-5'> Après la vidange, il est important de contrôler le niveau d’huile à haute température et de reprogrammer le module de commande électronique pour optimiser les performances de la boîte de vitesses automatique.</p> </div>",
+    "url": "#"
+  },
+  {
+    "id": 24,
+    "image": "/images/porsche.jpeg",
+    "title": "porsche",
+    "excerpt": "Le constructeur allemand Porsche équipe une",
+    "paragraph": "<div class=''> <p><b>Porsche</b> équipe ses véhicules de boîtes automatiques <b>Tiptronic</b> depuis <b>1990</b>. Ces boîtes garantissent une fluidité et une rapidité des passages de rapports. Depuis <b>2009</b>, Porsche utilise également des boîtes <b>PDK</b> à double embrayage de 6, 7, ou 8 rapports.</p> <p class='my-5'> Les boîtes PDK offrent des sensations de conduite exceptionnelles, supprimant les à-coups grâce à leur système à double embrayage. Sur des modèles comme le <b>Cayenne</b> et le <b>Macan</b>, Porsche utilise des boîtes automatiques ZF, réputées pour leur fiabilité.</p> <p class='mt-5'> Une vidange régulière est essentielle pour éviter que l’huile contaminée par des poussières d’embrayage n’endommage le calculateur électronique. Après la vidange, il est conseillé de réinitialiser le calculateur et de vérifier le comportement de l’huile à haute température.</p> </div>",
+    "url": "#"
+  },
+  {
+    "id": 25,
+    "image": "/images/toyota.jpeg",
+    "title": "toyota",
+    "excerpt": "Le constructeur japonais Toyota équipe ses",
+    "paragraph": "<div class=''> <p><b>Toyota</b> équipe ses automobiles de boîtes automatiques comme les <b>U140/E/F, U660E/F</b>, et <b>A750E/F</b>. Ces BVA combinent un convertisseur de couple et un ou plusieurs trains épicycloïdaux.</p> <p class='my-5'> Les boîtes robotisées <b>MMT</b>, également utilisées, offrent un mode séquentiel ou entièrement automatique, et sont commandées par des palettes. D’autres modèles hybrides, comme la <b>Yaris</b> et le <b>C-HR</b>, utilisent des boîtes <b>CVT</b>, reconnues pour leur efficacité énergétique.</p> <p class='mt-5'> Une vidange tous les <b>60 000 km</b> est indispensable pour prévenir les pannes causées par la dégradation de l’huile. Après la vidange, une réinitialisation du calculateur est nécessaire pour restaurer les performances de la boîte automatique.</p> </div>",
+    "url": "#"
+  }
+]

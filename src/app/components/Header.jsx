@@ -190,10 +190,19 @@ const Header = () => {
                         <div className="subHeadList">
                           <Link
                             onClick={closeNavbar}
-                            href="/ressource/blogs"
+                            href="/ressource/tutoriels"
                             className="text-[15px] block p-4 py-2 font-normal text-[#2C80EF]"
                           >
-                            Tuto - Blog
+                            Tutoriel
+                          </Link>
+                        </div>
+                        <div className="subHeadList">
+                          <Link
+                            onClick={closeNavbar}
+                            href="/ressource/articles"
+                            className="text-[15px] block p-4 py-2 font-normal text-[#2C80EF]"
+                          >
+                            Articles
                           </Link>
                         </div>
                       </div>

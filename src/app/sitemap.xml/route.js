@@ -90,7 +90,12 @@ export async function GET() {
       priority: 0.8,
     },
     {
-      loc: `${baseUrl}/ressource/blogs`,
+      loc: `${baseUrl}/ressource/tutoriels`,
+      lastmod: new Date().toISOString(),
+      priority: 0.8,
+    },
+    {
+      loc: `${baseUrl}/ressource/articles`,
       lastmod: new Date().toISOString(),
       priority: 0.8,
     },
