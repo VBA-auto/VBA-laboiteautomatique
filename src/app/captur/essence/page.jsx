@@ -295,7 +295,7 @@ const SingleVehicleView = () => {
                         <>
                           <div className="flex items-center gap-2">
                             <p className="text-gray-300 text-[15px] prices line-through">
-                              1139 €
+                              1139.00 €
                             </p>
                             <p className="text-[#2C80EF] text-[17px] bg-gray-50 px-2 rounded-md">
                               {1139 - 50} €
@@ -304,7 +304,7 @@ const SingleVehicleView = () => {
                         </>
                       ) : (
                         <p className="text-[#2C80EF] text-[15px] prices">
-                          1139 €
+                          1139.00 €
                         </p>
                       )}
                     </div>

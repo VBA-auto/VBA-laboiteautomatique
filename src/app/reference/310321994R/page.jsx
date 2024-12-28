@@ -269,7 +269,7 @@ const SingleSearchView = () => {
                       <>
                         <div className="flex items-center gap-2">
                           <p className="text-gray-300 text-[15px] prices line-through">
-                            1069 €
+                            1069.00 €
                           </p>
                           <p className="text-[#2C80EF] text-[17px] prices bg-gray-50 px-2 rounded-md">
                             1019 €
@@ -278,7 +278,7 @@ const SingleSearchView = () => {
                       </>
                     ) : (
                       <p className="text-[#2C80EF] text-[15px] prices">
-                        1069 €
+                        1069.00 €
                       </p>
                     )}
                   </div>
