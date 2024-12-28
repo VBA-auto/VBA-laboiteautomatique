@@ -6,7 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export default function ClientArticles({ cars }) {
-  const [selectedCar, setSelectedCar] = useState(null); // State for the selected car
+  const [selectedCar, setSelectedCar] = useState(null);
 
   return (
     <section>

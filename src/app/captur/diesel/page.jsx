@@ -11,6 +11,7 @@ import Image from "next/image";
 import { BsCopy } from "react-icons/bs";
 import VehicleStockDisplay from "@/components/VehicleStockDisplay";
 import { FaArrowRight } from "react-icons/fa";
+import PricngPop890 from "@/components/PricngPop890";
 
 const imagesSlide = [
   "/images/cal-normal-0.webp",
@@ -227,27 +228,7 @@ const SingleVehicleView = () => {
                   <hr />
 
                   <div className="mt-3">
-                    <div className="flex items-end justify-between mb-2">
-                      <p className="text-gray-600 text-[15px]">Prix</p>
-                      <hr className="flex-grow mx-2 mb-1 border-t border-gray-100" />
-                      <p className="text-[#2C80EF] text-[16px] prices">
-                        890.00 €
-                      </p>
-                    </div>
-                    <div className="flex items-end justify-between mb-2">
-                      <p className="text-gray-600 text-[15px]">Programmation</p>
-                      <hr className="flex-grow mx-2 mb-1 border-t border-gray-100" />
-                      <p className="text-[#2C80EF] text-[16px] prices">
-                        230.00 €
-                      </p>
-                    </div>
-                    <div className="flex items-end justify-between mb-2">
-                      <p className="text-gray-600 text-[15px]">Transport</p>
-                      <hr className="flex-grow mx-2 mb-1 border-t border-gray-100" />
-                      <p className="text-[#2C80EF] text-[16px] prices">
-                        19.00 €
-                      </p>
-                    </div>
+                    <PricngPop890 />
                   </div>
 
                   <div className="mt-5">

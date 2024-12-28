@@ -7,9 +7,9 @@ import Link from "next/link";
 const Sitemap = () => {
   const sections = [
     {
-      title: "General",
+      title: "Général",
       links: [
-        { href: "/", label: "Home" },
+        { href: "/", label: "Acceuil" },
         { href: "/contact", label: "Contact" },
         { href: "/ressource/aide-en-ligne", label: "Aide en Ligne" },
         { href: "/selectionnez-votre-vehicule", label: "Disponibilité" },
@@ -36,6 +36,7 @@ const Sitemap = () => {
 
   const carModels = [
     {
+      title: "Modéles Véhicules",
       label: "Captur",
       parentLink: "/captur",
       children: [
@@ -80,20 +81,20 @@ const Sitemap = () => {
     <>
       <SubHeader />
       <Header />
-      <div className="my-16">
-        <div className="bg-white border border-gray-200 rounded-lg shadow-md p-6 max-w-5xl mx-auto">
-          <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">
+      <div className="my-16 bg-white border border-gray-200 rounded-lg shadow-md p-6 max-w-6xl mx-auto">
+        <div className=" max-w-4xl mx-auto">
+          <h3 className="text-2xl  font-semibold text-gray-700 mb-4">
             Sitemap
-          </h2>
+          </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-            {sections.map((section, sectionIndex) => (
-              <div key={sectionIndex} className="space-y-4">
-                <h3 className="text-normal font-semibold text-gray-700 border-b border-gray-300 pb-2">
+            {sections.map((section, index) => (
+              <div key={index} className="space-y-4">
+                <h3 className="text-normal font-semibold text-gray-700 mb-4 ">
                   {section.title}
                 </h3>
                 <ul className="space-y-2">
-                  {section.links.map((link, linkIndex) => (
-                    <li key={linkIndex}>
+                  {section.links.map((link, i) => (
+                    <li key={i}>
                       <Link
                         href={link.href}
                         className="text-blue-600 hover:text-blue-800 hover:underline text-[15px]"
@@ -106,38 +107,36 @@ const Sitemap = () => {
               </div>
             ))}
           </div>
-
-          {/* Car Models Section */}
-          <h3 className="text-lg font-semibold text-gray-700 border-b border-gray-300 pb-2 mb-4">
-            Car Models
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {carModels.map((model, index) => (
-              <div key={index} className="">
-                {/* Parent Link */}
-                <h4 className="text-[16px] font-medium text-gray-800 mb-2">
-                  <Link
-                    href={model.parentLink || "#"} // Default to "#" if no parentLink is provided
-                    className="text-blue-600 hover:text-blue-800 hover:underline"
-                  >
-                    {model.label}
-                  </Link>
-                </h4>
-                {/* Child Links */}
-                <ul className="space-y-2">
-                  {model.children.map((child, childIndex) => (
-                    <li key={childIndex}>
-                      <Link
-                        href={child.href}
-                        className="text-blue-600 hover:text-blue-800 hover:underline text-[15px]"
-                      >
-                        {child.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+          <div className="pt-6">
+            <h3 className="text-normal font-semibold text-gray-700 mb-4">
+              Modéles Véhicules
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+              {carModels.map((model, index) => (
+                <div key={index}>
+                  <h4 className="text-[16px] font-medium text-gray-800 mb-2">
+                    <Link
+                      href={model.parentLink || "#"}
+                      className="text-blue-600 hover:text-blue-800 hover:underline"
+                    >
+                      {model.label}
+                    </Link>
+                  </h4>
+                  <ul className="space-y-2">
+                    {model.children.map((child, i) => (
+                      <li key={i}>
+                        <Link
+                          href={child.href}
+                          className="text-blue-600 hover:text-blue-800 hover:underline text-[15px]"
+                        >
+                          {child.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

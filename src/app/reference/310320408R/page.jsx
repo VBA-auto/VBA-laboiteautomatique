@@ -13,6 +13,7 @@ import { BsCopy } from "react-icons/bs";
 import Image from "next/image";
 import { FaArrowRight } from "react-icons/fa";
 import NewVehicleRef from "@/components/NewVehicleRef";
+import PricngPop890 from "@/components/PricngPop890";
 
 const imagesSlide = [
   "/images/cal-normal-0.webp",
@@ -203,18 +204,7 @@ const SingleSearchView = () => {
                 </div>
                 <hr />
                 <div className="mt-3">
-                  <div className="flex justify-between mb-2">
-                    <p className="text-gray-600 text-[15px]">Prix </p>
-                    <p className="text-[#2C80EF] text-[15px]">890 €</p>
-                  </div>
-                  <div className="flex justify-between mb-2">
-                    <p className="text-gray-600 text-[15px]">Programmation </p>
-                    <p className="text-[#2C80EF] text-[15px]"> 230 €</p>
-                  </div>
-                  <div className="flex justify-between mb-2">
-                    <p className="text-gray-600 text-[15px]">Transport </p>
-                    <p className="text-[#2C80EF] text-[15px]"> 19 €</p>
-                  </div>
+                  <PricngPop890 />
                 </div>
                 <div className="mt-5">
                   {showCoupon ? (
@@ -280,16 +270,18 @@ const SingleSearchView = () => {
                     {showCoupon ? (
                       <>
                         <div className="flex items-center gap-2">
-                          <p className="text-gray-300 text-[15px] line-through">
+                          <p className="text-gray-300 prices text-[15px] line-through">
                             1139 €
                           </p>
-                          <p className="text-[#2C80EF] text-[17px] bg-gray-50 px-2 rounded-md">
+                          <p className="text-[#2C80EF] prices text-[17px] bg-gray-50 px-2 rounded-md">
                             1089 €
                           </p>
                         </div>
                       </>
                     ) : (
-                      <p className="text-[#2C80EF] text-[15px]">1139 €</p>
+                      <p className="text-[#2C80EF] text-[15px] prices">
+                        1139 €
+                      </p>
                     )}
                   </div>
                 </div>
