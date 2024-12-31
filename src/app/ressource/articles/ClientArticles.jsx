@@ -4,6 +4,7 @@ import Image from "next/image";
 import SubHeader from "@/components/SubHeader";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Link from "next/link";
 
 export default function ClientArticles({ cars }) {
   const [selectedCar, setSelectedCar] = useState(null);
@@ -39,7 +40,7 @@ export default function ClientArticles({ cars }) {
                 </h2>
                 <p className="text-sm">
                   {car.excerpt}...{" "}
-                  <span className="text-blue-500">Lire Plus</span>
+                  <span className="text-blue-500">lire plus</span>
                 </p>
               </div>
             </article>
@@ -50,6 +51,14 @@ export default function ClientArticles({ cars }) {
         {selectedCar && (
           <dialog id="articlePopup" className="modal modal-open">
             <div className="modal-box w-12/12 max-w-6xl bg-white">
+              <div className="modal-action mt-0 mb-5">
+                <button
+                  className="border px-2 rounded-md text-sm text-blue-500"
+                  onClick={() => setSelectedCar(null)} // Close the modal
+                >
+                  X
+                </button>
+              </div>
               <div className="w-full md:h-[600px]">
                 <Image
                   src={selectedCar.image}
@@ -66,13 +75,12 @@ export default function ClientArticles({ cars }) {
                 className="prose"
                 dangerouslySetInnerHTML={{ __html: selectedCar.paragraph }}
               ></div>
-              <div className="modal-action">
-                <button
-                  className="border px-2 rounded-md text-sm text-blue-500"
-                  onClick={() => setSelectedCar(null)} // Close the modal
-                >
-                  Close
-                </button>
+              <div className="text-start mt-5">
+                <Link href="/contact">
+                  <button className="text-[#2C80EF] bg-transparent text-[15px] border border-[#2c80ef] py-2 px-3 rounded-md hover:bg-[#2C80EF] hover:text-white block">
+                    <span>Contactez-nous</span>
+                  </button>
+                </Link>
               </div>
             </div>
           </dialog>

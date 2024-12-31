@@ -151,14 +151,6 @@
     "paragraph": "<div class=''> <p><b>Smart</b>, né d’une collaboration entre Mercedes-Benz et Swatch, a récemment adopté des boîtes de vitesses automatiques performantes. Les modèles <b>Fortwo</b> et <b>Forfour</b> sont équipés de la boîte <b>Twinamic</b>, une BVA à double embrayage de <b>Getrag</b>.</p> <p class='my-5'> Cette transmission à <b>6 rapports</b> offre une conduite fluide et optimise la consommation de carburant, réduite de <b>6%</b> par rapport à des véhicules similaires.</p> <p class='mt-5'> Une vidange tous les <b>60 000 km</b> est nécessaire pour éviter l’usure et garantir la performance. Après vidange, vérifiez le niveau d’huile à moteur tournant et réinitialisez le calculateur pour prolonger la durée de vie de la BVA.</p> </div>",
     "url": "#"
   },
-  {
-    "id": 20,
-    "image": "/images/chevrolet.jpeg",
-    "title": "chevrolet",
-    "excerpt": "Chevrolet, équipait autrefois ses véhicules de",
-    "paragraph": "<div class=''> <p><b>Chevrolet</b> équipe ses véhicules de boîtes automatiques <b>General Motors</b>, telles que les <b>6L80</b> et <b>8L90</b>. La vidange est nécessaire tous les <b>60 000 km</b> pour maintenir les caractéristiques de l’huile.</p> <p class='my-5'> La <b>8L90</b>, utilisée sur la Corvette C7, est une boîte à convertisseur de couple qui réduit la consommation de carburant de <b>5%</b>. Il est crucial de vidanger régulièrement pour éviter la dégradation de l’huile et les dommages au bloc hydraulique.</p> <p class='mt-5'> Après chaque vidange, une réinitialisation du calculateur et des valeurs adaptatives est indispensable pour préserver les performances et garantir une conduite optimale.</p> </div>",
-    "url": "#"
-  },
 
   {
     "id": 21,
