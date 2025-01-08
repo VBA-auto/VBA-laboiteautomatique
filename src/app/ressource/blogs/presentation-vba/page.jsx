@@ -30,7 +30,10 @@ const PresentationVba = () => {
                   Home /
                 </Link>{" "}
                 <Link className="text-gray-400" href="/ressource/blogs">
-                  Tuto - Blog /
+                  Ressource /
+                </Link>{" "}
+                <Link className="text-gray-400" href="/ressource/blogs">
+                  Blogs /
                 </Link>{" "}
                 <Link className="text-blue-400" href="#">
                   Presentation-VBA
@@ -39,8 +42,11 @@ const PresentationVba = () => {
             </div>
           </div>
           <div className="md:w-3/5 mx-auto mt-8">
+            <h2 className="text-lg text-gray-700 text-center mt-8 font-medium">
+              Calculateur boîtes de vitesse automatiques
+            </h2>
             <iframe
-              className="w-full md:h-[397px] rounded-md"
+              className="w-full md:h-[397px] mt-3 rounded-md"
               src="https://www.youtube.com/embed/EmwXs4AmC64?si=OnO4L_2ssu661hkg"
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -48,9 +54,6 @@ const PresentationVba = () => {
             ></iframe>
           </div>
           <div className="md:w-3/5 mx-auto mt-8 mb-16">
-            <h1 className="text-[24px] font-semibold my-3">
-              Calculateur boîtes de vitesse automatiques
-            </h1>
             <div className="">
               <p className="mb-5">
                 VBA calculateur Renault est une entreprise spécialisée dans la

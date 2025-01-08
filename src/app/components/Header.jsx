@@ -193,7 +193,7 @@ const Header = () => {
                             href="/ressource/tutoriels"
                             className="text-[15px] block p-4 py-2 font-normal text-[#2C80EF]"
                           >
-                            Tutoriel
+                            Blog/Tutoriel
                           </Link>
                         </div>
                         <div className="subHeadList">

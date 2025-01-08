@@ -28,7 +28,10 @@ const CalibragePage = () => {
                   Home /
                 </Link>{" "}
                 <Link className="text-gray-400" href="/ressource/blogs">
-                  Tuto - Blog /
+                  Ressource /
+                </Link>{" "}
+                <Link className="text-gray-400" href="#">
+                  Blog - Tutoriel /
                 </Link>{" "}
                 <Link className="text-blue-400" href="#">
                   Calibrage
@@ -37,19 +40,19 @@ const CalibragePage = () => {
             </div>
           </div>
           <div className="md:w-3/5 mx-auto">
+            <h2 className="text-lg text-gray-700 text-center mt-8 font-medium">
+              Exemple d’information calculateur
+            </h2>
             <Image
-              width={300}
+              width={700}
               height={200}
-              className="w-full mt-8 rounded-md "
-              src="/images/calib-blog.webp"
+              className="w-full mt-2 rounded-md "
+              src="/images/blog-calib.webp"
               alt="calibrage image from VBA"
             />
           </div>
 
-          <div className="md:w-3/5 mx-auto mt-8 mb-16">
-            <h1 className="text-[24px] font-semibold my-3">
-              Exemple d’information calculateur
-            </h1>
+          <div className="md:w-3/5 mx-auto mt-3 mb-8">
             <p>
               Vous trouverez ici un exemple où trouver les informations
               relatives au calcualteur. <br /> Version du diag - du logiciel –
@@ -59,7 +62,7 @@ const CalibragePage = () => {
               <Image
                 width={500}
                 height={500}
-                className="w-full mt-8 rounded-md md:h-[432px]"
+                className="w-full mt-4 rounded-md md:h-[432px]"
                 src="/images/blog-2.webp"
                 alt="calibrage image from VBA"
               />

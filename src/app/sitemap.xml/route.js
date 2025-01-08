@@ -95,6 +95,36 @@ export async function GET() {
       priority: 0.8,
     },
     {
+      loc: `${baseUrl}/ressource/blogs/calibrage`,
+      lastmod: new Date().toISOString(),
+      priority: 0.8,
+    },
+    {
+      loc: `${baseUrl}/ressource/blogs/verification-parametrage`,
+      lastmod: new Date().toISOString(),
+      priority: 0.8,
+    },
+    {
+      loc: `${baseUrl}/ressource/blogs/adaptation-calibrage`,
+      lastmod: new Date().toISOString(),
+      priority: 0.8,
+    },
+    {
+      loc: `${baseUrl}/ressource/blogs/remplacement-calculateur`,
+      lastmod: new Date().toISOString(),
+      priority: 0.8,
+    },
+    {
+      loc: `${baseUrl}/ressource/blogs/presentation-vba`,
+      lastmod: new Date().toISOString(),
+      priority: 0.8,
+    },
+    {
+      loc: `${baseUrl}/ressource/blogs/test-embrayage-edc`,
+      lastmod: new Date().toISOString(),
+      priority: 0.8,
+    },
+    {
       loc: `${baseUrl}/ressource/articles`,
       lastmod: new Date().toISOString(),
       priority: 0.8,

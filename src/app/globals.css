@@ -46,11 +46,9 @@ body {
 }
 .media-container {
   width: 100%;
-  height: 432px; /* Set a consistent height for videos and images */
   overflow: hidden;
 }
-iframe,
-.media-container img {
+iframe {
   width: 100%;
   height: 100%;
   object-fit: cover;

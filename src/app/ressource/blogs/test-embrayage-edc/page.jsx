@@ -30,7 +30,10 @@ const TestEmbrayageEdc = () => {
                   Home /
                 </Link>{" "}
                 <Link className="text-gray-400" href="/ressource/blogs">
-                  Tuto - Blog /
+                  Ressource /
+                </Link>{" "}
+                <Link className="text-gray-400" href="/ressource/blogs">
+                  Blogs /
                 </Link>{" "}
                 <Link className="text-blue-400" href="#">
                   Test-Embrayage-EDC
@@ -39,8 +42,11 @@ const TestEmbrayageEdc = () => {
             </div>
           </div>
           <div className="md:w-3/5 mx-auto mt-8">
+            <h2 className="text-lg text-gray-700 text-center mt-8 font-medium">
+              Vérifier l’état de l’embrayage EDC
+            </h2>
             <iframe
-              className="w-full md:h-[397px] rounded-md"
+              className="w-full md:h-[397px] mt-3 rounded-md"
               src="https://www.youtube.com/embed/crmyBO1TaK0?autohide=1&controls=1&showinfo=0"
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -48,7 +54,7 @@ const TestEmbrayageEdc = () => {
             ></iframe>
           </div>
           <div className="md:w-3/5 mx-auto mt-8 mb-16">
-            <h1 className="text-[20px] font-semibold my-3">
+            <h1 className="text-[16px] font-semibold my-3">
               Comment vérifier l&apos;état de l&apos;embrayage sur une boite EDC
               pour <br /> Captur, Scenic 3, Clio 4, Megane 3.
             </h1>

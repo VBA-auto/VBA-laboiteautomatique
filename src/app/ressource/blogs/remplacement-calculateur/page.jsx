@@ -30,7 +30,10 @@ const RemplacmentPage = () => {
                   Home /
                 </Link>{" "}
                 <Link className="text-gray-400" href="/ressource/blogs">
-                  Tuto - Blog /
+                  Ressource /
+                </Link>{" "}
+                <Link className="text-gray-400" href="/ressource/blogs">
+                  Blogs /
                 </Link>{" "}
                 <Link className="text-blue-400" href="#">
                   Remplacement
@@ -39,8 +42,12 @@ const RemplacmentPage = () => {
             </div>
           </div>
           <div className="md:w-3/5 mx-auto mt-8">
+            <h2 className="text-lg text-gray-700 text-center mt-8 font-medium">
+              Démontage/Remontage calculateur
+            </h2>
+
             <iframe
-              className="w-full md:h-[397px] rounded-md"
+              className="w-full md:h-[397px] rounded-md mt-2"
               src="https://www.youtube.com/embed/6X72SXZhZ44?si=50iEt0fuIk1i5HeS"
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -48,10 +55,10 @@ const RemplacmentPage = () => {
             ></iframe>
           </div>
           <div className="md:w-3/5 mx-auto mt-8 mb-16">
-            <h1 className="text-[24px] font-semibold my-3">
-              Remplacer calculateur EDC Renault
-            </h1>
             <div className="">
+              <h2 className="text-lg text-gray-700 text-start  mb-3 font-medium">
+                Remplacer calculateur EDC Renault
+              </h2>
               <p className="mb-5">
                 Remplacement d&apos;un calculateur DC4 (boite EDC) GETRAG
                 6DCT250.
