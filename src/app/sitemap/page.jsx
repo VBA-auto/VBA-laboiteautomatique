@@ -36,7 +36,7 @@ const Sitemap = () => {
 
   const carModels = [
     {
-      title: "Modéles Véhicules",
+      title: "Modeles Véhicules",
       label: "Captur",
       parentLink: "/captur",
       children: [

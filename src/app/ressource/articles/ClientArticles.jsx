@@ -72,7 +72,7 @@ export default function ClientArticles({ cars }) {
                 {selectedCar.title}
               </h2>
               <div
-                className="prose"
+                className="prose text-justify"
                 dangerouslySetInnerHTML={{ __html: selectedCar.paragraph }}
               ></div>
               <div className="text-start mt-5">
