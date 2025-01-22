@@ -16,14 +16,9 @@ import NewVehicleRef from "@/components/NewVehicleRef";
 import PricngPop890 from "@/components/PricngPop890";
 
 const imagesSlide = [
-  "/images/cal-normal-0.webp",
-  "/images/cal-normal-1.webp",
-  "/images/cal-normal-2.webp",
-  "/images/cal-normal-3.webp",
-  "/images/cal-normal-4.webp",
-  "/images/cal-normal-5.webp",
-  "/images/cal-normal-6.webp",
-  "/images/cal-normal-7.webp",
+  "/images/strie-1.webp",
+  "/images/strie-2.webp",
+  "/images/strie-4.webp",
 ];
 
 const SingleSearchView = () => {
@@ -86,23 +81,23 @@ const SingleSearchView = () => {
                 <div className="mt-2">
                   <div className="px-4 mb-2">
                     <p className="text-[14px] text-gray-400">Désignation</p>
-                    <h1 className="text-[15px]">Calculateur Captur - Clio 4</h1>
+                    <h1 className="text-[15px]">Calculateur Scenic 3</h1>
                   </div>
                   <div className="px-4 mb-2">
                     <p className="text-[14px] text-gray-400">Description</p>
                     <p className="text-[15px]">
                       Module de commande (calculateur) pour boite automatique
-                      EDC Captur - Clio 4
+                      EDC Scenic 3 - Megane 4
                     </p>
                   </div>
                   <div className="px-4 mb-3">
                     <p className="text-[14px] text-gray-400">Compatibilité</p>
                     <div className="flex flex-wrap gap-2">
                       <button className="bg-gray-100  px-2 text-[14px] text-black mt-1 rounded">
-                        Captur
+                        Scenic 3
                       </button>
                       <button className="bg-gray-100  px-2 text-[14px] text-black mt-1 rounded">
-                        Clio 4
+                        Megane 4
                       </button>
                     </div>
                   </div>
@@ -112,17 +107,17 @@ const SingleSearchView = () => {
                   </div>
                   <div className="px-4 mb-2">
                     <p className="text-[14px] text-gray-400">Véhicule</p>
-                    <p className="text-[15px]">Captur - Clio 4</p>
+                    <p className="text-[15px]">Scenic 3</p>
                   </div>
                   <div className="px-4 mb-2">
                     <p className="text-[14px] text-gray-400">
                       Info complémentaire{" "}
                     </p>
-                    <p className="text-[15px]">Captur - Clio 4</p>
+                    <p className="text-[15px]">Scenic 3</p>
                   </div>
                   <div className="px-4 mb-2">
                     <p className="text-[14px] text-gray-400">Référence OE</p>
-                    <p className="text-[15px]">310320841R</p>
+                    <p className="text-[15px]">310320841R - DC4(013)</p>
                   </div>
                 </div>
               </div>

@@ -75,7 +75,7 @@ const ResponsiveSlider = ({ images }) => {
           }}
         >
           <div
-            className="h-[51px] w-[70px] flex"
+            className="h-[51px] w-[55px] flex"
             style={{
               transition: "transform 0.5s ease-in-out",
               transform: `translateX(-${
@@ -91,7 +91,7 @@ const ResponsiveSlider = ({ images }) => {
                 height={65}
                 alt={`Thumbnail ${index}`}
                 onClick={() => handleThumbnailClick(index)}
-                className="mx-2 cursor-pointer rounded object-cover w-[70px] h-[50px]"
+                className="mx-2 cursor-pointer rounded object-cover w-[70px] h-[51px]"
                 style={{
                   border:
                     currentIndex === index
