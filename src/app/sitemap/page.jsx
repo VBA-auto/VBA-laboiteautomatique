@@ -29,7 +29,8 @@ const Sitemap = () => {
       links: [
         { href: "/ressource/aide-en-ligne", label: "Aide en Ligne" },
         { href: "/ressource/faq", label: "FAQ" },
-        { href: "/ressource/blogs", label: "Tuto-Blog" },
+        { href: "/ressource/tutoriels", label: "Blog-Tutoriel" },
+        { href: "/ressource/articles", label: "Articles" },
       ],
     },
   ];
