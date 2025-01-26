@@ -3,10 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 import "@/globals.css";
-import HomeSearchVehicle from "@/components/HomeSearchVehicle";
 import { FaWhatsapp } from "react-icons/fa";
 
 import Review from "@/components/Review";
+import SearchBarHomeSpain from "./SearchBarHomeSpain";
 
 const HeroSpain = () => {
   return (
@@ -27,7 +27,7 @@ const HeroSpain = () => {
                 </div>
                 <div className="md:w-11/12 md:mt-5 mt-0  mb-5 flex gap-2  md:px-0 searchFilte">
                   <div className="w-full">
-                    <HomeSearchVehicle />
+                    <SearchBarHomeSpain />
                   </div>
                 </div>
                 <div className="md:w-11/12 carss">
@@ -72,9 +72,12 @@ const HeroSpain = () => {
                       },
                     ].map((car, index) => (
                       <div key={index} className="carsCard rounded-md">
-                        <Link
-                          rel="preload"
-                          href={car.href}
+                        <button
+                          onClick={() =>
+                            document
+                              .getElementById("ModalSpainCapturParent")
+                              .showModal()
+                          }
                           className="text-[15px] text-center"
                         >
                           <Image
@@ -86,7 +89,7 @@ const HeroSpain = () => {
                             className="m-auto h-[70px] object-contain"
                           />
                           {car.label}
-                        </Link>
+                        </button>
                       </div>
                     ))}
                   </div>

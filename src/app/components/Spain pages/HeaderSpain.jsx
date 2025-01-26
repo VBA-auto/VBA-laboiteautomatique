@@ -53,13 +53,13 @@ const HeaderSpain = () => {
             <div className="flex flex-wrap items-center justify-between mx-auto py-2 headerMainCont">
               {/* Logo */}
               <Link rel="preload" href="/" className="flex items-center">
-                <div className="lg:w-[290px]">
+                <div className="lg:w-[320px]">
                   <Image
-                    width={100}
+                    width={130}
                     height={100}
-                    src="/images/VBAlogo.webp"
+                    src="/images/logoSpain.webp"
                     alt="Logo"
-                    className="w-[90px] h-[60px]"
+                    className=""
                     priority
                   />
                 </div>
@@ -103,14 +103,14 @@ const HeaderSpain = () => {
                 <div className="navItemss flex flex-col md:flex-row md:items-center md:space-x-4 p-4 md:p-0 mt-4 md:mt-0 border border-gray-100 rounded-lg md:border-0">
                   <Link
                     onClick={closeNavbar}
-                    href="/"
+                    href="/es"
                     className="block text-[15px] py-1 text-black hover:bg-[#d7d7d745] hover:text-[#2C80EF] rounded-md px-4"
                   >
                     Inicio
                   </Link>
                   <Link
                     onClick={closeNavbar}
-                    href="/produits"
+                    href="#Productos"
                     className="block text-[15px] py-1 text-black hover:bg-[#d7d7d745] hover:text-[#2C80EF] rounded-md px-4"
                   >
                     Productos

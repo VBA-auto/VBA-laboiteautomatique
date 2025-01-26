@@ -4,11 +4,6 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import Head from "next/head";
-import SubHeader from "@/components/SubHeader";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import RefrerenceCheckerComp from "@/components/RefSearch";
 
 const SelectOptionsSpain = () => {
   const [selectedBrand, setSelectedBrand] = useState(null);

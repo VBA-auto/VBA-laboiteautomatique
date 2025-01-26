@@ -24,7 +24,7 @@ const imagesSlide = [
   "/images/cal-normal-7.webp",
 ];
 
-const SingleVehicleViewCapturEssence = () => {
+const CapturSpainEssence = () => {
   const [showSpinner, setShowSpinner] = useState(false);
   const [showCoupon, setShowCoupon] = useState(false);
   const [data, setData] = useState([]);
@@ -37,45 +37,16 @@ const SingleVehicleViewCapturEssence = () => {
 
   return (
     <main>
-      <Head>
-        <title>Calculateur Renault Captur 1.2 Essence</title>
-        <meta name="title" content="Calculateur Renault Captur 1.2 Essence" />
-        <meta
-          name="description"
-          content="Trouver ici votre calculateur pour boite automatique pour Renault Captur 1.2 Essence programmation incluse "
-        />
-      </Head>
-      <SubHeader />
-      <Header />
-      <section className="produits ">
+      <section className=" border rounded-md">
         <div className="">
-          <div className="container mx-auto">
-            <div className="xl:w-3/4 mx-auto xl:min-h-[538px]">
-              <div className="xl:flex  justify-center">
-                <div className="xl:w-[400px] p-4  bg-white rounded-tl-[5px] ">
+          <div className="">
+            <div className="">
+              <div className="xl:flex  justify-around">
+                <div className="p-4  bg-white rounded-tl-[5px] ">
                   <div className="xl:flex items-center">
-                    <div className="xl:w-[400px]   rounded-s-md ">
-                      <p className="text-[14px] mt-1">
-                        <Link href="/">
-                          <span className="text-gray-400">Home </span>&gt;
-                        </Link>
-                        <span className="text-gray-400 hover:underline">
-                          {" "}
-                          Renault
-                        </span>{" "}
-                        &gt;
-                        <span className="text-gray-400 hover:underline">
-                          {" "}
-                          Captur
-                        </span>{" "}
-                        &gt;
-                        <span className="text-gray-700 hover:underline">
-                          {" "}
-                          1.2 Essence
-                        </span>{" "}
-                      </p>
+                    <div className="">
                       <div className="w-full mt-5">
-                        <div className="max-h-[280px]">
+                        <div className="">
                           <ResponsiveSlider images={imagesSlide} />
                         </div>
                       </div>
@@ -84,7 +55,7 @@ const SingleVehicleViewCapturEssence = () => {
                 </div>
 
                 {/* ///////////////////////////////// */}
-                <div className="xl:w-[400px] bg-white rounded-tr-[5px] border-l-[1px] md:pb-0 pb-1 ">
+                <div className="xl:w-[400px] bg-white rounded-tr-[5px] md:pb-0 pb-1 ">
                   <div className="flex justify-between items-center px-4 pt-4 pb-1 singretur">
                     <ReturnButton />
                     <div className="">
@@ -143,7 +114,7 @@ const SingleVehicleViewCapturEssence = () => {
 
               {/* ////////////////////////// */}
 
-              <div className="bg-white border rounded-b-[5px] xl:w-[800px] mx-auto md:pt-0 pt-5">
+              <div className="bg-white border-t rounded-b-[5px] mx-auto md:pt-0 pt-5">
                 <div className="md:flex md:px-5 px-4 py-1 justify-between">
                   <div className="md:w-1/2 flex items-center gap-5">
                     <div className="border py-2 bg-white rounded-md">
@@ -182,7 +153,9 @@ const SingleVehicleViewCapturEssence = () => {
                       ) : (
                         <button
                           onClick={() =>
-                            document.getElementById("my_modal_3").showModal()
+                            document
+                              .getElementById("ModalDiselEssence")
+                              .showModal()
                           }
                           className=" bg-[#2C80EF] text-white rounded-md text-center border border-[#2C80EF] py-2 px-5 shadow-2xl hover:text-[#fff] hover:bg-[#2c80efd7] text-[15px] md:my-0 my-5"
                         >
@@ -191,7 +164,7 @@ const SingleVehicleViewCapturEssence = () => {
                       )}
                       {/* <button
                         onClick={() =>
-                          document.getElementById("my_modal_3").showModal()
+                          document.getElementById("ModalDiselEssence").showModal()
                         }
                         className=" bg-[#2C80EF] text-white rounded-md text-center border border-[#2C80EF] py-2 px-5 shadow-2xl hover:text-[#fff] hover:bg-[#2c80efd7] text-[15px] md:my-0 my-5"
                       >
@@ -203,7 +176,7 @@ const SingleVehicleViewCapturEssence = () => {
               </div>
             </div>
             {/* MODAL */}
-            <dialog id="my_modal_3" className="modal">
+            <dialog id="ModalDiselEssence" className="modal">
               <div className="modal-box bg-white">
                 <form method="dialog">
                   <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
@@ -323,9 +296,8 @@ const SingleVehicleViewCapturEssence = () => {
           </div>
         </div>
       </section>
-      <Footer />
     </main>
   );
 };
 
-export default SingleVehicleViewCapturEssence;
+export default CapturSpainEssence;

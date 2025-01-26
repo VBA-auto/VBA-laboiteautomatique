@@ -24,7 +24,7 @@ const imagesSlide = [
   "/images/cal-normal-7.webp",
 ];
 
-const SingleVehicleViewCapturEssence = () => {
+const CapturSpainDiesel = () => {
   const [showSpinner, setShowSpinner] = useState(false);
   const [showCoupon, setShowCoupon] = useState(false);
   const [data, setData] = useState([]);
@@ -37,45 +37,16 @@ const SingleVehicleViewCapturEssence = () => {
 
   return (
     <main>
-      <Head>
-        <title>Calculateur Renault Captur 1.2 Essence</title>
-        <meta name="title" content="Calculateur Renault Captur 1.2 Essence" />
-        <meta
-          name="description"
-          content="Trouver ici votre calculateur pour boite automatique pour Renault Captur 1.2 Essence programmation incluse "
-        />
-      </Head>
-      <SubHeader />
-      <Header />
-      <section className="produits ">
+      <section className=" border rounded-md">
         <div className="">
-          <div className="container mx-auto">
-            <div className="xl:w-3/4 mx-auto xl:min-h-[538px]">
-              <div className="xl:flex  justify-center">
-                <div className="xl:w-[400px] p-4  bg-white rounded-tl-[5px] ">
+          <div className="">
+            <div className="">
+              <div className="xl:flex  justify-around">
+                <div className="p-4  bg-white rounded-tl-[5px] ">
                   <div className="xl:flex items-center">
-                    <div className="xl:w-[400px]   rounded-s-md ">
-                      <p className="text-[14px] mt-1">
-                        <Link href="/">
-                          <span className="text-gray-400">Home </span>&gt;
-                        </Link>
-                        <span className="text-gray-400 hover:underline">
-                          {" "}
-                          Renault
-                        </span>{" "}
-                        &gt;
-                        <span className="text-gray-400 hover:underline">
-                          {" "}
-                          Captur
-                        </span>{" "}
-                        &gt;
-                        <span className="text-gray-700 hover:underline">
-                          {" "}
-                          1.2 Essence
-                        </span>{" "}
-                      </p>
+                    <div className=" ">
                       <div className="w-full mt-5">
-                        <div className="max-h-[280px]">
+                        <div className="">
                           <ResponsiveSlider images={imagesSlide} />
                         </div>
                       </div>
@@ -84,14 +55,13 @@ const SingleVehicleViewCapturEssence = () => {
                 </div>
 
                 {/* ///////////////////////////////// */}
-                <div className="xl:w-[400px] bg-white rounded-tr-[5px] border-l-[1px] md:pb-0 pb-1 ">
+                <div className="xl:w-[400px] bg-white rounded-tr-[5px]  md:pb-0 pb-1">
                   <div className="flex justify-between items-center px-4 pt-4 pb-1 singretur">
                     <ReturnButton />
                     <div className="">
                       <VehicleStockDisplay
                         modelName="Renault Captur"
-                        z
-                        carType="essence"
+                        carType="diesel"
                         onStockChange={handleStockChange}
                       />
                     </div>
@@ -101,14 +71,14 @@ const SingleVehicleViewCapturEssence = () => {
                     <div className="px-4 mb-2">
                       <p className="text-[14px] text-gray-400">Désignation</p>
                       <h1 className="text-[15px]">
-                        Calculateur Renault Captur 1.2 Essence
+                        Calculateur Renault Captur 1.5 Diesel
                       </h1>
                     </div>
 
                     <div className="px-4 mb-3">
                       <p className="text-[14px] text-gray-400">Description</p>
                       <p className="text-[15px]">
-                        Module de commande (calculateur) Renault Captur Essence
+                        Module de commande (calculateur) Renault Captur Diesel
                       </p>
                     </div>
                     <div className="px-4 mb-3">
@@ -125,7 +95,7 @@ const SingleVehicleViewCapturEssence = () => {
                     </div>
                     <div className="px-4 mb-3">
                       <p className="text-[14px] text-gray-400">Véhicule</p>
-                      <p className="text-[15px]">Captur 1.2 Essence</p>
+                      <p className="text-[15px]">Captur 1.5 Diesel</p>
                     </div>
                     <div className="px-4 mb-3">
                       <p className="text-[14px] text-gray-400">
@@ -143,7 +113,7 @@ const SingleVehicleViewCapturEssence = () => {
 
               {/* ////////////////////////// */}
 
-              <div className="bg-white border rounded-b-[5px] xl:w-[800px] mx-auto md:pt-0 pt-5">
+              <div className="bg-white border-t rounded-b-[5px] mx-auto md:pt-0 pt-5">
                 <div className="md:flex md:px-5 px-4 py-1 justify-between">
                   <div className="md:w-1/2 flex items-center gap-5">
                     <div className="border py-2 bg-white rounded-md">
@@ -157,7 +127,7 @@ const SingleVehicleViewCapturEssence = () => {
                     </div>
                     <div className="">
                       <p className="text-[15px] text-gray-500">Renault</p>
-                      <h1 className="my-1">Captur 1.2 Essence</h1>
+                      <h1 className="my-1">Captur 1.5 Diesel</h1>
                     </div>
                   </div>
                   <div className="md:w-1/2 flex items-center md:justify-end justify-center gap-5">
@@ -182,7 +152,9 @@ const SingleVehicleViewCapturEssence = () => {
                       ) : (
                         <button
                           onClick={() =>
-                            document.getElementById("my_modal_3").showModal()
+                            document
+                              .getElementById("ModalDiselCaptur")
+                              .showModal()
                           }
                           className=" bg-[#2C80EF] text-white rounded-md text-center border border-[#2C80EF] py-2 px-5 shadow-2xl hover:text-[#fff] hover:bg-[#2c80efd7] text-[15px] md:my-0 my-5"
                         >
@@ -191,7 +163,7 @@ const SingleVehicleViewCapturEssence = () => {
                       )}
                       {/* <button
                         onClick={() =>
-                          document.getElementById("my_modal_3").showModal()
+                          document.getElementById("ModalDiselCaptur").showModal()
                         }
                         className=" bg-[#2C80EF] text-white rounded-md text-center border border-[#2C80EF] py-2 px-5 shadow-2xl hover:text-[#fff] hover:bg-[#2c80efd7] text-[15px] md:my-0 my-5"
                       >
@@ -203,7 +175,7 @@ const SingleVehicleViewCapturEssence = () => {
               </div>
             </div>
             {/* MODAL */}
-            <dialog id="my_modal_3" className="modal">
+            <dialog id="ModalDiselCaptur" className="modal">
               <div className="modal-box bg-white">
                 <form method="dialog">
                   <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
@@ -223,13 +195,15 @@ const SingleVehicleViewCapturEssence = () => {
                     </div>
                     <div className="">
                       <p className="text-[15px] text-gray-500">Renault</p>
-                      <h1 className="my-1">Captur 1.2 Essence</h1>
+                      <h1 className="my-1">Captur 1.5 Diesel</h1>
                     </div>
                   </div>
                   <hr />
+
                   <div className="mt-3">
                     <PricngPop890 />
                   </div>
+
                   <div className="mt-5">
                     {showCoupon ? (
                       <p className="font-[500] text-normal text-center">
@@ -239,15 +213,15 @@ const SingleVehicleViewCapturEssence = () => {
                       ""
                     )}
 
-                    {!showCoupon && ( // Add this condition to hide the button when the coupon is shown
+                    {!showCoupon && (
                       <button
                         onClick={async () => {
                           setShowSpinner(true);
                           await new Promise((resolve) =>
                             setTimeout(resolve, 1000)
-                          ); // Show spinner for 1 second
+                          );
                           setShowSpinner(false);
-                          setShowCoupon(true); // Show coupon after spinner
+                          setShowCoupon(true);
                         }}
                         className="text-blue-400 hover:text-blue-200  rounded-sm transition-transform duration-300 mt-4 mx-auto block text-[15px]"
                       ></button>
@@ -269,7 +243,7 @@ const SingleVehicleViewCapturEssence = () => {
                               onClick={() => {
                                 navigator.clipboard.writeText(PROG2023);
                                 setCopied(true);
-                                setTimeout(() => setCopied(false), 1500); // Reset after 1.5 seconds
+                                setTimeout(() => setCopied(false), 1500);
                               }}
                               className=" text-[#2C80EF] text-[15px] bg-gray-100 p-1 rounded-md"
                             >
@@ -290,11 +264,11 @@ const SingleVehicleViewCapturEssence = () => {
                   <div className="mt-5">
                     <hr />
                     <div className="flex justify-between my-2 ">
-                      <p className="text-gray-600 text-[15px]">Total </p>
+                      <p className="text-gray-600 text-[15px]">Total</p>
                       {showCoupon ? (
                         <>
                           <div className="flex items-center gap-2">
-                            <p className="text-gray-300 text-[15px] prices line-through">
+                            <p className="text-gray-300 text-[16px] prices line-through">
                               1139.00 €
                             </p>
                             <p className="text-[#2C80EF] text-[17px] bg-gray-50 px-2 rounded-md">
@@ -303,7 +277,7 @@ const SingleVehicleViewCapturEssence = () => {
                           </div>
                         </>
                       ) : (
-                        <p className="text-[#2C80EF] text-[15px] prices">
+                        <p className="text-[#2C80EF] text-[16px] prices">
                           1139.00 €
                         </p>
                       )}
@@ -312,7 +286,7 @@ const SingleVehicleViewCapturEssence = () => {
                   <div className="text-center">
                     <Link
                       target="_blank"
-                      href="https://buy.stripe.com/9AQ03E9O0cJx9qMeWw"
+                      href="https://buy.stripe.com/3cs5nY6BOfVJ5aw29B"
                     >
                       <button className="orderButton">Valider</button>
                     </Link>
@@ -323,9 +297,8 @@ const SingleVehicleViewCapturEssence = () => {
           </div>
         </div>
       </section>
-      <Footer />
     </main>
   );
 };
 
-export default SingleVehicleViewCapturEssence;
+export default CapturSpainDiesel;

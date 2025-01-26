@@ -69,16 +69,16 @@ const Page = () => {
                     <Link className="text-gray-400" href="/">
                       Home /
                     </Link>{" "}
-                    <Link className="text-gray-400" href="/ressource/blogs">
+                    <Link className="text-gray-400" href="/ressource/tutoriels">
                       Ressource /
                     </Link>{" "}
-                    <Link className="text-blue-400" href="#">
+                    <Link className="text-blue-400" href="/ressource/tutoriels">
                       Blog-Tutoriels
                     </Link>{" "}
                   </p>
                 </div>
               </div>
-              <div className="w-3/4 mx-auto mt-8 px-6 md:px-0">
+              <div className="md:w-[768px] mx-auto mt-8 px-6 md:px-0">
                 <div className="">
                   <div className="slider-container">
                     <Slider {...settings}>
@@ -86,7 +86,7 @@ const Page = () => {
                       <div className="carousel-item">
                         <div className="blogsCard flex flex-col">
                           <div className="media-container">
-                            <h2 className="text-lg text-gray-700 text-center mb-2 font-medium">
+                            <h2 className="text-lg text-gray-700 text-center mb-2 font-medium  hover:underline">
                               <Link href="/ressource/blogs/calibrage">
                                 Exemple d’information calculateur
                               </Link>
@@ -109,7 +109,10 @@ const Page = () => {
                                   Vous trouverez ici un exemple où trouver les
                                   informations relatives au calcualteur. <br />{" "}
                                   Version du diag - du logiciel – numéro de
-                                  calibrage ou étalonnage...
+                                  calibrage ou étalonnage...{" "}
+                                  <span className="text-blue-500">
+                                    lire plus
+                                  </span>
                                 </p>
                               </Link>
                             </div>
@@ -120,7 +123,7 @@ const Page = () => {
                       <div className="carousel-item">
                         <div className="blogsCard flex flex-col">
                           <div className="media-container">
-                            <h2 className="text-lg text-gray-700 text-center mb-2 font-medium">
+                            <h2 className="text-lg text-gray-700 text-center mb-2 font-medium  hover:underline">
                               <Link href="/ressource/blogs/verification-parametrage">
                                 Verification parametrage EDC (DC4)
                               </Link>
@@ -141,7 +144,10 @@ const Page = () => {
                                   La vérification régulière des embrayages du
                                   6DCT250 Renault est essentielle pour garantir
                                   des performances optimales et prévenir des
-                                  dysfonctionnements...
+                                  dysfonctionnements...{" "}
+                                  <span className="text-blue-500">
+                                    lire plus
+                                  </span>
                                 </p>
                               </Link>
                             </div>
@@ -153,7 +159,7 @@ const Page = () => {
                         <div className="blogsCard flex flex-col">
                           <div className="media-container">
                             <Link href="/ressource/blogs/adaptation-calibrage">
-                              <h2 className="text-lg text-gray-700 text-center mb-2 font-medium">
+                              <h2 className="text-lg text-gray-700 text-center mb-2 font-medium  hover:underline">
                                 Adaptation / Calibrage des points de touche
                               </h2>
                             </Link>
@@ -172,7 +178,10 @@ const Page = () => {
                                   Le calibrage des points de touche ou points de
                                   léchage de la boîte EDC (Efficient Dual
                                   Clutch) ou DC4 Renault est une étape
-                                  importante pour éviter ...
+                                  importante pour éviter ...{" "}
+                                  <span className="text-blue-500">
+                                    lire plus
+                                  </span>
                                 </p>
                               </Link>
                             </div>
@@ -186,7 +195,7 @@ const Page = () => {
                           <div className="media-container">
                             <Link href="/ressource/blogs/remplacement-calculateur">
                               {" "}
-                              <h2 className="text-lg text-gray-700 text-center mb-2 font-medium">
+                              <h2 className="text-lg text-gray-700 text-center mb-2 font-medium  hover:underline">
                                 Démontage/Remontage calculateur
                               </h2>
                             </Link>
@@ -208,7 +217,8 @@ const Page = () => {
                                 Comment installer un calculateur de boite
                                 automatique. Calculateur (boite EDC) pour boite
                                 automatique Renault double embrayage DC4
-                                (Getrag-6DCT250-continental)...
+                                (Getrag-6DCT250-continental)...{" "}
+                                <span className="text-blue-500">lire plus</span>
                               </p>
                             </Link>
                           </div>
@@ -220,7 +230,7 @@ const Page = () => {
                           <div className="media-container">
                             <Link href="/ressource/blogs/presentation-vba">
                               {" "}
-                              <h2 className="text-lg text-gray-700 text-center mb-2 font-medium">
+                              <h2 className="text-lg text-gray-700 text-center mb-2 font-medium  hover:underline">
                                 Calculateur boîtes de vitesse automatiques
                               </h2>
                             </Link>
@@ -243,7 +253,8 @@ const Page = () => {
                                 Spécialiste en programmation et clonage de
                                 calculateur boîtes de vitesses automatiques EDC
                                 pour Captur, Scénic, Mégane 3, Clio RS et Clio
-                                4...
+                                4...{" "}
+                                <span className="text-blue-500">lire plus</span>
                               </p>
                             </Link>
                           </div>
@@ -255,7 +266,7 @@ const Page = () => {
                           <div className="media-container">
                             <Link href="/ressource/blogs/test-embrayage-edc">
                               {" "}
-                              <h2 className="text-lg text-gray-700 text-center mb-2 font-medium">
+                              <h2 className="text-lg text-gray-700 text-center mb-2 font-medium  hover:underline">
                                 Vérifier l’état de l’embrayage EDC
                               </h2>
                             </Link>
@@ -278,7 +289,8 @@ const Page = () => {
                                 Cette vidéo, disponible sur notre site
                                 laboiteautomatique.com, concerne uniquement les
                                 boîtes automatiques à double embrayage EDC (ou
-                                DC4) équipant...
+                                DC4) équipant...{" "}
+                                <span className="text-blue-500">lire plus</span>
                               </p>
                             </Link>
                           </div>

@@ -1,12 +1,23 @@
 "use client";
-import DynaProdStock from "@/components/DynaProdStock";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
+import ModalCaptur from "./CapturSpain/CapturComps/ModalCapture";
+import DynaStocksSpain from "./DynaStockSpain";
 
 const ProduitsSpain = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
+  const toggleModal = () => {
+    setIsModalOpen((prev) => !prev); // Toggle the state
+  };
+
   return (
-    <main>
-      <section className="pb-[60px] ">
+    <main id="Productos">
+      <section className="py-[90px] ">
         <div className="container mx-auto">
           <div className="product3rdCont">
             <main className="flex  flex-col z-20 relative">
@@ -23,62 +34,15 @@ const ProduitsSpain = () => {
 
               <div className="productscards grid xl:grid-cols-3  justify-center gap-6 mt-5">
                 {/* Produits */}
-                <div className="lg:w-full rounded-md shadow-sm p-5 singleProductCard accent_color bg-white/50">
-                  <div className="">
-                    <div className="h-[30px]">
-                      {/* <DynaStock carName="Renault Captur" /> */}
-                      <DynaProdStock carName="Renault Captur" />
-                    </div>
-                  </div>
-                  <div className="px-4 mt-3">
-                    <Image
-                      width={400}
-                      height={300}
-                      src="/images/productDefault.webp"
-                      alt=""
-                      objectFit="cover"
-                      className="mx-auto w-[400px] h-[141px]"
-                    />
-                  </div>
-                  <Link href="/captur">
-                    <div className="flex items-center border rounded-md gap-3 mt-[20px]  hover:bg-gray-100">
-                      <div className="w-1/3">
-                        <Image
-                          width={110}
-                          height={100}
-                          src="/images/calculateur_DC4_Renault_Capture.webp"
-                          alt="calculateur_DC4_Renault_Capture"
-                          loading="lazy"
-                          className=" h-[70px] object-contain ms-2"
-                        />
-                      </div>
-                      <div className="w-2/3">
-                        <h2 className="text-[22px] font-medium text-start text-[#374151]">
-                          Renault Captur
-                        </h2>
-                        <p className="text-sm">à partir de 2012 </p>
-                      </div>
-                    </div>
-                  </Link>
-                  <div className="flex justify-center gap-5 mt-5">
-                    <div className="w-1/2 border border-blue-300 rounded-md text-center py-2 px-2 shadow-sm hover:bg-[#2C80EF] hover:text-white">
-                      <Link href="/captur/essence" className=" text-[15px]">
-                        <h2>1.2 Essence</h2>
-                      </Link>
-                    </div>
-                    <div className="w-1/2 border border-blue-300 rounded-md text-center py-2 px-2 shadow-sm hover:bg-[#2C80EF] hover:text-white">
-                      <Link className=" text-[15px]" href="captur/diesel">
-                        <h2>1.5 Diesel</h2>
-                      </Link>
-                    </div>
-                  </div>
+                <div className="lg:w-full rounded-md shadow-sm p-5 singleProductCard accent_color bg-white/50 cursor-pointer">
+                  <ModalCaptur />
                 </div>
 
                 {/* Produit 2 */}
                 <div className="lg:w-full rounded-md shadow-sm p-5 bg-white/50 singleProductCard accent_color">
                   <div className="">
                     <div className="h-[30px]">
-                      <DynaProdStock carName="Renault Clio" />
+                      <DynaStocksSpain carName="Renault Clio" />
                     </div>
                   </div>
                   <div className="px-4 mt-3">
@@ -129,7 +93,7 @@ const ProduitsSpain = () => {
                 <div className="lg:w-full rounded-md shadow-sm p-5 bg-white/50 singleProductCard accent_color">
                   <div className="">
                     <div className="h-[30px]">
-                      <DynaProdStock carName="Renault Megane" />
+                      <DynaStocksSpain carName="Renault Megane" />
                     </div>
                   </div>
                   <div className="px-4 mt-3">
@@ -180,7 +144,7 @@ const ProduitsSpain = () => {
                 {/* Produit 4 */}
                 <div className="lg:w-full rounded-md shadow-sm p-5 bg-white/50 singleProductCard accent_color">
                   <div className="h-[30px]">
-                    <DynaProdStock carName="Renault Scenic" />
+                    <DynaStocksSpain carName="Renault Scenic" />
                   </div>
                   <div className="px-4 mt-3">
                     <Image
@@ -224,7 +188,7 @@ const ProduitsSpain = () => {
                 {/* Produit 5 */}
                 <div className="lg:w-full rounded-md shadow-sm p-5 bg-white/50 singleProductCard accent_color">
                   <div className="h-[30px]">
-                    <DynaProdStock carName="Renault Fluence" />
+                    <DynaStocksSpain carName="Renault Fluence" />
                   </div>
                   <div className="px-4 mt-3">
                     <Image
@@ -269,7 +233,7 @@ const ProduitsSpain = () => {
 
                 <div className="lg:w-full rounded-md  shadow-sm p-5 bg-white/50 singleProductCard accent_color">
                   <div className="h-[30px]">
-                    <DynaProdStock carName="Clio 4 RS" />
+                    <DynaStocksSpain carName="Clio 4 RS" />
                   </div>
                   <div className="px-4 mt-3">
                     <Image
