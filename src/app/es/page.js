@@ -1,5 +1,6 @@
+import ContactSpain from "@/components/Spain pages/ContactSpain";
+import FaqSpain from "@/components/Spain pages/FAQSpain";
 import HeroSpain from "@/components/Spain pages/HeroSpain";
-import InstallationSpain from "@/components/Spain pages/InstallationSpain";
 import ProduitsSpain from "@/components/Spain pages/ProduitsSpain";
 import SelectOptionsSpain from "@/components/Spain pages/SelectOptionsSpain";
 import React from "react";
@@ -9,8 +10,9 @@ const page = () => {
     <div>
       <HeroSpain />
       <ProduitsSpain />
-      <SelectOptionsSpain />
-      <InstallationSpain />
+      <FaqSpain />
+      <ContactSpain />
+      {/* <SelectOptionsSpain /> */}
     </div>
   );
 };

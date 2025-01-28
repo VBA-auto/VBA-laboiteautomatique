@@ -29,7 +29,7 @@ const ModalMegane = () => {
           />
         </div>
 
-        <div className="flex items-center border rounded-md gap-3 mt-[20px]  hover:bg-gray-100">
+        <div className="flex items-center border rounded-md gap-3 mt-[20px]  hover:bg-gray-100 hover:cursor-pointer">
           <div className="w-1/3">
             <Image
               width={110}

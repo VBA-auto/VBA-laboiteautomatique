@@ -24,7 +24,7 @@ const imagesSlide = [
   "/images/cal-normal-7.webp",
 ];
 
-const ClioSpainEssence = () => {
+const FluenceSpainDiesel = () => {
   const [showSpinner, setShowSpinner] = useState(false);
   const [showCoupon, setShowCoupon] = useState(false);
   const [data, setData] = useState([]);
@@ -34,7 +34,6 @@ const ClioSpainEssence = () => {
   const handleStockChange = (currentStock) => {
     setStock(currentStock);
   };
-
   return (
     <main>
       <section className=" border rounded-md">
@@ -42,9 +41,9 @@ const ClioSpainEssence = () => {
           <div className="">
             <div className="">
               <div className="xl:flex  justify-around">
-                <div className="p-4  bg-white rounded-tl-[5px]">
+                <div className="p-4  bg-white rounded-tl-[5px] ">
                   <div className="xl:flex items-center">
-                    <div className="">
+                    <div className=" ">
                       <div className="w-full mt-5">
                         <div className="">
                           <ResponsiveSlider images={imagesSlide} />
@@ -60,8 +59,8 @@ const ClioSpainEssence = () => {
                     <ReturnButton />
                     <div className="">
                       <VehicleStockDisplay
-                        modelName="Renault Clio 4"
-                        carType="essence"
+                        modelName="Renault Fluence"
+                        carType="diesel"
                         onStockChange={handleStockChange}
                       />
                     </div>
@@ -71,21 +70,21 @@ const ClioSpainEssence = () => {
                     <div className="px-4 mb-2">
                       <p className="text-[14px] text-gray-400">Désignation</p>
                       <h1 className="text-[15px]">
-                        Calculateur Renault Clio 4 - 1.2 Essence
+                        Calculateur Renault Fluence - 1.5 Diesel
                       </h1>
                     </div>
 
                     <div className="px-4 mb-3">
                       <p className="text-[14px] text-gray-400">Description</p>
                       <p className="text-[15px]">
-                        Module de commande (calculateur) Renault Clio 4 Diesel
+                        Module de commande (calculateur) Renault Fluence Diesel
                       </p>
                     </div>
                     <div className="px-4 mb-3">
                       <p className="text-[14px] text-gray-400">Compatibilité</p>
                       <div className="flex flex-wrap gap-2">
                         <button className="bg-gray-100  px-2 text-[14px] text-black mt-1 rounded">
-                          Clio 4
+                          Fluence
                         </button>
                       </div>
                     </div>
@@ -95,17 +94,17 @@ const ClioSpainEssence = () => {
                     </div>
                     <div className="px-4 mb-3">
                       <p className="text-[14px] text-gray-400">Véhicule</p>
-                      <p className="text-[15px]">Clio 4 - 1.2 Essence</p>
+                      <p className="text-[15px]">Fluence - 1.5 Diesel</p>
                     </div>
                     <div className="px-4 mb-3">
                       <p className="text-[14px] text-gray-400">
                         Info complémentaire
                       </p>
-                      <p className="text-[15px]">Clio 4 à partir de 2012</p>
+                      <p className="text-[15px]">Fluence à partir de 2009</p>
                     </div>
                     <div className="px-4 mb-3">
                       <p className="text-[14px] text-gray-400">Référence OE</p>
-                      <p className="text-[15px]">A2C30743000 - 01 K00</p>
+                      <p className="text-[15px]">A2C30743000 01 K00</p>
                     </div>
                   </div>
                 </div>
@@ -127,7 +126,7 @@ const ClioSpainEssence = () => {
                     </div>
                     <div className="">
                       <p className="text-[15px] text-gray-500">Renault</p>
-                      <h1 className="my-1">Clio 4 - 1.2 Essence</h1>
+                      <h1 className="my-1">Fluence - 1.5 Diesel</h1>
                     </div>
                   </div>
                   <div className="md:w-1/2 flex items-center md:justify-end justify-center gap-5">
@@ -153,7 +152,7 @@ const ClioSpainEssence = () => {
                         <button
                           onClick={() =>
                             document
-                              .getElementById("ClioEssenceModal")
+                              .getElementById("ModalDieselFluence")
                               .showModal()
                           }
                           className=" bg-[#2C80EF] text-white rounded-md text-center border border-[#2C80EF] py-2 px-5 shadow-2xl hover:text-[#fff] hover:bg-[#2c80efd7] text-[15px] md:my-0 my-5"
@@ -163,7 +162,7 @@ const ClioSpainEssence = () => {
                       )}
                       {/* <button
                         onClick={() =>
-                          document.getElementById("ClioEssenceModal").showModal()
+                          document.getElementById("ModalDieselFluence").showModal()
                         }
                         className=" bg-[#2C80EF] text-white rounded-md text-center border border-[#2C80EF] py-2 px-5 shadow-2xl hover:text-[#fff] hover:bg-[#2c80efd7] text-[15px] md:my-0 my-5"
                       >
@@ -175,7 +174,7 @@ const ClioSpainEssence = () => {
               </div>
             </div>
             {/* MODAL */}
-            <dialog id="ClioEssenceModal" className="modal">
+            <dialog id="ModalDieselFluence" className="modal">
               <div className="modal-box bg-white">
                 <form method="dialog">
                   <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
@@ -195,7 +194,7 @@ const ClioSpainEssence = () => {
                     </div>
                     <div className="">
                       <p className="text-[15px] text-gray-500">Renault</p>
-                      <h1 className="my-1">Clio 4 - 1.2 Essence</h1>
+                      <h1 className="my-1">Fluence - 1.5 Diesel</h1>
                     </div>
                   </div>
                   <hr />
@@ -284,7 +283,7 @@ const ClioSpainEssence = () => {
                   <div className="text-center">
                     <Link
                       target="_blank"
-                      href="https://buy.stripe.com/dR6bMmaS44d132oaG8"
+                      href="https://buy.stripe.com/4gw03E5xK6l9byU6pX"
                     >
                       <button className="orderButton">Valider</button>
                     </Link>
@@ -299,4 +298,4 @@ const ClioSpainEssence = () => {
   );
 };
 
-export default ClioSpainEssence;
+export default FluenceSpainDiesel;

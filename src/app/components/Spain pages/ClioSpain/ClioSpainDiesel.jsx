@@ -55,7 +55,7 @@ const ClioSpainDiesel = () => {
                 </div>
 
                 {/* ///////////////////////////////// */}
-                <div className="xl:w-[400px] bg-white rounded-tr-[5px] border-l-[1px] md:pb-0 pb-1">
+                <div className="xl:w-[400px] bg-white rounded-tr-[5px] md:pb-0 pb-1">
                   <div className="flex justify-between items-center px-4 pt-4 pb-1 singretur">
                     <ReturnButton />
                     <div className="">

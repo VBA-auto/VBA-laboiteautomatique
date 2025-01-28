@@ -115,103 +115,17 @@ const HeaderSpain = () => {
                   >
                     Productos
                   </Link>
-
-                  {/* Desplegable de Prestación */}
-                  <div ref={dropdownRef} className="relative group">
-                    <button
-                      onClick={handlePrestationToggle}
-                      className="subMenuHeader text-[15px]  py-1 text-black hover:text-[#2C80EF] hover:bg-[#d7d7d745] rounded-md px-4 flex items-center"
-                    >
-                      Prestación <FaAngleDown className="ml-2" />
-                    </button>
-
-                    {prestationDropdown && (
-                      <div className="navSubParent absolute mt-2 border bg-[#fff] rounded-md shadow-lg z-40">
-                        <div className="subHeadList">
-                          <Link
-                            onClick={closeNavbar}
-                            href="/prestation/programmation"
-                            className="text-[15px] text-[#2C80EF] block p-4 py-2 font-normal"
-                          >
-                            Programación
-                          </Link>
-                        </div>
-                        <div className="subHeadList">
-                          <Link
-                            onClick={closeNavbar}
-                            href="/prestation/installation"
-                            className="text-[#2C80EF] text-[15px] block p-4 py-2 font-normal"
-                          >
-                            Instalación
-                          </Link>
-                        </div>
-                        <div className="subHeadList">
-                          <Link
-                            onClick={closeNavbar}
-                            href="/prestation/reparation"
-                            className="text-[#2C80EF] text-[15px] block p-4 py-2 font-normal"
-                          >
-                            Reparación
-                          </Link>
-                        </div>
-                      </div>
-                    )}
-                  </div>
-
-                  {/* Desplegable de Recurso */}
-                  <div ref={dropdownRefResource} className="relative group">
-                    <button
-                      onClick={handleResourceToggle}
-                      className="subMenuHeader text-[15px]  py-1 text-black hover:text-[#2C80EF] hover:bg-[#d7d7d745] rounded-md px-4 flex items-center"
-                    >
-                      Recurso <FaAngleDown className="ml-2" />
-                    </button>
-
-                    {resourceDropdown && (
-                      <div className="navSubParent absolute mt-2 border bg-[#fff] rounded-md shadow-lg z-10">
-                        <div className="subHeadList">
-                          <Link
-                            onClick={closeNavbar}
-                            href="/ressource/aide-en-ligne"
-                            className="text-[15px] block p-4 py-2 font-normal text-[#2C80EF]"
-                          >
-                            Ayuda en línea
-                          </Link>
-                        </div>
-                        <div className="subHeadList">
-                          <Link
-                            onClick={closeNavbar}
-                            href="/ressource/faq"
-                            className="text-[15px] block p-4 py-2 font-normal text-[#2C80EF]"
-                          >
-                            Preguntas Frecuentes
-                          </Link>
-                        </div>
-                        <div className="subHeadList">
-                          <Link
-                            onClick={closeNavbar}
-                            href="/ressource/tutoriels"
-                            className="text-[15px] block p-4 py-2 font-normal text-[#2C80EF]"
-                          >
-                            Blog/Tutorial
-                          </Link>
-                        </div>
-                        <div className="subHeadList">
-                          <Link
-                            onClick={closeNavbar}
-                            href="/ressource/articles"
-                            className="text-[15px] block p-4 py-2 font-normal text-[#2C80EF]"
-                          >
-                            Artículos
-                          </Link>
-                        </div>
-                      </div>
-                    )}
-                  </div>
+                  <Link
+                    onClick={closeNavbar}
+                    href="#FAQ"
+                    className="block text-[15px] py-1 text-black hover:bg-[#d7d7d745] hover:text-[#2C80EF] rounded-md px-4"
+                  >
+                    FAQ
+                  </Link>
 
                   <Link
                     onClick={closeNavbar}
-                    href="/contact"
+                    href="#contact"
                     className="block text-[15px] py-1 text-black hover:bg-[#d7d7d745] hover:text-[#2C80EF] px-4 rounded-md"
                   >
                     Contacto

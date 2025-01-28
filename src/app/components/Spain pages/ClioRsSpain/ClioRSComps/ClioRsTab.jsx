@@ -1,25 +1,24 @@
 import React from "react";
+import CliorsSpainEseence from "../ClioRsSpainEssence";
 
-import ScenicSpainDiesel from "../ScenicSpainDiesel";
-
-const ScenicTab = () => {
+const ClioRsTab = () => {
   return (
     <div>
       <div role="tablist" className="tabs tabs-bordered">
         <input
           type="radio"
-          name="tabScenic"
+          name="tabClioRs"
           role="tab"
           className="tab"
-          aria-label="Scénic 1.5 Diesel"
+          aria-label="Clio RS 1.6 Essence"
           defaultChecked
         />
         <div role="tabpanel" className="tab-content px-0 py-8">
-          <ScenicSpainDiesel />
+          <CliorsSpainEseence />
         </div>
       </div>
     </div>
   );
 };
 
-export default ScenicTab;
+export default ClioRsTab;

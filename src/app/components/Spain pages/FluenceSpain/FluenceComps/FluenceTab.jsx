@@ -1,25 +1,24 @@
 import React from "react";
+import FluenceSpainDiesel from "../FluenceSpainDiesel";
 
-import ScenicSpainDiesel from "../ScenicSpainDiesel";
-
-const ScenicTab = () => {
+const FluenceTab = () => {
   return (
     <div>
       <div role="tablist" className="tabs tabs-bordered">
         <input
           type="radio"
-          name="tabScenic"
+          name="tabFluence"
           role="tab"
           className="tab"
-          aria-label="Scénic 1.5 Diesel"
+          aria-label="Fluence 1.5 Diesel"
           defaultChecked
         />
         <div role="tabpanel" className="tab-content px-0 py-8">
-          <ScenicSpainDiesel />
+          <FluenceSpainDiesel />
         </div>
       </div>
     </div>
   );
 };
 
-export default ScenicTab;
+export default FluenceTab;
