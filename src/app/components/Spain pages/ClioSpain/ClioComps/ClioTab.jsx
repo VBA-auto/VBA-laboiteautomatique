@@ -1,36 +1,36 @@
 import React from "react";
-import CapturSpainEssence from "../CapturSpainEssence";
-import CapturSpainDiesel from "../CapturSpainDiesel";
+import ClioSpainEssence from "../ClioSpainEssence";
+import ClioSpainDiesel from "../ClioSpainDiesel";
 
-const CapturTab = () => {
+const ClioTab = () => {
   return (
     <div>
       <div role="tablist" className="tabs tabs-bordered">
         <input
           type="radio"
-          name="tabCaptur"
+          name="tabClio"
           role="tab"
           className="tab"
-          aria-label="Captur 1.2 Essence"
+          aria-label="Clio IV 1.2 Essence"
           defaultChecked
         />
         <div role="tabpanel" className="tab-content px-0 py-8">
-          <CapturSpainEssence />
+          <ClioSpainEssence />
         </div>
 
         <input
           type="radio"
-          name="tabCaptur"
+          name="tabClio"
           role="tab"
           className="tab"
-          aria-label="Captur 1.5 Diesel"
+          aria-label="Clio IV 1.5 Diesel"
         />
         <div role="tabpanel" className="tab-content px-0 py-8">
-          <CapturSpainDiesel />
+          <ClioSpainDiesel />
         </div>
       </div>
     </div>
   );
 };
 
-export default CapturTab;
+export default ClioTab;

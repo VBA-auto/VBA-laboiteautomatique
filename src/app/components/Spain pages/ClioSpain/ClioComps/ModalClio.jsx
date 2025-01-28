@@ -2,34 +2,31 @@
 import Image from "next/image";
 import React from "react";
 import DynaStocksSpain from "../../DynaStockSpain";
-import CapturModal from "./CapturModal";
+import CapturModal from "./ClioModal";
 
-const ModalCaptur = () => {
+const ModalClio = () => {
   return (
     <>
       <div
         className=""
         onClick={() =>
-          document.getElementById("ModalSpainCapturParent").showModal()
+          document.getElementById("ModalSpainClioParent").showModal()
         }
       >
         <div className="">
           <div className="h-[30px]">
-            {/* <DynaStock carName="Renault Captur" /> */}
-            <DynaStocksSpain carName="Renault Captur" />
+            <DynaStocksSpain carName="Renault Clio" />
           </div>
         </div>
         <div className="px-4 mt-3">
-          <button>
-            <Image
-              width={400}
-              height={300}
-              src="/images/productDefault.webp"
-              alt=""
-              objectFit="cover"
-              className="mx-auto w-[400px] h-[141px]"
-            />
-          </button>
+          <Image
+            width={400}
+            height={300}
+            src="/images/productDefault.webp"
+            alt=""
+            objectFit="cover"
+            className="mx-auto w-[400px] h-[141px]"
+          />
         </div>
 
         <div className="flex items-center border rounded-md gap-3 mt-[20px]  hover:bg-gray-100">
@@ -37,15 +34,15 @@ const ModalCaptur = () => {
             <Image
               width={110}
               height={100}
-              src="/images/calculateur_DC4_Renault_Capture.webp"
+              src="/images/calculateur_DC4_Renault_Clio4.webp"
               alt="calculateur_DC4_Renault_Capture"
               loading="lazy"
-              className=" h-[70px] object-contain ms-2"
+              className=" h-[70px] object-contain ms-3"
             />
           </div>
           <div className="w-2/3">
-            <h2 className="text-[22px] font-medium text-start text-[#374151]">
-              Renault Captur
+            <h2 className=" text-[22px] font-medium text-strt  text-[#374151]">
+              Renault Clio IV
             </h2>
             <p className="text-sm">à partir de 2012 </p>
           </div>
@@ -64,7 +61,7 @@ const ModalCaptur = () => {
           </div>
         </div>
       </div>
-      <dialog id="ModalSpainCapturParent" className="modal ">
+      <dialog id="ModalSpainClioParent" className="modal ">
         <div className="modal-box w-11/12 max-w-5xl bg-white">
           {/* -------------------------------- */}
           <div className="modal-action mt-0">
@@ -80,4 +77,4 @@ const ModalCaptur = () => {
   );
 };
 
-export default ModalCaptur;
+export default ModalClio;

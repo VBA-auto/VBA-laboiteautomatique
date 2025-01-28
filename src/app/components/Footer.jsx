@@ -77,11 +77,11 @@ const Footer = () => {
                   Produits -
                 </Link>
                 <Link
-                  href="/prestation/installation"
+                  href="/retours"
                   className="hover:text-[#2C80EF] text-[15px]"
                 >
                   {" "}
-                  Installation -
+                  Gestion Retours -
                 </Link>
                 <Link
                   href="/ressource/aide-en-ligne"
@@ -95,15 +95,15 @@ const Footer = () => {
                   className="hover:text-[#2C80EF] text-[15px]"
                 >
                   {" "}
-                  Contact -
+                  Contact
                 </Link>
-                <Link
+                {/* <Link
                   href="/selectionnez-votre-vehicule"
                   className="hover:text-[#2C80EF] text-[15px]"
                 >
                   {" "}
                   Disponibilité
-                </Link>
+                </Link> */}
               </div>
               <h3 className="pt-1 text-[15px]">
                 VBA |{" "}

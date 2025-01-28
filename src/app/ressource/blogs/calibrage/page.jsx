@@ -62,7 +62,7 @@ const CalibragePage = () => {
               <Image
                 width={500}
                 height={500}
-                className="w-full mt-4 rounded-md md:h-[432px]"
+                className="w-full mt-4 rounded-md "
                 src="/images/blog-2.webp"
                 alt="calibrage image from VBA"
               />

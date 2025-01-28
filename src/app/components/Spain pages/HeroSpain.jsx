@@ -37,6 +37,7 @@ const HeroSpain = () => {
                         href: "/captur",
                         src: "/images/calculateur_DC4_Renault_Capture.webp",
                         alt: "Renault Captur",
+                        modal: "ModalSpainCapturParent",
                         label: "Renault Captur",
                       },
 
@@ -44,39 +45,42 @@ const HeroSpain = () => {
                         href: "/clio",
                         src: "/images/calculateur_DC4_Renault_Clio4.webp",
                         alt: "Renault Clio IV",
+                        modal: "ModalSpainClioParent",
                         label: "Renault Clio IV",
                       },
                       {
                         href: "/megane",
                         src: "/images/calculateur_DC4_renault-megane.webp",
                         alt: "Renault Megane",
+                        modal: "ModalSpainMeganeParent",
                         label: "Renault Mégane",
                       },
                       {
                         href: "/scenic",
                         src: "/images/calculateur_DC4_renault_Senic.webp",
                         alt: "Renault Scenic",
+                        modal: "",
                         label: "Renault Scénic",
                       },
                       {
                         href: "/fluence",
                         src: "/images/calculateur_DC4_renault-fluence.webp",
                         alt: "Renault Fluence",
+                        modal: "",
                         label: "Renault Fluence",
                       },
                       {
                         href: "/clio-rs",
                         src: "/images/calculateur_DC4_clioRS.webp",
                         alt: "Ford Focus",
+                        modal: "",
                         label: "Renault Clio RS",
                       },
                     ].map((car, index) => (
                       <div key={index} className="carsCard rounded-md">
                         <button
                           onClick={() =>
-                            document
-                              .getElementById("ModalSpainCapturParent")
-                              .showModal()
+                            document.getElementById(`${car?.modal}`).showModal()
                           }
                           className="text-[15px] text-center"
                         >

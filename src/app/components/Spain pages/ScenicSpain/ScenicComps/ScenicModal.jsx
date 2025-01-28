@@ -1,10 +1,8 @@
-import DynaStock from "@/components/DynaStock";
-import ReturnButton from "@/components/ReturnButton";
 import Image from "next/image";
 import React from "react";
-import CapturTab from "./CapturTab";
+import ScenicTab from "./ScenicTab";
 
-const CapturModal = () => {
+const ScenicModal = () => {
   return (
     <div>
       <div className=" justify-center items-start gap-5 ">
@@ -13,30 +11,30 @@ const CapturModal = () => {
             <div className="flex justify-between relative">
               <div className="mx-auto">
                 <h1 className="text-2xl font-semibold text-center text-gray-700 md:block hidden">
-                  Renault Captur
+                  Renault Scénic
                 </h1>
               </div>
             </div>
             <h1 className="text-2xl font-semibold text-center text-gray-700 md:hidden block mt-5 ">
-              Renault Captur
+              Renault Scénic
             </h1>
             <div className="my-3">
               <Image
                 width={300}
                 height={290}
-                src="/images/calculateur_DC4_Renault_Capture.webp"
+                src="/images/calculateur_DC4_Renault_Clio4.webp"
                 className="mx-auto w-[300px] h-[170px] mb-4"
                 alt=""
               />
             </div>
             <p className="text-justify text-[15px]">
-              Verifique la disponibilidad de su módulo (unidad de control de la
-              caja de cambios) para su transmisión automática Renault Captur
-              EDC. Puede ser entregado en blanco o preprogramado (Plug & Play).
-              La instalación es posible dependiendo de su ubicación geográfica.
-              Elija su modelo para el Renault Captur: Gasolina o Diésel. No dude
-              en contactarnos si desea estar absolutamente seguro de que esta
-              pieza es realmente la causa del problema. Para obtener más
+              Verifique la disponibilidad de su módulo (caja de cambios a
+              controlar) para su caja automática EDC Renault Scénic 3. Este
+              puede ser entregado en blanco o directamente programado (Plug &
+              Play). La instalación es posible dependiendo de su ubicación
+              geográfica. Solo existe un modelo para Renault Scénic 3: Diésel.
+              No dude en contactarnos si desea estar absolutamente seguro de que
+              esta pieza es realmente la causa del problema. Para más
               información, puede consultar nuestra ayuda en línea.
             </p>
           </div>
@@ -45,10 +43,10 @@ const CapturModal = () => {
 
       {/* --------------------------- */}
       <div className="mt-5">
-        <CapturTab />
+        <ScenicTab />
       </div>
     </div>
   );
 };
 
-export default CapturModal;
+export default ScenicModal;
