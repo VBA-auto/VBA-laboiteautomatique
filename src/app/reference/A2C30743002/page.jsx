@@ -296,7 +296,7 @@ const SingleSearchView = () => {
                 <div className="text-center">
                   <Link
                     target="_blank"
-                    href="https://buy.stripe.com/6oE3fQ3pC10P5awbKL"
+                    href="https://buy.stripe.com/3cseYy1hu8th1Yk8yY"
                   >
                     <button className="orderButton">Valider</button>
                   </Link>
