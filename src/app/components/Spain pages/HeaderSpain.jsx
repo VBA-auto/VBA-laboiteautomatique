@@ -2,7 +2,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useRef, useEffect, useCallback } from "react";
-import { FaAngleDown } from "react-icons/fa";
+import { RxCross1 } from "react-icons/rx";
+import FaqSpain from "./FAQSpain";
 
 const HeaderSpain = () => {
   const [navbar, setNavbar] = useState(false);
@@ -117,10 +118,16 @@ const HeaderSpain = () => {
                   </Link>
                   <Link
                     onClick={closeNavbar}
-                    href="#FAQ"
+                    href=""
                     className="block text-[15px] py-1 text-black hover:bg-[#d7d7d745] hover:text-[#2C80EF] rounded-md px-4"
                   >
-                    FAQ
+                    <button
+                      onClick={() =>
+                        document.getElementById("FAQModal").showModal()
+                      }
+                    >
+                      FAQ
+                    </button>
                   </Link>
 
                   <Link
@@ -155,6 +162,23 @@ const HeaderSpain = () => {
         </div>
         <hr className="border border-[#c2c2c230]" />
       </section>
+      {/* You can open the modal using document.getElementById('ID').showModal() method */}
+
+      <dialog id="FAQModal" className="modal">
+        <div className="modal-box w-11/12 max-w-5xl bg-white">
+          <div className="modal-action my-0">
+            <form method="dialog">
+              {/* if there is a button, it will close the modal */}
+              <button>
+                <p className="text-sm text-blue-500 border px-2 rounded-md mb-3">
+                  X
+                </p>
+              </button>
+            </form>
+          </div>
+          <FaqSpain />
+        </div>
+      </dialog>
     </main>
   );
 };

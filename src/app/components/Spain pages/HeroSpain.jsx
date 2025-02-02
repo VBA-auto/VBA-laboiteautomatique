@@ -177,7 +177,7 @@ const HeroSpain = () => {
             </div>
           </div>
         </div>
-        <div className="md:my-[60px] my-[30px] md:px-0 px-6">
+        <div className="md:my-[40px] my-[30px] md:px-0 px-6">
           <Review />
         </div>
       </section>

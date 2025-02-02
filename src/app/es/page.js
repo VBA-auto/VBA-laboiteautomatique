@@ -10,7 +10,7 @@ const page = () => {
     <div>
       <HeroSpain />
       <ProduitsSpain />
-      <FaqSpain />
+      {/* <FaqSpain /> */}
       <ContactSpain />
       {/* <SelectOptionsSpain /> */}
     </div>

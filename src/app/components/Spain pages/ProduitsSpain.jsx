@@ -23,7 +23,7 @@ const ProduitsSpain = () => {
 
   return (
     <main id="Productos">
-      <section className="pt-[60px] ">
+      <section className="pb-[40px] ">
         <div className="container mx-auto">
           <div className="product3rdCont">
             <main className="flex  flex-col z-20 relative">

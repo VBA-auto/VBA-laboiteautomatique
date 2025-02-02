@@ -64,8 +64,8 @@ const ContactSpain = () => {
   };
 
   return (
-    <main id="contact">
-      <section className=" py-[60px] md:px-0 px-5">
+    <main id="contact" className="">
+      <section className=" pt-[30px] pb-20 md:px-0 px-5">
         <div className="relative">
           <div className="flex flex-col items-center ">
             <Head>
