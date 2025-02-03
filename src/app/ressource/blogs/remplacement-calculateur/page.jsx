@@ -70,8 +70,8 @@ const RemplacmentPage = () => {
               </p>
 
               <p className="mb-5">
-                A2C30743000 01 K00 - A2C53374830 03 K01 - A2C30743100 -
-                A2C73768907 00 K00
+                <b>A2C30743000 01 K00</b> - <b>A2C53374830 03 K01</b> -
+                A2C30743100 - A2C73768907 00 K00
               </p>
 
               <p className="mb-5">Programmation et clonage</p>
