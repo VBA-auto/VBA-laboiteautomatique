@@ -9,6 +9,7 @@ import HomeSearchVehicle from "./HomeSearchVehicle";
 import { FaWhatsapp } from "react-icons/fa";
 import Footer from "./Footer";
 import Review from "./Review";
+import { FaStar } from "react-icons/fa";
 
 const Hero = () => {
   const pageDescription =
@@ -177,12 +178,42 @@ const Hero = () => {
                     <h2 className="text-[23px] text-[#374151] font-semibold">
                       Calculateur Renault (boite EDC)
                     </h2>
-                    <p className="text-[20px] font-semibold text-[#374151]">
+                    {/* <p className="text-[20px] font-semibold text-[#374151]">
                       Vente et reprogrammation
                     </p>
                     <p className="text-[16px] text-[#374151] mt-1">
                       Garantie constructeur - satisfait ou remboursé
-                    </p>
+                    </p> */}
+                    <div>
+                      <div className="flex items-center justify-center gap-4 mt-3">
+                        <Image
+                          width={80}
+                          height={100}
+                          src="/images/glogo.webp"
+                          alt="hkjhj"
+                          loading="lazy"
+                          className=""
+                        />
+                        <div className="flex text-yellow-400">
+                          {[...Array(5)].map((_, i) => (
+                            <FaStar key={i} />
+                          ))}
+                        </div>
+                      </div>
+                      <div className="flex justify-center items-center gap-2 mt-3  w-1/2 mx-auto bg-blue-50 py-1 rounded-md">
+                        <Image
+                          width={20}
+                          height={100}
+                          src="/images/gicon.webp"
+                          alt="hkjhj"
+                          loading="lazy"
+                          className=""
+                        />
+                        <h2 className="text-sm font-medium">
+                          4.9/5.0 sur Google
+                        </h2>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div className="relative">
