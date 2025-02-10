@@ -210,7 +210,7 @@ const Hero = () => {
                           className=""
                         />
                         <h2 className="text-sm font-medium">
-                          4.9/5.0 sur Google
+                          5.0/5.0 sur Google
                         </h2>
                       </div>
                     </div>
