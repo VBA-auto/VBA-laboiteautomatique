@@ -185,34 +185,36 @@ const Hero = () => {
                       Garantie constructeur - satisfait ou remboursé
                     </p> */}
                     <div>
-                      <div className="flex items-center justify-center gap-4 mt-3">
-                        <Image
-                          width={80}
-                          height={100}
-                          src="/images/glogo.webp"
-                          alt="hkjhj"
-                          loading="lazy"
-                          className=""
-                        />
-                        <div className="flex text-yellow-400">
-                          {[...Array(5)].map((_, i) => (
-                            <FaStar key={i} />
-                          ))}
+                      <Link href="https://g.co/kgs/NKECBdC">
+                        <div className="flex items-center justify-center gap-4 mt-3">
+                          <Image
+                            width={80}
+                            height={100}
+                            src="/images/glogo.webp"
+                            alt="hkjhj"
+                            loading="lazy"
+                            className=""
+                          />
+                          <div className="flex text-yellow-400">
+                            {[...Array(5)].map((_, i) => (
+                              <FaStar key={i} />
+                            ))}
+                          </div>
                         </div>
-                      </div>
-                      <div className="flex justify-center items-center gap-2 mt-3  w-1/2 mx-auto bg-blue-50 py-1 rounded-md">
-                        <Image
-                          width={20}
-                          height={100}
-                          src="/images/gicon.webp"
-                          alt="hkjhj"
-                          loading="lazy"
-                          className=""
-                        />
-                        <h2 className="text-sm font-medium">
-                          5.0/5.0 sur Google
-                        </h2>
-                      </div>
+                        <div className="flex justify-center items-center gap-2 mt-3  w-1/2 mx-auto bg-blue-50 py-1 rounded-md">
+                          <Image
+                            width={20}
+                            height={100}
+                            src="/images/gicon.webp"
+                            alt="hkjhj"
+                            loading="lazy"
+                            className=""
+                          />
+                          <h2 className="text-sm font-medium">
+                            5.0/5.0 sur Google
+                          </h2>
+                        </div>
+                      </Link>
                     </div>
                   </div>
                 </div>
