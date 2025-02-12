@@ -57,7 +57,7 @@ const Verification = () => {
               La vérification régulière des embrayages du 6DCT250 Renault est
               essentielle pour garantir des performances optimales et prévenir
               des dysfonctionnements. Cette opération repose sur deux paramètres
-              clés : les points de touche (touch points) et le coefficient de
+              clés: les points de touche (touch point) et le coefficient de
               friction.
             </p>
 
@@ -80,7 +80,7 @@ const Verification = () => {
                 réinitialisé à <b>0.27</b>, une valeur neutre. Un embrayage neuf
                 affiche une friction entre <b>0.45 et 0.55</b>, tandis qu’un
                 embrayage défectueux tombe sous <b>0.20</b>, signalant des
-                glissements et des a coups.{" "}
+                glissements et des à coups.{" "}
               </p>
             </div>
 
@@ -123,7 +123,7 @@ const Verification = () => {
                 Les positions des tambours sont exprimées en degrés et sont
                 strictement fixes : par exemple,{" "}
                 <b>
-                  1° pour la première vitesseet 280° pour la sixième vitesse
+                  1° pour la première vitesse et 280° pour la sixième vitesse
                 </b>
                 . Lors de changements rapides, le courant peut varier entre{" "}
                 <b>10A et 35A</b>.

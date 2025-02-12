@@ -112,7 +112,7 @@ const Adaptation = () => {
 
             <div className="mb-5">
               <h2 className="mt-5 font-[600]">
-                4. Ajustement des points de touches des embrayages1 et 2
+                4. Ajustement des points de touches des embrayages 1 et 2
               </h2>
               <p className="mt-2">
                 Le test de couple permet de vérifier la qualité de la géométrie
@@ -146,7 +146,7 @@ const Adaptation = () => {
                   deux embrayages ou un seul, selon les besoins. Les erreurs
                   d’adaptation sont fréquentes et peuvent entraîner une
                   réinitialisation des points d’entrée à <b>3 mm</b>, empêchant
-                  le véhicule de rouler : si c’est le cas, une nouvelle
+                  le véhicule de rouler: si c’est le cas, une nouvelle
                   adaptation est nécessaire.
                 </p>
               </div>
@@ -166,7 +166,8 @@ const Adaptation = () => {
                 paramètres du véhicule, tels que la température de l’embrayage
                 et la stabilité du moteur, sont dans des plages normales. Une
                 mauvaise adaptation peut également être causée par un mauvais
-                programme ou un embrayage en mauvais état (embrayage + butée).
+                programme ou un embrayage en mauvais état (embrayage +{" "}
+                <span className="underline">butée</span>).
               </p>
             </div>
 

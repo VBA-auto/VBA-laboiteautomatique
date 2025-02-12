@@ -71,9 +71,11 @@ const CalibragePage = () => {
               Chaque calculateur possède un « soft » ou « programme ». Il y un
               numéro fournisseur qui est souvent le même, un numéro de VDIAG, un
               numéro de programme, un numéro fournisseur, numéro programme,
-              version logiciel et un numéro de calibration ou d’étalonnage. Ci
-              dessus, vous trouverez un exemple avec une valise « CLIP » de chez
-              Renault ainsi que Delphi. Vous trouverez également un exemple des
+              version logiciel et un numéro de{" "}
+              <span className="bg-yellow-100">calibration</span> ou d’
+              <span className="bg-yellow-100">étalonnage</span>. Ci dessus, vous
+              trouverez un exemple avec une valise « CLIP » de chez Renault
+              ainsi que Delphi. Vous trouverez également un exemple des
               différents « software » pour Renault sur cette page :{" "}
               <Link className="text-[#2C80EF]" href="/dc4_soft">
                 https://laboiteautomatique.com/dc4_soft
