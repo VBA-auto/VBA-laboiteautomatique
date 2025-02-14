@@ -8,22 +8,26 @@ import Link from "next/link";
 import { useState } from "react";
 
 const PromoPage = () => {
-  const [loading, setLoading] = useState(false);
-  const [showText, setShowText] = useState(false);
-  const [promoCode, setPromoCode] = useState("RENAULT30"); // Exemple de code promo
+  const [selectedCar, setSelectedCar] = useState(null);
 
-  // Fonction pour simuler un chargement
-  const handleClick = () => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-      setShowText(true);
-    }, 2000); // Simule un chargement de 2 secondes
+  // Coupon codes for each car
+  const carCoupons = {
+    captur: "CAPTUR25",
+    clio: "CLIO25",
+    megane: "MEGANE25",
+    scenic: "SCENIC25",
+    fluence: "FLUENCE25",
+    "clio-rs": "CLIORS25",
   };
 
-  // Fonction pour copier le code promo
-  const copyToClipboard = () => {
-    navigator.clipboard.writeText(promoCode).then(() => {
+  // Function to handle car selection
+  const handleCarClick = (carKey, carHref) => {
+    setSelectedCar({ key: carKey, href: carHref });
+  };
+
+  // Function to copy coupon code to clipboard
+  const copyToClipboard = (text) => {
+    navigator.clipboard.writeText(text).then(() => {
       alert("Code promo copié !");
     });
   };
@@ -35,11 +39,10 @@ const PromoPage = () => {
       <div className="py-28 flex items-center justify-center bg-gradient-to-r from-white to-gray-100">
         <div className="text-center text-gray-700">
           <h1 className="text-3xl font-bold mb-4">
-            🚀 Promotion Exceptionnelle !
+            🚀 Promotion Exceptionnelle
           </h1>
-          <p className="text-normal mb-8">
-            Ne manquez pas notre offre spéciale sur les pièces détachées Renault
-            ! Jusqu&apos;à 10% de réduction sur une sélection de pièces.
+          <p className="text-normal mb-8 text-green-500">
+            Jusqu&apos;au 03/03/2025
           </p>
 
           <div className="mb-8">
@@ -47,49 +50,54 @@ const PromoPage = () => {
               <div className="md:flex gap-5">
                 {[
                   {
+                    key: "captur",
                     href: "/captur",
                     src: "/images/calculateur_DC4_Renault_Capture.webp",
                     alt: "Renault Captur",
                     label: "Renault Captur",
                   },
-
                   {
+                    key: "clio",
                     href: "/clio",
                     src: "/images/calculateur_DC4_Renault_Clio4.webp",
                     alt: "Renault Clio IV",
                     label: "Renault Clio IV",
                   },
                   {
+                    key: "megane",
                     href: "/megane",
                     src: "/images/calculateur_DC4_renault-megane.webp",
                     alt: "Renault Megane",
                     label: "Renault Mégane",
                   },
                   {
+                    key: "scenic",
                     href: "/scenic",
                     src: "/images/calculateur_DC4_renault_Senic.webp",
                     alt: "Renault Scenic",
                     label: "Renault Scénic",
                   },
                   {
+                    key: "fluence",
                     href: "/fluence",
                     src: "/images/calculateur_DC4_renault-fluence.webp",
                     alt: "Renault Fluence",
                     label: "Renault Fluence",
                   },
                   {
+                    key: "clio-rs",
                     href: "/clio-rs",
                     src: "/images/calculateur_DC4_clioRS.webp",
                     alt: "Ford Focus",
                     label: "Renault Clio RS",
                   },
                 ].map((car, index) => (
-                  <div key={index} className="carsCard rounded-md">
-                    <Link
-                      rel="preload"
-                      href={car.href}
-                      className="text-[15px] text-center"
-                    >
+                  <div
+                    key={index}
+                    className="carsCard rounded-md cursor-pointer"
+                    onClick={() => handleCarClick(car.key, car.href)}
+                  >
+                    <div className="text-[15px] text-center">
                       <Image
                         width={110}
                         height={100}
@@ -99,35 +107,44 @@ const PromoPage = () => {
                         className="m-auto h-[70px] object-contain"
                       />
                       {car.label}
-                    </Link>
+                    </div>
                   </div>
                 ))}
               </div>
             </div>
           </div>
 
-          {!showText && (
-            <button
-              onClick={handleClick}
-              disabled={loading}
-              className="bg-white border text-[#2C80EF] px-10 py-3 rounded-md font-[500] text-sm hover:bg-gray-100 transition duration-300"
-            >
-              {loading ? "Chargement..." : "Voir les offres"}
-            </button>
-          )}
+          <div className="mb-4">
+            <p>
+              Cliquez sur votre modèle pour obtenir votre coupon de réduction
+            </p>
+          </div>
 
-          {showText && (
-            <div className="mt-4">
-              <p className="text-normal mb-4">
-                Utilisez le code promo :{" "}
-                <strong className="text-[#2C80EF]">{promoCode}</strong>
+          {/* Display coupon code dynamically */}
+          {selectedCar && (
+            <div className="mt-6">
+              <p className="text-normal font-[500]">
+                Code promo pour {selectedCar.key.toUpperCase()}
               </p>
-              <button
-                onClick={copyToClipboard}
-                className="bg-white border text-[#2C80EF] text-sm px-7 py-3 rounded-md font-[500] hover:bg-gray-100 transition duration-300"
-              >
-                Copier le code
-              </button>
+              <div className="flex items-center justify-center gap-1 my-3">
+                <p className="font-[500] text-blue-500">
+                  {carCoupons[selectedCar.key]}
+                </p>
+                <button
+                  onClick={() => copyToClipboard(carCoupons[selectedCar.key])}
+                  className="text-sm text-gary-700 "
+                >
+                  <span className="border px-1 rounded-md">Copier</span>
+                </button>
+              </div>
+              <div className="mt-5">
+                <Link
+                  href={selectedCar.href}
+                  className="border text-blue-500 px-4 py-2 rounded-md hover:bg-green-600 transition duration-300"
+                >
+                  acheter {selectedCar.key}
+                </Link>
+              </div>
             </div>
           )}
         </div>
