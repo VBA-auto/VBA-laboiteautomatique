@@ -140,7 +140,7 @@ const PromoPage = () => {
               <div className="mt-5">
                 <Link
                   href={selectedCar.href}
-                  className="border text-blue-500 px-4 py-2 rounded-md hover:bg-green-600 transition duration-300"
+                  className="border text-blue-500 px-4 py-2 rounded-md "
                 >
                   acheter {selectedCar.key}
                 </Link>
