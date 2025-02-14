@@ -8,7 +8,8 @@ import Link from "next/link";
 import { useState } from "react";
 
 const PromoPage = () => {
-  const [selectedCar, setSelectedCar] = useState(null);
+  // Track which cars are showing the promo code
+  const [revealedCars, setRevealedCars] = useState({});
 
   // Coupon codes for each car
   const carCoupons = {
@@ -20,9 +21,12 @@ const PromoPage = () => {
     "clio-rs": "CLIORS25",
   };
 
-  // Function to handle car selection
-  const handleCarClick = (carKey, carHref) => {
-    setSelectedCar({ key: carKey, href: carHref });
+  // Function to handle car click (toggle promo code visibility)
+  const handleCarClick = (carKey) => {
+    setRevealedCars((prev) => ({
+      ...prev,
+      [carKey]: !prev[carKey], // Toggle the state for this car
+    }));
   };
 
   // Function to copy coupon code to clipboard
@@ -36,18 +40,22 @@ const PromoPage = () => {
     <main className="">
       <SubHeader />
       <Header />
-      <div className="py-28 flex items-center justify-center bg-gradient-to-r from-white to-gray-100">
+      <div className="pt-28 pb-28 flex items-center justify-center bg-gradient-to-r from-white to-gray-100">
         <div className="text-center text-gray-700">
-          <h1 className="text-3xl font-bold mb-4">
-            🚀 Promotion Exceptionnelle
+          <h1 className="text-2xl font-bold mb-4">
+            🚀 Promotion Exceptionnelle Jusqu&apos;au{" "}
+            <span className="text-green-400">03/03/2025</span>
           </h1>
-          <p className="text-normal mb-8 text-green-500">
-            Jusqu&apos;au 03/03/2025
-          </p>
 
-          <div className="mb-8">
-            <div className="w-full carss">
-              <div className="md:flex gap-5">
+          <div className="mb-4">
+            <p>
+              Cliquez sur votre modèle pour obtenir votre coupon de réduction
+            </p>
+          </div>
+
+          <div className="mb-12">
+            <div className="w-full ms-5 md:ms-0">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
                 {[
                   {
                     key: "captur",
@@ -88,65 +96,68 @@ const PromoPage = () => {
                     key: "clio-rs",
                     href: "/clio-rs",
                     src: "/images/calculateur_DC4_clioRS.webp",
-                    alt: "Ford Focus",
+                    alt: "clio rs",
                     label: "Renault Clio RS",
                   },
                 ].map((car, index) => (
                   <div
                     key={index}
-                    className="carsCard rounded-md cursor-pointer"
-                    onClick={() => handleCarClick(car.key, car.href)}
+                    className="w-[160px] md:flex items-center justify-center bg-white rounded-lg shadow-md py-3 px-5 transition-all duration-300"
+                    onClick={() => handleCarClick(car.key)} // Add onClick here to toggle back
                   >
-                    <div className="text-[15px] text-center">
-                      <Image
-                        width={110}
-                        height={100}
-                        src={car.src}
-                        alt={car.alt}
-                        loading="lazy"
-                        className="m-auto h-[70px] object-contain"
-                      />
-                      {car.label}
-                    </div>
+                    {revealedCars[car.key] ? (
+                      // Show promo code if the car is revealed
+                      <div className="text-center">
+                        <p className="text-lg font-[500] text-blue-500">
+                          {carCoupons[car.key]}
+                        </p>
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation(); // Prevent card toggle when clicking the button
+                            copyToClipboard(carCoupons[car.key]);
+                          }}
+                          className="my-2.5 text-[13px] bg-blue-500 text-white px-4 py-1 rounded-md hover:bg-blue-600 transition duration-300"
+                        >
+                          Copier
+                        </button>
+                        <Link
+                          href={car.href}
+                          className="text-sm underline text-blue-500"
+                        >
+                          acheter {car.key}
+                        </Link>
+                      </div>
+                    ) : (
+                      // Show car image and name if not revealed
+                      <div className="text-center cursor-pointer">
+                        <Image
+                          width={110}
+                          height={100}
+                          src={car.src}
+                          alt={car.alt}
+                          loading="lazy"
+                          className="m-auto h-[70px] object-contain"
+                        />
+                        <p className="text-sm mt-2">
+                          <span className="text-blue-500 hover:underline">
+                            {car.label}
+                          </span>
+                        </p>
+                      </div>
+                    )}
                   </div>
                 ))}
               </div>
             </div>
           </div>
-
-          <div className="mb-4">
-            <p>
-              Cliquez sur votre modèle pour obtenir votre coupon de réduction
-            </p>
+          <div className="">
+            <Link
+              href="/produits"
+              className="border px-6 py-2.5 rounded-md text-blue-500 bg-white hover:bg-gray-50 text-sm"
+            >
+              Voir les produits
+            </Link>
           </div>
-
-          {/* Display coupon code dynamically */}
-          {selectedCar && (
-            <div className="mt-6">
-              <p className="text-normal font-[500]">
-                Code promo pour {selectedCar.key.toUpperCase()}
-              </p>
-              <div className="flex items-center justify-center gap-1 my-3">
-                <p className="font-[500] text-blue-500">
-                  {carCoupons[selectedCar.key]}
-                </p>
-                <button
-                  onClick={() => copyToClipboard(carCoupons[selectedCar.key])}
-                  className="text-sm text-gary-700 "
-                >
-                  <span className="border px-1 rounded-md">Copier</span>
-                </button>
-              </div>
-              <div className="mt-5">
-                <Link
-                  href={selectedCar.href}
-                  className="border text-blue-500 px-4 py-2 rounded-md "
-                >
-                  acheter {selectedCar.key}
-                </Link>
-              </div>
-            </div>
-          )}
         </div>
       </div>
       <Footer />
