@@ -43,12 +43,13 @@ const PromoPage = () => {
       <div className="pt-28 pb-28 flex items-center justify-center bg-gradient-to-r from-white to-gray-100">
         <div className="text-center text-gray-700">
           <h1 className="text-2xl font-bold mb-4">
-            🚀 Promotion Exceptionnelle Jusqu&apos;au{" "}
+            🚀 Promotion Exceptionnelle{" "}
+            <span className="font-normal">Jusqu&apos;au </span>
             <span className="text-green-400">03/03/2025</span>
           </h1>
 
           <div className="mb-4">
-            <p>
+            <p className="font-[500]">
               Cliquez sur votre modèle pour obtenir votre coupon de réduction
             </p>
           </div>
@@ -102,7 +103,9 @@ const PromoPage = () => {
                 ].map((car, index) => (
                   <div
                     key={index}
-                    className="w-[160px] md:flex items-center justify-center bg-white rounded-lg shadow-md py-3 px-5 transition-all duration-300"
+                    className={`w-[160px] h-[120px] md:flex items-center justify-center bg-white rounded-lg shadow-md py-3 px-5 transition-all duration-300 ${
+                      revealedCars[car.key] ? "flip" : ""
+                    }`} // Added flip class
                     onClick={() => handleCarClick(car.key)} // Add onClick here to toggle back
                   >
                     {revealedCars[car.key] ? (

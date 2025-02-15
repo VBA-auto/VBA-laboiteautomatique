@@ -33,6 +33,18 @@ body {
 }
 /* ==================== */
 
+.flip {
+  animation: flip 0.5s forwards;
+}
+
+@keyframes flip {
+  0% {
+    transform: perspective(600px) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(600px) rotateY(360deg);
+  }
+}
 /* ================= */
 .prices {
   font-family: monospace;
