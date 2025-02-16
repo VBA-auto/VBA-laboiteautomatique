@@ -10,14 +10,23 @@ const ConfirmationPage = () => {
 
   useEffect(() => {
     if (sessionId) {
-      fetch(`/api/checkout-session?session_id=${sessionId}`)
+      fetch(`/api/checkout-session?session_id=${sessionId}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
         .then((res) => res.json())
         .then((data) => {
-          setOrderData(data);
-          setLoading(false);
+          if (data.error) {
+            console.error(data.error);
+          } else {
+            setOrderData(data);
+            setLoading(false);
+          }
         })
         .catch((err) => {
-          console.error("Error fetching order:", err);
+          console.error("Error fetching session:", err);
           setLoading(false);
         });
     }

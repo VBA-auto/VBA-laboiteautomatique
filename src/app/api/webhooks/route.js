@@ -15,12 +15,14 @@ export async function POST(req) {
     );
 
     if (event.type === "checkout.session.completed") {
-      console.log("✅ Payment successful!", event.data.object);
+      const session = event.data.object; // Access session info here
 
-      // Client ke redirect korar logic
-      return NextResponse.redirect(
-        `https://laboiteautomatique.com/confirmation?session_id=${event.data.object.id}`
-      );
+      // Log the successful payment session
+      console.log("✅ Payment successful!", session);
+
+      // Redirect to your custom confirmation page
+      const confirmationUrl = `https://laboiteautomatique.com/confirmation?session_id=${session.id}`;
+      return NextResponse.redirect(confirmationUrl);
     }
 
     return NextResponse.json({ received: true });
