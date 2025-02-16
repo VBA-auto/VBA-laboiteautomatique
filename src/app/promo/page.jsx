@@ -14,11 +14,11 @@ const PromoPage = () => {
   // Coupon codes for each car
   const carCoupons = {
     captur: "CAPTUR25",
-    clio: "CLIO25",
-    megane: "MEGANE25",
-    scenic: "SCENIC25",
-    fluence: "FLUENCE25",
-    "clio-rs": "CLIORS25",
+    clio: "CLIO458",
+    megane: "MEGANE628",
+    scenic: "SCENIC776",
+    fluence: "FLUENC709",
+    "clio-rs": "CLIORS665",
   };
 
   // Function to handle car click (toggle promo code visibility for only one at a time)
@@ -42,7 +42,9 @@ const PromoPage = () => {
           <h1 className="text-2xl font-bold mb-4">
             🚀 Promotion Exceptionnelle{" "}
             <span className="font-normal">Jusqu&apos;au </span>
-            <span className="text-green-400 font-[500]">03/03/2025</span>
+            <span className="text-green-400 font-[500] text-[22px]">
+              03/03/2025
+            </span>
           </h1>
 
           <div className="mb-5">
@@ -123,7 +125,7 @@ const PromoPage = () => {
                         </button>
                         <Link
                           href={car.href}
-                          className="text-sm underline text-blue-500"
+                          className="text-sm text-blue-500 hover:font-[500] hover:underline"
                         >
                           Commander
                         </Link>
