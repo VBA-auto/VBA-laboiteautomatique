@@ -10,13 +10,17 @@ const ConfirmationPage = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    const sessionId = new URLSearchParams(window.location.search).get(
+      "session_id"
+    );
+
     if (sessionId) {
-      fetch(`/api/checkout-session`, {
-        method: "POST",
+      fetch("/api/checkout-session", {
+        method: "POST", // POST মেথড ব্যবহার করো
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ session_id: sessionId }),
+        body: JSON.stringify({ session_id: sessionId }), // session_id পাঠাও
       })
         .then((res) => res.json())
         .then((data) => {
@@ -32,7 +36,7 @@ const ConfirmationPage = () => {
           setLoading(false);
         });
     }
-  }, [sessionId]);
+  }, []);
 
   if (loading) return <p>Loading...</p>;
 

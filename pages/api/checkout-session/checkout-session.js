@@ -1,4 +1,3 @@
-// src/app/api/checkout-session/route.js
 import { NextResponse } from "next/server";
 import Stripe from "stripe";
 
@@ -6,22 +5,20 @@ const stripe = new Stripe(process.env.NEXT_SECRET_STRIPE);
 
 export async function POST(req) {
   try {
-    const { line_items, success_url, cancel_url } = await req.json();
+    const { session_id } = await req.json(); // session_id পড়ো
 
-    const session = await stripe.checkout.sessions.create({
-      payment_method_types: ["card"],
-      line_items,
-      mode: "payment",
-      success_url: `${success_url}?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url,
-    });
+    if (!session_id) {
+      return NextResponse.json(
+        { error: "Missing session ID" },
+        { status: 400 }
+      );
+    }
 
-    return NextResponse.json({ id: session.id });
+    // Stripe থেকে সেশন ডেটা ফেচ করো
+    const session = await stripe.checkout.sessions.retrieve(session_id);
+    return NextResponse.json(session);
   } catch (error) {
-    console.error("❌ Error creating session:", error);
-    return NextResponse.json(
-      { error: "Failed to create session" },
-      { status: 400 }
-    );
+    console.error("❌ Error fetching session:", error);
+    return NextResponse.json({ error: "Invalid session ID" }, { status: 400 });
   }
 }
