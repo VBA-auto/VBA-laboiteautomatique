@@ -18,9 +18,6 @@ const nextConfig = {
   experimental: {
     optimizePackageImports: ["@mantine/core", "@mantine/hooks"],
   },
-  env: {
-    NEXT_SECRET_STRIPE: process.env.NEXT_SECRET_STRIPE,
-  },
 };
 
 export default bundleAnalyzer({

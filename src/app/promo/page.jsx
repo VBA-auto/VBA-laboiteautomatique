@@ -33,8 +33,8 @@ const PromoPage = () => {
     });
   };
 
-  const stripe = process.env.NEXT_SECRET_STRIPE;
-  console.log(stripe);
+  const stripeKey = process.env.NEXT_SECRET_STRIPE;
+  console.log("Stripe Secret Key:", stripeKey);
 
   return (
     <main className="">

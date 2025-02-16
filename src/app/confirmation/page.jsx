@@ -1,8 +1,8 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 
-const Confirmation = () => {
+const ConfirmationPage = () => {
   const searchParams = useSearchParams();
   const sessionId = searchParams.get("session_id");
   const [orderData, setOrderData] = useState(null);
@@ -42,4 +42,13 @@ const Confirmation = () => {
   );
 };
 
-export default Confirmation;
+// ✅ Suspense দিয়ে `useSearchParams` Handle করা
+const Page = () => {
+  return (
+    <Suspense fallback={<p>Loading...</p>}>
+      <ConfirmationPage />
+    </Suspense>
+  );
+};
+
+export default Page;
