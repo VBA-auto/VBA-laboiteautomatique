@@ -1,3 +1,4 @@
+// src/app/api/webhooks/route.js
 import { NextResponse } from "next/server";
 import Stripe from "stripe";
 
@@ -11,18 +12,13 @@ export async function POST(req) {
     const event = stripe.webhooks.constructEvent(
       payload,
       sig,
-      process.env.STRIPE_WEBHOOK_SECRET
+      process.env.NEXT_WEBHOOK_SECRET
     );
 
     if (event.type === "checkout.session.completed") {
-      const session = event.data.object; // Access session info here
-
-      // Log the successful payment session
+      const session = event.data.object;
       console.log("✅ Payment successful!", session);
-
-      // Redirect to your custom confirmation page
-      const confirmationUrl = `https://laboiteautomatique.com/confirmation?session_id=${session.id}`;
-      return NextResponse.redirect(confirmationUrl);
+      // এখানে তুমি ডেটাবেস আপডেট বা অন্য কোনো প্রসেসিং করতে পারো
     }
 
     return NextResponse.json({ received: true });

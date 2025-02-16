@@ -1,3 +1,4 @@
+// Confirmation Page
 "use client";
 import { useEffect, useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
@@ -10,11 +11,12 @@ const ConfirmationPage = () => {
 
   useEffect(() => {
     if (sessionId) {
-      fetch(`/api/checkout-session?session_id=${sessionId}`, {
+      fetch(`/api/checkout-session`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
+        body: JSON.stringify({ session_id: sessionId }),
       })
         .then((res) => res.json())
         .then((data) => {
@@ -51,7 +53,6 @@ const ConfirmationPage = () => {
   );
 };
 
-// ✅ Suspense দিয়ে `useSearchParams` Handle করা
 const Page = () => {
   return (
     <Suspense fallback={<p>Loading...</p>}>
