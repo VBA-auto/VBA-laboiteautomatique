@@ -33,6 +33,9 @@ const PromoPage = () => {
     });
   };
 
+  const stripe = process.env.NEXT_SECRET_STRIPE;
+  console.log(stripe);
+
   return (
     <main className="">
       <SubHeader />
