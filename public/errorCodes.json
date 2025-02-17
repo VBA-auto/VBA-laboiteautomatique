@@ -269,5 +269,11 @@
     "description": "Circuit moteur tambour selection de vitesse 2 signal non plausible",
     "subTitle": "Default clutch motor 2",
     "aide": "Problème calculateur"
+  },
+  {
+    "code": "DF384",
+    "description": "Circuit moteur embrayage tension d’alimentation hors tolérances",
+    "subTitle": "Default clutch motor 1",
+    "aide": "Problème calculateur"
   }
 ]

@@ -17,6 +17,8 @@ const ConfirmationPageContent = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  const [{ name, image, price, quantity } = {}] = products;
+
   useEffect(() => {
     if (sessionId) {
       fetch("/api/checkout-session", {
@@ -33,6 +35,7 @@ const ConfirmationPageContent = () => {
             setError(data.error);
           } else {
             setProducts(data.products);
+            console.log(data);
             setCustomerEmail(data.customer_email);
             setCustomerName(data.customer_name);
           }
@@ -53,9 +56,9 @@ const ConfirmationPageContent = () => {
     <>
       <SubHeader />
       <Header />
-      <div className="w-1/2 gap-12 mx-auto flex justify-between pt-[180px]">
+      <div className="md:w-2/3 gap-12 mx-auto md:flex justify-between pt-[180px]">
         {/* Left Panel */}
-        <div className="w-1/2flex items-center justify-center bg-white">
+        <div className="w-1/2flex items-center justify-center bg-white border-r">
           <div className="w-full text-center">
             <IoIosCheckmarkCircleOutline className="mx-auto text-2xl text-green-500" />
             <p className="text-normal text-gray-700 my-2">
@@ -75,34 +78,61 @@ const ConfirmationPageContent = () => {
 
           <div className="space-y-4">
             <div className="list-none pl-0">
-              {products.map((item, index) => (
-                <div key={index} className="flex items-center space-x-4 mb-4">
-                  {/* Product Image */}
-                  {item.image && (
-                    <Image
-                      src={item.image}
-                      alt={item.name}
-                      width={50}
-                      height={50}
-                    />
-                  )}
-                  <div>
-                    <p className="text-sm text-gray-700">
-                      {item.name} - {item.quantity}x
-                    </p>
-                    <p className="text-sm text-gray-500 mt-2">
-                      Email: {customerEmail}
-                    </p>
-                    <p className="text-sm font-bold text-gray-700 mt-2">
-                      Total Paid: €{" "}
-                      {products.reduce(
-                        (total, item) => total + item.price * item.quantity,
-                        0
-                      )}
-                    </p>
-                  </div>
+              <div className="flex items-start space-x-4 mb-4">
+                {/* Product Image */}
+                {image && (
+                  <Image
+                    src={item.image}
+                    alt={item.name}
+                    width={50}
+                    height={50}
+                  />
+                )}
+                <Image
+                  src="/images/prodPic.webp"
+                  // src={item.image}
+                  alt={name}
+                  width={80}
+                  height={50}
+                />
+                <div>
+                  {products.map((item, index) => (
+                    <div
+                      key={index}
+                      className="w-full flex justify-between gap-8"
+                    >
+                      <div className="w-[300px]">
+                        <p className="text-sm text-gray-700 mb-5">
+                          {item.name}
+                        </p>
+                      </div>
+                      <div className="">
+                        <p className="text-sm text-gray-800 font-medium">
+                          €{item.price}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
+
+              <hr />
+              <div className="flex">
+                <div className="w-[358px]">
+                  <p className="text-sm font-[500] text-gray-700 mt-2 ms-24">
+                    Total Paid
+                  </p>
+                </div>
+                <div className="">
+                  <p className="text-sm font-[500] text-gray-700 mt-2 ms-24">
+                    €
+                    {products.reduce(
+                      (total, item) => total + item.price * item.quantity,
+                      0
+                    )}
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
