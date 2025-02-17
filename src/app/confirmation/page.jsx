@@ -29,6 +29,7 @@ const ConfirmationPageContent = () => {
             setError(data.error);
           } else {
             setOrderData(data);
+            console.log(data);
           }
           setLoading(false);
         })
