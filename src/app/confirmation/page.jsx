@@ -1,8 +1,8 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 
-const ConfirmationPage = () => {
+const ConfirmationPageContent = () => {
   const searchParams = useSearchParams();
   const sessionId = searchParams.get("session_id");
   const [orderData, setOrderData] = useState(null);
@@ -57,6 +57,14 @@ const ConfirmationPage = () => {
         <p>❌ No order data found.</p>
       )}
     </div>
+  );
+};
+
+const ConfirmationPage = () => {
+  return (
+    <Suspense fallback={<p>Loading...</p>}>
+      <ConfirmationPageContent />
+    </Suspense>
   );
 };
 
