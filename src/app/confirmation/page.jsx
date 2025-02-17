@@ -1,6 +1,5 @@
-// Confirmation Page
 "use client";
-import { useEffect, useState, Suspense } from "react";
+import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 
 const ConfirmationPage = () => {
@@ -8,37 +7,41 @@ const ConfirmationPage = () => {
   const sessionId = searchParams.get("session_id");
   const [orderData, setOrderData] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    const sessionId = new URLSearchParams(window.location.search).get(
-      "session_id"
-    );
-
     if (sessionId) {
       fetch("/api/checkout-session", {
-        method: "POST", // POST মেথড ব্যবহার করো
+        method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ session_id: sessionId }), // session_id পাঠাও
+        body: JSON.stringify({ session_id: sessionId }),
       })
-        .then((res) => res.json())
+        .then((res) => {
+          if (!res.ok) {
+            throw new Error(`HTTP error! status: ${res.status}`);
+          }
+          return res.json();
+        })
         .then((data) => {
           if (data.error) {
-            console.error(data.error);
+            setError(data.error);
           } else {
             setOrderData(data);
-            setLoading(false);
           }
+          setLoading(false);
         })
         .catch((err) => {
           console.error("Error fetching session:", err);
+          setError(err.message);
           setLoading(false);
         });
     }
-  }, []);
+  }, [sessionId]);
 
   if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error}</p>;
 
   return (
     <div>
@@ -57,12 +60,4 @@ const ConfirmationPage = () => {
   );
 };
 
-const Page = () => {
-  return (
-    <Suspense fallback={<p>Loading...</p>}>
-      <ConfirmationPage />
-    </Suspense>
-  );
-};
-
-export default Page;
+export default ConfirmationPage;
