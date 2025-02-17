@@ -70,27 +70,38 @@ export async function POST(req) {
       );
     }
 
-    // Retrieve the checkout session
+    // Retrieve checkout session
     const session = await stripe.checkout.sessions.retrieve(session_id);
 
     // Fetch line items (purchased products)
     const lineItems = await stripe.checkout.sessions.listLineItems(session_id);
 
-    console.log("✅ Stripe Session Retrieved:", session);
-    console.log("✅ Line Items Retrieved:", lineItems);
+    // Fetch customer details
+    let customer = {};
+    if (session.customer) {
+      customer = await stripe.customers.retrieve(session.customer);
+    }
 
-    // Extract purchased products
-    const products = lineItems.data.map((item) => ({
-      name: item.description, // Product name
-      price: item.amount_total / 100, // Convert from cents to €
-      quantity: item.quantity,
-    }));
+    // Fetch product images and details
+    const products = await Promise.all(
+      lineItems.data.map(async (item) => {
+        const product = await stripe.products.retrieve(item.price.product);
+        return {
+          name: item.description, // Product name
+          price: item.amount_total / 100, // Convert from cents
+          quantity: item.quantity,
+          image: product.images.length > 0 ? product.images[0] : null, // Product image
+        };
+      })
+    );
 
     return NextResponse.json({
       id: session.id,
       amount_total: session.amount_total / 100, // Convert from cents
       payment_status: session.payment_status,
-      products: products, // Sending product details
+      customer_email: session.customer_details?.email || customer.email, // Get email
+      customer_name: customer.name || "Unknown Customer", // Get name
+      products,
     });
   } catch (error) {
     console.error("❌ Server Error fetching session:", error);

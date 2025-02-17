@@ -13,6 +13,11 @@ const nextConfig = {
         hostname: "i.ibb.co",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "files.stripe.com",
+        pathname: "/**",
+      },
     ],
   },
   experimental: {
