@@ -11,7 +11,7 @@ const ConfirmationPageContent = () => {
 
   useEffect(() => {
     if (sessionId) {
-      fetch("/app/api/checkout-session", {
+      fetch("/api/checkout-session", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
