@@ -1,8 +1,9 @@
-// src/app/api/checkout-session/route.js
 import { NextResponse } from "next/server";
 import Stripe from "stripe";
 
-const stripe = new Stripe(process.env.NEXT_SECRET_STRIPE);
+const stripe = new Stripe(process.env.NEXT_SECRET_STRIPE, {
+  apiVersion: "2023-10-16",
+});
 
 export async function POST(req) {
   try {
@@ -17,6 +18,7 @@ export async function POST(req) {
     }
 
     const session = await stripe.checkout.sessions.retrieve(session_id);
+
     if (!session) {
       return NextResponse.json({ error: "Session not found" }, { status: 404 });
     }
