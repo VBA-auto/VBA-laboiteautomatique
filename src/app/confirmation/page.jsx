@@ -63,59 +63,77 @@ const ConfirmationPageContent = () => {
     <>
       <SubHeader />
       <Header />
-      <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-6">
-        <div className="max-w-2xl bg-white p-6 rounded-lg shadow-md text-center">
-          <h1 className="text-2xl font-bold text-green-600">
-            ✅ Payment Successful!
-          </h1>
+      <div className="py-24 bg-gray-50 p-6">
+        <div className="w-1/2 mx-auto bg-white p-6 rounded-lg shadow-md text-center">
           {orderData ? (
             <div className="mt-4 text-gray-700">
-              <p className="text-lg font-semibold">
+              <p className="text-lg font-semibold text-[#2C80EF]">
                 Thank you, {orderData.customer_details.name}! 🎉
               </p>
-              <p>
+              {/* <p>
                 🔹 Order ID: <span className="font-mono">{orderData.id}</span>
-              </p>
-              <p>
-                💰 Amount Paid:{" "}
-                <span className="font-semibold text-lg">
-                  €{orderData.amount_total / 100}
-                </span>
-              </p>
-              <p>
-                📦 Payment Status:{" "}
-                <span className="text-green-500 font-semibold">
-                  {orderData.payment_status}
-                </span>
-              </p>
-              <p>
-                📩 Email:{" "}
-                <span className="font-mono">
-                  {orderData.customer_details.email}
-                </span>
-              </p>
+              </p> */}
 
-              {/* Purchased Products */}
-              <div className="mt-4">
-                <h3 className="text-lg font-bold">🛒 Purchased Items:</h3>
-                <ul className="mt-2 space-y-3">
-                  {orderData.products.map((product, index) => (
-                    <li
-                      key={index}
-                      className="flex items-center space-x-4 border-b pb-2"
-                    >
-                      <Image
-                        src={product.image || "/placeholder.png"}
-                        alt="Product"
-                        className="w-14 h-14 rounded-md"
-                      />
-                      <div>
-                        <p className="font-semibold">{product.name}</p>
-                        <p className="text-gray-500">€{product.price / 100}</p>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
+              <div className="flex">
+                <div className="w-1/2">
+                  {/* Purchased Products */}
+                  <div className="mt-4">
+                    <h3 className="text-lg font-bold text-start">
+                      Purchased Items:
+                    </h3>
+                    <ul className="mt-2">
+                      {orderData.products.map((product, index) => (
+                        <li key={index} className="">
+                          <Image
+                            width="400"
+                            height="300"
+                            src={product.image || "/placeholder.png"}
+                            alt="Product"
+                            className="w-14 h-14 rounded-md"
+                          />
+                          <div className="text-start">
+                            <p className="">
+                              Product Name:{" "}
+                              <span className="font-semibold">
+                                {product.name}
+                              </span>
+                            </p>
+                            <p className="text-gray-700">
+                              Price:{" "}
+                              <span className="font-semibold">
+                                €{product.price / 100}
+                              </span>
+                            </p>
+                            <p className="text-gray-700">
+                              Quantity:{" "}
+                              <span className="font-semibold">
+                                €{product.quantity}
+                              </span>
+                            </p>
+                            <p>
+                              Payment Status:{" "}
+                              <span className="text-green-500 font-semibold">
+                                {orderData.payment_status}
+                              </span>
+                            </p>
+                            <p>
+                              Email:{" "}
+                              <span className="font-mono">
+                                {orderData.customer_details.email}
+                              </span>
+                            </p>
+                          </div>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+                <div className="w-1/2">
+                  {/* <p className="text-start">
+                    welcome Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit. Nobis, quisquam.
+                  </p> */}
+                </div>
               </div>
 
               {/* CTA Buttons */}
@@ -124,14 +142,14 @@ const ConfirmationPageContent = () => {
                   href="/"
                   className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
                 >
-                  🏠 Continue Shopping
+                  Continue Shopping
                 </Link>
-                <Link
+                {/* <Link
                   href="/orders"
                   className="px-4 py-2 bg-gray-700 text-white rounded-lg hover:bg-gray-800 transition"
                 >
                   📜 View Orders
-                </Link>
+                </Link> */}
               </div>
             </div>
           ) : (
