@@ -166,7 +166,7 @@ const PromoPage = () => {
           </div>
         </div>
       </div>
-      <Link href="https://buy.stripe.com/test_3cs28leOw24d25ibII">stripe</Link>
+      <Link href="https://buy.stripe.com/test_eVa14h9ucfV3bFS145">stripe</Link>
       <Footer />
     </main>
   );
