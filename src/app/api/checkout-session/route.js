@@ -20,7 +20,10 @@ export async function POST(req) {
     }
 
     // Try fetching the Stripe session
-    const session = await stripe.checkout.sessions.retrieve(session_id);
+    // const session = await stripe.checkout.sessions.retrieve(session_id);
+    const session = await stripe.checkout.sessions.retrieve(session_id, {
+      expand: ["line_items.data.price.product"], // 🔥 Expanding to get product details
+    });
 
     if (!session) {
       console.error("❌ Session not found in Stripe");
@@ -28,8 +31,22 @@ export async function POST(req) {
     }
 
     console.log("✅ Stripe Session Retrieved:", session);
+    // Extract purchased products
+    const products = session.line_items.data.map((item) => ({
+      id: item.price.product.id,
+      name: item.price.product.name,
+      image: item.price.product.images[0] || null,
+      price: item.price.unit_amount,
+      quantity: item.quantity,
+    }));
 
-    return NextResponse.json(session, { status: 200 });
+    return NextResponse.json({
+      id: session.id,
+      amount_total: session.amount_total,
+      payment_status: session.payment_status,
+      customer_details: session.customer_details,
+      products: products, // Sending products array to frontend
+    });
   } catch (error) {
     console.error("❌ Server Error fetching session:", error);
     return NextResponse.json(
