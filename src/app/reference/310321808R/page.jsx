@@ -18,7 +18,7 @@ import PricingPop1050 from "@/components/PricingPop1050";
 const imagesSlide = [
   "/images/strie-1.webp",
   "/images/strie-2.webp",
-  "/images/strie-3.webp",
+  // "/images/strie-3.webp",
   "/images/strie-4.webp",
 ];
 
@@ -105,7 +105,7 @@ const SingleSearchView = () => {
                   </div>
                   <div className="px-4 mb-2">
                     <p className="text-[14px] text-gray-400">Véhicule</p>
-                    <p className="text-[15px]">Megane IV à partir de 2019</p>
+                    <p className="text-[15px]">Megane IV à partir de 2015</p>
                   </div>
                   <div className="px-4 mb-2">
                     <p className="text-[14px] text-gray-400">
@@ -117,7 +117,7 @@ const SingleSearchView = () => {
                   </div>
                   <div className="px-4 mb-2">
                     <p className="text-[14px] text-gray-400">Référence OE</p>
-                    <p className="text-[15px]">310321808R / A2C73768908</p>
+                    <p className="text-[15px]">310321808R</p>
                   </div>
                 </div>
               </div>

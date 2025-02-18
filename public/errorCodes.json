@@ -272,7 +272,7 @@
   },
   {
     "code": "DF384",
-    "description": "Circuit moteur embrayage tension d’alimentation hors tolérances",
+    "description": "Circuit moteur embrayage 1 tension d’alimentation hors tolérances",
     "subTitle": "Default clutch motor 1",
     "aide": "Problème calculateur"
   }
