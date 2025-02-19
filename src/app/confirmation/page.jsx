@@ -81,20 +81,9 @@ const ConfirmationPageContent = () => {
               <div className="flex items-start space-x-4 mb-4">
                 {/* Product Image */}
                 {image && (
-                  <Image
-                    src={item.image}
-                    alt={item.name}
-                    width={50}
-                    height={50}
-                  />
+                  <Image src={image} alt={name} width={50} height={50} />
                 )}
-                <Image
-                  src="/images/prodPic.webp"
-                  // src={item.image}
-                  alt={name}
-                  width={80}
-                  height={50}
-                />
+
                 <div>
                   {products.map((item, index) => (
                     <div
