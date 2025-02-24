@@ -58,7 +58,7 @@ const ConfirmationPageContent = () => {
       <Header />
       <div className="md:w-2/3 gap-12 mx-auto md:flex justify-between pt-[180px]">
         {/* Left Panel */}
-        <div className="w-1/2flex items-center justify-center bg-white border-r">
+        <div className="w-1/2flex items-center justify-center bg-white">
           <div className="w-full text-center">
             <IoIosCheckmarkCircleOutline className="mx-auto text-2xl text-green-500" />
             <p className="text-normal text-gray-700 my-2">
@@ -108,12 +108,12 @@ const ConfirmationPageContent = () => {
               <hr />
               <div className="flex">
                 <div className="w-[358px]">
-                  <p className="text-sm font-[500] text-gray-700 mt-2 ms-24">
+                  <p className="text-sm font-[500] text-gray-700 mt-2">
                     Total Paid
                   </p>
                 </div>
                 <div className="">
-                  <p className="text-sm font-[500] text-gray-700 mt-2 ms-24">
+                  <p className="text-sm font-[500] text-gray-700 mt-2">
                     €
                     {products.reduce(
                       (total, item) => total + item.price * item.quantity,
