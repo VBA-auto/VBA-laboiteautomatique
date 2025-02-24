@@ -61,26 +61,24 @@ const Faq = () => {
     },
     {
       title: "Est-il possible de tester le calculateur de boîte automatique ?",
-      content:
-        "Oui, il est parfois possible de tester le calculateur en branchant le terminal du véhicule et le terminal de la transmission sans le brancher sur la boîte de vitesses. Avec une valise diagnostic, il est possible de faire tourner les moteurs un et deux pour vérifier leur fonctionnement. Cependant, nous sommes équipés d'un banc d'essai spécialisé qui permet de tester le calculateur de manière précise et fiable.",
+      content: `<b>Oui</b>, il est parfois possible de tester le calculateur en branchant le terminal du véhicule et le terminal de la transmission sans le brancher sur la boîte de vitesses. Avec une valise diagnostic, il est possible de faire tourner les moteurs un et deux pour vérifier leur fonctionnement. Cependant, nous sommes équipés d'un banc d'essai spécialisé qui permet de tester le calculateur de manière précise et fiable.`,
     },
     {
       title:
         "peut-on juste changer le calculateur au lieu de remplacer la boite complète ?",
-      content:
-        "Oui, tout à fait. Sur ce type de boîte de vitesses, le problème peut provenir du calculateur. Les moteurs d'embrayage situés en haut ou en bas (voir photo 'avant derniére question') peuvent également être en cause. En plus du calculateur, cela peut aussi être dû à l'embrayage, la fourchette d'embrayage, les synchros, le drome, ou le programme. En fonction des codes diagnostics et du comportement de la voiture, il est possible de déterminer l'origine précise du problème.",
+      content: `<b>Oui, tout à fait.</b> Sur ce type de boîte de vitesses, le problème peut provenir du calculateur. Les moteurs d'embrayage situés en haut ou en bas (voir photo 'avant derniere question') peuvent également être en cause. En plus du calculateur, cela peut aussi être dû à l'embrayage, la fourchette d'embrayage, les synchros, le drome, ou le programme. En fonction des codes diagnostics et du comportement de la voiture, il est possible de déterminer l'origine précise du problème.`,
     },
     {
       title:
         "Comment connaître la référence de mon calculateur de boîte automatique ?",
       content:
-        "Il suffit de nous communiquer l'année et le modèle de votre véhicule. Cela nous permettra de trouver la référence exacte de votre calculateur. En général, la référence est inscrite directement sur le calculateur lui-même. Les références courantes sont souvent A2C30743000, A2C53374830 03 K01, A2C30743100, ou A2C73768907. <br/>De plus, vous trouverez un code KXX-0X inscrit sur le calculateur.",
+        "Il suffit de nous communiquer l’immatriculation de votre véhicule. Cela nous permettra de trouver la référence exacte de votre calculateur. En général, la référence est inscrite directement sur le calculateur lui-même. Les références courantes sont souvent A2C30743000, A2C53374830 03 K01, A2C30743100, ou A2C73768907. <br/>De plus, vous trouverez un code KXX-0X inscrit sur le calculateur.",
     },
     {
       title:
         "Je n'ai plus de marche arrière, est-ce un problème de calculateur ?",
       content:
-        "Il semble que ce soit généralement un défaut du calculateur. Cependant, parfois, cela peut être dû au moteur d'embrayage situé au-dessous de la boîte de vitesses.",
+        "Il semble que ce soit généralement un défaut du calculateur. Cependant, parfois, cela peut être dû au moteur d'embrayage situé Au-dessous de la boîte de vitesses.",
     },
     {
       title: "Quelles sont les références compatibles avec mon véhicule?",
@@ -213,12 +211,11 @@ const Faq = () => {
     {
       title: "Je n'ai que les vitesses paires, est-ce le calculateur ?",
       content:
-        "Il semble que ce soit généralement un défaut du calculateur. Cependant, parfois, cela peut être dû au moteur d'embrayage situé au-dessus de la boîte de vitesses.",
+        "Il semble que ce soit généralement un défaut du calculateur. Cependant, parfois, cela peut être dû au <b>moteur d'embrayage</b> situé <b>Au-dessous</b> de la boîte de vitesses.",
     },
     {
       title: "Je n'ai que les vitesses impaires, est-ce le calculateur ?",
-      content:
-        "Il semble que ce soit généralement un défaut du calculateur. Cependant, parfois, cela peut être dû au moteur d'embrayage situé au-dessus de la boîte de vitesses.",
+      content: `Il semble que ce soit généralement un défaut du calculateur. Cependant, parfois, cela peut être dû au <b>moteur d'embrayage</b> situé <b>Au-dessous</b> de la boîte de vitesses.`,
     },
     {
       title:
@@ -229,15 +226,14 @@ const Faq = () => {
     },
     {
       title: "Cela peut-il être autre chose que le calculateur ?",
-      content:
-        "Oui, cela peut aussi être dû à d'autres composants. Il faut contrôler l'embrayage, les fourchettes d'embrayage, les deux petits moteurs qui contrôlent le calculateur, les synchros, le sélecteur de vitesse, le capteur de la pédale de frein, ou le capteur du sélecteur.",
+      content: `<b>Oui</b>, cela peut aussi être dû à d'autres composants. Il faut contrôler <b>l'embrayage</b>, les <b>fourchettes d'embrayage</b>, les deux <b>petits moteurs</b> qui contrôlent le calculateur, les synchros, le sélecteur de vitesse, le capteur de la pédale de frein, ou le capteur du sélecteur.`,
       image: "/images/faqAns.webp",
     },
     {
       title:
         "Quels sont les codes défaut pour un calculateur de boîte automatique défectueux ?",
       content:
-        "En général, les codes défauts qui indiquent que le calculateur est défectueux incluent des codes liés à des problèmes de programme ou des défauts électriques. Par exemple, vous pourriez voir des codes de court-circuit, des courts-circuits moteur d'embrayage, des codes de court-circuit à la masse moteur embrayage, des défauts électriques moteur embrayage, des codes de pas électrique non identifié, ou des erreurs de calculateur interne. Tous ces codes électriques montrent que c'est bien le calculateur qui est défectueux.",
+        "En général, les codes défauts qui indiquent que le calculateur est défectueux incluent des codes liés à des problèmes de programme ou des défauts électriques. Par exemple, vous pourriez voir des codes de court-circuit, des courts-circuits moteur d'embrayage, des codes de court-circuit à la masse moteur embrayage, des défauts électriques moteur embrayage, des codes de panne électrique non identifié, ou des erreurs de calculateur interne. Tous ces codes électriques montrent que c'est bien le calculateur qui est défectueux.",
     },
   ];
 
