@@ -30,7 +30,7 @@ const RenaultFluence = () => {
               Calculateur pour Renault Fluence Calculateur vierge ou programmé
             </h1>
           </div>
-          <div className=" justify-center items-start gap-5 ">
+          <div className=" justify-center items-start gap-5 mb-2.5">
             <div className="xl:w-[800px] xl:min-h-[538px] mx-auto ">
               <div className="ms-auto  accent_color py-5 bg-white rounded-md  p-5">
                 <div className="flex justify-between relative">

@@ -49,7 +49,7 @@ const SingleSearchView = () => {
           />
         </Head>
         <div className="container mx-auto">
-          <div className="md:w-3/4 mx-auto ">
+          <div className="md:w-3/4 mx-auto mb-0">
             <div className="md:flex  justify-center ">
               <div className="md:w-[400px] p-4  bg-white rounded-tl-[5px]">
                 <p className="text-[14px] mt-1">

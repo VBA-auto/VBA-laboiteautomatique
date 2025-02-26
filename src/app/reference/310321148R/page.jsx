@@ -51,7 +51,7 @@ const SingleSearchView = () => {
           />
         </Head>
         <div className="container mx-auto">
-          <div className="md:w-3/4 mx-auto ">
+          <div className="md:w-3/4 mx-auto mb-8">
             <div className="md:flex  justify-center ">
               <div className="md:w-[400px] p-4  bg-white rounded-tl-[5px]">
                 <p className="text-[14px] mt-1">
@@ -125,7 +125,7 @@ const SingleSearchView = () => {
                   <div className="px-4 mb-2">
                     <p className="text-[14px] text-gray-400">Référence OE</p>
                     <p className="text-[15px]">
-                      310321148R - A2C30743000 - A2C30743002
+                      310321148R - A2C30743000 - SP03241
                     </p>
                   </div>
                 </div>

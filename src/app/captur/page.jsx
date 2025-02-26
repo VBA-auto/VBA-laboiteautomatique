@@ -27,7 +27,7 @@ const RenaultCapture = () => {
             <h1>Calculateur Renault Captur 1.2 Essence</h1>
             <h2>Calculateur Renault Captur 1.5 Diesel</h2>
           </div>
-          <div className=" justify-center items-start gap-5 ">
+          <div className=" justify-center items-start gap-5 mb-2.5">
             <div className="xl:w-[800px] xl:min-h-[538px] mx-auto ">
               <div className="ms-auto  accent_color py-5 bg-white rounded-md  p-5">
                 <div className="flex justify-between relative">

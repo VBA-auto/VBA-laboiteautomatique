@@ -275,5 +275,17 @@
     "description": "Circuit moteur embrayage 1 tension d’alimentation hors tolérances",
     "subTitle": "Default clutch motor 1",
     "aide": "Problème calculateur"
+  },
+  {
+    "code": "P1839",
+    "description": "Court circuit embrayage",
+    "subTitle": "P1839 short circuit to earth clutch",
+    "aide": "Problème calculateur ou moteur embrayage"
+  },
+  {
+    "code": "P1895",
+    "description": "Court circuit embrayage",
+    "subTitle": "P1839 short circuit to earth clutch",
+    "aide": "Problème calculateur ou moteur embrayage"
   }
 ]
