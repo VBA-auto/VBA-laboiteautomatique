@@ -52,7 +52,7 @@ const SingleVehicleView = () => {
       <Header />
       <section className="produits ">
         <div className="">
-          <div className="container mx-auto">
+          <div className="container mx-auto mb-2.5">
             <div className="xl:w-3/4 mx-auto xl:min-h-[538px]">
               <div className="xl:flex  justify-center">
                 <div className="xl:w-[400px] p-4  bg-white rounded-tl-[5px] ">
