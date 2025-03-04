@@ -46,7 +46,7 @@ const PromoPage = () => {
             🚀 Promotion Exceptionnelle{" "}
             <span className="font-normal">Jusqu&apos;au </span>
             <span className="text-green-400 font-[500] text-[22px]">
-              03/03/2025
+              18/03/2025
             </span>
           </h1>
 
@@ -166,7 +166,7 @@ const PromoPage = () => {
           </div>
         </div>
       </div>
-      <Link href="https://buy.stripe.com/3cs6s21huaBpgTe2ar">stripeeee</Link>
+      {/* <Link href="https://buy.stripe.com/3cs6s21huaBpgTe2ar">stripeeee</Link> */}
       <Footer />
     </main>
   );
