@@ -14,6 +14,7 @@ const ConfirmationPageContent = () => {
   const [products, setProducts] = useState([]);
   const [customerEmail, setCustomerEmail] = useState("");
   const [customerName, setCustomerName] = useState("");
+  const [orderNumber, setOrderNumber] = useState(""); // New state for order number
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -35,9 +36,9 @@ const ConfirmationPageContent = () => {
             setError(data.error);
           } else {
             setProducts(data.products);
-            console.log(data);
             setCustomerEmail(data.customer_email);
             setCustomerName(data.customer_name);
+            setOrderNumber(data.order_number); // Assuming the API returns an order number
           }
           setLoading(false);
         })
@@ -52,13 +53,19 @@ const ConfirmationPageContent = () => {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error}</p>;
 
+  // Calculate the total order amount
+  const orderTotal = products.reduce(
+    (total, item) => total + item.price * item.quantity,
+    0
+  );
+
   return (
     <>
       <SubHeader />
       <Header />
       <div className="md:w-2/3 gap-12 mx-auto md:flex justify-between pt-[180px]">
         {/* Left Panel */}
-        <div className="w-1/2flex items-center justify-center bg-white">
+        <div className="w-1/2 flex items-center justify-center bg-white">
           <div className="w-full text-center">
             <IoIosCheckmarkCircleOutline className="mx-auto text-2xl text-green-500" />
             <p className="text-normal text-gray-700 my-2">
@@ -113,12 +120,11 @@ const ConfirmationPageContent = () => {
                   </p>
                 </div>
                 <div className="">
-                  <p className="text-sm font-[500] text-gray-700 mt-2">
-                    €
-                    {products.reduce(
-                      (total, item) => total + item.price * item.quantity,
-                      0
-                    )}
+                  <p
+                    id="total_commande" // Identifier for order total
+                    className="text-sm font-[500] text-gray-700 mt-2"
+                  >
+                    €{orderTotal}
                   </p>
                 </div>
               </div>
@@ -126,7 +132,15 @@ const ConfirmationPageContent = () => {
           </div>
         </div>
       </div>
+
+      {/* Additional Information */}
       <div className="text-center py-28 pb-[180px]">
+        <p id="customer_email" className="text-sm text-gray-700">
+          Customer Email: {customerEmail}
+        </p>
+        <p id="order_number" className="text-sm text-gray-700">
+          Order Number: {orderNumber}
+        </p>
         <Link
           className="border border-blue-400 px-8 py-2.5 text-sm rounded-md"
           href="/produits"
