@@ -77,7 +77,7 @@ const ConfirmationPageContent = () => {
             <h1 className="font-[500] text-gray-500 text-[15px]">Pay VBA</h1>
             <p
               id="total_commande"
-              className="text-2xl mb-5 font-[600] text-gray-700 mt-2"
+              className="text-4xl prices mb-5 font-[600] text-gray-700 mt-2"
             >
               €{orderTotal}.00
             </p>
@@ -97,12 +97,13 @@ const ConfirmationPageContent = () => {
                       className="w-full flex justify-between gap-8"
                     >
                       <div className="w-[300px]">
-                        <p className="text-sm text-gray-700 mb-5">
-                          {item.name}
+                        <p className="text-sm text-gray-800">{item.name}</p>
+                        <p className="text-[13px] text-gray-400 mb-5">
+                          {item.description}
                         </p>
                       </div>
                       <div className="text-end">
-                        <p className="text-sm text-gray-800 font-medium">
+                        <p className="text-[15px] prices text-gray-800 font-medium">
                           €{item.price}
                         </p>
                       </div>
