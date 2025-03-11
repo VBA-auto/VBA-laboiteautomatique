@@ -7,6 +7,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { IoIosCheckmarkCircleOutline } from "react-icons/io";
 import Link from "next/link";
+import { FaStore } from "react-icons/fa6";
 
 const ConfirmationPageContent = () => {
   const searchParams = useSearchParams();
@@ -14,7 +15,7 @@ const ConfirmationPageContent = () => {
   const [products, setProducts] = useState([]);
   const [customerEmail, setCustomerEmail] = useState("");
   const [customerName, setCustomerName] = useState("");
-  const [orderNumber, setOrderNumber] = useState(""); // New state for order number
+  const [orderNumber, setOrderNumber] = useState("");
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -35,11 +36,10 @@ const ConfirmationPageContent = () => {
           if (data.error) {
             setError(data.error);
           } else {
-            console.log(data);
             setProducts(data.products);
             setCustomerEmail(data.customer_email);
             setCustomerName(data.customer_name);
-            setOrderNumber(data.receipt_number); // Assuming the API returns an order number
+            setOrderNumber(data.receipt_number);
           }
           setLoading(false);
         })
@@ -54,7 +54,6 @@ const ConfirmationPageContent = () => {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error}</p>;
 
-  // Calculate the total order amount
   const orderTotal = products.reduce(
     (total, item) => total + item.price * item.quantity,
     0
@@ -64,35 +63,33 @@ const ConfirmationPageContent = () => {
     <>
       <SubHeader />
       <Header />
-      <div className="md:w-2/3 gap-12 mx-auto md:flex justify-between pt-[180px]">
-        {/* Left Panel */}
-        <div className="w-1/2 flex items-center justify-center bg-white">
-          <div className="w-full text-center">
-            <IoIosCheckmarkCircleOutline className="mx-auto text-2xl text-green-500" />
-            <p className="text-normal text-gray-700 my-2">
-              Thanks for your payment
-            </p>
-            <p className="text-sm text-gray-500">
-              A payment to VBA CALCULATEUR will appear on your statement.
-            </p>
-          </div>
-        </div>
-
+      <div className="md:w-2/3 gap-12 mx-auto md:flex justify-between py-[180px]">
         {/* Right Panel */}
         <div className="w-1/2">
-          <div className="mb-4">
+          <div className="mb-4 flex items-center gap-2">
+            <p className="shadow-md rounded-full border p-1">
+              <FaStore />
+            </p>
             <p className="text-sm text-gray-500 font-[500]">VBA</p>
+          </div>
+          <div className="">
+            <h1 className="font-[500] text-gray-500 text-[15px]">Pay VBA</h1>
+            <p
+              id="total_commande"
+              className="text-2xl mb-5 font-[600] text-gray-700 mt-2"
+            >
+              €{orderTotal}.00
+            </p>
           </div>
 
           <div className="space-y-4">
             <div className="list-none pl-0">
               <div className="flex items-start space-x-4 mb-4">
-                {/* Product Image */}
                 {image && (
                   <Image src={image} alt={name} width={50} height={50} />
                 )}
 
-                <div>
+                <div className="w-[100%]">
                   {products.map((item, index) => (
                     <div
                       key={index}
@@ -103,7 +100,7 @@ const ConfirmationPageContent = () => {
                           {item.name}
                         </p>
                       </div>
-                      <div className="">
+                      <div className="text-end">
                         <p className="text-sm text-gray-800 font-medium">
                           €{item.price}
                         </p>
@@ -115,27 +112,40 @@ const ConfirmationPageContent = () => {
 
               <hr />
               <div className="flex">
-                <div className="w-[358px]">
-                  <p className="text-sm font-[500] text-gray-700 mt-2">
+                <div className="w-1/2">
+                  <p className="ms-16 text-sm font-[500] text-gray-700 mt-2">
                     Total Paid
                   </p>
                 </div>
-                <div className="">
+                <div className="w-1/2 text-end">
                   <p
-                    id="total_commande" // Identifier for order total
+                    id="total_commande"
                     className="text-sm font-[500] text-gray-700 mt-2"
                   >
-                    €{orderTotal}
+                    €{orderTotal}.00
                   </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
+        {/* Left Panel */}
+        <div className="w-1/2 flex items-center justify-center bg-white">
+          <div className="w-full text-center">
+            <IoIosCheckmarkCircleOutline className="mx-auto text-6xl text-green-500" />
+            <p className="text-normal text-gray-700 my-2">
+              Thanks for your payment
+            </p>
+            <p className="text-sm text-gray-500">
+              A payment to VBA CALCULATEUR will appear on your statement.
+            </p>
+          </div>
+        </div>
       </div>
 
       {/* Additional Information */}
-      <div className="text-center py-28 pb-[180px]">
+      <div className="text-center py-28 pb-[180px] sr-only">
         <p id="customer_email" className="text-sm text-gray-700">
           Customer Email: {customerEmail}
         </p>
