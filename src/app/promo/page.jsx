@@ -162,7 +162,7 @@ const PromoPage = () => {
               href="/produits"
               className="border px-4 py-2.5 rounded-md text-blue-500 bg-white hover:bg-gray-50 text-sm"
             >
-              Tout les produits
+              Tous les produits
             </Link>
           </div>
         </div>

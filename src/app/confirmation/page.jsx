@@ -36,6 +36,7 @@ const ConfirmationPageContent = () => {
           if (data.error) {
             setError(data.error);
           } else {
+            console.log(data);
             setProducts(data.products);
             setCustomerEmail(data.customer_email);
             setCustomerName(data.customer_name);
