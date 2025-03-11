@@ -64,7 +64,7 @@ const ConfirmationPageContent = () => {
     <>
       <SubHeader />
       <Header />
-      <div className="md:w-2/3 gap-12 mx-auto md:flex justify-between py-[180px]">
+      <div className="md:w-2/3 gap-12 mx-auto md:flex justify-between py-[120px]">
         {/* Right Panel */}
         <div className="w-1/2">
           <div className="mb-4 flex items-center gap-2">
@@ -77,7 +77,7 @@ const ConfirmationPageContent = () => {
             <h1 className="font-[500] text-gray-500 text-[15px]">Pay VBA</h1>
             <p
               id="total_commande"
-              className="text-4xl prices mb-5 font-[600] text-gray-700 mt-2"
+              className="text-3xl prices mb-5 font-[600] text-gray-700 mt-2"
             >
               €{orderTotal}.00
             </p>
