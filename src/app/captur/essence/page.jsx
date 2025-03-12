@@ -90,7 +90,6 @@ const SingleVehicleViewCapturEssence = () => {
                     <div className="">
                       <VehicleStockDisplay
                         modelName="Renault Captur"
-                        z
                         carType="essence"
                         onStockChange={handleStockChange}
                       />

@@ -23,7 +23,8 @@ const imagesSlide = [
   "/images/cal-normal-4.webp",
   "/images/cal-normal-5.webp",
   "/images/cal-normal-6.webp",
-  "/images/cal-normal-7.webp",
+  // "/images/cal-normal-7.webp",
+  "/images/cal-normal-7Ms.webp",
 ];
 
 const SingleSearchView = () => {
@@ -86,15 +87,13 @@ const SingleSearchView = () => {
                 <div className="mt-2">
                   <div className="px-4 mb-2">
                     <p className="text-[14px] text-gray-400">Désignation</p>
-                    <h1 className="text-[15px]">
-                      Calculateur Scénic 3 - Megane 3
-                    </h1>
+                    <h1 className="text-[15px]">Calculateur Scénic 3</h1>
                   </div>
                   <div className="px-4 mb-2">
                     <p className="text-[14px] text-gray-400">Description</p>
                     <p className="text-[15px]">
                       Module de commande (calculateur) pour boite automatique
-                      EDC Scénic 3 - Mégane 3
+                      EDC Scénic 3
                     </p>
                   </div>
                   <div className="px-4 mb-3">
@@ -102,9 +101,6 @@ const SingleSearchView = () => {
                     <div className="flex flex-wrap gap-2">
                       <button className="bg-gray-100  px-2 text-[14px] text-black mt-1 rounded">
                         Scénic 3
-                      </button>
-                      <button className="bg-gray-100  px-2 text-[14px] text-black mt-1 rounded">
-                        Megane 3 (1.5 Diesel)
                       </button>
                     </div>
                   </div>
@@ -114,19 +110,19 @@ const SingleSearchView = () => {
                   </div>
                   <div className="px-4 mb-2">
                     <p className="text-[14px] text-gray-400">Véhicule</p>
-                    <p className="text-[15px]">Scénic 3 - Mégane 3</p>
+                    <p className="text-[15px]">Scénic 3</p>
                   </div>
                   <div className="px-4 mb-2">
                     <p className="text-[14px] text-gray-400">
                       Info complémentaire{" "}
                     </p>
                     <p className="text-[15px]">
-                      code boite DC4000 - DC4001 moteur 1.5 Diesel
+                      code boite DC4001 moteur 1.5 Diesel
                     </p>
                   </div>
                   <div className="px-4 mb-2">
                     <p className="text-[14px] text-gray-400">Référence OE</p>
-                    <p className="text-[15px]">310320192R</p>
+                    <p className="text-[15px]">310320749R - A2C53374830</p>
                   </div>
                 </div>
               </div>
@@ -145,7 +141,7 @@ const SingleSearchView = () => {
                   </div>
                   <div className="">
                     <p className="text-[15px] text-gray-400">Renault</p>
-                    <h1 className="my-1">Calculateur Scénic 3 - Megane 3</h1>
+                    <h1 className="my-1">Calculateur Scénic 3</h1>
                   </div>
                 </div>
                 <div className="md:w-1/2 flex items-center md:justify-end justify-center gap-5 ">
@@ -201,7 +197,7 @@ const SingleSearchView = () => {
                   </div>
                   <div className="">
                     <p className="text-[15px] text-gray-500">Renault</p>
-                    <h1 className="my-1">Calculateur Scénic 3 - Megane 3</h1>
+                    <h1 className="my-1">Calculateur Scénic 3</h1>
                   </div>
                 </div>
                 <hr />
@@ -290,7 +286,7 @@ const SingleSearchView = () => {
                 <div className="text-center">
                   <Link
                     target="_blank"
-                    href="https://buy.stripe.com/8wM6s2f8k4d146s8yu"
+                    href="https://buy.stripe.com/dR69Eef8kcJx6eA6qZ"
                   >
                     <button className="orderButton">Valider</button>
                   </Link>

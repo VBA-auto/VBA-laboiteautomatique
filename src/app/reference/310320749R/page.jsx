@@ -23,7 +23,8 @@ const imagesSlide = [
   "/images/cal-normal-4.webp",
   "/images/cal-normal-5.webp",
   "/images/cal-normal-6.webp",
-  "/images/cal-normal-7.webp",
+  // "/images/cal-normal-7.webp",
+  "/images/cal-normal-7Ms.webp",
 ];
 
 const SingleSearchView = () => {
@@ -126,7 +127,7 @@ const SingleSearchView = () => {
                   </div>
                   <div className="px-4 mb-2">
                     <p className="text-[14px] text-gray-400">Référence OE</p>
-                    <p className="text-[15px]">310320749R - 310320254R</p>
+                    <p className="text-[15px]">310320749R - A2C53374830</p>
                   </div>
                 </div>
               </div>
