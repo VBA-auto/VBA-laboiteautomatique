@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AideenLigneSearch from "@/components/AideenLigneSearch";
 import Link from "next/link";
+import SeoErrorCodes from "@/components/SeoErrorCodes";
 
 const pageDescription =
   "Vous trouverez ici tous les codes default correspondant à bote de vitesse a controller (clio 4, clio RS, Captur, megane 3, scenic 3)";
@@ -35,6 +36,9 @@ const MiseEnLigne = () => {
                   <p className="text-[24px] font-semibold text-[#374151]">
                     Aide en ligne
                   </p>
+                </div>
+                <div className="">
+                  <SeoErrorCodes />
                 </div>
                 <div className="md:flex md:gap-10 gap-5 mt-8 flexdirection">
                   <div className="xl:w-1/2">
