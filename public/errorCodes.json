@@ -287,5 +287,59 @@
     "description": "Court circuit embrayage",
     "subTitle": "P1839 short circuit to earth clutch",
     "aide": "Problème calculateur ou moteur embrayage"
+  },
+  {
+    "code": "DF457",
+    "description": "Embrayage 2, incohérence position embrayage",
+    "subTitle": "Clutch 2, position mismatch",
+    "aide": "Problème soit calibrage ou programmation ou bien calculateur"
+  },
+  {
+    "code": "DF421",
+    "description": "Tension batterie, sous-tension",
+    "subTitle": "Battery voltage, undervoltage",
+    "aide": "Problème calculateur ou batterie"
+  },
+  {
+    "code": "DF405",
+    "description": "Tension alimentation calculateur, sous-tension",
+    "subTitle": "ECU power supply, undervoltage",
+    "aide": "Problème calculateur ou batterie"
+  },
+  {
+    "code": "DF428",
+    "description": "Circuit capteur régime entrée 1 boîte, court-circuit à la masse",
+    "subTitle": "Gearbox input speed sensor 1 circuit, short to ground",
+    "aide": "Problème calculateur"
+  },
+  {
+    "code": "DF465",
+    "description": "Circuit capteur régime entrée 2 boîte, court-circuit à la masse",
+    "subTitle": "Gearbox input speed sensor 2 circuit, short to ground",
+    "aide": "Problème calculateur"
+  },
+  {
+    "code": "DF234",
+    "description": "Calculateur, anomalie électronique interne",
+    "subTitle": "ECU, internal electronic fault",
+    "aide": "Problème calculateur"
+  },
+  {
+    "code": "DF117",
+    "description": "Information multiplexée vitesse roue AR. gauche, incohérence du signal",
+    "subTitle": "Rear left wheel speed signal, inconsistency",
+    "aide": "Problème calculateur"
+  },
+  {
+    "code": "050616",
+    "description": "Tension alimentation calculateur, niveau haut permanent",
+    "subTitle": "ECU power supply, high voltage",
+    "aide": "Problème calculateur ou batterie"
+  },
+  {
+    "code": "DF454",
+    "description": "Embrayage 1, incohérence position embrayage",
+    "subTitle": "Clutch 1, position mismatch",
+    "aide": "Problème soit calibrage ou programmation ou bien calculateur"
   }
 ]
