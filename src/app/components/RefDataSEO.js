@@ -1,6 +1,8 @@
+// app/shop/[id]/page.jsx
+
 async function fetchProducts() {
   try {
-    const res = await fetch("https://laboiteautomatique.com/errorCodes.json", {
+    const res = await fetch("https://laboiteautomatique.com/searchData.json", {
       cache: "force-cache",
     });
     const products = await res.json();
@@ -11,7 +13,7 @@ async function fetchProducts() {
   }
 }
 
-export default async function SEOErrorCodes() {
+export default async function RefdataSEO() {
   const products = await fetchProducts();
 
   if (!products) {
@@ -25,10 +27,16 @@ export default async function SEOErrorCodes() {
         <ul>
           {products.map((code, index) => (
             <li key={`${code.code}-${index}`}>
-              <h2>{code.code}</h2>
+              <h2>{code.title}</h2>
+              <p>{code.metaTitle}</p>
+              <p>{code.metaDes}</p>
               <p>{code.description}</p>
-              <p>{code.subTitle}</p>
-              <p>{code.aide}</p>
+              <p>{code.compatibility}</p>
+              <p>{code.warranty}</p>
+              <p>{code.brand}</p>
+              <p>{code.vehicle}</p>
+              <p>{code.Info_complémentaire}</p>
+              <p>{code.OE_number}</p>
             </li>
           ))}
         </ul>
