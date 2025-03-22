@@ -14,6 +14,7 @@ import Image from "next/image";
 import { FaArrowRight } from "react-icons/fa";
 import NewVehicleRef from "@/components/NewVehicleRef";
 import PricingPop1050 from "@/components/PricingPop1050";
+import PricngPop790 from "@/components/PricngPop790";
 
 const imagesSlide = [
   "/images/strie-1.webp",
@@ -197,7 +198,7 @@ const SingleSearchView = () => {
                 </div>
                 <hr />
                 <div className="mt-3">
-                  <PricingPop1050 />
+                  <PricngPop790 />
                 </div>
                 <div className="mt-5">
                   {showCoupon ? (
@@ -273,7 +274,7 @@ const SingleSearchView = () => {
                       </>
                     ) : (
                       <p className="text-[#2C80EF] text-[15px] prices">
-                        1069.00 €
+                        999.00 €
                       </p>
                     )}
                   </div>
@@ -281,7 +282,7 @@ const SingleSearchView = () => {
                 <div className="text-center">
                   <Link
                     target="_blank"
-                    href="https://buy.stripe.com/fZe7w69O0aBpcCY3dR"
+                    href="https://buy.stripe.com/6oEbMm3pCgZN6eA02F"
                   >
                     <button className="orderButton">Valider</button>
                   </Link>
