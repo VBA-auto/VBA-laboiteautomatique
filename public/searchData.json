@@ -116,6 +116,33 @@
     ]
   },
   {
+    "ref": "megane4",
+    "stock": 2,
+    "title": "Calculateur Megane IV (1.5 Diesel)",
+    "metaTitle": "Calculateur boîte automatique EDC Renault référence Megane IV",
+    "metaDes": "Commandez ici votre Calculateur pour boîte automatique EDC Renault référence Megane IV, programmation incluse. Vérifiez disponibilité.",
+    "description": "Module de commande (calculateur) pour boite automatique EDC Renault Megane 4",
+    "compatibility": "Megane IV",
+    "warranty": "12 mois neuf",
+    "brand": "Renault",
+    "ogPrice": 1050,
+    "programationPrice": 0,
+    "transportPrice": 19,
+    "save": "0",
+    "finalPrice": 1069,
+    "coupon": "PROG2023",
+    "payLink": "https://buy.stripe.com/fZe7w69O0aBpcCY3dR",
+    "vehicle": "Megane IV à partir de 2019",
+    "Info_complémentaire": "code boite: DC4009",
+    "OE_number": "A2C73768908/09/10/11/12 00K00",
+    "images": [
+      "/images/strie-1.webp",
+      "/images/strie-2.webp",
+      "/images/strie-3.webp",
+      "/images/strie-4.webp"
+    ]
+  },
+  {
     "ref": "310321716R",
     "stock": 2,
     "title": "Calculateur Twingo 3",
