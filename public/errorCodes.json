@@ -341,5 +341,35 @@
     "description": "Embrayage 1, incohérence position embrayage",
     "subTitle": "Clutch 1, position mismatch",
     "aide": "Problème soit calibrage ou programmation ou bien calculateur"
+  },
+  {
+    "code": "P1899 1C ",
+    "description": "Circuit actionneur de tambour – sélecteur de vitesse 2 – Tension au-delà des limites de tolérance",
+    "subTitle": "Drum actuator circuit – gear selector 2 – Voltage beyond tolerance limits",
+    "aide": "batterie faisceau ou problème calculateur"
+  },
+  {
+    "code": "P1899 ",
+    "description": "Circuit actionneur de tambour – sélecteur de vitesse 2 – Tension au-delà des limites de tolérance",
+    "subTitle": "Drum actuator circuit – gear selector 2 – Voltage beyond tolerance limits",
+    "aide": "batterie faisceau ou problème calculateur"
+  },
+  {
+    "code": "P1839 92",
+    "description": "Changement de vitesse – tambour du sélecteur 2 – Signal hors du seuil inférieur ou supérieur ",
+    "subTitle": ": circuit to earth clutch Signal outside lower or upper threshold",
+    "aide": "problème calculateur"
+  },
+  {
+    "code": "P1837 91",
+    "description": "Changement de vitesse – tambour du sélecteur 2 – Signal hors du seuil inférieur ou supérieur ",
+    "subTitle": ": circuit to earth clutch Signal outside lower or upper threshold",
+    "aide": "problème calculateur"
+  },
+  {
+    "code": "P1837",
+    "description": "Changement de vitesse – tambour du sélecteur 2 – Signal hors du seuil inférieur ou supérieur ",
+    "subTitle": ": circuit to earth clutch Signal outside lower or upper threshold",
+    "aide": "problème calculateur"
   }
 ]

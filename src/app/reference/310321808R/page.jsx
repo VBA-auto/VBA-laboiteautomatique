@@ -112,9 +112,7 @@ const SingleSearchView = () => {
                     <p className="text-[14px] text-gray-400">
                       Info complémentaire{" "}
                     </p>
-                    <p className="text-[15px]">
-                      code boite: DC4009, code moteur: K9K 657
-                    </p>
+                    <p className="text-[15px]">code boite: DC4009</p>
                   </div>
                   <div className="px-4 mb-2">
                     <p className="text-[14px] text-gray-400">Référence OE</p>
