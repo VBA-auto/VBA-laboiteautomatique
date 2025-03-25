@@ -108,6 +108,11 @@ export async function GET() {
       priority: 0.8,
     },
     {
+      loc: `${baseUrl}/ressource/blogs/differentes-boites-DC4`,
+      lastmod: new Date().toISOString(),
+      priority: 0.8,
+    },
+    {
       loc: `${baseUrl}/ressource/blogs/adaptation-calibrage`,
       lastmod: new Date().toISOString(),
       priority: 0.8,
@@ -158,7 +163,17 @@ export async function GET() {
       priority: 0.8,
     },
     {
+      loc: `${baseUrl}/clio-5`,
+      lastmod: new Date().toISOString(),
+      priority: 0.8,
+    },
+    {
       loc: `${baseUrl}/clio/essence`,
+      lastmod: new Date().toISOString(),
+      priority: 0.7,
+    },
+    {
+      loc: `${baseUrl}/clio-5/essence`,
       lastmod: new Date().toISOString(),
       priority: 0.7,
     },
@@ -173,7 +188,17 @@ export async function GET() {
       priority: 0.8,
     },
     {
+      loc: `${baseUrl}/megane-4`,
+      lastmod: new Date().toISOString(),
+      priority: 0.8,
+    },
+    {
       loc: `${baseUrl}/megane/essence`,
+      lastmod: new Date().toISOString(),
+      priority: 0.7,
+    },
+    {
+      loc: `${baseUrl}/megane-4/diesel`,
       lastmod: new Date().toISOString(),
       priority: 0.7,
     },

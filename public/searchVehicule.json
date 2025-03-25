@@ -361,5 +361,89 @@
         "payLink": "https://buy.stripe.com/9AQ2bMbW8eRF32ocOm"
       }
     }
+  },
+  {
+    "model": "Renault Megane 4",
+    "model2": "megane-4",
+    "types": {
+      "diesel": {
+        "title": "Calculateur Renault Megane 4 - 1.5 Diesel",
+        "metaTitle": "Calculateur Renault Megane 4 - 1.5 Diesel",
+        "metaDes": "Trouver ici votre calculateur pour boite automatique pour Renault Megane 4 - 1.5 Diesel programmation incluse",
+        "description": "Module de commande (calculateur) Renault Megane 4 Diesel",
+        "etat": "Neuf",
+        "garantie": "12 mois neuf",
+        "marque": "Renault",
+        "carModel": "Megane 4",
+        "carType": "1.6 Essence",
+        "compatibility": "Megane 4",
+        "compliment": "Clio 4 à partir de 2010",
+        "vehicule": "Megane 4 - 1.5 Diesel",
+        "numeroOE": "K00 01",
+        "ogPrice": "1200",
+        "prix": "890",
+        "programmation": "230",
+        "transport": "19",
+        "save": "08",
+        "finalPrice": "1139",
+        "coupon": "PROG2023",
+        "images": [
+          "/images/cal-normal-0.webp",
+          "/images/cal-normal-1.webp",
+          "/images/cal-normal-2.webp",
+          "/images/cal-normal-3.webp",
+          "/images/cal-normal-4.webp",
+          "/images/cal-normal-5.webp",
+          "/images/cal-normal-6.webp",
+          "/images/cal-normal-7.webp"
+        ],
+        "stock": "02",
+        "url": "diesel",
+        "preUrl": "megane-4",
+        "payLink": "https://buy.stripe.com/9AQ2bMbW8eRF32ocOm"
+      }
+    }
+  },
+  {
+    "model": "Renault Clio 5",
+    "model2": "clio-5",
+    "types": {
+      "essence": {
+        "title": "Calculateur Renault Clio 5 - 1.3 essence",
+        "metaTitle": "Calculateur Renault Clio 5 - 1.3 essence",
+        "metaDes": "Trouver ici votre calculateur pour boite automatique pour Renault Clio 5 - 1.3 essence programmation incluse",
+        "description": "Module de commande (calculateur) Renault Clio 5 essence",
+        "etat": "Neuf",
+        "garantie": "12 mois neuf",
+        "marque": "Renault",
+        "carModel": "Clio 5",
+        "carType": "1.3 Essence",
+        "compatibility": "Clio 5",
+        "compliment": "Clio 5 à partir de 2015",
+        "vehicule": "Clio 5 - 1.5 Diesel",
+        "numeroOE": "K00 01",
+        "ogPrice": "1200",
+        "prix": "890",
+        "programmation": "230",
+        "transport": "19",
+        "save": "08",
+        "finalPrice": "1139",
+        "coupon": "PROG2023",
+        "images": [
+          "/images/cal-normal-0.webp",
+          "/images/cal-normal-1.webp",
+          "/images/cal-normal-2.webp",
+          "/images/cal-normal-3.webp",
+          "/images/cal-normal-4.webp",
+          "/images/cal-normal-5.webp",
+          "/images/cal-normal-6.webp",
+          "/images/cal-normal-7.webp"
+        ],
+        "stock": "02",
+        "url": "essence",
+        "preUrl": "clio-5",
+        "payLink": "https://buy.stripe.com/9AQ2bMbW8eRF32ocOm"
+      }
+    }
   }
 ]

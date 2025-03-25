@@ -162,10 +162,12 @@ const Contact = () => {
                     >
                       {/* Remplacez les options par vos propres catégories */}
                       <option value="Renault Captur">Renault Captur</option>
-                      <option value="Renault Megane">Renault Megane</option>
+                      <option value="Renault Megane3">Renault Megane 3</option>
+                      <option value="Renault Megane4">Renault Megane 4</option>
                       <option value="Renault Clio IV">Renault Clio IV</option>
-                      <option value="Renault Scenic">Renault Scenic</option>
+                      <option value="Renault Scenic3">Renault Scenic 3</option>
                       <option value="Renault Fluence">Renault Fluence</option>
+                      <option value="Renault Twingo3">Renault Twingo 3</option>
                     </select>
                   </div>
                 </div>

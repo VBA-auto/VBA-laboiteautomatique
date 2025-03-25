@@ -296,6 +296,40 @@ const Page = () => {
                           </div>
                         </div>
                       </div>
+                      {/* Static Content 6 ( Example) */}
+                      <div className="carousel-item">
+                        <div className="blogsCard flex flex-col">
+                          <div className="media-container">
+                            <Link href="/ressource/blogs/differentes-boites-DC4">
+                              {" "}
+                              <h2 className="text-lg text-gray-700 text-center mb-2 font-medium  hover:underline">
+                                Références des différentes boites DC4
+                              </h2>
+                            </Link>
+                            <div className="w-full h-full">
+                              <Link href="/ressource/blogs/differentes-boites-DC4">
+                                <Image
+                                  width={980}
+                                  height={300}
+                                  src="/images/Blog6.webp"
+                                  alt="calculateur"
+                                  className="rounded-md"
+                                />
+                              </Link>
+                            </div>
+                          </div>
+
+                          <div className="content-container mt-2">
+                            <Link href="/ressource/blogs/differentes-boites-DC4">
+                              <p className=" text-gray-600">
+                                Vous trouverez ci-dessous les différents codes
+                                de boites en fonction de leur modèle...
+                                <span className="text-blue-500">lire plus</span>
+                              </p>
+                            </Link>
+                          </div>
+                        </div>
+                      </div>
                       {/* Add more static content as needed */}
                     </Slider>
                   </div>
