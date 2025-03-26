@@ -473,7 +473,7 @@ const Produits = () => {
                           src="/images/twingo-3.webp"
                           alt="calculateur_DC4_Renault_Capture"
                           loading="lazy"
-                          className=" h-[65px] ms-3 object-contain"
+                          className=" h-[50px] my-2 ms-3 object-contain"
                         />
                       </div>
                       <div className="w-2/3">
