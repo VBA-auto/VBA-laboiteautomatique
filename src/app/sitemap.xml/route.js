@@ -242,6 +242,16 @@ export async function GET() {
       lastmod: new Date().toISOString(),
       priority: 0.7,
     },
+    {
+      loc: `${baseUrl}/twingo-3`,
+      lastmod: new Date().toISOString(),
+      priority: 0.7,
+    },
+    {
+      loc: `${baseUrl}/twingo-3/essence`,
+      lastmod: new Date().toISOString(),
+      priority: 0.7,
+    },
     // {
     //   loc: `${baseUrl}/es`,
     //   lastmod: new Date().toISOString(),

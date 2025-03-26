@@ -14,15 +14,23 @@ import { FaArrowRight } from "react-icons/fa";
 import PricngPop890 from "@/components/PricngPop890";
 import PricingPop1210 from "@/components/PricingPop1210";
 
+// const imagesSlide = [
+//   "/images/cal-normal-0.webp",
+//   "/images/cal-normal-1.webp",
+//   "/images/cal-normal-2.webp",
+//   "/images/cal-normal-3.webp",
+//   "/images/cal-normal-4.webp",
+//   "/images/cal-normal-5.webp",
+//   "/images/cal-normal-6.webp",
+//   "/images/cal-normal-7.webp",
+// ];
 const imagesSlide = [
-  "/images/cal-normal-0.webp",
-  "/images/cal-normal-1.webp",
-  "/images/cal-normal-2.webp",
-  "/images/cal-normal-3.webp",
-  "/images/cal-normal-4.webp",
-  "/images/cal-normal-5.webp",
-  "/images/cal-normal-6.webp",
-  "/images/cal-normal-7.webp",
+  "/images/plat-1.webp",
+  "/images/plat-2.webp",
+  "/images/plat-3.webp",
+  "/images/plat-4.webp",
+  "/images/plat-5.webp",
+  "/images/plat-6.webp",
 ];
 
 const SingleVehicleView = () => {
@@ -135,7 +143,7 @@ const SingleVehicleView = () => {
                     </div>
                     <div className="px-4 mb-3">
                       <p className="text-[14px] text-gray-400">Référence OE</p>
-                      <p className="text-[15px]">A2C30743000 - 01 K00</p>
+                      <p className="text-[15px]">DW5</p>
                     </div>
                   </div>
                 </div>

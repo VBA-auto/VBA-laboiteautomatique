@@ -402,6 +402,7 @@ const Produits = () => {
                     </div>
                   </div>
                 </div>
+
                 {/* Product 8 */}
 
                 <div className="lg:w-full rounded-md  shadow-sm p-5 bg-white/50 singleProductCard accent_color">
@@ -412,7 +413,7 @@ const Produits = () => {
                     <Image
                       width={700}
                       height={300}
-                      src="/images/clio-5.webp"
+                      src="/images/clio-5-plat.webp"
                       alt=""
                       objectFit="cover"
                       className="mx-auto w-[400px] h-[141px]"
@@ -442,6 +443,51 @@ const Produits = () => {
                     <div className="w-1/2 border border-blue-300 rounded-md text-center py-2 px-2 shadow-sm hover:bg-[#2C80EF] hover:text-white">
                       <Link href="/clio-5/essence" className=" text-[15px]">
                         <h2>1.3 Essence</h2>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Product 9 */}
+
+                <div className="lg:w-full rounded-md  shadow-sm p-5 bg-white/50 singleProductCard accent_color">
+                  <div className="h-[30px]">
+                    <DynaProdStock carName="Renault Twingo 3" />
+                  </div>
+                  <div className="px-4 mt-3">
+                    <Image
+                      width={700}
+                      height={300}
+                      src="/images/megane4.webp"
+                      alt=""
+                      objectFit="cover"
+                      className="mx-auto w-[400px] h-[141px]"
+                    />
+                  </div>
+                  <Link href="/twingo-3">
+                    <div className="flex items-center border rounded-md gap-3 mt-[20px] hover:bg-gray-100">
+                      <div className="w-1/3">
+                        <Image
+                          width={110}
+                          height={100}
+                          src="/images/twingo-3.webp"
+                          alt="calculateur_DC4_Renault_Capture"
+                          loading="lazy"
+                          className=" h-[65px] ms-3 object-contain"
+                        />
+                      </div>
+                      <div className="w-2/3">
+                        <h2 className="text-[22px] font-medium text-start transition-transform text-[#374151] ">
+                          Renault Twingo 3
+                        </h2>
+                        <p className="text-sm">à partir de 2016</p>
+                      </div>
+                    </div>
+                  </Link>
+                  <div className="flex justify-start gap-5 mt-5">
+                    <div className="w-1/2 border border-blue-300 rounded-md text-center py-2 px-0 shadow-sm hover:bg-[#2C80EF] hover:text-white">
+                      <Link href="/twingo-3/essence" className=" text-[15px]">
+                        <h2>0.9 – 1.0 Essence</h2>
                       </Link>
                     </div>
                   </div>

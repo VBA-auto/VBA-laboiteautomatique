@@ -14,15 +14,21 @@ import { FaArrowRight } from "react-icons/fa";
 import PricngPop890 from "@/components/PricngPop890";
 import PricngPop790 from "@/components/PricngPop790";
 
+// const imagesSlide = [
+//   "/images/cal-normal-0.webp",
+//   "/images/cal-normal-1.webp",
+//   "/images/cal-normal-2.webp",
+//   "/images/cal-normal-3.webp",
+//   "/images/cal-normal-4.webp",
+//   "/images/cal-normal-5.webp",
+//   "/images/cal-normal-6.webp",
+//   "/images/cal-normal-7.webp",
+// ];
 const imagesSlide = [
-  "/images/cal-normal-0.webp",
-  "/images/cal-normal-1.webp",
-  "/images/cal-normal-2.webp",
-  "/images/cal-normal-3.webp",
-  "/images/cal-normal-4.webp",
-  "/images/cal-normal-5.webp",
-  "/images/cal-normal-6.webp",
-  "/images/cal-normal-7.webp",
+  "/images/strie-1.webp",
+  "/images/strie-2.webp",
+  // "/images/strie-3.webp",
+  "/images/strie-4.webp",
 ];
 
 const SingleVehicleView = () => {
@@ -136,12 +142,12 @@ const SingleVehicleView = () => {
                       <p className="text-[14px] text-gray-400">
                         Info complémentaire
                       </p>
-                      <p className="text-[15px]">Mégane de 2015</p>
+                      <p className="text-[15px]">Mégane 4 à partir de 2015</p>
                     </div>
                     <div className="px-4 mb-3">
                       <p className="text-[14px] text-gray-400">Référence OE</p>
                       <p className="text-[15px]">
-                        A2C53374830 03/K03/K02/K01/K00
+                        A2C73768908/09/10/11/12 K00 00
                       </p>
                     </div>
                   </div>

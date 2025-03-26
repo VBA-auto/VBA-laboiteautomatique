@@ -445,5 +445,47 @@
         "payLink": "https://buy.stripe.com/9AQ2bMbW8eRF32ocOm"
       }
     }
+  },
+  {
+    "model": "Renault Twingo 3",
+    "model2": "twingo-3",
+    "types": {
+      "essence": {
+        "title": "Calculateur Renault Twingo 3 - 0.9 essence",
+        "metaTitle": "Calculateur Renault Twingo 3 - 0.9 essence",
+        "metaDes": "Trouver ici votre calculateur pour boite automatique pour Renault Twingo 3 - 0.9 essence programmation incluse",
+        "description": "Module de commande (calculateur) Renault Twingo 3 essence",
+        "etat": "Neuf",
+        "garantie": "12 mois neuf",
+        "marque": "Renault",
+        "carModel": "Twingo 3",
+        "carType": "0.9 Essence",
+        "compatibility": "Twingo 3",
+        "compliment": "Twingo 3 à partir de 2016",
+        "vehicule": "Twingo 3 - 0.9 Essence",
+        "numeroOE": "K00 01",
+        "ogPrice": "1200",
+        "prix": "890",
+        "programmation": "230",
+        "transport": "19",
+        "save": "08",
+        "finalPrice": "1139",
+        "coupon": "PROG2023",
+        "images": [
+          "/images/cal-normal-0.webp",
+          "/images/cal-normal-1.webp",
+          "/images/cal-normal-2.webp",
+          "/images/cal-normal-3.webp",
+          "/images/cal-normal-4.webp",
+          "/images/cal-normal-5.webp",
+          "/images/cal-normal-6.webp",
+          "/images/cal-normal-7.webp"
+        ],
+        "stock": "04",
+        "url": "essence",
+        "preUrl": "twingo-3",
+        "payLink": "https://buy.stripe.com/9AQ2bMbW8eRF32ocOm"
+      }
+    }
   }
 ]
