@@ -81,20 +81,22 @@ const SingleSearchView = () => {
                 <div className="mt-2">
                   <div className="px-4 mb-2">
                     <p className="text-[14px] text-gray-400">Désignation</p>
-                    <h1 className="text-[15px]">Calculateur Scenic 3</h1>
+                    <h1 className="text-[15px]">
+                      Calculateur Scenic - Megane 4
+                    </h1>
                   </div>
                   <div className="px-4 mb-2">
                     <p className="text-[14px] text-gray-400">Description</p>
                     <p className="text-[15px]">
                       Module de commande (calculateur) pour boite automatique
-                      EDC Scenic 3 - Megane 4
+                      EDC Scenic - Megane 4
                     </p>
                   </div>
                   <div className="px-4 mb-3">
                     <p className="text-[14px] text-gray-400">Compatibilité</p>
                     <div className="flex flex-wrap gap-2">
                       <button className="bg-gray-100  px-2 text-[14px] text-black mt-1 rounded">
-                        Scenic 3
+                        Scenic
                       </button>
                       <button className="bg-gray-100  px-2 text-[14px] text-black mt-1 rounded">
                         Megane 4
@@ -107,13 +109,13 @@ const SingleSearchView = () => {
                   </div>
                   <div className="px-4 mb-2">
                     <p className="text-[14px] text-gray-400">Véhicule</p>
-                    <p className="text-[15px]">Scenic 3</p>
+                    <p className="text-[15px]">Scenic - Megane 4</p>
                   </div>
                   <div className="px-4 mb-2">
                     <p className="text-[14px] text-gray-400">
                       Info complémentaire{" "}
                     </p>
-                    <p className="text-[15px]">Scenic 3</p>
+                    <p className="text-[15px]">Scenic - Megane 4</p>
                   </div>
                   <div className="px-4 mb-2">
                     <p className="text-[14px] text-gray-400">Référence OE</p>
@@ -136,7 +138,7 @@ const SingleSearchView = () => {
                   </div>
                   <div className="">
                     <p className="text-[15px] text-gray-400">Renault</p>
-                    <h1 className="my-1">Calculateur Captur - Clio 4</h1>
+                    <h1 className="my-1">Calculateur Scenic - Megane 4</h1>
                   </div>
                 </div>
                 <div className="md:w-1/2 flex items-center md:justify-end justify-center gap-5 ">
