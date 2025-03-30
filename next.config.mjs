@@ -10,6 +10,11 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
+        hostname: "laboiteautomatique.com",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
         hostname: "i.ibb.co",
         pathname: "/**",
       },

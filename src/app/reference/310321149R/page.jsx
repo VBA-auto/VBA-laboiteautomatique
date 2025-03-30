@@ -16,12 +16,12 @@ import NewVehicleRef from "@/components/NewVehicleRef";
 import PricingPop1050 from "@/components/PricingPop1050";
 
 const imagesSlide = [
-  "/images/plat-1.webp",
-  "/images/plat-2.webp",
-  "/images/plat-3.webp",
-  "/images/plat-4.webp",
-  "/images/plat-5.webp",
-  "/images/plat-6.webp",
+  "https://laboiteautomatique.com/images/plat-1.webp",
+  "https://laboiteautomatique.com/images/plat-2.webp",
+  "https://laboiteautomatique.com/images/plat-3.webp",
+  "https://laboiteautomatique.com/images/plat-4.webp",
+  "https://laboiteautomatique.com/images/plat-5.webp",
+  "https://laboiteautomatique.com/images/plat-6.webp",
 ];
 
 const SingleSearchView = () => {

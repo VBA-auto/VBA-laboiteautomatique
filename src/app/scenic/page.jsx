@@ -54,8 +54,9 @@ const RenaultScenic = () => {
                   <Image
                     width={290}
                     height={290}
-                    src="/images/calculateur_DC4_renault_Senic.webp"
+                    src="https://laboiteautomatique.com/images/calculateur_DC4_renault_Senic.webp"
                     className="mx-auto w-[280px] h-[165px] mb-5"
+                    priority={true}
                     alt=""
                   />
                 </div>
@@ -114,7 +115,7 @@ const RenaultScenic = () => {
                       src="https://i.ibb.co/k8C1Y2Y/Group-1074-removebg-preview.png"
                       alt="Calculateur avec carton"
                       className="w-[100px] h-[80px]"
-                      loading="lazy"
+                      priority={true}
                     />
                     <div className="text-start">
                       <h2 className="text-lg font-semibold text-gray-700">

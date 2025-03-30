@@ -82,9 +82,10 @@ const Produits = () => {
                     <Image
                       width={400}
                       height={300}
-                      src="/images/productDefault.webp"
+                      src="https://laboiteautomatique.com/images/productDefault.webp"
                       alt=""
                       objectFit="cover"
+                      priority={true}
                       className="mx-auto w-[400px] h-[141px]"
                     />
                   </div>
@@ -94,9 +95,9 @@ const Produits = () => {
                         <Image
                           width={110}
                           height={100}
-                          src="/images/calculateur_DC4_Renault_Capture.webp"
+                          src="https://laboiteautomatique.com/images/calculateur_DC4_Renault_Capture.webp"
                           alt="calculateur_DC4_Renault_Capture"
-                          loading="lazy"
+                          priority={true}
                           className=" h-[70px] object-contain ms-2"
                         />
                       </div>
@@ -133,9 +134,10 @@ const Produits = () => {
                     <Image
                       width={400}
                       height={300}
-                      src="/images/productDefault.webp"
+                      src="https://laboiteautomatique.com/images/productDefault.webp"
                       alt=""
                       objectFit="cover"
+                      priority={true}
                       className="mx-auto w-[400px] h-[141px]"
                     />
                   </div>
@@ -145,9 +147,9 @@ const Produits = () => {
                         <Image
                           width={110}
                           height={100}
-                          src="/images/calculateur_DC4_Renault_Clio4.webp"
+                          src="https://laboiteautomatique.com/images/calculateur_DC4_Renault_Clio4.webp"
                           alt="calculateur_DC4_Renault_Capture"
-                          loading="lazy"
+                          priority={true}
                           className=" h-[70px] object-contain ms-3"
                         />
                       </div>
@@ -184,9 +186,10 @@ const Produits = () => {
                     <Image
                       width={400}
                       height={300}
-                      src="/images/productMegane.webp"
+                      src="https://laboiteautomatique.com/images/productMegane.webp"
                       alt=""
                       objectFit="cover"
+                      priority={true}
                       className="mx-auto w-[400px] h-[141px]"
                     />
                   </div>
@@ -196,9 +199,9 @@ const Produits = () => {
                         <Image
                           width={110}
                           height={100}
-                          src="/images/calculateur_DC4_renault-megane.webp"
+                          src="https://laboiteautomatique.com/images/calculateur_DC4_renault-megane.webp"
                           alt="calculateur_DC4_Renault_Capture"
-                          loading="lazy"
+                          priority={true}
                           className=" h-[70px] object-contain"
                         />
                       </div>
@@ -234,9 +237,10 @@ const Produits = () => {
                     <Image
                       width={400}
                       height={300}
-                      src="/images/productScenic.webp"
+                      src="https://laboiteautomatique.com/images/productScenic.webp"
                       alt=""
                       objectFit="cover"
+                      priority={true}
                       className="mx-auto w-[400px] h-[141px]"
                     />
                   </div>
@@ -246,9 +250,9 @@ const Produits = () => {
                         <Image
                           width={110}
                           height={100}
-                          src="/images/calculateur_DC4_renault_Senic.webp"
+                          src="https://laboiteautomatique.com/images/calculateur_DC4_renault_Senic.webp"
                           alt="calculateur_DC4_Renault_Capture"
-                          loading="lazy"
+                          priority={true}
                           className=" h-[65px] ms-3 object-contain"
                         />
                       </div>
@@ -278,9 +282,10 @@ const Produits = () => {
                     <Image
                       width={400}
                       height={300}
-                      src="/images/productDefault.webp"
+                      src="https://laboiteautomatique.com/images/productDefault.webp"
                       alt=""
                       objectFit="cover"
+                      priority={true}
                       className="mx-auto w-[400px] h-[141px]"
                     />
                   </div>
@@ -290,9 +295,9 @@ const Produits = () => {
                         <Image
                           width={110}
                           height={100}
-                          src="/images/calculateur_DC4_renault-fluence.webp"
+                          src="https://laboiteautomatique.com/images/calculateur_DC4_renault-fluence.webp"
                           alt="calculateur_DC4_Renault_Capture"
-                          loading="lazy"
+                          priority={true}
                           className=" h-[65px] ms-3 object-contain"
                         />
                       </div>
@@ -323,9 +328,10 @@ const Produits = () => {
                     <Image
                       width={400}
                       height={300}
-                      src="/images/productDefault.webp"
+                      src="https://laboiteautomatique.com/images/productDefault.webp"
                       alt=""
                       objectFit="cover"
+                      priority={true}
                       className="mx-auto w-[400px] h-[141px]"
                     />
                   </div>
@@ -335,9 +341,9 @@ const Produits = () => {
                         <Image
                           width={110}
                           height={100}
-                          src="/images/calculateur_DC4_clioRS.webp"
+                          src="https://laboiteautomatique.com/images/calculateur_DC4_clioRS.webp"
                           alt="calculateur_DC4_Renault_Capture"
-                          loading="lazy"
+                          priority={true}
                           className=" h-[65px] ms-3 object-contain"
                         />
                       </div>
@@ -368,9 +374,10 @@ const Produits = () => {
                     <Image
                       width={700}
                       height={300}
-                      src="/images/megane4.webp"
+                      src="https://laboiteautomatique.com/images/megane4.webp"
                       alt=""
                       objectFit="cover"
+                      priority={true}
                       className="mx-auto w-[400px] h-[141px]"
                     />
                   </div>
@@ -380,9 +387,9 @@ const Produits = () => {
                         <Image
                           width={110}
                           height={100}
-                          src="/images/megane_4_car.webp"
+                          src="https://laboiteautomatique.com/images/megane_4_car.webp"
                           alt="calculateur_DC4_Renault_Capture"
-                          loading="lazy"
+                          priority={true}
                           className=" h-[65px] ms-3 object-contain"
                         />
                       </div>
@@ -413,9 +420,10 @@ const Produits = () => {
                     <Image
                       width={700}
                       height={300}
-                      src="/images/clio-5-plat.webp"
+                      src="https://laboiteautomatique.com/images/clio-5-plat.webp"
                       alt=""
                       objectFit="cover"
+                      priority={true}
                       className="mx-auto w-[400px] h-[141px]"
                     />
                   </div>
@@ -425,9 +433,9 @@ const Produits = () => {
                         <Image
                           width={110}
                           height={100}
-                          src="/images/clio_5.webp"
+                          src="https://laboiteautomatique.com/images/clio_5.webp"
                           alt="calculateur_DC4_Renault_Capture"
-                          loading="lazy"
+                          priority={true}
                           className=" h-[65px] ms-3 object-contain"
                         />
                       </div>
@@ -458,9 +466,10 @@ const Produits = () => {
                     <Image
                       width={700}
                       height={300}
-                      src="/images/megane4.webp"
+                      src="https://laboiteautomatique.com/images/megane4.webp"
                       alt=""
                       objectFit="cover"
+                      priority={true}
                       className="mx-auto w-[400px] h-[141px]"
                     />
                   </div>
@@ -470,9 +479,9 @@ const Produits = () => {
                         <Image
                           width={110}
                           height={100}
-                          src="/images/twingo-3.webp"
+                          src="https://laboiteautomatique.com/images/twingo-3.webp"
                           alt="calculateur_DC4_Renault_Capture"
-                          loading="lazy"
+                          priority={true}
                           className=" h-[50px] my-2 ms-3 object-contain"
                         />
                       </div>

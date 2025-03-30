@@ -12,18 +12,19 @@ import { BsCopy } from "react-icons/bs";
 import VehicleStockDisplay from "@/components/VehicleStockDisplay";
 import { FaArrowRight } from "react-icons/fa";
 import PricngPop890 from "@/components/PricngPop890";
+import VehicleImages from "@/components/Cal-NormalImg";
 
-const imagesSlide = [
-  "/images/cal-normal-0.webp",
-  "/images/cal-normal-1.webp",
-  "/images/cal-normal-2.webp",
-  "/images/cal-normal-3.webp",
-  "/images/cal-normal-4.webp",
-  "/images/cal-normal-5.webp",
-  "/images/cal-normal-6.webp",
-  "/images/cal-normal-7.webp",
-];
-
+// const imagesSlide = [
+//   "https://laboiteautomatique.com/images/cal-normal-0.webp",
+//   "https://laboiteautomatique.com/images/cal-normal-1.webp",
+//   "https://laboiteautomatique.com/images/cal-normal-2.webp",
+//   "https://laboiteautomatique.com/images/cal-normal-3.webp",
+//   "https://laboiteautomatique.com/images/cal-normal-4.webp",
+//   "https://laboiteautomatique.com/images/cal-normal-5.webp",
+//   "https://laboiteautomatique.com/images/cal-normal-6.webp",
+//   "https://laboiteautomatique.com/images/cal-normal-7.webp",
+// ];
+const imagesSlide = VehicleImages();
 const SingleVehicleViewCapturEssence = () => {
   const [showSpinner, setShowSpinner] = useState(false);
   const [showCoupon, setShowCoupon] = useState(false);
@@ -151,6 +152,7 @@ const SingleVehicleViewCapturEssence = () => {
                         width={60}
                         height={50}
                         className="w-[60px] h-[40px]"
+                        priority={true}
                         alt=""
                       />
                     </div>
@@ -217,6 +219,7 @@ const SingleVehicleViewCapturEssence = () => {
                         width={60}
                         height={50}
                         className=""
+                        priority={true}
                         alt=""
                       />
                     </div>

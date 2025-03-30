@@ -51,8 +51,9 @@ const RenaultCapture = () => {
                   <Image
                     width={300}
                     height={290}
-                    src="/images/calculateur_DC4_Renault_Capture.webp"
+                    src="https://laboiteautomatique.com/images/calculateur_DC4_Renault_Capture.webp"
                     className="mx-auto w-[300px] h-[170px] mb-4"
+                    priority={true}
                     alt=""
                   />
                 </div>
@@ -114,7 +115,7 @@ const RenaultCapture = () => {
                       src="https://i.ibb.co/k8C1Y2Y/Group-1074-removebg-preview.png"
                       alt="Calculateur avec carton"
                       className="w-[100px] h-[80px]"
-                      loading="lazy"
+                      priority={true}
                     />
                     <div className="text-start">
                       <h2 className="text-lg font-semibold text-gray-700">

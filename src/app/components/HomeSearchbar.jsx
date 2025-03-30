@@ -86,8 +86,9 @@ const HomeSearchbar = ({ onSearch }) => {
                         <Image
                           width={80}
                           height={50}
-                          src={item.images[0]}
+                          src={`https://laboiteautomatique.com/${item?.images[0]}`}
                           alt="Product Image"
+                          priority={true}
                         />
                       </div>
                       <div className="w-3/4">

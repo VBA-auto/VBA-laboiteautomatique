@@ -14,17 +14,20 @@ import Image from "next/image";
 import { FaArrowRight } from "react-icons/fa";
 import NewVehicleRef from "@/components/NewVehicleRef";
 import PricngPop890 from "@/components/PricngPop890";
+import VehicleImages from "@/components/Cal-NormalImg";
 
-const imagesSlide = [
-  "/images/cal-normal-0.webp",
-  "/images/cal-normal-1.webp",
-  "/images/cal-normal-2.webp",
-  "/images/cal-normal-3.webp",
-  "/images/cal-normal-4.webp",
-  "/images/cal-normal-5.webp",
-  "/images/cal-normal-6.webp",
-  "/images/cal-normal-7.webp",
-];
+// const imagesSlide = [
+//   "/images/cal-normal-0.webp",
+//   "/images/cal-normal-1.webp",
+//   "/images/cal-normal-2.webp",
+//   "/images/cal-normal-3.webp",
+//   "/images/cal-normal-4.webp",
+//   "/images/cal-normal-5.webp",
+//   "/images/cal-normal-6.webp",
+//   "/images/cal-normal-7.webp",
+// ];
+
+const imagesSlide = VehicleImages();
 
 const SingleSearchView = () => {
   const [showSpinner, setShowSpinner] = useState(false);

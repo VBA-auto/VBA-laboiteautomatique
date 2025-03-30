@@ -369,7 +369,7 @@ tr {
 .carsCategory,
 .produits {
   background-image: linear-gradient(#c2c2c24f, #00000049),
-    url(/images/productBG.jpg);
+    url("https://laboiteautomatique.com/images/productBG.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -377,7 +377,7 @@ tr {
 }
 .compare {
   background-image: linear-gradient(#0000004f, #00000049),
-    url(/images/productBG.png);
+    url("https://laboiteautomatique.com/images/productBG.png");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;

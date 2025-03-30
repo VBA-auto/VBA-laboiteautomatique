@@ -11,7 +11,6 @@ import Image from "next/image";
 import { BsCopy } from "react-icons/bs";
 import VehicleStockDisplay from "@/components/VehicleStockDisplay";
 import { FaArrowRight } from "react-icons/fa";
-import PricngPop890 from "@/components/PricngPop890";
 import PricingPop1210 from "@/components/PricingPop1210";
 
 // const imagesSlide = [
@@ -25,12 +24,12 @@ import PricingPop1210 from "@/components/PricingPop1210";
 //   "/images/cal-normal-7.webp",
 // ];
 const imagesSlide = [
-  "/images/plat-1.webp",
-  "/images/plat-2.webp",
-  "/images/plat-3.webp",
-  "/images/plat-4.webp",
-  "/images/plat-5.webp",
-  "/images/plat-6.webp",
+  "https://laboiteautomatique.com/images/plat-1.webp",
+  "https://laboiteautomatique.com/images/plat-2.webp",
+  "https://laboiteautomatique.com/images/plat-3.webp",
+  "https://laboiteautomatique.com/images/plat-4.webp",
+  "https://laboiteautomatique.com/images/plat-5.webp",
+  "https://laboiteautomatique.com/images/plat-6.webp",
 ];
 
 const SingleVehicleView = () => {
@@ -160,6 +159,7 @@ const SingleVehicleView = () => {
                         width={60}
                         height={50}
                         className="w-[60px] h-[40px]"
+                        priority={true}
                         alt=""
                       />
                     </div>
@@ -226,6 +226,7 @@ const SingleVehicleView = () => {
                         width={60}
                         height={50}
                         className=""
+                        priority={true}
                         alt=""
                       />
                     </div>

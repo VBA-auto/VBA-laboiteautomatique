@@ -50,8 +50,9 @@ const RenaultClio = () => {
                   <Image
                     width={300}
                     height={280}
-                    src="/images/clio_5.webp"
+                    src="https://laboiteautomatique.com/images/clio_5.webp"
                     className="mx-auto w-[280px] h-[170px] mb-5"
+                    priority={true}
                     alt=""
                   />
                 </div>
@@ -110,7 +111,7 @@ const RenaultClio = () => {
                       src="https://i.ibb.co/k8C1Y2Y/Group-1074-removebg-preview.png"
                       alt="Calculateur avec carton"
                       className="w-[100px] h-[80px]"
-                      loading="lazy"
+                      priority={true}
                     />
                     <div className="text-start">
                       <h2 className="text-lg font-semibold text-gray-700">

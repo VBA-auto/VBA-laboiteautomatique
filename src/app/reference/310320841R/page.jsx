@@ -16,9 +16,9 @@ import NewVehicleRef from "@/components/NewVehicleRef";
 import PricngPop890 from "@/components/PricngPop890";
 
 const imagesSlide = [
-  "/images/strie-1.webp",
-  "/images/strie-2.webp",
-  "/images/strie-4.webp",
+  "https://laboiteautomatique.com/images/strie-1.webp",
+  "https://laboiteautomatique.com/images/strie-2.webp",
+  "https://laboiteautomatique.com/images/strie-4.webp",
 ];
 
 const SingleSearchView = () => {

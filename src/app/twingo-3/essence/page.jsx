@@ -17,10 +17,10 @@ import PricingPop1050 from "@/components/PricingPop1050";
 import VehicleStockDisplay from "@/components/VehicleStockDisplay";
 
 const imagesSlide = [
-  "/images/strie-1.webp",
-  "/images/strie-2.webp",
-  "/images/strie-3.webp",
-  "/images/strie-4.webp",
+  "https://laboiteautomatique.com/images/strie-1.webp",
+  "https://laboiteautomatique.com/images/strie-2.webp",
+  "https://laboiteautomatique.com/images/strie-3.webp",
+  "https://laboiteautomatique.com/images/strie-4.webp",
 ];
 
 const SingleSearchView = () => {
@@ -134,6 +134,7 @@ const SingleSearchView = () => {
                       width={60}
                       height={50}
                       className="w-[60px] h-[40px]"
+                      priority={true}
                       alt=""
                     />
                   </div>
@@ -190,6 +191,7 @@ const SingleSearchView = () => {
                       width={60}
                       height={50}
                       className=""
+                      priority={true}
                       alt=""
                     />
                   </div>

@@ -17,10 +17,10 @@ import PricingPop1050 from "@/components/PricingPop1050";
 import PricngPop790 from "@/components/PricngPop790";
 
 const imagesSlide = [
-  "/images/strie-1.webp",
-  "/images/strie-2.webp",
-  // "/images/strie-3.webp",
-  "/images/strie-4.webp",
+  "https://laboiteautomatique.com/images/strie-1.webp",
+  "https://laboiteautomatique.com/images/strie-2.webp",
+  // "https://laboiteautomatique.com/images/strie-3.webp",
+  "https://laboiteautomatique.com/images/strie-4.webp",
 ];
 
 const SingleSearchView = () => {

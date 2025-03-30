@@ -11,6 +11,9 @@ import Footer from "./Footer";
 import Review from "./Review";
 import { FaStar } from "react-icons/fa";
 
+//
+import calculateurImage from "/public/images/calculateur_DC4_Renault_Capture.webp";
+
 const Hero = () => {
   const pageDescription =
     "Vente et reprogrammation de calculateurs pour boite automatique DC4 (boite EDC) pour Renault clio 4, clio RS, Captur, megane 3 et scenic 3.";
@@ -74,6 +77,7 @@ const Hero = () => {
                     {[
                       {
                         href: "/captur",
+                        // src: { calculateurImage },
                         src: "/images/calculateur_DC4_Renault_Capture.webp",
                         alt: "Renault Captur",
                         label: "Renault Captur",
@@ -119,9 +123,9 @@ const Hero = () => {
                           <Image
                             width={110}
                             height={100}
-                            src={car.src}
+                            src={`https://laboiteautomatique.com/${car?.src}`}
                             alt={car.alt}
-                            loading="lazy"
+                            priority={true}
                             className="m-auto h-[70px] object-contain"
                           />
                           {car.label}
@@ -192,7 +196,6 @@ const Hero = () => {
                             height={100}
                             src="/images/glogo.webp"
                             alt="hkjhj"
-                            loading="lazy"
                             className=""
                           />
                           <div className="flex text-yellow-400">
@@ -207,7 +210,6 @@ const Hero = () => {
                             height={100}
                             src="/images/gicon.webp"
                             alt="hkjhj"
-                            loading="lazy"
                             className=""
                           />
                           <h2 className="text-sm font-medium">
