@@ -35,11 +35,11 @@ const Hero = () => {
           </button>
         </div>
       ) : null}
-      <div className="bg-blue-100 text-blue-700 p-3 rounded-md text-center mb-4">
+      {/* <div className="bg-blue-100 text-blue-700 p-3 rounded-md text-center mb-4">
         <p className="text-sm">
           Network Speed: {networkSpeed ? `${networkSpeed} Mbps` : "Checking..."}
         </p>
-      </div>
+      </div> */}
       <Head>
         <title>
           vente calculateur Renault boite automatique DC4 (EDC) 6DCT250
