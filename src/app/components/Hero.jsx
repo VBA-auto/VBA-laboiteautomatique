@@ -10,11 +10,11 @@ import { FaWhatsapp } from "react-icons/fa";
 import Footer from "./Footer";
 import Review from "./Review";
 import { FaStar } from "react-icons/fa";
-
-//
-import calculateurImage from "/public/images/calculateur_DC4_Renault_Capture.webp";
+import useNetworkStatus from "./useImageMonitor";
 
 const Hero = () => {
+  const { isSlowNetwork, hasImageError, networkSpeed, refreshPage } =
+    useNetworkStatus();
   const pageDescription =
     "Vente et reprogrammation de calculateurs pour boite automatique DC4 (boite EDC) pour Renault clio 4, clio RS, Captur, megane 3 et scenic 3.";
   const HeadingText = "Vente et reprogrammation de calculateur Renault DC4";
@@ -24,6 +24,22 @@ const Hero = () => {
 
   return (
     <>
+      {isSlowNetwork || hasImageError ? (
+        <div className="bg-red-100 text-red-700 p-3 rounded-md text-center mb-4">
+          <p>Slow network or image loading issue detected!</p>
+          <button
+            onClick={refreshPage}
+            className="bg-red-600 text-white px-4 py-2 mt-2 rounded-md"
+          >
+            Refresh
+          </button>
+        </div>
+      ) : null}
+      <div className="bg-blue-100 text-blue-700 p-3 rounded-md text-center mb-4">
+        <p className="text-sm">
+          Network Speed: {networkSpeed ? `${networkSpeed} Mbps` : "Checking..."}
+        </p>
+      </div>
       <Head>
         <title>
           vente calculateur Renault boite automatique DC4 (EDC) 6DCT250
