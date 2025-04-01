@@ -251,7 +251,7 @@ const Hero = () => {
                     <source src="/images/videohome2.webm" type="video/webm" />
                   </video>
                   <Link
-                    href="https://api.whatsapp.com/send?phone=0145147254"
+                    href="https://api.whatsapp.com/send?phone=33631460333"
                     target="_blank"
                   >
                     <div className="absolute bottom-5 right-5 bg-[#5dca54] rounded-full p-2 md:block hidden">

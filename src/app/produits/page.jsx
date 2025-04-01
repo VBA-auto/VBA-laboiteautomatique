@@ -372,13 +372,12 @@ const Produits = () => {
                   </div>
                   <div className="px-4 mt-3">
                     <Image
-                      width={700}
+                      width={300}
                       height={300}
                       src="https://laboiteautomatique.com/images/megane4.webp"
                       alt=""
-                      objectFit="cover"
                       priority={true}
-                      className="mx-auto w-[400px] h-[141px]"
+                      className="mx-auto mb-8"
                     />
                   </div>
                   <Link href="/megane-4">
@@ -464,13 +463,13 @@ const Produits = () => {
                   </div>
                   <div className="px-4 mt-3">
                     <Image
-                      width={700}
+                      width={300}
                       height={300}
                       src="https://laboiteautomatique.com/images/megane4.webp"
                       alt=""
                       objectFit="cover"
                       priority={true}
-                      className="mx-auto w-[400px] h-[141px]"
+                      className="mx-auto mb-8"
                     />
                   </div>
                   <Link href="/twingo-3">

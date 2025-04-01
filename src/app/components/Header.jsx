@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useRef, useEffect, useCallback } from "react";
-import { FaAngleDown } from "react-icons/fa";
+import { FaAngleDown, FaWhatsapp } from "react-icons/fa";
 
 const Header = () => {
   const [navbar, setNavbar] = useState(false);
@@ -69,27 +69,39 @@ const Header = () => {
               <button
                 data-collapse-toggle="navbar-default"
                 type="button"
-                className="inline-flex items-center text-[#2A81EC] border p-2  justify-center text-sm  rounded-lg xl:hidden "
+                className="inline-flex items-center text-[#2A81EC] p-2  justify-center text-sm  rounded-lg xl:hidden "
                 aria-controls="navbar-default"
                 aria-expanded="false"
                 onClick={handleNavbarToggle}
               >
                 <span className="sr-only">Open main menu</span>
-                <svg
-                  className="w-5 h-5"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h16m-7 6h7"
-                  ></path>
-                </svg>
+                <div className="me-5">
+                  <Link
+                    href="https://api.whatsapp.com/send?phone=33631460333"
+                    target="_blank"
+                  >
+                    <div className=" bg-[#5dca54] rounded-full p-2 md:hidden">
+                      <FaWhatsapp className="text-white text-2xl" />
+                    </div>
+                  </Link>
+                </div>
+                <div className="border p-2 rounded-md">
+                  <svg
+                    className="w-5 h-5"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M4 6h16M4 12h16m-7 6h7"
+                    ></path>
+                  </svg>
+                </div>
                 {/* <p className="border px-2 rounded-md text-[#2C80EF]">Menu</p> */}
               </button>
 
