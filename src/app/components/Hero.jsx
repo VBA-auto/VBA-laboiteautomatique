@@ -15,6 +15,8 @@ import useNetworkStatus from "./useImageMonitor";
 const Hero = () => {
   const { isSlowNetwork, hasImageError, networkSpeed, refreshPage } =
     useNetworkStatus();
+  console.log({ isSlowNetwork, hasImageError, networkSpeed });
+
   const pageDescription =
     "Vente et reprogrammation de calculateurs pour boite automatique DC4 (boite EDC) pour Renault clio 4, clio RS, Captur, megane 3 et scenic 3.";
   const HeadingText = "Vente et reprogrammation de calculateur Renault DC4";
@@ -69,6 +71,7 @@ const Hero = () => {
       </div>
       <SubHeader />
       <Header />
+
       <section className="xl:pt-[70px] pt-[15px] heroSection">
         <div className="container mx-auto">
           <div className="flex items-center justify-center">
@@ -139,9 +142,10 @@ const Hero = () => {
                           <Image
                             width={110}
                             height={100}
-                            src={`https://laboiteautomatique.com/${car?.src}`}
+                            src={`https://laboiteautomatique.com${car?.src}`}
                             alt={car.alt}
                             priority={true}
+                            unoptimized
                             className="m-auto h-[70px] object-contain"
                           />
                           {car.label}
