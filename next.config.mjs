@@ -24,6 +24,7 @@ const nextConfig = {
         pathname: "/**",
       },
     ],
+    minimumCacheTTL: 60,
   },
   experimental: {
     optimizePackageImports: ["@mantine/core", "@mantine/hooks"],

@@ -17,6 +17,17 @@ const Home = () => {
         <meta name="description" content={pageDescription} />
         <meta name="headline" content={HeadingText} />
         <meta name="secondaryHeading" content={secondaryHeadingText} />
+
+        {/* Cache Control Meta Tags */}
+        <meta
+          httpEquiv="Cache-Control"
+          content="no-cache, no-store, must-revalidate"
+        />
+        <meta httpEquiv="Pragma" content="no-cache" />
+        <meta httpEquiv="Expires" content="0" />
+
+        {/* Optional: Add versioning to prevent caching issues */}
+        <meta name="version" content="1.0.2" />
       </Head>
       <div className="">
         <Hero />
