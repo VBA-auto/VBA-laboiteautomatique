@@ -29,7 +29,7 @@ const Home = () => {
         {/* Optional: Add versioning to prevent caching issues */}
         <meta name="version" content="1.0.2" />
       </Head>
-      <div className="">
+      <div className="yes">
         <Hero />
       </div>
     </>
