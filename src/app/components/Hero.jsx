@@ -16,6 +16,7 @@ const Hero = () => {
   const { isSlowNetwork, hasImageError, networkSpeed, refreshPage } =
     useNetworkStatus();
   console.log({ isSlowNetwork, hasImageError, networkSpeed });
+  console.log("new vercel vodange");
 
   const pageDescription =
     "Vente et reprogrammation de calculateurs pour boite automatique DC4 (boite EDC) pour Renault clio 4, clio RS, Captur, megane 3 et scenic 3.";

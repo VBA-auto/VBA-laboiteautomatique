@@ -2,7 +2,6 @@ import Head from "next/head";
 import Hero from "./components/Hero";
 
 const Home = () => {
-  console.log("my vercel");
   const pageDescription =
     "Société spécialisée dans la vente et la reprogrammation de calculateurs pour boite automatique DC4 (boite EDC) pour Renault clio 4 Captur megane et scenic";
   const HeadingText = "Vente et reprogrammation de calculateur Renault DC4";
