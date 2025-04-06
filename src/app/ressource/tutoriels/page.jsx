@@ -311,7 +311,7 @@ const Page = () => {
                                 <Image
                                   width={980}
                                   height={300}
-                                  src="/images/Blog6.webp"
+                                  src="/images/blog6.webp"
                                   alt="calculateur"
                                   className="rounded-md"
                                 />
