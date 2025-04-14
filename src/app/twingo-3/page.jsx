@@ -26,7 +26,7 @@ const RenaultClio = () => {
           <div style={{ display: "none" }}>
             <h1>Calculateur pour Renault Twingo 3</h1>
           </div>
-          <div className=" justify-center items-start gap-5 mb-2.5">
+          <div className=" justify-center items-start gap-5 mb-5">
             <div className="xl:w-[800px] xl:min-h-[538px] mx-auto ">
               <div className="ms-auto  accent_color py-5 bg-white rounded-md  p-5">
                 <div className="flex justify-between  relative">
@@ -46,7 +46,7 @@ const RenaultClio = () => {
                 <h1 className="text-2xl font-semibold text-center text-gray-700 md:hidden block mt-5">
                   Renault Twingo 3
                 </h1>
-                <div className="my-1.5">
+                <div className="my-8">
                   <Image
                     width={300}
                     height={280}
@@ -105,9 +105,9 @@ const RenaultClio = () => {
                     <Image
                       width={100}
                       height={100}
-                      src="https://i.ibb.co/k8C1Y2Y/Group-1074-removebg-preview.png"
+                      src="/images/megane4.webp"
                       alt="Calculateur avec carton"
-                      className="w-[100px] h-[80px]"
+                      className=""
                       priority={true}
                     />
                     <div className="text-start">

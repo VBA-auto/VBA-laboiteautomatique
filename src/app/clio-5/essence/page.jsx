@@ -153,12 +153,12 @@ const SingleVehicleView = () => {
               <div className="bg-white border rounded-b-[5px] xl:w-[800px] mx-auto md:pt-0 pt-5">
                 <div className="md:flex md:px-5 px-4 py-1 justify-between">
                   <div className="md:w-1/2 flex items-center gap-5">
-                    <div className="border py-2 bg-white rounded-md">
+                    <div className="border py-2 bg-white rounded-md ">
                       <Image
                         src={imagesSlide[0]}
                         width={60}
                         height={50}
-                        className="w-[60px] h-[40px]"
+                        className=""
                         priority={true}
                         alt=""
                       />

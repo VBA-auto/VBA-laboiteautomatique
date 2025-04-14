@@ -48,7 +48,7 @@ const SingleSearchView = () => {
           />
         </Head>
         <div className="container mx-auto">
-          <div className="md:w-3/4 mx-auto mb-8">
+          <div className="md:w-3/4 mx-auto mb-10">
             <div className="md:flex  justify-center ">
               <div className="md:w-[400px] p-4  bg-white rounded-tl-[5px]">
                 <p className="text-[14px] mt-1">
@@ -128,12 +128,12 @@ const SingleSearchView = () => {
             <div className="bg-white border rounded-b-[5px] md:w-[800px] mx-auto md:pt-0 pt-5">
               <div className="md:flex px-5 py-1 justify-between">
                 <div className="md:w-1/2 flex items-center gap-5">
-                  <div className="border py-2 bg-white rounded-md">
+                  <div className="border py-1 bg-white rounded-md w-[60px] h-[60px] flex justify-center">
                     <Image
                       src={imagesSlide[0]}
-                      width={60}
-                      height={50}
-                      className="w-[60px] h-[40px]"
+                      width={50}
+                      height={40}
+                      className=""
                       priority={true}
                       alt=""
                     />

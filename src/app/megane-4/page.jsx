@@ -29,7 +29,7 @@ const RenaultMegane = () => {
             <h1>Calculateur pour Renault Megane IV</h1>
           </div>
 
-          <div className="justify-center items-start gap-5 mb-2.5">
+          <div className="justify-center items-start gap-5 mb-7">
             <div className="xl:w-[800px] xl:min-h-[538px] mx-auto ">
               <div className="ms-auto  accent_color py-5 bg-white rounded-md  p-5">
                 <div className="flex justify-between relative">
@@ -102,9 +102,9 @@ const RenaultMegane = () => {
                     <Image
                       width={100}
                       height={100}
-                      src="https://i.ibb.co/k8C1Y2Y/Group-1074-removebg-preview.png"
+                      src="/images/megane4.webp"
                       alt="Calculateur avec carton"
-                      className="w-[100px] h-[80px]"
+                      className=""
                       priority={true}
                     />
                     <div className="text-start">

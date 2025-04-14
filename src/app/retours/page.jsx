@@ -210,7 +210,7 @@ export default function Retours() {
               </p>
               <ul className="list-disc pl-6 mt-2">
                 <li>Email : contact@laboiteautomatique.com</li>
-                <li>Téléphone : 0145147254</li>
+                <li>Téléphone : 01.45.14.72.54</li>
               </ul>
             </div>
           </div>

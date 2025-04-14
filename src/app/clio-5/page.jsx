@@ -108,9 +108,9 @@ const RenaultClio = () => {
                     <Image
                       width={100}
                       height={100}
-                      src="https://i.ibb.co/k8C1Y2Y/Group-1074-removebg-preview.png"
+                      src="/images/clio-5-plat.webp"
                       alt="Calculateur avec carton"
-                      className="w-[100px] h-[80px]"
+                      className=""
                       priority={true}
                     />
                     <div className="text-start">
