@@ -9,7 +9,7 @@ import ChatWidget from "./components/botLogic/ChatWidget";
 
 export const metadata = {
   title: "VBA Calculateur Renault",
-  description: "Vente de calculateur Renault",
+  description: "Vente de calculateur Renault | VBA",
   icon: "/favicon.ico",
 };
 // Load Poppins using `next/font/google`
