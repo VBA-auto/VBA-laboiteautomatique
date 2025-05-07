@@ -143,7 +143,7 @@ const Produits = () => {
                 <div className="lg:w-full rounded-md shadow-sm p-5 bg-white/50 singleProductCard accent_color">
                   <div className="">
                     <div className="h-[30px]">
-                      <DynaProdStock carName="Renault Clio" />
+                      <DynaProdStock carName="Renault Clio 4" />
                     </div>
                   </div>
                   <div className="px-4 mt-3">
