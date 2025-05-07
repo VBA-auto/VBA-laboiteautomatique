@@ -40,7 +40,7 @@ const RenaultClio = () => {
                   </div>
 
                   <div className="absolute right-0">
-                    <DynaStock carName="Renault Clio" />
+                    <DynaStock carName="Renault Clio 4" />
                   </div>
                 </div>
                 <h1 className="text-2xl font-semibold text-center text-gray-700 md:hidden block mt-5">
