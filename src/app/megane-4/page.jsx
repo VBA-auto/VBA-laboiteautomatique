@@ -51,6 +51,7 @@ const RenaultMegane = () => {
                 </h1>
                 <div className="my-3">
                   <Image
+                    unoptimized
                     width={290}
                     height={290}
                     src="https://laboiteautomatique.com/images/megane_4_car.webp"
@@ -100,6 +101,7 @@ const RenaultMegane = () => {
                 <div className="md:flex items-center justify-between mt-5">
                   <div className="flex items-center gap-3">
                     <Image
+                      unoptimized
                       width={100}
                       height={100}
                       src="/images/megane4.webp"

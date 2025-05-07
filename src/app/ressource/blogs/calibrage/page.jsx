@@ -44,6 +44,7 @@ const CalibragePage = () => {
               Exemple d’information calculateur
             </h2>
             <Image
+              unoptimized
               width={700}
               height={200}
               className="w-full mt-2 rounded-md "
@@ -60,6 +61,7 @@ const CalibragePage = () => {
             </p>
             <div className=" mx-auto">
               <Image
+                unoptimized
                 width={500}
                 height={500}
                 className="w-full mt-4 rounded-md "

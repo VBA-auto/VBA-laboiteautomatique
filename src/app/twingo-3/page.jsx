@@ -48,6 +48,7 @@ const RenaultClio = () => {
                 </h1>
                 <div className="my-8">
                   <Image
+                    unoptimized
                     width={300}
                     height={280}
                     src="https://laboiteautomatique.com/images/twingo-3.webp"
@@ -103,6 +104,7 @@ const RenaultClio = () => {
                 <div className="md:flex items-center justify-between mt-5">
                   <div className="flex items-center gap-3">
                     <Image
+                      unoptimized
                       width={100}
                       height={100}
                       src="/images/megane4.webp"

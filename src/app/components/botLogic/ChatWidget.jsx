@@ -124,6 +124,7 @@ const ChatWidget = () => {
                   )}
                   {msg.image && (
                     <Image
+                      unoptimized
                       width={150}
                       height={100}
                       src={msg.image}

@@ -98,6 +98,7 @@ const Programmation = () => {
                 <div className="xl:w-1/3 ">
                   <div className="">
                     <Image
+                      unoptimized
                       width={365}
                       height={200}
                       className="rounded-md mx-auto w-full xl:h-[287px] md:h-[300px]"

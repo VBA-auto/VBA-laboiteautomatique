@@ -18,6 +18,7 @@ const ModalClioRs = () => {
         </div>
         <div className="px-4 mt-3">
           <Image
+            unoptimized
             width={400}
             height={300}
             src="/images/productDefault.webp"
@@ -30,6 +31,7 @@ const ModalClioRs = () => {
         <div className="flex items-center border rounded-md gap-3 mt-[20px] hover:bg-gray-100 hover:cursor-pointer">
           <div className="w-1/3">
             <Image
+              unoptimized
               width={110}
               height={100}
               src="/images/calculateur_DC4_clioRS.webp"

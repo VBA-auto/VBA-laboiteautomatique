@@ -22,6 +22,7 @@ const MeganeModal = () => {
             </h1>
             <div className="my-3">
               <Image
+                unoptimized
                 width={300}
                 height={290}
                 src="/images/calculateur_DC4_renault-megane.webp"

@@ -40,6 +40,7 @@ const ArticlePage = () => {
           </div>
           <div className="md:w-3/5 mx-auto">
             <Image
+              unoptimized
               width={500}
               height={500}
               className="w-full mt-8 rounded-md"

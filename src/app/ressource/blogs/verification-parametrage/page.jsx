@@ -44,6 +44,7 @@ const Verification = () => {
               Verification parametrage EDC (DC4)
             </h2>
             <Image
+              unoptimized
               width={300}
               height={200}
               className="w-full rounded-md "

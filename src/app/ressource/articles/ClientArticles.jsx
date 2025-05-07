@@ -27,6 +27,7 @@ export default function ClientArticles({ cars }) {
             >
               <figure>
                 <Image
+                  unoptimized
                   src={car.image}
                   alt={car.title}
                   width={500}
@@ -61,6 +62,7 @@ export default function ClientArticles({ cars }) {
               </div>
               <div className="w-full md:h-[600px]">
                 <Image
+                  unoptimized
                   src={selectedCar.image}
                   alt={selectedCar.title}
                   width={500}

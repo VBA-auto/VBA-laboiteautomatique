@@ -56,6 +56,7 @@ const HeaderSpain = () => {
               <Link rel="preload" href="/" className="flex items-center">
                 <div className="lg:w-[320px]">
                   <Image
+                    unoptimized
                     width={130}
                     height={100}
                     src="/images/logoSpain.webp"

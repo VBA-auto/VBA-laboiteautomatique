@@ -13,20 +13,16 @@ import { BsCopy } from "react-icons/bs";
 import Image from "next/image";
 import { FaArrowRight } from "react-icons/fa";
 import NewVehicleRef from "@/components/NewVehicleRef";
-import PricngPop890 from "@/components/PricngPop890";
-import VehicleImages from "@/components/Cal-NormalImg";
+import PricingPop1050 from "@/components/PricingPop1050";
+import PricngPop790 from "@/components/PricngPop790";
 
-// const imagesSlide = [
-//   "/images/cal-normal-0.webp",
-//   "/images/cal-normal-1.webp",
-//   "/images/cal-normal-2.webp",
-//   "/images/cal-normal-3.webp",
-//   "/images/cal-normal-4.webp",
-//   "/images/cal-normal-5.webp",
-//   "/images/cal-normal-6.webp",
-//   "/images/cal-normal-7.webp",
-// ];
-const imagesSlide = VehicleImages();
+const imagesSlide = [
+  "https://laboiteautomatique.com/images/strie-1.webp",
+  "https://laboiteautomatique.com/images/strie-2.webp",
+  // "https://laboiteautomatique.com/images/strie-3.webp",
+  "https://laboiteautomatique.com/images/strie-4.webp",
+];
+
 const SingleSearchView = () => {
   const [showSpinner, setShowSpinner] = useState(false);
   const [showCoupon, setShowCoupon] = useState(false);
@@ -44,11 +40,11 @@ const SingleSearchView = () => {
       <section className="produits">
         <Head>
           <title>
-            Calculateur boîte automatique EDC Renault référence 310320254R
+            Calculateur boîte automatique EDC Renault référence 310321195R
           </title>
           <meta
             name="description"
-            content="Commandez ici votre Calculateur pour boîte automatique EDC Renault référence 310320254R, programmation incluse. Vérifiez disponibilité."
+            content="Commandez ici votre Calculateur pour boîte automatique EDC Renault référence 310321195R, programmation incluse. Vérifiez disponibilité."
           />
         </Head>
         <div className="container mx-auto">
@@ -64,7 +60,7 @@ const SingleSearchView = () => {
                     Renault &gt;
                   </span>{" "}
                   <span className="text-gray-400">Réf &gt;</span>{" "}
-                  <span className="text-gray-700">310320254R</span>{" "}
+                  <span className="text-gray-700">310321195R</span>{" "}
                 </p>
                 <div className="md:w-full  mt-5">
                   <div className="md:w-full">
@@ -77,8 +73,8 @@ const SingleSearchView = () => {
                   <ReturnButton />
                   <div className="">
                     <NewVehicleRef
-                      modelName="Calculateur Scénic 3 - Megane 3"
-                      refCode="310320254R"
+                      modelName="Calculateur Kadjar"
+                      refCode="310321195R"
                       onStockChange={handleStockChange}
                     />
                   </div>
@@ -87,25 +83,20 @@ const SingleSearchView = () => {
                 <div className="mt-2">
                   <div className="px-4 mb-2">
                     <p className="text-[14px] text-gray-400">Désignation</p>
-                    <h1 className="text-[15px]">
-                      Calculateur Scénic 3 - Megane 3
-                    </h1>
+                    <h1 className="text-[15px]">Calculateur Kadjar</h1>
                   </div>
                   <div className="px-4 mb-2">
                     <p className="text-[14px] text-gray-400">Description</p>
                     <p className="text-[15px]">
                       Module de commande (calculateur) pour boite automatique
-                      EDC Scénic 3 - Mégane 3
+                      EDC Renault Kadjar
                     </p>
                   </div>
                   <div className="px-4 mb-3">
                     <p className="text-[14px] text-gray-400">Compatibilité</p>
                     <div className="flex flex-wrap gap-2">
                       <button className="bg-gray-100  px-2 text-[14px] text-black mt-1 rounded">
-                        Mégane 3
-                      </button>
-                      <button className="bg-gray-100  px-2 text-[14px] text-black mt-1 rounded">
-                        Scénic 3
+                        Kadjar
                       </button>
                     </div>
                   </div>
@@ -115,19 +106,21 @@ const SingleSearchView = () => {
                   </div>
                   <div className="px-4 mb-2">
                     <p className="text-[14px] text-gray-400">Véhicule</p>
-                    <p className="text-[15px]">Scénic 3 - Mégane 3</p>
+                    <p className="text-[15px]">
+                      Renault Kadjar à partir de 2014
+                    </p>
                   </div>
                   <div className="px-4 mb-2">
                     <p className="text-[14px] text-gray-400">
                       Info complémentaire{" "}
                     </p>
-                    <p className="text-[15px]">Moteur 1.5 Diesel</p>
+                    <p className="text-[15px]">
+                      Code boite DC4 (007) - LLK8048
+                    </p>
                   </div>
                   <div className="px-4 mb-2">
                     <p className="text-[14px] text-gray-400">Référence OE</p>
-                    <p className="text-[15px]">
-                      310320254R (remplacée par 310320749R)
-                    </p>
+                    <p className="text-[15px]">310321195R - A2C73768907</p>
                   </div>
                 </div>
               </div>
@@ -147,7 +140,7 @@ const SingleSearchView = () => {
                   </div>
                   <div className="">
                     <p className="text-[15px] text-gray-400">Renault</p>
-                    <h1 className="my-1">Calculateur Scénic 3 - Megane 3</h1>
+                    <h1 className="my-1">Calculateur Kadjar</h1>
                   </div>
                 </div>
                 <div className="md:w-1/2 flex items-center md:justify-end justify-center gap-5 ">
@@ -204,12 +197,12 @@ const SingleSearchView = () => {
                   </div>
                   <div className="">
                     <p className="text-[15px] text-gray-500">Renault</p>
-                    <h1 className="my-1">Calculateur Scénic 3 - Megane 3</h1>
+                    <h1 className="my-1">Calculateur Kadjar</h1>
                   </div>
                 </div>
                 <hr />
                 <div className="mt-3">
-                  <PricngPop890 />
+                  <PricngPop790 />
                 </div>
                 <div className="mt-5">
                   {showCoupon ? (
@@ -276,16 +269,16 @@ const SingleSearchView = () => {
                       <>
                         <div className="flex items-center gap-2">
                           <p className="text-gray-300 text-[15px] prices line-through">
-                            1139.00 €
+                            1069.00 €
                           </p>
                           <p className="text-[#2C80EF] prices text-[17px] bg-gray-50 px-2 rounded-md">
-                            1089 €
+                            1019 €
                           </p>
                         </div>
                       </>
                     ) : (
                       <p className="text-[#2C80EF] text-[15px] prices">
-                        1139.00 €
+                        999.00 €
                       </p>
                     )}
                   </div>
@@ -293,7 +286,7 @@ const SingleSearchView = () => {
                 <div className="text-center">
                   <Link
                     target="_blank"
-                    href="https://buy.stripe.com/eVacQq2ly8th6eA2am"
+                    href="https://buy.stripe.com/6oEbMm3pCgZN6eA02F"
                   >
                     <button className="orderButton">Valider</button>
                   </Link>

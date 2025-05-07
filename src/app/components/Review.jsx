@@ -85,6 +85,7 @@ const ReviewSlider = () => {
                 {review?.userImage ? (
                   <div className="w-10 h-10 flex items-center justify-center rounded-full text-white font-bold">
                     <Image
+                      unoptimized
                       src={review.userImage}
                       width={50}
                       height={50}
@@ -150,6 +151,7 @@ const ReviewSlider = () => {
             {selectedReview?.userImage ? (
               <div className="w-10 h-10 flex items-center justify-center rounded-full text-white font-bold">
                 <Image
+                  unoptimized
                   src={selectedReview.userImage}
                   width={50}
                   height={50}

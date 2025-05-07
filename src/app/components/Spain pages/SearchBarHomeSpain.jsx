@@ -167,6 +167,7 @@ const SearchBarHomeSpain = () => {
                     <div className="flex items-center border p-2 rounded-md hover:bg-gray-100 transition-colors mb-3 gap-3 md:gap-0">
                       <div className="md:w-1/6">
                         <Image
+                          unoptimized
                           width={80}
                           height={50}
                           src={item?.images[0] || "/images/searchP1.webp"}

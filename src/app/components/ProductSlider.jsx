@@ -24,6 +24,7 @@ const SimpleSlider = () => {
       {/* Image Display */}
       <div className="w-full relative">
         <Image
+          unoptimized
           width={400}
           height={300}
           src={images[currentIndex]}

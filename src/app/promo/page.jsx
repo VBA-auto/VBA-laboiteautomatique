@@ -138,6 +138,7 @@ const PromoPage = () => {
                       // Show car image and name if not revealed
                       <div className="text-center cursor-pointer">
                         <Image
+                          unoptimized
                           width={110}
                           height={100}
                           src={car.src}

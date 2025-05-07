@@ -177,6 +177,7 @@ const Programmation = () => {
                 <div className="xl:w-[45%]">
                   <div className="xl:h-[396px]">
                     <Image
+                      unoptimized
                       width={500}
                       height={500}
                       className="h-full w-full rounded-md"

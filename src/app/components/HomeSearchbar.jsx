@@ -84,6 +84,7 @@ const HomeSearchbar = ({ onSearch }) => {
                     <div className="flex items-center border p-2 rounded-md hover:bg-gray-100 transition-colors">
                       <div className="w-1/6">
                         <Image
+                          unoptimized
                           width={80}
                           height={50}
                           src={`https://laboiteautomatique.com/${item?.images[0]}`}

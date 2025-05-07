@@ -48,6 +48,7 @@ const RenaultClio = () => {
                 </h1>
                 <div className="my-1.5">
                   <Image
+                    unoptimized
                     width={300}
                     height={280}
                     src="https://laboiteautomatique.com/images/calculateur_DC4_Renault_Clio4.webp"
@@ -111,6 +112,7 @@ const RenaultClio = () => {
                 <div className="md:flex items-center justify-between mt-5">
                   <div className="flex items-center gap-3">
                     <Image
+                      unoptimized
                       width={100}
                       height={100}
                       src="https://i.ibb.co/k8C1Y2Y/Group-1074-removebg-preview.png"

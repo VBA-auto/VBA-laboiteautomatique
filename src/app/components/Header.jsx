@@ -55,6 +55,7 @@ const Header = () => {
               <Link rel="preload" href="/" className="flex items-center">
                 <div className="lg:w-[290px]">
                   <Image
+                    unoptimized
                     width={100}
                     height={100}
                     src="/images/VBAlogo.webp"

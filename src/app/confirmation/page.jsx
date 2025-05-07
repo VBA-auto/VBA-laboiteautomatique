@@ -87,7 +87,13 @@ const ConfirmationPageContent = () => {
             <div className="list-none pl-0">
               <div className="flex items-start space-x-4 mb-4">
                 {image && (
-                  <Image src={image} alt={name} width={50} height={50} />
+                  <Image
+                    unoptimized
+                    src={image}
+                    alt={name}
+                    width={50}
+                    height={50}
+                  />
                 )}
 
                 <div className="w-[100%]">

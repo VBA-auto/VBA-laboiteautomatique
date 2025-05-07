@@ -47,6 +47,7 @@ const ResponsiveSlider = ({ images }) => {
       <div className="main-image">
         <div className="md:h-[280px] h-[180px] md:mt-5 flex flex-col items-center justify-center">
           <Image
+            unoptimized
             className="mx-auto md:w-[320px] w-[220px] object-cover"
             width={400}
             height={100}
@@ -86,6 +87,7 @@ const ResponsiveSlider = ({ images }) => {
           >
             {images.map((image, index) => (
               <Image
+                unoptimized
                 key={index}
                 src={image}
                 width={80}

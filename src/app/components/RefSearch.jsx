@@ -91,6 +91,7 @@ const RefrerenceCheckerComp = () => {
                     <div className="flex items-center border p-2 rounded-md hover:bg-gray-100 transition-colors mb-3">
                       <div className="w-1/6">
                         <Image
+                          unoptimized
                           width={80}
                           height={50}
                           src={item.images[0]}

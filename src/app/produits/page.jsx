@@ -94,6 +94,7 @@ const Produits = () => {
                   </div>
                   <div className="px-4 mt-3">
                     <Image
+                      unoptimized
                       width={400}
                       height={300}
                       src={capturImage}
@@ -106,6 +107,7 @@ const Produits = () => {
                     <div className="flex items-center border rounded-md gap-3 mt-[20px]  hover:bg-gray-100">
                       <div className="w-1/3">
                         <Image
+                          unoptimized
                           width={110}
                           height={100}
                           src={Renault_Capture}
@@ -146,6 +148,7 @@ const Produits = () => {
                   </div>
                   <div className="px-4 mt-3">
                     <Image
+                      unoptimized
                       width={400}
                       height={300}
                       src={capturImage}
@@ -158,6 +161,7 @@ const Produits = () => {
                     <div className="flex items-center border rounded-md gap-3 mt-[20px]  hover:bg-gray-100">
                       <div className="w-1/3">
                         <Image
+                          unoptimized
                           width={110}
                           height={100}
                           src={Renault_Clio4}
@@ -198,6 +202,7 @@ const Produits = () => {
                   </div>
                   <div className="px-4 mt-3">
                     <Image
+                      unoptimized
                       width={400}
                       height={300}
                       src={capturImage}
@@ -210,6 +215,7 @@ const Produits = () => {
                     <div className="flex items-center border rounded-md gap-3 mt-[20px]  hover:bg-gray-100">
                       <div className="w-1/3">
                         <Image
+                          unoptimized
                           width={110}
                           height={100}
                           src={renaultMegane}
@@ -249,6 +255,7 @@ const Produits = () => {
                   </div>
                   <div className="px-4 mt-3">
                     <Image
+                      unoptimized
                       width={400}
                       height={300}
                       src={capturImage}
@@ -261,6 +268,7 @@ const Produits = () => {
                     <div className="flex items-center border rounded-md gap-3 mt-[20px] hover:bg-gray-100">
                       <div className="w-1/3">
                         <Image
+                          unoptimized
                           width={110}
                           height={100}
                           src={renaultScenic}
@@ -294,6 +302,7 @@ const Produits = () => {
                   </div>
                   <div className="px-4 mt-3">
                     <Image
+                      unoptimized
                       width={400}
                       height={300}
                       src={capturImage}
@@ -306,6 +315,7 @@ const Produits = () => {
                     <div className="flex items-center border rounded-md gap-3 mt-[20px] hover:bg-gray-100">
                       <div className="w-1/3">
                         <Image
+                          unoptimized
                           width={110}
                           height={100}
                           src={renaultFluence}
@@ -340,6 +350,7 @@ const Produits = () => {
                   </div>
                   <div className="px-4 mt-3">
                     <Image
+                      unoptimized
                       width={400}
                       height={300}
                       src={capturImage}
@@ -352,6 +363,7 @@ const Produits = () => {
                     <div className="flex items-center border rounded-md gap-3 mt-[20px] hover:bg-gray-100">
                       <div className="w-1/3">
                         <Image
+                          unoptimized
                           width={110}
                           height={100}
                           src={renaultClioRS}
@@ -386,6 +398,7 @@ const Produits = () => {
                   </div>
                   <div className="px-4 mt-3">
                     <Image
+                      unoptimized
                       width={300}
                       height={300}
                       src={Megane4}
@@ -398,6 +411,7 @@ const Produits = () => {
                     <div className="flex items-center border rounded-md gap-3 mt-[20px] hover:bg-gray-100">
                       <div className="w-1/3">
                         <Image
+                          unoptimized
                           width={110}
                           height={100}
                           src={megane4Car}
@@ -432,6 +446,7 @@ const Produits = () => {
                   </div>
                   <div className="px-4 mt-3">
                     <Image
+                      unoptimized
                       width={700}
                       height={300}
                       src={Clio5Plat}
@@ -444,6 +459,7 @@ const Produits = () => {
                     <div className="flex items-center border rounded-md gap-3 mt-[20px] hover:bg-gray-100">
                       <div className="w-1/3">
                         <Image
+                          unoptimized
                           width={110}
                           height={100}
                           src={Clio5PlatChild}
@@ -478,6 +494,7 @@ const Produits = () => {
                   </div>
                   <div className="px-4 mt-3">
                     <Image
+                      unoptimized
                       width={300}
                       height={300}
                       src={Megane4}
@@ -490,6 +507,7 @@ const Produits = () => {
                     <div className="flex items-center border rounded-md gap-3 mt-[20px] hover:bg-gray-100">
                       <div className="w-1/3">
                         <Image
+                          unoptimized
                           width={110}
                           height={100}
                           src={Twingo}

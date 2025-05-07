@@ -129,6 +129,7 @@ const Hero = () => {
                           className="text-[15px] text-center"
                         >
                           <Image
+                            unoptimized
                             width={110}
                             height={100}
                             src={car.src}
@@ -171,6 +172,7 @@ const Hero = () => {
                     <Link href="https://g.co/kgs/NKECBdC">
                       <div className="flex items-center justify-center gap-4 mt-3">
                         <Image
+                          unoptimized
                           width={80}
                           height={100}
                           src={googleLogo}
@@ -184,6 +186,7 @@ const Hero = () => {
                       </div>
                       <div className="flex justify-center items-center gap-2 mt-3 w-1/2 mx-auto bg-blue-50 py-1 rounded-md">
                         <Image
+                          unoptimized
                           width={20}
                           height={100}
                           src={googleIcon}

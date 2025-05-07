@@ -85,6 +85,7 @@ const HeroSpain = () => {
                           className="text-[15px] text-center"
                         >
                           <Image
+                            unoptimized
                             width={110}
                             height={100}
                             src={car.src}

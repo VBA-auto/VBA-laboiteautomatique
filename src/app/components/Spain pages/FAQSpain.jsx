@@ -24,6 +24,7 @@ const AccordionItem = ({ title, content, image, isOpen, onClick }) => (
         <p dangerouslySetInnerHTML={{ __html: content }}></p>
         {image ? (
           <Image
+            unoptimized
             width={800}
             height={500}
             loading="lazy"

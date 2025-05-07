@@ -126,6 +126,7 @@ const SingleSearchView = () => {
                 <div className="md:w-1/2 flex items-center gap-5">
                   <div className="border py-2 bg-white rounded-md">
                     <Image
+                      unoptimized
                       src={imagesSlide[0]}
                       width={60}
                       height={50}
@@ -182,6 +183,7 @@ const SingleSearchView = () => {
                 <div className=" flex items-center gap-5 mb-5">
                   <div className="border py-2 bg-white rounded-md">
                     <Image
+                      unoptimized
                       src={imagesSlide[0]}
                       width={60}
                       height={50}

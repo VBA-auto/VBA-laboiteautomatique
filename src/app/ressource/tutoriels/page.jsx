@@ -95,6 +95,7 @@ const Page = () => {
                             <div className="">
                               <Link href="/ressource/blogs/calibrage">
                                 <Image
+                                  unoptimized
                                   width={1000}
                                   height={300}
                                   src="/images/blog-calib.webp"
@@ -131,6 +132,7 @@ const Page = () => {
 
                             <Link href="/ressource/blogs/verification-parametrage">
                               <Image
+                                unoptimized
                                 width={1000}
                                 height={300}
                                 src="/images/BlogVeri.webp"
@@ -165,6 +167,7 @@ const Page = () => {
                             </Link>
                             <Link href="/ressource/blogs/adaptation-calibrage">
                               <Image
+                                unoptimized
                                 width={1000}
                                 height={300}
                                 src="/images/BlogAdapt.webp"
@@ -202,6 +205,7 @@ const Page = () => {
                             <div className="w-full h-full">
                               <Link href="/ressource/blogs/remplacement-calculateur">
                                 <Image
+                                  unoptimized
                                   width={900}
                                   height={300}
                                   src="/images/BlogV1.webp"
@@ -237,6 +241,7 @@ const Page = () => {
                             <div className="w-full h-full">
                               <Link href="/ressource/blogs/presentation-vba">
                                 <Image
+                                  unoptimized
                                   width={980}
                                   height={300}
                                   src="/images/BlogV2.webp"
@@ -273,6 +278,7 @@ const Page = () => {
                             <div className="w-full h-full">
                               <Link href="/ressource/blogs/test-embrayage-edc">
                                 <Image
+                                  unoptimized
                                   width={980}
                                   height={300}
                                   src="/images/BlogV3.webp"
@@ -309,6 +315,7 @@ const Page = () => {
                             <div className="w-full h-full">
                               <Link href="/ressource/blogs/differentes-boites-DC4">
                                 <Image
+                                  unoptimized
                                   width={980}
                                   height={300}
                                   src="/images/blog6.webp"

@@ -45,6 +45,7 @@ const Adaptation = () => {
               Références DC4 par modèle de véhicule
             </h2>
             <Image
+              unoptimized
               width={300}
               height={200}
               className="w-full rounded-md "

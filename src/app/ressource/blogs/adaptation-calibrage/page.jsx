@@ -44,6 +44,7 @@ const Adaptation = () => {
               Adaptation / Calibrage des points de touche
             </h2>
             <Image
+              unoptimized
               width={300}
               height={200}
               className="w-full rounded-md "
@@ -124,6 +125,7 @@ const Adaptation = () => {
               </p>
               <div className="my-5">
                 <Image
+                  unoptimized
                   width={300}
                   height={200}
                   className="w-full rounded-md "

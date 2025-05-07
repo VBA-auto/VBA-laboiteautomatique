@@ -49,6 +49,7 @@ const SingleSearchView = ({ params }) => {
     customPaging: function (i) {
       return (
         <Image
+          unoptimized
           src={SearchSingleView?.images[i] || "/placeholder-image.jpg"}
           alt={`Thumbnail ${i + 1}`}
           width={100}
