@@ -90,7 +90,7 @@ const SingleSearchView = () => {
                     <p className="text-[14px] text-gray-400">Description</p>
                     <p className="text-[15px]">
                       Module de commande (calculateur) pour boite automatique
-                      DW5006
+                      DW5
                     </p>
                   </div>
                   <div className="px-4 mb-3">
