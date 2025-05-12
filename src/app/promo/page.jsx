@@ -47,7 +47,7 @@ const PromoPage = () => {
             🚀 Promotion Exceptionnelle{" "}
             <span className="font-normal">Jusqu&apos;au </span>
             <span className="text-green-400 font-[500] text-[22px]">
-              18/03/2025
+              18/07/2025
             </span>
           </h1>
 

@@ -194,6 +194,10 @@ const Footer = () => {
                 <Link href="/sitemap" className="hover:text-[#2C80EF]">
                   Sitemap
                 </Link>
+                <span> | </span>
+                <Link href="https://dsg7.fr/" className="hover:text-red-500">
+                  DSG7
+                </Link>
               </div>
               <span className="hidden">
                 Développé par{" "}
