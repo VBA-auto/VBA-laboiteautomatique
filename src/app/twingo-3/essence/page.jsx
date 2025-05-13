@@ -84,7 +84,7 @@ const SingleSearchView = () => {
                   <div className="px-4 mb-2">
                     <p className="text-[14px] text-gray-400">Désignation</p>
                     <h1 className="text-[15px]">
-                      Calculateur Twingo 3 0.9 - 1.0 Essence
+                      Calculateur Twingo 3 (0.9 - 1.0 Essence)
                     </h1>
                   </div>
                   <div className="px-4 mb-2">
