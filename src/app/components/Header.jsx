@@ -52,7 +52,7 @@ const Header = () => {
           <nav>
             <div className="flex flex-wrap items-center justify-between mx-auto py-2 headerMainCont">
               {/* Logo */}
-              <Link rel="preload" href="/" className="flex items-center">
+              {/* <Link rel="preload" href="/" className="flex items-center">
                 <div className="lg:w-[290px]">
                   <Image
                     unoptimized
@@ -62,6 +62,18 @@ const Header = () => {
                     alt="Logo"
                     className="w-[90px] h-[60px]"
                     priority
+                  />
+                </div>
+              </Link> */}
+              <Link href="/" className="flex items-center" scroll={false}>
+                <div className="lg:w-[290px] relative w-[90px] h-[60px]">
+                  <Image
+                    src="/images/VBAlogo.webp"
+                    alt="Logo"
+                    fill
+                    className="object-contain"
+                    sizes="(max-width: 768px) 90px, 290px"
+                    unoptimized
                   />
                 </div>
               </Link>
