@@ -9,7 +9,7 @@ import { MdEmail } from "react-icons/md";
 
 const Flyer = () => {
   return (
-    <div className="bg-white text-black max-w-3xl mx-auto font-sans md:p-0 p-2">
+    <div className="bg-white text-black max-w-3xl mx-auto font-sans md:p-2 p-2 shadow-md">
       {/* Header */}
       <div className="flex items-center justify-between  py-2">
         <div className="">
@@ -54,7 +54,7 @@ const Flyer = () => {
       >
         <div className="absolute inset-0 bg-black bg-opacity-50 bg-gradient-to-r from-black/70 via-black/0 to-transparent rounded-md"></div>
 
-        <div className="h-[300px] md:ms-8">
+        <div className="h-[300px] md:ms-0">
           <div className="relative z-10 flex items-center h-full">
             <div className="md:max-w-sm bg-blue-500 h-full">
               {" "}
@@ -97,39 +97,42 @@ const Flyer = () => {
       </div>
       <div className="max-w-3xl  z-50 relative">
         <div className="md:w-1/2">
+          <h2 className="text-2xl ms-5 mt-10 text-blue-500 font-bold mb-3 H2 md:text-start text-center">
+            VBA CALCULATEUR RENAULT
+          </h2>
+        </div>
+        <div className="md:mt-[-330px] md:mb-0 mb-2 md:w-1/2 ms-auto">
           {/* Icons */}
-          <div className="flex justify-around items-center text-center my-6">
+          <div className="flex justify-around items-center text-center my-3">
             <div className="flex flex-col justify-center items-center">
               <div className="text-3xl">
-                <FaTruck className="text-blue-500" />
+                <FaTruck className="md:text-white text-blue-500" />
               </div>
-              <p className="text-[12px] font-semibold">
+              <p className="text-[12px] font-semibold md:text-white text-black">
                 LIVRAISON <br /> RAPIDE
               </p>
             </div>
             <div className="flex flex-col justify-center items-center">
               <div className="text-3xl">
-                <FaCheckCircle className="text-blue-500" />
+                <FaCheckCircle className="md:text-white text-blue-500" />
               </div>
-              <p className="text-[12px] font-semibold">
+              <p className="text-[12px] font-semibold md:text-white text-black">
                 DÉJÀ <br /> PROGRAMMÉ
               </p>
             </div>
             <div className="flex flex-col justify-center items-center">
               <div className="text-3xl">
-                <AiFillSafetyCertificate className="text-blue-500" />
+                <AiFillSafetyCertificate className="md:text-white text-blue-500" />
               </div>
-              <p className="text-[12px] font-semibold">
+              <p className="text-[12px] font-semibold md:text-white text-black">
                 GARANTIE <br /> 1 AN
               </p>
             </div>
           </div>
-        </div>
-        <div className="md:mt-[-250px] md:mb-0 mb-5">
           <img
             src="/images/cal-normal-3.webp"
             alt="Logo"
-            className="md:ms-auto  md:w-96 w-[250px] rounded-lg image"
+            className="md:ms-auto  md:w-96 w-[250px] rounded-lg image border border-blue-500 mb-5"
           />
         </div>
       </div>
