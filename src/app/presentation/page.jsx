@@ -97,7 +97,7 @@ const Flyer = () => {
       </div>
       <div className="max-w-3xl  z-50 relative">
         <div className="md:w-1/2">
-          <h2 className="text-2xl ms-5 mt-10 text-blue-500 font-bold mb-3 H2 md:text-start text-center">
+          <h2 className="text-2xl ms-5 md:mt-10 mt-2 text-blue-500 font-bold mb-3 H2 md:text-start text-center">
             VBA CALCULATEUR RENAULT
           </h2>
         </div>
