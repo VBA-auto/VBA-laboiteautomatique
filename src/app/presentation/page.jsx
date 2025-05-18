@@ -132,7 +132,7 @@ const Flyer = () => {
           <img
             src="/images/cal-normal-3.webp"
             alt="Logo"
-            className="md:ms-auto  md:w-96 w-[250px] rounded-lg image border border-blue-500 mb-5"
+            className="md:ms-auto  md:w-96 w-[250px] rounded-lg image border border-blue-500 mb-5 shadow-md"
           />
         </div>
       </div>
