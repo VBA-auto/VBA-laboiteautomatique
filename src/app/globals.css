@@ -12,6 +12,9 @@ body {
   background-color: #fff;
   color: #414141;
 }
+.H2 {
+  font-family: "Poppins", sans-serif;
+}
 .danger {
   background-color: #c33e1de7;
 }
@@ -632,6 +635,9 @@ option {
   .headButton,
   .homeContentMain {
     display: none;
+  }
+  .image {
+    margin: auto;
   }
   .navToogleButton {
     display: inherit !important;
