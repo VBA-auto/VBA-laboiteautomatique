@@ -224,7 +224,7 @@ const Flyer = () => {
       </div>
 
       {/* Footer */}
-      <div className="border-t pt-4 text-center text-sm mb-5">
+      <div className="pt-4 text-center text-sm mb-5">
         <p className="font-semibold H2">Une question ? Besoin d’un devis ?</p>
         <ul className="list-none  text-sm flex justify-center gap-5 H2">
           <div className="md:flex gap-5">
