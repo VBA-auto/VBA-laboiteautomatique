@@ -4,7 +4,7 @@ import React from "react";
 const PDF = () => {
   return (
     <div className="flex flex-col items-center gap-4 w-full">
-      <div className="w-full max-w-[50%]">
+      <div className="w-full md:max-w-[50%] ">
         {" "}
         {/* This container controls the 80% width */}
         <object
