@@ -65,8 +65,12 @@ const Header = () => {
                   />
                 </div>
               </Link> */}
-              <Link href="/" className="flex items-center" scroll={false}>
-                <div className="lg:w-[290px] relative w-[90px] h-[60px]">
+              <Link
+                href="/"
+                className="lg:w-[290px] flex items-center"
+                scroll={false}
+              >
+                <div className=" relative w-[90px] h-[60px]">
                   <Image
                     src="/images/VBAlogo.webp"
                     alt="Logo"

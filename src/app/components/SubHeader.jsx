@@ -14,7 +14,7 @@ const SubHeader = () => {
                   href="mailto:contact@laboiteautomatique.com"
                   className="md:text-[14px] text-[11px] text-gray-700"
                 >
-                  contact@laboiteautomatique.com
+                  contact@laboiteautomatique.fr
                 </Link>
               </div>
             </div>

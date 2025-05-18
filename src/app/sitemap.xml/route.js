@@ -129,6 +129,11 @@ export async function GET() {
       priority: 0.8,
     },
     {
+      loc: `${baseUrl}/presentation`,
+      lastmod: new Date().toISOString(),
+      priority: 0.8,
+    },
+    {
       loc: `${baseUrl}/ressource/blogs/test-embrayage-edc`,
       lastmod: new Date().toISOString(),
       priority: 0.8,
