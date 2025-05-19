@@ -5,6 +5,7 @@ import SubHeader from "@/components/SubHeader";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ReturnButton from "@/components/ReturnButton";
+import Comments from "@/components/Blogs/Comments";
 const pageDescription =
   "informations calculateur boite automatique EDC Renault version diag, etalonage, numero calibrage, numero vdiag, version logiciel";
 const Adaptation = () => {
@@ -180,6 +181,9 @@ const Adaptation = () => {
                 </button>
               </Link>
             </div>
+          </div>
+          <div className="md:w-3/5 mx-auto mt-8 mb-16">
+            <Comments />
           </div>
         </div>
       </section>
