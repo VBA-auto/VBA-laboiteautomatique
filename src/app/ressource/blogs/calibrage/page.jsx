@@ -5,9 +5,28 @@ import SubHeader from "@/components/SubHeader";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ReturnButton from "@/components/ReturnButton";
+import Comments from "@/components/Blogs/Comments";
 const pageDescription =
   "informations calculateur boite automatique EDC Renault version diag, etalonage, numero calibrage, numero vdiag, version logiciel";
 const CalibragePage = () => {
+  const dynamicComments = [
+    {
+      id: "1cali",
+      author: "User98",
+      text: "Excellent article sur l'importance du calibrage ! C'est un rappel crucial pour la précision et la fiabilité. Merci pour ces informations claires et concises, très utile pour tous les professionnels.",
+      timestamp: "2h",
+      likes: 8,
+      avatar: true,
+    },
+    {
+      id: "2cali",
+      author: "Duke",
+      text: "Merci de souligner à quel point le calibrage est vital. Votre explication des conséquences d'un mauvais calibrage est très pertinente. C'est un sujet essentiel pour garantir la qualité des mesures.",
+      timestamp: "3d",
+      likes: 3,
+      avatar: true,
+    },
+  ];
   return (
     <main>
       <SubHeader />
@@ -90,6 +109,9 @@ const CalibragePage = () => {
                 </button>
               </Link>
             </div>
+          </div>
+          <div className="md:w-3/5 mx-auto mt-8 mb-16">
+            <Comments initialComments={dynamicComments} />
           </div>
         </div>
       </section>

@@ -9,6 +9,24 @@ import Comments from "@/components/Blogs/Comments";
 const pageDescription =
   "informations calculateur boite automatique EDC Renault version diag, etalonage, numero calibrage, numero vdiag, version logiciel";
 const Adaptation = () => {
+  const dynamicComments = [
+    {
+      id: "1calibrage",
+      author: "Marc L.",
+      text: "Cet article sur l'adaptation et le calibrage est très éclairant ! Il est crucial de comprendre que le simple calibrage ne suffit pas toujours, l'adaptation est la clé pour une précision durable dans des environnements variés. Merci pour cette distinction essentielle.",
+      timestamp: "1d",
+      likes: 5,
+      avatar: true,
+    },
+    {
+      id: "2calibrage",
+      author: "Claire M.",
+      text: "Je trouve votre explication sur la synergie entre l'adaptation et le calibrage particulièrement pertinente. C'est une approche complète qui garantit la fiabilité des systèmes. Cela confirme l'importance d'une maintenance proactive. Excellent travail !",
+      timestamp: "11h",
+      likes: 3,
+      avatar: true,
+    },
+  ];
   return (
     <main>
       <SubHeader />
@@ -183,7 +201,7 @@ const Adaptation = () => {
             </div>
           </div>
           <div className="md:w-3/5 mx-auto mt-8 mb-16">
-            <Comments />
+            <Comments initialComments={dynamicComments} />
           </div>
         </div>
       </section>

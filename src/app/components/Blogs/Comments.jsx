@@ -2,50 +2,16 @@
 "use client";
 import React, { useState } from "react";
 import {
-  FaFacebook,
-  FaTwitter,
   FaRegUserCircle,
   FaThumbsUp,
   FaThumbsDown,
   FaShare,
   FaCommentDots,
-  FaApple,
 } from "react-icons/fa";
 import { GiWatermelon } from "react-icons/gi";
 
-const mockComments = [
-  {
-    id: 1,
-    author: "DARING DRINK",
-    text: "No thank you, but at least it is not as stupid as the wavy eyebrow trend.",
-    timestamp: "4h",
-    likes: 1,
-    avatar: null, // null হলে FaRegUserCircle ব্যবহৃত হবে
-  },
-  {
-    id: 2,
-    author: "STRONG WATERMELON",
-    text: "I like",
-    timestamp: "9h",
-    likes: 2,
-    avatar: true,
-  },
-];
-
-// কালারড সার্কেল আইকনগুলোর জন্য (ছবিতে থাকা)
-const moodIcons = [
-  "bg-blue-400",
-  "bg-green-400",
-  "bg-red-400",
-  "bg-yellow-400",
-  "bg-purple-400",
-  "bg-pink-400",
-  "bg-indigo-400",
-  "bg-gray-400",
-];
-
-const Comments = () => {
-  const [comments, setComments] = useState(mockComments);
+const Comments = ({ initialComments = [] }) => {
+  const [comments, setComments] = useState(initialComments);
   const [newComment, setNewComment] = useState("");
 
   const handlePostComment = (e) => {
@@ -102,14 +68,14 @@ const Comments = () => {
         {comments.map((comment) => (
           <div key={comment.id} className="flex items-start space-x-3">
             {comment.avatar ? (
-              <GiWatermelon
+              <FaRegUserCircle
                 size={36}
-                className="text-gray-400 border-2 border-blue-500 rounded-full"
+                className="text-gray-400 w-12 h-full border-2 border-gray-500 rounded-full"
               />
             ) : (
               <FaRegUserCircle
                 size={36}
-                className="text-gray-400 border-2 border-blue-500 rounded-full"
+                className="text-gray-400 rounded-full"
               />
             )}
             <div className="flex-grow">

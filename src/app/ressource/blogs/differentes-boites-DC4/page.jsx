@@ -5,10 +5,29 @@ import SubHeader from "@/components/SubHeader";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ReturnButton from "@/components/ReturnButton";
+import Comments from "@/components/Blogs/Comments";
 
 const pageDescription =
   "informations calculateur boite automatique EDC Renault version diag, etalonage, numero calibrage, numero vdiag, version logiciel";
 const Adaptation = () => {
+  const dynamicComments = [
+    {
+      id: "1boite",
+      author: "Olivier D.",
+      text: "Très bon article qui démystifie les différentes versions de la boîte DC4 ! C'est souvent une source de confusion pour les propriétaires et techniciens. Cette explication claire sur les spécificités de chaque type est extrêmement utile pour le diagnostic et l'entretien. Merci pour ce guide détaillé !",
+      timestamp: "2d",
+      likes: 6,
+      avatar: true,
+    },
+    {
+      id: "2boite",
+      author: "Isabelle G.",
+      text: "Merci beaucoup pour ces précieuses informations sur les boîtes DC4 ! Il est rare de trouver un comparatif aussi précis. Pourriez-vous envisager un article similaire sur les points de vigilance lors de l'achat d'un véhicule équipé de ces boîtes ? Cela serait très utile pour les futurs acquéreurs.",
+      timestamp: "8h",
+      likes: 1,
+      avatar: true,
+    },
+  ];
   return (
     <main>
       <SubHeader />
@@ -399,6 +418,9 @@ const Adaptation = () => {
                 </button>
               </Link>
             </div>
+          </div>
+          <div className="md:w-3/5 mx-auto mt-8 mb-16">
+            <Comments initialComments={dynamicComments} />
           </div>
         </div>
       </section>

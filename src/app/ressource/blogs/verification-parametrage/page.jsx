@@ -5,9 +5,28 @@ import SubHeader from "@/components/SubHeader";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ReturnButton from "@/components/ReturnButton";
+import Comments from "@/components/Blogs/Comments";
 const pageDescription =
   "informations calculateur boite automatique EDC Renault version diag, etalonage, numero calibrage, numero vdiag, version logiciel";
 const Verification = () => {
+  const dynamicComments = [
+    {
+      id: "1param",
+      author: "Alex R.",
+      text: "Article très pertinent qui met en lumière l'importance capitale de la vérification et du paramétrage précis. C'est la clé pour éviter des erreurs coûteuses et garantir la performance. Merci pour ces éclaircissements !",
+      timestamp: "5h",
+      likes: 5,
+      avatar: true,
+    },
+    {
+      id: "2param",
+      author: "Sophie",
+      text: "Merci pour ce rappel sur l'aspect souvent négligé mais essentiel de la validation des paramètres. Votre article est très utile pour comprendre comment une bonne vérification peut optimiser le fonctionnement. Super contenu !",
+      timestamp: "8d",
+      likes: 8,
+      avatar: true,
+    },
+  ];
   return (
     <main>
       <SubHeader />
@@ -210,6 +229,9 @@ const Verification = () => {
                 </button>
               </Link>
             </div>
+          </div>
+          <div className="md:w-3/5 mx-auto mt-8 mb-16">
+            <Comments initialComments={dynamicComments} />
           </div>
         </div>
       </section>
