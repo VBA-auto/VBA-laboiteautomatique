@@ -67,10 +67,10 @@ const Comments = () => {
     <div className=" bg-white font-Poppins md:w-full">
       {/* Title and Subtitle */}
       <h2 className="text-2xl font-semibold text-gray-800">
-        The Conversation ({comments.length})
+        Conversation ({comments.length})
       </h2>
       <p className="text-sm text-gray-500 mt-1 mb-6">
-        Start a discussion, not a fire. Post with kindness.
+        Commencez ici la discussion. Postez avec courtoisie.
       </p>
 
       {/* Comment Input Area */}
@@ -78,11 +78,14 @@ const Comments = () => {
         onSubmit={handlePostComment}
         className="flex items-start space-x-3 mb-8"
       >
-        <FaRegUserCircle size={36} className="text-gray-400 mt-1" />
+        <FaRegUserCircle
+          size={36}
+          className="text-gray-400 mt-1 border-2 border-blue-500 rounded-full"
+        />
         <textarea
           value={newComment}
           onChange={(e) => setNewComment(e.target.value)}
-          placeholder="Add a comment..."
+          placeholder="Ajouter un commentaire"
           className="flex-grow p-2.5 border bg-white border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none resize-none text-sm"
           rows="3"
         ></textarea>
@@ -90,7 +93,7 @@ const Comments = () => {
           type="submit"
           className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors text-sm self-start mt-1"
         >
-          Post
+          Envoyer
         </button>
       </form>
 
@@ -99,9 +102,15 @@ const Comments = () => {
         {comments.map((comment) => (
           <div key={comment.id} className="flex items-start space-x-3">
             {comment.avatar ? (
-              <GiWatermelon size={36} className="text-gray-400" />
+              <GiWatermelon
+                size={36}
+                className="text-gray-400 border-2 border-blue-500 rounded-full"
+              />
             ) : (
-              <FaRegUserCircle size={36} className="text-gray-400" />
+              <FaRegUserCircle
+                size={36}
+                className="text-gray-400 border-2 border-blue-500 rounded-full"
+              />
             )}
             <div className="flex-grow">
               <div className="flex items-center space-x-2 mb-0.5">
@@ -117,10 +126,10 @@ const Comments = () => {
               </p>
               <div className="flex items-center space-x-4 mt-2 text-xs text-gray-500">
                 <button className="hover:text-blue-500 flex items-center">
-                  <FaCommentDots className="mr-1" /> Reply
+                  <FaCommentDots className="mr-1" /> Répondre
                 </button>
                 <button className="hover:text-blue-500 flex items-center">
-                  <FaShare className="mr-1" /> Share
+                  <FaShare className="mr-1" /> Partager
                 </button>
                 <button className="hover:text-blue-500 flex items-center">
                   <FaThumbsUp className="mr-1" /> {comment.likes}
