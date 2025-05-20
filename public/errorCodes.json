@@ -357,19 +357,55 @@
   {
     "code": "P1839 92",
     "description": "Changement de vitesse – tambour du sélecteur 2 – Signal hors du seuil inférieur ou supérieur ",
-    "subTitle": ": circuit to earth clutch Signal outside lower or upper threshold",
+    "subTitle": "circuit to earth clutch Signal outside lower or upper threshold",
     "aide": "problème calculateur"
   },
   {
     "code": "P1837 91",
     "description": "Changement de vitesse – tambour du sélecteur 2 – Signal hors du seuil inférieur ou supérieur ",
-    "subTitle": ": circuit to earth clutch Signal outside lower or upper threshold",
+    "subTitle": "circuit to earth clutch Signal outside lower or upper threshold",
     "aide": "problème calculateur"
   },
   {
     "code": "P1837",
     "description": "Changement de vitesse – tambour du sélecteur 2 – Signal hors du seuil inférieur ou supérieur ",
-    "subTitle": ": circuit to earth clutch Signal outside lower or upper threshold",
+    "subTitle": "circuit to earth clutch Signal outside lower or upper threshold",
+    "aide": "problème calculateur"
+  },
+  {
+    "code": "DTC178194",
+    "description": "Passage rapports tambour de sélection 1",
+    "subTitle": "Clutch 1 motor circuit , Short circuit to earth",
+    "aide": "calculateur + moteur embrayage (en haut)"
+  },
+  {
+    "code": "DTC187198",
+    "description": "Température embrayage 1 mesurée trop forte",
+    "subTitle": "Clutch 1 temperature measured too high",
+    "aide": "Probablement embrayage – parfois lié au calculateur"
+  },
+  {
+    "code": "DTC186007",
+    "description": "Erreur de couple embrayage 1",
+    "subTitle": "Clutch 1 torque error",
+    "aide": "double embrayage ou programme ou mauvaise référence"
+  },
+  {
+    "code": "DTC178072",
+    "description": "Passage de rapports tambour de sélection 1 impossible",
+    "subTitle": "Gear shift – Selector drum 1 shift impossible",
+    "aide": "Calculateur"
+  },
+  {
+    "code": "DTC186262",
+    "description": "Couple embrayage 1 – Erreur de couple",
+    "subTitle": "Clutch 1 torque circuit error",
+    "aide": "double embrayage ou programme ou mauvaise référence"
+  },
+  {
+    "code": "DTC178501",
+    "description": "Calculateur anomalie électronique interne",
+    "subTitle": "tcm fault",
     "aide": "problème calculateur"
   }
 ]
