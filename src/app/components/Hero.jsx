@@ -26,8 +26,6 @@ const Hero = () => {
   const { isSlowNetwork, hasImageError, networkSpeed, refreshPage } =
     useNetworkStatus();
 
-  console.log("test");
-
   const pageDescription =
     "Vente et reprogrammation de calculateurs pour boite automatique DC4 (boite EDC) pour Renault clio 4, clio RS, Captur, megane 3 et scenic 3.";
 

@@ -29,6 +29,26 @@ const Home = () => {
         {/* Optional: Add versioning to prevent caching issues */}
         <meta name="version" content="1.0.2" />
       </Head>
+      <div className="sr-only">
+        <h1>Vente Calculateur boite automatique EDC Renault neuf</h1>
+        <h1>Vente Calculateur boite automatique EDC Renault reconditionné</h1>
+        <h1>réparation Calculateur boite automatique EDC Renault</h1>
+        <h1>reprogrammation Calculateur boite automatique Renault EDC</h1>
+        <h1>boite de vitesse à controler aide en ligne </h1>
+        <h2>Calculateur boite automatique EDC Renault Captur</h2>
+        <h2>Calculateur boite automatique EDC Renault Clio 4</h2>
+        <h2>Calculateur boite automatique EDC Renault Megane 3</h2>
+        <h2>Calculateur boite automatique EDC Renault Scenic 3 1.5 diesel</h2>
+        <h2>Calculateur boite automatique EDC Renault Clio RS 1.6 essence</h2>
+        <h2>Calculateur boite automatique EDC Renault Fluence</h2>
+
+        <h3>Calculateur boite automatique EDC Renault Captur 1.2 Essence</h3>
+        <h3>Calculateur boite automatique EDC Renault Captur 1.5 Diesel</h3>
+        <h3>Calculateur boite automatique EDC Renault Clio 4 1.2 Essence</h3>
+        <h3>Calculateur boite automatique EDC Renault Clio 4 1.5 Diesel</h3>
+        <h3>Calculateur boite automatique EDC Renault Megane 3 1.5 Diesel</h3>
+        <h3>Calculateur boite automatique EDC Renault Megane 3 1.2 Essence</h3>
+      </div>
       <div className="yes">
         <Hero />
       </div>
