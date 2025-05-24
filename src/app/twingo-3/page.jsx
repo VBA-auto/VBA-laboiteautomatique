@@ -8,8 +8,8 @@ import DynaStock from "@/components/DynaStock";
 import ReturnButton from "@/components/ReturnButton";
 
 const pageDescription =
-  "Renault Clio 4, calculateur boite automatique EDC pour Renault Clio 4 essence et Clio 4 Diesel voir stock";
-const HeadingText = "Calculateur pour Renault Clio IV";
+  "Calculateur pour Twingo 3. Symptômes de panne, références compatibles, remplacement.   ";
+const HeadingText = "Calculateur Twingo 3 – Boîte auto Renault ";
 
 const RenaultClio = () => {
   return (
@@ -19,7 +19,7 @@ const RenaultClio = () => {
       <section className="py-[60px] produits ">
         <div className="container mx-auto">
           <Head>
-            <title>Calculateur EDC pour Renault Twingo 3 disponibililté</title>
+            <title>Calculateur Twingo 3 – Boîte auto Renault </title>
             <meta name="description" content={pageDescription} />
             <meta name="headline" content={HeadingText} />
           </Head>

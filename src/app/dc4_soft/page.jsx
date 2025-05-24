@@ -1,6 +1,7 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import SubHeader from "@/components/SubHeader";
+import Head from "next/head";
 import Image from "next/image";
 
 const Programmation = () => {
@@ -8,6 +9,13 @@ const Programmation = () => {
     <main>
       <SubHeader />
       <Header />
+      <Head>
+        <title>différents programme DC4 version diag calibrage</title>
+        <meta
+          name="description"
+          content="Fichier logiciel DC4 pour diag, paramétrage et calibrage des calculateurs Renault.   "
+        />
+      </Head>
       <section className="installation">
         <div className="relative">
           <div style={{ display: "none" }}>

@@ -3,6 +3,7 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import SubHeader from "@/components/SubHeader";
+import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -40,6 +41,15 @@ const PromoPage = () => {
     <main className="">
       <SubHeader />
       <Header />
+      <Head>
+        <title>
+          promotion en cours pieces détachées Renault boite automatique
+        </title>
+        <meta
+          name="description"
+          content="Liste des calculateurs Renault en promotion. Références disponibles immédiatement.    "
+        />
+      </Head>
       <div className="pt-28 pb-28 flex items-center justify-center bg-gradient-to-r from-white to-gray-100">
         <div className="text-center text-gray-700">
           <h1 className="text-2xl font-bold text-blue-500 mb-1">- 180 € </h1>

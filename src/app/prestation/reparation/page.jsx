@@ -16,7 +16,10 @@ const Programmation = () => {
       <section className="installation">
         <div className="relative">
           <Head>
-            <title>Test et réparation calculateur boite automatique EDC</title>
+            <title>
+              Garage, pièce détachées automobile. Test et réparation calculateur
+              boite automatique{" "}
+            </title>
             <meta name="description" content={pageDescription} />
           </Head>
           <div style={{ display: "none" }}>

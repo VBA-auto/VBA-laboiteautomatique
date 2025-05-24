@@ -33,7 +33,7 @@ const CalibragePage = () => {
       <Header />
       <section className="article-content">
         <Head>
-          <title>exemple informations calcualteur EDC renault</title>
+          <title>Calibrage paramétrage calculateur Renault</title>
           <meta name="description" content={pageDescription} />
         </Head>
         <div className="container mx-auto mt-[60px] px-6 md:px-0">

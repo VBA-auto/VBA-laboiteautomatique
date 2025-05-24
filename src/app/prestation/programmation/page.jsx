@@ -17,7 +17,7 @@ const Programmation = () => {
         <div className="relative">
           <Head>
             <title>
-              Programation calculateur pour boite automatique EDC Renault
+              garage Programation calculateur pour boite automatique EDC Renault
             </title>
             <meta name="description" content={pageDescription} />
           </Head>

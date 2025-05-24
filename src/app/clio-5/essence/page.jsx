@@ -46,11 +46,14 @@ const SingleVehicleView = () => {
   return (
     <main>
       <Head>
-        <title>Calculateur Renault Clio 5 1.3 Essence</title>
-        <meta name="title" content="Calculateur Renault Clio 5 1.3 Essence" />
+        <title>Calculateur Clio 5 Essence – EDC Renault </title>
+        <meta
+          name="title"
+          content="Calculateur Clio 5 Essence – EDC Renault   "
+        />
         <meta
           name="description"
-          content="Trouver ici votre calculateur pour boite automatique pour Renault Clio 5 1.3 Essence programmation incluse "
+          content="Liste des calculateurs compatibles avec la Clio 5 essence. Symptômes et remplacement.   "
         />
       </Head>
       <SubHeader />

@@ -39,12 +39,10 @@ const SingleSearchView = () => {
       <Header />
       <section className="produits">
         <Head>
-          <title>
-            Calculateur boîte automatique EDC Renault référence Twingo 3
-          </title>
+          <title>Calculateur Twingo 3 Essence – Renault EDC</title>
           <meta
             name="description"
-            content="Commandez ici votre Calculateur pour boîte automatique EDC Renault référence Twingo 3, programmation incluse. Vérifiez disponibilité."
+            content="Modèles compatibles pour Twingo 3 essence. Infos pannes et montage.  ."
           />
         </Head>
         <div className="container mx-auto">

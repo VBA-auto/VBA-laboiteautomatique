@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import ReturnButton from "@/components/ReturnButton";
 import Comments from "@/components/Blogs/Comments";
 const pageDescription =
-  "informations calculateur boite automatique EDC Renault version diag, etalonage, numero calibrage, numero vdiag, version logiciel";
+  "Étapes d’adaptation et de calibrage d’un calculateur DC4 après remplacement ou reprogrammation";
 const Adaptation = () => {
   const dynamicComments = [
     {
@@ -33,7 +33,7 @@ const Adaptation = () => {
       <Header />
       <section className="article-content">
         <Head>
-          <title>exemple informations calcualteur EDC renault</title>
+          <title>Adaptation et calibrage calculateur DC4</title>
           <meta name="description" content={pageDescription} />
         </Head>
         <div className="container mx-auto mt-[60px] px-6 md:px-0">

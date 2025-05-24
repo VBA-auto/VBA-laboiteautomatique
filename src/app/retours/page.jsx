@@ -5,8 +5,9 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const pageDescription =
-  "Vérifiez la disponibilté de votre module de commande de boite de vitesse automatique pour votre boite automatique EDC Renault Captur Diesel";
-const HeadingText = "Mentions legales VBA calculateur Renault";
+  "Conditions et procédure de retour d’un calculateur Renault commandé sur le site.   ";
+const HeadingText =
+  "VBA calcualteur Renault garage politique de gestion des retours ";
 
 export default function Retours() {
   return (
@@ -15,7 +16,9 @@ export default function Retours() {
       <Header />
       <section className="py-[40px]">
         <Head>
-          <title>VBA | Laboiteautomatique Gestion des Retours</title>
+          <title>
+            VBA calcualteur Renault garage politique de gestion des retours
+          </title>
           <meta name="description" content={pageDescription} />
           <meta name="headline" content={HeadingText} />
         </Head>

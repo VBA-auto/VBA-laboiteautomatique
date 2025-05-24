@@ -22,7 +22,7 @@ const Clio5PlatChild = "/images/clio_5.webp";
 const Twingo = "/images/twingo-3.webp";
 
 const pageDescription =
-  "Vous trouverez ici les différents modèles et le stock pour les  calculateurs boites automatiques EDC Renault clio 4, clio RS, Captur, megane 3 et scenic 3.";
+  "Vous trouverez ici les différents modèles et le stock pour les  modules de commande de calculateurs boites automatiques EDC Renault clio 4, clio RS, Captur, megane 3 et scenic 3.";
 
 const Produits = () => {
   return (
@@ -34,8 +34,8 @@ const Produits = () => {
           <div className="product3rdCont">
             <Head>
               <title>
-                Les différents calculateur boite automatique EDC renault
-                véhicule
+                magasin pièce détachée garage différents produits boite
+                automatique EDC renault véhicule
               </title>
               <meta name="description" content={pageDescription} />
             </Head>

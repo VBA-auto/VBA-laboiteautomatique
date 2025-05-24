@@ -6,11 +6,22 @@ import { IoIosArrowDroprightCircle } from "react-icons/io";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { IoCall } from "react-icons/io5";
 import { MdEmail } from "react-icons/md";
+import Head from "next/head";
+
+const pageDescription =
+  "Présentation de VBA, spécialiste des calculateurs Renault EDC et DC4.";
+const HeadingText =
+  "Présentation de VBA, spécialiste des calculateurs Renault EDC et DC4.";
 
 const Flyer = () => {
   return (
     <div className="bg-white text-black max-w-3xl mx-auto font-sans md:p-2 p-2 shadow-md">
       {/* Header */}
+      <Head>
+        <title>VBA calculateur renautl flyer</title>
+        <meta name="description" content={pageDescription} />
+        <meta name="headline" content={HeadingText} />
+      </Head>
       <div className="flex items-center justify-between  py-2">
         <div className="">
           <Link

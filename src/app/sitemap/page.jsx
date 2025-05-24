@@ -2,6 +2,7 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import SubHeader from "@/components/SubHeader";
+import Head from "next/head";
 import Link from "next/link";
 
 const Sitemap = () => {
@@ -82,6 +83,13 @@ const Sitemap = () => {
     <>
       <SubHeader />
       <Header />
+      <Head>
+        <title>VBA calculateur plan du site</title>
+        <meta
+          name="description"
+          content="Liste complète des pages du site : produits, prestations, véhicules, ressources.  "
+        />
+      </Head>
       <div className="my-16 bg-white border border-gray-200 rounded-lg shadow-md p-6 max-w-6xl mx-auto">
         <div className=" max-w-4xl mx-auto">
           <h3 className="text-2xl  font-semibold text-gray-700 mb-4">

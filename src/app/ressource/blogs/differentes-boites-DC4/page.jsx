@@ -8,7 +8,7 @@ import ReturnButton from "@/components/ReturnButton";
 import Comments from "@/components/Blogs/Comments";
 
 const pageDescription =
-  "informations calculateur boite automatique EDC Renault version diag, etalonage, numero calibrage, numero vdiag, version logiciel";
+  "Vue d’ensemble des modèles de boîtes automatiques DC4 Renault et leurs différences DC4000, DC4001, DC4005, DC4006, DC4015, DC4016";
 const Adaptation = () => {
   const dynamicComments = [
     {
@@ -34,7 +34,7 @@ const Adaptation = () => {
       <Header />
       <section className="article-content">
         <Head>
-          <title>exemple informations calcualteur EDC renault</title>
+          <title>Types de boîtes auto Renault DC4</title>
           <meta name="description" content={pageDescription} />
         </Head>
         <div className="container mx-auto mt-[60px] px-6 md:px-0">

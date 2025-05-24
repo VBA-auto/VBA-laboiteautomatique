@@ -2,10 +2,11 @@
 import ClientArticles from "./ClientArticles";
 
 export const metadata = {
-  title: "articles | Laboiteautomatique VBA",
+  title: "Articles techniques calculateur boîte auto | Laboiteautomatique VBA",
   description:
-    "Explore detailed articles about various cars equipped with automatic transmissions, including Fiat, Porsche, Toyota, and more.",
-  keywords: "cars, automatic transmission, car articles, BVA, car models",
+    "Articles techniques sur les calculateurs EDC et DC4 Renault : diagnostic, défauts, références",
+  keywords:
+    "cars, automatic transmission, car articles, BVA, car models Laboiteautomatique VBA",
 };
 
 async function fetchCars() {

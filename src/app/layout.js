@@ -8,7 +8,8 @@ import { Poppins } from "next/font/google"; // Importing Poppins
 import ChatWidget from "./components/botLogic/ChatWidget";
 
 export const metadata = {
-  title: "VBA Calculateur Renault",
+  title:
+    "VBA Calculateur Renault || magasin garage vente pièce automobile Renault boite automatique DC4 (EDC) 6DCT250 || https://laboiteautomatique.com",
   description: "Vente de calculateur Renault | VBA",
   icon: "/favicon.ico",
 };

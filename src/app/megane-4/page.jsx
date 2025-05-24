@@ -9,8 +9,8 @@ import DynaStock from "@/components/DynaStock";
 import ReturnButton from "@/components/ReturnButton";
 
 const pageDescription =
-  "Renault Megane 3, calculateur boite automatique EDC pour Renault Megane 3 essence et megane 3 Diesel voir stock";
-const HeadingText = "Calculateur pour Renault Megane";
+  "Références de calculateurs pour Renault Megane 4. Modèles compatibles et symptômes connus.";
+const HeadingText = "Calculateur Megane 4 Diesel – Boîte auto ";
 
 const RenaultMegane = () => {
   return (
@@ -20,7 +20,7 @@ const RenaultMegane = () => {
       <section className="py-[60px] produits">
         <div className="container mx-auto">
           <Head>
-            <title>Calculateur EDC pour Renault Megane IV disponibililté</title>
+            <title>Calculateur Megane 4 Diesel – Boîte auto </title>
             <meta name="description" content={pageDescription} />
             <meta name="headline" content={HeadingText} />
           </Head>

@@ -45,16 +45,14 @@ const SingleVehicleView = () => {
   return (
     <main>
       <Head>
-        <title>
-          Calculateur, boîte automatique Renault Megane 4 1.5 Diesel
-        </title>
+        <title>Calculateur Megane 4 – Boîte auto EDC Renault</title>
         <meta
           name="title"
-          content="Calculateur, boîte automatique Renault Megane 1.5 Diesel"
+          content="Calculateur Megane 4 – Boîte auto EDC Renault"
         />
         <meta
           name="description"
-          content="Trouver ici votre calculateur pour boite automatique pour Renault megane 3 1.5 Diesel programmation incluse"
+          content="Calculateur pour Megane 4 Diesel. Défauts fréquents, compatibilités, disponibilité en stock."
         />
       </Head>
       <SubHeader />
