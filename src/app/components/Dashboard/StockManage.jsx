@@ -6,6 +6,7 @@ import { FaPowerOff } from "react-icons/fa6";
 import { FaSave } from "react-icons/fa";
 import Header from "../Header";
 import toast, { Toaster } from "react-hot-toast";
+import { FaComments } from "react-icons/fa6";
 
 export default function StockManage({ handleLogout }) {
   const [cars, setCars] = useState([]);
@@ -14,6 +15,8 @@ export default function StockManage({ handleLogout }) {
   const [carStockChanges, setCarStockChanges] = useState({});
   const [refStockChanges, setRefStockChanges] = useState({});
   const [loading, setLoading] = useState(false);
+  const [comments, setComments] = useState([]);
+  const [loadingComments, setLoadingComments] = useState(false);
 
   // Fetch data when the component mounts
   useEffect(() => {
@@ -44,6 +47,25 @@ export default function StockManage({ handleLogout }) {
     fetchCars();
     fetchRefs();
   }, []);
+
+  useEffect(() => {
+    const fetchComments = async () => {
+      try {
+        setLoadingComments(true);
+        const res = await fetch(`/api/commentsAll`);
+        const data = await res.json();
+        setComments(data.comments || []);
+      } catch (err) {
+        console.error("Error fetching comments:", err);
+      } finally {
+        setLoadingComments(false);
+      }
+    };
+
+    if (selectedCategory === "Blogs") {
+      fetchComments();
+    }
+  }, [selectedCategory]);
 
   // Handle car stock change
   const handleCarStockChange = (model, type, newStock) => {
@@ -144,6 +166,29 @@ export default function StockManage({ handleLogout }) {
     }
   };
 
+  const deleteComment = async (id) => {
+    const confirmDelete = window.confirm(
+      "Are you sure you want to delete this comment?"
+    );
+    if (!confirmDelete) return;
+
+    try {
+      const res = await fetch(`/api/deleteComments/${id}`, {
+        method: "DELETE",
+      });
+
+      if (res.ok) {
+        toast.success("Comment deleted!");
+        setComments((prev) => prev.filter((c) => c._id !== id));
+      } else {
+        toast.error("Failed to delete comment.");
+      }
+    } catch (error) {
+      console.error("Error deleting comment:", error);
+      toast.error("An error occurred while deleting.");
+    }
+  };
+
   return (
     <>
       <Header />
@@ -152,7 +197,7 @@ export default function StockManage({ handleLogout }) {
           <h1 className="text-2xl my-8">{selectedCategory} Stock Management</h1>
 
           <div className="overflow-y-auto">
-            {selectedCategory === "Cars" ? (
+            {selectedCategory === "Cars" && (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-28">
                 {cars.map((car) => (
                   <div
@@ -193,7 +238,8 @@ export default function StockManage({ handleLogout }) {
                   </div>
                 ))}
               </div>
-            ) : (
+            )}
+            {selectedCategory === "Refs" && (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-28">
                 {refs.map((ref) => (
                   <div
@@ -224,6 +270,49 @@ export default function StockManage({ handleLogout }) {
           </div>
         </div>
 
+        {selectedCategory === "Blogs" && (
+          <div className="mb-28">
+            <h2 className="text-xl font-bold mb-4">User Comments</h2>
+            {loadingComments ? (
+              <p>Loading comments...</p>
+            ) : comments.length === 0 ? (
+              <p>No comments found.</p>
+            ) : (
+              <div className="space-y-4">
+                {comments.map((comment) => (
+                  <div
+                    key={comment._id}
+                    className="bg-white p-4 rounded-lg shadow border"
+                  >
+                    <div className="flex justify-between items-center mb-1">
+                      <div className="">
+                        <h3 className="font-semibold">{comment.author}</h3>
+                        <h3 className="font-semibold">
+                          Page name: {comment.pageSlug}
+                        </h3>
+                      </div>
+
+                      <span className="text-xs text-gray-500">
+                        {new Date(comment.timestamp).toLocaleString()}
+                      </span>
+                    </div>
+                    <p className="text-sm text-gray-800">{comment.text}</p>
+                    <p className="text-xs text-gray-500 mt-1">
+                      {comment.email}
+                    </p>
+                    <button
+                      onClick={() => deleteComment(comment._id)}
+                      className="text-sm text-red-600 hover:underline"
+                    >
+                      Delete
+                    </button>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
+
         {/* Bottom Navigation Bar */}
         <div className="fixed bottom-0 left-0 right-0">
           <div className="flex justify-center gap-24 items-center h-16 md:w-1/3 mx-auto bg-gray-100 rounded-full">
@@ -253,6 +342,20 @@ export default function StockManage({ handleLogout }) {
                 Ref codes
               </p>
             </div>
+            <div
+              className="flex flex-col items-center cursor-pointer"
+              onClick={() => setSelectedCategory("Blogs")}
+            >
+              <FaComments className="text-2xl" />
+              <p
+                className={`text-sm ${
+                  selectedCategory === "Blogs" ? "font-bold" : ""
+                }`}
+              >
+                Blogs
+              </p>
+            </div>
+
             <div
               className="flex flex-col items-center cursor-pointer"
               onClick={handleLogout}

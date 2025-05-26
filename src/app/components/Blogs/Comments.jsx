@@ -1,6 +1,5 @@
-// components/ConversationSection.js
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   FaRegUserCircle,
   FaThumbsUp,
@@ -8,38 +7,76 @@ import {
   FaShare,
   FaCommentDots,
 } from "react-icons/fa";
-import { GiWatermelon } from "react-icons/gi";
 
-const Comments = ({ initialComments = [] }) => {
-  const [comments, setComments] = useState(initialComments);
+const Comments = ({ slug }) => {
+  const [comments, setComments] = useState([]);
   const [newComment, setNewComment] = useState("");
+  const [showModal, setShowModal] = useState(false);
+  const [author, setAuthor] = useState("");
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(true);
 
-  const handlePostComment = (e) => {
+  useEffect(() => {
+    // localStorage বাদ দেওয়া হয়েছে
+    // const savedName = localStorage.getItem("commentAuthor");
+    // const savedEmail = localStorage.getItem("commentEmail");
+    // if (savedName) setAuthor(savedName);
+    // if (savedEmail) setEmail(savedEmail);
+
+    fetch(`/api/comments?slug=${slug}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setComments(data.comments || []);
+        setLoading(false);
+      });
+  }, [slug]);
+
+  const handlePostComment = async (e) => {
     e.preventDefault();
     if (newComment.trim() === "") return;
-    const newCommentObj = {
-      id: Date.now(),
-      author: "Current User", // এটি অথেন্টিকেশন থেকে আসবে
+
+    if (!author || !email) {
+      setShowModal(true);
+      return;
+    }
+
+    const commentData = {
+      pageSlug: slug,
+      author,
+      email,
       text: newComment,
-      timestamp: "Just now",
-      likes: 0,
-      avatar: null,
     };
-    setComments([newCommentObj, ...comments]);
-    setNewComment("");
+
+    const res = await fetch("/api/comments", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(commentData),
+    });
+
+    const data = await res.json();
+    if (data.comment) {
+      setComments([data.comment, ...comments]);
+      setNewComment("");
+    }
+  };
+
+  const handleSaveUserInfo = () => {
+    if (!author || !email) return;
+    // localStorage.setItem("commentAuthor", author);
+    // localStorage.setItem("commentEmail", email);
+    setShowModal(false);
+    handlePostComment({ preventDefault: () => {} });
   };
 
   return (
-    <div className=" bg-white font-Poppins md:w-full">
-      {/* Title and Subtitle */}
-      <h2 className="text-2xl font-semibold text-gray-800">
+    <div className="bg-white font-Poppins w-full sticky top-30">
+      <h2 className="text-xl text-gray-700 text-start font-medium">
         Conversation ({comments.length})
       </h2>
       <p className="text-sm text-gray-500 mt-1 mb-6">
         Commencez ici la discussion. Postez avec courtoisie.
       </p>
 
-      {/* Comment Input Area */}
       <form
         onSubmit={handlePostComment}
         className="flex items-start space-x-3 mb-8"
@@ -57,57 +94,85 @@ const Comments = ({ initialComments = [] }) => {
         ></textarea>
         <button
           type="submit"
-          className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors text-sm self-start mt-1"
+          className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 text-sm self-start mt-1"
         >
           Envoyer
         </button>
       </form>
 
-      {/* Comments List */}
-      <div className="space-y-6">
-        {comments.map((comment) => (
-          <div key={comment.id} className="flex items-start space-x-3">
-            {comment.avatar ? (
-              <FaRegUserCircle
-                size={36}
-                className="text-gray-400 w-12 h-full border-2 border-gray-500 rounded-full"
-              />
-            ) : (
+      {loading ? (
+        <div className="flex justify-center py-6">
+          <div className="w-6 h-6 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+        </div>
+      ) : (
+        <div className="space-y-6 h-[400px] overflow-y-scroll">
+          {comments.map((comment) => (
+            <div key={comment._id} className="flex items-start space-x-3">
               <FaRegUserCircle
                 size={36}
                 className="text-gray-400 rounded-full"
               />
-            )}
-            <div className="flex-grow">
-              <div className="flex items-center space-x-2 mb-0.5">
-                <span className="font-semibold text-sm text-gray-800">
-                  {comment.author}
-                </span>
-                <span className="text-xs text-gray-400">
-                  {comment.timestamp}
-                </span>
-              </div>
-              <p className="text-gray-700 text-sm leading-relaxed">
-                {comment.text}
-              </p>
-              <div className="flex items-center space-x-4 mt-2 text-xs text-gray-500">
-                <button className="hover:text-blue-500 flex items-center">
-                  <FaCommentDots className="mr-1" /> Répondre
-                </button>
-                <button className="hover:text-blue-500 flex items-center">
-                  <FaShare className="mr-1" /> Partager
-                </button>
-                <button className="hover:text-blue-500 flex items-center">
-                  <FaThumbsUp className="mr-1" /> {comment.likes}
-                </button>
-                <button className="hover:text-red-500 flex items-center">
-                  <FaThumbsDown className="mr-1" />
-                </button>
+              <div className="flex-grow">
+                <div className="flex items-center space-x-2 mb-0.5">
+                  <span className="font-semibold text-sm text-gray-800">
+                    {comment.author}
+                  </span>
+                  <span className="text-xs text-gray-400">
+                    {new Date(comment.timestamp).toLocaleString()}
+                  </span>
+                </div>
+                <p className="text-gray-700 text-sm leading-relaxed">
+                  {comment.text}
+                </p>
+                <div className="flex items-center space-x-4 mt-2 text-xs text-gray-500">
+                  <button className="hover:text-blue-500 flex items-center">
+                    <FaCommentDots className="mr-1" /> Répondre
+                  </button>
+                  <button className="hover:text-blue-500 flex items-center">
+                    <FaShare className="mr-1" /> Partager
+                  </button>
+                  <button className="hover:text-blue-500 flex items-center">
+                    <FaThumbsUp className="mr-1" /> {comment.likes || 0}
+                  </button>
+                  <button className="hover:text-red-500 flex items-center">
+                    <FaThumbsDown className="mr-1" />
+                  </button>
+                </div>
               </div>
             </div>
+          ))}
+        </div>
+      )}
+
+      {showModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50">
+          <div className="bg-white p-6 rounded-lg w-[90%] md:w-[400px]">
+            <h3 className="text-lg font-semibold mb-4 text-center">
+              Qui êtes-vous ?
+            </h3>
+            <input
+              type="text"
+              placeholder="Votre nom"
+              value={author}
+              onChange={(e) => setAuthor(e.target.value)}
+              className="w-full mb-3 p-2 border rounded bg-white"
+            />
+            <input
+              type="email"
+              placeholder="Votre email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="w-full mb-4 p-2 border rounded bg-white"
+            />
+            <button
+              onClick={handleSaveUserInfo}
+              className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600"
+            >
+              Sauvegarder et commenter
+            </button>
           </div>
-        ))}
-      </div>
+        </div>
+      )}
     </div>
   );
 };

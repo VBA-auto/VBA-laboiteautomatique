@@ -3,25 +3,22 @@ import { useState, useEffect } from "react";
 import StockManage from "@/components/Dashboard/StockManage";
 
 export default function Dashboard() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // Track login state
-  const [isLoading, setIsLoading] = useState(true); // Track loading state
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
-  // Logout function to clear the state
   const handleLogout = () => {
-    localStorage.removeItem("isLoggedIn"); // Clear state from localStorage
-    setIsLoggedIn(false); // Reset login state
+    localStorage.removeItem("isLoggedIn");
+    setIsLoggedIn(false);
   };
 
-  // Check login state on component mount
   useEffect(() => {
     const loginState = localStorage.getItem("isLoggedIn");
     if (loginState === "true") {
-      setIsLoggedIn(true); // Stay logged in if state is found in localStorage
+      setIsLoggedIn(true);
     }
-    setIsLoading(false); // Stop loading
+    setIsLoading(false);
   }, []);
 
-  // Loading indicator during state check
   if (isLoading) {
     return (
       <div className="min-h-screen flex justify-center items-center">
@@ -30,7 +27,6 @@ export default function Dashboard() {
     );
   }
 
-  // Render login form or stock management component based on login state
   return (
     <div>
       {!isLoggedIn ? (
@@ -42,34 +38,32 @@ export default function Dashboard() {
             <form
               onSubmit={async (e) => {
                 e.preventDefault();
-                setIsLoading(true); // Start loading
+                setIsLoading(true);
+
+                const email = e.target.email.value.trim();
+                const pass = e.target.password.value.trim();
 
                 try {
-                  const response = await fetch(
-                    "  https://vba-blue-server.onrender.com/login",
-                    {
-                      method: "POST",
-                      headers: { "Content-Type": "application/json" },
-                      body: JSON.stringify({
-                        email: e.target.email.value.trim(), // Get email
-                        pass: e.target.password.value.trim(), // Get password
-                      }),
-                    }
-                  );
+                  const response = await fetch("/api/login", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ email, pass }),
+                  });
 
                   if (response.ok) {
                     const data = await response.json();
-                    console.log(data.message); // Debug: Login successful
-                    localStorage.setItem("isLoggedIn", "true"); // Save login state
-                    setIsLoggedIn(true); // Set login state to true
+                    console.log(data.message);
+                    localStorage.setItem("isLoggedIn", "true");
+                    setIsLoggedIn(true);
                   } else {
-                    alert("Invalid email or password");
+                    const errorData = await response.json();
+                    alert(errorData.message || "Invalid credentials");
                   }
                 } catch (error) {
                   console.error("Login failed:", error);
                   alert("An error occurred. Please try again.");
                 } finally {
-                  setIsLoading(false); // Stop loading
+                  setIsLoading(false);
                 }
               }}
             >

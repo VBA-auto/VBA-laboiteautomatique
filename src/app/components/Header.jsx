@@ -48,7 +48,7 @@ const Header = () => {
     <main className="sticky top-[-5px] w-full z-50">
       <hr className="border border-[#c2c2c230]" />
       <section className="bg-white/90 headerSection">
-        <div className="container mx-auto lg:px-4">
+        <div className="container mx-auto ">
           <nav>
             <div className="flex flex-wrap items-center justify-between mx-auto py-2 headerMainCont">
               {/* Logo */}
