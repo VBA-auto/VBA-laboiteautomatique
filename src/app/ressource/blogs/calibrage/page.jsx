@@ -74,7 +74,7 @@ const CalibragePage = () => {
               <div className="mt-5 mb-8">
                 <p>
                   Vous trouverez ici un exemple où trouver les informations
-                  relatives au calcualteur. <br /> Version du diag - du logiciel
+                  relatives au calculateur. <br /> Version du diag - du logiciel
                   – numéro de calibrage ou étalonnage
                 </p>
                 <div className=" mx-auto">
