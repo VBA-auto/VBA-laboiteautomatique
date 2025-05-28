@@ -77,7 +77,7 @@ const TestEmbrayageEdc = () => {
                   Comment vérifier l&apos;état de l&apos;embrayage sur une boite
                   EDC pour Captur, Scenic 3, Clio 4, Megane 3.
                 </h1>
-                <p className="mb-5">
+                <p className="mb-5 text-justify">
                   Cette vidéo, disponible sur notre site laboiteautomatique.com,
                   concerne uniquement les boîtes automatiques à double embrayage
                   EDC (ou DC4) équipant les modèles Renault, notamment les
@@ -99,7 +99,7 @@ const TestEmbrayageEdc = () => {
                   </Link>{" "}
                   vos codes défauts.
                 </p>
-                <p>
+                <p className="text-justify">
                   Dans cette vidéo, nous expliquons comment, à l&apos;aide
                   d&apos;un tournevis, contrôler l&apos;état du ressort présent
                   dans cet embrayage spécifique. Cette méthode permet de

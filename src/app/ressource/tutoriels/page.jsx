@@ -95,7 +95,7 @@ const Page = () => {
                                 unoptimized
                                 width={1000}
                                 height={300}
-                                src="/images/blog-calib.webp"
+                                src="/images/blogs1st.webp"
                                 alt="calculateur"
                                 className="rounded-md object-fit"
                               />
@@ -109,28 +109,24 @@ const Page = () => {
                             </h2>
                             <div className="content-container  mt-3">
                               <Link href="/ressource/blogs/calibrage">
-                                <p className="text-sm">
+                                <p className="text-sm text-justify">
                                   Vous trouverez ici un exemple où trouver les
-                                  informations relatives au...
+                                  informations relatives au calculateur. Version
+                                  du diag - du logiciel – numéro de calibrage...
                                 </p>
                                 <div className="flex justify-between mt-3">
                                   <div className="flex items-center gap-1">
                                     <IoEyeOutline />
                                     <p className="text-sm text-gray-500">
-                                      987 views
+                                      987 vues
                                     </p>
                                   </div>
                                   <div className="flex items-center gap-1">
                                     <FaRegComments />
                                     <p className="text-sm text-gray-500">
-                                      response{" "}
+                                      réponses{" "}
                                       {blogMeta["calibrage"]?.comments ?? 0}
                                     </p>
-                                  </div>
-                                  <div className="">
-                                    <span className="text-blue-500 text-sm">
-                                      lire plus
-                                    </span>
                                   </div>
                                 </div>
                               </Link>
@@ -161,9 +157,10 @@ const Page = () => {
                             </h2>
                             <div className="content-container mt-3 text-start">
                               <Link href="/ressource/blogs/verification-parametrage">
-                                <p className="text-sm">
+                                <p className="text-sm text-justify">
                                   La vérification régulière des embrayages du
-                                  6DCT250 Renault est...{" "}
+                                  6DCT250 Renault est essentielle pour garantir
+                                  des performances optimales et...
                                 </p>
                               </Link>
                             </div>
@@ -171,21 +168,16 @@ const Page = () => {
                               <div className="flex items-center gap-1">
                                 <IoEyeOutline />
                                 <p className="text-sm text-gray-500">
-                                  489 views
+                                  489 vues
                                 </p>
                               </div>
                               <div className="flex items-center gap-1">
                                 <FaRegComments />
                                 <p className="text-sm text-gray-500">
-                                  response{" "}
+                                  réponses{" "}
                                   {blogMeta["verification-parametrage"]
                                     ?.comments ?? 0}
                                 </p>
-                              </div>
-                              <div className="">
-                                <span className="text-blue-500 text-sm">
-                                  lire plus
-                                </span>
                               </div>
                             </div>
                           </div>
@@ -214,30 +206,26 @@ const Page = () => {
                             </Link>
                             <Link href="/ressource/blogs/adaptation-calibrage">
                               <div className="content-container mt-3 text-start">
-                                <p className=" text-sm">
+                                <p className=" text-sm text-justify">
                                   Le calibrage des points de touche ou points de
-                                  léchage de la boîte...
+                                  léchage de la boîte EDC (Efficient Dual
+                                  Clutch) ou DC4 Renault est une étape...
                                 </p>
                               </div>
                               <div className="flex justify-between mt-3">
                                 <div className="flex items-center gap-1">
                                   <IoEyeOutline />
                                   <p className="text-sm text-gray-500">
-                                    920 views
+                                    920 vues
                                   </p>
                                 </div>
                                 <div className="flex items-center gap-1">
                                   <FaRegComments />
                                   <p className="text-sm text-gray-500">
-                                    response{" "}
+                                    réponses{" "}
                                     {blogMeta["adaptation-calibrage"]
                                       ?.comments ?? 0}
                                   </p>
-                                </div>
-                                <div className="">
-                                  <span className="text-blue-500 text-sm">
-                                    lire plus
-                                  </span>
                                 </div>
                               </div>
                             </Link>
@@ -268,30 +256,26 @@ const Page = () => {
                                 Références des différentes boites...
                               </h2>
                               <div className="content-container mt-2">
-                                <p className="text-sm">
+                                <p className="text-sm text-justify">
                                   Vous trouverez ci-dessous les différents codes
-                                  de boites en fonction de leur...
+                                  de boites en fonction de leur ette section
+                                  vous aidera à mieux comprendre...
                                 </p>
                               </div>
                               <div className="flex justify-between mt-3.5">
                                 <div className="flex items-center gap-1">
                                   <IoEyeOutline />
                                   <p className="text-sm text-gray-500">
-                                    1109 views
+                                    1109 vues
                                   </p>
                                 </div>
                                 <div className="flex items-center gap-1">
                                   <FaRegComments />
                                   <p className="text-sm text-gray-500">
-                                    response{" "}
+                                    réponses{" "}
                                     {blogMeta["differentes-boites-DC4"]
                                       ?.comments ?? 0}
                                   </p>
-                                </div>
-                                <div className="">
-                                  <span className="text-blue-500 text-sm">
-                                    lire plus
-                                  </span>
                                 </div>
                               </div>
                             </div>
@@ -323,30 +307,27 @@ const Page = () => {
                                 Calculateur boîtes de vitesse...
                               </h2>
                               <div className="content-container mt-2">
-                                <p className=" text-sm">
-                                  Spécialiste en programmation et clonage de
-                                  calculateur boîtes de...
+                                <p className=" text-sm text-justify">
+                                  VBA calculateur Renault est une entreprise
+                                  spécialisée dans la vente de calculateur
+                                  Renault et d&apos;autres marques Spécialiste
+                                  en...
                                 </p>
                               </div>
                               <div className="flex justify-between mt-3">
                                 <div className="flex items-center gap-1">
                                   <IoEyeOutline />
                                   <p className="text-sm text-gray-500">
-                                    789 views
+                                    789 vues
                                   </p>
                                 </div>
                                 <div className="flex items-center gap-1">
                                   <FaRegComments />
                                   <p className="text-sm text-gray-500">
-                                    response{" "}
+                                    réponses{" "}
                                     {blogMeta["presentation-vba"]?.comments ??
                                       0}
                                   </p>
-                                </div>
-                                <div className="">
-                                  <span className="text-blue-500 text-sm">
-                                    lire plus
-                                  </span>
                                 </div>
                               </div>
                             </div>
@@ -377,30 +358,26 @@ const Page = () => {
                                 Vérifier l’état de l’embrayage EDC
                               </h2>
                               <div className="content-container mt-2">
-                                <p className=" text-sm">
+                                <p className=" text-sm text-justify">
                                   Cette vidéo, disponible sur notre site
-                                  laboiteautomatique.com, concerne...
+                                  laboiteautomatique.com, concerne les boîtes
+                                  automatiques à Mégane III et...
                                 </p>
                               </div>
                               <div className="flex justify-between mt-3">
                                 <div className="flex items-center gap-1">
                                   <IoEyeOutline />
                                   <p className="text-sm text-gray-500">
-                                    589 views
+                                    589 vues
                                   </p>
                                 </div>
                                 <div className="flex items-center gap-1">
                                   <FaRegComments />
                                   <p className="text-sm text-gray-500">
-                                    response{" "}
+                                    réponses{" "}
                                     {blogMeta["test-embrayage-edc"]?.comments ??
                                       0}
                                   </p>
-                                </div>
-                                <div className="">
-                                  <span className="text-blue-500 text-sm">
-                                    lire plus
-                                  </span>
                                 </div>
                               </div>
                             </div>
@@ -437,30 +414,26 @@ const Page = () => {
                             </Link>
                             <Link href="/ressource/blogs/remplacement-calculateur">
                               <div className="content-container mt-3 ">
-                                <p className=" text-sm">
-                                  Comment installer un calculateur de boite
-                                  automatique. Calculateur...
+                                <p className=" text-sm text-justify">
+                                  Remplacement d&apos;un calculateur DC4 (boite
+                                  EDC) GETRAG 6DCT250. Calculateur (boite EDC)
+                                  pour boite automatique Renault...
                                 </p>
                               </div>
                               <div className="flex justify-between mt-2.5">
                                 <div className="flex items-center gap-1">
                                   <IoEyeOutline />
                                   <p className="text-sm text-gray-500">
-                                    989 views
+                                    989 vues
                                   </p>
                                 </div>
                                 <div className="flex items-center gap-1">
                                   <FaRegComments />
                                   <p className="text-sm text-gray-500">
-                                    response{" "}
+                                    réponses{" "}
                                     {blogMeta["remplacement-calculateur"]
                                       ?.comments ?? 0}
                                   </p>
-                                </div>
-                                <div className="">
-                                  <span className="text-blue-500 text-sm">
-                                    lire plus
-                                  </span>
                                 </div>
                               </div>
                             </Link>

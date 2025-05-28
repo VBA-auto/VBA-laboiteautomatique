@@ -407,5 +407,11 @@
     "description": "Calculateur anomalie électronique interne",
     "subTitle": "tcm fault",
     "aide": "problème calculateur"
+  },
+  {
+    "code": "DTC178172",
+    "description": "Passage rapports tambour selection 2 impossible",
+    "subTitle": "Clutch 2 problem",
+    "aide": "calculateur"
   }
 ]

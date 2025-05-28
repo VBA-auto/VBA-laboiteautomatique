@@ -23,7 +23,7 @@ export default async function SEOErrorCodes() {
       <div className="sr-only">
         <h1>Error Codes for SEO</h1>
         <ul>
-          {products.map((code, index) => (
+          {products?.map((code, index) => (
             <li key={`${code.code}-${index}`}>
               <h2>{code.code}</h2>
               <p>{code.description}</p>

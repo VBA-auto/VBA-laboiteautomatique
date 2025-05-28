@@ -79,7 +79,7 @@ const PresentationVba = () => {
                     la vente de calculateur Renault et d&apos;autres marques
                   </p>
 
-                  <p className="mb-5">
+                  <p className="mb-5 text-justify">
                     Spécialiste en programmation et clonage de calculateur
                     boîtes de vitesses automatiques EDC pour Captur, Scénic,
                     Mégane 3, Clio RS et Clio 4. Vous pouvez aussi consulter

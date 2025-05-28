@@ -82,7 +82,7 @@ const RemplacmentPage = () => {
                     6DCT250.
                   </p>
 
-                  <p className="mb-5">
+                  <p className="mb-5 text-justify">
                     Calculateur (boite EDC) pour boite automatique Renault
                     double embrayage DC4 (Getrag-6DCT250-continental)
                   </p>

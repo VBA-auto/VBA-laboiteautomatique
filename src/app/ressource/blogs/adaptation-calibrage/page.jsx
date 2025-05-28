@@ -7,26 +7,8 @@ import Footer from "@/components/Footer";
 import ReturnButton from "@/components/ReturnButton";
 import Comments from "@/components/Blogs/Comments";
 const pageDescription =
-  "Étapes d’adaptation et de calibrage d’un calculateur DC4 après remplacement ou reprogrammation";
+  "Étapes d&apos;adaptation et de calibrage d&apos;un calculateur DC4 après remplacement ou reprogrammation";
 const Adaptation = () => {
-  const dynamicComments = [
-    {
-      id: "1calibrage",
-      author: "Marc L.",
-      text: "Cet article sur l'adaptation et le calibrage est très éclairant ! Il est crucial de comprendre que le simple calibrage ne suffit pas toujours, l'adaptation est la clé pour une précision durable dans des environnements variés. Merci pour cette distinction essentielle.",
-      timestamp: "1d",
-      likes: 5,
-      avatar: true,
-    },
-    {
-      id: "2calibrage",
-      author: "Claire M.",
-      text: "Je trouve votre explication sur la synergie entre l'adaptation et le calibrage particulièrement pertinente. C'est une approche complète qui garantit la fiabilité des systèmes. Cela confirme l'importance d'une maintenance proactive. Excellent travail !",
-      timestamp: "11h",
-      likes: 3,
-      avatar: true,
-    },
-  ];
   return (
     <main>
       <SubHeader />
@@ -72,7 +54,7 @@ const Adaptation = () => {
                 Adaptation / Calibrage des points de touche
               </h2>
               <div className="mt-5 mb-16">
-                <p>
+                <p className="mt-2 text-justify">
                   Le calibrage des points de touche ou points de léchage de la
                   boîte EDC (Efficient Dual Clutch) ou DC4 Renault est une étape
                   importante pour éviter les à-coups et avoir des rapports
@@ -86,18 +68,19 @@ const Adaptation = () => {
                   </h2>
                   <p className="mt-2">
                     Les tambours de changement de vitesse sont responsables du
-                    passage des rapports. Lorsqu’une batterie est déconnectée et
-                    reconnectée, ou après le remplacement du calculateur, une
-                    adaptation automatique des tambours est généralement
-                    effectuée. Cela se manifeste par un bruit{" "}
+                    passage des rapports. Lorsqu&apos;une batterie est
+                    déconnectée et reconnectée, ou après le remplacement du
+                    calculateur, une adaptation automatique des tambours est
+                    généralement effectuée. Cela se manifeste par un bruit{" "}
                     <span className="font-[600] underline">
-                      distinct d’environ cinq secondes
+                      distinct d&apos;environ cinq secondes
                     </span>
                     , signalant que le calculateur ajuste les tambours.
                   </p>
                   <p className="mt-2">
-                    En l’absence d’adaptation automatique, il est possible de
-                    lancer ce processus à l’aide d’un outil diagnostic (valise).
+                    En l&apos;absence d&apos;adaptation automatique, il est
+                    possible de lancer ce processus à l&apos;aide d&apos;un
+                    outil diagnostic (valise).
                   </p>
                 </div>
 
@@ -105,30 +88,31 @@ const Adaptation = () => {
                   <h2 className="mt-5 font-[600]">
                     2. Réglage de la référence et de la course des embrayages
                   </h2>
-                  <p className="mt-2">
-                    La <b>référence de l’embrayage</b> définit le point de
-                    départ de la course de l’embrayage.{" "}
-                    <b>L’amplitude de la course</b> détermine la distance
-                    maximale que l’embrayage peut parcourir. Ces réglages sont
-                    essentiels pour s’assurer que l’embrayage engage et
-                    désengage correctement.
+                  <p className="mt-2 text-justify">
+                    La <b>référence de l&apos;embrayage</b> définit le point de
+                    départ de la course de l&apos;embrayage.{" "}
+                    <b>L&apos;amplitude de la course</b> détermine la distance
+                    maximale que l&apos;embrayage peut parcourir. Ces réglages
+                    sont essentiels pour s&apos;assurer que l&apos;embrayage
+                    engage et désengage correctement.
                   </p>
                   <p className="mt-2">
                     Ces paramètres peuvent également être ajustés manuellement à
-                    l’aide d’un outil diagnostic valise comme la « clip » de
-                    chez Renault ou autre.
+                    l&apos;aide d&apos;un outil diagnostic valise comme la «
+                    clip » de chez Renault ou autre.
                   </p>
                 </div>
 
                 <div className="mb-5">
                   <h2 className="mt-5 font-[600]">3. Test de couple</h2>
-                  <p className="mt-2">
+                  <p className="mt-2 text-justify">
                     Le test de couple permet de vérifier la qualité de la
-                    géométrie du disque d’embrayage et la distance minimale à
-                    laquelle l’embrayage est désengagé. Ce test est réalisé à{" "}
-                    <b>4000 tours/minute</b> et garantit des changements de
-                    vitesse fluides. Un résultat satisfaisant au test de couple
-                    indique que l’embrayage est correctement calibré.
+                    géométrie du disque d&apos;embrayage et la distance minimale
+                    à laquelle l&apos;embrayage est désengagé. Ce test est
+                    réalisé à <b>4000 tours/minute</b> et garantit des
+                    changements de vitesse fluides. Un résultat satisfaisant au
+                    test de couple indique que l&apos;embrayage est correctement
+                    calibré.
                   </p>
                 </div>
 
@@ -136,13 +120,14 @@ const Adaptation = () => {
                   <h2 className="mt-5 font-[600]">
                     4. Ajustement des points de touches des embrayages 1 et 2
                   </h2>
-                  <p className="mt-2">
+                  <p className="mt-2 text-justify">
                     Le test de couple permet de vérifier la qualité de la
-                    géométrie du disque d’embrayage et la distance minimale à
-                    laquelle l’embrayage est désengagé. Ce test est réalisé à{" "}
-                    <b>4000 tours/minute</b> et garantit des changements de
-                    vitesse fluides. Un résultat satisfaisant au test de couple
-                    indique que l’embrayage est correctement calibré.
+                    géométrie du disque d&apos;embrayage et la distance minimale
+                    à laquelle l&apos;embrayage est désengagé. Ce test est
+                    réalisé à <b>4000 tours/minute</b> et garantit des
+                    changements de vitesse fluides. Un résultat satisfaisant au
+                    test de couple indique que l&apos;embrayage est correctement
+                    calibré.
                   </p>
                   <div className="my-5">
                     <Image
@@ -153,25 +138,25 @@ const Adaptation = () => {
                       src="/images/BlogAdaptChild.webp"
                       alt="calibrage image from VBA"
                     />
-                    <p className="mt-2 mb-3">
+                    <p className="mt-2 mb-3 text-justify">
                       Les points de touche (ou points de léchage) des embrayages
                       doivent être ajustés pour avoir un engagement fluide. Pour
-                      l’embrayage 1 (rapports 1, 3, 5), la valeur recommandée
-                      est
-                      <b> 8.5 mm</b> Pour l’embrayage 2 (rapports 2, 4, 6), elle
-                      est légèrement supérieure, à <b>9.5 mm</b>.
+                      l&apos;embrayage 1 (rapports 1, 3, 5), la valeur
+                      recommandée est
+                      <b> 8.5 mm</b> Pour l&apos;embrayage 2 (rapports 2, 4, 6),
+                      elle est légèrement supérieure, à <b>9.5 mm</b>.
                     </p>
                     <span className="my-2 bg-yellow-100">
                       La plage normale se situe entre <b>8 et 12 mm</b>.
                     </span>
-                    <p className="mt-2 mb-3">
-                      Pendant le processus d’adaptation, démarrez le moteur et
-                      attendez que les tours se stabilisent. Ensuite, ajustez
+                    <p className="mt-2 mb-3 text-justify">
+                      Pendant le processus d&apos;adaptation, démarrez le moteur
+                      et attendez que les tours se stabilisent. Ensuite, ajustez
                       les deux embrayages ou un seul, selon les besoins. Les
-                      erreurs d’adaptation sont fréquentes et peuvent entraîner
-                      une réinitialisation des points d’entrée à <b>3 mm</b>,
-                      empêchant le véhicule de rouler: si c’est le cas, une
-                      nouvelle adaptation est nécessaire.
+                      erreurs d&apos;adaptation sont fréquentes et peuvent
+                      entraîner une réinitialisation des points d&apos;entrée à{" "}
+                      <b>3 mm</b>, empêchant le véhicule de rouler: si
+                      c&apos;est le cas, une nouvelle adaptation est nécessaire.
                     </p>
                   </div>
                 </div>
@@ -180,19 +165,20 @@ const Adaptation = () => {
                   <h2 className="mt-5 font-[600]">
                     5. Problèmes fréquents et solutions
                   </h2>
-                  <p className="mt-2">
+                  <p className="mt-2 text-justify">
                     Une adaptation mal effectuée peut entraîner des réglages
-                    incorrects, comme des points d’entrée trop faibles (3 mm),
-                    qui empêchent l’embrayage de prendre et d’engager le
-                    rapport.
+                    incorrects, comme des points d&apos;entrée trop faibles (3
+                    mm), qui empêchent l&apos;embrayage de prendre et
+                    d&apos;engager le rapport.
                   </p>
-                  <p className="mt-2">
-                    Lors de l’adaptation, il est important de s’assurer que tous
-                    les paramètres du véhicule, tels que la température de
-                    l’embrayage et la stabilité du moteur, sont dans des plages
-                    normales. Une mauvaise adaptation peut également être causée
-                    par un mauvais programme ou un embrayage en mauvais état
-                    (embrayage + <span className="underline">butée</span>).
+                  <p className="mt-2 text-justify">
+                    Lors de l&apos;adaptation, il est important de
+                    s&apos;assurer que tous les paramètres du véhicule, tels que
+                    la température de l&apos;embrayage et la stabilité du
+                    moteur, sont dans des plages normales. Une mauvaise
+                    adaptation peut également être causée par un mauvais
+                    programme ou un embrayage en mauvais état (embrayage +{" "}
+                    <span className="underline">butée</span>).
                   </p>
                 </div>
 

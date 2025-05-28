@@ -87,7 +87,7 @@ const CalibragePage = () => {
                     alt="calibrage image from VBA"
                   />
                 </div>
-                <p className="mt-5">
+                <p className="mt-5 text-justify">
                   Chaque calculateur possède un « soft » ou « programme ». Il y
                   un numéro fournisseur qui est souvent le même, un numéro de
                   VDIAG, un numéro de programme, un numéro fournisseur, numéro
