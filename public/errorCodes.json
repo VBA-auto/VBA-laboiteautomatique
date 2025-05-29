@@ -374,9 +374,9 @@
   },
   {
     "code": "DTC178194",
-    "description": "Passage rapports tambour de sélection 1",
-    "subTitle": "Clutch 1 motor circuit , Short circuit to earth",
-    "aide": "calculateur + moteur embrayage (en haut)"
+    "description": " Passage rapports tambour 2. dysfonctionnement transmission",
+    "subTitle": "Gear shift drum 2 – transmission malfunction",
+    "aide": " problème de programmation ou bien embrayage "
   },
   {
     "code": "DTC187198",
@@ -397,10 +397,16 @@
     "aide": "Calculateur"
   },
   {
+    "code": "DTC186261",
+    "description": " Couple embrayage 2 – erreur – non plausible",
+    "subTitle": "Clutch 2 torque – error – implausible",
+    "aide": " problème de programmation ou bien embrayage "
+  },
+  {
     "code": "DTC186262",
-    "description": "Couple embrayage 1 – Erreur de couple",
-    "subTitle": "Clutch 1 torque circuit error",
-    "aide": "double embrayage ou programme ou mauvaise référence"
+    "description": " Couple embrayage 1 – erreur – non plausible",
+    "subTitle": "Clutch 1 torque – error – implausible",
+    "aide": " problème de programmation ou bien embrayage "
   },
   {
     "code": "DTC178501",
@@ -409,9 +415,21 @@
     "aide": "problème calculateur"
   },
   {
+    "code": "DTC178094",
+    "description": " Passage rapports tambour 1. dysfonctionnement transmission",
+    "subTitle": "Gear shift drum 1 – transmission malfunction",
+    "aide": " problème de programmation ou bien embrayage "
+  },
+  {
     "code": "DTC178172",
     "description": "Passage rapports tambour selection 2 impossible",
     "subTitle": "Clutch 2 problem",
     "aide": "calculateur"
+  },
+  {
+    "code": "DTC178307",
+    "description": " Passage rapports tambour de selection 1 trop long",
+    "subTitle": "Changement de rapport ",
+    "aide": " problème de programmation ou bien embrayage ou TCM "
   }
 ]
