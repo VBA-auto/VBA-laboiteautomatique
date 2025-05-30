@@ -104,15 +104,15 @@ const Page = () => {
                           <div className="border  rounded-md p-2">
                             <h2 className="text-normal text-gray-700  my-2  font-medium  hover:underline">
                               <Link href="/ressource/blogs/calibrage">
-                                Exemple d’information calculate...
+                                Information d’un calculateur
                               </Link>
                             </h2>
                             <div className="content-container  mt-3">
                               <Link href="/ressource/blogs/calibrage">
                                 <p className="text-sm text-justify">
-                                  Vous trouverez ici un exemple où trouver les
-                                  informations relatives au calculateur. Version
-                                  du diag - du logiciel – numéro de calibrage...
+                                  Comment trouver les informations relatives au
+                                  calculateur: version diag – logiciel –
+                                  calibrage...
                                 </p>
                                 <div className="flex justify-between mt-3">
                                   <div className="flex items-center gap-1">
@@ -152,15 +152,15 @@ const Page = () => {
                           <div className="border  rounded-md p-2">
                             <h2 className="text-normal text-gray-700  my-2  font-medium  hover:underline">
                               <Link href="/ressource/blogs/verification-parametrage">
-                                Verification parametrage EDC...
+                                Paramétrage boite EDC
                               </Link>
                             </h2>
                             <div className="content-container mt-3 text-start">
                               <Link href="/ressource/blogs/verification-parametrage">
                                 <p className="text-sm text-justify">
-                                  La vérification régulière des embrayages du
-                                  6DCT250 Renault est essentielle pour garantir
-                                  des performances optimales et...
+                                  Paramétrages pour les boites EDC: tambours de
+                                  selection, adaptations, comment verifier les
+                                  tolérances....
                                 </p>
                               </Link>
                             </div>
@@ -201,15 +201,15 @@ const Page = () => {
                           <div className="border  rounded-md p-2">
                             <Link href="/ressource/blogs/adaptation-calibrage">
                               <h2 className="text-normal text-gray-700  my-2  font-medium  hover:underline">
-                                Adaptation/Calibrage des points...
+                                Calibrage points de touche
                               </h2>
                             </Link>
                             <Link href="/ressource/blogs/adaptation-calibrage">
                               <div className="content-container mt-3 text-start">
                                 <p className=" text-sm text-justify">
-                                  Le calibrage des points de touche ou points de
-                                  léchage de la boîte EDC (Efficient Dual
-                                  Clutch) ou DC4 Renault est une étape...
+                                  Comment faire les points de touche (points de
+                                  léchage) pour les boites EDC: Quelles sont les
+                                  points de touche...
                                 </p>
                               </div>
                               <div className="flex justify-between mt-3">
@@ -253,13 +253,13 @@ const Page = () => {
                             <div className="border  rounded-md p-2">
                               {" "}
                               <h2 className="text-normal text-gray-700 my-2 font-medium  hover:underline">
-                                Références des différentes boites...
+                                Références boite EDC
                               </h2>
                               <div className="content-container mt-2">
                                 <p className="text-sm text-justify">
-                                  Vous trouverez ci-dessous les différents codes
-                                  de boites en fonction de leur ette section
-                                  vous aidera à mieux comprendre...
+                                  Quelles sont les différents de boites EDC ete
+                                  comment les trouver en fonction de leur
+                                  véhicule...
                                 </p>
                               </div>
                               <div className="flex justify-between mt-3.5">
@@ -304,14 +304,13 @@ const Page = () => {
                             <div className="border  rounded-md p-2">
                               {" "}
                               <h2 className="text-normal text-gray-700 my-2 font-medium  hover:underline">
-                                Calculateur boîtes de vitesse...
+                                VBA Calculateur
                               </h2>
                               <div className="content-container mt-2">
                                 <p className=" text-sm text-justify">
-                                  VBA calculateur Renault est une entreprise
-                                  spécialisée dans la vente de calculateur
-                                  Renault et d&apos;autres marques Spécialiste
-                                  en...
+                                  VBA calculateur se spécialise dans la vente de
+                                  calculateur de boite automatique pour Renault
+                                  et Audi en...
                                 </p>
                               </div>
                               <div className="flex justify-between mt-3">
@@ -359,9 +358,8 @@ const Page = () => {
                               </h2>
                               <div className="content-container mt-2">
                                 <p className=" text-sm text-justify">
-                                  Cette vidéo, disponible sur notre site
-                                  laboiteautomatique.com, concerne les boîtes
-                                  automatiques à Mégane III et...
+                                  Comment verifier l’état de l’embrayage pour
+                                  une Megane 3, Scenic 3, Clio 4 ou Captur...
                                 </p>
                               </div>
                               <div className="flex justify-between mt-3">
@@ -409,15 +407,15 @@ const Page = () => {
                             <Link href="/ressource/blogs/remplacement-calculateur">
                               {" "}
                               <h2 className="text-normal text-gray-700 my-2 font-medium  hover:underline">
-                                Démontage/Remontage calculat...
+                                Installation calculateur EDC
                               </h2>
                             </Link>
                             <Link href="/ressource/blogs/remplacement-calculateur">
                               <div className="content-container mt-3 ">
                                 <p className=" text-sm text-justify">
-                                  Remplacement d&apos;un calculateur DC4 (boite
-                                  EDC) GETRAG 6DCT250. Calculateur (boite EDC)
-                                  pour boite automatique Renault...
+                                  Remplacement d’un calculateur EDC (DC4/ GETRAG
+                                  6DCT250): explication démontage et
+                                  remontage...
                                 </p>
                               </div>
                               <div className="flex justify-between mt-2.5">
