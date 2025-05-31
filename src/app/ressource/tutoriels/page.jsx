@@ -104,7 +104,7 @@ const Page = () => {
                           <div className="border  rounded-md p-2">
                             <h2 className="text-normal text-blue-500  my-2  font-medium  hover:underline">
                               <Link href="/ressource/blogs/calibrage">
-                                Information d’un calculateur
+                                Information d&apos;un calculateur
                               </Link>
                             </h2>
                             <div className="content-container  mt-3">
@@ -350,11 +350,11 @@ const Page = () => {
                             <div className="border  rounded-md p-2">
                               {" "}
                               <h2 className="text-normal text-blue-500 my-2 font-medium  hover:underline">
-                                Vérifier l’état de l’embrayage EDC
+                                Vérifier l&apos;état de l&apos;embrayage EDC
                               </h2>
                               <div className="content-container mt-2">
                                 <p className=" text-sm text-justify">
-                                  Comment verifier l’état de l’embrayage pour
+                                  Comment verifier l&apos;état de l&apos;embrayage pour
                                   une Megane 3, Scenic 3, Clio 4 ou Captur.
                                   une Megane 3, Scenic 3, Clio 4 ou Captur.
                                 </p>
@@ -410,7 +410,7 @@ const Page = () => {
                             <Link href="/ressource/blogs/remplacement-calculateur">
                               <div className="content-container mt-3 ">
                                 <p className=" text-sm text-justify">
-                                  Remplacement d’un calculateur EDC (DC4/ GETRAG
+                                  Remplacement d&apos;un calculateur EDC (DC4/ GETRAG
                                   6DCT250): explication démontage et remontage.
                                   6DCT250): explication démontage et remontage.
                                 </p>
