@@ -102,7 +102,7 @@ const Page = () => {
                             </Link>
                           </div>
                           <div className="border  rounded-md p-2">
-                            <h2 className="text-normal text-gray-700  my-2  font-medium  hover:underline">
+                            <h2 className="text-normal text-blue-500  my-2  font-medium  hover:underline">
                               <Link href="/ressource/blogs/calibrage">
                                 Information d’un calculateur
                               </Link>
@@ -110,9 +110,7 @@ const Page = () => {
                             <div className="content-container  mt-3">
                               <Link href="/ressource/blogs/calibrage">
                                 <p className="text-sm text-justify">
-                                  Comment trouver les informations relatives au
-                                  calculateur: version diag – logiciel –
-                                  calibrage.
+                                  Comment trouver les informations relatives au calculateur: version diag – logiciel – calibrage.
                                 </p>
                                 <div className="flex justify-between mt-3">
                                   <div className="flex items-center gap-1">
@@ -150,7 +148,7 @@ const Page = () => {
                             />
                           </Link>
                           <div className="border  rounded-md p-2">
-                            <h2 className="text-normal text-gray-700  my-2  font-medium  hover:underline">
+                            <h2 className="text-normal text-blue-500  my-2  font-medium  hover:underline">
                               <Link href="/ressource/blogs/verification-parametrage">
                                 Paramétrage boite EDC
                               </Link>
@@ -158,9 +156,7 @@ const Page = () => {
                             <div className="content-container mt-3 text-start">
                               <Link href="/ressource/blogs/verification-parametrage">
                                 <p className="text-sm text-justify">
-                                  Paramétrage boites EDC: tambours selection,
-                                  adaptations, comment verifier tolérances
-                                  embrayage.
+                                  Paramétrage boites EDC: tambours selection, adaptations, comment verifier tolérances embrayage.
                                 </p>
                               </Link>
                             </div>
@@ -200,16 +196,14 @@ const Page = () => {
                           </Link>
                           <div className="border  rounded-md p-2">
                             <Link href="/ressource/blogs/adaptation-calibrage">
-                              <h2 className="text-normal text-gray-700  my-2  font-medium  hover:underline">
+                              <h2 className="text-normal text-blue-500  my-2  font-medium  hover:underline">
                                 Calibrage points de touche
                               </h2>
                             </Link>
                             <Link href="/ressource/blogs/adaptation-calibrage">
                               <div className="content-container mt-3 text-start">
                                 <p className=" text-sm text-justify">
-                                  Comment faire calibrage points de touche
-                                  (léchage) pour boites EDC: Quels points de
-                                  touche embrayage 1 et 2.
+                                  Comment faire calibrage points de touche (léchage) pour boites EDC: Quels points de touche embrayage 1 et 2.
                                 </p>
                               </div>
                               <div className="flex justify-between mt-3">
@@ -252,13 +246,14 @@ const Page = () => {
                           <Link href="/ressource/blogs/differentes-boites-DC4">
                             <div className="border  rounded-md p-2">
                               {" "}
-                              <h2 className="text-normal text-gray-700 my-2 font-medium  hover:underline">
+                              <h2 className="text-normal text-blue-500 my-2 font-medium  hover:underline">
                                 Références boite EDC
                               </h2>
                               <div className="content-container mt-2">
                                 <p className="text-sm text-justify">
                                   Quelles sont les différents de boites EDC ete
                                   comment les trouver en fonction de leur
+                                  véhicule.
                                   véhicule.
                                 </p>
                               </div>
@@ -303,13 +298,14 @@ const Page = () => {
                           <Link href="/ressource/blogs/presentation-vba">
                             <div className="border  rounded-md p-2">
                               {" "}
-                              <h2 className="text-normal text-gray-700 my-2 font-medium  hover:underline">
+                              <h2 className="text-normal text-blue-500 my-2 font-medium  hover:underline">
                                 VBA Calculateur
                               </h2>
                               <div className="content-container mt-2">
                                 <p className=" text-sm text-justify">
                                   VBA calculateur se spécialise dans la vente de
                                   calculateur de boite automatique pour Renault
+                                  et Audi.
                                   et Audi.
                                 </p>
                               </div>
@@ -353,12 +349,13 @@ const Page = () => {
                           <Link href="/ressource/blogs/test-embrayage-edc">
                             <div className="border  rounded-md p-2">
                               {" "}
-                              <h2 className="text-normal text-gray-700 my-2 font-medium  hover:underline">
+                              <h2 className="text-normal text-blue-500 my-2 font-medium  hover:underline">
                                 Vérifier l’état de l’embrayage EDC
                               </h2>
                               <div className="content-container mt-2">
                                 <p className=" text-sm text-justify">
                                   Comment verifier l’état de l’embrayage pour
+                                  une Megane 3, Scenic 3, Clio 4 ou Captur.
                                   une Megane 3, Scenic 3, Clio 4 ou Captur.
                                 </p>
                               </div>
@@ -406,7 +403,7 @@ const Page = () => {
                           <div className="border  rounded-md p-2">
                             <Link href="/ressource/blogs/remplacement-calculateur">
                               {" "}
-                              <h2 className="text-normal text-gray-700 my-2 font-medium  hover:underline">
+                              <h2 className="text-normal text-blue-500 my-2 font-medium  hover:underline">
                                 Installation calculateur EDC
                               </h2>
                             </Link>
@@ -414,6 +411,7 @@ const Page = () => {
                               <div className="content-container mt-3 ">
                                 <p className=" text-sm text-justify">
                                   Remplacement d’un calculateur EDC (DC4/ GETRAG
+                                  6DCT250): explication démontage et remontage.
                                   6DCT250): explication démontage et remontage.
                                 </p>
                               </div>
