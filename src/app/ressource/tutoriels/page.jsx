@@ -112,7 +112,7 @@ const Page = () => {
                                 <p className="text-sm text-justify">
                                   Comment trouver les informations relatives au
                                   calculateur: version diag – logiciel –
-                                  calibrage...
+                                  calibrage.
                                 </p>
                                 <div className="flex justify-between mt-3">
                                   <div className="flex items-center gap-1">
@@ -158,9 +158,9 @@ const Page = () => {
                             <div className="content-container mt-3 text-start">
                               <Link href="/ressource/blogs/verification-parametrage">
                                 <p className="text-sm text-justify">
-                                  Paramétrages pour les boites EDC: tambours de
-                                  selection, adaptations, comment verifier les
-                                  tolérances....
+                                  Paramétrage boites EDC: tambours selection,
+                                  adaptations, comment verifier tolérances
+                                  embrayage.
                                 </p>
                               </Link>
                             </div>
@@ -207,9 +207,9 @@ const Page = () => {
                             <Link href="/ressource/blogs/adaptation-calibrage">
                               <div className="content-container mt-3 text-start">
                                 <p className=" text-sm text-justify">
-                                  Comment faire les points de touche (points de
-                                  léchage) pour les boites EDC: Quelles sont les
-                                  points de touche...
+                                  Comment faire calibrage points de touche
+                                  (léchage) pour boites EDC: Quels points de
+                                  touche embrayage 1 et 2.
                                 </p>
                               </div>
                               <div className="flex justify-between mt-3">
@@ -259,7 +259,7 @@ const Page = () => {
                                 <p className="text-sm text-justify">
                                   Quelles sont les différents de boites EDC ete
                                   comment les trouver en fonction de leur
-                                  véhicule...
+                                  véhicule.
                                 </p>
                               </div>
                               <div className="flex justify-between mt-3.5">
@@ -310,7 +310,7 @@ const Page = () => {
                                 <p className=" text-sm text-justify">
                                   VBA calculateur se spécialise dans la vente de
                                   calculateur de boite automatique pour Renault
-                                  et Audi en...
+                                  et Audi.
                                 </p>
                               </div>
                               <div className="flex justify-between mt-3">
@@ -359,7 +359,7 @@ const Page = () => {
                               <div className="content-container mt-2">
                                 <p className=" text-sm text-justify">
                                   Comment verifier l’état de l’embrayage pour
-                                  une Megane 3, Scenic 3, Clio 4 ou Captur...
+                                  une Megane 3, Scenic 3, Clio 4 ou Captur.
                                 </p>
                               </div>
                               <div className="flex justify-between mt-3">
@@ -414,8 +414,7 @@ const Page = () => {
                               <div className="content-container mt-3 ">
                                 <p className=" text-sm text-justify">
                                   Remplacement d’un calculateur EDC (DC4/ GETRAG
-                                  6DCT250): explication démontage et
-                                  remontage...
+                                  6DCT250): explication démontage et remontage.
                                 </p>
                               </div>
                               <div className="flex justify-between mt-2.5">
