@@ -203,7 +203,7 @@ const Page = () => {
                             <Link href="/ressource/blogs/adaptation-calibrage">
                               <div className="content-container mt-3 text-start">
                                 <p className=" text-sm text-justify">
-                                  Comment faire calibrage points de touche (léchage) pour boites EDC: Quels points de touche embrayage 1 et 2.
+                                  Comment faire calibrage points de touche (léchage) pour boites EDC: quels points de touche embrayage 1 et 2.
                                 </p>
                               </div>
                               <div className="flex justify-between mt-3">
@@ -254,7 +254,7 @@ const Page = () => {
                                   Quelles sont les différents de boites EDC ete
                                   comment les trouver en fonction de leur
                                   véhicule.
-                                  véhicule.
+                                
                                 </p>
                               </div>
                               <div className="flex justify-between mt-3.5">
@@ -306,7 +306,6 @@ const Page = () => {
                                   VBA calculateur se spécialise dans la vente de
                                   calculateur de boite automatique pour Renault
                                   et Audi.
-                                  et Audi.
                                 </p>
                               </div>
                               <div className="flex justify-between mt-3">
@@ -356,7 +355,7 @@ const Page = () => {
                                 <p className=" text-sm text-justify">
                                   Comment verifier l&apos;état de l&apos;embrayage pour
                                   une Megane 3, Scenic 3, Clio 4 ou Captur.
-                                  une Megane 3, Scenic 3, Clio 4 ou Captur.
+                                  
                                 </p>
                               </div>
                               <div className="flex justify-between mt-3">
@@ -412,7 +411,7 @@ const Page = () => {
                                 <p className=" text-sm text-justify">
                                   Remplacement d&apos;un calculateur EDC (DC4/ GETRAG
                                   6DCT250): explication démontage et remontage.
-                                  6DCT250): explication démontage et remontage.
+                                  
                                 </p>
                               </div>
                               <div className="flex justify-between mt-2.5">
