@@ -431,5 +431,35 @@
     "description": " Passage rapports tambour de selection 1 trop long",
     "subTitle": "Changement de rapport ",
     "aide": " problème de programmation ou bien embrayage ou TCM "
+  },
+  {
+    "code": "DTC183577",
+    "description": "Tambour de selection de vitesses 2 Cohérence changement de rapport",
+    "subTitle": "Shift drum 2 – Gear change coherence issue",
+    "aide": "embrayage ou calculateur. Vérifier tolérance embrayage"
+  },
+  {
+    "code": "DTC183992",
+    "description": "Tambour de selection de vitesses 2 detection signal hors limite basse ou haute",
+    "subTitle": "Gear selector drum 2 – Signal detection out of lower or upper limit",
+    "aide": "Batterie mais plus probalement calculateur"
+  },
+  {
+    "code": "DTC174191",
+    "description": "Tambour de selection de vitesses 2 detection signal hors limite basse ou haute",
+    "subTitle": "Gear selector drum 2 – Signal detection out of lower or upper limit",
+    "aide": "Batterie mais plus probalement calculateur"
+  },
+  {
+    "code": "DTC174192",
+    "description": "Tambour de selection de vitesses 2 detection signal hors limite basse ou haute",
+    "subTitle": "Gear selector drum 2 – Signal detection out of lower or upper limit",
+    "aide": "Batterie mais plus probalement calculateur"
+  },
+  {
+    "code": "DTC174662",
+    "description": "Signal moteur embrayage 2 signal non plausible",
+    "subTitle": "Gear selector drum 2 – wrong signal",
+    "aide": "Calculateur et/ou moteur embrayage"
   }
 ]

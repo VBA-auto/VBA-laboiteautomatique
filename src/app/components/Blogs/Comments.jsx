@@ -16,6 +16,9 @@ const Comments = ({ slug }) => {
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(true);
 
+  // Add new state for tracking user reactions
+  const [userReactions, setUserReactions] = useState({});
+
   useEffect(() => {
     // localStorage বাদ দেওয়া হয়েছে
     // const savedName = localStorage.getItem("commentAuthor");
@@ -66,6 +69,63 @@ const Comments = ({ slug }) => {
     // localStorage.setItem("commentEmail", email);
     setShowModal(false);
     handlePostComment({ preventDefault: () => {} });
+  };
+
+  // Function to handle like/dislike toggle
+  const handleReaction = async (commentId, reactionType) => {
+    setComments((prevComments) =>
+      prevComments.map((comment) => {
+        if (comment._id === commentId) {
+          const currentReaction = userReactions[commentId];
+          let newLikes = comment.likes || 0;
+          let newDislikes = comment.dislikes || 0;
+
+          // Case 1: User is clicking the same reaction again (remove reaction)
+          if (currentReaction === reactionType) {
+            if (reactionType === "like") newLikes--;
+            else newDislikes--;
+            return {
+              ...comment,
+              likes: newLikes,
+              dislikes: newDislikes,
+            };
+          }
+
+          // Case 2: User is switching between reactions
+          if (currentReaction) {
+            // Remove previous reaction
+            if (currentReaction === "like") newLikes--;
+            else newDislikes--;
+          }
+
+          // Add new reaction
+          if (reactionType === "like") newLikes++;
+          else newDislikes++;
+
+          return {
+            ...comment,
+            likes: newLikes,
+            dislikes: newDislikes,
+          };
+        }
+        return comment;
+      })
+    );
+
+    // Update user's reaction state
+    setUserReactions((prev) => {
+      const currentReaction = prev[commentId];
+
+      // If clicking same reaction again, remove it
+      if (currentReaction === reactionType) {
+        const newReactions = { ...prev };
+        delete newReactions[commentId];
+        return newReactions;
+      }
+
+      // Otherwise set the new reaction
+      return { ...prev, [commentId]: reactionType };
+    });
   };
 
   return (
@@ -125,17 +185,25 @@ const Comments = ({ slug }) => {
                   {comment.text}
                 </p>
                 <div className="flex items-center space-x-4 mt-2 text-xs text-gray-500">
-                  <button className="hover:text-blue-500 flex items-center">
-                    <FaCommentDots className="mr-1" /> Répondre
-                  </button>
-                  <button className="hover:text-blue-500 flex items-center">
-                    <FaShare className="mr-1" /> Partager
-                  </button>
-                  <button className="hover:text-blue-500 flex items-center">
+                  <button
+                    onClick={() => handleReaction(comment._id, "like")}
+                    className={`flex items-center ${
+                      userReactions[comment._id] === "like"
+                        ? "text-blue-500"
+                        : "hover:text-blue-500 text-gray-500"
+                    }`}
+                  >
                     <FaThumbsUp className="mr-1" /> {comment.likes || 0}
                   </button>
-                  <button className="hover:text-red-500 flex items-center">
-                    <FaThumbsDown className="mr-1" />
+                  <button
+                    onClick={() => handleReaction(comment._id, "dislike")}
+                    className={`flex items-center ${
+                      userReactions[comment._id] === "dislike"
+                        ? "text-red-500"
+                        : "hover:text-red-500 text-gray-500"
+                    }`}
+                  >
+                    <FaThumbsDown className="mr-1" /> {comment.dislikes || 0}
                   </button>
                 </div>
               </div>
