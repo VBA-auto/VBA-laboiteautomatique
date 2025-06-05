@@ -60,8 +60,8 @@ const TestEmbrayageEdc = () => {
               </p>
             </div>
           </div>
-          <div className="md:flex gap-8">
-            <div className="md:w-[65%]">
+          <div className="md:flex gap-8 singleBlog">
+            <div className="md:w-[65%] singleBlog1">
               <iframe
                 className="w-full md:h-[397px] mt-8 rounded-md"
                 src="https://www.youtube.com/embed/crmyBO1TaK0?autohide=1&controls=1&showinfo=0"
@@ -117,7 +117,7 @@ const TestEmbrayageEdc = () => {
                 </div>
               </div>
             </div>
-            <div className="md:w-[35%] mt-6 mb-16 ">
+            <div className="md:w-[35%] singleBlog2 mt-6 mb-16 ">
               <div className="sticky top-24">
                 <Comments slug="test-embrayage-edc" />
               </div>

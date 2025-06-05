@@ -59,8 +59,8 @@ const Adaptation = () => {
               </p>
             </div>
           </div>
-          <div className="md:flex gap-8">
-            <div className="md:w-[65%]">
+          <div className="md:flex gap-8 singleBlog">
+            <div className="md:w-[65%] singleBlog1">
               <Image
                 unoptimized
                 width={300}
@@ -422,7 +422,7 @@ const Adaptation = () => {
               </div>
             </div>
 
-            <div className="md:w-[35%] mt-6 mb-16">
+            <div className="md:w-[35%] singleBlog2 mt-6 mb-16">
               <div className="sticky top-24">
                 <Comments slug="differentes-boites-DC4" />
               </div>

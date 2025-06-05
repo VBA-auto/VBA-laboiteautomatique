@@ -60,8 +60,8 @@ const PresentationVba = () => {
               </p>
             </div>
           </div>
-          <div className="md:flex gap-8">
-            <div className="md:w-[65%]">
+          <div className="md:flex gap-8 singleBlog">
+            <div className="md:w-[65%] singleBlog1">
               <iframe
                 className="w-full md:h-[397px] mt-8 rounded-md"
                 src="https://www.youtube.com/embed/EmwXs4AmC64?si=OnO4L_2ssu661hkg"
@@ -173,7 +173,7 @@ const PresentationVba = () => {
                 </div>
               </div>
             </div>
-            <div className="md:w-[35%] mt-6 mb-16 ">
+            <div className="md:w-[35%] singleBlog2 mt-6 mb-16 ">
               <div className="sticky top-24">
                 <Comments slug="presentation-vba" />
               </div>

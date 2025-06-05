@@ -60,8 +60,8 @@ const RemplacmentPage = () => {
               </p>
             </div>
           </div>
-          <div className="md:flex gap-8">
-            <div className="md:w-[65%]">
+          <div className="md:flex gap-8 singleBlog">
+            <div className="md:w-[65%] singleBlog1">
               <iframe
                 className="w-full md:h-[397px] rounded-md mt-8"
                 src="https://www.youtube.com/embed/6X72SXZhZ44?si=50iEt0fuIk1i5HeS"
@@ -211,7 +211,7 @@ const RemplacmentPage = () => {
                 </div>
               </div>
             </div>
-            <div className="md:w-[35%] mt-6 mb-16 ">
+            <div className="md:w-[35%] singleBlog2 mt-6 mb-16 ">
               <div className="sticky top-24">
                 <Comments slug="remplacement-calculateur" />
               </div>
