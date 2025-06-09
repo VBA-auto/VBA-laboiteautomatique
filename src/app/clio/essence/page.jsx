@@ -110,7 +110,7 @@ const SingleVehicleView = () => {
                     <div className="px-4 mb-3">
                       <p className="text-[14px] text-gray-400">Description</p>
                       <p className="text-[15px]">
-                        Module de commande (calculateur) Renault Clio 4 Diesel
+                        Module de commande (calculateur) Renault Clio 4 Essence
                       </p>
                     </div>
                     <div className="px-4 mb-3">
