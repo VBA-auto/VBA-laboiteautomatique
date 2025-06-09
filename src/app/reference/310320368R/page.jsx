@@ -78,7 +78,7 @@ const SingleSearchView = () => {
                   <div className="">
                     <NewVehicleRef
                       modelName="Calculateur Clio 4 - Captur"
-                      refCode="310320368R"
+                      refCode="310321488R"
                       onStockChange={handleStockChange}
                     />
                   </div>
