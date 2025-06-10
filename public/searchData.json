@@ -1064,5 +1064,36 @@
       "/images/cal-normal-6.webp",
       "/images/cal-normal-7.webp"
     ]
+  },
+  {
+    "ref": "310320368R",
+    "stock": 2,
+    "title": "Calculateur Renault Clio 4 - 1.2 Essence",
+    "metaTitle": "Calculateur boîte automatique EDC Renault référence 310320368R",
+    "metaDes": "Commandez ici votre Calculateur pour boîte automatique EDC Renault référence 310320368R, programmation incluse. Vérifiez disponibilité.",
+    "description": "Module de commande (calculateur) Renault Clio 4 - 1.2 Essence",
+    "compatibility": "Clio 4 , Captur (Essence et Diesel) , Clio RS",
+    "warranty": "12 mois neuf",
+    "brand": "Renault",
+    "ogPrice": 890,
+    "programationPrice": 230,
+    "transportPrice": 19,
+    "save": "00",
+    "finalPrice": 1139,
+    "coupon": "PROG2023",
+    "payLink": "https://buy.stripe.com/6oE3fQ3pC10P5awbKL",
+    "vehicle": "Clio - 1.2 Essence",
+    "Info_complémentaire": "Clio 4 - Code moteur H5F412",
+    "OE_number": "01 K00 - 310320368R",
+    "images": [
+      "/images/cal-normal-0.webp",
+      "/images/cal-normal-1.webp",
+      "/images/cal-normal-2.webp",
+      "/images/cal-normal-3.webp",
+      "/images/cal-normal-4.webp",
+      "/images/cal-normal-5.webp",
+      "/images/cal-normal-6.webp",
+      "/images/cal-normal-7.webp"
+    ]
   }
 ]
