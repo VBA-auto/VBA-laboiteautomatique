@@ -173,6 +173,7 @@ const AutreFormulaire = () => {
                         <option value="Renault Twingo3">
                           Renault Twingo 3
                         </option>
+                        <option value="Autre">Autre</option>
                       </select>
                     </div>
 

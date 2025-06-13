@@ -135,7 +135,7 @@ const Header = () => {
                     href="/"
                     className="block text-[15px] py-1 text-black hover:bg-[#d7d7d745] hover:text-[#2C80EF] rounded-md px-4"
                   >
-                    Home
+                    Accueil
                   </Link>
                   <Link
                     onClick={closeNavbar}
