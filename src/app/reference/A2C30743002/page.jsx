@@ -87,26 +87,20 @@ const SingleSearchView = () => {
                 <div className="mt-2">
                   <div className="px-4 mb-2">
                     <p className="text-[14px] text-gray-400">Désignation</p>
-                    <h1 className="text-[15px]">
-                      Calculateur Clio RS - Captur - Clio 4
-                    </h1>
+                    <h1 className="text-[15px]">Calculateur Captur - Clio 4</h1>
                   </div>
                   <div className="px-4 mb-2">
                     <p className="text-[14px] text-gray-400">Description</p>
                     <p className="text-[15px]">
                       Module de commande (calculateur) pour boite automatique
-                      EDC Clio RS - Captur - Clio 4
+                      EDC Captur - Clio 4
                     </p>
                   </div>
                   <div className="px-4 mb-3">
                     <p className="text-[14px] text-gray-400">Compatibilité</p>
                     <div className="flex flex-wrap gap-2">
                       <button className="bg-gray-100  px-2 text-[14px] text-black mt-1 rounded">
-                        Clio RS
-                      </button>
-
-                      <button className="bg-gray-100  px-2 text-[14px] text-black mt-1 rounded">
-                        Captur (Essence et Diesel)
+                        Captur
                       </button>
                       <button className="bg-gray-100  px-2 text-[14px] text-black mt-1 rounded">
                         Clio 4
@@ -119,13 +113,15 @@ const SingleSearchView = () => {
                   </div>
                   <div className="px-4 mb-2">
                     <p className="text-[14px] text-gray-400">Véhicule</p>
-                    <p className="text-[15px]">Clio RS - Captur - Clio 4</p>
+                    <p className="text-[15px]">
+                      Captur - Clio 4 (essence et diesel)
+                    </p>
                   </div>
                   <div className="px-4 mb-2">
                     <p className="text-[14px] text-gray-400">
                       Info complémentaire{" "}
                     </p>
-                    <p className="text-[15px]">A2C30743002</p>
+                    <p className="text-[15px]">A2C30743002 - DC4015 - DC4016</p>
                   </div>
                   <div className="px-4 mb-2">
                     <p className="text-[14px] text-gray-400">Référence OE</p>
@@ -149,9 +145,7 @@ const SingleSearchView = () => {
                   </div>
                   <div className="">
                     <p className="text-[15px] text-gray-400">Renault</p>
-                    <h1 className="my-1">
-                      Calculateur Clio RS - Captur - Clio 4
-                    </h1>
+                    <h1 className="my-1">Calculateur Captur - Clio 4</h1>
                   </div>
                 </div>
                 <div className="md:w-1/2 flex items-center md:justify-end justify-center gap-5 ">
@@ -208,9 +202,7 @@ const SingleSearchView = () => {
                   </div>
                   <div className="">
                     <p className="text-[15px] text-gray-500">Renault</p>
-                    <h1 className="my-1">
-                      Calculateur Clio RS - Captur - Clio 4
-                    </h1>
+                    <h1 className="my-1">Calculateur Captur - Clio 4</h1>
                   </div>
                 </div>
                 <hr />

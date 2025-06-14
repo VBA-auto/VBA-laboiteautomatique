@@ -461,5 +461,11 @@
     "description": "Signal moteur embrayage 2 signal non plausible",
     "subTitle": "Gear selector drum 2 – wrong signal",
     "aide": "Calculateur et/ou moteur embrayage"
+  },
+  {
+    "code": "DTC175378",
+    "description": "Embrayage 2 ",
+    "subTitle": "Clutch 2 wrong position",
+    "aide": "Calculateur ou faire calibrage tambour ou calculateur"
   }
 ]
