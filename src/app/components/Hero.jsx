@@ -48,13 +48,13 @@ const Hero = () => {
       href: "/megane",
       src: meganeImage,
       alt: "Renault Megane",
-      label: "Renault Mégane",
+      label: "Renault Mégane III",
     },
     {
       href: "/scenic",
       src: scenicImage,
       alt: "Renault Scenic",
-      label: "Renault Scénic",
+      label: "Renault Scénic III",
     },
     {
       href: "/fluence",
