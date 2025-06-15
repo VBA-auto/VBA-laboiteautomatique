@@ -115,7 +115,9 @@ const SingleSearchView = () => {
                   </div>
                   <div className="px-4 mb-2">
                     <p className="text-[14px] text-gray-400">Véhicule</p>
-                    <p className="text-[15px]">Scénic 3 , Megane 3</p>
+                    <p className="text-[15px]">
+                      Scénic 3 , Megane 3 (1.5 Diesel)
+                    </p>
                   </div>
                   <div className="px-4 mb-2">
                     <p className="text-[14px] text-gray-400">
