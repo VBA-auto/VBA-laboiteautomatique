@@ -216,13 +216,13 @@ const Hero = () => {
                       <FaWhatsapp className="text-white text-3xl" />
                     </div>
                   </Link>
-                  {/* <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50">
+                  <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50">
                     <Link href="/promo">
                       <button className="buttonCheckBluePromo">
                         <span>PROMO SPECIALE</span>
                       </button>
                     </Link>
-                  </div> */}
+                  </div>
                 </div>
               </div>
             </div>
