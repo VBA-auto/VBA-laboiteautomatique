@@ -52,7 +52,7 @@ const PromoPage = () => {
       </Head>
       <div className="pt-28 pb-28 flex items-center justify-center bg-gradient-to-r from-white to-gray-100">
         <div className="text-center text-gray-700">
-          <h1 className="text-2xl font-bold text-blue-500 mb-1">- 180 € </h1>
+          <h1 className="text-2xl font-bold text-blue-500 mb-1">- 120 € </h1>
           <h1 className="text-2xl font-bold mb-4">
             🚀 Promotion Exceptionnelle{" "}
             <span className="font-normal">Jusqu&apos;au </span>

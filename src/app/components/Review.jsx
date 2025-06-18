@@ -80,7 +80,7 @@ const ReviewSlider = () => {
       <Slider {...settings}>
         {reviews?.map((review, index) => (
           <div key={index} className="p-2">
-            <div className="bg-white rounded-lg shadow-md p-3">
+            <div className="bg-white rounded-lg border border-gray-200 shadow-md p-3">
               <div className="flex items-center mb-2 relative">
                 {review?.userImage ? (
                   <div className="w-10 h-10 flex items-center justify-center rounded-full text-white font-bold">
@@ -128,7 +128,7 @@ const ReviewSlider = () => {
               </div>
               {/* Sliced Review? Text */}
               <p className="text-gray-600 text-[15px]">
-                {review?.review.slice(0, 60)}...
+                {review?.review.slice(0, 50)}...
               </p>
               {/* "See More" Button */}
               <label

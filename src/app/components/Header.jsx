@@ -51,36 +51,20 @@ const Header = () => {
         <div className="container mx-auto ">
           <nav>
             <div className="flex flex-wrap items-center justify-between mx-auto py-2 headerMainCont">
-              {/* Logo */}
-              {/* <Link rel="preload" href="/" className="flex items-center">
-                <div className="lg:w-[290px]">
-                  <Image
-                    unoptimized
-                    width={100}
-                    height={100}
-                    src="/images/VBAlogo.webp"
-                    alt="Logo"
-                    className="w-[90px] h-[60px]"
-                    priority
-                  />
-                </div>
-              </Link> */}
-              <Link
-                href="/"
-                className="lg:w-[290px] flex items-center"
-                scroll={false}
-              >
-                <div className=" relative w-[90px] h-[60px]">
-                  <Image
-                    src="/images/VBAlogo.webp"
-                    alt="Logo"
-                    fill
-                    className="object-contain"
-                    sizes="(max-width: 768px) 90px, 290px"
-                    unoptimized
-                  />
-                </div>
-              </Link>
+              <div className="lg:w-[20%] flex items-center gap-5">
+                <Link href="/" scroll={false}>
+                  <div className=" relative w-[90px] h-[60px]">
+                    <Image
+                      src="/images/VBAlogo.webp"
+                      alt="Logo"
+                      fill
+                      className="object-contain"
+                      sizes="(max-width: 768px) 90px, 290px"
+                      unoptimized
+                    />
+                  </div>
+                </Link>
+              </div>
 
               {/* Mobile Hamburger Button */}
               <button
@@ -124,7 +108,7 @@ const Header = () => {
 
               {/* Navbar Links */}
               <div
-                className={`w-full xl:w-auto ${
+                className={`lg:w-[55%] w-full xl:w-auto ${
                   navbar ? "block" : "hidden"
                 } xl:block`}
                 id="navbar-default"
@@ -249,7 +233,7 @@ const Header = () => {
               </div>
 
               {/* Buttons */}
-              <div className="flex gap-3 md:gap-5 headButton">
+              <div className="lg:w-[25%] flex gap-3 md:gap-5 headButton">
                 <div className="homeButtons">
                   <Link href="/ressource/aide-en-ligne">
                     <button className="buttonCheck">

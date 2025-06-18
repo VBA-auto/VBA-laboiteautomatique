@@ -22,7 +22,7 @@ const InstallForm = async (req, res) => {
     const mailOptions = {
       from: `${email}`,
       to: "contact@laboiteautomatique.com",
-      subject: "New Installation Form Submission",
+      subject: "Nouvelle demande formulaire Installation",
       text: `
             Vehicle: ${vehicle}
             Fuel: ${fuel}

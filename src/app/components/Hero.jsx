@@ -216,13 +216,38 @@ const Hero = () => {
                       <FaWhatsapp className="text-white text-3xl" />
                     </div>
                   </Link>
+                  <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50">
+                    <Link href="/promo">
+                      <button className="buttonCheckBluePromo">
+                        <span>PROMO SPECIALE</span>
+                      </button>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="md:my-[60px] my-[30px] md:px-0 px-6">
+        {/* <div className="md:mt-[60px] mt-[30px] container mx-auto bg-yellow-50 relative py-3 rounded-md">
+          <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50">
+            <Link href="/promo">
+              <button className="buttonCheckBlue">
+                <span>PROMO SPECIALE</span>
+              </button>
+            </Link>
+          </div>
+          <div className="w-full">
+            <marquee behavior="" direction="">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptates, tenetur aliquid consequuntur veniam voluptatum
+              dolorum, doloremque ratione quibusdam nihil deleniti soluta earum
+              facilis cumque aspernatur! Rerum, reiciendis? Et, esse blanditiis.
+            </marquee>
+          </div>
+        </div> */}
+
+        <div className="md:mt-[60px] md:mb-[60px] my-[30px] md:px-0 px-6">
           <Review />
         </div>
       </section>
