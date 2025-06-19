@@ -65,11 +65,6 @@ export async function GET() {
       priority: 0.8,
     },
     {
-      loc: `${baseUrl}/dashboard`,
-      lastmod: new Date().toISOString(),
-      priority: 0.5,
-    },
-    {
       loc: `${baseUrl}/prestation/programmation`,
       lastmod: new Date().toISOString(),
       priority: 0.8,

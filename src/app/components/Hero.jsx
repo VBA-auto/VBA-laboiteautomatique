@@ -163,7 +163,7 @@ const Hero = () => {
                     </div>
                   </div>
 
-                  <div className="mb-5">
+                  <div className="mb-2">
                     <h2 className="text-[23px] text-[#374151] font-semibold">
                       Calculateur Renault (boite EDC)
                     </h2>
@@ -196,6 +196,13 @@ const Hero = () => {
                       </div>
                     </Link>
                   </div>
+                  <div className="">
+                    <Link href="/promo">
+                      <button className="buttonCheckBluePromo">
+                        <span>PROMO SPECIALE</span>
+                      </button>
+                    </Link>
+                  </div>
                 </div>
 
                 <div className="relative">
@@ -216,7 +223,7 @@ const Hero = () => {
                       <FaWhatsapp className="text-white text-3xl" />
                     </div>
                   </Link>
-                  <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50">
+                  <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 md:block hidden">
                     <Link href="/promo">
                       <button className="buttonCheckBluePromo">
                         <span>PROMO SPECIALE</span>
