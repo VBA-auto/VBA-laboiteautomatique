@@ -7,6 +7,8 @@ import { FaSave } from "react-icons/fa";
 import Header from "../Header";
 import toast, { Toaster } from "react-hot-toast";
 import { FaComments } from "react-icons/fa6";
+import { GrAnnounce } from "react-icons/gr";
+import PromoFunc from "./PromoFunc";
 
 export default function StockManage({ handleLogout }) {
   const [cars, setCars] = useState([]);
@@ -194,7 +196,7 @@ export default function StockManage({ handleLogout }) {
       <Header />
       <div className="container mx-auto p-6">
         <div className="flex-grow">
-          <h1 className="text-2xl my-8">{selectedCategory} Stock Management</h1>
+          <h1 className="text-2xl my-8">{selectedCategory} Management</h1>
 
           <div className="overflow-y-auto">
             {selectedCategory === "Cars" && (
@@ -313,6 +315,12 @@ export default function StockManage({ handleLogout }) {
           </div>
         )}
 
+        {selectedCategory === "Promo" && (
+          <div className="mb-28">
+            <PromoFunc />
+          </div>
+        )}
+
         {/* Bottom Navigation Bar */}
         <div className="fixed bottom-0 left-0 right-0">
           <div className="flex justify-center gap-24 items-center h-16 md:w-1/3 mx-auto bg-gray-100 rounded-full">
@@ -353,6 +361,19 @@ export default function StockManage({ handleLogout }) {
                 }`}
               >
                 Blogs
+              </p>
+            </div>
+            <div
+              className="flex flex-col items-center cursor-pointer"
+              onClick={() => setSelectedCategory("Promo")}
+            >
+              <GrAnnounce className="text-2xl" />
+              <p
+                className={`text-sm ${
+                  selectedCategory === "Promo" ? "font-bold" : ""
+                }`}
+              >
+                Promo
               </p>
             </div>
 

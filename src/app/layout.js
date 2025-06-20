@@ -6,6 +6,7 @@ import GoogleAnalytics2 from "./components/GoogleAnalytics2";
 import GoogleTag from "./components/GoogleTag";
 import { Poppins } from "next/font/google"; // Importing Poppins
 import ChatWidget from "./components/botLogic/ChatWidget";
+import DynamicPopup from "./components/DynamicPopUp/DynamicPopup";
 
 export const metadata = {
   title:
@@ -81,6 +82,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
           src="//cdn.cookie-script.com/s/b44654ce8adaebd84447bda0400a34b2.js"
           defer
         ></script>
+        <DynamicPopup />
       </body>
     </html>
   );

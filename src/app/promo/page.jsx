@@ -6,11 +6,34 @@ import SubHeader from "@/components/SubHeader";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const PromoPage = () => {
   // Track which car is currently showing the promo code
   const [revealedCar, setRevealedCar] = useState(null);
+
+  const [promoDate, setPromoDate] = useState("");
+
+  useEffect(() => {
+    const fetchPromo = async () => {
+      try {
+        const res = await fetch("/api/promo");
+        const data = await res.json();
+        if (data?.date) {
+          const formatted = new Date(data.date).toLocaleDateString("fr-FR", {
+            day: "2-digit",
+            month: "2-digit",
+            year: "numeric",
+          });
+          setPromoDate(formatted);
+        }
+      } catch (err) {
+        console.error("Promo fetch failed", err);
+      }
+    };
+
+    fetchPromo();
+  }, []);
 
   // Coupon codes for each car
   const carCoupons = {
@@ -34,9 +57,6 @@ const PromoPage = () => {
     });
   };
 
-  const stripeKey = process.env.NEXT_SECRET_STRIPE;
-  console.log("Stripe Secret Key:", stripeKey);
-
   return (
     <main className="">
       <SubHeader />
@@ -56,8 +76,12 @@ const PromoPage = () => {
           <h1 className="text-2xl font-bold mb-4">
             🚀 Promotion Exceptionnelle{" "}
             <span className="font-normal">Jusqu&apos;au </span>
-            <span className="text-green-400 font-[500] text-[22px]">
-              18/07/2025
+            <span className="text-green-400 font-[500] text-[22px] inline-flex items-center min-w-[80px]">
+              {promoDate ? (
+                promoDate
+              ) : (
+                <span className="w-4 h-4 border-2 border-green-400 border-t-transparent rounded-full animate-spin inline-block align-middle" />
+              )}
             </span>
           </h1>
 
