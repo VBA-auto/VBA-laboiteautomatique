@@ -98,9 +98,9 @@ export default function DynamicPopup() {
           </div>
 
           {/* Countdown Timer */}
-          <div className="bg-yellow-50 py-3 px-4 rounded-lg text-center mb-4 font-semibold text-[#c33e1d]">
+          <div className="bg-blue-50 py-3 px-4 rounded-lg text-center mb-4 font-semibold text-[#c33e1d]">
             {/* Time remaining:{" "} */}
-            <p className="text-4xl">{`${timeLeft.days}d ${timeLeft.hours}h ${timeLeft.minutes}m ${timeLeft.seconds}s`}</p>
+            <p className="text-4xl">{`${timeLeft.days}j ${timeLeft.hours}h ${timeLeft.minutes}m ${timeLeft.seconds}s`}</p>
           </div>
 
           <div className="flex justify-center my-4">
@@ -119,7 +119,7 @@ export default function DynamicPopup() {
               onClick={handleClose}
               className="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors mt-4"
             >
-              PROMO CODE
+              CODE PROMOTIONNEL
             </button>
           </Link>
         </div>
