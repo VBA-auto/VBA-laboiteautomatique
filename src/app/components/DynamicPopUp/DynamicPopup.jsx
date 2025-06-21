@@ -90,7 +90,7 @@ export default function DynamicPopup() {
         <div className="p-6">
           <div className="text-center mb-4">
             <h2 className="text-2xl font-bold text-gray-800">
-              PROMO SPECIALE se termine dans!
+              PROMO SPECIALE se termine dans:
             </h2>
             <p className="text-gray-600 mt-1">
               Ne manquez pas cette offre exclusive
@@ -100,7 +100,8 @@ export default function DynamicPopup() {
           {/* Countdown Timer */}
           <div className="bg-blue-50 py-3 px-4 rounded-lg text-center mb-4 font-semibold text-[#c33e1d]">
             {/* Time remaining:{" "} */}
-            <p className="text-4xl">{`${timeLeft.days}j ${timeLeft.hours}h ${timeLeft.minutes}m ${timeLeft.seconds}s`}</p>
+            <p className="text-4xl">{`${timeLeft.days}j ${timeLeft.hours}h ${timeLeft.minutes}m`}</p>
+            {/* <p className="text-4xl">{`${timeLeft.days}j ${timeLeft.hours}h ${timeLeft.minutes}m ${timeLeft.seconds}s`}</p> */}
           </div>
 
           <div className="flex justify-center my-4">
