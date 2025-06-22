@@ -11,8 +11,8 @@ const InstallForm = async (req, res) => {
       port: 465,
       secure: true, // Use true for 465
       auth: {
-        user: "contact@laboiteautomatique.com",
-        pass: "Brice008//@@",
+        user: `${process.env.USER}`,
+        pass: `${process.env.PASS}`,
       },
       tls: {
         rejectUnauthorized: false,
