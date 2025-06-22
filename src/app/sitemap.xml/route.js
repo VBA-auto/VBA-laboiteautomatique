@@ -254,11 +254,11 @@ export async function GET() {
       lastmod: new Date().toISOString(),
       priority: 0.7,
     },
-    // {
-    //   loc: `${baseUrl}/es`,
-    //   lastmod: new Date().toISOString(),
-    //   priority: 0.7,
-    // },
+    {
+      loc: `${baseUrl}/promo`,
+      lastmod: new Date().toISOString(),
+      priority: 0.7,
+    },
   ];
 
   const referenceUrls = referenceCodes.map((ref) => ({
