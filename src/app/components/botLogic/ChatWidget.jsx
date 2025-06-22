@@ -1,170 +1,107 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
+import { FaComments, FaTimes } from "react-icons/fa";
 
-import Image from "next/image";
-import Link from "next/link";
-import { PiArrowCircleUpRightFill } from "react-icons/pi";
-import conversationLogic from "./conversationLogic";
-
-const ChatWidget = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [messages, setMessages] = useState([]);
+export default function Chatbot() {
+  const [open, setOpen] = useState(false);
+  const [messages, setMessages] = useState([
+    { sender: "bot", text: "Hi! How can I help you today?" },
+  ]);
   const [input, setInput] = useState("");
-  const [isTyping, setIsTyping] = useState(false);
-  const [disableInput, setDisableInput] = useState(true); // Disable input initially
-  const [selectedOption, setSelectedOption] = useState(null); // Track selected option
-  const [step, setStep] = useState(0); // Step tracker for "Need Help" flow
+  const [loading, setLoading] = useState(false);
 
-  const chatContainerRef = useRef(null);
-
-  const handleOptionSelect = (option) => {
-    setSelectedOption(option);
-    setDisableInput(false);
-    const botMessage = {
-      text:
-        option === "needHelp"
-          ? "Which car do you have now?"
-          : "Option 2 functionality is coming soon!",
-      sender: "bot",
-    };
-    setMessages((prev) => [...prev, botMessage]);
-    if (option === "needHelp") setStep(1); // Start "Need Help" flow
-  };
-
-  const handleSendMessage = async () => {
+  const handleSend = async () => {
     if (!input.trim()) return;
 
-    const userMessage = { text: input, sender: "user" };
-    setMessages((prev) => [...prev, userMessage]);
+    const newMessages = [...messages, { sender: "user", text: input }];
+    setMessages(newMessages);
     setInput("");
-    setIsTyping(true);
+    setLoading(true);
 
-    setTimeout(() => {
-      let botMessage = { text: "", sender: "bot" };
+    try {
+      const res = await fetch("/api/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: input }),
+      });
 
-      if (selectedOption === "needHelp") {
-        botMessage = conversationLogic(input, step, setStep); // Pass input and step to conversation logic
-      } else {
-        botMessage.text = "Option 2 is not implemented yet.";
-      }
+      const data = await res.json();
+      const botReply = data.message || "Sorry, I couldn't understand that.";
 
-      setMessages((prev) => [...prev, botMessage]);
-      setIsTyping(false);
-    }, 1000);
+      setMessages([...newMessages, { sender: "bot", text: botReply }]);
+    } catch (error) {
+      setMessages([
+        ...newMessages,
+        { sender: "bot", text: "Something went wrong. Please try again." },
+      ]);
+    } finally {
+      setLoading(false);
+    }
   };
 
-  useEffect(() => {
-    if (chatContainerRef.current) {
-      chatContainerRef.current.scrollTop =
-        chatContainerRef.current.scrollHeight;
-    }
-  }, [messages, isTyping]);
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") handleSend();
+  };
 
   return (
-    <div>
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-6 right-6 px-4 h-10 bg-[#2C80EF] text-white rounded-full shadow-lg flex justify-center items-center hover:bg-blue-700 transition"
-      >
-        VBA - AI
-      </button>
+    <>
+      {/* Floating Icon */}
+      <div className="fixed bottom-6 right-6 z-50">
+        <button
+          onClick={() => setOpen(!open)}
+          className="bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition"
+        >
+          {open ? <FaTimes size={20} /> : <FaComments size={20} />}
+        </button>
+      </div>
 
-      {isOpen && (
-        <div className="fixed bottom-20 right-6 w-[350px] bg-white border rounded-lg shadow-lg z-50">
-          <div className="p-4 border-b bg-[#2C80EF] text-white rounded-lg">
-            VBA - AI Assistant{" "}
-            <span className="text-xs bg-white text-blue-600 px-2 rounded-lg">
-              Beta 1.0
-            </span>
+      {/* Chat Box */}
+      {open && (
+        <div className="fixed bottom-20 right-6 z-40 w-[320px] sm:w-[380px] bg-white border rounded-2xl shadow-xl flex flex-col overflow-hidden animate-fadeIn">
+          <div className="bg-blue-600 text-white p-4 font-semibold">
+            Chat with us
           </div>
-          <div
-            className="p-4 h-80 overflow-y-auto flex flex-col space-y-2"
-            ref={chatContainerRef}
-          >
-            {!selectedOption ? (
-              <>
-                <p className="text-center text-sm">
-                  Hello! How can I assist you?
-                </p>
-                <div className="flex flex-col space-y-2">
-                  <button
-                    onClick={() => handleOptionSelect("needHelp")}
-                    className="bg-blue-500 text-white px-4 py-2 rounded-lg"
-                  >
-                    Need Help?
-                  </button>
-                  <button
-                    onClick={() => handleOptionSelect("lookingForProducts")}
-                    className="bg-blue-500 text-white px-4 py-2 rounded-lg"
-                  >
-                    Looking for Products
-                  </button>
-                </div>
-              </>
-            ) : (
-              messages.map((msg, index) => (
-                <div
-                  key={index}
-                  className={`${
-                    msg.sender === "user"
-                      ? "self-end bg-blue-100 text-blue-800"
-                      : "self-start bg-gray-100 text-gray-800"
-                  } px-3 py-2 rounded-lg max-w-xs`}
-                >
-                  <p className="text-[15px]">{msg.text}</p>
-                  {msg.link && (
-                    <Link
-                      href={msg.link}
-                      rel="noopener noreferrer"
-                      className="text-[#2C80EF] underline text-sm"
-                    >
-                      Learn more
-                    </Link>
-                  )}
-                  {msg.image && (
-                    <Image
-                      unoptimized
-                      width={150}
-                      height={100}
-                      src={msg.image}
-                      alt="Response Visual"
-                      className="mt-2 max-w-full rounded-lg"
-                    />
-                  )}
-                </div>
-              ))
-            )}
-            {isTyping && (
-              <div className="self-start text-gray-500 italic text-sm">
+
+          <div className="flex-1 p-3 overflow-y-auto max-h-80 space-y-2 text-sm">
+            {messages.map((msg, i) => (
+              <div
+                key={i}
+                className={`p-2 rounded-md w-fit max-w-[85%] ${
+                  msg.sender === "user"
+                    ? "ml-auto bg-blue-100 text-right"
+                    : "bg-gray-100"
+                }`}
+              >
+                {msg.text}
+              </div>
+            ))}
+
+            {loading && (
+              <div className="bg-gray-100 p-2 rounded-md w-fit animate-pulse">
                 Typing...
               </div>
             )}
           </div>
-          <div className="p-2 flex items-center border-t">
+
+          <div className="p-3 border-t flex gap-2">
             <input
               type="text"
-              placeholder="Type a message..."
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              className="flex-grow border rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#2C80EF] bg-white"
-              onKeyDown={(e) => {
-                if (e.key === "Enter") handleSendMessage();
-              }}
-              disabled={disableInput}
+              onKeyDown={handleKeyDown}
+              placeholder="Type a message..."
+              className="flex-1 bg-white text-black border rounded-xl px-3 py-2 text-sm focus:outline-none focus:ring focus:ring-blue-200"
             />
             <button
-              onClick={handleSendMessage}
-              className="ml-2 px-4 py-2 bg-[#2C80EF] text-white rounded-lg hover:bg-blue-700 transition"
-              disabled={disableInput}
+              onClick={handleSend}
+              className="bg-blue-600 text-white px-4 py-2 rounded-xl text-sm hover:bg-blue-700 transition"
             >
-              <PiArrowCircleUpRightFill className="text-xl" />
+              Send
             </button>
           </div>
         </div>
       )}
-    </div>
+    </>
   );
-};
-
-export default ChatWidget;
+}

@@ -38,7 +38,7 @@ const RootLayout = ({ children }) => {
       <body className={`${poppins.variable} antialiased`}>
         {children}
         <GoogleTag />
-        {/* <ChatWidget /> */}
+        <ChatWidget />
         <noscript
           dangerouslySetInnerHTML={{
             __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PVVG6XNH"
