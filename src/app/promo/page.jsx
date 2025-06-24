@@ -11,14 +11,16 @@ import { useEffect, useState } from "react";
 const PromoPage = () => {
   // Track which car is currently showing the promo code
   const [revealedCar, setRevealedCar] = useState(null);
-
   const [promoDate, setPromoDate] = useState("");
+  const [promoPrice, setPromoPrice] = useState(120); // Default price
+  const [loading, setLoading] = useState(true); // Loading state
 
   useEffect(() => {
     const fetchPromo = async () => {
       try {
         const res = await fetch("/api/promo");
         const data = await res.json();
+
         if (data?.date) {
           const formatted = new Date(data.date).toLocaleDateString("fr-FR", {
             day: "2-digit",
@@ -27,8 +29,14 @@ const PromoPage = () => {
           });
           setPromoDate(formatted);
         }
+
+        if (data?.price) {
+          setPromoPrice(data.price);
+        }
       } catch (err) {
         console.error("Promo fetch failed", err);
+      } finally {
+        setLoading(false);
       }
     };
 
@@ -72,7 +80,17 @@ const PromoPage = () => {
       </Head>
       <div className="pt-28 pb-28 flex items-center justify-center bg-gradient-to-r from-white to-gray-100">
         <div className="text-center text-gray-700">
-          <h1 className="text-2xl font-bold text-blue-500 mb-1">- 120 € </h1>
+          <h1 className="text-2xl font-bold text-blue-500 mb-1 inline-flex items-center gap-2">
+            -
+            <span className="inline-flex items-center ">
+              {loading ? (
+                <span className="w-5 h-5 border-2 border-blue-500 border-t-transparent rounded-full animate-spin inline-block" />
+              ) : (
+                promoPrice
+              )}
+            </span>
+            €
+          </h1>
           <h1 className="text-2xl font-bold mb-4">
             🚀 Promotion Exceptionnelle{" "}
             <span className="font-normal">Jusqu&apos;au </span>

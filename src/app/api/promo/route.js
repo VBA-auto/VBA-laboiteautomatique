@@ -2,7 +2,7 @@ import clientPromise from "@/lib/mongodb";
 
 export async function POST(req) {
   try {
-    const { active, date } = await req.json();
+    const { active, date, price } = await req.json();
 
     const client = await clientPromise;
     const db = client.db("VBA-laboiteautomatique-DB");
@@ -13,6 +13,7 @@ export async function POST(req) {
     await db.collection("Promo").insertOne({
       active,
       date,
+      price: price || 80, // Default to 120 if no price provided
       createdAt: new Date(),
     });
 
