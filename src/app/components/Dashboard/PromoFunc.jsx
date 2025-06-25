@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import AdminPromoCodeManager from "./PromoCodeComp";
 
 const PromoFunc = () => {
   const [checked, setChecked] = useState(false);
@@ -81,8 +82,6 @@ const PromoFunc = () => {
 
   return (
     <div className="space-y-6 p-6">
-      <h1 className="text-xl font-bold">Promo Management</h1>
-
       {/* TOGGLE */}
       <label className="flex items-center gap-3 cursor-pointer">
         <div className="relative">
@@ -109,7 +108,7 @@ const PromoFunc = () => {
       </label>
 
       {/* PRICE INPUT */}
-      <div className="flex flex-col space-y-2">
+      {/* <div className="flex flex-col space-y-2">
         <label className="text-sm text-gray-600">
           Promo discount amount (€):
         </label>
@@ -124,7 +123,7 @@ const PromoFunc = () => {
         <p className="text-xs text-gray-500">
           Current discount: €{promoPrice || "0"}
         </p>
-      </div>
+      </div> */}
 
       {/* DATE PICKER */}
       <div className="flex flex-col space-y-2">
@@ -171,12 +170,12 @@ const PromoFunc = () => {
             {checked ? "Active" : "Inactive"}
           </span>
         </p>
-        <p>
+        {/* <p>
           Discount:{" "}
           <span className="font-bold text-blue-500">
             - €{promoPrice || "0"}
           </span>
-        </p>
+        </p> */}
         <p>
           Valid until:{" "}
           <span className="text-green-600">
@@ -185,6 +184,10 @@ const PromoFunc = () => {
               : "Not set"}
           </span>
         </p>
+      </div>
+
+      <div className="">
+        <AdminPromoCodeManager />
       </div>
     </div>
   );
