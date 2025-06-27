@@ -27,7 +27,15 @@ const AdminPromoCodeManager = () => {
       setLoading(true);
       const response = await fetch("/api/promoCode");
       const data = await response.json();
-      setPromoCodes(data);
+
+      // Client-side sorting to ensure proper numeric sorting
+      const sortedData = data.sort((a, b) => {
+        const priceA = parseFloat(a.price) || 0;
+        const priceB = parseFloat(b.price) || 0;
+        return priceA - priceB;
+      });
+
+      setPromoCodes(sortedData);
     } catch (error) {
       console.error("Error fetching promo codes:", error);
     } finally {
@@ -41,6 +49,12 @@ const AdminPromoCodeManager = () => {
 
   const handleAddPromoCode = async () => {
     try {
+      // Validate price is not empty
+      if (!newPromoCode.price || newPromoCode.price.trim() === "") {
+        alert("Please enter a valid price");
+        return;
+      }
+
       // Step 1: If the new promo is set to active, deactivate all first
       if (newPromoCode.status) {
         await fetch("/api/promoCode", {
@@ -59,7 +73,10 @@ const AdminPromoCodeManager = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           action: "add",
-          data: newPromoCode,
+          data: {
+            ...newPromoCode,
+            price: parseFloat(newPromoCode.price) || 0, // Convert to number
+          },
         }),
       });
 
@@ -115,12 +132,22 @@ const AdminPromoCodeManager = () => {
 
   const handleUpdate = async (id, updatedData) => {
     try {
+      // Validate price is not empty
+      if (!updatedData.price || updatedData.price.toString().trim() === "") {
+        alert("Please enter a valid price");
+        return;
+      }
+
       const response = await fetch("/api/promoCode", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           action: "update",
-          data: { _id: id, ...updatedData },
+          data: {
+            _id: id,
+            ...updatedData,
+            price: parseFloat(updatedData.price) || 0, // Convert to number
+          },
         }),
       });
 
@@ -165,15 +192,18 @@ const AdminPromoCodeManager = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                Price
+                Price (€)
               </label>
               <input
-                type="text"
+                type="number"
+                min="0"
+                step="0.01"
+                placeholder="Enter price"
                 value={newPromoCode.price}
                 onChange={(e) =>
                   setNewPromoCode({ ...newPromoCode, price: e.target.value })
                 }
-                className="w-full p-3 border bg-white border-gray-300 rounded-lg"
+                className="w-full p-3 border bg-white border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               />
             </div>
             <div>
@@ -187,10 +217,10 @@ const AdminPromoCodeManager = () => {
                     status: !newPromoCode.status,
                   })
                 }
-                className={`flex items-center gap-2 px-4 py-3 rounded-lg ${
+                className={`flex items-center gap-2 px-4 py-3 rounded-lg transition-colors ${
                   newPromoCode.status
-                    ? "bg-green-100 text-green-700"
-                    : "bg-gray-100 text-gray-700"
+                    ? "bg-green-100 text-green-700 hover:bg-green-200"
+                    : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                 }`}
               >
                 {newPromoCode.status ? (
@@ -211,6 +241,7 @@ const AdminPromoCodeManager = () => {
                 </label>
                 <input
                   type="text"
+                  placeholder={`Enter ${car} code`}
                   value={newPromoCode.codes[car]}
                   onChange={(e) =>
                     setNewPromoCode({
@@ -221,7 +252,7 @@ const AdminPromoCodeManager = () => {
                       },
                     })
                   }
-                  className="w-full p-3 border bg-white border-gray-300 rounded-lg"
+                  className="w-full p-3 border bg-white border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                 />
               </div>
             ))}
@@ -230,13 +261,13 @@ const AdminPromoCodeManager = () => {
           <div className="flex gap-3 mt-6">
             <button
               onClick={handleAddPromoCode}
-              className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg flex items-center gap-2"
+              className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg flex items-center gap-2 transition-colors"
             >
               <Save size={20} /> Save Promo Code
             </button>
             <button
               onClick={() => setShowAddForm(false)}
-              className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-2 rounded-lg flex items-center gap-2"
+              className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-2 rounded-lg flex items-center gap-2 transition-colors"
             >
               <X size={20} /> Cancel
             </button>
@@ -276,7 +307,7 @@ const PromoCodeCard = ({
   const startEditing = () => {
     setEditingId(promo._id);
     setEditData({
-      price: promo.price,
+      price: promo.price.toString(), // Convert to string for input
       codes: { ...promo.codes },
       status: promo.status,
     });
@@ -291,31 +322,38 @@ const PromoCodeCard = ({
 
   return (
     <div
-      className={`bg-white p-6 rounded-lg shadow-md border-2 ${
-        promo.status ? "border-green-200" : "border-gray-200"
+      className={`bg-white p-6 rounded-lg shadow-md border-2 transition-colors ${
+        promo.status ? "border-green-200 bg-green-50" : "border-gray-200"
       }`}
     >
       <div className="flex justify-between items-start mb-4">
         <div className="flex items-center gap-4">
           {isEditing ? (
-            <input
-              type="text"
-              value={editData.price}
-              onChange={(e) =>
-                setEditData({ ...editData, price: e.target.value })
-              }
-              className="text-xl font-bold bg-white p-2 border border-gray-300 rounded"
-            />
+            <div className="flex items-center gap-2">
+              <span className="text-xl font-bold text-gray-600">€</span>
+              <input
+                type="number"
+                min="0"
+                step="0.01"
+                value={editData.price}
+                onChange={(e) =>
+                  setEditData({ ...editData, price: e.target.value })
+                }
+                className="text-xl font-bold bg-white p-2 border border-gray-300 rounded w-24 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              />
+            </div>
           ) : (
-            <h2 className="text-xl font-bold text-gray-800">€{promo.price}</h2>
+            <h2 className="text-xl font-bold text-gray-800">
+              €{parseFloat(promo.price).toFixed(2)}
+            </h2>
           )}
 
           <button
             onClick={() => onToggleStatus(promo._id, promo.status)}
-            className={`flex items-center gap-2 px-3 py-1 rounded-full ${
+            className={`flex items-center gap-2 px-3 py-1 rounded-full transition-colors ${
               promo.status
-                ? "bg-green-100 text-green-700"
-                : "bg-gray-100 text-gray-700"
+                ? "bg-green-100 text-green-700 hover:bg-green-200"
+                : "bg-gray-100 text-gray-700 hover:bg-gray-200"
             }`}
           >
             {promo.status ? (
@@ -332,13 +370,13 @@ const PromoCodeCard = ({
             <>
               <button
                 onClick={saveEdit}
-                className="bg-green-600 hover:bg-green-700 text-white p-2 rounded-lg"
+                className="bg-green-600 hover:bg-green-700 text-white p-2 rounded-lg transition-colors"
               >
                 <Save size={18} />
               </button>
               <button
                 onClick={cancelEdit}
-                className="bg-gray-600 hover:bg-gray-700 text-white p-2 rounded-lg"
+                className="bg-gray-600 hover:bg-gray-700 text-white p-2 rounded-lg transition-colors"
               >
                 <X size={18} />
               </button>
@@ -347,13 +385,13 @@ const PromoCodeCard = ({
             <>
               <button
                 onClick={startEditing}
-                className="bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-lg"
+                className="bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-lg transition-colors"
               >
                 <Edit size={18} />
               </button>
               <button
                 onClick={() => onDelete(promo._id)}
-                className="bg-red-600 hover:bg-red-700 text-white p-2 rounded-lg"
+                className="bg-red-600 hover:bg-red-700 text-white p-2 rounded-lg transition-colors"
               >
                 <Trash2 size={18} />
               </button>
@@ -381,11 +419,11 @@ const PromoCodeCard = ({
                     },
                   })
                 }
-                className="w-full p-2 border bg-white border-gray-300 rounded"
+                className="w-full p-2 border bg-white border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               />
             ) : (
               <p className="font-mono text-sm bg-white p-2 rounded border">
-                {code}
+                {code || "Not set"}
               </p>
             )}
           </div>

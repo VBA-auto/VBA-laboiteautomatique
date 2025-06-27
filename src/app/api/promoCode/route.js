@@ -1,14 +1,35 @@
 import clientPromise from "@/lib/mongodb";
+import { ObjectId } from "mongodb";
 
 export async function GET() {
   try {
     const client = await clientPromise;
     const db = client.db("VBA-laboiteautomatique-DB");
 
+    // Use aggregation pipeline for proper numeric sorting
     const promoCodes = await db
       .collection("promoCode")
-      .find({})
-      .sort({ price: 1 })
+      .aggregate([
+        {
+          $addFields: {
+            numericPrice: {
+              $cond: {
+                if: { $isNumber: "$price" },
+                then: "$price",
+                else: { $toDouble: { $ifNull: ["$price", "0"] } },
+              },
+            },
+          },
+        },
+        {
+          $sort: { numericPrice: 1 },
+        },
+        {
+          $project: {
+            numericPrice: 0, // Remove the temporary field from output
+          },
+        },
+      ])
       .toArray();
 
     return new Response(JSON.stringify(promoCodes), { status: 200 });
@@ -33,8 +54,9 @@ export async function POST(req) {
 
     switch (action) {
       case "add":
+        // Ensure price is stored as a number
         const newPromoCode = {
-          price: data.price,
+          price: parseFloat(data.price) || 0,
           codes: data.codes, // Object with car names as keys
           status: data.status || false,
           createdAt: new Date(),
@@ -54,6 +76,11 @@ export async function POST(req) {
 
       case "update":
         const { _id, ...updateData } = data;
+
+        // Ensure price is stored as a number
+        if (updateData.price !== undefined) {
+          updateData.price = parseFloat(updateData.price) || 0;
+        }
 
         const updateResult = await db.collection("promoCode").updateOne(
           { _id: new ObjectId(_id) },
@@ -100,7 +127,7 @@ export async function POST(req) {
 
         // Then, set only the selected one to active (if status is true)
         let toggleResult;
-        if (data.status) {
+        if (data.status && data._id) {
           toggleResult = await db.collection("promoCode").updateOne(
             { _id: new ObjectId(data._id) },
             {
@@ -138,6 +165,3 @@ export async function POST(req) {
     );
   }
 }
-
-// Import ObjectId for MongoDB operations
-import { ObjectId } from "mongodb";
