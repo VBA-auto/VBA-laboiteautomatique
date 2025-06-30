@@ -151,7 +151,7 @@ const PromoPage = () => {
             {carList.map((car) => (
               <div
                 key={car.key}
-                className={`w-[160px] h-[120px] md:flex items-center justify-center bg-white rounded-lg shadow-md py-3 px-5 transition-all duration-300 ${
+                className={`md:w-[160px] h-[120px] md:flex items-center justify-center bg-white rounded-lg shadow-md py-3 px-5 transition-all duration-300 ${
                   revealedCar === car.key ? "flip" : ""
                 }`}
                 onClick={() => handleCarClick(car.key)}
