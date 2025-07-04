@@ -1095,5 +1095,36 @@
       "/images/cal-normal-6.webp",
       "/images/cal-normal-7.webp"
     ]
+  },
+  {
+    "ref": "310321520R",
+    "stock": 2,
+    "title": "Calculateur Renault Clio 4 GT- Clio 4",
+    "metaTitle": "Module de commande (calculateur) Renault Clio 4 Essence - Clio 4 GT Essence",
+    "metaDes": "Commandez ici votre Calculateur pour boîte automatique EDC Renault référence 310321520R, programmation incluse. Vérifiez disponibilité.",
+    "description": "Module de commande (calculateur) Renault Clio 4 Essence - Clio 4 GT Essence",
+    "compatibility": "Clio 4 GT- Clio 4",
+    "warranty": "12 mois neuf",
+    "brand": "Renault",
+    "ogPrice": 890,
+    "programationPrice": 230,
+    "transportPrice": 19,
+    "save": "00",
+    "finalPrice": 1139,
+    "coupon": "PROG2023",
+    "payLink": "https://buy.stripe.com/6oE3fQ3pC10P5awbKL",
+    "vehicle": "Clio 4 GT- Clio 4",
+    "Info_complémentaire": "Clio 4 à partir de 2012 - Clio 4 GT Essence",
+    "OE_number": "A2C30743000 - 01 K00",
+    "images": [
+      "/images/cal-normal-0.webp",
+      "/images/cal-normal-1.webp",
+      "/images/cal-normal-2.webp",
+      "/images/cal-normal-3.webp",
+      "/images/cal-normal-4.webp",
+      "/images/cal-normal-5.webp",
+      "/images/cal-normal-6.webp",
+      "/images/cal-normal-7.webp"
+    ]
   }
 ]

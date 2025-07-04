@@ -41,6 +41,7 @@ export async function GET() {
     "A2C30743002",
     "megane4",
     "310320368R",
+    "310321520R",
   ];
 
   const staticUrls = [
