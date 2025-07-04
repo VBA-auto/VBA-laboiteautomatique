@@ -27,9 +27,11 @@ const AdminPromoCodeManager = () => {
       setLoading(true);
       const response = await fetch("/api/promoCode");
       const data = await response.json();
+      console.log("API data:", data);
 
-      // Client-side sorting to ensure proper numeric sorting
-      const sortedData = data.sort((a, b) => {
+      let promoArray = Array.isArray(data) ? data : data.promoCodes || [];
+
+      const sortedData = promoArray.sort((a, b) => {
         const priceA = parseFloat(a.price) || 0;
         const priceB = parseFloat(b.price) || 0;
         return priceA - priceB;

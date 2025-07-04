@@ -137,10 +137,36 @@ input[type="checkbox"] {
 input[type="checkbox"]:checked {
   background-color: #007bff; /* Blue background when checked */
   border-color: #ffffff; /* Darker border when checked */
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M20.285 5.285l-11 11a1 1 0 0 1-1.415 0l-5-5a1 1 0 1 1 1.415-1.415L9 14.585l9.875-9.875a1 1 0 0 1 1.415 1.415z'/%3E%3C/svg%3E");
+  /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M20.285 5.285l-11 11a1 1 0 0 1-1.415 0l-5-5a1 1 0 1 1 1.415-1.415L9 14.585l9.875-9.875a1 1 0 0 1 1.415 1.415z'/%3E%3C/svg%3E"); */
   background-size: 100%; /* Adjust the size of the checkmark */
   background-position: center;
   background-repeat: no-repeat;
+}
+
+/* Hide default icon in Firefox */
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-clear-button {
+  display: none;
+}
+
+input[type="date"]::-ms-clear {
+  display: none;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  opacity: 1;
+}
+
+/* Hide default icon in Firefox */
+input[type="date"]::-moz-focus-inner {
+  border: 0;
+}
+
+/* Hide default icon in Firefox */
+input[type="date"]::-moz-calendar-picker-indicator {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .iframe-container {

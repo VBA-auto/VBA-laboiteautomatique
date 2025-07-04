@@ -130,7 +130,7 @@ const PromoFunc = () => {
         <label className="text-sm text-gray-600">Select promo end date:</label>
         <input
           type="date"
-          className="input input-bordered w-60 border rounded-md p-2 bg-white"
+          className="custom-date input input-bordered w-60 border rounded-md p-2 bg-white"
           value={selectedDate}
           onChange={(e) => setSelectedDate(e.target.value)}
         />
