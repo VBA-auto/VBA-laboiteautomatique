@@ -467,5 +467,17 @@
     "description": "Embrayage 2 ",
     "subTitle": "Clutch 2 wrong position",
     "aide": "Calculateur ou faire calibrage tambour ou calculateur"
+  },
+  {
+    "code": "DF437",
+    "description": "Circuit moteur tambour Vitesse 1. Court circuit au +12 volts",
+    "subTitle": "Drum motor circuit Speed 1. Short circuit to +12 volts",
+    "aide": "Problème de calculateur"
+  },
+  {
+    "code": "DF489",
+    "description": "Circuit moteur embrayage 1. défaillance électrique Générale.",
+    "subTitle": "Drum motor circuit Speed 1. Short circuit to +12 volts",
+    "aide": "Problème de calculateur"
   }
 ]
