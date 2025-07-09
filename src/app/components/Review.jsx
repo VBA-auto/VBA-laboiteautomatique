@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import Slider from "react-slick";
 import { FcGoogle } from "react-icons/fc";
 import "slick-carousel/slick/slick.css";
@@ -10,7 +10,6 @@ import Image from "next/image";
 const ReviewSlider = () => {
   const [reviews, setReviews] = useState([]);
   const [selectedReview, setSelectedReview] = useState(null);
-  const sliderRef = useRef(null);
 
   useEffect(() => {
     const fetchReviews = async () => {
@@ -77,12 +76,8 @@ const ReviewSlider = () => {
   };
 
   return (
-    <div
-      className="container mx-auto p-4 mb-8 review"
-      onMouseEnter={() => sliderRef.current?.slickPause()}
-      onMouseLeave={() => sliderRef.current?.slickPlay()}
-    >
-      <Slider ref={sliderRef} {...settings}>
+    <div className="container mx-auto p-4 mb-8 review">
+      <Slider {...settings}>
         {reviews?.map((review, index) => (
           <div key={index} className="p-2">
             <div className="bg-white rounded-lg border border-gray-200 shadow-md p-3 h-full flex flex-col justify-between">
