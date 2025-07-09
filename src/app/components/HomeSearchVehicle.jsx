@@ -14,40 +14,6 @@ const HomeSearchVehicle = () => {
   const [showResults, setShowResults] = useState(false);
   const searchRef = useRef(null);
 
-  // useEffect(() => {
-  //   fetch("https://laboiteautomatique.com/searchVehicule.json")
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       setSearchData(data);
-  //       setIsLoading(false);
-  //     })
-  //     .catch((error) => {
-  //       console.error("Error fetching data:", error);
-  //       setIsLoading(false);
-  //     });
-  //   fetch("https://laboiteautomatique.com/searchData.json")
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       setSearchRefData(data);
-  //       setIsLoading(false);
-  //     })
-  //     .catch((error) => {
-  //       console.error("Error fetching data:", error);
-  //       setIsLoading(false);
-  //     });
-
-  //   const handleClickOutside = (event) => {
-  //     if (searchRef.current && !searchRef.current.contains(event.target)) {
-  //       setShowResults(false);
-  //     }
-  //   };
-
-  //   document.addEventListener("mousedown", handleClickOutside);
-  //   return () => {
-  //     document.removeEventListener("mousedown", handleClickOutside);
-  //   };
-  // }, []);
-
   useEffect(() => {
     const fetchSearchData = async () => {
       setIsLoading(true);
@@ -217,6 +183,7 @@ const HomeSearchVehicle = () => {
                           src={item?.images[0]}
                           priority={true}
                           alt=""
+                          className="w-[80px] h-[60px] object-cover"
                         />
                       </div>
                       <div className="md:w-3/4">

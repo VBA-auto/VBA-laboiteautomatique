@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Slider from "react-slick";
 import { FcGoogle } from "react-icons/fc";
 import "slick-carousel/slick/slick.css";
@@ -10,6 +10,7 @@ import Image from "next/image";
 const ReviewSlider = () => {
   const [reviews, setReviews] = useState([]);
   const [selectedReview, setSelectedReview] = useState(null);
+  const sliderRef = useRef(null);
 
   useEffect(() => {
     const fetchReviews = async () => {
@@ -28,11 +29,13 @@ const ReviewSlider = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 9000,
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 0,
+    cssEase: "linear",
+    pauseOnHover: false,
     responsive: [
       {
         breakpoint: 1279,
@@ -48,8 +51,6 @@ const ReviewSlider = () => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
-          infinite: true,
-          dots: true,
         },
       },
       {
@@ -76,64 +77,70 @@ const ReviewSlider = () => {
   };
 
   return (
-    <div className="container mx-auto p-4 mb-8 review">
-      <Slider {...settings}>
+    <div
+      className="container mx-auto p-4 mb-8 review"
+      onMouseEnter={() => sliderRef.current?.slickPause()}
+      onMouseLeave={() => sliderRef.current?.slickPlay()}
+    >
+      <Slider ref={sliderRef} {...settings}>
         {reviews?.map((review, index) => (
           <div key={index} className="p-2">
-            <div className="bg-white rounded-lg border border-gray-200 shadow-md p-3">
-              <div className="flex items-center mb-2 relative">
-                {review?.userImage ? (
-                  <div className="w-10 h-10 flex items-center justify-center rounded-full text-white font-bold">
-                    <Image
-                      unoptimized
-                      src={review.userImage}
-                      width={50}
-                      height={50}
-                      alt="review user image"
-                      className="rounded-full"
-                    />
+            <div className="bg-white rounded-lg border border-gray-200 shadow-md p-3 h-full flex flex-col justify-between">
+              <div>
+                <div className="flex items-center mb-2 relative">
+                  {review?.userImage ? (
+                    <div className="w-10 h-10 flex items-center justify-center rounded-full overflow-hidden">
+                      <Image
+                        unoptimized
+                        src={review.userImage}
+                        width={50}
+                        height={50}
+                        alt="review user"
+                        className="rounded-full object-cover w-full h-full"
+                      />
+                    </div>
+                  ) : (
+                    <div
+                      className="w-10 h-10 flex items-center justify-center rounded-full text-white font-bold"
+                      style={{
+                        backgroundColor: stringToColor(review?.name),
+                      }}
+                    >
+                      {review?.name.charAt(0).toUpperCase()}
+                    </div>
+                  )}
+                  <div className="ml-3">
+                    <h2 className="text-[15px] text-gray-600 font-[500]">
+                      {review?.name}
+                    </h2>
+                    <p className="text-gray-500 text-sm">{review?.date}</p>
                   </div>
-                ) : (
-                  <div
-                    className="w-10 h-10 flex items-center justify-center rounded-full text-white font-bold"
-                    style={{
-                      backgroundColor: stringToColor(review?.name),
-                    }}
-                  >
-                    {review?.name.charAt(0).toUpperCase()}
+                  <div className="absolute right-0 top-1">
+                    <FcGoogle />
                   </div>
-                )}
+                </div>
 
-                <div className="ml-3">
-                  <h2 className="text-[15px] text-gray-600 font-[500]">
-                    {review?.name}
-                  </h2>
-                  <p className="text-gray-500 text-sm">{review?.date}</p>
+                <div className="mb-2">
+                  {Array.from({ length: review?.rating }).map((_, idx) => (
+                    <span key={idx} className="text-yellow-500">
+                      ★
+                    </span>
+                  ))}
+                  {Array.from({ length: 5 - review?.rating }).map((_, idx) => (
+                    <span key={idx} className="text-gray-300">
+                      ★
+                    </span>
+                  ))}
                 </div>
-                <div className="absolute right-0 top-1">
-                  <FcGoogle />
-                </div>
+
+                <p className="text-gray-600 text-[15px]">
+                  {review?.review.slice(0, 50)}...
+                </p>
               </div>
-              <div className="mb-2">
-                {Array.from({ length: review?.rating }).map((_, idx) => (
-                  <span key={idx} className="text-yellow-500">
-                    ★
-                  </span>
-                ))}
-                {Array.from({ length: 5 - review?.rating }).map((_, idx) => (
-                  <span key={idx} className="text-gray-300">
-                    ★
-                  </span>
-                ))}
-              </div>
-              {/* Sliced Review? Text */}
-              <p className="text-gray-600 text-[15px]">
-                {review?.review.slice(0, 50)}...
-              </p>
-              {/* "See More" Button */}
+
               <label
                 htmlFor="reviewPopup"
-                className="text-blue-500 cursor-pointer mt-2 text-[14px]"
+                className="text-blue-500 cursor-pointer mt-3 text-[14px]"
                 onClick={() => handleSeeMoreClick(review)}
               >
                 voir plus
@@ -143,20 +150,20 @@ const ReviewSlider = () => {
         ))}
       </Slider>
 
-      {/* DaisyUI Popup */}
+      {/* DaisyUI Modal for "See More" */}
       <input type="checkbox" id="reviewPopup" className="modal-toggle" />
       <div className="modal">
         <div className="modal-box bg-white">
           <div className="flex items-center mb-2 relative">
             {selectedReview?.userImage ? (
-              <div className="w-10 h-10 flex items-center justify-center rounded-full text-white font-bold">
+              <div className="w-10 h-10 flex items-center justify-center rounded-full overflow-hidden">
                 <Image
                   unoptimized
                   src={selectedReview.userImage}
                   width={50}
                   height={50}
-                  alt="review user image"
-                  className="rounded-full"
+                  alt="review user"
+                  className="rounded-full object-cover w-full h-full"
                 />
               </div>
             ) : (
@@ -169,7 +176,6 @@ const ReviewSlider = () => {
                 {selectedReview?.name.charAt(0).toUpperCase()}
               </div>
             )}
-
             <div className="ml-3">
               <h2 className="text-[15px] text-gray-600 font-[500]">
                 {selectedReview?.name}
@@ -180,6 +186,7 @@ const ReviewSlider = () => {
               <FcGoogle />
             </div>
           </div>
+
           <div className="mb-1">
             {Array.from({ length: selectedReview?.rating }).map((_, idx) => (
               <span key={idx} className="text-yellow-500">
@@ -194,12 +201,14 @@ const ReviewSlider = () => {
               )
             )}
           </div>
+
           <p className="pb-1 text-[15px] text-gray-600">
             {selectedReview?.review}
           </p>
-          <div className="modal-action ">
-            <label htmlFor="reviewPopup" className="text-[14px] cursor-pointer">
-              Close
+
+          <div className="modal-action">
+            <label htmlFor="reviewPopup" className="text-sm cursor-pointer">
+              Fermer
             </label>
           </div>
         </div>
