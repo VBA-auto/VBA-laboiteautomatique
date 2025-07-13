@@ -64,20 +64,20 @@ const VehicleStockDisplay = ({ modelName, carType, onStockChange }) => {
         <span
           className={`md:w-[10px] md:h-[10px] w-[10px] h-[10px] ${
             stock <= 1
-              ? "bg-red-500"
+              ? "bg-[#BF0200]"
               : stock <= 3
               ? "bg-yellow-500"
-              : "bg-[#2aa31fc4]"
+              : "bg-[#128753]"
           } rounded-full block`}
         ></span>
         En stock:{" "}
         <span
           className={`${
             stock <= 1
-              ? "text-red-500"
+              ? "text-[#BF0200]"
               : stock <= 3
               ? "text-yellow-500"
-              : "text-[#2aa31fc4]"
+              : "text-[#128753]"
           } font-[500]`}
         >
           {stock}
