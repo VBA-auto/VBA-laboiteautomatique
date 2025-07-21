@@ -485,5 +485,17 @@
     "description": "ATIC shift actuator 2 SCB on half bridge 1, 2, 3 — low side or high side",
     "subTitle": "Drum motor circuit Speed 1. Short circuit to +12 volts",
     "aide": "ATIC shift actuator 2 SCB on half bridge 1, 2, 3 — low side or high side"
+  },
+  {
+    "code": "DTC183691",
+    "description": "Tambour de selection de Vitesse 1",
+    "subTitle": "Drum 1 selector out of range – electrical issue or ECU fault",
+    "aide": "Calculateur"
+  },
+  {
+    "code": "DTC18981C",
+    "description": "Circuit moteur tambour de selection de Vitesse 1",
+    "subTitle": "Gear selection drum 1 – signal too high or too low",
+    "aide": "Calculateur"
   }
 ]
