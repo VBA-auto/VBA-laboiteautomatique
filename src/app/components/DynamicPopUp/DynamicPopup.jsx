@@ -97,7 +97,7 @@ export default function DynamicPopup() {
   if (loading || !isVisible || !timeLeft) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-30 flex justify-center items-end z-50 p-4">
+    <div className="fixed inset-0 bg-black bg-opacity-30 flex justify-center items-center z-50 p-4">
       <div className="bg-white rounded-lg shadow-xl max-w-2xl w-full relative overflow-hidden">
         {/* Close Button */}
         <button
@@ -124,7 +124,7 @@ export default function DynamicPopup() {
             {/* Time remaining:{" "} */}
             <p className="text-3xl text-indigo-950">{`${timeLeft.days}j ${timeLeft.hours}h ${timeLeft.minutes}m`}</p>
             <h1 className="text-xl text-blue-500 mb-1 inline-flex items-center gap-2">
-              <span className="text-gray-700">obtenir moins:</span>
+              <span className="text-gray-700">obtenir:</span>
               <span>
                 {loadingPrice ? (
                   <span className="w-5 h-5 border-2 border-blue-500 border-t-transparent rounded-full animate-spin inline-block" />
