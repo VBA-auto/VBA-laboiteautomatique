@@ -497,5 +497,11 @@
     "description": "Circuit moteur tambour de selection de Vitesse 1",
     "subTitle": "Gear selection drum 1 – signal too high or too low",
     "aide": "Calculateur"
+  },
+  {
+    "code": "DTC174611",
+    "description": "Signal moteur embrayage 1 signal non plausible",
+    "subTitle": "Gear selector drum 1 – wrong signal",
+    "aide": "Calculateur et/ou moteur embrayage"
   }
 ]
