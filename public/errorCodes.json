@@ -75,7 +75,7 @@
     "code": "DTC183892",
     "description": "Tambour de selection de vitesse 1. Signal hors limite basse ou haute (P0730)",
     "subTitle": "P0730 - Incorrect Gear Ratio",
-    "aide": "Vérifier l'état de la batterie + peut être problème calculateur"
+    "aide": "Vérifier l'état de la batterie sinon calculateur"
   },
   {
     "code": "DTC185111",
