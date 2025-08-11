@@ -503,5 +503,17 @@
     "description": "Signal moteur embrayage 1 signal non plausible",
     "subTitle": "Gear selector drum 1 – wrong signal",
     "aide": "Calculateur et/ou moteur embrayage"
+  },
+  {
+    "code": "DTC174412",
+    "description": "Circuit moteur embrayage 2. Court-circuit au + 12 volts",
+    "subTitle": "Clutch motor circuit 2. Short circuit to +12 volts",
+    "aide": "Calculateur. Vérifier l’état de la batterie."
+  },
+  {
+    "code": "DTC178407",
+    "description": "Passage changement rapports tambour de selection 2 trop long",
+    "subTitle": "Gear shift too long",
+    "aide": "Calculateur ou embrayage. Vérifier usure embrayage"
   }
 ]
