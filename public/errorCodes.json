@@ -482,9 +482,9 @@
   },
   {
     "code": "DF433",
-    "description": "ATIC shift actuator 2 SCB on half bridge 1, 2, 3 — low side or high side",
-    "subTitle": "Drum motor circuit Speed 1. Short circuit to +12 volts",
-    "aide": "ATIC shift actuator 2 SCB on half bridge 1, 2, 3 — low side or high side"
+    "description": "Tambour de selection de vitesses 1, détection signal hors limite basse ou haute",
+    "subTitle": "DF433 Shift drum 1",
+    "aide": "Calculateur"
   },
   {
     "code": "DTC183691",
