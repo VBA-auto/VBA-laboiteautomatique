@@ -24,7 +24,7 @@ export async function GET(req) {
 // POST - নতুন কমেন্ট পাঠানো
 export async function POST(req) {
   const body = await req.json();
-  const { pageSlug, author, email, text } = body;
+  const { pageSlug, author, email, text, parentId } = body;
 
   if (!author || !email || !text || !pageSlug) {
     return NextResponse.json({ error: "Missing fields" }, { status: 400 });
@@ -39,6 +39,7 @@ export async function POST(req) {
     text,
     timestamp: new Date(),
     likes: 0,
+    ...(parentId && { parentId }), // Add parentId if it exists
   };
 
   await db.collection("comments").insertOne(newComment);

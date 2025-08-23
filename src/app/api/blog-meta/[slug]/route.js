@@ -2,7 +2,7 @@ import clientPromise from "@/lib/mongodb";
 import { NextResponse } from "next/server";
 
 export async function GET(_, { params }) {
-  const slug = await params?.slug;
+  const { slug } = params;
 
   if (!slug) {
     return NextResponse.json({ error: "Missing slug" }, { status: 400 });
