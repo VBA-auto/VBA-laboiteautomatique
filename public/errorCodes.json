@@ -515,5 +515,17 @@
     "description": "Passage changement rapports tambour de selection 2 trop long",
     "subTitle": "Gear shift too long",
     "aide": "Calculateur ou embrayage. Vérifier usure embrayage"
+  },
+  {
+    "code": "DF440",
+    "description": "Embrayage 2 court circuit au + 12 volts",
+    "subTitle": "Clutch 2 short circuit to +12 volts",
+    "aide": "Problème de calculateur"
+  },
+  {
+    "code": "DF436",
+    "description": "Tambour de selection 2 détection signal hors limite basse ou haute",
+    "subTitle": "Selection drum 2 signal detection out of lower or upper limit",
+    "aide": "Problème de calculateur"
   }
 ]
