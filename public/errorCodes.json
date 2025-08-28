@@ -355,13 +355,13 @@
     "aide": "batterie faisceau ou problème calculateur"
   },
   {
-    "code": "P1839 92",
+    "code": "P183992",
     "description": "Changement de vitesse – tambour du sélecteur 2 – Signal hors du seuil inférieur ou supérieur ",
     "subTitle": "circuit to earth clutch Signal outside lower or upper threshold",
     "aide": "problème calculateur"
   },
   {
-    "code": "P1837 91",
+    "code": "P183791",
     "description": "Changement de vitesse – tambour du sélecteur 2 – Signal hors du seuil inférieur ou supérieur ",
     "subTitle": "circuit to earth clutch Signal outside lower or upper threshold",
     "aide": "problème calculateur"
