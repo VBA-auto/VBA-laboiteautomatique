@@ -343,7 +343,7 @@
     "aide": "Problème soit calibrage ou programmation ou bien calculateur"
   },
   {
-    "code": "P1899 1C ",
+    "code": "P18991C ",
     "description": "Circuit actionneur de tambour – sélecteur de vitesse 2 – Tension au-delà des limites de tolérance",
     "subTitle": "Drum actuator circuit – gear selector 2 – Voltage beyond tolerance limits",
     "aide": "batterie faisceau ou problème calculateur"
