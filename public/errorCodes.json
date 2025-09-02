@@ -527,5 +527,11 @@
     "description": "Tambour de selection 2 détection signal hors limite basse ou haute",
     "subTitle": "Selection drum 2 signal detection out of lower or upper limit",
     "aide": "Problème de calculateur"
+  },
+  {
+    "code": "DF464",
+    "description": "Signal moteur embrayage 2. Signal non plausible",
+    "subTitle": "Clutch motor 2 signal. Implausible signal",
+    "aide": "Calculateur"
   }
 ]
