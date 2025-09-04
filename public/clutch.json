@@ -1,0 +1,56 @@
+[
+  {
+    "article_complementaire_info_1": "avec mécanisme d'embrayage",
+    "article_complementaire_info_2": "avec disque d'embrayage",
+    "type_entrainement": "Transmission à double embrayage",
+    "type_embrayage": "pour embrayage à sec",
+    "numero_article": "602 0016 00",
+    "notre_prix": "1484,21 €",
+    "fabricant": "LuK",
+    "numero_ean": "4014870368418",
+    "etat": "Neuf",
+    "payment_link": "https://example.com/payment/602001600",
+    "stock": 5,
+    "images": [
+      "https://example.com/images/clutch-mechanism-main.jpg",
+      "https://example.com/images/clutch-disc-detail.jpg",
+      "https://example.com/images/luk-clutch-packaging.jpg"
+    ]
+  },
+  {
+    "article_complementaire_info_1": "dymmu one",
+    "article_complementaire_info_2": "avec disque d'embrayage",
+    "type_entrainement": "Transmission à double embrayage",
+    "type_embrayage": "pour embrayage à sec",
+    "numero_article": "602 0016 00",
+    "notre_prix": "1484,21 €",
+    "fabricant": "LuK",
+    "numero_ean": "4014870368418",
+    "etat": "Neuf",
+    "payment_link": "https://example.com/payment/602001600",
+    "stock": 5,
+    "images": [
+      "https://example.com/images/clutch-mechanism-main.jpg",
+      "https://example.com/images/clutch-disc-detail.jpg",
+      "https://example.com/images/luk-clutch-packaging.jpg"
+    ]
+  },
+  {
+    "article_complementaire_info_1": "dummy two",
+    "article_complementaire_info_2": "avec disque d'embrayage",
+    "type_entrainement": "Transmission à double embrayage",
+    "type_embrayage": "pour embrayage à sec",
+    "numero_article": "602 0016 00",
+    "notre_prix": "1484,21 €",
+    "fabricant": "LuK",
+    "numero_ean": "4014870368418",
+    "etat": "Neuf",
+    "payment_link": "https://example.com/payment/602001600",
+    "stock": 5,
+    "images": [
+      "https://example.com/images/clutch-mechanism-main.jpg",
+      "https://example.com/images/clutch-disc-detail.jpg",
+      "https://example.com/images/luk-clutch-packaging.jpg"
+    ]
+  }
+]
