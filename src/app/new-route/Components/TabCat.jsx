@@ -44,7 +44,7 @@ const TabCat = () => {
               <div className="md:flex justify-between items-center gap-5">
                 <button
                   onClick={handleTabMode}
-                  className="md:w-1/2 border rounded-lg hover:bg-gray-100 flex justify-end items-center gap-5"
+                  className="md:w-1/2 border border-blue-400 rounded-lg hover:bg-gray-100 flex justify-end items-center gap-5"
                 >
                   <div className="flex justify-end items-center gap-5">
                     <div className="text-end">
@@ -61,14 +61,14 @@ const TabCat = () => {
                       height={100}
                       src="https://i.ibb.co/k8C1Y2Y/Group-1074-removebg-preview.png"
                       alt="Calculateur avec carton"
-                      className="w-[100px] h-[80px]"
+                      className="w-[100px] h-[80px] me-2"
                       priority={true}
                     />
                   </div>
                 </button>
                 <button
                   onClick={handleCluthTab}
-                  className="md:w-1/2 border rounded-lg hover:bg-gray-100 flex items-center gap-5"
+                  className="md:w-1/2 border border-blue-400 rounded-lg hover:bg-gray-100 flex items-center gap-5"
                 >
                   <div className="flex items-center gap-5">
                     <Image
@@ -77,7 +77,7 @@ const TabCat = () => {
                       height={100}
                       src="https://a.allegroimg.com/s1080/11c6fa/44b881194702b1a95a3cd840b6c5/Zestaw-sprzegla-LUK-602-0016-00-Jakosc-czesci-zgodnie-z-GVO-Q-oryginal-z-logo-producenta-czesci-OEM-OES"
                       alt="Calculateur avec carton"
-                      className="w-[100px] h-[80px]"
+                      className="w-[100px] h-[80px] ms-2"
                       priority={true}
                     />
                     <div className="text-start">
