@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import ReturnButton from "@/components/ReturnButton";
@@ -16,7 +16,7 @@ const pageDescription =
   "Calculateur pour Twingo 3. Symptômes de panne, références compatibles, remplacement.   ";
 const HeadingText = "Calculateur Twingo 3 – Boîte auto Renault ";
 
-const TabCat = () => {
+const TabCatContent = () => {
   const [TabMode, setTabMode] = useState(true);
   const [Diesel, setDiesel] = useState(true);
 
@@ -146,6 +146,14 @@ const TabCat = () => {
       </section>
       <Footer />
     </main>
+  );
+};
+
+const TabCat = () => {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <TabCatContent />
+    </Suspense>
   );
 };
 

@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Suspense } from "react";
 import EssenceComp from "./components/EssenceCompCaptur";
 import DieselComp from "./components/DieselCompCaptur";
 import Footer from "@/components/Footer";
@@ -15,7 +15,7 @@ const pageDescription =
   "Renault Captur, calculateur boite automatique EDC pour Renault Captur essence et Renault Captur Diesel voir stock";
 const HeadingText = "Calculateur pour Renault Captur";
 
-const TabCat = () => {
+const TabCatContent = () => {
   const [TabMode, setTabMode] = useState(true);
   const [Essence, setEssence] = useState(true);
   const [Diesel, setDiesel] = useState(false);
@@ -109,7 +109,7 @@ const TabCat = () => {
                 Vérifiez la disponibilté de votre module (boite de vitesse à
                 contrôler) pour votre boite automatique <strong>EDC</strong>{" "}
                 Renault <strong>Captur</strong>. Celui-ci peut être livré vierge
-                ou directement programmé (Plug & Play). L’
+                ou directement programmé (Plug & Play). L’{" "}
                 <Link href="/prestation/installation">installation</Link> est
                 possible en fonction de votre lieu géographique. Choisissez
                 votre modèle pour Renault Captur:{" "}
@@ -198,6 +198,14 @@ const TabCat = () => {
       </section>
       <Footer />
     </main>
+  );
+};
+
+const TabCat = () => {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <TabCatContent />
+    </Suspense>
   );
 };
 

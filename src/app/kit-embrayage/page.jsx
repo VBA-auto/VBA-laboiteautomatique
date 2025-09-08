@@ -31,7 +31,7 @@ const ImageSlider = () => {
     }, 4500);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [sliderImages.length]);
 
   return (
     <div className="relative w-full md:h-[500px] overflow-hidden rounded-lg shadow-lg">

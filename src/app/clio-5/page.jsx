@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import ReturnButton from "@/components/ReturnButton";
@@ -16,7 +16,7 @@ const pageDescription =
   "Infos sur le calculateur EDC de la Clio 5. Défauts connus et modèles compatibles.   ";
 const HeadingText = "Calculateur Clio 5 – Boîte auto EDC Renault ";
 
-const TabCat = () => {
+const TabCatContent = () => {
   const [TabMode, setTabMode] = useState(true);
   const [Diesel, setDiesel] = useState(true);
 
@@ -149,6 +149,14 @@ const TabCat = () => {
       </section>
       <Footer />
     </main>
+  );
+};
+
+const TabCat = () => {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <TabCatContent />
+    </Suspense>
   );
 };
 
