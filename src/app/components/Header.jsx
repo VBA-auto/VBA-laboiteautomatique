@@ -7,15 +7,24 @@ import { FaAngleDown, FaWhatsapp } from "react-icons/fa";
 const Header = () => {
   const [navbar, setNavbar] = useState(false);
   const [prestationDropdown, setPrestationDropdown] = useState(false);
+  const [ProduitsDropdown, setProduitsDropdown] = useState(false);
   const [resourceDropdown, setResourceDropdown] = useState(false);
   const dropdownRef = useRef(null);
   const dropdownRefResource = useRef(null);
+  const ProduitsDropdownRef = useRef(null);
 
   const handleNavbarToggle = useCallback(() => setNavbar(!navbar), [navbar]);
+
   const handlePrestationToggle = useCallback(
     () => setPrestationDropdown(!prestationDropdown),
     [prestationDropdown]
   );
+
+  const handleProduitsToggle = useCallback(
+    () => setProduitsDropdown(!ProduitsDropdown),
+    [ProduitsDropdown]
+  );
+
   const handleResourceToggle = useCallback(
     () => setResourceDropdown(!resourceDropdown),
     [resourceDropdown]
@@ -31,6 +40,12 @@ const Header = () => {
     ) {
       setResourceDropdown(false);
     }
+    if (
+      ProduitsDropdownRef.current &&
+      !ProduitsDropdownRef.current.contains(event.target)
+    ) {
+      setProduitsDropdown(false);
+    }
   }, []);
 
   useEffect(() => {
@@ -42,6 +57,7 @@ const Header = () => {
     setNavbar(false);
     setPrestationDropdown(false);
     setResourceDropdown(false);
+    setProduitsDropdown(false);
   }, []);
 
   return (
@@ -121,13 +137,39 @@ const Header = () => {
                   >
                     Accueil
                   </Link>
-                  <Link
-                    onClick={closeNavbar}
-                    href="/produits"
-                    className="block text-[15px] py-1 text-black hover:bg-[#d7d7d745] hover:text-[#2C80EF] rounded-md px-4"
-                  >
-                    Produits
-                  </Link>
+
+                  {/* Produits Dropdown */}
+                  <div ref={ProduitsDropdownRef} className="relative group">
+                    <button
+                      onClick={handleProduitsToggle}
+                      className="subMenuHeader text-[15px]  py-1 text-black hover:text-[#2C80EF] hover:bg-[#d7d7d745] rounded-md px-4 flex items-center"
+                    >
+                      Produits <FaAngleDown className="ml-2" />
+                    </button>
+
+                    {ProduitsDropdown && (
+                      <div className="navSubParent absolute w-[200px] mt-2 border bg-[#fff] rounded-md shadow-lg z-40">
+                        <div className="subHeadList">
+                          <Link
+                            onClick={closeNavbar}
+                            href="/produits"
+                            className="text-[15px] text-[#2C80EF] block p-4 py-2 font-normal"
+                          >
+                            Calculateur
+                          </Link>
+                        </div>
+                        <div className="subHeadList">
+                          <Link
+                            onClick={closeNavbar}
+                            href="/kit-embrayage"
+                            className="text-[#2C80EF] text-[15px] block p-4 py-2 font-normal"
+                          >
+                            kit embrayage
+                          </Link>
+                        </div>
+                      </div>
+                    )}
+                  </div>
 
                   {/* Prestation Dropdown */}
                   <div ref={dropdownRef} className="relative group">
@@ -139,7 +181,7 @@ const Header = () => {
                     </button>
 
                     {prestationDropdown && (
-                      <div className="navSubParent absolute mt-2 border bg-[#fff] rounded-md shadow-lg z-40">
+                      <div className="navSubParent absolute w-[200px] mt-2 border bg-[#fff] rounded-md shadow-lg z-40">
                         <div className="subHeadList">
                           <Link
                             onClick={closeNavbar}
@@ -181,7 +223,7 @@ const Header = () => {
                     </button>
 
                     {resourceDropdown && (
-                      <div className="navSubParent absolute mt-2 border bg-[#fff] rounded-md shadow-lg z-10">
+                      <div className="navSubParent absolute w-[200px] mt-2 border bg-[#fff] rounded-md shadow-lg z-10">
                         <div className="subHeadList">
                           <Link
                             onClick={closeNavbar}

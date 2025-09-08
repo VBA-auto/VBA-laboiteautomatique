@@ -126,12 +126,15 @@ const Produits = () => {
                   </Link>
                   <div className="flex justify-center gap-5 mt-5">
                     <div className="w-1/2 border border-blue-300 rounded-md text-center py-2 px-2 shadow-sm hover:bg-[#2C80EF] hover:text-white">
-                      <Link href="/captur/essence" className=" text-[15px]">
+                      <Link
+                        href="/captur?type=essence"
+                        className=" text-[15px]"
+                      >
                         <h2>1.2 Essence</h2>
                       </Link>
                     </div>
                     <div className="w-1/2 border border-blue-300 rounded-md text-center py-2 px-2 shadow-sm hover:bg-[#2C80EF] hover:text-white">
-                      <Link className=" text-[15px]" href="captur/diesel">
+                      <Link className=" text-[15px]" href="/captur?type=diesel">
                         <h2>1.5 Diesel</h2>
                       </Link>
                     </div>
@@ -180,12 +183,12 @@ const Produits = () => {
                   </Link>
                   <div className="flex justify-center gap-5 mt-5">
                     <div className="w-1/2 border border-blue-300 rounded-md text-center py-2 px-2 shadow-sm hover:bg-[#2C80EF] hover:text-white">
-                      <Link href="clio/essence" className=" text-[15px]">
+                      <Link href="/clio?type=essence" className=" text-[15px]">
                         <h2>1.2 Essence</h2>
                       </Link>
                     </div>
                     <div className="w-1/2 border border-blue-300 rounded-md text-center py-2 px-2 shadow-sm hover:bg-[#2C80EF] hover:text-white">
-                      <Link className=" text-[15px]" href="/clio/diesel">
+                      <Link className=" text-[15px]" href="/clio?type=diesel">
                         <h2>1.5 Diesel</h2>
                       </Link>
                     </div>
@@ -235,12 +238,18 @@ const Produits = () => {
 
                   <div className="flex justify-center gap-5 mt-5">
                     <div className="w-1/2 border border-blue-300 rounded-md text-center py-2 px-2 shadow-sm hover:bg-[#2C80EF] hover:text-white">
-                      <Link className="  text-[15px]" href="/megane/essence">
+                      <Link
+                        className="  text-[15px]"
+                        href="/megane?type=essence"
+                      >
                         <h2>1.2 Essence</h2>
                       </Link>
                     </div>
                     <div className="w-1/2 border border-blue-300 rounded-md text-center py-2 px-2 shadow-sm hover:bg-[#2C80EF] hover:text-white">
-                      <Link href="/megane/diesel" className="  text-[15px]">
+                      <Link
+                        href="/megane?type=diesel"
+                        className="  text-[15px]"
+                      >
                         <h2>1.5 Diesel</h2>
                       </Link>
                     </div>
@@ -287,7 +296,10 @@ const Produits = () => {
                   </Link>
                   <div className="flex justify-start gap-5 mt-5">
                     <div className="w-1/2 border border-blue-300 rounded-md text-center py-2 px-2 shadow-sm hover:bg-[#2C80EF] hover:text-white">
-                      <Link href="/scenic/diesel" className="  text-[15px]">
+                      <Link
+                        href="/scenic?type=diesel"
+                        className="  text-[15px]"
+                      >
                         <h2>1.5 Diesel</h2>
                       </Link>
                     </div>
@@ -334,7 +346,10 @@ const Produits = () => {
                   </Link>
                   <div className="flex justify-start gap-5 mt-5">
                     <div className="w-1/2 border border-blue-300 rounded-md text-center py-2 px-2 shadow-sm hover:bg-[#2C80EF] hover:text-white">
-                      <Link href="/fluence/diesel" className="  text-[15px]">
+                      <Link
+                        href="/fluence?type=diesel"
+                        className="  text-[15px]"
+                      >
                         <h2>1.5 Diesel</h2>
                       </Link>{" "}
                     </div>
@@ -382,7 +397,10 @@ const Produits = () => {
                   </Link>
                   <div className="flex justify-start gap-5 mt-5">
                     <div className="w-1/2 border border-blue-300 rounded-md text-center py-2 px-2 shadow-sm hover:bg-[#2C80EF] hover:text-white">
-                      <Link href="/clio-rs/essence" className=" text-[15px]">
+                      <Link
+                        href="/clio-rs?type=essence"
+                        className=" text-[15px]"
+                      >
                         <h2>1.6 Essence</h2>
                       </Link>
                     </div>
@@ -430,7 +448,10 @@ const Produits = () => {
                   </Link>
                   <div className="flex justify-start gap-5 mt-5">
                     <div className="w-1/2 border border-blue-300 rounded-md text-center py-2 px-2 shadow-sm hover:bg-[#2C80EF] hover:text-white">
-                      <Link href="/megane-4/diesel" className=" text-[15px]">
+                      <Link
+                        href="/megane-4?type=diesel"
+                        className=" text-[15px]"
+                      >
                         <h2>1.5 Diesel</h2>
                       </Link>
                     </div>
@@ -478,7 +499,10 @@ const Produits = () => {
                   </Link>
                   <div className="flex justify-start gap-5 mt-5">
                     <div className="w-1/2 border border-blue-300 rounded-md text-center py-2 px-2 shadow-sm hover:bg-[#2C80EF] hover:text-white">
-                      <Link href="/clio-5/essence" className=" text-[15px]">
+                      <Link
+                        href="/clio-5?type=essence"
+                        className=" text-[15px]"
+                      >
                         <h2>1.3 Essence</h2>
                       </Link>
                     </div>
@@ -526,7 +550,10 @@ const Produits = () => {
                   </Link>
                   <div className="flex justify-start gap-5 mt-5">
                     <div className="w-1/2 border border-blue-300 rounded-md text-center py-2 px-0 shadow-sm hover:bg-[#2C80EF] hover:text-white">
-                      <Link href="/twingo-3/essence" className=" text-[15px]">
+                      <Link
+                        href="/twingo-3?type=essence"
+                        className=" text-[15px]"
+                      >
                         <h2>0.9 – 1.0 Essence</h2>
                       </Link>
                     </div>
