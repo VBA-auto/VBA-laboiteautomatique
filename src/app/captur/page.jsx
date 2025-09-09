@@ -19,6 +19,7 @@ const TabCatContent = () => {
   const [TabMode, setTabMode] = useState(true);
   const [Essence, setEssence] = useState(true);
   const [Diesel, setDiesel] = useState(false);
+  const [activeTab, setActiveTab] = useState("essence");
 
   const searchParams = useSearchParams();
   const router = useRouter();
@@ -42,7 +43,7 @@ const TabCatContent = () => {
   const handleEssenceCalculatuer = () => {
     setEssence(true);
     setTabMode(true);
-
+    setActiveTab("essence");
     setDiesel(false);
 
     // URL update করা যেন back/forward button কাজ করে
@@ -55,7 +56,7 @@ const TabCatContent = () => {
     setDiesel(true);
     setEssence(false);
     setTabMode(true);
-
+    setActiveTab("diesel");
     // URL update করা যেন back/forward button কাজ করে
     const params = new URLSearchParams(searchParams.toString());
     params.set("type", "diesel");
@@ -78,7 +79,7 @@ const TabCatContent = () => {
             <h2>Calculateur Renault Captur 1.5 Diesel</h2>
           </div>
 
-          <div className="md:flex items-center gap-5">
+          <div className="md:flex items-center gap-2 border border-gray-100 p-4 rounded-lg">
             <div className="md:w-1/4">
               <div className="my-3">
                 <Image
@@ -95,13 +96,10 @@ const TabCatContent = () => {
             <div className="md:w-3/4 ">
               <div className="flex justify-between items-center">
                 <div className="md:w-1/2">
-                  <h1 className="text-2xl font-semibold  text-gray-700">
+                  <ReturnButton />
+                  <h1 className="text-2xl mt-2 font-semibold  text-gray-700">
                     Renault Captur
                   </h1>
-                </div>
-
-                <div className="md:w-1/9">
-                  <ReturnButton />
                 </div>
               </div>
 
@@ -159,27 +157,83 @@ const TabCatContent = () => {
           </div>
         </div>
 
-        <div className="container mx-auto my-12">
-          <div className="">
-            {TabMode && (
+        <div className="container mx-auto my-12 ">
+          <div className="md:flex items-center gap-5 border  bg-gradient-to-r from-green-50 to-emerald-50  border-green-200 p-4 rounded-lg">
+            <div className="md:w-1/2">
               <div className="">
-                <div className="mt-8 flex gap-5">
-                  <button
-                    onClick={handleEssenceCalculatuer}
-                    className="bg-[#2C80EF] text-white py-3 rounded-full w-1/2 hover:bg-blue-400 transition-all"
-                  >
-                    1.2 Essence
-                  </button>
-                  <button
-                    onClick={handleDieselCalculatuer}
-                    className="bg-[#2C80EF] text-white py-3 rounded-full w-1/2 hover:bg-blue-400 transition-all"
-                  >
-                    1.5 Diesel
-                  </button>
-                </div>
+                {Essence && (
+                  <>
+                    <div className="">
+                      <h1 className="text-lg font-semibold flex items-center gap-2">
+                        <span className="md:w-[10px] md:h-[10px] w-[10px] h-[10px] bg-green-700 rounded-full block"></span>
+                        Calculateur Renault Captur 1.2 Essence
+                      </h1>
+                    </div>
+                  </>
+                )}
               </div>
-            )}
+              <div className="">
+                {Diesel && (
+                  <div className="">
+                    <div className="">
+                      <h1 className="text-lg font-semibold flex items-center gap-2">
+                        <span className="md:w-[10px] md:h-[10px] w-[10px] h-[10px] bg-green-700 rounded-full block"></span>
+                        Calculateur Renault Captur 1.5 Diesel
+                      </h1>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+            <div className="md:w-1/2">
+              <div className=" mx-auto">
+                {TabMode && (
+                  <div className="w-full mx-auto">
+                    <div className="flex">
+                      {/* Container for the toggle */}
+                      <div className="relative bg-gray-200 rounded-full p-1 w-full flex">
+                        {/* Sliding background indicator */}
+                        <div
+                          className={`absolute top-1 bottom-1 w-1/2 bg-[#2C80EF] rounded-full transition-transform duration-300 ease-in-out shadow-lg ${
+                            activeTab === "diesel"
+                              ? "transform translate-x-full"
+                              : ""
+                          }`}
+                        ></div>
+
+                        {/* Essence Button */}
+                        <button
+                          onClick={handleEssenceCalculatuer}
+                          className={`relative z-10 py-3 rounded-full w-1/2 font-medium transition-all duration-300 ease-in-out ${
+                            activeTab === "essence"
+                              ? "text-white"
+                              : "text-gray-600 hover:text-[#2C80EF]"
+                          }`}
+                        >
+                          1.2 Essence
+                        </button>
+
+                        {/* Diesel Button */}
+                        <button
+                          onClick={handleDieselCalculatuer}
+                          className={`relative z-10 py-3 rounded-full w-1/2 font-medium transition-all duration-300 ease-in-out ${
+                            activeTab === "diesel"
+                              ? "text-white"
+                              : "text-gray-600 hover:text-[#2C80EF]"
+                          }`}
+                        >
+                          1.5 Diesel
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
           </div>
+        </div>
+
+        <div className="container mx-auto my-12">
           <div className="">
             {Essence && (
               <>
