@@ -10,6 +10,7 @@ import Head from "next/head";
 import Header from "@/components/Header";
 import SubHeader from "@/components/SubHeader";
 import { useRouter, useSearchParams } from "next/navigation";
+import PageLevelStock from "@/components/PagelevelStock";
 
 const pageDescription =
   "Renault Captur, calculateur boite automatique EDC pour Renault Captur essence et Renault Captur Diesel voir stock";
@@ -20,6 +21,12 @@ const TabCatContent = () => {
   const [Essence, setEssence] = useState(true);
   const [Diesel, setDiesel] = useState(false);
   const [activeTab, setActiveTab] = useState("essence");
+
+  const [stock, setStock] = useState(null);
+
+  const handleStockChange = (currentStock) => {
+    setStock(currentStock);
+  };
 
   const searchParams = useSearchParams();
   const router = useRouter();
@@ -158,14 +165,18 @@ const TabCatContent = () => {
         </div>
 
         <div className="container mx-auto my-12 ">
-          <div className="md:flex items-center gap-5 border  bg-gradient-to-r from-green-50 to-emerald-50  border-green-200 p-4 rounded-lg">
+          <div className="md:flex items-center gap-5 border  bg-gradient-to-r from-blue-50 to-blue-100  border-blue-200 p-4 rounded-lg">
             <div className="md:w-1/2">
               <div className="">
                 {Essence && (
                   <>
                     <div className="">
-                      <h1 className="text-lg font-semibold flex items-center gap-2">
-                        <span className="md:w-[10px] md:h-[10px] w-[10px] h-[10px] bg-green-700 rounded-full block"></span>
+                      <h1 className="text-lg text-gray-700 font-semibold flex items-center gap-2">
+                        <PageLevelStock
+                          modelName="Renault Captur"
+                          carType="essence"
+                          onStockChange={handleStockChange}
+                        />
                         Calculateur Renault Captur 1.2 Essence
                       </h1>
                     </div>
@@ -176,8 +187,12 @@ const TabCatContent = () => {
                 {Diesel && (
                   <div className="">
                     <div className="">
-                      <h1 className="text-lg font-semibold flex items-center gap-2">
-                        <span className="md:w-[10px] md:h-[10px] w-[10px] h-[10px] bg-green-700 rounded-full block"></span>
+                      <h1 className="text-lg text-gray-700 font-semibold flex items-center gap-2">
+                        <PageLevelStock
+                          modelName="Renault Captur"
+                          carType="diesel"
+                          onStockChange={handleStockChange}
+                        />
                         Calculateur Renault Captur 1.5 Diesel
                       </h1>
                     </div>
