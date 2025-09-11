@@ -55,11 +55,7 @@ const DieselCompMegane4 = () => {
           content="Calculateur pour Megane 4 Diesel. Défauts fréquents, compatibilités, disponibilité en stock."
         />
       </Head>
-      <div className="mt-8 text-center">
-        <h1 className="textlg font-semibold">
-          Calculateur Renault Megane IV - 1.5 Diesel
-        </h1>
-      </div>
+
       <section className="produits rounded-lg mt-8">
         <div className="">
           <div className="container mx-auto mb-2.5">

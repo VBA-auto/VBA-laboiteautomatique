@@ -13,12 +13,16 @@ export default function ClientArticles({ cars }) {
     <section>
       <SubHeader />
       <Header />
-      <main className="container mx-auto pt-[60px] pb-[80px]">
-        <h1 className="text-[24px] font-semibold text-[#374151] text-center mb-8">
-          Articles
-        </h1>
+      <main className="container mx-auto my-[60px] pt-[60px] pb-[80px]">
+        <div className="productTitle mx-auto bg-white/50">
+          <div className="product border accent_color py-4 text-center rounded-md">
+            <h1 className="headingText font-semibold  my-1 text-[#374151]">
+              Articles
+            </h1>
+          </div>
+        </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
           {cars.map((car) => (
             <article
               key={car.id}

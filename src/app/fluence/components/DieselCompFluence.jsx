@@ -46,11 +46,7 @@ const DieselCompFluence = () => {
           content="Trouver ici votre calculateur pour boite automatique pour Renault fluence 1.5 Diesel programmation incluse"
         />
       </Head>
-      <div className="mt-8 text-center">
-        <h1 className="textlg font-semibold">
-          Calculateur Renault fluence III - 1.5 Diesel
-        </h1>
-      </div>
+
       <section className="produits rounded-lg mt-8">
         <div className="">
           <div className="container mx-auto mb-2.5">

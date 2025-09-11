@@ -13,7 +13,7 @@ const Programmation = () => {
     <main>
       <SubHeader />
       <Header />
-      <section className="installation">
+      <section className="installation ">
         <div className="relative">
           <Head>
             <title>
@@ -50,11 +50,14 @@ const Programmation = () => {
           {/* Texte au-dessus de l'image */}
           <main className="py-[60px]">
             <div className="container mx-auto">
-              <div className=" mb-5  text-center">
-                <p className="text-[24px] font-semibold text-[#374151]">
-                  Programmation - Clonage
-                </p>
+              <div className="productTitle mx-auto bg-white/50">
+                <div className="product border accent_color py-4 text-center rounded-md">
+                  <h1 className="headingText font-semibold  my-1 text-[#374151]">
+                    Programmation - Clonage
+                  </h1>
+                </div>
               </div>
+
               <div className="xl:flex md:gap-5 gap-5 mt-8 flexdirection">
                 <div className="xl:w-[53%]">
                   <div className="accent_color p-3 rounded-md">

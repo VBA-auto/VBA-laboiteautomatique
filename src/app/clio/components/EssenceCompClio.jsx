@@ -47,12 +47,6 @@ const EssenceCompClio = () => {
         />
       </Head>
 
-      <div className="mt-8 text-center">
-        <h1 className="textlg font-semibold">
-          Calculateur Renault Clio IV - 1.2 Essence
-        </h1>
-      </div>
-
       <section className="produits rounded-lg mt-8">
         <div className="">
           <div className="container mx-auto mb-2.5">

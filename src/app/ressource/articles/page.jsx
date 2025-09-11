@@ -28,7 +28,7 @@ export default async function Articles() {
   const cars = await fetchCars();
 
   return (
-    <section>
+    <section className="">
       <ClientArticles cars={cars} />
     </section>
   );

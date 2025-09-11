@@ -34,11 +34,14 @@ const Programmation = () => {
           {/* Texte au-dessus de l'image */}
           <main className="py-[60px]">
             <div className="container mx-auto">
-              <div className=" mb-5  text-center">
-                <p className="text-[24px] font-semibold text-[#374151]">
-                  Réparation
-                </p>
+              <div className="productTitle mx-auto bg-white/50">
+                <div className="product border accent_color py-4 text-center rounded-md">
+                  <h1 className="headingText font-semibold  my-1 text-[#374151]">
+                    Réparation
+                  </h1>
+                </div>
               </div>
+
               <div className="md:flex md:gap-5 gap-5 mt-8 flexdirection">
                 <div className="xl:w-2/3">
                   <div className="accent_color p-3 rounded-md">

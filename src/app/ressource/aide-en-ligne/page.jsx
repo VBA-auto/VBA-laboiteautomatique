@@ -33,11 +33,14 @@ const MiseEnLigne = () => {
             {/* Partie gauche - Texte initial */}
             <main className="py-[60px]">
               <div className="container mx-auto">
-                <div className=" mb-5  text-center">
-                  <p className="text-[24px] font-semibold text-[#374151]">
-                    Aide en ligne
-                  </p>
+                <div className="productTitle mx-auto bg-white/50">
+                  <div className="product border accent_color py-4 text-center rounded-md">
+                    <h1 className="headingText font-semibold  my-1 text-[#374151]">
+                      Aide en ligne
+                    </h1>
+                  </div>
                 </div>
+
                 <div className="">
                   <SEOErrorCodes />
                 </div>

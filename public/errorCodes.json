@@ -533,5 +533,11 @@
     "description": "Signal moteur embrayage 2. Signal non plausible",
     "subTitle": "Clutch motor 2 signal. Implausible signal",
     "aide": "Calculateur"
+  },
+  {
+    "code": "DF461",
+    "description": "Signal moteur embrayage 1: signal non plausible",
+    "subTitle": "Clutch actuator motor 1 signal: implausible signal",
+    "aide": "Problème calculateur ou actuateur embrayage (celui du haut) ou les 2"
   }
 ]

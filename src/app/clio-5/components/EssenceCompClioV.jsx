@@ -48,9 +48,7 @@ const EssenceCompClioV = () => {
       </Head>
 
       <div className="mt-8 text-center">
-        <h1 className="textlg font-semibold">
-          Calculateur Renault clio V - 1.6 essence
-        </h1>
+        <h1 className="textlg font-semibold"></h1>
       </div>
 
       <section className="produits rounded-lg mt-8">
