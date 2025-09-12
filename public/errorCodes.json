@@ -539,5 +539,11 @@
     "description": "Signal moteur embrayage 1: signal non plausible",
     "subTitle": "Clutch actuator motor 1 signal: implausible signal",
     "aide": "Problème calculateur ou actuateur embrayage (celui du haut) ou les 2"
+  },
+  {
+    "code": "DF395",
+    "description": "Passage rapports tambour de selection 2",
+    "subTitle": "Gear shifting selection drum 2",
+    "aide": "Problème calculateur ou actuateur embrayage (celui du bas) ou les 2"
   }
 ]
