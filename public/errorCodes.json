@@ -230,9 +230,9 @@
   },
   {
     "code": "DTC174092",
-    "description": "Tambour de sélection de vitesses détection signal hors limite basse ou haute",
-    "subTitle": "Internal electronic anomaly in the sensor for gear entry in the transmission.",
-    "aide": "Vérifier capteur pédale de frein ou capteur ABS + petits moteurs embrayage (peut-être aussi un problème de calculateur)"
+    "description": "Tambour de selection de Vitesse 1 detection signal hors limite basse ou haute",
+    "subTitle": "Gear selection drum 1 signal detection out of lower or upper limit",
+    "aide": "Calculateur ou actuateur du haut"
   },
   {
     "code": "178094",
@@ -446,15 +446,15 @@
   },
   {
     "code": "DTC174191",
-    "description": "Tambour de selection de vitesses 2 detection signal hors limite basse ou haute",
-    "subTitle": "Gear selector drum 2 – Signal detection out of lower or upper limit",
-    "aide": "Batterie mais plus probalement calculateur"
+    "description": "Tambour de selection de Vitesse 2 detection signal hors limite basse ou haute",
+    "subTitle": "Gear selection drum 2 signal detection out of lower or upper limit",
+    "aide": "Calculateur ou actuateur du bas"
   },
   {
     "code": "DTC174192",
-    "description": "Tambour de selection de vitesses 2 detection signal hors limite basse ou haute",
-    "subTitle": "Gear selector drum 2 – Signal detection out of lower or upper limit",
-    "aide": "Batterie mais plus probalement calculateur"
+    "description": "Tambour de selection de Vitesse 2 detection signal hors limite basse ou haute",
+    "subTitle": "Gear selection drum 2 signal detection out of lower or upper limit",
+    "aide": "Calculateur ou actuateur du bas"
   },
   {
     "code": "DTC174662",
@@ -545,5 +545,11 @@
     "description": "Passage rapports tambour de selection 2",
     "subTitle": "Gear shifting selection drum 2",
     "aide": "Problème calculateur ou actuateur embrayage (celui du bas) ou les 2"
+  },
+  {
+    "code": "DTC174091",
+    "description": "Tambour de selection de Vitesse 1 detection signal hors limite basse ou haute",
+    "subTitle": "Gear selection drum 1 signal detection out of lower or upper limit.",
+    "aide": "Calculateur ou actuateur du haut"
   }
 ]
