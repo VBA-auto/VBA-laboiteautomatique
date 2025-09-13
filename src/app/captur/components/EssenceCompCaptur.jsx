@@ -13,6 +13,7 @@ import VehicleStockDisplay from "@/components/VehicleStockDisplay";
 import { FaArrowRight } from "react-icons/fa";
 import PricngPop890 from "@/components/PricngPop890";
 import VehicleImages from "@/components/Cal-NormalImg";
+import DieComModal from "./Modals/DieComModal";
 
 // const imagesSlide = [
 //   "https://laboiteautomatique.com/images/cal-normal-0.webp",
@@ -26,10 +27,6 @@ import VehicleImages from "@/components/Cal-NormalImg";
 // ];
 const imagesSlide = VehicleImages();
 const EssenceComp = () => {
-  const [showSpinner, setShowSpinner] = useState(false);
-  const [showCoupon, setShowCoupon] = useState(false);
-  const [data, setData] = useState([]);
-  const [copied, setCopied] = useState(false);
   const [stock, setStock] = useState(null);
 
   const handleStockChange = (currentStock) => {
@@ -204,7 +201,8 @@ const EssenceComp = () => {
               </div>
             </div>
             {/* MODAL */}
-            <dialog id="my_modal_3" className="modal">
+            <DieComModal imagesSlide={imagesSlide[0]} />
+            {/* <dialog id="my_modal_3" className="modal">
               <div className="modal-box bg-white">
                 <form method="dialog">
                   <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
@@ -233,83 +231,14 @@ const EssenceComp = () => {
                   <div className="mt-3">
                     <PricngPop890 />
                   </div>
-                  <div className="mt-5">
-                    {showCoupon ? (
-                      <p className="font-[500] text-normal text-center">
-                        Code réduction ci-dessous
-                      </p>
-                    ) : (
-                      ""
-                    )}
-
-                    {!showCoupon && ( // Add this condition to hide the button when the coupon is shown
-                      <button
-                        onClick={async () => {
-                          setShowSpinner(true);
-                          await new Promise((resolve) =>
-                            setTimeout(resolve, 1000)
-                          ); // Show spinner for 1 second
-                          setShowSpinner(false);
-                          setShowCoupon(true); // Show coupon after spinner
-                        }}
-                        className="text-blue-400 hover:text-blue-200  rounded-sm transition-transform duration-300 mt-4 mx-auto block text-[15px]"
-                      ></button>
-                    )}
-
-                    {showSpinner && (
-                      <div className="flex justify-center mt-4">
-                        <div className="animate-spin rounded-full h-8 w-8 border-t-4 border-b-4 border-blue-400"></div>
-                      </div>
-                    )}
-
-                    {showCoupon && (
-                      <div className="mt-2 flex flex-col items-center justify-center">
-                        <div className="relative bg-white px-4 py-2.5 rounded-lg border shadow-lg w-[230px] ">
-                          <div className="flex justify-between items-center">
-                            <p className="text-white">X</p>
-                            <p className="font-[500] text-center">PROG2023</p>
-                            <button
-                              onClick={() => {
-                                navigator.clipboard.writeText(PROG2023);
-                                setCopied(true);
-                                setTimeout(() => setCopied(false), 1500); // Reset after 1.5 seconds
-                              }}
-                              className=" text-[#2C80EF] text-[15px] bg-gray-100 p-1 rounded-md"
-                            >
-                              <BsCopy />
-                            </button>
-                          </div>
-                        </div>
-
-                        {copied && (
-                          <p className="mt-2 text-[#2C80EF] text-sm">
-                            code copié!
-                          </p>
-                        )}
-                      </div>
-                    )}
-                  </div>
 
                   <div className="mt-5">
                     <hr />
                     <div className="flex justify-between my-2 ">
                       <p className="text-gray-600 text-[15px]">Total </p>
-                      {showCoupon ? (
-                        <>
-                          <div className="flex items-center gap-2">
-                            <p className="text-gray-300 text-[15px] prices line-through">
-                              1139.00 €
-                            </p>
-                            <p className="text-[#2C80EF] text-[17px] bg-gray-50 px-2 rounded-md">
-                              {1139 - 50} €
-                            </p>
-                          </div>
-                        </>
-                      ) : (
-                        <p className="text-[#2C80EF] text-[15px] prices">
-                          1139.00 €
-                        </p>
-                      )}
+                      <p className="text-[#2C80EF] text-[15px] prices">
+                        1139.00 €
+                      </p>
                     </div>
                   </div>
                   <div className="text-center">
@@ -322,7 +251,7 @@ const EssenceComp = () => {
                   </div>
                 </div>
               </div>
-            </dialog>
+            </dialog> */}
           </div>
         </div>
       </section>

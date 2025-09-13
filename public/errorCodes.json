@@ -549,7 +549,13 @@
   {
     "code": "DTC174091",
     "description": "Tambour de selection de Vitesse 1 detection signal hors limite basse ou haute",
-    "subTitle": "Gear selection drum 1 signal detection out of lower or upper limit.",
+    "subTitle": "Gear selection drum 1 signal detection out of lower or upper limit",
     "aide": "Calculateur ou actuateur du haut"
+  },
+  {
+    "code": "DTC175062",
+    "description": "Couple embrayage 1. Erreur de couple",
+    "subTitle": "Clutch torque 1. Torque error",
+    "aide": "Embrayage + butée ou programme ou actuateur (moteur) embrayage"
   }
 ]
