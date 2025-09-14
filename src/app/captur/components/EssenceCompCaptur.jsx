@@ -201,7 +201,7 @@ const EssenceComp = () => {
               </div>
             </div>
             {/* MODAL */}
-            <DieComModal imagesSlide={imagesSlide[0]} />
+            <DieComModal imagesSlide={imagesSlide} />
             {/* <dialog id="my_modal_3" className="modal">
               <div className="modal-box bg-white">
                 <form method="dialog">
