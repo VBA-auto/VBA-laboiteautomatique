@@ -201,8 +201,8 @@ const EssenceComp = () => {
               </div>
             </div>
             {/* MODAL */}
-            {/* <DieComModal imagesSlide={imagesSlide} /> */}
-            <dialog id="my_modal_3" className="modal">
+            <DieComModal imagesSlide={imagesSlide} />
+            {/* <dialog id="my_modal_3" className="modal">
               <div className="modal-box bg-white">
                 <form method="dialog">
                   <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
@@ -251,7 +251,7 @@ const EssenceComp = () => {
                   </div>
                 </div>
               </div>
-            </dialog>
+            </dialog> */}
           </div>
         </div>
       </section>
