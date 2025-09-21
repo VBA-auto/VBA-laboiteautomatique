@@ -1,306 +1,152 @@
-"use client";
-
 import Link from "next/link";
-import React, { useState } from "react";
-import Head from "next/head";
-import SubHeader from "@/components/SubHeader";
-import Header from "@/components/Header";
+import React, { Suspense } from "react";
 import Footer from "@/components/Footer";
-import ReturnButton from "@/components/ReturnButton";
-import ResponsiveSlider from "@/components/ResponsiveSlider";
-import { BsCopy } from "react-icons/bs";
-
-import Image from "next/image";
-import { FaArrowRight } from "react-icons/fa";
+import Head from "next/head";
+import Header from "@/components/Header";
+import SubHeader from "@/components/SubHeader";
+import SingleSearchView from "./Content";
 import NewVehicleRef from "@/components/NewVehicleRef";
-import PricingPop1050 from "@/components/PricingPop1050";
+import Image from "next/image";
+import ReturnButton from "@/components/ReturnButton";
 
-const imagesSlide = [
-  "https://laboiteautomatique.com/images/plat-1.webp",
-  "https://laboiteautomatique.com/images/plat-2.webp",
-  "https://laboiteautomatique.com/images/plat-3.webp",
-  "https://laboiteautomatique.com/images/plat-4.webp",
-  "https://laboiteautomatique.com/images/plat-5.webp",
-  "https://laboiteautomatique.com/images/plat-6.webp",
-];
+const pageDescription =
+  "Calculateur Mégane, calculateur boite automatique EDC pour Calculateur Mégane essence et Calculateur Mégane Diesel voir stock";
+const HeadingText = "Calculateur pour Calculateur Mégane";
 
-const SingleSearchView = () => {
-  const [showSpinner, setShowSpinner] = useState(false);
-  const [showCoupon, setShowCoupon] = useState(false);
-  const [copied, setCopied] = useState(false);
-  const [stock, setStock] = useState();
-
-  const handleStockChange = (currentStock) => {
-    setStock(currentStock);
-  };
-
+const TabCatContent = () => {
   return (
-    <main>
+    <main className="">
       <SubHeader />
       <Header />
-      <section className="produits">
-        <Head>
-          <title>
-            Calculateur boîte automatique EDC Renault référence 310321994R
-          </title>
-          <meta
-            name="description"
-            content="Commandez ici votre Calculateur pour boîte automatique EDC Renault référence 310321994R, programmation incluse. Vérifiez disponibilité."
-          />
-        </Head>
-        <div className="container mx-auto">
-          <div className="md:w-3/4 mx-auto mb-2">
-            <div className="md:flex  justify-center ">
-              <div className="md:w-[400px] p-4  bg-white rounded-tl-[5px]">
-                <p className="text-[14px] mt-1">
-                  <Link href="/">
-                    <span className="text-gray-400">Home &gt;</span>
-                  </Link>
-                  <span className="text-gray-400 hover:underline">
-                    {" "}
-                    Renault &gt;
-                  </span>{" "}
-                  <span className="text-gray-400">Réf &gt;</span>{" "}
-                  <span className="text-gray-700">310321994R</span>{" "}
-                </p>
-                <div className="md:w-full  mt-5">
-                  <div className="md:w-full">
-                    <ResponsiveSlider images={imagesSlide} />
-                  </div>
-                </div>
-              </div>
-              <div className="md:w-[400px] bg-white rounded-tr-[5px] border-l-[1px] md:pb-0 pb-5">
-                <div className="flex justify-between items-center px-4 pt-4 pb-1">
-                  <ReturnButton />
-                  <div className="">
-                    <NewVehicleRef
-                      modelName="Calculateur Clio V / Captur"
-                      refCode="310321994R"
-                      onStockChange={handleStockChange}
-                    />
-                  </div>
-                </div>
+      <div className="bg-[#f7f7f7]">
+        <section className="py-[60px] md:mx-0 mx-[15px] ">
+          <div className="container mx-auto">
+            <Head>
+              <title>
+                Calculateur EDC pour Calculateur Mégane disponibililté
+              </title>
+              <meta name="description" content={pageDescription} />
+              <meta name="headline" content={HeadingText} />
+            </Head>
+            <div style={{ display: "none" }}>
+              <h1>Calculateur Calculateur Mégane 1.2 Essence</h1>
+              <h2>Calculateur Calculateur Mégane 1.5 Diesel</h2>
+            </div>
 
-                <div className="mt-2">
-                  <div className="px-4 mb-2">
-                    <p className="text-[14px] text-gray-400">Désignation</p>
-                    <h1 className="text-[15px]">Calculateur Clio V / Captur</h1>
+            <div className="bg-white/50">
+              <div className="md:flex items-center gap-5 border border-gray-200 px-4 py-7 rounded-lg">
+                <div className="md:w-1/2">
+                  <div className="">
+                    <>
+                      <div className="">
+                        <h1 className="md:text-lg text-base md:mb-0 mb-2 text-gray-700 font-semibold flex items-center gap-2">
+                          310321994R - Calculateur Clio V / Captur
+                        </h1>
+                      </div>
+                    </>
                   </div>
-                  <div className="px-4 mb-2">
-                    <p className="text-[14px] text-gray-400">Description</p>
-                    <p className="text-[15px]">
-                      Module de commande (calculateur) pour boite automatique
-                      EDC Renault Clio 4 et Captur
-                    </p>
-                  </div>
-                  <div className="px-4 mb-3">
-                    <p className="text-[14px] text-gray-400">Compatibilité</p>
-                    <div className="flex flex-wrap gap-2">
-                      <button className="bg-gray-100  px-2 text-[14px] text-black mt-1 rounded">
-                        Clio V (RJAB)
-                      </button>
+                </div>
+                <div className="md:w-1/2">
+                  <div className=" mx-auto">
+                    <div className="w-full mx-auto">
+                      <div className="flex justify-between">
+                        {/* Container for the toggle */}
+                        <div className="relative  rounded-full px-6 w-full flex justify-end gap-5">
+                          <NewVehicleRef
+                            modelName="Calculateur Clio V / Captur"
+                            refCode="310321994R"
+                          />
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div className="px-4 mb-2">
-                    <p className="text-[14px] text-gray-400">Garantie</p>
-                    <p className="text-[15px]">12 mois neuf</p>
-                  </div>
-                  <div className="px-4 mb-2">
-                    <p className="text-[14px] text-gray-400">Véhicule</p>
-                    <p className="text-[15px]">
-                      Clio V Essence à partir de 2020
-                    </p>
-                  </div>
-                  <div className="px-4 mb-2">
-                    <p className="text-[14px] text-gray-400">
-                      Info complémentaire{" "}
-                    </p>
-                    <p className="text-[15px]">
-                      Versions essences, code moteur H5H470, code boite DW5007,
-                      1.3 Tce 130 16V
-                    </p>
-                  </div>
-                  <div className="px-4 mb-2">
-                    <p className="text-[14px] text-gray-400">Référence OE</p>
-                    <p className="text-[15px]">98231221</p>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="bg-white border rounded-b-[5px] md:w-[800px] mx-auto md:pt-0 pt-5">
-              <div className="md:flex px-5 py-1 justify-between">
-                <div className="md:w-1/2 flex items-center gap-5">
-                  <div className="border py-2 bg-white rounded-md">
-                    <Image
-                      unoptimized
-                      src={imagesSlide[0]}
-                      width={60}
-                      height={50}
-                      className="w-[60px] h-[40px]"
-                      alt=""
-                    />
-                  </div>
-                  <div className="">
-                    <p className="text-[15px] text-gray-400">Renault</p>
-                    <h1 className="my-1">Calculateur Clio V / Captur</h1>
+
+            <div className="md:flex mt-10 p-4 items-center gap-2 border border-gray-200  rounded-lg bg-white/50">
+              <div className="md:w-1/4">
+                <div className="my-3">
+                  <Image
+                    unoptimized
+                    width={300}
+                    height={290}
+                    src="https://laboiteautomatique.com/images/cal-normal-0.webp"
+                    className="mx-auto w-[280px]  mb-4"
+                    priority={true}
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div className="md:w-3/4 ">
+                <div className="flex justify-between items-center">
+                  <div className="md:w-1/2">
+                    <ReturnButton />
+                    <h1 className="text-2xl mt-2 font-semibold  text-gray-700">
+                      310321994R
+                    </h1>
                   </div>
                 </div>
-                <div className="md:w-1/2 flex items-center md:justify-end justify-center gap-5 ">
-                  <div className="text-center">
-                    {stock === 0 ? (
-                      <>
-                        <div className="md:flex gap-5 mt-3 md:mt-0 items-center">
-                          <FaArrowRight className="text-[14px] text-[#2C80EF] animate-slide-arrow" />
-                          <p className="text-[15px] text-[#5BB853]">
-                            Bientôt disponible
-                          </p>
-                          <Link href="/contact">
-                            {" "}
-                            <button className="text-[#2C80EF] bg-transparent text-[15px] border border-[#2c80ef] py-2 px-2 rounded-md hover:bg-[#2C80EF] hover:text-white block mx-auto">
-                              Contactez-nous
-                            </button>
-                          </Link>
-                        </div>
-                      </>
-                    ) : (
-                      <button
-                        onClick={() =>
-                          document.getElementById("my_modal_ref").showModal()
-                        }
-                        className=" bg-[#2C80EF] text-white rounded-md text-center border border-[#2C80EF] py-2 px-5 shadow-2xl hover:text-[#fff] hover:bg-[#2c80efd7] text-[15px] md:my-0 my-5"
-                      >
-                        Commander
-                      </button>
-                    )}
-                  </div>
+
+                <p className="text-justify text-[15px] my-3">
+                  Vérifiez la disponibilité de votre calculateur EDC pour
+                  Renault Mégane, Clio IV ou Captur. Ce module de commande
+                  s’installe sur les versions essence (moteur H5H) et diesel
+                  (moteur K9K). Livré vierge ou programmé en Plug & Play selon
+                  vos besoins, il bénéficie d’une garantie 12 mois.
+                  L’installation est possible selon votre localisation. Pour
+                  toute incertitude, contactez-nous afin de confirmer que cette
+                  référence est bien adaptée à votre véhicule.
+                </p>
+                <div className="carsef grid  md:grid-cols-8 grid-cols-3 md:mt-0 mt-3  items-center justify-start">
+                  <p className="text-[14px] text-gray-700 italic mt-2 underline">
+                    <Link href="/reference/310321488R">310321488R </Link>
+                  </p>
+                  <p className="text-[14px] text-gray-700 italic mt-2 underline">
+                    <Link href="/reference/310321148R">310321148R </Link>
+                  </p>
+                  <p className="text-[14px] text-gray-700 italic mt-2 underline">
+                    <Link href="/reference/310320891R">310320891R </Link>
+                  </p>
+                  <p className="text-[14px] text-gray-700 italic mt-2 underline">
+                    <Link href="/reference/310320841R">310320841R </Link>
+                  </p>
+                  <p className="text-[14px] text-gray-700 italic mt-2 underline">
+                    <Link href="/reference/310320756R">310320756R </Link>
+                  </p>
+                  <p className="text-[14px] text-gray-700 italic mt-2 underline">
+                    <Link href="/reference/310320717R">310320717R </Link>
+                  </p>
+                  <p className="text-[14px] text-gray-700 italic mt-2 underline">
+                    <Link href="/reference/310321706R">310321706R </Link>
+                  </p>
+                  <p className="text-[14px] text-gray-700 italic mt-2 underline">
+                    <Link href="/reference/310321517R">310321517R </Link>
+                  </p>
                 </div>
               </div>
             </div>
           </div>
-          {/* MODAL */}
-          <dialog id="my_modal_ref" className="modal">
-            <div className="modal-box bg-white">
-              <form method="dialog">
-                <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
-                  ✕
-                </button>
-              </form>
-              <div className="">
-                <div className=" flex items-center gap-5 mb-5">
-                  <div className="border py-2 bg-white rounded-md">
-                    <Image
-                      unoptimized
-                      src={imagesSlide[0]}
-                      width={60}
-                      height={50}
-                      className=""
-                      alt=""
-                    />
-                  </div>
-                  <div className="">
-                    <p className="text-[15px] text-gray-500">Renault</p>
-                    <h1 className="my-1">Calculateur Clio V / Captur</h1>
-                  </div>
-                </div>
-                <hr />
-                <div className="mt-3">
-                  <PricingPop1050 />
-                </div>
-                <div className="mt-5">
-                  {showCoupon ? (
-                    <p className="font-[500] text-normal text-center">
-                      Code réduction ci-dessous
-                    </p>
-                  ) : (
-                    ""
-                  )}
 
-                  {!showCoupon && ( // Add this condition to hide the button when the coupon is shown
-                    <button
-                      onClick={async () => {
-                        setShowSpinner(true);
-                        await new Promise((resolve) =>
-                          setTimeout(resolve, 1000)
-                        ); // Show spinner for 1 second
-                        setShowSpinner(false);
-                        setShowCoupon(true); // Show coupon after spinner
-                      }}
-                      className="text-blue-400 hover:text-blue-200  rounded-sm transition-transform duration-300 mt-4 mx-auto block text-[15px]"
-                    ></button>
-                  )}
-
-                  {showSpinner && (
-                    <div className="flex justify-center mt-4">
-                      <div className="animate-spin rounded-full h-8 w-8 border-t-4 border-b-4 border-blue-400"></div>
-                    </div>
-                  )}
-
-                  {showCoupon && (
-                    <div className="mt-2 flex flex-col items-center justify-center">
-                      <div className="relative bg-white px-4 py-2.5 rounded-lg border shadow-lg w-[230px]">
-                        <div className="flex justify-between items-center">
-                          <p className="text-white">X</p>
-                          <p className="font-[500] text-center">PROG2023</p>
-                          <button
-                            onClick={() => {
-                              navigator.clipboard.writeText("PROG2023");
-                              setCopied(true);
-                              setTimeout(() => setCopied(false), 1500); // Reset after 1.5 seconds
-                            }}
-                            className=" text-[#2C80EF] text-[15px] bg-gray-100 p-1 rounded-md"
-                          >
-                            <BsCopy />
-                          </button>
-                        </div>
-                      </div>
-
-                      {copied && (
-                        <p className="mt-2 text-[#2C80EF] text-sm">
-                          code copié!
-                        </p>
-                      )}
-                    </div>
-                  )}
-                </div>
-
-                <div className="mt-5">
-                  <hr />
-                  <div className="flex justify-between my-2 ">
-                    <p className="text-gray-600 text-[15px]">Total </p>
-                    {showCoupon ? (
-                      <>
-                        <div className="flex items-center gap-2">
-                          <p className="text-gray-300 text-[15px] prices line-through">
-                            1069.00 €
-                          </p>
-                          <p className="text-[#2C80EF] text-[17px] prices bg-gray-50 px-2 rounded-md">
-                            1019 €
-                          </p>
-                        </div>
-                      </>
-                    ) : (
-                      <p className="text-[#2C80EF] text-[15px] prices">
-                        1069.00 €
-                      </p>
-                    )}
-                  </div>
-                </div>
-                <div className="text-center">
-                  <Link
-                    target="_blank"
-                    href="https://buy.stripe.com/28o2bM2ly10PdH29Ce"
-                  >
-                    <button className="orderButton">Valider</button>
-                  </Link>
-                </div>
-              </div>
+          <div className="container mx-auto my-12">
+            <div className="">
+              <SingleSearchView />
             </div>
-          </dialog>
-        </div>
-      </section>
+          </div>
+        </section>
+      </div>
+
       <Footer />
     </main>
   );
 };
 
-export default SingleSearchView;
+const TabCat = () => {
+  return (
+    <Suspense fallback={<div></div>}>
+      <TabCatContent />
+    </Suspense>
+  );
+};
+
+export default TabCat;

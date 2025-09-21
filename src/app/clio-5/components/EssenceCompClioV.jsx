@@ -12,6 +12,7 @@ import { BsCopy } from "react-icons/bs";
 import VehicleStockDisplay from "@/components/VehicleStockDisplay";
 import { FaArrowRight } from "react-icons/fa";
 import PricingPop1210 from "@/components/PricingPop1210";
+import DieComModal from "@/captur/components/Modals/DieComModal";
 
 const imagesSlide = [
   "https://laboiteautomatique.com/images/plat-1.webp",
@@ -208,7 +209,16 @@ const EssenceCompClioV = () => {
               </div>
             </div>
             {/* MODAL */}
-            <dialog id="my_modal_3" className="modal">
+            <DieComModal
+              brand="Renault"
+              model="Clio 5 - 1.3 Essence"
+              imagesSlide={imagesSlide}
+              newPayLink="https://buy.stripe.com/eVa7w60dqgZN9qMcOp"
+              reconditionedPayLink="https://buy.stripe.com/14A6oI8PUbNUaLRdh09sk3d"
+              stockModel="Renault Clio 5"
+              stockType="essence"
+            />
+            {/* <dialog id="my_modal_3" className="modal">
               <div className="modal-box bg-white">
                 <form method="dialog">
                   <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
@@ -326,7 +336,7 @@ const EssenceCompClioV = () => {
                   </div>
                 </div>
               </div>
-            </dialog>
+            </dialog> */}
           </div>
         </div>
       </section>

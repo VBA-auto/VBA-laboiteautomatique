@@ -3,9 +3,6 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import Head from "next/head";
-import SubHeader from "@/components/SubHeader";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import ReturnButton from "@/components/ReturnButton";
 import ResponsiveSlider from "@/components/ResponsiveSlider";
 import { BsCopy } from "react-icons/bs";
@@ -13,20 +10,16 @@ import { BsCopy } from "react-icons/bs";
 import Image from "next/image";
 import { FaArrowRight } from "react-icons/fa";
 import NewVehicleRef from "@/components/NewVehicleRef";
-import PricngPop890 from "@/components/PricngPop890";
-import VehicleImages from "@/components/Cal-NormalImg";
+import PricingPop1050 from "@/components/PricingPop1050";
+import PricngPop790 from "@/components/PricngPop790";
 
-// const imagesSlide = [
-//   "/images/cal-normal-0.webp",
-//   "/images/cal-normal-1.webp",
-//   "/images/cal-normal-2.webp",
-//   "/images/cal-normal-3.webp",
-//   "/images/cal-normal-4.webp",
-//   "/images/cal-normal-5.webp",
-//   "/images/cal-normal-6.webp",
-//   "/images/cal-normal-7.webp",
-// ];
-const imagesSlide = VehicleImages();
+const imagesSlide = [
+  "https://laboiteautomatique.com/images/strie-1.webp",
+  "https://laboiteautomatique.com/images/strie-2.webp",
+  // "https://laboiteautomatique.com/images/strie-3.webp",
+  "https://laboiteautomatique.com/images/strie-4.webp",
+];
+
 const SingleSearchView = () => {
   const [showSpinner, setShowSpinner] = useState(false);
   const [showCoupon, setShowCoupon] = useState(false);
@@ -39,22 +32,20 @@ const SingleSearchView = () => {
 
   return (
     <main>
-      <SubHeader />
-      <Header />
-      <section className="produits">
+      <section className="produits rounded-lg">
         <Head>
           <title>
-            Calculateur boîte automatique EDC Renault référence 310F93913R
+            Calculateur boîte automatique EDC Renault référence 310321808R
           </title>
           <meta
             name="description"
-            content="Commandez ici votre Calculateur pour boîte automatique EDC Renault référence 310F93913R, programmation incluse. Vérifiez disponibilité.."
+            content="Commandez ici votre Calculateur pour boîte automatique EDC Renault référence 310321808R, programmation incluse. Vérifiez disponibilité."
           />
         </Head>
         <div className="container mx-auto">
-          <div className="md:w-3/4 mx-auto mb-2.5">
-            <div className="md:flex  justify-center ">
-              <div className="md:w-[400px] p-4  bg-white rounded-tl-[5px]">
+          <div className="md:w-3/4 mx-auto mb-8">
+            <div className="md:flex  justify-center">
+              <div className="md:w-[600px] p-4  bg-white rounded-tl-[5px]">
                 <p className="text-[14px] mt-1">
                   <Link href="/">
                     <span className="text-gray-400">Home &gt;</span>
@@ -64,7 +55,7 @@ const SingleSearchView = () => {
                     Renault &gt;
                   </span>{" "}
                   <span className="text-gray-400">Réf &gt;</span>{" "}
-                  <span className="text-gray-700">310F93913R</span>{" "}
+                  <span className="text-gray-700">310321808R</span>{" "}
                 </p>
                 <div className="md:w-full  mt-5">
                   <div className="md:w-full">
@@ -72,71 +63,49 @@ const SingleSearchView = () => {
                   </div>
                 </div>
               </div>
-              <div className="md:w-[400px] bg-white rounded-tr-[5px] border-l-[1px] md:pb-0 pb-5">
-                <div className="flex justify-between items-center px-4 pt-4 pb-1">
-                  <ReturnButton />
-                  <div className="">
-                    <NewVehicleRef
-                      modelName="Calculateur Mégane"
-                      refCode="310F93913R"
-                      onStockChange={handleStockChange}
-                    />
-                  </div>
-                </div>
-
+              <div className="md:w-[600px] bg-white rounded-tr-[5px] border-l-[1px] md:pb-0 pb-5 py-3">
                 <div className="mt-2">
                   <div className="px-4 mb-2">
                     <p className="text-[14px] text-gray-400">Désignation</p>
-                    <h1 className="text-[15px]">Calculateur Mégane</h1>
+                    <h1 className="text-[15px]">Calculateur Megane IV</h1>
                   </div>
                   <div className="px-4 mb-2">
                     <p className="text-[14px] text-gray-400">Description</p>
                     <p className="text-[15px]">
-                      Module de comande (calculateur) pour boite automatique
-                      Renault Mégane boite EDC
+                      Module de commande (calculateur) pour boite automatique
+                      EDC Renault Megane 4
                     </p>
                   </div>
                   <div className="px-4 mb-3">
                     <p className="text-[14px] text-gray-400">Compatibilité</p>
                     <div className="flex flex-wrap gap-2">
                       <button className="bg-gray-100  px-2 text-[14px] text-black mt-1 rounded">
-                        Mégane 3
-                      </button>
-                      <button className="bg-gray-100  px-2 text-[14px] text-black mt-1 rounded">
-                        Clio IV
-                      </button>
-                      <button className="bg-gray-100  px-2 text-[14px] text-black mt-1 rounded">
-                        Captur
+                        Megane IV
                       </button>
                     </div>
                   </div>
                   <div className="px-4 mb-2">
                     <p className="text-[14px] text-gray-400">Garantie</p>
-                    <p className="text-[15px]">12 mois</p>
+                    <p className="text-[15px]">12 mois neuf</p>
                   </div>
                   <div className="px-4 mb-2">
                     <p className="text-[14px] text-gray-400">Véhicule</p>
-                    <p className="text-[15px]">
-                      Captur 1.2 Essence à partir de 2012
-                    </p>
+                    <p className="text-[15px]">Megane IV à partir de 2015</p>
                   </div>
                   <div className="px-4 mb-2">
                     <p className="text-[14px] text-gray-400">
                       Info complémentaire{" "}
                     </p>
-                    <p className="text-[15px]">
-                      Versions essences (code moteur H5H), version Diesel (code
-                      moteur K9K)
-                    </p>
+                    <p className="text-[15px]">code boite: DC4009</p>
                   </div>
                   <div className="px-4 mb-2">
                     <p className="text-[14px] text-gray-400">Référence OE</p>
-                    <p className="text-[15px]">98231221</p>
+                    <p className="text-[15px]">310321808R</p>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="bg-white border rounded-b-[5px] md:w-[800px] mx-auto md:pt-0 pt-5">
+            <div className="bg-white border rounded-b-[5px] md:w-full mx-auto md:pt-0 pt-5">
               <div className="md:flex px-5 py-1 justify-between">
                 <div className="md:w-1/2 flex items-center gap-5">
                   <div className="border py-2 bg-white rounded-md">
@@ -151,7 +120,7 @@ const SingleSearchView = () => {
                   </div>
                   <div className="">
                     <p className="text-[15px] text-gray-400">Renault</p>
-                    <h1 className="my-1">Calculateur Mégane</h1>
+                    <h1 className="my-1">Calculateur Megane IV</h1>
                   </div>
                 </div>
                 <div className="md:w-1/2 flex items-center md:justify-end justify-center gap-5 ">
@@ -208,12 +177,12 @@ const SingleSearchView = () => {
                   </div>
                   <div className="">
                     <p className="text-[15px] text-gray-500">Renault</p>
-                    <h1 className="my-1">Calculateur Mégane</h1>
+                    <h1 className="my-1">Calculateur Megane IV</h1>
                   </div>
                 </div>
                 <hr />
                 <div className="mt-3">
-                  <PricngPop890 />
+                  <PricngPop790 />
                 </div>
                 <div className="mt-5">
                   {showCoupon ? (
@@ -280,16 +249,16 @@ const SingleSearchView = () => {
                       <>
                         <div className="flex items-center gap-2">
                           <p className="text-gray-300 text-[15px] prices line-through">
-                            1139.00 €
+                            1069.00 €
                           </p>
-                          <p className="text-[#2C80EF] text-[17px] bg-gray-50 px-2 prices rounded-md">
-                            1089 €
+                          <p className="text-[#2C80EF] text-[17px] prices bg-gray-50 px-2 rounded-md">
+                            1019 €
                           </p>
                         </div>
                       </>
                     ) : (
                       <p className="text-[#2C80EF] text-[15px] prices">
-                        1139.00 €
+                        999.00 €
                       </p>
                     )}
                   </div>
@@ -297,7 +266,7 @@ const SingleSearchView = () => {
                 <div className="text-center">
                   <Link
                     target="_blank"
-                    href="https://buy.stripe.com/aEU8Aa6BOcJxbyU3dN"
+                    href="https://buy.stripe.com/6oEbMm3pCgZN6eA02F"
                   >
                     <button className="orderButton">Valider</button>
                   </Link>
@@ -307,7 +276,6 @@ const SingleSearchView = () => {
           </dialog>
         </div>
       </section>
-      <Footer />
     </main>
   );
 };

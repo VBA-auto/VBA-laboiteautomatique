@@ -12,6 +12,7 @@ import VehicleStockDisplay from "@/components/VehicleStockDisplay";
 import { FaArrowRight } from "react-icons/fa";
 import PricngPop890 from "@/components/PricngPop890";
 import VehicleImages from "@/components/Cal-NormalImg";
+import DieComModal from "@/captur/components/Modals/DieComModal";
 
 // const imagesSlide = [
 //   "https://laboiteautomatique.com/images/cal-normal-0.webp",
@@ -204,7 +205,16 @@ const DieselCompFluence = () => {
               </div>
             </div>
             {/* MODAL */}
-            <dialog id="my_modal_3" className="modal">
+            <DieComModal
+              brand="Renault"
+              model="Fluence - 1.5 Diesel"
+              imagesSlide={imagesSlide}
+              newPayLink="https://buy.stripe.com/4gw03E5xK6l9byU6pX"
+              reconditionedPayLink="https://buy.stripe.com/bJe3cw8PU3ho2flfp89sk3b"
+              stockModel="Renault Fluence"
+              stockType="diesel"
+            />
+            {/* <dialog id="my_modal_3" className="modal">
               <div className="modal-box bg-white">
                 <form method="dialog">
                   <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
@@ -323,7 +333,7 @@ const DieselCompFluence = () => {
                   </div>
                 </div>
               </div>
-            </dialog>
+            </dialog> */}
           </div>
         </div>
       </section>

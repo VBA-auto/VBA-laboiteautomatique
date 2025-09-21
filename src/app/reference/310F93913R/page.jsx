@@ -7,6 +7,7 @@ import Head from "next/head";
 import Header from "@/components/Header";
 import SubHeader from "@/components/SubHeader";
 import SingleSearchView from "./Content";
+import NewVehicleRef from "@/components/NewVehicleRef";
 
 const pageDescription =
   "Calculateur Mégane, calculateur boite automatique EDC pour Calculateur Mégane essence et Calculateur Mégane Diesel voir stock";
@@ -39,7 +40,7 @@ const TabCatContent = () => {
                     <>
                       <div className="">
                         <h1 className="md:text-lg text-base md:mb-0 mb-2 text-gray-700 font-semibold flex items-center gap-2">
-                          Calculateur Mégane - 310F93913R
+                          310F93913R - Calculateur Mégane
                         </h1>
                       </div>
                     </>
@@ -50,10 +51,11 @@ const TabCatContent = () => {
                     <div className="w-full mx-auto">
                       <div className="flex justify-between">
                         {/* Container for the toggle */}
-                        <div className="relative bg-gray-100 rounded-full px-6 w-full flex justify-around gap-5">
-                          <h1> Mégane 3</h1>
-                          <h1> Clio IV</h1>
-                          <h1>Captur</h1>
+                        <div className="relative  rounded-full px-6 w-full flex justify-end gap-5">
+                          <NewVehicleRef
+                            modelName="Calculateur Mégane"
+                            refCode="310F93913R"
+                          />
                         </div>
                       </div>
                     </div>
@@ -87,28 +89,14 @@ const TabCatContent = () => {
                 </div>
 
                 <p className="text-justify text-[15px] my-3">
-                  Vérifiez la disponibilté de votre module (boite de vitesse à
-                  contrôler) pour votre boite automatique <strong>EDC</strong>{" "}
-                  Renault <strong>Captur</strong>. Celui-ci peut être livré
-                  vierge ou directement programmé (Plug & Play). L’{" "}
-                  <Link href="/prestation/installation">installation</Link> est
-                  possible en fonction de votre lieu géographique. Choisissez
-                  votre modèle pour Calculateur Mégane:{" "}
-                  <Link href="/captur?type=essence" className="underline">
-                    Essence
-                  </Link>{" "}
-                  ou{" "}
-                  <Link href="/captur?type=diesel" className="underline">
-                    Diesel
-                  </Link>
-                  {"."} N’hésitez pas à nous contacter si vous souhaitez être
-                  absolument certain que cette pièce est bien à l’origine du
-                  problème. Pour plus d&apos;informations, vous pouvez consulter
-                  notre{" "}
-                  <Link href="/ressource/aide-en-ligne" className="underline">
-                    aide en ligne
-                  </Link>
-                  {"."}
+                  Vérifiez la disponibilité de votre calculateur EDC pour
+                  Renault Mégane, Clio IV ou Captur. Ce module de commande
+                  s’installe sur les versions essence (moteur H5H) et diesel
+                  (moteur K9K). Livré vierge ou programmé en Plug & Play selon
+                  vos besoins, il bénéficie d’une garantie 12 mois.
+                  L’installation est possible selon votre localisation. Pour
+                  toute incertitude, contactez-nous afin de confirmer que cette
+                  référence est bien adaptée à votre véhicule.
                 </p>
                 <div className="carsef grid  md:grid-cols-8 grid-cols-3 md:mt-0 mt-3  items-center justify-start">
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">

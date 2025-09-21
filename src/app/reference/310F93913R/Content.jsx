@@ -70,8 +70,8 @@ const SingleSearchView = () => {
                   </div>
                 </div>
               </div>
-              <div className="md:w-[600px] bg-white rounded-tr-[5px] border-l-[1px] md:pb-0 pb-5">
-                <div className="flex justify-between items-center px-4 pt-4 pb-1">
+              <div className="md:w-[600px] bg-white rounded-tr-[5px] py-3 border-l-[1px] md:pb-0 pb-5">
+                {/* <div className="flex justify-between items-center px-4 pt-4 pb-1">
                   <ReturnButton />
                   <div className="">
                     <NewVehicleRef
@@ -80,7 +80,7 @@ const SingleSearchView = () => {
                       onStockChange={handleStockChange}
                     />
                   </div>
-                </div>
+                </div> */}
 
                 <div className="mt-2">
                   <div className="px-4 mb-2">

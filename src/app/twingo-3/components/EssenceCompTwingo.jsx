@@ -12,6 +12,7 @@ import { BsCopy } from "react-icons/bs";
 import VehicleStockDisplay from "@/components/VehicleStockDisplay";
 import { FaArrowRight } from "react-icons/fa";
 import PricingPop1050 from "@/components/PricingPop1050";
+import DieComModal from "@/captur/components/Modals/DieComModal";
 
 // const imagesSlide = [
 //   "https://laboiteautomatique.com/images/cal-normal-0.webp",
@@ -210,7 +211,16 @@ const EssenceCompTwing0 = () => {
               </div>
             </div>
             {/* MODAL */}
-            <dialog id="my_modal_3" className="modal">
+            <DieComModal
+              brand="Renault"
+              model="Twingo 3"
+              imagesSlide={imagesSlide}
+              newPayLink="https://buy.stripe.com/14k03Ef8k38X7iEbKo"
+              reconditionedPayLink="https://buy.stripe.com/14A6oI8PUbNUaLRdh09sk3d"
+              stockModel="Renault Twingo 3"
+              stockType="essence"
+            />
+            {/* <dialog id="my_modal_3" className="modal">
               <div className="modal-box bg-white">
                 <form method="dialog">
                   <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
@@ -328,7 +338,7 @@ const EssenceCompTwing0 = () => {
                   </div>
                 </div>
               </div>
-            </dialog>
+            </dialog> */}
           </div>
         </div>
       </section>

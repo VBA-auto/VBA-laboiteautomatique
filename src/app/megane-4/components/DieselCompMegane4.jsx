@@ -13,6 +13,7 @@ import { FaArrowRight } from "react-icons/fa";
 import PricngPop890 from "@/components/PricngPop890";
 import VehicleImages from "@/components/Cal-NormalImg";
 import PricngPop790 from "@/components/PricngPop790";
+import DieComModal from "@/captur/components/Modals/DieComModal";
 
 // const imagesSlide = [
 //   "https://laboiteautomatique.com/images/cal-normal-0.webp",
@@ -214,7 +215,16 @@ const DieselCompMegane4 = () => {
               </div>
             </div>
             {/* MODAL */}
-            <dialog id="my_modal_3" className="modal">
+            <DieComModal
+              brand="Renault"
+              model="Mégane 4 - 1.5 Diesel"
+              imagesSlide={imagesSlide}
+              newPayLink="https://buy.stripe.com/6oEbMm3pCgZN6eA02F"
+              reconditionedPayLink="https://buy.stripe.com/14A6oI8PUbNUaLRdh09sk3d"
+              stockModel="Renault Megane 4"
+              stockType="diesel"
+            />
+            {/* <dialog id="my_modal_3" className="modal">
               <div className="modal-box bg-white">
                 <form method="dialog">
                   <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
@@ -333,7 +343,7 @@ const DieselCompMegane4 = () => {
                   </div>
                 </div>
               </div>
-            </dialog>
+            </dialog> */}
           </div>
         </div>
       </section>
