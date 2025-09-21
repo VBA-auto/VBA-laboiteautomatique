@@ -76,11 +76,14 @@ export default function ReconditionedCarsManage() {
     const newStock = carStockChanges[`${model}-${engineType}`];
     const newPaymentLink = paymentLinks[model]?.[engineType];
 
-    const stockToUpdate = newStock !== undefined && newStock !== "" ? parseInt(newStock, 10) : currentStock;
+    const stockToUpdate =
+      newStock !== undefined && newStock !== ""
+        ? parseInt(newStock, 10)
+        : currentStock;
 
     if (stockToUpdate === undefined || isNaN(stockToUpdate)) {
-        alert("Please enter a valid stock value.");
-        return;
+      alert("Please enter a valid stock value.");
+      return;
     }
 
     setLoadingStates((prev) => ({ ...prev, [`${model}-${engineType}`]: true }));
@@ -179,7 +182,7 @@ export default function ReconditionedCarsManage() {
                     />
                   </div>
 
-                  <div className="mb-4">
+                  <div className="mb-4 hidden">
                     <div className="flex items-center gap-2 mb-2">
                       <MdOutlinePayment className="text-green-500" />
                       <p className="text-gray-700">Payment Link</p>

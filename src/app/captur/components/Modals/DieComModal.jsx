@@ -105,7 +105,9 @@ const DieComModal = ({
                 <p className="text-[#BF0200]  text-lg mb-2 bg-white/0 px-4 py-1 rounded">
                   Rupture de stock
                 </p>
-                <button className=" text-blue-500 underline">Contact Us</button>
+                <Link href="/contact" className=" text-blue-500 underline">
+                  Contact Us
+                </Link>
               </div>
             )}
           </div>
