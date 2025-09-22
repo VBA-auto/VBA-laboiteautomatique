@@ -1,19 +1,20 @@
 "use client";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
+
 import ReturnButton from "@/components/ReturnButton";
-import SubHeader from "@/components/SubHeader";
+
 import Link from "next/link";
 import { useState } from "react";
 import ResponsiveSlider from "@/components/ResponsiveSlider";
 import Head from "next/head";
 import Image from "next/image";
-import { BsCopy } from "react-icons/bs";
+
 import VehicleStockDisplay from "@/components/VehicleStockDisplay";
+
 import { FaArrowRight } from "react-icons/fa";
-import PricngPop890 from "@/components/PricngPop890";
+
 import VehicleImages from "@/components/Cal-NormalImg";
 import DieComModal from "./Modals/DieComModal";
+import VehicleStockTotal from "@/hooks/VehicleStockTotal";
 
 // const imagesSlide = [
 //   "https://laboiteautomatique.com/images/cal-normal-0.webp",
@@ -85,7 +86,13 @@ const EssenceComp = () => {
                   <div className="flex justify-between items-center px-4 pt-4 pb-1 singretur">
                     <ReturnButton />
                     <div className="">
-                      <VehicleStockDisplay
+                      {/* <VehicleStockDisplay
+                        modelName="Renault Captur"
+                        carType="essence"
+                        onStockChange={handleStockChange}
+                      /> */}
+
+                      <VehicleStockTotal
                         modelName="Renault Captur"
                         carType="essence"
                         onStockChange={handleStockChange}

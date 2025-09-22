@@ -275,7 +275,7 @@ const Header = () => {
               </div>
 
               {/* Buttons */}
-              <div className="lg:w-[25%] flex gap-3 md:gap-5 headButton">
+              <div className="lg:w-[25%] flex justify-center gap-3 md:gap-5 headButton">
                 <div className="homeButtons">
                   <Link href="/ressource/aide-en-ligne">
                     <button className="buttonCheck">

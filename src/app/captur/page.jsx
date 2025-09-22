@@ -125,7 +125,7 @@ const TabCatContent = () => {
                     )}
                   </div>
                 </div>
-                <div className="md:w-1/3 ms-auto">
+                <div className="md:w-1/4 ms-auto">
                   <div className=" mx-auto">
                     {TabMode && (
                       <div className="w-full mx-auto">

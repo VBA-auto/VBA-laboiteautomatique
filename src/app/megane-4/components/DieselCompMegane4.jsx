@@ -14,6 +14,7 @@ import PricngPop890 from "@/components/PricngPop890";
 import VehicleImages from "@/components/Cal-NormalImg";
 import PricngPop790 from "@/components/PricngPop790";
 import DieComModal from "@/captur/components/Modals/DieComModal";
+import VehicleStockTotal from "@/hooks/VehicleStockTotal";
 
 // const imagesSlide = [
 //   "https://laboiteautomatique.com/images/cal-normal-0.webp",
@@ -98,7 +99,12 @@ const DieselCompMegane4 = () => {
                   <div className="flex justify-between items-center px-4 pt-4 pb-1 singretur">
                     <ReturnButton />
                     <div className="">
-                      <VehicleStockDisplay
+                      {/* <VehicleStockDisplay
+                        modelName="Renault Megane 4"
+                        carType="diesel"
+                        onStockChange={handleStockChange}
+                      /> */}
+                      <VehicleStockTotal
                         modelName="Renault Megane 4"
                         carType="diesel"
                         onStockChange={handleStockChange}

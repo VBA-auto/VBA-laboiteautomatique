@@ -13,6 +13,7 @@ import VehicleStockDisplay from "@/components/VehicleStockDisplay";
 import { FaArrowRight } from "react-icons/fa";
 import PricingPop1050 from "@/components/PricingPop1050";
 import DieComModal from "@/captur/components/Modals/DieComModal";
+import VehicleStockTotal from "@/hooks/VehicleStockTotal";
 
 // const imagesSlide = [
 //   "https://laboiteautomatique.com/images/cal-normal-0.webp",
@@ -94,7 +95,12 @@ const EssenceCompTwing0 = () => {
                   <div className="flex justify-between items-center px-4 pt-4 pb-1 singretur">
                     <ReturnButton />
                     <div className="">
-                      <VehicleStockDisplay
+                      {/* <VehicleStockDisplay
+                        modelName="Renault Twingo 3"
+                        carType="essence"
+                        onStockChange={handleStockChange}
+                      /> */}
+                      <VehicleStockTotal
                         modelName="Renault Twingo 3"
                         carType="essence"
                         onStockChange={handleStockChange}

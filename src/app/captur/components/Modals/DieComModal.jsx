@@ -106,7 +106,7 @@ const DieComModal = ({
                   Rupture de stock
                 </p>
                 <Link href="/contact" className=" text-blue-500 underline">
-                  Contact Us
+                  Contactez-nous
                 </Link>
               </div>
             )}
@@ -126,7 +126,7 @@ const DieComModal = ({
             </div>
 
             <p className="text-gray-500 text-sm my-4 text-center">
-              Produit 100% neuf avec 12 mois de garantie
+              Produit neuf avec 12 mois de garantie
             </p>
             <div className=" mb-4">
               <PricngPop890 />

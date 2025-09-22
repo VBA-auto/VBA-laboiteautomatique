@@ -14,6 +14,7 @@ import { FaArrowRight } from "react-icons/fa";
 import PricngPop890 from "@/components/PricngPop890";
 import VehicleImages from "@/components/Cal-NormalImg";
 import DieComModal from "@/captur/components/Modals/DieComModal";
+import VehicleStockTotal from "@/hooks/VehicleStockTotal";
 
 // const imagesSlide = [
 //   "https://laboiteautomatique.com/images/cal-normal-0.webp",
@@ -89,7 +90,12 @@ const EssenceCompClio = () => {
                   <div className="flex justify-between items-center px-4 pt-4 pb-1 singretur">
                     <ReturnButton />
                     <div className="">
-                      <VehicleStockDisplay
+                      {/* <VehicleStockDisplay
+                        modelName="Renault Clio 4"
+                        carType="essence"
+                        onStockChange={handleStockChange}
+                      /> */}
+                      <VehicleStockTotal
                         modelName="Renault Clio 4"
                         carType="essence"
                         onStockChange={handleStockChange}

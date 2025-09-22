@@ -85,7 +85,7 @@ const Programmation = () => {
                         <div className="">
                           <Link href="/megane">
                             <p className="bg-gray-100 rounded-md text-center  ">
-                              Megane
+                              Megane 3
                             </p>
                           </Link>
                         </div>
@@ -93,7 +93,7 @@ const Programmation = () => {
                         <div className="w-full">
                           <Link href="/scenic">
                             <p className="bg-gray-100 rounded-md text-center  ">
-                              Scenic
+                              Scenic 3
                             </p>
                           </Link>
                         </div>

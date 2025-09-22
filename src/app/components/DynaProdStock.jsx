@@ -2,32 +2,51 @@
 import { useState, useEffect } from "react";
 
 const DynaProdStock = ({ carName = "" }) => {
-  //   const url = "https://vba-blue-server.onrender.com/cars";
-  const url = "/api/cars";
+  const neufUrl = "/api/cars"; // Neuf API
+  const recondUrl = "/api/recond-cars"; // Recondition API
 
-  const [stock, setStock] = useState(null);
+  const [totalStock, setTotalStock] = useState(null);
+  const [neufStock, setNeufStock] = useState(0);
+  const [recondStock, setRecondStock] = useState(0);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function fetchCars() {
       try {
-        const response = await fetch(url);
-        if (!response.ok) {
+        const [neufRes, recondRes] = await Promise.all([
+          fetch(neufUrl),
+          fetch(recondUrl),
+        ]);
+
+        if (!neufRes.ok || !recondRes.ok) {
           throw new Error("Failed to fetch cars data");
         }
-        const cars = await response.json();
 
-        // Calculate stock for the given carName
-        let totalStock = 0;
-        cars?.forEach((car) => {
-          if (car?.model?.toLowerCase().includes(carName.toLowerCase())) {
+        const neufCars = await neufRes.json();
+        const recondCars = await recondRes.json();
+
+        let nStock = 0;
+        let rStock = 0;
+
+        // ✅ Neuf stock হিসাব
+        neufCars.forEach((car) => {
+          if (car?.model?.toLowerCase() === carName.toLowerCase()) {
             Object.values(car.types || {}).forEach((type) => {
-              totalStock += parseInt(type.stock, 10) || 0;
+              nStock += parseInt(type.stock, 10) || 0;
             });
           }
         });
 
-        setStock(totalStock);
+        // ✅ Recondition stock হিসাব
+        recondCars.forEach((car) => {
+          if (car?.model?.toLowerCase() === carName.toLowerCase()) {
+            rStock += parseInt(car?.stock, 10) || 0;
+          }
+        });
+
+        setNeufStock(nStock);
+        setRecondStock(rStock);
+        setTotalStock(nStock + rStock);
         setLoading(false);
       } catch (error) {
         console.error("Error fetching cars:", error);
@@ -36,48 +55,63 @@ const DynaProdStock = ({ carName = "" }) => {
     }
 
     fetchCars();
-  }, [carName, url]);
+  }, [carName]);
 
   if (loading) {
     return (
-      <div className="flex items-center justify-end">
-        <p className="text-gray-700 py-1 text-center rounded-md flex justify-end items-center gap-2 text-[15px]">
-          <span className="md:w-[10px] md:h-[10px] w-[10px] h-[10px] bg-gray-300 rounded-full block"></span>
-          unité(s) en stock:
-        </p>
+      <div className="flex items-center gap-2 text-gray-500 text-sm">
         <span className="loading loading-ring loading-xs"></span>
+        Chargement du stock...
       </div>
     );
   }
+
+  // ✅ Color classes for total stock
+  const getStockColor = (stock) => {
+    if (stock === null) return "text-gray-400";
+    if (stock <= 1) return "text-[#BF0200]"; // red
+    if (stock <= 3) return "text-yellow-500"; // yellow
+    return "text-[#128753]"; // green
+  };
+
   return (
-    <div className="">
-      <p className="text-gray-700 py-1 text-center rounded-md flex justify-end items-center gap-2 text-[15px]">
-        <span
-          className={`md:w-[10px] md:h-[10px] w-[10px] h-[10px] ${
-            stock === null
-              ? "bg-gray-300"
-              : stock <= 1
-              ? "bg-[#BF0200]"
-              : stock <= 3
-              ? "bg-yellow-500"
-              : "bg-[#128753]"
-          } rounded-full block`}
-        ></span>
-        unité(s) en stock:
-        <span
-          className={`${
-            stock === null
-              ? "text-gray-300"
-              : stock <= 1
-              ? "text-[#BF0200]"
-              : stock <= 3
-              ? "text-yellow-500"
-              : "text-[#128753]"
-          } font-[500]`}
-        >
-          {stock === null ? "..." : stock}
-        </span>
-      </p>
+    <div className="text-gray-700 text-sm text-center">
+      <div className="flex justify-center items-center">
+        <div className="w-1/2">
+          <p className="text-gray-700 py-1 text-center rounded-md flex items-center gap-2 text-[15px]">
+            <span
+              className={`w-[10px] h-[10px] ${
+                totalStock === null
+                  ? "bg-gray-300"
+                  : totalStock <= 1
+                  ? "bg-[#BF0200]"
+                  : totalStock <= 3
+                  ? "bg-yellow-500"
+                  : "bg-[#128753]"
+              } rounded-full block`}
+            ></span>
+            En stock:
+            <span
+              className={`${
+                totalStock === null
+                  ? "text-gray-300"
+                  : totalStock <= 1
+                  ? "text-[#BF0200]"
+                  : totalStock <= 3
+                  ? "text-yellow-500"
+                  : "text-[#128753]"
+              } font-[500]`}
+            >
+              {totalStock === null ? "..." : totalStock}
+            </span>
+          </p>
+        </div>
+
+        <div className="w-1/2 flex gap-2 justify-end">
+          <p>Neuf: {neufStock}</p>
+          <p>Reconditionné: {recondStock}</p>
+        </div>
+      </div>
     </div>
   );
 };

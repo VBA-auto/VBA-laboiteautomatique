@@ -557,5 +557,11 @@
     "description": "Couple embrayage 1. Erreur de couple",
     "subTitle": "Clutch torque 1. Torque error",
     "aide": "Embrayage + butée ou programme ou actuateur (moteur) embrayage"
+  },
+  {
+    "code": "DF490",
+    "description": "circuit moteur embrayage 2 panne électrique non identifiée",
+    "subTitle": "clutch motor circuit 2 unidentified electrical fault",
+    "aide": "Problème calculateur"
   }
 ]

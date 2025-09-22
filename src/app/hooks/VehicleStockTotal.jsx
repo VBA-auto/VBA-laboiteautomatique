@@ -7,7 +7,7 @@ async function api(path) {
   return res.json();
 }
 
-const PageLevelStock = ({ modelName, carType, onStockChange }) => {
+const VehicleStockTotal = ({ modelName, carType, onStockChange }) => {
   const [stock, setStock] = useState({ new: 0, reconditioned: 0 });
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -63,8 +63,9 @@ const PageLevelStock = ({ modelName, carType, onStockChange }) => {
   if (loading) {
     return (
       <div className="flex items-center justify-between">
-        <p className="text-gray-700 py-1 flex items-center gap-0 text-[15px]">
-          {/* <span className="w-[10px] h-[10px] bg-gray-300 rounded-full block"></span> */}
+        <p className="text-gray-700 py-1 flex items-center gap-2 text-[15px]">
+          <span className="w-[10px] h-[10px] bg-gray-300 rounded-full block"></span>
+          En stock:
         </p>
         <span className="loading loading-ring loading-xs"></span>
       </div>
@@ -88,7 +89,7 @@ const PageLevelStock = ({ modelName, carType, onStockChange }) => {
               : "bg-[#128753]"
           } rounded-full block`}
         ></span>
-
+        En stock:{" "}
         <span
           className={`${
             totalStock <= 1
@@ -97,10 +98,22 @@ const PageLevelStock = ({ modelName, carType, onStockChange }) => {
               ? "text-yellow-500"
               : "text-[#128753]"
           } font-[500]`}
-        ></span>
+        >
+          {totalStock}
+        </span>
       </p>
+
+      {/* Breakdown */}
+      {/* <div className="text-xs text-gray-500 flex gap-3 mt-1">
+        <span>
+          Neuf: <b>{stock.new}</b>
+        </span>
+        <span>
+          Reconditionné: <b>{stock.reconditioned}</b>
+        </span>
+      </div> */}
     </div>
   );
 };
 
-export default PageLevelStock;
+export default VehicleStockTotal;
