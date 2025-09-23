@@ -40,7 +40,8 @@ const TabCatContent = () => {
                     <>
                       <div className="">
                         <h1 className="md:text-lg text-base md:mb-0 mb-2 text-gray-700 font-semibold flex items-center gap-2">
-                          310320891R - Calculateur Renault Captur 1.2 TCE 16V EDC
+                          310320891R - Calculateur Renault Captur 1.2 TCE 16V
+                          EDC
                         </h1>
                       </div>
                     </>
@@ -89,39 +90,39 @@ const TabCatContent = () => {
                 </div>
 
                 <p className="text-justify text-[15px] my-3">
-                  Vérifiez la disponibilité de votre calculateur EDC pour
-                  Renault Mégane, Clio IV ou Captur. Ce module de commande
-                  s’installe sur les versions essence (moteur H5H) et diesel
-                  (moteur K9K). Livré vierge ou programmé en Plug & Play selon
-                  vos besoins, il bénéficie d’une garantie 12 mois.
-                  L’installation est possible selon votre localisation. Pour
-                  toute incertitude, contactez-nous afin de confirmer que cette
-                  référence est bien adaptée à votre véhicule.
+                  Calculateur <strong>EDC turbo</strong> spécifique au Renault{" "}
+                  <strong>Captur 1.2 TCE 16V</strong>. Ce{" "}
+                  <strong>module haute technologie</strong> contrôle la
+                  transmission automatique sur moteur{" "}
+                  <strong>essence turbocompressé</strong> 16 soupapes. Gestion
+                  optimisée du <strong>couple moteur</strong> et réponse
+                  instantanée. Programmation
+                  <strong> Plug & Play</strong> incluse avec calibration usine.{" "}
+                  <strong>Garantie totale 12 mois</strong> avec assistance
+                  technique spécialisée. Installation professionnelle
+                  recommandée. Vérifiez millésime pour compatibilité.
                 </p>
                 <div className="carsef grid  md:grid-cols-8 grid-cols-3 md:mt-0 mt-3  items-center justify-start">
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310321488R">310321488R </Link>
-                  </p>
-                  <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310321148R">310321148R </Link>
-                  </p>
-                  <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310320891R">310320891R </Link>
-                  </p>
-                  <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310320841R">310320841R </Link>
-                  </p>
-                  <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310320756R">310320756R </Link>
+                    <Link href="/reference/310320368R">310320368R </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
                     <Link href="/reference/310320717R">310320717R </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310321706R">310321706R </Link>
+                    <Link href="/reference/310320721R">310320721R </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310321517R">310321517R </Link>
+                    <Link href="/reference/310320840R">310320840R </Link>
+                  </p>
+                  <p className="text-[14px] text-gray-700 italic mt-2 underline">
+                    <Link href="/reference/310320841R">310320841R </Link>
+                  </p>
+                  <p className="text-[14px] text-gray-700 italic mt-2 underline">
+                    <Link href="/reference/310320892R">310320892R </Link>
+                  </p>
+                  <p className="text-[14px] text-gray-700 italic mt-2 underline">
+                    <Link href="/reference/310321149R">310321149R </Link>
                   </p>
                 </div>
               </div>

@@ -89,39 +89,40 @@ const TabCatContent = () => {
                 </div>
 
                 <p className="text-justify text-[15px] my-3">
-                  Vérifiez la disponibilité de votre calculateur EDC pour
-                  Renault Mégane, Clio IV ou Captur. Ce module de commande
-                  s’installe sur les versions essence (moteur H5H) et diesel
-                  (moteur K9K). Livré vierge ou programmé en Plug & Play selon
-                  vos besoins, il bénéficie d’une garantie 12 mois.
-                  L’installation est possible selon votre localisation. Pour
-                  toute incertitude, contactez-nous afin de confirmer que cette
-                  référence est bien adaptée à votre véhicule.
+                  Calculateur <strong>EDC crossover évolué</strong> pour Renault{" "}
+                  <strong>Kadjar</strong> haut de gamme. Ce{" "}
+                  <strong>module intelligent</strong> intègre les technologies
+                  les plus avancées pour SUV familial. Compatible moteurs{" "}
+                  <strong>essence TCE</strong>
+                  et <strong>diesel dCi</strong> avec transmission{" "}
+                  <strong>All-Mode 4x4-i</strong>. Gestion{" "}
+                  <strong>terrain variable</strong> avec modes Auto, 2WD et
+                  Lock. Installation <strong>Plug & Play premium</strong> avec
+                  calibrage SUV spécialisé.{" "}
+                  <strong>Garantie étendue 12 mois</strong> tous terrains.
+                  Support technique expert SUV et 4x4 disponible.
                 </p>
                 <div className="carsef grid  md:grid-cols-8 grid-cols-3 md:mt-0 mt-3  items-center justify-start">
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310321488R">310321488R </Link>
+                    <Link href="/reference/310321195R">310321195R </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310321148R">310321148R </Link>
+                    <Link href="/reference/310321306R">310321306R </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310320891R">310320891R </Link>
-                  </p>
-                  <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310320841R">310320841R </Link>
-                  </p>
-                  <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310320756R">310320756R </Link>
-                  </p>
-                  <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310320717R">310320717R </Link>
+                    <Link href="/reference/310321474R">310321474R </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
                     <Link href="/reference/310321706R">310321706R </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310321517R">310321517R </Link>
+                    <Link href="/reference/310321808R">310321808R </Link>
+                  </p>
+                  <p className="text-[14px] text-gray-700 italic mt-2 underline">
+                    <Link href="/reference/310321994R">310321994R </Link>
+                  </p>
+                  <p className="text-[14px] text-gray-700 italic mt-2 underline">
+                    <Link href="/reference/310322059R">310322059R </Link>
                   </p>
                 </div>
               </div>
