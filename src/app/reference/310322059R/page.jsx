@@ -71,7 +71,7 @@ const TabCatContent = () => {
                     unoptimized
                     width={300}
                     height={290}
-                    src="https://laboiteautomatique.com/images/cal-normal-0.webp"
+                    src="https://laboiteautomatique.com/images/plat-1.webp"
                     className="mx-auto w-[280px]  mb-4"
                     priority={true}
                     alt=""
