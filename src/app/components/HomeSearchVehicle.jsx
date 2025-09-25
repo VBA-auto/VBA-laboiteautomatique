@@ -183,7 +183,7 @@ const HomeSearchVehicle = () => {
                           src={item?.images[0]}
                           priority={true}
                           alt=""
-                          className="w-[80px] h-[60px] object-cover"
+                          className="object-cover"
                         />
                       </div>
                       <div className="md:w-3/4">

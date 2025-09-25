@@ -107,7 +107,7 @@ const DynaProdStock = ({ carName = "" }) => {
           </p>
         </div>
 
-        <div className="w-1/2 flex gap-2 justify-end">
+        <div className="w-1/2 flex gap-2 justify-end italic">
           <p>Neuf: {neufStock}</p>
           <p>Reconditionné: {recondStock}</p>
         </div>
