@@ -454,6 +454,122 @@ const Page = () => {
                         </div>
                       </div>
                     </div>
+
+                    {/* Static Content 7 ( Example) */}
+
+                    {/* Add more static content as needed */}
+
+                    <div className="carouselItems">
+                      <div className=" flex flex-col">
+                        <div className="w-full">
+                          <div className="">
+                            <div className="w-full h-full">
+                              <Link href="/ressource/blogs/aprentissage-touche">
+                                <Image
+                                  unoptimized
+                                  width={900}
+                                  height={300}
+                                  src="/images/appren6.webp"
+                                  alt="calculateur"
+                                  className="rounded-md"
+                                />
+                              </Link>
+                            </div>
+                            <div className="border  rounded-md p-2">
+                              <Link href="/ressource/blogs/aprentissage-touche">
+                                {" "}
+                                <h2 className="text-normal text-blue-500 my-2 font-medium  hover:underline">
+                                  Calibrage ou aprentissage...
+                                </h2>
+                              </Link>
+                              <Link href="/ressource/blogs/aprentissage-touche">
+                                <div className="content-container mt-3 ">
+                                  <p className=" text-sm text-justify">
+                                    Comment calibrer les points de touche sur
+                                    une boîte EDC/DC4 pour assurer un
+                                    déplacement au ralenti...
+                                  </p>
+                                </div>
+                                <div className="flex justify-between mt-2.5">
+                                  <div className="flex items-center gap-1">
+                                    <IoEyeOutline />
+                                    <p className="text-sm text-gray-500">
+                                      389 vues
+                                    </p>
+                                  </div>
+                                  <div className="flex items-center gap-1">
+                                    <FaRegComments />
+                                    <p className="text-sm text-gray-500">
+                                      réponses{" "}
+                                      {blogMeta["aprentissage-touche"]
+                                        ?.comments ?? 0}
+                                    </p>
+                                  </div>
+                                </div>
+                              </Link>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Static Content 7 ( Example) */}
+
+                    {/* Add more static content as needed */}
+
+                    <div className="carouselItems">
+                      <div className=" flex flex-col">
+                        <div className="w-full">
+                          <div className="">
+                            <div className="w-full h-full">
+                              <Link href="/ressource/blogs/moteur-tambour">
+                                <Image
+                                  unoptimized
+                                  width={900}
+                                  height={300}
+                                  src="/images/cali7.webp"
+                                  alt="calculateur"
+                                  className="rounded-md"
+                                />
+                              </Link>
+                            </div>
+                            <div className="border  rounded-md p-2">
+                              <Link href="/ressource/blogs/moteur-tambour">
+                                {" "}
+                                <h2 className="text-normal text-blue-500 my-2 font-medium  hover:underline">
+                                  Calibrage moteur tambour de...
+                                </h2>
+                              </Link>
+                              <Link href="/ressource/blogs/moteur-tambour">
+                                <div className="content-container mt-3 ">
+                                  <p className=" text-sm text-justify">
+                                    Lors de l’installation ou du remplacement
+                                    d’un calculateur de boîte EDC/DC4, il est
+                                    normal d’entendre un bruit de...
+                                  </p>
+                                </div>
+                                <div className="flex justify-between mt-2.5">
+                                  <div className="flex items-center gap-1">
+                                    <IoEyeOutline />
+                                    <p className="text-sm text-gray-500">
+                                      289 vues
+                                    </p>
+                                  </div>
+                                  <div className="flex items-center gap-1">
+                                    <FaRegComments />
+                                    <p className="text-sm text-gray-500">
+                                      réponses{" "}
+                                      {blogMeta["moteur-tambour"]?.comments ??
+                                        0}
+                                    </p>
+                                  </div>
+                                </div>
+                              </Link>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
