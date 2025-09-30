@@ -8,7 +8,7 @@ import ResponsiveSlider from "@/components/ResponsiveSlider";
 import { BsCopy } from "react-icons/bs";
 
 import Image from "next/image";
-import { FaArrowRight } from "react-icons/fa";
+import { FaArrowRight } from "next/image";
 import NewVehicleRef from "@/components/NewVehicleRef";
 import PricngPop890 from "@/components/PricngPop890";
 import VehicleImages from "@/components/Cal-NormalImg";
@@ -30,11 +30,11 @@ const SingleSearchView = () => {
       <section className="produits rounded-lg">
         <Head>
           <title>
-            Calculateur boîte automatique EDC Renault référence 310320254R
+            Calculateur boîte automatique EDC Renault référence A2C30743002
           </title>
           <meta
             name="description"
-            content="Commandez ici votre Calculateur pour boîte automatique EDC Renault référence 310320254R, programmation incluse. Vérifiez disponibilité."
+            content="Commandez ici votre Calculateur pour boîte automatique EDC Renault référence A2C30743002, programmation incluse. Vérifiez disponibilité."
           />
         </Head>
         <div className="container mx-auto">
@@ -50,7 +50,7 @@ const SingleSearchView = () => {
                     Renault &gt;
                   </span>{" "}
                   <span className="text-gray-400">Réf &gt;</span>{" "}
-                  <span className="text-gray-700">310320254R</span>{" "}
+                  <span className="text-gray-700">A2C30743002</span>{" "}
                 </p>
                 <div className="md:w-full  mt-5">
                   <div className="md:w-full">
@@ -62,25 +62,23 @@ const SingleSearchView = () => {
                 <div className="mt-2">
                   <div className="px-4 mb-2">
                     <p className="text-[14px] text-gray-400">Désignation</p>
-                    <h1 className="text-[15px]">
-                      Calculateur Scénic 3 - Megane 3
-                    </h1>
+                    <h1 className="text-[15px]">Calculateur Captur - Clio 4</h1>
                   </div>
                   <div className="px-4 mb-2">
                     <p className="text-[14px] text-gray-400">Description</p>
                     <p className="text-[15px]">
                       Module de commande (calculateur) pour boite automatique
-                      EDC Scénic 3 - Mégane 3
+                      EDC Captur - Clio 4
                     </p>
                   </div>
                   <div className="px-4 mb-3">
                     <p className="text-[14px] text-gray-400">Compatibilité</p>
                     <div className="flex flex-wrap gap-2">
                       <button className="bg-gray-100  px-2 text-[14px] text-black mt-1 rounded">
-                        Mégane 3
+                        Captur
                       </button>
                       <button className="bg-gray-100  px-2 text-[14px] text-black mt-1 rounded">
-                        Scénic 3
+                        Clio 4
                       </button>
                     </div>
                   </div>
@@ -90,19 +88,19 @@ const SingleSearchView = () => {
                   </div>
                   <div className="px-4 mb-2">
                     <p className="text-[14px] text-gray-400">Véhicule</p>
-                    <p className="text-[15px]">Scénic 3 - Mégane 3</p>
+                    <p className="text-[15px]">
+                      Captur - Clio 4 (essence et diesel)
+                    </p>
                   </div>
                   <div className="px-4 mb-2">
                     <p className="text-[14px] text-gray-400">
                       Info complémentaire{" "}
                     </p>
-                    <p className="text-[15px]">Moteur 1.5 Diesel</p>
+                    <p className="text-[15px]">A2C30743002 - DC4015 - DC4016</p>
                   </div>
                   <div className="px-4 mb-2">
                     <p className="text-[14px] text-gray-400">Référence OE</p>
-                    <p className="text-[15px]">
-                      310320254R (remplacé par 310320749R)
-                    </p>
+                    <p className="text-[15px]">A2C30743002 - 01 K00</p>
                   </div>
                 </div>
               </div>
@@ -122,7 +120,7 @@ const SingleSearchView = () => {
                   </div>
                   <div className="">
                     <p className="text-[15px] text-gray-400">Renault</p>
-                    <h1 className="my-1">Calculateur Scénic 3 - Megane 3</h1>
+                    <h1 className="my-1">Calculateur Clio 4 - Captur</h1>
                   </div>
                 </div>
                 <div className="md:w-1/2 flex items-center md:justify-end justify-center gap-5 ">
@@ -179,7 +177,7 @@ const SingleSearchView = () => {
                   </div>
                   <div className="">
                     <p className="text-[15px] text-gray-500">Renault</p>
-                    <h1 className="my-1">Calculateur Scénic 3 - Megane 3</h1>
+                    <h1 className="my-1">Calculateur Clio 4 - Captur</h1>
                   </div>
                 </div>
                 <hr />
@@ -268,7 +266,7 @@ const SingleSearchView = () => {
                 <div className="text-center">
                   <Link
                     target="_blank"
-                    href="https://buy.stripe.com/eVacQq2ly8th6eA2am"
+                    href="https://buy.stripe.com/3cseYy1hu8th1Yk8yY"
                   >
                     <button className="orderButton">Valider</button>
                   </Link>

@@ -93,17 +93,13 @@ const SingleSearchView = () => {
                   </div>
                   <div className="px-4 mb-2">
                     <p className="text-[14px] text-gray-400">Véhicule</p>
-                    <p className="text-[15px]">
-                      Clio 4 - Captur - Megane 3- Fluence
-                    </p>
+                    <p className="text-[15px]">Clio RS – Captur – Clio 4</p>
                   </div>
                   <div className="px-4 mb-2">
                     <p className="text-[14px] text-gray-400">
                       Info complémentaire{" "}
                     </p>
-                    <p className="text-[15px]">
-                      Clio 4 - Captur - Megane 3- Fluence
-                    </p>
+                    <p className="text-[15px]">Clio RS – Captur – Clio 4</p>
                   </div>
                   <div className="px-4 mb-2">
                     <p className="text-[14px] text-gray-400">Référence OE</p>

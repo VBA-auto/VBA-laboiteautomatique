@@ -1,13 +1,13 @@
-import Image from "next/image";
+import Link from "next/link";
 import React, { Suspense } from "react";
 import Footer from "@/components/Footer";
-import Link from "next/link";
-import ReturnButton from "@/components/ReturnButton";
 import Head from "next/head";
 import Header from "@/components/Header";
 import SubHeader from "@/components/SubHeader";
 import SingleSearchView from "./Content";
 import NewVehicleRef from "@/components/NewVehicleRef";
+import Image from "next/image";
+import ReturnButton from "@/components/ReturnButton";
 
 const pageDescription =
   "Calculateur Mégane, calculateur boite automatique EDC pour Calculateur Mégane essence et Calculateur Mégane Diesel voir stock";
@@ -40,7 +40,7 @@ const TabCatContent = () => {
                     <>
                       <div className="">
                         <h1 className="md:text-lg text-base md:mb-0 mb-2 text-gray-700 font-semibold flex items-center gap-2">
-                          310320841R - Calculateur Captur - Clio 4
+                          A2C30743003 - Calculateur Clio RS - Captur - Clio 4
                         </h1>
                       </div>
                     </>
@@ -53,8 +53,8 @@ const TabCatContent = () => {
                         {/* Container for the toggle */}
                         <div className="relative  rounded-full px-6 w-full flex justify-end gap-5">
                           <NewVehicleRef
-                            modelName="Calculateur Captur - Clio 4"
-                            refCode="310320841R"
+                            modelName="Calculateur Clio RS - Captur - Clio 4"
+                            refCode="A2C30743003"
                           />
                         </div>
                       </div>
@@ -71,7 +71,7 @@ const TabCatContent = () => {
                     unoptimized
                     width={300}
                     height={290}
-                    src="https://laboiteautomatique.com/images/strie-1.webp"
+                    src="https://laboiteautomatique.com/images/cal-normal-0.webp"
                     className="mx-auto w-[280px]  mb-4"
                     priority={true}
                     alt=""
@@ -83,45 +83,52 @@ const TabCatContent = () => {
                   <div className="md:w-1/2">
                     <ReturnButton />
                     <h1 className="text-2xl mt-2 font-semibold  text-gray-700">
-                      310320841R
+                      A2C30743003
                     </h1>
                   </div>
                 </div>
 
                 <p className="text-justify text-[15px] my-3">
-                  Calculateur <strong>EDC hybride</strong> pour Renault{" "}
-                  <strong>Captur</strong> et <strong>Clio 4</strong>. Ce{" "}
-                  <strong>module dual-compatible</strong> s&apos;adapte
-                  parfaitement aux deux plateformes avec gestion automatique des
-                  paramètres. Compatible moteurs <strong>essence TCE</strong> et{" "}
-                  <strong>diesel dCi</strong> nouvelle génération. Installation{" "}
-                  <strong>Plug & Play certifiée</strong> avec reconnaissance
-                  automatique du véhicule.{" "}
-                  <strong>Garantie constructeur 12 mois </strong>
-                  bi-véhicule. Support multi-plateformes assuré. Vérifiez
-                  millésime pour optimisation parfaite du système.
+                  <strong>Calculateur EDC A2C30743003</strong> spécialisé pour{" "}
+                  <strong>Renault Clio RS</strong>,<strong>Captur</strong> et{" "}
+                  <strong>Clio 4</strong> avec transmission automatique.
+                  Optimisé pour les{" "}
+                  <strong>
+                    motorisations haute performance 1.6 Turbo essence
+                  </strong>{" "}
+                  et <strong>1.5 dCi diesel</strong>. Ce{" "}
+                  <strong>module de contrôle avancé</strong> garantit des
+                  passages de vitesses rapides et précis pour une expérience de
+                  conduite sportive. Disponible en{" "}
+                  <strong>configuration vierge ou programmée</strong>. Couvert
+                  par une <strong>garantie professionnelle 12 mois</strong> avec
+                  service d&apos;installation spécialisé disponible. Validation
+                  technique recommandée avant commande.
                 </p>
                 <div className="carsef grid  md:grid-cols-8 grid-cols-3 md:mt-0 mt-3  items-center justify-start">
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310320368R">310320368R </Link>
+                    <Link href="/reference/A2C30743000">A2C30743000 </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310320717R">310320717R </Link>
+                    <Link href="/reference/A2C53374830">A2C53374830 </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310320721R">310320721R </Link>
+                    <Link href="/reference/310322059R">310322059R </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310320756R">310320756R </Link>
+                    <Link href="/reference/310F93913R">310F93913R </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310320840R">310320840R </Link>
+                    <Link href="/reference/310321994R">310321994R </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310320891R">310320891R </Link>
+                    <Link href="/reference/310321808R">310321808R </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310321109R">310321109R </Link>
+                    <Link href="/reference/megane4">megane4 </Link>
+                  </p>
+                  <p className="text-[14px] text-gray-700 italic mt-2 underline">
+                    <Link href="/reference/310321716R">310321716R </Link>
                   </p>
                 </div>
               </div>

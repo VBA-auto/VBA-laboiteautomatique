@@ -30,11 +30,11 @@ const SingleSearchView = () => {
       <section className="produits rounded-lg">
         <Head>
           <title>
-            Calculateur boîte automatique EDC Renault référence A2C30743002
+            Calculateur boîte automatique EDC Renault référence A2C30743003
           </title>
           <meta
             name="description"
-            content="Commandez ici votre Calculateur pour boîte automatique EDC Renault référence A2C30743002, programmation incluse. Vérifiez disponibilité."
+            content="Commandez ici votre Calculateur pour boîte automatique EDC Renault référence A2C30743003, programmation incluse. Vérifiez disponibilité."
           />
         </Head>
         <div className="container mx-auto">
@@ -50,7 +50,7 @@ const SingleSearchView = () => {
                     Renault &gt;
                   </span>{" "}
                   <span className="text-gray-400">Réf &gt;</span>{" "}
-                  <span className="text-gray-700">A2C30743002</span>{" "}
+                  <span className="text-gray-700">A2C30743003</span>{" "}
                 </p>
                 <div className="md:w-full  mt-5">
                   <div className="md:w-full">
@@ -96,11 +96,11 @@ const SingleSearchView = () => {
                     <p className="text-[14px] text-gray-400">
                       Info complémentaire{" "}
                     </p>
-                    <p className="text-[15px]">A2C30743002 - DC4015 - DC4016</p>
+                    <p className="text-[15px]">A2C30743003 - DC4015 - DC4016</p>
                   </div>
                   <div className="px-4 mb-2">
                     <p className="text-[14px] text-gray-400">Référence OE</p>
-                    <p className="text-[15px]">A2C30743002 - 01 K00</p>
+                    <p className="text-[15px]">A2C30743003 - 01 K00</p>
                   </div>
                 </div>
               </div>

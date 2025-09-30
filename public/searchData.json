@@ -1066,6 +1066,37 @@
     ]
   },
   {
+    "ref": "A2C30743003",
+    "stock": 2,
+    "title": "Calculateur Captur - Clio 4",
+    "metaTitle": "Calculateur boîte automatique EDC Renault référence A2C30743002",
+    "metaDes": "Commandez ici votre Calculateur pour boîte automatique EDC Renault référence A2C30743002, programmation incluse. Vérifiez disponibilité.",
+    "description": "Module de commande (calculateur) pour boite automatique EDC Clio RS - Captur - Clio 4",
+    "compatibility": "Clio 4 , Captur (Essence et Diesel) , Clio RS",
+    "warranty": "12 mois neuf",
+    "brand": "Renault",
+    "ogPrice": 890,
+    "programationPrice": 230,
+    "transportPrice": 19,
+    "save": "00",
+    "finalPrice": 1139,
+    "coupon": "PROG2023",
+    "payLink": "https://buy.stripe.com/6oE3fQ3pC10P5awbKL",
+    "vehicle": "Clio RS - Captur - Clio 4",
+    "Info_complémentaire": "code boite DC4005 - DC4006 - DC4016 - DC4015",
+    "OE_number": "A2C30743003 - 01 K00",
+    "images": [
+      "/images/cal-normal-0.webp",
+      "/images/cal-normal-1.webp",
+      "/images/cal-normal-2.webp",
+      "/images/cal-normal-3.webp",
+      "/images/cal-normal-4.webp",
+      "/images/cal-normal-5.webp",
+      "/images/cal-normal-6.webp",
+      "/images/cal-normal-7.webp"
+    ]
+  },
+  {
     "ref": "310320368R",
     "stock": 2,
     "title": "Calculateur Renault Clio 4 - 1.2 Essence",
