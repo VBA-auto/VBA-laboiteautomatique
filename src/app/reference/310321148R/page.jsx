@@ -34,13 +34,16 @@ const TabCatContent = () => {
             </div>
 
             <div className="bg-white/50">
-              <div className="md:flex items-center gap-5 border border-gray-200 px-4 py-7 rounded-lg">
+              <div className="flex justify-between items-center gap-5 border border-gray-200 px-4 py-7 rounded-lg">
                 <div className="md:w-1/2">
                   <div className="">
                     <>
                       <div className="">
-                        <h1 className="md:text-lg text-base md:mb-0 mb-2 text-gray-700 font-semibold flex items-center gap-2">
-                          310321148R - Calculateur Clio 4 - Captur
+                        <h1 className="md:text-lg text-base text-gray-700 font-semibold flex items-center gap-2">
+                          310321148R{" "}
+                          <span className="hidden md:block">
+                            - Calculateur Clio 4 - Captur
+                          </span>
                         </h1>
                       </div>
                     </>
@@ -89,19 +92,15 @@ const TabCatContent = () => {
                 </div>
 
                 <p className="text-justify text-[15px] my-3">
-                  Calculateur <strong>EDC nouvelle série</strong> pour{" "}
-                  <strong>Clio 4</strong> et <strong>Captur</strong> récents. Ce{" "}
-                  <strong>module technologique avancé</strong> intègre les
-                  dernières innovations Renault en matière de transmission.
-                  Compatible avec technologies
-                  <strong> hybrides légères</strong> et systèmes
-                  d&apos;assistance moderne. Moteurs
-                  <strong> Energy TCE</strong> et <strong>Blue dCi</strong>{" "}
-                  nouvelle génération. Installation
-                  <strong> certifiée constructeur</strong> avec diagnostic
-                  complet. <strong>Garantie totale 12 mois</strong> avec mises à
-                  jour incluses. Vérifiez millésime pour compatibilité optimale
-                  avec votre véhicule.
+                  Vous trouverez ici le calculateur Renault 310321148R, un
+                  module de commande pour boîte automatique EDC destiné aux
+                  modèles Clio 4 et Captur, en versions Essence et Diesel.
+                  Associé aux boîtes DC4005 et DC4006, il assure la gestion
+                  électronique de la transmission à double embrayage. Ce
+                  calculateur peut être fourni vierge ou déjà programmé (Plug &
+                  Play) directement à partir du numéro de châssis (VIN) ou de
+                  l’immatriculation, prêt à être monté. Références d’origine
+                  Renault (310321148R – A2C30743000 – SP03241), garanti 12 mois.
                 </p>
                 <div className="carsef grid  md:grid-cols-8 grid-cols-3 md:mt-0 mt-3  items-center justify-start">
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">

@@ -34,13 +34,16 @@ const TabCatContent = () => {
             </div>
 
             <div className="bg-white/50">
-              <div className="md:flex items-center gap-5 border border-gray-200 px-4 py-7 rounded-lg">
+              <div className="flex justify-between items-center gap-5 border border-gray-200 px-4 py-7 rounded-lg">
                 <div className="md:w-1/2">
                   <div className="">
                     <>
                       <div className="">
-                        <h1 className="md:text-lg text-base md:mb-0 mb-2 text-gray-700 font-semibold flex items-center gap-2">
-                          310320728R - Calculateur Renault Clio RS
+                        <h1 className="md:text-lg text-base text-gray-700 font-semibold flex items-center gap-2">
+                          310320728R{" "}
+                          <span className="hidden md:block">
+                            - Calculateur Renault Clio RS
+                          </span>
                         </h1>
                       </div>
                     </>
@@ -89,17 +92,15 @@ const TabCatContent = () => {
                 </div>
 
                 <p className="text-justify text-[15px] my-3">
-                  Module <strong>EDC Racing</strong> dédié aux performances de
-                  la <strong>Clio RS</strong>. Ce{" "}
-                  <strong>calculateur sport</strong> améliore significativement
-                  la réactivité de la transmission automatique. Optimisé pour
-                  moteurs <strong>turbo haute performance</strong> avec
-                  cartographie spécifique RS. Installation
-                  <strong> certifiée Renault Sport</strong> avec programmation
-                  exclusive.
-                  <strong> Garantie compétition 12 mois</strong> incluse.
-                  Support technique expert disponible. Parfait pour conduite
-                  sportive et circuit.
+                  Vous trouverez ici le calculateur Renault 310320728R, un
+                  module de commande pour boîte automatique EDC destiné à la
+                  Clio RS 1.6 Essence. Conçu pour assurer la gestion
+                  électronique de la transmission à double embrayage, il reprend
+                  tous les paramètres nécessaires au bon fonctionnement de ce
+                  modèle. Ce calculateur peut être livré vierge ou déjà
+                  programmé (Plug & Play) à partir du numéro de châssis (VIN) ou
+                  de l’immatriculation, prêt à être monté. Référence d’origine
+                  Renault (310320728R), garantie 12 mois.
                 </p>
                 <div className="carsef grid  md:grid-cols-8 grid-cols-3 md:mt-0 mt-3  items-center justify-start">
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">

@@ -34,13 +34,16 @@ const TabCatContent = () => {
             </div>
 
             <div className="bg-white/50">
-              <div className="md:flex items-center gap-5 border border-gray-200 px-4 py-7 rounded-lg">
+              <div className="flex justify-between items-center gap-5 border border-gray-200 px-4 py-7 rounded-lg">
                 <div className="md:w-1/2">
                   <div className="">
                     <>
                       <div className="">
-                        <h1 className="md:text-lg text-base md:mb-0 mb-2 text-gray-700 font-semibold flex items-center gap-2">
-                          310320717R - Calculateur Captur - Clio 4 - Fluence
+                        <h1 className="md:text-lg text-base  text-gray-700 font-semibold flex items-center gap-2">
+                          310320717R{" "}
+                          <span className="hidden md:block">
+                            - Calculateur Captur - Clio 4 - Fluence
+                          </span>
                         </h1>
                       </div>
                     </>
@@ -89,19 +92,14 @@ const TabCatContent = () => {
                 </div>
 
                 <p className="text-justify text-[15px] my-3">
-                  Module <strong>EDC polyvalent</strong> pour Renault{" "}
-                  <strong>Captur</strong>, <strong>Clio 4</strong> et{" "}
-                  <strong>Fluence</strong>. Ce{" "}
-                  <strong>calculateur universel</strong> gère efficacement les
-                  transmissions automatiques sur moteurs{" "}
-                  <strong>essence H5H</strong> et <strong>diesel K9K</strong>.
-                  Configuration
-                  <strong> multi-véhicules</strong> avec programmation
-                  personnalisée. Installation
-                  <strong> professionnelle recommandée</strong> avec diagnostic
-                  complet. <strong>Garantie étendue 12 mois</strong> tous
-                  véhicules compatibles. Support technique multilingue.
-                  Validation VIN obligatoire avant commande.
+                  Vous trouverez ici le calculateur Renault 310320717R, un
+                  module de commande pour boîte automatique EDC destiné aux Clio
+                  4, Captur, Mégane 3 et Fluence, Essence et Diesel. Compatible
+                  avec les boîtes DC4005, DC4006, DC4015 et DC4016, il peut être
+                  fourni vierge ou déjà programmé (Plug & Play) à partir de
+                  l’immatriculation ou du VIN. Référence d’origine Renault
+                  (310320717R – 310321517R – 310320553R – A2C30743003), garanti
+                  12 mois.
                 </p>
                 <div className="carsef grid  md:grid-cols-8 grid-cols-3 md:mt-0 mt-3  items-center justify-start">
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">

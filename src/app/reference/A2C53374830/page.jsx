@@ -34,13 +34,16 @@ const TabCatContent = () => {
             </div>
 
             <div className="bg-white/50">
-              <div className="md:flex items-center gap-5 border border-gray-200 px-4 py-7 rounded-lg">
+              <div className="flex justify-between items-center gap-5 border border-gray-200 px-4 py-7 rounded-lg">
                 <div className="md:w-1/2">
                   <div className="">
                     <>
                       <div className="">
-                        <h1 className="md:text-lg text-base md:mb-0 mb-2 text-gray-700 font-semibold flex items-center gap-2">
-                          A2C53374830 - Calculateur Scénic 3 - Megane 3
+                        <h1 className="md:text-lg text-base  text-gray-700 font-semibold flex items-center gap-2">
+                          A2C53374830{" "}
+                          <span className="hidden md:block">
+                            - Calculateur Scénic 3 - Megane 3
+                          </span>
                         </h1>
                       </div>
                     </>
@@ -89,20 +92,15 @@ const TabCatContent = () => {
                 </div>
 
                 <p className="text-justify text-[15px] my-3">
-                  <strong>Calculateur EDC A2C53374830</strong> dédié aux{" "}
-                  <strong>Renault Scénic 3 </strong>
-                  et <strong>Mégane 3</strong> avec boîte automatique EDC.
-                  Compatible avec les motorisations
-                  <strong> 1.4 TCe essence</strong> et{" "}
-                  <strong>1.5 dCi diesel</strong>. Ce{" "}
-                  <strong>module électronique avancé </strong>
-                  assure une gestion optimale de la transmission automatique
-                  pour ces modèles. Livré{" "}
-                  <strong>pré-programmé ou en configuration vierge</strong>{" "}
-                  selon vos préférences techniques. Bénéficiez d&apos;une{" "}
-                  <strong>garantie fabricant 12 mois</strong> et d&apos;un
-                  support technique spécialisé. Installation professionnelle
-                  recommandée pour une performance optimale.
+                  Vous trouverez ici le calculateur Renault A2C53374830, un
+                  module de commande pour boîte automatique EDC destiné aux
+                  Scénic 3 et Mégane 3 équipés du moteur 1.5 Diesel. Associé aux
+                  boîtes DC4000 et DC4001, sa compatibilité dépend du code
+                  (03K00, 03K01, 03K02 ou 03K03), permettant le montage sur
+                  Mégane 3, Scénic 3 ou Scénic 3 Long. Ce calculateur peut être
+                  livré vierge ou programmé (Plug & Play) à partir de
+                  l’immatriculation. Référence d’origine Renault, garanti 12
+                  mois.
                 </p>
                 <div className="carsef grid  md:grid-cols-8 grid-cols-3 md:mt-0 mt-3  items-center justify-start">
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">

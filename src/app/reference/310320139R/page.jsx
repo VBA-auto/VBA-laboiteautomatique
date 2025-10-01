@@ -34,13 +34,16 @@ const TabCatContent = () => {
             </div>
 
             <div className="bg-white/50">
-              <div className="md:flex items-center gap-5 border border-gray-200 px-4 py-7 rounded-lg">
+              <div className="flex justify-between items-center gap-5 border border-gray-200 px-4 py-7 rounded-lg">
                 <div className="md:w-1/2">
                   <div className="">
                     <>
                       <div className="">
-                        <h1 className="md:text-lg text-base md:mb-0 mb-2 text-gray-700 font-semibold flex items-center gap-2">
-                          310320139R - Calculateur Mégane
+                        <h1 className="md:text-lg text-base md:mb-0 text-gray-700 font-semibold flex items-center gap-2">
+                          310320139R{" "}
+                          <span className="hidden md:block">
+                            - Calculateur Mégane
+                          </span>
                         </h1>
                       </div>
                     </>
@@ -89,18 +92,14 @@ const TabCatContent = () => {
                 </div>
 
                 <p className="text-justify text-[15px] my-3">
-                  Vérifiez la <strong>disponibilité</strong> de votre
-                  calculateur <strong>EDC</strong> pour Renault{" "}
-                  <strong>Mégane</strong> et <strong>Scénic 3</strong>. Ce{" "}
-                  <strong>module de commande</strong>
-                  s&apos;installe sur les versions <strong>essence</strong>{" "}
-                  (moteur H5H) et <strong>diesel</strong>
-                  (moteur K9K). Livré <strong>vierge</strong> ou programmé en{" "}
-                  <strong>Plug & Play</strong> selon vos besoins, il bénéficie
-                  d&apos;une <strong>garantie 12 mois</strong>.
-                  L&apos;installation est possible selon votre localisation.
-                  Pour toute incertitude, contactez-nous afin de confirmer que
-                  cette référence est bien adaptée à votre véhicule.
+                  Vous trouverez ici le calculateur Renault 310320139R, un
+                  module de commande pour boîte automatique EDC destiné aux
+                  Scénic 3 et Mégane 3 motorisés en 1.5 Diesel. Il est associé
+                  aux boîtes DC4 largement utilisées sur ces modèles. Ce
+                  calculateur peut être livré vierge ou déjà programmé (Plug &
+                  Play) directement à partir de l’immatriculation ou du numéro
+                  de châssis (VIN), prêt à être monté. Références d’origine
+                  Renault (310320139R – 310320408R), garantie 12 mois.
                 </p>
                 <div className="carsef grid  md:grid-cols-8 grid-cols-3 md:mt-0 mt-3  items-center justify-start">
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">

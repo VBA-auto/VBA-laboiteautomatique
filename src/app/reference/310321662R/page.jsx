@@ -34,13 +34,16 @@ const TabCatContent = () => {
             </div>
 
             <div className="bg-white/50">
-              <div className="md:flex items-center gap-5 border border-gray-200 px-4 py-7 rounded-lg">
+              <div className="flex justify-between items-center gap-5 border border-gray-200 px-4 py-7 rounded-lg">
                 <div className="md:w-1/2">
                   <div className="">
                     <>
                       <div className="">
-                        <h1 className="md:text-lg text-base md:mb-0 mb-2 text-gray-700 font-semibold flex items-center gap-2">
-                          310321662R - Calculateur Kadjar
+                        <h1 className="md:text-lg text-base text-gray-700 font-semibold flex items-center gap-2">
+                          310321662R{" "}
+                          <span className="hidden md:block">
+                            - Calculateur Kadjar
+                          </span>
                         </h1>
                       </div>
                     </>
@@ -89,18 +92,14 @@ const TabCatContent = () => {
                 </div>
 
                 <p className="text-justify text-[15px] my-3">
-                  Calculateur <strong>EDC crossover évolué</strong> pour Renault{" "}
-                  <strong>Kadjar</strong> haut de gamme. Ce{" "}
-                  <strong>module intelligent</strong> intègre les technologies
-                  les plus avancées pour SUV familial. Compatible moteurs{" "}
-                  <strong>essence TCE</strong>
-                  et <strong>diesel dCi</strong> avec transmission{" "}
-                  <strong>All-Mode 4x4-i</strong>. Gestion{" "}
-                  <strong>terrain variable</strong> avec modes Auto, 2WD et
-                  Lock. Installation <strong>Plug & Play premium</strong> avec
-                  calibrage SUV spécialisé.{" "}
-                  <strong>Garantie étendue 12 mois</strong> tous terrains.
-                  Support technique expert SUV et 4x4 disponible.
+                  Vous trouverez ici le calculateur Renault 310321662R, un
+                  module de commande pour boîte automatique EDC destiné à
+                  plusieurs modèles Renault équipés de la transmission EDC/DC4.
+                  Ce calculateur est livré vierge (non programmé) et doit être
+                  configuré directement par une concession ou un atelier équipé
+                  de l’outil constructeur, la programmation n’étant pas
+                  disponible pour le moment. Référence d’origine Renault,
+                  garanti 12 mois.
                 </p>
                 <div className="carsef grid  md:grid-cols-8 grid-cols-3 md:mt-0 mt-3  items-center justify-start">
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">

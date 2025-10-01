@@ -34,13 +34,16 @@ const TabCatContent = () => {
             </div>
 
             <div className="bg-white/50">
-              <div className="md:flex items-center gap-5 border border-gray-200 px-4 py-7 rounded-lg">
+              <div className="flex justify-between items-center gap-5 border border-gray-200 px-4 py-7 rounded-lg">
                 <div className="md:w-1/2">
                   <div className="">
                     <>
                       <div className="">
-                        <h1 className="md:text-lg text-base md:mb-0 mb-2 text-gray-700 font-semibold flex items-center gap-2">
-                          310321517R - Calculateur Renault Clio RS
+                        <h1 className="md:text-lg text-base text-gray-700 font-semibold flex items-center gap-2">
+                          310321517R{" "}
+                          <span className="hidden md:block">
+                            - Calculateur Renault Clio RS
+                          </span>
                         </h1>
                       </div>
                     </>
@@ -89,19 +92,14 @@ const TabCatContent = () => {
                 </div>
 
                 <p className="text-justify text-[15px] my-3">
-                  Calculateur <strong>EDC performance ultime</strong> dédié à la{" "}
-                  <strong>Clio RS</strong>. Ce{" "}
-                  <strong>module compétition</strong> délivre des performances
-                  exceptionnelles pour conduite sportive intensive. Compatible
-                  moteur <strong>turbo haute performance</strong> avec gestion{" "}
-                  <strong>Launch Control</strong>. Technologie
-                  <strong> Racing Mode</strong> avec passages de vitesse
-                  ultra-rapides. Installation{" "}
-                  <strong>certifiée Renault Sport</strong> avec calibrage
-                  circuit.
-                  <strong> Garantie compétition 12 mois</strong> usage sport.
-                  Support technique expert motorsport. Réservé usage sportif
-                  confirmé.
+                  Vous trouverez ici le calculateur Renault 310321517R, un
+                  module de commande pour boîte automatique EDC destiné à la
+                  Clio RS 1.6 Essence, ainsi qu’aux modèles Clio 4, Captur, et
+                  aux versions sportives Clio RS Trophy et Clio RS Cup. Ce
+                  calculateur peut être livré vierge ou déjà programmé (Plug &
+                  Play) à partir de l’immatriculation ou du numéro de châssis
+                  (VIN), prêt à être monté. Référence d’origine Renault
+                  (310320553R – 310320718R – 310321517R), garanti 12 mois.
                 </p>
                 <div className="carsef grid  md:grid-cols-8 grid-cols-3 md:mt-0 mt-3  items-center justify-start">
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">

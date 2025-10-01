@@ -34,13 +34,16 @@ const TabCatContent = () => {
             </div>
 
             <div className="bg-white/50">
-              <div className="md:flex items-center gap-5 border border-gray-200 px-4 py-7 rounded-lg">
+              <div className="flex justify-between items-center gap-5 border border-gray-200 px-4 py-7 rounded-lg">
                 <div className="md:w-1/2">
                   <div className="">
                     <>
                       <div className="">
-                        <h1 className="md:text-lg text-base md:mb-0 mb-2 text-gray-700 font-semibold flex items-center gap-2">
-                          310321354R - Calculateur Kangoo 2
+                        <h1 className="md:text-lg text-base  text-gray-700 font-semibold flex items-center gap-2">
+                          310321354R{" "}
+                          <span className="hidden md:block">
+                            - Calculateur Kangoo 2
+                          </span>
                         </h1>
                       </div>
                     </>
@@ -89,17 +92,15 @@ const TabCatContent = () => {
                 </div>
 
                 <p className="text-justify text-[15px] my-3">
-                  Module <strong>EDC utilitaire</strong> conçu pour Renault{" "}
-                  <strong>Kangoo 2</strong> professionnel. Ce{" "}
-                  <strong>calculateur robuste</strong> résiste aux conditions
-                  d&apos;utilisation intensive des véhicules utilitaires.
-                  Compatible moteurs <strong>diesel dCi</strong> et versions{" "}
-                  <strong>essence</strong> commerciales. Gestion optimisée pour
-                  charge utile et consommation. Installation{" "}
-                  <strong>certifiée professionnel</strong> avec paramétrage
-                  spécialisé. <strong>Garantie constructeur 12 mois</strong>{" "}
-                  usage intensif. Support technique dédié flotte. Vérifiez
-                  version utilitaire ou VP avant commande.
+                  Vous trouverez ici le calculateur Renault 310321354R, un
+                  module de commande pour boîte automatique EDC destiné au
+                  Kangoo 2. Il est conçu pour assurer le bon fonctionnement de
+                  la transmission à double embrayage sur ce modèle. Ce
+                  calculateur peut être fourni vierge ou déjà programmé (Plug &
+                  Play) à partir de l’immatriculation ou du numéro de châssis
+                  (VIN), prêt à être monté, sans nécessité de disposer de
+                  l’ancien calculateur. Référence d’origine Renault, garanti 12
+                  mois.
                 </p>
                 <div className="carsef grid  md:grid-cols-8 grid-cols-3 md:mt-0 mt-3  items-center justify-start">
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">

@@ -34,13 +34,16 @@ const TabCatContent = () => {
             </div>
 
             <div className="bg-white/50">
-              <div className="md:flex items-center gap-5 border border-gray-200 px-4 py-7 rounded-lg">
+              <div className="flex justify-between items-center gap-5 border border-gray-200 px-4 py-7 rounded-lg">
                 <div className="md:w-1/2">
                   <div className="">
                     <>
                       <div className="">
-                        <h1 className="md:text-lg text-base md:mb-0 mb-2 text-gray-700 font-semibold flex items-center gap-2">
-                          310321488R - Calculateur Clio 4 - Captur
+                        <h1 className="md:text-lg text-base text-gray-700 font-semibold flex items-center gap-2">
+                          310321488R{" "}
+                          <span className="hidden md:block">
+                            - Calculateur Clio 4 - Captur
+                          </span>
                         </h1>
                       </div>
                     </>
@@ -89,17 +92,16 @@ const TabCatContent = () => {
                 </div>
 
                 <p className="text-justify text-[15px] my-3">
-                  Module <strong>EDC dernière génération</strong> pour{" "}
-                  <strong>Clio 4</strong> et <strong>Captur</strong> récents. Ce{" "}
-                  <strong>calculateur évolué</strong> intègre les innovations
-                  les plus avancées en transmission automatique. Compatible avec
-                  technologies <strong>micro-hybrides</strong> et moteurs{" "}
-                  <strong>Energy</strong> nouvelle génération. Installation{" "}
-                  <strong>Plug & Play ultimme</strong> avec reconnaissance
-                  automatique du véhicule.{" "}
-                  <strong>Garantie totale 12 mois</strong> avec mises à jour OTA
-                  incluses. Support technique de pointe disponible. Vérifiez
-                  compatibilité.
+                  Vous trouverez ici le calculateur Renault 310321488R, le
+                  modèle le plus demandé et le plus universel de la gamme EDC.
+                  Il est compatible avec les Clio 4, Captur, Mégane 3 et Scénic
+                  3, en versions Essence et Diesel. Associé aux boîtes DC4005 et
+                  DC4006, il couvre un large nombre de configurations Renault.
+                  Ce calculateur peut être fourni vierge ou programmé (Plug &
+                  Play) directement à partir de l’immatriculation ou du numéro
+                  de châssis (VIN), prêt à être monté. Références d’origine
+                  Renault (310321488R – A2C30743000 – A2C30743002), garanti 12
+                  mois.
                 </p>
                 <div className="carsef grid  md:grid-cols-8 grid-cols-3 md:mt-0 mt-3  items-center justify-start">
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">

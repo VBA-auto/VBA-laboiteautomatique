@@ -34,13 +34,16 @@ const TabCatContent = () => {
             </div>
 
             <div className="bg-white/50">
-              <div className="md:flex items-center gap-5 border border-gray-200 px-4 py-7 rounded-lg">
+              <div className="flex justify-between items-center gap-5 border border-gray-200 px-4 py-7 rounded-lg">
                 <div className="md:w-1/2">
                   <div className="">
                     <>
                       <div className="">
-                        <h1 className="md:text-lg text-base md:mb-0 mb-2 text-gray-700 font-semibold flex items-center gap-2">
-                          310321109R - Calculateur Clio 4 - Captur
+                        <h1 className="md:text-lg text-base text-gray-700 font-semibold flex items-center gap-2">
+                          310321109R{" "}
+                          <span className="hidden md:block">
+                            - Calculateur Clio 4 - Captur
+                          </span>
                         </h1>
                       </div>
                     </>
@@ -89,25 +92,23 @@ const TabCatContent = () => {
                 </div>
 
                 <p className="text-justify text-[15px] my-3">
-                  Calculateur <strong>EDC moderne</strong> optimisé pour{" "}
-                  <strong>Clio 4</strong> et <strong>Captur</strong>. Ce{" "}
-                  <strong>module nouvelle génération</strong> intègre les
-                  dernières avancées technologiques Renault. Compatible avec
-                  systèmes <strong>Start-Stop </strong>
-                  et aide à la conduite moderne. Moteurs <strong>
-                    TCE
-                  </strong> et <strong>dCi</strong> optimisés pour performances
-                  et économie. Installation <strong>Plug & Play </strong>
-                  avec diagnostic intégré.{" "}
-                  <strong>Garantie fabricant 12 mois</strong> avec mise à jour
-                  logicielle incluse. Validation technique préalable.
+                  Vous trouverez ici le calculateur Renault 310321109R, un
+                  module de commande pour boîte automatique EDC destiné aux
+                  modèles Clio 4 et Captur, en motorisations 1.2 Essence et 1.5
+                  Diesel. Associé aux boîtes DC4005, DC4006, DC4015 et DC4016,
+                  il assure la gestion de la transmission à double embrayage. Ce
+                  calculateur peut être fourni vierge ou déjà programmé (Plug &
+                  Play) directement à partir du numéro de châssis (VIN) ou de
+                  l’immatriculation, prêt à être monté. Références d’origine
+                  Renault (310321109R – 310321488R – 310320840R – A2C30743002),
+                  garanti 12 mois.
                 </p>
                 <div className="carsef grid  md:grid-cols-8 grid-cols-3 md:mt-0 mt-3  items-center justify-start">
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310320368R">310320368R </Link>
+                    <Link href="/reference/310321109R">310321109R </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310320717R">310320717R </Link>
+                    <Link href="/reference/310321488R">310321488R </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
                     <Link href="/reference/310320721R">310320721R </Link>

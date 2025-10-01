@@ -34,13 +34,16 @@ const TabCatContent = () => {
             </div>
 
             <div className="bg-white/50">
-              <div className="md:flex items-center gap-5 border border-gray-200 px-4 py-7 rounded-lg">
+              <div className="flex justify-between items-center gap-5 border border-gray-200 px-4 py-7 rounded-lg">
                 <div className="md:w-1/2">
                   <div className="">
                     <>
                       <div className="">
-                        <h1 className="md:text-lg text-base md:mb-0 mb-2 text-gray-700 font-semibold flex items-center gap-2">
-                          310320368R - Calculateur Clio 4 - Captur
+                        <h1 className="md:text-lg text-base text-gray-700 font-semibold flex items-center gap-2">
+                          310320368R{" "}
+                          <span className="hidden md:block">
+                            - Calculateur Clio 4 - Captur
+                          </span>
                         </h1>
                       </div>
                     </>
@@ -89,17 +92,14 @@ const TabCatContent = () => {
                 </div>
 
                 <p className="text-justify text-[15px] my-3">
-                  Module <strong>EDC spécialisé</strong> pour Renault{" "}
-                  <strong>Clio 4</strong> et <strong>Captur</strong>. Ce{" "}
-                  <strong>calculateur de boîte automatique</strong>{" "}
-                  s&apos;adapte parfaitement aux moteurs{" "}
-                  <strong>essence H5H</strong> et <strong>diesel K9K</strong>.
-                  Installation <strong>professionnelle </strong>
-                  recommandée avec programmation <strong>sur mesure</strong>.
-                  Compatible avec systèmes de transmission moderne.{" "}
-                  <strong>Garantie étendue 12 mois </strong>
-                  incluse. Support technique disponible pour assistance
-                  complète. Contactez nos experts pour validation.
+                  Vous trouverez ici le calculateur Renault 310320368R, un
+                  module de commande pour boîte automatique EDC destiné à la
+                  Clio 4 1.2 Essence (moteur H5F412). Il est associé aux boîtes
+                  utilisées sur ce modèle et peut aussi équiper certaines
+                  versions du Captur. Ce calculateur peut être fourni vierge ou
+                  déjà programmé (Plug & Play) à partir de l’immatriculation ou
+                  du numéro de châssis (VIN), prêt à être monté. Référence
+                  d’origine Renault (310320368R – 01K00), garanti 12 mois.
                 </p>
                 <div className="carsef grid  md:grid-cols-8 grid-cols-3 md:mt-0 mt-3  items-center justify-start">
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">

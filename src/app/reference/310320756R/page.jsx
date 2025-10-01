@@ -34,13 +34,16 @@ const TabCatContent = () => {
             </div>
 
             <div className="bg-white/50">
-              <div className="md:flex items-center gap-5 border border-gray-200 px-4 py-7 rounded-lg">
+              <div className="flex justify-between items-center gap-5 border border-gray-200 px-4 py-7 rounded-lg">
                 <div className="md:w-1/2">
                   <div className="">
                     <>
                       <div className="">
-                        <h1 className="md:text-lg text-base md:mb-0 mb-2 text-gray-700 font-semibold flex items-center gap-2">
-                          310320756R - Calculateur Captur - Clio 4
+                        <h1 className="md:text-lg text-base text-gray-700 font-semibold flex items-center gap-2">
+                          310320756R{" "}
+                          <span className="hidden md:block">
+                            - Calculateur Captur - Clio 4
+                          </span>
                         </h1>
                       </div>
                     </>
@@ -89,16 +92,14 @@ const TabCatContent = () => {
                 </div>
 
                 <p className="text-justify text-[15px] my-3">
-                  Module <strong>EDC bi-compatible</strong> pour Renault{" "}
-                  <strong>Captur</strong> et <strong>Clio 4</strong>. Ce{" "}
-                  <strong>calculateur adapté</strong> gère efficacement les deux
-                  plateformes véhicules avec précision. Compatible moteurs{" "}
-                  <strong>TCE essence</strong> et
-                  <strong> dCi diesel</strong> toutes cylindrées. Installation{" "}
-                  <strong>universelle</strong> avec programmation sélective
-                  intégrée. <strong>Garantie étendue 12 mois </strong>
-                  double véhicule. Support technique spécialisé multi-modèles.
-                  Contrôle VIN indispensable pour validation compatibilité.
+                  Vous trouverez ici le calculateur Renault 310320756R, un
+                  module de commande pour boîte automatique EDC destiné aux Clio
+                  4 et Captur (versions Essence et Diesel). Associé aux boîtes
+                  DC4005 et DC4006, il gère la transmission à double embrayage.
+                  Ce calculateur peut être fourni vierge ou directement
+                  programmé (Plug & Play) grâce à l’immatriculation ou au VIN,
+                  prêt à être monté. Référence d’origine Renault (310320756R),
+                  garanti 12 mois.
                 </p>
                 <div className="carsef grid  md:grid-cols-8 grid-cols-3 md:mt-0 mt-3  items-center justify-start">
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">

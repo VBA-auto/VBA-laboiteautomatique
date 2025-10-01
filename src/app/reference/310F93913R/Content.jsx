@@ -97,15 +97,24 @@ const SingleSearchView = () => {
                   <div className="px-4 mb-3">
                     <p className="text-[14px] text-gray-400">Compatibilité</p>
                     <div className="flex flex-wrap gap-2">
-                      <button className="bg-gray-100  px-2 text-[14px] text-black mt-1 rounded">
+                      <Link
+                        href="/megane"
+                        className="bg-gray-100  px-2 text-[14px] text-black mt-1 rounded"
+                      >
                         Mégane 3
-                      </button>
-                      <button className="bg-gray-100  px-2 text-[14px] text-black mt-1 rounded">
+                      </Link>
+                      <Link
+                        href="/clio"
+                        className="bg-gray-100  px-2 text-[14px] text-black mt-1 rounded"
+                      >
                         Clio IV
-                      </button>
-                      <button className="bg-gray-100  px-2 text-[14px] text-black mt-1 rounded">
+                      </Link>
+                      <Link
+                        href="/captur"
+                        className="bg-gray-100  px-2 text-[14px] text-black mt-1 rounded"
+                      >
                         Captur
-                      </button>
+                      </Link>
                     </div>
                   </div>
                   <div className="px-4 mb-2">

@@ -11,6 +11,7 @@ import EssenceCompClio from "./components/EssenceCompClio";
 import DieselCompClio from "./components/DieselCompClio";
 import { useRouter, useSearchParams } from "next/navigation";
 import PageLevelStock from "@/components/PagelevelStock";
+import SinglePageTotalStocks from "@/components/singlePageTotalStocks";
 const pageDescription =
   "Renault Captur, calculateur boite automatique EDC pour Renault Captur essence et Renault Captur Diesel voir stock";
 const HeadingText = "Calculateur pour Renault Captur";
@@ -186,13 +187,21 @@ const TabCatContent = () => {
                 </div>
               </div>
               <div className="md:w-3/4 ">
-                <div className="flex justify-between items-center">
-                  <div className="md:w-1/2">
+                <div className="flex justify-between">
+                  <div className="w-1/2">
                     <ReturnButton />
-                    <h1 className="text-2xl mt-2 font-semibold  text-gray-700">
-                      Renault Clio IV
-                    </h1>
                   </div>
+                  <div className="w-1/2">
+                    <SinglePageTotalStocks
+                      title="Clio 4"
+                      carName="Renault Clio 4"
+                    />
+                  </div>
+                </div>
+                <div className="">
+                  <h1 className="text-2xl mt-0 font-semibold  text-gray-700">
+                    Renault Clio IV
+                  </h1>
                 </div>
 
                 <p className="text-justify text-[15px] my-3">

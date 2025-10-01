@@ -34,13 +34,16 @@ const TabCatContent = () => {
             </div>
 
             <div className="bg-white/50">
-              <div className="md:flex items-center gap-5 border border-gray-200 px-4 py-7 rounded-lg">
+              <div className="flex justify-between items-center gap-5 border border-gray-200 px-4 py-7 rounded-lg">
                 <div className="md:w-1/2">
                   <div className="">
                     <>
                       <div className="">
-                        <h1 className="md:text-lg text-base md:mb-0 mb-2 text-gray-700 font-semibold flex items-center gap-2">
-                          310321474R - Calculateur Renault Scenic
+                        <h1 className="md:text-lg text-base  text-gray-700 font-semibold flex items-center gap-2">
+                          310321474R{" "}
+                          <span className="hidden md:block">
+                            - Calculateur Renault Scenic
+                          </span>
                         </h1>
                       </div>
                     </>
@@ -89,19 +92,14 @@ const TabCatContent = () => {
                 </div>
 
                 <p className="text-justify text-[15px] my-3">
-                  Calculateur <strong>EDC monospace</strong> spécifique au
-                  Renault <strong>Scénic</strong> familial. Ce{" "}
-                  <strong>module familial</strong> optimise la transmission pour
-                  confort et sécurité des passagers. Compatible moteurs{" "}
-                  <strong>TCE essence</strong>
-                  et <strong>dCi diesel</strong> avec technologie{" "}
-                  <strong>Stop & Start</strong> avancée. Gestion{" "}
-                  <strong>intelligente</strong> adaptée au poids variable et
-                  charge familiale. Installation{" "}
-                  <strong>Plug & Play certifiée</strong> monospace.
-                  <strong> Garantie fabricant 12 mois</strong> usage familial
-                  intensif. Support technique spécialisé véhicules familiaux
-                  disponible.
+                  Vous trouverez ici le calculateur Renault 310321474R, un
+                  module de commande pour boîte automatique EDC destiné au
+                  Scénic court et long. Associé à la boîte DC4001, il assure la
+                  gestion électronique de la transmission à double embrayage sur
+                  ce modèle. Ce calculateur peut être livré vierge ou déjà
+                  programmé (Plug & Play) à partir du numéro de châssis (VIN) ou
+                  de l’immatriculation, prêt à être monté. Référence d’origine
+                  Renault (310321474R / DC4001), garanti 12 mois.
                 </p>
                 <div className="carsef grid  md:grid-cols-8 grid-cols-3 md:mt-0 mt-3  items-center justify-start">
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">

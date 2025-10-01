@@ -34,13 +34,16 @@ const TabCatContent = () => {
             </div>
 
             <div className="bg-white/50">
-              <div className="md:flex items-center gap-5 border border-gray-200 px-4 py-7 rounded-lg">
+              <div className="flex justify-between items-center gap-5 border border-gray-200 px-4 py-7 rounded-lg">
                 <div className="md:w-1/2">
                   <div className="">
                     <>
                       <div className="">
-                        <h1 className="md:text-lg text-base md:mb-0 mb-2 text-gray-700 font-semibold flex items-center gap-2">
-                          310321808R - Calculateur Megane IV
+                        <h1 className="md:text-lg text-base  text-gray-700 font-semibold flex items-center gap-2">
+                          310321808R{" "}
+                          <span className="hidden md:block">
+                            - Calculateur Megane IV
+                          </span>
                         </h1>
                       </div>
                     </>
@@ -89,18 +92,14 @@ const TabCatContent = () => {
                 </div>
 
                 <p className="text-justify text-[15px] my-3">
-                  Module <strong>EDC nouvelle génération</strong> pour Renault{" "}
-                  <strong>Mégane IV</strong>. Ce{" "}
-                  <strong>calculateur innovant</strong> représente
-                  l&apos;évolution ultime de la transmission automatique
-                  Renault. Compatible moteurs
-                  <strong> Energy TCE</strong> et <strong>Blue dCi</strong> avec
-                  technologies <strong>hybrides </strong>
-                  intégrées. Système <strong>Multi-Sense</strong> avec modes de
-                  conduite personnalisables. Installation{" "}
-                  <strong>Plug & Play premium</strong> avec reconnaissance
-                  automatique. <strong>Garantie étendue 12 mois </strong>
-                  nouvelle génération. Le futur de la transmission EDC.
+                  Vous trouverez ici le calculateur Renault 310321808R, un
+                  module de commande pour boîte automatique EDC destiné à la
+                  Mégane IV à partir de 2015. Compatible avec la boîte DC4009,
+                  il s’adapte aux versions équipées de la transmission EDC. Ce
+                  calculateur doit être programmé à partir de l’ancien : il est
+                  indispensable de disposer de l’ancien calculateur pour cloner
+                  ses données, car il ne peut pas être programmé directement.
+                  Référence d’origine Renault, garanti 12 mois.
                 </p>
                 <div className="carsef grid  md:grid-cols-8 grid-cols-3 md:mt-0 mt-3  items-center justify-start">
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">

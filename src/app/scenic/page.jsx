@@ -11,6 +11,7 @@ import SubHeader from "@/components/SubHeader";
 import { useRouter, useSearchParams } from "next/navigation";
 import DieselCompScenic from "./components/DieselCompScenic";
 import PageLevelStock from "@/components/PagelevelStock";
+import SinglePageTotalStocks from "@/components/singlePageTotalStocks";
 const pageDescription =
   "Renault Scenic 3, calculateur boite automatique EDC pour Renault scenic 3 voir stock";
 const HeadingText = "Calculateur pour Renault Scenic";
@@ -144,13 +145,21 @@ const TabCatContent = () => {
                 </div>
               </div>
               <div className="md:w-3/4 ">
-                <div className="flex justify-between items-center">
-                  <div className="md:w-1/2">
+                <div className="flex justify-between">
+                  <div className="w-1/2">
                     <ReturnButton />
-                    <h1 className="text-2xl mt-2 font-semibold  text-gray-700">
-                      Renault Scénic
-                    </h1>
                   </div>
+                  <div className="w-1/2">
+                    <SinglePageTotalStocks
+                      title="Scénic"
+                      carName="Renault Scenic"
+                    />
+                  </div>
+                </div>
+                <div className="">
+                  <h1 className="text-2xl mt-0 font-semibold  text-gray-700">
+                    Renault Scénic
+                  </h1>
                 </div>
 
                 <p className="text-justify text-[15px] my-3">

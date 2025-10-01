@@ -34,13 +34,16 @@ const TabCatContent = () => {
             </div>
 
             <div className="bg-white/50">
-              <div className="md:flex items-center gap-5 border border-gray-200 px-4 py-7 rounded-lg">
+              <div className="flex justify-between items-center gap-5 border border-gray-200 px-4 py-7 rounded-lg">
                 <div className="md:w-1/2">
                   <div className="">
                     <>
                       <div className="">
-                        <h1 className="md:text-lg text-base md:mb-0 mb-2 text-gray-700 font-semibold flex items-center gap-2">
-                          A2C30743002 - Calculateur Clio RS - Captur - Clio 4
+                        <h1 className="md:text-lg text-base  text-gray-700 font-semibold flex items-center gap-2">
+                          A2C30743002{" "}
+                          <span className="hidden md:block">
+                            - Calculateur Clio RS - Captur - Clio 4
+                          </span>
                         </h1>
                       </div>
                     </>
@@ -89,21 +92,14 @@ const TabCatContent = () => {
                 </div>
 
                 <p className="text-justify text-[15px] my-3">
-                  <strong>Calculateur EDC A2C30743002</strong> spécialisé pour{" "}
-                  <strong>Renault Clio RS</strong>,<strong>Captur</strong> et{" "}
-                  <strong>Clio 4</strong> avec transmission automatique.
-                  Optimisé pour les{" "}
-                  <strong>
-                    motorisations haute performance 1.6 Turbo essence
-                  </strong>{" "}
-                  et <strong>1.5 dCi diesel</strong>. Ce{" "}
-                  <strong>module de contrôle avancé</strong> garantit des
-                  passages de vitesses rapides et précis pour une expérience de
-                  conduite sportive. Disponible en{" "}
-                  <strong>configuration vierge ou programmée</strong>. Couvert
-                  par une <strong>garantie professionnelle 12 mois</strong> avec
-                  service d&apos;installation spécialisé disponible. Validation
-                  technique recommandée avant commande.
+                  Vous trouverez ici le calculateur Renault A2C30743002, un
+                  module de commande pour boîte automatique EDC destiné aux Clio
+                  4 et Captur, en motorisations Essence et Diesel. Associé aux
+                  boîtes DC4015 et DC4016, il est largement utilisé sur ces
+                  modèles. Ce calculateur peut être livré vierge ou déjà
+                  programmé (Plug & Play) à partir de l’immatriculation ou du
+                  numéro de châssis (VIN). Références d’origine Renault
+                  (A2C30743002 – 01K00), garanti 12 mois.
                 </p>
                 <div className="carsef grid  md:grid-cols-8 grid-cols-3 md:mt-0 mt-3  items-center justify-start">
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">

@@ -34,13 +34,16 @@ const TabCatContent = () => {
             </div>
 
             <div className="bg-white/50">
-              <div className="md:flex items-center gap-5 border border-gray-200 px-4 py-7 rounded-lg">
+              <div className="flex justify-between items-center gap-5 border border-gray-200 px-4 py-7 rounded-lg">
                 <div className="md:w-1/2">
                   <div className="">
                     <>
                       <div className="">
-                        <h1 className="md:text-lg text-base md:mb-0 mb-2 text-gray-700 font-semibold flex items-center gap-2">
-                          310320468R - Calculateur Clio 4 - Captur
+                        <h1 className="md:text-lg text-base text-gray-700 font-semibold flex items-center gap-2">
+                          310320468R{" "}
+                          <span className="hidden md:block">
+                            - Calculateur Clio 4 - Captur
+                          </span>
                         </h1>
                       </div>
                     </>
@@ -89,17 +92,14 @@ const TabCatContent = () => {
                 </div>
 
                 <p className="text-justify text-[15px] my-3">
-                  Module <strong>EDC avancé</strong> pour boîtes automatiques
-                  Renault <strong>nouvelle génération</strong>. Ce{" "}
-                  <strong>calculateur intelligent</strong> optimise les
-                  changements de vitesses sur moteurs <strong>essence</strong>{" "}
-                  et <strong>diesel</strong>. Technologie{" "}
-                  <strong>Plug & Play </strong>
-                  pour installation rapide. Compatible avec diagnostic
-                  constructeur. <strong>Garantie fabricant 12 mois</strong> avec
-                  support technique. Service après-vente réactif. Programmation
-                  adaptée à votre véhicule. Vérification préalable recommandée
-                  avant commande.
+                  Vous trouverez ici le calculateur Renault 310320468R, un
+                  module de commande pour boîte automatique EDC destiné aux Clio
+                  4, Captur, Mégane 3 et Scénic 3, en versions Essence et
+                  Diesel. Associé aux boîtes DC4005 et DC4006, il assure la
+                  gestion de la transmission. Ce calculateur peut être fourni
+                  vierge ou déjà programmé (Plug & Play) à partir du VIN ou de
+                  l’immatriculation. Références d’origine Renault (310320468R –
+                  310320756R – A2C30743000), garanti 12 mois.
                 </p>
                 <div className="carsef grid  md:grid-cols-8 grid-cols-3 md:mt-0 mt-3  items-center justify-start">
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">

@@ -34,13 +34,16 @@ const TabCatContent = () => {
             </div>
 
             <div className="bg-white/50">
-              <div className="md:flex items-center gap-5 border border-gray-200 px-4 py-7 rounded-lg">
+              <div className="flex justify-between items-center gap-5 border border-gray-200 px-4 py-7 rounded-lg">
                 <div className="md:w-1/2">
                   <div className="">
                     <>
                       <div className="">
-                        <h1 className="md:text-lg text-base md:mb-0 mb-2 text-gray-700 font-semibold flex items-center gap-2">
-                          310321994R - Calculateur Clio V / Captur
+                        <h1 className="md:text-lg text-base  text-gray-700 font-semibold flex items-center gap-2">
+                          310321994R{" "}
+                          <span className="hidden md:block">
+                            - Calculateur Clio V / Captur
+                          </span>
                         </h1>
                       </div>
                     </>
@@ -89,18 +92,21 @@ const TabCatContent = () => {
                 </div>
 
                 <p className="text-justify text-[15px] my-3">
-                  Calculateur <strong>EDC futur</strong> pour nouvelle
-                  génération <strong>Clio V</strong> et <strong>Captur</strong>.
-                  Ce <strong>module révolutionnaire</strong> intègre les
-                  technologies les plus avancées de demain. Compatible avec
-                  moteurs
-                  <strong> hybrides</strong> et systèmes{" "}
-                  <strong>électriques</strong> nouvelle génération. Intelligence{" "}
-                  <strong>artificielle intégrée</strong> pour adaptation
-                  automatique du style de conduite. Installation{" "}
-                  <strong>Over-The-Air</strong> avec mises à jour continue.{" "}
-                  <strong>Garantie future 12 mois </strong>
-                  technologies embarquées. L&apos;avenir de l&apos;automobile.
+                  Vous trouverez ici le calculateur Renault 310321994R, un
+                  module de commande pour boîte automatique EDC destiné aux
+                  modèles Clio V (RJAB) Essence à partir de 2020, ainsi qu’au
+                  Renault Captur. Il est compatible avec les versions équipées
+                  du moteur H5H470, de la boîte DW5007 et du moteur 1.3 TCe 130
+                  16V. Ce calculateur peut être livré vierge ou déjà programmé
+                  (Plug & Play) directement à partir du VIN ou de
+                  l’immatriculation, prêt à être monté. Référence d’origine
+                  garantie 12 mois. Instructions de montage si besoin : 
+                  <Link
+                    href="https://youtu.be/6X72SXZhZ44"
+                    className="text-blue-500"
+                  >
+                    https://youtu.be/6X72SXZhZ44
+                  </Link>
                 </p>
                 <div className="carsef grid  md:grid-cols-8 grid-cols-3 md:mt-0 mt-3  items-center justify-start">
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">

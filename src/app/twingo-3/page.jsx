@@ -12,6 +12,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 
 import EssenceCompTwing0 from "./components/EssenceCompTwingo";
 import PageLevelStock from "@/components/PagelevelStock";
+import SinglePageTotalStocks from "@/components/singlePageTotalStocks";
 
 const pageDescription =
   "Calculateur pour Twingo 3. Symptômes de panne, références compatibles, remplacement.   ";
@@ -144,13 +145,21 @@ const TabCatContent = () => {
                 </div>
               </div>
               <div className="md:w-3/4 ">
-                <div className="flex justify-between items-center">
-                  <div className="md:w-1/2">
+                <div className="flex justify-between">
+                  <div className="w-1/2">
                     <ReturnButton />
-                    <h1 className="text-2xl mt-2 font-semibold  text-gray-700">
-                      Renault Twingo 3
-                    </h1>
                   </div>
+                  <div className="w-1/2">
+                    <SinglePageTotalStocks
+                      title="Twingo 3"
+                      carName="Renault Twingo 3"
+                    />
+                  </div>
+                </div>
+                <div className="">
+                  <h1 className="text-2xl mt-0 font-semibold  text-gray-700">
+                    Renault Twingo 3
+                  </h1>
                 </div>
 
                 <p className="text-justify text-[15px] my-3">

@@ -34,13 +34,16 @@ const TabCatContent = () => {
             </div>
 
             <div className="bg-white/50">
-              <div className="md:flex items-center gap-5 border border-gray-200 px-4 py-7 rounded-lg">
+              <div className="flex justify-between items-center gap-5 border border-gray-200 px-4 py-7 rounded-lg">
                 <div className="md:w-1/2">
                   <div className="">
                     <>
                       <div className="">
-                        <h1 className="md:text-lg text-base md:mb-0 mb-2 text-gray-700 font-semibold flex items-center gap-2">
-                          310320553R - Calculateur Renault Clio RS
+                        <h1 className="md:text-lg text-base text-gray-700 font-semibold flex items-center gap-2">
+                          310320553R
+                          <span className="hidden md:block">
+                            - Calculateur Renault Clio RS
+                          </span>
                         </h1>
                       </div>
                     </>
@@ -89,16 +92,14 @@ const TabCatContent = () => {
                 </div>
 
                 <p className="text-justify text-[15px] my-3">
-                  Calculateur <strong>EDC sportif</strong> spécialement conçu
-                  pour Renault <strong>Clio RS</strong>. Ce{" "}
-                  <strong>module haute performance</strong> optimise les
-                  passages de vitesse pour une conduite dynamique. Compatible
-                  avec moteur <strong>turbo essence </strong>
-                  et système <strong>RS Monitor</strong>. Installation{" "}
-                  <strong>Plug & Play</strong> avec programmation sportive
-                  incluse. <strong>Garantie fabricant </strong> 12 mois avec
-                  support technique spécialisé. Expertise Renault Sport
-                  certifiée. Vérifiez compatibilité avec votre millésime RS.
+                  Vous trouverez ici le calculateur Renault 310320553R, un
+                  module de commande pour boîte automatique EDC compatible avec
+                  Clio 4, Captur, Mégane 3 et Fluence (versions Essence et
+                  Diesel). Associé aux boîtes DC4005, DC4006, DC4015 et DC4016,
+                  il peut être fourni vierge ou programmé (Plug & Play)
+                  directement à partir de l’immatriculation ou du VIN, prêt à
+                  être installé. Référence d’origine Renault (310320553R –
+                  310321517R – 310320717R – A2C30743003), garanti 12 mois.
                 </p>
                 <div className="carsef grid  md:grid-cols-8 grid-cols-3 md:mt-0 mt-3  items-center justify-start">
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">

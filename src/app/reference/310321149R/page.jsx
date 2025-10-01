@@ -34,13 +34,16 @@ const TabCatContent = () => {
             </div>
 
             <div className="bg-white/50">
-              <div className="md:flex items-center gap-5 border border-gray-200 px-4 py-7 rounded-lg">
+              <div className="flex justify-between items-center gap-5 border border-gray-200 px-4 py-7 rounded-lg">
                 <div className="md:w-1/2">
                   <div className="">
                     <>
                       <div className="">
-                        <h1 className="md:text-lg text-base md:mb-0 mb-2 text-gray-700 font-semibold flex items-center gap-2">
-                          310321149R - Calculateur Renault
+                        <h1 className="md:text-lg text-base text-gray-700 font-semibold flex items-center gap-2">
+                          310321149R{" "}
+                          <span className="hidden md:block">
+                            - Calculateur Renault
+                          </span>
                         </h1>
                       </div>
                     </>
@@ -89,18 +92,15 @@ const TabCatContent = () => {
                 </div>
 
                 <p className="text-justify text-[15px] my-3">
-                  Module <strong>EDC universel</strong> pour gamme complète{" "}
-                  <strong>Renault</strong>. Ce{" "}
-                  <strong>calculateur polyvalent</strong> s&apos;adapte à
-                  plusieurs modèles de la marque au losange. Compatible avec
-                  technologies <strong>essence et diesel</strong> modernes, il
-                  offre une flexibilité d&apos;installation exceptionnelle.
-                  Programmation <strong>multi-véhicules</strong> avec
-                  reconnaissance automatique du modèle.{" "}
-                  <strong>Garantie constructeur 12 mois </strong>
-                  étendue à tous véhicules compatibles. Support technique
-                  spécialisé disponible. Identification précise du véhicule
-                  requise.
+                  Vous trouverez ici le calculateur Renault 310321149R, un
+                  module de commande pour boîte automatique EDC associé à la
+                  boîte DW5. Il est compatible avec les modèles Scénic IV (JFA –
+                  RFA), Espace V (JFC) et Mégane IV (LFF). Ce calculateur est
+                  livré vierge et doit obligatoirement être programmé avant
+                  installation. Contrairement aux anciens modèles, il ne peut
+                  pas être cloné et nécessite une programmation en concession à
+                  partir du VIN ou de l’immatriculation. Référence d’origine
+                  Renault (310321149R – 320106643R), garanti 12 mois.
                 </p>
                 <div className="carsef grid  md:grid-cols-8 grid-cols-3 md:mt-0 mt-3  items-center justify-start">
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">

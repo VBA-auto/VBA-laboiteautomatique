@@ -34,13 +34,16 @@ const TabCatContent = () => {
             </div>
 
             <div className="bg-white/50">
-              <div className="md:flex items-center gap-5 border border-gray-200 px-4 py-7 rounded-lg">
+              <div className="flex justify-between items-center gap-5 border border-gray-200 px-4 py-7 rounded-lg">
                 <div className="md:w-1/2">
                   <div className="">
                     <>
                       <div className="">
-                        <h1 className="md:text-lg text-base md:mb-0 mb-2 text-gray-700 font-semibold flex items-center gap-2">
-                          310321561R - Calculateur Twingo 3
+                        <h1 className="md:text-lg text-base text-gray-700 font-semibold flex items-center gap-2">
+                          310321561R{" "}
+                          <span className="hidden md:block">
+                            - Calculateur Twingo 3
+                          </span>
                         </h1>
                       </div>
                     </>
@@ -89,17 +92,14 @@ const TabCatContent = () => {
                 </div>
 
                 <p className="text-justify text-[15px] my-3">
-                  Module <strong>EDC urbain</strong> conçu pour la Renault{" "}
-                  <strong>Twingo 3</strong> citadine. Ce{" "}
-                  <strong>calculateur compact</strong> optimise la transmission
-                  automatique pour usage urbain intensif. Compatible moteur{" "}
-                  <strong>essence TCE </strong>3 cylindres avec technologie{" "}
-                  <strong>Start-Stop</strong> intégrée. Installation{" "}
-                  <strong>Plug & Play</strong> avec paramétrage citadin
-                  optimisé. Gestion <strong>Eco Mode</strong> pour consommation
-                  réduite en ville.
-                  <strong> Garantie constructeur 12 mois</strong> usage urbain.
-                  Support technique dédié véhicules compacts disponible 24/7.
+                  Vous trouverez ici le calculateur Renault 310321561R, un
+                  module de commande pour boîte automatique EDC destiné à la
+                  Twingo 3. Compatible avec les motorisations 0.9 TCe 90 (BCM9,
+                  BCM2), il assure le bon fonctionnement de la transmission. Ce
+                  calculateur est livré vierge et ne peut pas être programmé
+                  sans l’ancien. Il doit obligatoirement être cloné à partir du
+                  calculateur d’origine. Référence d’origine Renault, garanti 12
+                  mois.
                 </p>
                 <div className="carsef grid  md:grid-cols-8 grid-cols-3 md:mt-0 mt-3  items-center justify-start">
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">

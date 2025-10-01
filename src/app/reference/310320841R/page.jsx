@@ -34,13 +34,16 @@ const TabCatContent = () => {
             </div>
 
             <div className="bg-white/50">
-              <div className="md:flex items-center gap-5 border border-gray-200 px-4 py-7 rounded-lg">
+              <div className="flex justify-between items-center gap-5 border border-gray-200 px-4 py-7 rounded-lg">
                 <div className="md:w-1/2">
                   <div className="">
                     <>
                       <div className="">
-                        <h1 className="md:text-lg text-base md:mb-0 mb-2 text-gray-700 font-semibold flex items-center gap-2">
-                          310320841R - Calculateur Captur - Clio 4
+                        <h1 className="md:text-lg text-base  text-gray-700 font-semibold flex items-center gap-2">
+                          310320841R{" "}
+                          <span className="hidden md:block">
+                            - Calculateur Captur - Clio 4
+                          </span>
                         </h1>
                       </div>
                     </>
@@ -89,17 +92,14 @@ const TabCatContent = () => {
                 </div>
 
                 <p className="text-justify text-[15px] my-3">
-                  Calculateur <strong>EDC hybride</strong> pour Renault{" "}
-                  <strong>Captur</strong> et <strong>Clio 4</strong>. Ce{" "}
-                  <strong>module dual-compatible</strong> s&apos;adapte
-                  parfaitement aux deux plateformes avec gestion automatique des
-                  paramètres. Compatible moteurs <strong>essence TCE</strong> et{" "}
-                  <strong>diesel dCi</strong> nouvelle génération. Installation{" "}
-                  <strong>Plug & Play certifiée</strong> avec reconnaissance
-                  automatique du véhicule.{" "}
-                  <strong>Garantie constructeur 12 mois </strong>
-                  bi-véhicule. Support multi-plateformes assuré. Vérifiez
-                  millésime pour optimisation parfaite du système.
+                  Vous trouverez ici le calculateur Renault 310320841R, un
+                  module de commande pour boîte automatique EDC destiné aux
+                  modèles Scénic et Mégane 4. Associé à la boîte DC4 (013), il
+                  est compatible avec différentes motorisations de ces
+                  véhicules. Ce calculateur ne peut pas être programmé
+                  directement : il doit obligatoirement être cloné avec l’ancien
+                  afin de transférer les données et être fonctionnel. Référence
+                  d’origine Renault (310320841R), garanti 12 mois.
                 </p>
                 <div className="carsef grid  md:grid-cols-8 grid-cols-3 md:mt-0 mt-3  items-center justify-start">
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">

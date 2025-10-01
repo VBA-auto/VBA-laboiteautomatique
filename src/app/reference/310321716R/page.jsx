@@ -34,13 +34,16 @@ const TabCatContent = () => {
             </div>
 
             <div className="bg-white/50">
-              <div className="md:flex items-center gap-5 border border-gray-200 px-4 py-7 rounded-lg">
+              <div className="flex justify-between items-center gap-5 border border-gray-200 px-4 py-7 rounded-lg">
                 <div className="md:w-1/2">
                   <div className="">
                     <>
                       <div className="">
-                        <h1 className="md:text-lg text-base md:mb-0 mb-2 text-gray-700 font-semibold flex items-center gap-2">
-                          310321716R - Calculateur Twingo 3
+                        <h1 className="md:text-lg text-base  text-gray-700 font-semibold flex items-center gap-2">
+                          310321716R{" "}
+                          <span className="hidden md:block">
+                            - Calculateur Twingo 3
+                          </span>
                         </h1>
                       </div>
                     </>
@@ -89,17 +92,14 @@ const TabCatContent = () => {
                 </div>
 
                 <p className="text-justify text-[15px] my-3">
-                  Calculateur <strong>EDC citadin évolué</strong> pour Renault{" "}
-                  <strong>Twingo 3</strong> moderne. Ce{" "}
-                  <strong>module compact intelligent</strong> intègre les
-                  dernières innovations en transmission automatique citadine.
-                  Compatible moteur <strong>3 cylindres turbo</strong> avec
-                  système <strong>Stop & Start </strong>
-                  optimisé. Gestion <strong>City Mode</strong> pour circulation
-                  urbaine dense. Installation <strong>Plug & Play</strong> avec
-                  paramétrage ville inclus.
-                  <strong> Garantie fabricant 12 mois</strong> usage citadin
-                  intensif. Parfait pour stationnement et manœuvres en ville.
+                  Vous trouverez ici le calculateur Renault 310321716R, un
+                  module de commande pour boîte automatique EDC destiné à la
+                  Renault Twingo 3 à partir de 2018. Il est compatible avec la
+                  boîte DC4002 et assure le bon fonctionnement de la
+                  transmission à double embrayage. La programmation nécessite
+                  l’ancien calculateur : il doit être cloné avec celui-ci car il
+                  ne peut pas être initialisé directement. Référence d’origine
+                  Renault, garanti 12 mois.
                 </p>
                 <div className="carsef grid  md:grid-cols-8 grid-cols-3 md:mt-0 mt-3  items-center justify-start">
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">

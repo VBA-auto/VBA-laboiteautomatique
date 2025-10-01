@@ -34,13 +34,16 @@ const TabCatContent = () => {
             </div>
 
             <div className="bg-white/50">
-              <div className="flex items-center gap-5 border border-gray-200 px-4 py-7 rounded-lg">
+              <div className="flex justify-between items-center gap-5 border border-gray-200 px-4 py-7 rounded-lg">
                 <div className="md:w-1/2">
                   <div className="">
                     <>
                       <div className="">
-                        <h1 className="md:text-lg text-base md:mb-0 mb-2 text-gray-700 font-semibold flex items-center gap-2">
-                          310F93913R - Calculateur Mégane
+                        <h1 className="md:text-lg text-base md:mb-0 text-gray-700 font-semibold flex items-center gap-2">
+                          310F93913R{" "}
+                          <span className="hidden md:block">
+                            - Calculateur Mégane
+                          </span>
                         </h1>
                       </div>
                     </>
@@ -89,19 +92,21 @@ const TabCatContent = () => {
                 </div>
 
                 <p className="text-justify text-[15px] my-3">
-                  <strong>Calculateur EDC 310F93913R</strong> dédié aux{" "}
-                  <strong>Renault Mégane</strong> équipées de boîte automatique.
-                  Compatible avec les motorisations{" "}
-                  <strong>essence 1.6 TCe</strong> et{" "}
-                  <strong>diesel 1.5 dCi</strong>. Ce{" "}
-                  <strong>module de contrôle de transmission</strong> optimise
-                  les changements de rapports et garantit une conduite fluide.
-                  Disponible en version{" "}
-                  <strong>vierge ou pré-programmée </strong>
-                  selon vos besoins spécifiques. Couvert par une{" "}
-                  <strong>garantie constructeur 12 mois</strong> avec
-                  possibilité d&apos;installation par nos partenaires agréés.
-                  Validation de compatibilité recommandée.
+                  Vous trouverez ici le calculateur Renault 310F93913R, un
+                  module de commande pour boîte automatique EDC. Il équipe les
+                  modèles Mégane 3, Clio IV et Captur 1.2 Essence à partir de
+                  2012, ainsi que plusieurs versions Diesel et Essence (moteurs
+                  H5H et K9K). Ce calculateur peut être fourni vierge ou
+                  programmé (Plug & Play) directement à partir de
+                  l’immatriculation ou du numéro de châssis (VIN), prêt à être
+                  monté. Référence d’origine garantie 12 mois. Instructions de
+                  montage si besoin : 
+                  <Link
+                    href="https://youtu.be/6X72SXZhZ44"
+                    className="text-blue-500"
+                  >
+                    https://youtu.be/6X72SXZhZ44
+                  </Link>
                 </p>
                 <div className="carsef grid  md:grid-cols-8 grid-cols-3 md:mt-0 mt-3  items-center justify-start">
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">

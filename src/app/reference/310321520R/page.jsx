@@ -34,13 +34,16 @@ const TabCatContent = () => {
             </div>
 
             <div className="bg-white/50">
-              <div className="md:flex items-center gap-5 border border-gray-200 px-4 py-7 rounded-lg">
+              <div className="flex justify-between items-center gap-5 border border-gray-200 px-4 py-7 rounded-lg">
                 <div className="md:w-1/2">
                   <div className="">
                     <>
                       <div className="">
-                        <h1 className="md:text-lg text-base md:mb-0 mb-2 text-gray-700 font-semibold flex items-center gap-2">
-                          310321520R - Calculateur Renault Clio 4 GT- Clio 4
+                        <h1 className="md:text-lg text-base text-gray-700 font-semibold flex items-center gap-2">
+                          310321520R{" "}
+                          <span className="hidden md:block">
+                            - Calculateur Renault Clio 4 GT- Clio 4
+                          </span>
                         </h1>
                       </div>
                     </>
@@ -89,19 +92,13 @@ const TabCatContent = () => {
                 </div>
 
                 <p className="text-justify text-[15px] my-3">
-                  Module <strong>EDC sportif</strong> optimisé pour{" "}
-                  <strong>Clio 4 GT</strong> et <strong>Clio 4</strong>{" "}
-                  dynamique. Ce <strong>calculateur performance</strong>{" "}
-                  améliore sensiblement les performances de conduite sportive.
-                  Compatible moteurs <strong>turbo TCE</strong> avec
-                  cartographie sport intégrée. Gestion{" "}
-                  <strong>Sport Mode </strong>
-                  avec réponse instantanée de l&apos;accélérateur. Installation
-                  <strong> Plug & Play sport</strong> avec paramétrage GT
-                  inclus.
-                  <strong>Garantie performance 12 mois</strong> conduite
-                  dynamique. Support technique spécialisé versions GT
-                  disponible.
+                  Vous trouverez ici le calculateur Renault 310321520R, un
+                  module de commande pour boîte automatique EDC destiné aux Clio
+                  4 1.2 Essence et Clio 4 GT Essence à partir de 2012. Ce
+                  calculateur peut être fourni vierge ou déjà programmé (Plug &
+                  Play) directement via l’immatriculation ou le numéro de
+                  châssis (VIN), prêt à être monté. Références d’origine Renault
+                  (310321520R – A2C30743000 – 01K00), garantie 12 mois.
                 </p>
                 <div className="carsef grid  md:grid-cols-8 grid-cols-3 md:mt-0 mt-3  items-center justify-start">
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">

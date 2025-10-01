@@ -34,13 +34,16 @@ const TabCatContent = () => {
             </div>
 
             <div className="bg-white/50">
-              <div className="md:flex items-center gap-5 border border-gray-200 px-4 py-7 rounded-lg">
+              <div className="flex justify-between items-center gap-5 border border-gray-200 px-4 py-7 rounded-lg">
                 <div className="md:w-1/2">
                   <div className="">
                     <>
                       <div className="">
-                        <h1 className="md:text-lg text-base md:mb-0 mb-2 text-gray-700 font-semibold flex items-center gap-2">
-                          310320192R - Calculateur Scénic 3 - Megane 3
+                        <h1 className="md:text-lg text-base text-gray-700 font-semibold flex items-center gap-2">
+                          310320192R{" "}
+                          <span className="hidden md:block">
+                            - Calculateur Scénic 3 - Megane 3
+                          </span>
                         </h1>
                       </div>
                     </>
@@ -89,17 +92,14 @@ const TabCatContent = () => {
                 </div>
 
                 <p className="text-justify text-[15px] my-3">
-                  Découvrez notre <strong>calculateur EDC</strong> pour Renault{" "}
-                  <strong>Scénic 3</strong> et <strong>Mégane 3</strong>. Ce{" "}
-                  <strong>module de commande</strong> s&apos;adapte aux moteurs{" "}
-                  <strong>diesel</strong> (K9K) avec boîte automatique{" "}
-                  <strong>DC4001</strong>. Disponible en version{" "}
-                  <strong>vierge</strong> ou
-                  <strong> pré-programmée</strong> selon vos besoins
-                  spécifiques. Bénéficiez d&apos;une
-                  <strong> garantie constructeur 12 mois</strong> et d&apos;un
-                  service d&apos;installation professionnel. Contactez-nous pour
-                  vérifier la compatibilité avec votre véhicule avant commande.
+                  Vous trouverez ici le calculateur Renault 310320192R, un
+                  module de commande pour boîte automatique EDC destiné au
+                  Scénic 3 équipé du moteur 1.5 Diesel. Associé à la boîte
+                  DC4001, il assure la gestion de la transmission. Ce
+                  calculateur peut être livré vierge ou déjà programmé (Plug &
+                  Play) directement à partir du VIN ou de l’immatriculation,
+                  prêt à être monté. Référence d’origine Renault (310320192R –
+                  310320749R – A2C53374830), garanti 12 mois.
                 </p>
                 <div className="carsef grid  md:grid-cols-8 grid-cols-3 md:mt-0 mt-3  items-center justify-start">
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
