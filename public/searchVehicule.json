@@ -36,7 +36,7 @@
         ],
         "stock": "03",
         "url": "diesel",
-        "preUrl": "captur",
+        "preUrl": "captur?type=diesel",
         "payLink": "https://buy.stripe.com/3cs5nY6BOfVJ5aw29B"
       },
       "essence": {
@@ -72,7 +72,7 @@
         ],
         "stock": "04",
         "url": "essence",
-        "preUrl": "captur",
+        "preUrl": "captur?type=essence",
         "payLink": "https://buy.stripe.com/9AQ03E9O0cJx9qMeWw"
       }
     }
@@ -115,7 +115,7 @@
         ],
         "stock": "02",
         "url": "diesel",
-        "preUrl": "megane",
+        "preUrl": "megane?type=diesel",
         "payLink": "https://buy.stripe.com/3csaIi1hugZN0Ug7tZ"
       },
       "essence": {
@@ -152,7 +152,7 @@
         ],
         "stock": "03",
         "url": "essence",
-        "preUrl": "megane",
+        "preUrl": "megane?type=essence",
         "payLink": "https://buy.stripe.com/7sI9Ee7FS8thgTe29E"
       }
     }
@@ -194,7 +194,7 @@
         ],
         "stock": "02",
         "url": "diesel",
-        "preUrl": "clio",
+        "preUrl": "clio?type=diesel",
         "payLink": "https://buy.stripe.com/14k17I3pC5h50Ug8y1"
       },
       "essence": {
@@ -230,7 +230,7 @@
         ],
         "stock": "03",
         "url": "essence",
-        "preUrl": "clio",
+        "preUrl": "clio?type=essence",
         "payLink": "https://buy.stripe.com/dR6bMmaS44d132oaG8"
       }
     }
@@ -273,7 +273,7 @@
         ],
         "stock": "02",
         "url": "diesel",
-        "preUrl": "scenic",
+        "preUrl": "scenic?type=diesel",
         "payLink": "https://buy.stripe.com/7sI2bMf8keRFgTedSo"
       }
     }
@@ -315,7 +315,7 @@
         ],
         "stock": "02",
         "url": "diesel",
-        "preUrl": "fluence",
+        "preUrl": "fluence?type=diesel",
         "payLink": "https://buy.stripe.com/4gw03E5xK6l9byU6pX"
       }
     }
@@ -357,7 +357,7 @@
         ],
         "stock": "02",
         "url": "essence",
-        "preUrl": "clio-rs",
+        "preUrl": "clio-rs?type=essence",
         "payLink": "https://buy.stripe.com/9AQ2bMbW8eRF32ocOm"
       }
     }
@@ -395,7 +395,7 @@
         ],
         "stock": "02",
         "url": "diesel",
-        "preUrl": "megane-4",
+        "preUrl": "megane-4?type=diesel",
         "payLink": "https://buy.stripe.com/9AQ2bMbW8eRF32ocOm"
       }
     }
@@ -435,7 +435,7 @@
         ],
         "stock": "02",
         "url": "essence",
-        "preUrl": "clio-5",
+        "preUrl": "clio-5?type=essence",
         "payLink": "https://buy.stripe.com/9AQ2bMbW8eRF32ocOm"
       }
     }
@@ -473,7 +473,7 @@
         ],
         "stock": "04",
         "url": "essence",
-        "preUrl": "twingo-3",
+        "preUrl": "twingo-3?type=essence",
         "payLink": "https://buy.stripe.com/9AQ2bMbW8eRF32ocOm"
       }
     }

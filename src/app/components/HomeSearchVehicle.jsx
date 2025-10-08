@@ -62,13 +62,13 @@ const HomeSearchVehicle = () => {
     const searchTermTrimmed = term.trim();
     const searchTermLower = searchTermTrimmed.toLowerCase();
 
-    // Modify only the reference search logic (allow partial matches for ref codes)
+    // Check if it's a reference code search (alphanumeric)
     const isRefSearch = /^[a-zA-Z0-9]+$/.test(searchTermTrimmed);
 
     if (isRefSearch) {
-      // Search by reference code (allow partial matches from the start of the ref)
+      // Search by reference code (allow partial matches from ANY position in the ref)
       const refResults = searchRefData.filter((item) =>
-        item.ref.toLowerCase().startsWith(searchTermLower)
+        item.ref.toLowerCase().includes(searchTermLower)
       );
       // If results found for the reference code, display them
       if (refResults.length > 0) {
@@ -78,12 +78,25 @@ const HomeSearchVehicle = () => {
       }
     }
 
-    // The car model and type search logic remains untouched
-    const searchTerms = searchTermLower.split(" ");
+    // Car model and type search with improved logic
+    const searchTerms = searchTermLower.split(" ").filter((t) => t.length > 0);
+
     const filtered = searchData.filter((item) => {
       const { model, types } = item;
-      const combinedData = [
-        model.toLowerCase(),
+
+      // Create searchable text for model
+      const modelLower = model.toLowerCase();
+
+      // Split model into words for better matching
+      const modelWords = modelLower.split(" ");
+
+      // Check if any search term matches any word in the model
+      const modelMatch = searchTerms.some((searchTerm) =>
+        modelWords.some((word) => word.includes(searchTerm))
+      );
+
+      // Create searchable text for types
+      const typesText = [
         ...Object.keys(types).map((type) => type.toLowerCase()),
         ...Object.values(types).map((typeData) =>
           [
@@ -94,7 +107,11 @@ const HomeSearchVehicle = () => {
         ),
       ].join(" ");
 
-      return searchTerms.every((term) => combinedData.includes(term));
+      // Check if search terms match in types
+      const typesMatch = searchTerms.every((term) => typesText.includes(term));
+
+      // Return true if either model matches or all search terms are in types
+      return modelMatch || typesMatch;
     });
 
     const results = filtered.flatMap((item) => {
@@ -169,9 +186,7 @@ const HomeSearchVehicle = () => {
                   <Link
                     key={index}
                     href={
-                      item.ref
-                        ? `/reference/${item.ref}`
-                        : `/${item.preUrl}/${item.url}`
+                      item.ref ? `/reference/${item.ref}` : `/${item.preUrl}`
                     }
                   >
                     <div className="flex items-center border p-2 rounded-md hover:bg-gray-100 transition-colors mb-3 gap-3 md:gap-0">
@@ -183,7 +198,7 @@ const HomeSearchVehicle = () => {
                           src={item?.images[0]}
                           priority={true}
                           alt=""
-                          className="object-cover"
+                          className="object-cover max-h-[60px] mx-auto"
                         />
                       </div>
                       <div className="md:w-3/4">

@@ -72,7 +72,7 @@ const PageLevelStock = ({ modelName, carType, onStockChange }) => {
   }
 
   if (error) {
-    return <p className="text-red-600 text-sm">❌ Error: {error}</p>;
+    return <p className="text-red-600 text-sm"></p>;
   }
 
   return (
