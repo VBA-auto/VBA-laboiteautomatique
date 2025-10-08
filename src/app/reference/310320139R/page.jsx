@@ -99,9 +99,16 @@ const TabCatContent = () => {
                   calculateur peut être livré vierge ou déjà programmé (Plug &
                   Play) directement à partir de l’immatriculation ou du numéro
                   de châssis (VIN), prêt à être monté. Références d’origine
-                  Renault (310320139R – 310320408R), garantie 12 mois.
+                  Renault (310320139R – 310320408R), garantie 12 mois. <br />{" "}
+                  N’hésitez pas à nous contacter pour plus d’information :{" "}
+                  <Link className="text-blue-500" href="/contact">
+                    contact
+                  </Link>
                 </p>
                 <div className="carsef grid  md:grid-cols-8 grid-cols-3 md:mt-0 mt-3  items-center justify-start">
+                  <p className="text-[14px] text-gray-700 italic mt-2 underline">
+                    <Link href="/reference/310320139R">310320139R </Link>
+                  </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
                     <Link href="/reference/310320192R">310320192R </Link>
                   </p>

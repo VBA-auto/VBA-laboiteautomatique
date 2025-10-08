@@ -98,11 +98,15 @@ const TabCatContent = () => {
                   calculateur peut être fourni vierge ou déjà programmé (Plug &
                   Play) directement via l’immatriculation ou le numéro de
                   châssis (VIN), prêt à être monté. Références d’origine Renault
-                  (310321520R – A2C30743000 – 01K00), garantie 12 mois.
+                  (310321520R – A2C30743000 – 01K00), garantie 12 mois. <br />{" "}
+                  N’hésitez pas à nous contacter pour plus d’information :{" "}
+                  <Link className="text-blue-500" href="/contact">
+                    contact
+                  </Link>
                 </p>
                 <div className="carsef grid  md:grid-cols-8 grid-cols-3 md:mt-0 mt-3  items-center justify-start">
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310320553R">310320553R </Link>
+                    <Link href="/reference/310321520R">310321520R </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
                     <Link href="/reference/310320728R">310320728R </Link>
@@ -120,7 +124,7 @@ const TabCatContent = () => {
                     <Link href="/reference/310321517R">310321517R </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310321561R">310321561R </Link>
+                    <Link href="/reference/310320756R">310320756R </Link>
                   </p>
                 </div>
               </div>

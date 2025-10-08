@@ -99,9 +99,17 @@ const TabCatContent = () => {
                   versions du Captur. Ce calculateur peut être fourni vierge ou
                   déjà programmé (Plug & Play) à partir de l’immatriculation ou
                   du numéro de châssis (VIN), prêt à être monté. Référence
-                  d’origine Renault (310320368R – 01K00), garanti 12 mois.
+                  d’origine Renault (310320368R – 01K00), garanti 12 mois.{" "}
+                  <br /> N’hésitez pas à nous contacter pour plus d’information
+                  :{" "}
+                  <Link className="text-blue-500" href="/contact">
+                    contact
+                  </Link>
                 </p>
                 <div className="carsef grid  md:grid-cols-8 grid-cols-3 md:mt-0 mt-3  items-center justify-start">
+                  <p className="text-[14px] text-gray-700 italic mt-2 underline">
+                    <Link href="/reference/310320368R">310320368R </Link>
+                  </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
                     <Link href="/reference/310320468R">310320468R </Link>
                   </p>
@@ -112,16 +120,10 @@ const TabCatContent = () => {
                     <Link href="/reference/310320840R">310320840R </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310320841R">310320841R </Link>
+                    <Link href="/reference/310320756R">310320756R </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310320891R">310320891R </Link>
-                  </p>
-                  <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310321149R">310321149R </Link>
-                  </p>
-                  <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310321354R">310321354R </Link>
+                    <Link href="/reference/A2C30743000">A2C30743000 </Link>
                   </p>
                 </div>
               </div>

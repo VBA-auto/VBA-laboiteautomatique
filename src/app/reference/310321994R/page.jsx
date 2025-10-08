@@ -95,7 +95,7 @@ const TabCatContent = () => {
                   Vous trouverez ici le calculateur Renault 310321994R, un
                   module de commande pour boîte automatique EDC destiné aux
                   modèles Clio V (RJAB) Essence à partir de 2020, ainsi qu’au
-                  Renault Captur. Il est compatible avec les versions équipées
+                  Renault Captur 2. Il est compatible avec les versions équipées
                   du moteur H5H470, de la boîte DW5007 et du moteur 1.3 TCe 130
                   16V. Ce calculateur peut être livré vierge ou déjà programmé
                   (Plug & Play) directement à partir du VIN ou de
@@ -110,25 +110,23 @@ const TabCatContent = () => {
                 </p>
                 <div className="carsef grid  md:grid-cols-8 grid-cols-3 md:mt-0 mt-3  items-center justify-start">
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310321148R">310321148R </Link>
+                    <Link href="/reference/310321994R">310321994R </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310321488R">310321488R </Link>
+                    <Link href="/reference/310321149R">310321149R </Link>
+                  </p>
+                  <p className="text-[14px] text-gray-700 italic mt-2 underline">
+                    <Link href="/reference/310321306R">310321306R </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
                     <Link href="/reference/310321662R">310321662R </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310321808R">310321808R </Link>
+                    <Link href="/reference/310321706R">310321706R </Link>
                   </p>
+
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
                     <Link href="/reference/310322059R">310322059R </Link>
-                  </p>
-                  <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/A2C30743000">A2C30743000 </Link>
-                  </p>
-                  <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/megane4">megane4 </Link>
                   </p>
                 </div>
               </div>

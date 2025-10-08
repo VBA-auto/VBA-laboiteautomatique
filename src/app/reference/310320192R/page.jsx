@@ -99,7 +99,11 @@ const TabCatContent = () => {
                   calculateur peut être livré vierge ou déjà programmé (Plug &
                   Play) directement à partir du VIN ou de l’immatriculation,
                   prêt à être monté. Référence d’origine Renault (310320192R –
-                  310320749R – A2C53374830), garanti 12 mois.
+                  310320749R – A2C53374830), garanti 12 mois. <br /> N’hésitez
+                  pas à nous contacter pour plus d’information :{" "}
+                  <Link className="text-blue-500" href="/contact">
+                    contact
+                  </Link>
                 </p>
                 <div className="carsef grid  md:grid-cols-8 grid-cols-3 md:mt-0 mt-3  items-center justify-start">
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
@@ -118,10 +122,10 @@ const TabCatContent = () => {
                     <Link href="/reference/310320756R">310320756R </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310321195R">310321195R </Link>
+                    <Link href="/reference/310321488R">310321488R </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310321306R">310321306R </Link>
+                    <Link href="/reference/A2C30743000">A2C30743000 </Link>
                   </p>
                 </div>
               </div>

@@ -104,7 +104,7 @@ const TabCatContent = () => {
                 </p>
                 <div className="carsef grid  md:grid-cols-8 grid-cols-3 md:mt-0 mt-3  items-center justify-start">
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310320553R">310320553R </Link>
+                    <Link href="/reference/310320728R">310320728R </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
                     <Link href="/reference/310320468R">310320468R </Link>
@@ -112,17 +112,15 @@ const TabCatContent = () => {
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
                     <Link href="/reference/310320840R">310320840R </Link>
                   </p>
-                  <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310320841R">310320841R </Link>
-                  </p>
+
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
                     <Link href="/reference/310321148R">310321148R </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310321354R">310321354R </Link>
+                    <Link href="/reference/310321488R">310321488R </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310321488R">310321488R </Link>
+                    <Link href="/reference/A2C30743000">A2C30743000 </Link>
                   </p>
                 </div>
               </div>

@@ -116,14 +116,12 @@ const TabCatContent = () => {
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
                     <Link href="/reference/310320840R">310320840R </Link>
                   </p>
+
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310320841R">310320841R </Link>
+                    <Link href="/reference/310320756R">310320756R </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310321149R">310321149R </Link>
-                  </p>
-                  <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310321354R">310321354R </Link>
+                    <Link href="/reference/A2C30743000">A2C30743000 </Link>
                   </p>
                 </div>
               </div>

@@ -100,11 +100,15 @@ const TabCatContent = () => {
                   Play) à partir de l’immatriculation ou du numéro de châssis
                   (VIN), prêt à être monté, sans nécessité de disposer de
                   l’ancien calculateur. Référence d’origine Renault, garanti 12
-                  mois.
+                  mois. <br /> N’hésitez pas à nous contacter pour plus
+                  d’information :{" "}
+                  <Link className="text-blue-500" href="/contact">
+                    contact
+                  </Link>
                 </p>
                 <div className="carsef grid  md:grid-cols-8 grid-cols-3 md:mt-0 mt-3  items-center justify-start">
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310320368R">310320368R </Link>
+                    <Link href="/reference/310321354R">310321354R </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
                     <Link href="/reference/310320553R">310320553R </Link>
@@ -119,10 +123,10 @@ const TabCatContent = () => {
                     <Link href="/reference/310321148R">310321148R </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310321149R">310321149R </Link>
+                    <Link href="/reference/310321488R">310321488R </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310321488R">310321488R </Link>
+                    <Link href="/reference/A2C30743000">A2C30743000 </Link>
                   </p>
                 </div>
               </div>

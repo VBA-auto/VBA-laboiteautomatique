@@ -99,11 +99,15 @@ const TabCatContent = () => {
                   fourni vierge ou déjà programmé (Plug & Play) à partir de
                   l’immatriculation ou du VIN. Référence d’origine Renault
                   (310320717R – 310321517R – 310320553R – A2C30743003), garanti
-                  12 mois.
+                  12 mois. <br /> N’hésitez pas à nous contacter pour plus
+                  d’information :{" "}
+                  <Link className="text-blue-500" href="/contact">
+                    contact
+                  </Link>
                 </p>
                 <div className="carsef grid  md:grid-cols-8 grid-cols-3 md:mt-0 mt-3  items-center justify-start">
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310320368R">310320368R </Link>
+                    <Link href="/reference/310320717R">310320717R </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
                     <Link href="/reference/310320468R">310320468R </Link>
@@ -118,7 +122,7 @@ const TabCatContent = () => {
                     <Link href="/reference/310320891R">310320891R </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310321149R">310321149R </Link>
+                    <Link href="/reference/310321488R">310321488R </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
                     <Link href="/reference/310321354R">310321354R </Link>

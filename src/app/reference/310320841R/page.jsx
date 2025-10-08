@@ -75,7 +75,7 @@ const TabCatContent = () => {
                     width={300}
                     height={290}
                     src="https://laboiteautomatique.com/images/strie-1.webp"
-                    className="mx-auto w-[280px]  mb-4"
+                    className="mx-auto w-full object-cover h-[200px]  mb-4"
                     priority={true}
                     alt=""
                   />
@@ -99,29 +99,27 @@ const TabCatContent = () => {
                   véhicules. Ce calculateur ne peut pas être programmé
                   directement : il doit obligatoirement être cloné avec l’ancien
                   afin de transférer les données et être fonctionnel. Référence
-                  d’origine Renault (310320841R), garanti 12 mois.
+                  d’origine Renault (310320841R), garanti 12 mois. <br />{" "}
+                  N’hésitez pas à nous contacter pour plus d’information :{" "}
+                  <Link className="text-blue-500" href="/contact">
+                    contact
+                  </Link>
                 </p>
                 <div className="carsef grid  md:grid-cols-8 grid-cols-3 md:mt-0 mt-3  items-center justify-start">
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310320368R">310320368R </Link>
+                    <Link href="/reference/310320841R">310320841R </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310320717R">310320717R </Link>
+                    <Link href="/reference/310321195R">310321195R </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310320721R">310320721R </Link>
+                    <Link href="/reference/310321561R">310321561R </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310320756R">310320756R </Link>
+                    <Link href="/reference/310321716R">310321716R</Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310320840R">310320840R </Link>
-                  </p>
-                  <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310320891R">310320891R </Link>
-                  </p>
-                  <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310321109R">310321109R </Link>
+                    <Link href="/reference/310321808R">310321808R </Link>
                   </p>
                 </div>
               </div>

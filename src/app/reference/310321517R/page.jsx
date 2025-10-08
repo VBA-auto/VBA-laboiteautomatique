@@ -99,17 +99,22 @@ const TabCatContent = () => {
                   calculateur peut être livré vierge ou déjà programmé (Plug &
                   Play) à partir de l’immatriculation ou du numéro de châssis
                   (VIN), prêt à être monté. Référence d’origine Renault
-                  (310320553R – 310320718R – 310321517R), garanti 12 mois.
+                  (310320553R – 310320718R – 310321517R), garanti 12 mois.{" "}
+                  <br /> N’hésitez pas à nous contacter pour plus d’information
+                  :{" "}
+                  <Link className="text-blue-500" href="/contact">
+                    contact
+                  </Link>
                 </p>
                 <div className="carsef grid  md:grid-cols-8 grid-cols-3 md:mt-0 mt-3  items-center justify-start">
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310320553R">310320553R </Link>
+                    <Link href="/reference/310321517R">310321517R </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
                     <Link href="/reference/310320728R">310320728R </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310321306R">310321306R </Link>
+                    <Link href="/reference/310320756R">310320756R </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
                     <Link href="/reference/310321474R">310321474R </Link>
@@ -121,7 +126,7 @@ const TabCatContent = () => {
                     <Link href="/reference/310321520R">310321520R </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310321706R">310321706R </Link>
+                    <Link href="/reference/A2C30743000">A2C30743000 </Link>
                   </p>
                 </div>
               </div>

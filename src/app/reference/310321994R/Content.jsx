@@ -68,7 +68,9 @@ const SingleSearchView = () => {
                 <div className="mt-2">
                   <div className="px-4 mb-2">
                     <p className="text-[14px] text-gray-400">Désignation</p>
-                    <h1 className="text-[15px]">Calculateur Clio V / Captur</h1>
+                    <h1 className="text-[15px]">
+                      Calculateur Clio V / Captur 2
+                    </h1>
                   </div>
                   <div className="px-4 mb-2">
                     <p className="text-[14px] text-gray-400">Description</p>
@@ -126,7 +128,7 @@ const SingleSearchView = () => {
                   </div>
                   <div className="">
                     <p className="text-[15px] text-gray-400">Renault</p>
-                    <h1 className="my-1">Calculateur Clio V / Captur</h1>
+                    <h1 className="my-1">Calculateur Clio V / Captur 2</h1>
                   </div>
                 </div>
                 <div className="md:w-1/2 flex items-center md:justify-end justify-center gap-5 ">
@@ -183,7 +185,7 @@ const SingleSearchView = () => {
                   </div>
                   <div className="">
                     <p className="text-[15px] text-gray-500">Renault</p>
-                    <h1 className="my-1">Calculateur Clio V / Captur</h1>
+                    <h1 className="my-1">Calculateur Clio V / Captur 2</h1>
                   </div>
                 </div>
                 <hr />

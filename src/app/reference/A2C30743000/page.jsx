@@ -99,32 +99,30 @@ const TabCatContent = () => {
                   être fourni vierge ou déjà programmé (Plug & Play) directement
                   via VIN ou immatriculation, simplifiant le montage et le
                   remplacement. Références d’origine Renault (A2C30743000 –
-                  01K00), garantie 12 mois.
+                  01K00), garantie 12 mois. <br /> N’hésitez pas à nous
+                  contacter pour plus d’information :{" "}
+                  <Link className="text-blue-500" href="/contact">
+                    contact
+                  </Link>
                 </p>
                 <div className="carsef grid  md:grid-cols-8 grid-cols-3 md:mt-0 mt-3  items-center justify-start">
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310322059R">310322059R </Link>
+                    <Link href="/reference/A2C30743000">A2C30743000 </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
                     <Link href="/reference/310F93913R">310F93913R </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310321994R">310321994R </Link>
-                  </p>
-                  <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310321808R">310321808R </Link>
-                  </p>
-                  <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310321716R">310321716R </Link>
-                  </p>
-                  <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310321662R">310321662R </Link>
-                  </p>
-                  <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310321561R">310321561R </Link>
-                  </p>
-                  <p className="text-[14px] text-gray-700 italic mt-2 underline">
                     <Link href="/reference/310321520R">310321520R </Link>
+                  </p>
+                  <p className="text-[14px] text-gray-700 italic mt-2 underline">
+                    <Link href="/reference/310320756R">310320756R </Link>
+                  </p>
+                  <p className="text-[14px] text-gray-700 italic mt-2 underline">
+                    <Link href="/reference/310321488R">310321488R </Link>
+                  </p>
+                  <p className="text-[14px] text-gray-700 italic mt-2 underline">
+                    <Link href="/reference/310320749R">310320749R </Link>
                   </p>
                 </div>
               </div>

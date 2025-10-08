@@ -99,7 +99,11 @@ const TabCatContent = () => {
                   déjà programmé (Plug & Play). La programmation est possible
                   directement à partir du numéro de châssis (VIN) ou de
                   l’immatriculation, prêt à être monté. Référence d’origine
-                  Renault (310320891R – 310320714R), garanti 12 mois.
+                  Renault (310320891R – 310320714R), garanti 12 mois. <br />{" "}
+                  N’hésitez pas à nous contacter pour plus d’information :{" "}
+                  <Link className="text-blue-500" href="/contact">
+                    contact
+                  </Link>
                 </p>
                 <div className="carsef grid  md:grid-cols-8 grid-cols-3 md:mt-0 mt-3  items-center justify-start">
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">

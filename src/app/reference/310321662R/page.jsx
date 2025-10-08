@@ -99,23 +99,24 @@ const TabCatContent = () => {
                   configuré directement par une concession ou un atelier équipé
                   de l’outil constructeur, la programmation n’étant pas
                   disponible pour le moment. Référence d’origine Renault,
-                  garanti 12 mois.
+                  garanti 12 mois. <br /> N’hésitez pas à nous contacter pour
+                  plus d’information :{" "}
+                  <Link href="/reference/310321195R" className="text-blue-500">
+                    contact{" "}
+                  </Link>
                 </p>
                 <div className="carsef grid  md:grid-cols-8 grid-cols-3 md:mt-0 mt-3  items-center justify-start">
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310321195R">310321195R </Link>
+                    <Link href="/reference/310321662R">310321662R </Link>
+                  </p>
+                  <p className="text-[14px] text-gray-700 italic mt-2 underline">
+                    <Link href="/reference/310321149R">310321149R </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
                     <Link href="/reference/310321306R">310321306R </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310321474R">310321474R </Link>
-                  </p>
-                  <p className="text-[14px] text-gray-700 italic mt-2 underline">
                     <Link href="/reference/310321706R">310321706R </Link>
-                  </p>
-                  <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310321808R">310321808R </Link>
                   </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
                     <Link href="/reference/310321994R">310321994R </Link>

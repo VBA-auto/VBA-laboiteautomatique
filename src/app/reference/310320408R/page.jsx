@@ -99,9 +99,16 @@ const TabCatContent = () => {
                   Diesel). Ce calculateur peut être livré vierge ou programmé
                   (Plug & Play) à partir de l’immatriculation ou du numéro de
                   châssis (VIN). Références d’origine Renault (310320408R –
-                  310320139R), garantie 12 mois.
+                  310320139R), garantie 12 mois. <br /> N’hésitez pas à nous
+                  contacter pour plus d’information :{" "}
+                  <Link className="text-blue-500" href="/contact">
+                    contact
+                  </Link>
                 </p>
                 <div className="carsef grid  md:grid-cols-8 grid-cols-3 md:mt-0 mt-3  items-center justify-start">
+                  <p className="text-[14px] text-gray-700 italic mt-2 underline">
+                    <Link href="/reference/310320408R">310320408R </Link>
+                  </p>
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
                     <Link href="/reference/310320139R">310320139R </Link>
                   </p>
@@ -117,11 +124,9 @@ const TabCatContent = () => {
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
                     <Link href="/reference/310320756R">310320756R </Link>
                   </p>
+
                   <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310321306R">310321306R </Link>
-                  </p>
-                  <p className="text-[14px] text-gray-700 italic mt-2 underline">
-                    <Link href="/reference/310321517R">310321517R </Link>
+                    <Link href="/reference/A2C30743000">A2C30743000 </Link>
                   </p>
                 </div>
               </div>
