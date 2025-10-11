@@ -232,7 +232,7 @@
     "code": "DTC174092",
     "description": "Tambour de selection de Vitesse 1 detection signal hors limite basse ou haute",
     "subTitle": "Gear selection drum 1 signal detection out of lower or upper limit",
-    "aide": "Calculateur ou actuateur du haut"
+    "aide": "Circuit moteur tambour de selection vitesse 1"
   },
   {
     "code": "178094",

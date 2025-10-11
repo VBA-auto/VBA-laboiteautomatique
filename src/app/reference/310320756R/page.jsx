@@ -54,7 +54,7 @@ const TabCatContent = () => {
                     <div className="w-full mx-auto">
                       <div className="flex justify-between">
                         {/* Container for the toggle */}
-                        <div className="relative  rounded-full px-6 w-full flex justify-end gap-5">
+                        <div className="relative  rounded-full ps-6 w-full flex justify-end gap-5">
                           <NewVehicleRef
                             modelName="Calculateur Captur - Clio 4"
                             refCode="310320756R"

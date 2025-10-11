@@ -73,11 +73,10 @@ const Adaptation = () => {
                   <p className="mt-2">
                     En règle générale, ce calibrage se fait automatiquement dès
                     qu’un nouveau calculateur est monté, sans intervention
-                    supplémentaire.{" "}
-                    <strong className="text-blue-500">
-                      Cependant, il est toujours intéressant de relancer
-                      manuellement cette procédure si un autre calibrage a
-                      échoué
+                    supplémentaire. Cependant,{" "}
+                    <strong className="text-blue-500 underline">
+                      il est toujours intéressant de relancer manuellement cette
+                      procédure si un autre calibrage a échoué
                     </strong>{" "}
                     (embrayage, points de touche, adaptation de déplacement,
                     etc.). Cela permet de repartir sur une base “neuve” et

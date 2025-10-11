@@ -70,7 +70,7 @@ const NewVehicleRef = ({ modelName, refCode, onStockChange }) => {
   }
 
   return (
-    <div className="">
+    <div className="text-end">
       <p className="text-gray-700 py-1 text-center rounded-md flex justify-end items-center gap-2 text-[15px]">
         <span
           className={`md:w-[10px] md:h-[10px] w-[10px] h-[10px] ${
