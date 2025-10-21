@@ -563,5 +563,11 @@
     "description": "circuit moteur embrayage 2 panne électrique non identifiée",
     "subTitle": "clutch motor circuit 2 unidentified electrical fault",
     "aide": "Problème calculateur"
+  },
+  {
+    "code": "DTC186677",
+    "description": "Embrayage 1 anomalie mécanique",
+    "subTitle": "Clutch 1 mechanical fault",
+    "aide": "Embrayage"
   }
 ]
