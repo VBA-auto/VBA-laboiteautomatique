@@ -51,6 +51,7 @@ const Home = () => {
         <h3>Calculateur boite automatique EDC Renault Megane 3 1.5 Diesel</h3>
         <h3>Calculateur boite automatique EDC Renault Megane 3 1.2 Essence</h3>
       </div>
+
       <div className="yes">
         <Hero />
       </div>

@@ -569,5 +569,29 @@
     "description": "Embrayage 1 anomalie mécanique",
     "subTitle": "Clutch 1 mechanical fault",
     "aide": "Embrayage"
+  },
+  {
+    "code": "DTC177601",
+    "description": "Circuit capteur régime entrée boite anomalie interne",
+    "subTitle": "Input speed sensor circuit – internal fault",
+    "aide": "Vérifier faisceau + capteur entrée et sortie (nous contacter pour photo)"
+  },
+  {
+    "code": "DTC177664",
+    "description": "Circuit capteur régime entrée boite signal non plausible",
+    "subTitle": "Input speed sensor circuit – internal fault",
+    "aide": "Vérifier faisceau + capteur entrée et sortie (nous contacter pour photo)"
+  },
+  {
+    "code": "DTC1783791",
+    "description": "Tambour de selection de vitesse 2 - detection signal hors limite basse ou haute",
+    "subTitle": "gear 2 selection signal detection that is out of the expected range, either too high or too low",
+    "aide": "vérifier l'état de la batterie + peut être problème calculateur"
+  },
+  {
+    "code": "DTC189512",
+    "description": "Circuit moteur tambour Vitesse 2. Court circuit au +12 volts",
+    "subTitle": "Drum motor circuit Speed 2. Short circuit to +12 volts",
+    "aide": "Problème de calculateur"
   }
 ]

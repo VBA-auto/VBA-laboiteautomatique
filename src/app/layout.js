@@ -7,6 +7,7 @@ import GoogleTag from "./components/GoogleTag";
 import { Poppins } from "next/font/google"; // Importing Poppins
 import ChatWidget from "./components/botLogic/ChatWidget";
 import DynamicPopup from "./components/DynamicPopUp/DynamicPopup";
+import SEOErrorCodes from "./components/SeoErrorCodes";
 
 export const metadata = {
   title:
@@ -83,6 +84,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
           defer
         ></script>
         <DynamicPopup />
+        <div className="">
+          <SEOErrorCodes />
+        </div>
       </body>
     </html>
   );
