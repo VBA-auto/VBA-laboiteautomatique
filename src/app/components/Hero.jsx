@@ -212,8 +212,8 @@ const Hero = () => {
                     href="https://api.whatsapp.com/send?phone=33631460333"
                     target="_blank"
                   >
-                    <div className="absolute bottom-5 right-5 bg-[#5dca54] rounded-full p-2 md:block hidden">
-                      <FaWhatsapp className="text-white text-3xl" />
+                    <div className="absolute bottom-5 right-5 bg-[#5dca54] rounded-full p-2 md:block hidden transition-all duration-300 ease-in-out hover:scale-110">
+                      <FaWhatsapp className="text-white text-3xl " />
                     </div>
                   </Link>
                 </div>

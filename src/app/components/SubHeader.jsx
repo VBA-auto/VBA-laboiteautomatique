@@ -19,12 +19,12 @@ const SubHeader = () => {
               </div>
             </div>
             <div className="md:w-[25%] w-1/2">
-              <div className="flex justify-end items-center gap-3">
-                <FaPhoneAlt className="text-[#2C80EF]" />
+              <div className="flex justify-end items-center gap-3 ">
+                <FaPhoneAlt className="text-[#2C80EF] transition-all duration-300 ease-in-out hover:scale-110 cursor-pointer" />
                 <Link
                   target="_blank"
                   href="https://wa.me/0145147254"
-                  className="md:text-[15px] text-[11px] text-gray-700"
+                  className="md:text-[15px] text-[11px] text-gray-700 hover:underline"
                 >
                   01 45 14 72 54
                 </Link>
