@@ -219,14 +219,32 @@
   {
     "code": "DTC1525F3",
     "description": "Cohérence informations multiplexées pour RV/LV",
-    "subTitle": "Internal electronic anomaly in the sensor for gear entry in the transmission.",
-    "aide": "Vérifier capteur pédale de frein ou capteur ABS et fusibles (peut-être aussi un problème de calculateur)"
+    "subTitle": "Consistency of multiplexed information for rv/lv",
+    "aide": "Aucun rapport avec calculateur boite automatique "
+  },
+  {
+    "code": "DTCC10187",
+    "description": "Informations multiplexées du calculateur producteur invalides",
+    "subTitle": "Invalid multiplexed information",
+    "aide": " calculateur défectueux (illisible parfois) "
+  },
+  {
+    "code": "DTCC10100",
+    "description": "Émission multiplexée BVA absente",
+    "subTitle": "Missing multiplexed transmission signal",
+    "aide": "calculateur"
   },
   {
     "code": "DTCC40200",
     "description": "Informations multiplexées BVA invalides",
     "subTitle": "Internal electronic anomaly in the sensor for gear entry in the transmission.",
-    "aide": "Vérifier capteur pédale de frein ou capteur ABS et fusibles (peut-être aussi un problème de calculateur)"
+    "aide": "calculateur"
+  },
+  {
+    "code": "DTCC40200",
+    "description": "Alimentation calculateur tension trop haute",
+    "subTitle": "ECU power supply voltage too high",
+    "aide": "controller calculateur UCH sinon calculateur BVA"
   },
   {
     "code": "DTC174092",
