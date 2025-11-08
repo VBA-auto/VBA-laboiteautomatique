@@ -241,7 +241,7 @@
     "aide": "calculateur"
   },
   {
-    "code": "DTCC40200",
+    "code": "DTCC42200",
     "description": "Alimentation calculateur tension trop haute",
     "subTitle": "ECU power supply voltage too high",
     "aide": "controller calculateur UCH sinon calculateur BVA"
