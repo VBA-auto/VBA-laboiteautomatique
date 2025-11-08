@@ -3,8 +3,9 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import SubHeader from "@/components/SubHeader";
 import Head from "next/head";
+import Image from "next/image";
 import { useState } from "react";
-
+const googleLogo = "/images/Cloud.png";
 const pageDescription =
   "Contactez-nous via cette page, en laissant vos coordonnées et indiquez votre type de véhicule Renault ";
 
@@ -12,6 +13,8 @@ const Contact = () => {
   const [isError, setIsError] = useState(false);
   const [isTel, setIsTel] = useState(false);
   const [isOk, setIsOk] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [isVerified, setIsVerified] = useState(false);
 
   const [formData, setFormData] = useState({
     email: "",
@@ -43,23 +46,38 @@ const Contact = () => {
       setIsTel(true);
       return;
     }
+    setShowModal(true);
+  };
 
-    try {
-      const response = await fetch("/api/contactForm", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+  // handleCheckboxChange function যোগ করুন (handleSubmit এর পরে)
+  const handleCheckboxChange = async () => {
+    const newVerifiedState = !isVerified;
+    setIsVerified(newVerifiedState);
 
-      if (response.ok) {
-        setIsOk(true);
-      } else {
-        setIsError(true);
-      }
-    } catch (error) {
-      setIsError(true);
+    // If checkbox is checked, send the form
+    if (newVerifiedState) {
+      setTimeout(async () => {
+        setShowModal(false);
+        try {
+          const response = await fetch("/api/contactForm", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+          });
+
+          if (response.ok) {
+            setIsOk(true);
+
+            setIsVerified(false); // Reset checkbox
+          } else {
+            setIsError(true);
+          }
+        } catch (error) {
+          setIsError(true);
+        }
+      }, 500);
     }
   };
 
@@ -219,6 +237,60 @@ const Contact = () => {
           </div>
         </div>
       </section>
+      {showModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white rounded-lg shadow-2xl w-1/4 border border-gray-200">
+            {/* Header */}
+            <div className="px-4 py-3 border-b border-gray-200">
+              <h3 className="text-sm text-gray-600 font-medium">
+                Confirmez que vous êtes humain
+              </h3>
+            </div>
+
+            {/* Main Content */}
+            <div className="p-4 flex items-center justify-between">
+              {/* Checkbox Section */}
+              <div className="flex items-center gap-3 relative">
+                <input
+                  type="checkbox"
+                  checked={isVerified}
+                  onChange={handleCheckboxChange}
+                  className="w-6 h-6 border-2 border-gray-300 rounded cursor-pointer accent-blue-600"
+                />
+                {isVerified && (
+                  <svg
+                    className="absolute left-1 top-1 w-4 h-4 text-white pointer-events-none"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="3"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                )}
+                <span className="text-sm text-gray-700 font-medium">
+                  Je ne suis pas un robot
+                </span>
+              </div>
+
+              {/* Cloudflare Logo */}
+              <div className="flex flex-col items-end">
+                <Image
+                  unoptimized
+                  width={80}
+                  height={100}
+                  src={googleLogo}
+                  alt="Google Reviews"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
       <Footer />
     </main>
   );

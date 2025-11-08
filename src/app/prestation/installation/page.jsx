@@ -3,7 +3,10 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import SubHeader from "@/components/SubHeader";
 import Head from "next/head";
+import Image from "next/image";
 import { useState } from "react";
+
+const googleLogo = "/images/Cloud.png";
 
 const pageDescription =
   "Diagnostic, Installaltion et montage de votre calculateur boite automatique EDC Renault pour clio 4, clio RS, Captur, megane 3, scenic 3.";
@@ -12,6 +15,8 @@ const AutreFormulaire = () => {
   const [isError, setIsError] = useState(false);
   const [isOk, setIsOk] = useState(false);
   const [isTel, setIsTel] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [isVerified, setIsVerified] = useState(false);
 
   const [formData, setFormData] = useState({
     vehicle: "Renault Captur",
@@ -42,22 +47,54 @@ const AutreFormulaire = () => {
       return;
     }
 
-    try {
-      const response = await fetch("/api/installForm", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+    setShowModal(true);
+  };
 
-      if (response.ok) {
-        setIsOk(true);
-      } else {
-        setIsError(true);
-      }
-    } catch (error) {
-      setIsError(true);
+  const handleCheckboxChange = async () => {
+    const newVerifiedState = !isVerified;
+    setIsVerified(newVerifiedState);
+
+    if (newVerifiedState) {
+      setTimeout(async () => {
+        setShowModal(false);
+        try {
+          const response = await fetch("/api/installForm", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+          });
+
+          if (response.ok) {
+            setIsOk(true);
+            setIsVerified(false);
+
+            // Form reset
+            setFormData({
+              vehicle: "Renault Captur",
+              fuel: "Diesel",
+              service: "Module seul",
+              region: "Ile-de-France",
+              name: "",
+              phone: "",
+              email: "",
+              message: "",
+            });
+
+            // Success message 5 seconds পরে hide
+            setTimeout(() => {
+              setIsOk(false);
+            }, 5000);
+          } else {
+            setIsError(true);
+            setIsVerified(false);
+          }
+        } catch (error) {
+          setIsError(true);
+          setIsVerified(false);
+        }
+      }, 500);
     }
   };
 
@@ -157,6 +194,7 @@ const AutreFormulaire = () => {
                       <select
                         id="vehicle"
                         name="vehicle"
+                        value={formData.vehicle}
                         className="forminputFields bg-white"
                         onChange={handleChange}
                         required
@@ -188,6 +226,7 @@ const AutreFormulaire = () => {
                       <select
                         id="fuel"
                         name="fuel"
+                        value={formData.fuel}
                         required
                         className="forminputFields bg-white"
                         onChange={handleChange}
@@ -208,6 +247,7 @@ const AutreFormulaire = () => {
                       <select
                         id="service"
                         name="service"
+                        value={formData.service}
                         className="forminputFields bg-white"
                         required
                         onChange={handleChange}
@@ -234,6 +274,7 @@ const AutreFormulaire = () => {
                       <select
                         id="region"
                         name="region"
+                        value={formData.region}
                         className="forminputFields bg-white"
                         required
                         onChange={handleChange}
@@ -260,8 +301,8 @@ const AutreFormulaire = () => {
                         <option value="Pays de la Loire">
                           Pays de la Loire
                         </option>
-                        <option value="Provence Alpes Côte d’Azur">
-                          Provence Alpes Côte d’Azur
+                        <option value="Provence Alpes Côte d'Azur">
+                          Provence Alpes Côte d&apos;Azur
                         </option>
                         <option value="Guadeloupe">Guadeloupe</option>
                         <option value="Guyane">Guyane</option>
@@ -282,6 +323,7 @@ const AutreFormulaire = () => {
                         type="tel"
                         id="phone"
                         name="phone"
+                        value={formData.phone}
                         className="forminputFields bg-white"
                         onChange={handleChange}
                       />
@@ -298,6 +340,7 @@ const AutreFormulaire = () => {
                         type="text"
                         id="name"
                         name="name"
+                        value={formData.name}
                         className="forminputFields bg-white"
                         onChange={handleChange}
                         required
@@ -317,6 +360,7 @@ const AutreFormulaire = () => {
                       type="email"
                       id="email"
                       name="email"
+                      value={formData.email}
                       className="forminputFields bg-white"
                       onChange={handleChange}
                       required
@@ -336,6 +380,7 @@ const AutreFormulaire = () => {
                       id="message"
                       name="message"
                       rows="4"
+                      value={formData.message}
                       required
                       className="forminputFields bg-white"
                       onChange={handleChange}
@@ -367,6 +412,63 @@ const AutreFormulaire = () => {
           </div>
         </div>
       </section>
+
+      {/* CAPTCHA Modal */}
+      {showModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white rounded-lg shadow-2xl w-1/4 border border-gray-200">
+            {/* Header */}
+            <div className="px-4 py-3 border-b border-gray-200">
+              <h3 className="text-sm text-gray-600 font-medium">
+                Confirmez que vous êtes humain
+              </h3>
+            </div>
+
+            {/* Main Content */}
+            <div className="p-4 flex items-center justify-between">
+              {/* Checkbox Section */}
+              <div className="flex items-center gap-3 relative">
+                <input
+                  type="checkbox"
+                  checked={isVerified}
+                  onChange={handleCheckboxChange}
+                  className="w-6 h-6 border-2 border-gray-300 rounded cursor-pointer accent-blue-600"
+                />
+                {isVerified && (
+                  <svg
+                    className="absolute left-1 top-1 w-4 h-4 text-white pointer-events-none"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="3"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                )}
+                <span className="text-sm text-gray-700 font-medium">
+                  Je ne suis pas un robot
+                </span>
+              </div>
+
+              {/* Cloudflare Logo */}
+              <div className="flex flex-col items-end">
+                <Image
+                  unoptimized
+                  width={80}
+                  height={100}
+                  src={googleLogo}
+                  alt="Google Reviews"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
       <Footer />
     </main>
   );
