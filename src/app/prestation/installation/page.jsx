@@ -348,7 +348,7 @@ const AutreFormulaire = () => {
                     </div>
                   </div>
                   {/* Adresse Email */}
-                  <div className="mb-3 w-2/3">
+                  <div className="mb-3 md:w-2/3">
                     <label
                       htmlFor="email"
                       className="block pl-2 text-sm font-medium text-gray-600"
@@ -416,18 +416,18 @@ const AutreFormulaire = () => {
       {/* CAPTCHA Modal */}
       {showModal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white rounded-lg shadow-2xl w-1/4 border border-gray-200">
+          <div className="bg-white rounded-lg shadow-2xl md:w-1/4 border border-gray-200">
             {/* Header */}
             <div className="px-4 py-3 border-b border-gray-200">
-              <h3 className="text-sm text-gray-600 font-medium">
+              <h3 className="text-sm text-center text-gray-600 font-medium">
                 Confirmez que vous êtes humain
               </h3>
             </div>
 
             {/* Main Content */}
-            <div className="p-4 flex items-center justify-between">
+            <div className="p-4 flex gap-8 items-center justify-between">
               {/* Checkbox Section */}
-              <div className="flex items-center gap-3 relative">
+              <div className="flex items-center gap-2 relative">
                 <input
                   type="checkbox"
                   checked={isVerified}
@@ -458,7 +458,7 @@ const AutreFormulaire = () => {
               <div className="flex flex-col items-end">
                 <Image
                   unoptimized
-                  width={80}
+                  width={70}
                   height={100}
                   src={googleLogo}
                   alt="Google Reviews"
