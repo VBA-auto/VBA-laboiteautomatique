@@ -16,7 +16,10 @@ const AutreFormulaire = () => {
   const [isOk, setIsOk] = useState(false);
   const [isTel, setIsTel] = useState(false);
   const [showModal, setShowModal] = useState(false);
-  const [isVerified, setIsVerified] = useState(false);
+
+  // verification states
+  const [isVerified, setIsVerified] = useState(false); // true after captcha completed
+  const [isVerifying, setIsVerifying] = useState(false); // spinner state
 
   const [formData, setFormData] = useState({
     vehicle: "Renault Captur",
@@ -39,63 +42,73 @@ const AutreFormulaire = () => {
     return phoneRegex.test(phoneNumber);
   };
 
+  // Submit handler: if not verified -> show modal; if verified -> send form
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsError(false);
+    setIsOk(false);
+    setIsTel(false);
 
     if (!formData.phone || !isPhoneNumberValid(formData.phone)) {
       setIsTel(true);
       return;
     }
 
-    setShowModal(true);
+    // if not verified, open modal to verify
+    if (!isVerified) {
+      setShowModal(true);
+      return;
+    }
+
+    // if verified, send the form
+    try {
+      const response = await fetch("/api/installForm", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setIsOk(true);
+
+        // reset form fields
+        setFormData({
+          vehicle: "Renault Captur",
+          fuel: "Diesel",
+          service: "Module seul",
+          region: "Ile-de-France",
+          name: "",
+          phone: "",
+          email: "",
+          message: "",
+        });
+
+        setIsVerified(false); // require verification again for next submission
+
+        // hide success after 5s
+        setTimeout(() => setIsOk(false), 5000);
+      } else {
+        setIsError(true);
+      }
+    } catch (err) {
+      setIsError(true);
+    }
   };
 
-  const handleCheckboxChange = async () => {
-    const newVerifiedState = !isVerified;
-    setIsVerified(newVerifiedState);
+  // Checkbox handler: only verifies (with spinner) and closes modal.
+  // It DOES NOT submit the form. User must click Envoyer again to send.
+  const handleCheckboxChange = () => {
+    // If already verifying, ignore
+    if (isVerifying) return;
 
-    if (newVerifiedState) {
-      setTimeout(async () => {
-        setShowModal(false);
-        try {
-          const response = await fetch("/api/installForm", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(formData),
-          });
+    // Start spinner and simulate verification delay
+    setIsVerifying(true);
 
-          if (response.ok) {
-            setIsOk(true);
-            setIsVerified(false);
-
-            // Form reset
-            setFormData({
-              vehicle: "Renault Captur",
-              fuel: "Diesel",
-              service: "Module seul",
-              region: "Ile-de-France",
-              name: "",
-              phone: "",
-              email: "",
-              message: "",
-            });
-
-            // Success message 5 seconds পরে hide
-            setTimeout(() => {
-              setIsOk(false);
-            }, 5000);
-          } else {
-            setIsError(true);
-            setIsVerified(false);
-          }
-        } catch (error) {
-          setIsError(true);
-          setIsVerified(false);
-        }
-      }, 500);
-    }
+    setTimeout(() => {
+      setIsVerifying(false);
+      setIsVerified(true);
+      setShowModal(false);
+    }, 1000); // 2 seconds spinner
   };
 
   return (
@@ -112,6 +125,8 @@ const AutreFormulaire = () => {
                 </title>
                 <meta name="description" content={pageDescription} />
               </Head>
+
+              {/* Hidden SEO H1s */}
               <div style={{ display: "none" }}>
                 <h1>
                   installation et montage Renault Captur boite automatique EDC
@@ -133,7 +148,7 @@ const AutreFormulaire = () => {
                 </h1>
               </div>
 
-              <div className="installTitle text-2xl text-center mb-5 lg:mx-16  accent_color  z-20 rounded-md p-3">
+              <div className="installTitle text-2xl text-center mb-5 lg:mx-16 accent_color z-20 rounded-md p-3">
                 <div className="instalLaptop text-[#374151]">
                   <p className="text-[24px] font-semibold text-[#374151]">
                     Installation - Montage - démontage
@@ -152,7 +167,7 @@ const AutreFormulaire = () => {
                   <span className="block mt-2 text-[16px]">
                     Contactez-nous via le formulaire ou bien par tél. <br />
                     <a
-                      className="hover:text-bleuvba  font-bold"
+                      className="hover:text-bleuvba font-bold"
                       href="tel:0756944719"
                     >
                       07 56 94 47 19
@@ -160,28 +175,13 @@ const AutreFormulaire = () => {
                   </span>
                 </div>
               </div>
+
+              {/* FORMULAIRE */}
               <div className="installForm">
                 <form
                   onSubmit={handleSubmit}
                   className="h-full z-20 shadow-xl p-4 accent_color rounded-md"
                 >
-                  <h1 className="sr-only">
-                    Montage démontage installation calculateur boîte automatique
-                    Renault
-                  </h1>
-
-                  <h2 className="sr-only text-[22px] font-semibold text-gray-700  text-center  mb-3 ">
-                    Installation
-                  </h2>
-                  <h2 className="sr-only">
-                    Montage calculateur de boîte automatique Renault
-                  </h2>
-                  <h2 className="sr-only">
-                    Démontage calculateur de boîte automatique Renault
-                  </h2>
-                  <h2 className="sr-only">
-                    Installation calculateur de boîte automatique Renault
-                  </h2>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     {/* Sélection du véhicule */}
                     <div className="mb-3">
@@ -215,7 +215,7 @@ const AutreFormulaire = () => {
                       </select>
                     </div>
 
-                    {/* Diesel ou Essence */}
+                    {/* Carburant */}
                     <div className="mb-3">
                       <label
                         htmlFor="fuel"
@@ -236,7 +236,7 @@ const AutreFormulaire = () => {
                       </select>
                     </div>
 
-                    {/* Sélection de la prestation */}
+                    {/* Prestation */}
                     <div className="mb-3">
                       <label
                         htmlFor="service"
@@ -258,11 +258,9 @@ const AutreFormulaire = () => {
                         </option>
                       </select>
                     </div>
-
-                    {/* Sélection de la région */}
                   </div>
 
-                  {/* Numéro de téléphone */}
+                  {/* Région, Téléphone, Nom */}
                   <div className="md:flex gap-5 my-4">
                     <div className="mb-3 w-full">
                       <label
@@ -347,7 +345,8 @@ const AutreFormulaire = () => {
                       />
                     </div>
                   </div>
-                  {/* Adresse Email */}
+
+                  {/* Email */}
                   <div className="mb-3 md:w-2/3">
                     <label
                       htmlFor="email"
@@ -399,7 +398,6 @@ const AutreFormulaire = () => {
                     {isOk ? "Formulaire envoyé avec succès" : ""}
                   </p>
 
-                  {/* Bouton Envoyer */}
                   <button
                     type="submit"
                     className="text-[#2C80EF] bg-transparent text-[15px] border border-[#2c80ef] py-2 px-10 rounded-md hover:bg-[#2C80EF] hover:text-white block mx-auto"
@@ -417,44 +415,53 @@ const AutreFormulaire = () => {
       {showModal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-white rounded-lg shadow-2xl md:w-1/4 border border-gray-200">
-            {/* Header */}
             <div className="px-4 py-3 border-b border-gray-200">
               <h3 className="text-sm text-center text-gray-600 font-medium">
                 Confirmez que vous êtes humain
               </h3>
             </div>
 
-            {/* Main Content */}
             <div className="p-4 flex gap-8 items-center justify-between">
               {/* Checkbox Section */}
               <div className="flex items-center gap-2 relative">
-                <input
-                  type="checkbox"
-                  checked={isVerified}
-                  onChange={handleCheckboxChange}
-                  className="w-6 h-6 border-2 border-gray-300 rounded cursor-pointer accent-blue-600"
-                />
-                {isVerified && (
-                  <svg
-                    className="absolute left-1 top-1 w-4 h-4 text-white pointer-events-none"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="3"
-                      d="M5 13l4 4L19 7"
+                <div className="relative w-6 h-6">
+                  {!isVerifying ? (
+                    <input
+                      type="checkbox"
+                      checked={isVerified}
+                      onChange={handleCheckboxChange}
+                      className="w-6 h-6 border-2 border-gray-300 rounded cursor-pointer accent-blue-600"
                     />
-                  </svg>
-                )}
+                  ) : (
+                    // Spinner animation (2s)
+                    <div className="w-6 h-6 border-2 border-gray-300 rounded flex items-center justify-center">
+                      <div className="w-4 h-4 border-2 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+                    </div>
+                  )}
+
+                  {isVerified && !isVerifying && (
+                    <svg
+                      className="absolute left-1 top-1 w-4 h-4 text-white pointer-events-none"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="3"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  )}
+                </div>
+
                 <span className="text-sm text-gray-700 font-medium">
                   Je ne suis pas un robot
                 </span>
               </div>
 
-              {/* Cloudflare Logo */}
+              {/* Cloudflare / Google Logo */}
               <div className="flex flex-col items-end">
                 <Image
                   unoptimized

@@ -5,6 +5,7 @@ import SubHeader from "@/components/SubHeader";
 import Head from "next/head";
 import Image from "next/image";
 import { useState } from "react";
+
 const googleLogo = "/images/Cloud.png";
 const pageDescription =
   "Contactez-nous via cette page, en laissant vos coordonnées et indiquez votre type de véhicule Renault ";
@@ -15,79 +16,89 @@ const Contact = () => {
   const [isOk, setIsOk] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [isVerified, setIsVerified] = useState(false);
+  const [isLoadingCaptcha, setIsLoadingCaptcha] = useState(false);
 
   const [formData, setFormData] = useState({
     email: "",
     phone: "",
     name: "",
     message: "",
-    category: "Renault Captur", // Ajout de la catégorie
+    category: "Renault Captur",
   });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-
-    // Si c'est le menu déroulant, mettez à jour la valeur dans l'objet formData
-    if (name === "category") {
-      setFormData((prevData) => ({ ...prevData, category: value }));
-    } else {
-      setFormData((prevData) => ({ ...prevData, [name]: value }));
-    }
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
-  const isPhoneNumberValid = (phoneNumber) => {
-    const phoneRegex = /^[0-9]{10}$/;
-    return phoneRegex.test(phoneNumber);
-  };
+  const isPhoneNumberValid = (phoneNumber) => /^[0-9]{10}$/.test(phoneNumber);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsError(false);
+    setIsTel(false);
+    setIsOk(false);
+
     if (!formData.phone || !isPhoneNumberValid(formData.phone)) {
       setIsTel(true);
       return;
     }
-    setShowModal(true);
+
+    // If user not verified, show captcha modal
+    if (!isVerified) {
+      setShowModal(true);
+      return;
+    }
+
+    // If verified, send the form
+    try {
+      const response = await fetch("/api/contactForm", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setIsOk(true);
+        setFormData({
+          email: "",
+          phone: "",
+          name: "",
+          message: "",
+          category: "Renault Captur",
+        });
+        setIsVerified(false);
+      } else {
+        setIsError(true);
+      }
+    } catch (error) {
+      setIsError(true);
+    }
   };
 
-  // handleCheckboxChange function যোগ করুন (handleSubmit এর পরে)
-  const handleCheckboxChange = async () => {
-    const newVerifiedState = !isVerified;
-    setIsVerified(newVerifiedState);
+  // Handle CAPTCHA checkbox click
+  const handleCheckboxChange = () => {
+    if (isVerified || isLoadingCaptcha) return;
 
-    // If checkbox is checked, send the form
-    if (newVerifiedState) {
-      setTimeout(async () => {
-        setShowModal(false);
-        try {
-          const response = await fetch("/api/contactForm", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(formData),
-          });
+    setIsLoadingCaptcha(true);
 
-          if (response.ok) {
-            setIsOk(true);
-
-            setIsVerified(false); // Reset checkbox
-          } else {
-            setIsError(true);
-          }
-        } catch (error) {
-          setIsError(true);
-        }
-      }, 500);
-    }
+    // Simulate 2 seconds of verification
+    setTimeout(() => {
+      setIsLoadingCaptcha(false);
+      setIsVerified(true);
+      setShowModal(false);
+    }, 1000);
   };
 
   return (
     <main>
       <SubHeader />
       <Header />
-      <section className=" py-[60px] md:px-0 px-5">
+      <section className="py-[60px] md:px-0 px-5">
         <div className="relative">
-          <div className="flex flex-col items-center ">
+          <div className="flex flex-col items-center">
             <Head>
               <title>contacter nous VBA calcualteur Renault</title>
               <meta name="description" content={pageDescription} />
@@ -102,11 +113,7 @@ const Contact = () => {
                 onSubmit={handleSubmit}
                 className="w-full z-20 shadow-xl accent_color p-4 rounded-md"
               >
-                {/* <h1 className="text-2xl text-center text-[#090909]s font-bold mb-4">
-                Contactez-nous
-              </h1> */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {/* Nom et Prénom */}
                   <div className="mb-4">
                     <label
                       htmlFor="name"
@@ -121,11 +128,11 @@ const Contact = () => {
                       name="name"
                       className="forminputFields bg-white"
                       onChange={handleChange}
+                      value={formData.name}
                       required
                     />
                   </div>
 
-                  {/* Adresse Email */}
                   <div className="mb-4">
                     <label
                       htmlFor="email"
@@ -140,11 +147,11 @@ const Contact = () => {
                       name="email"
                       className="forminputFields bg-white"
                       onChange={handleChange}
+                      value={formData.email}
                       required
                     />
                   </div>
 
-                  {/* Téléphone */}
                   <div className="mb-4">
                     <label
                       htmlFor="phone"
@@ -159,11 +166,11 @@ const Contact = () => {
                       name="phone"
                       className="forminputFields bg-white"
                       onChange={handleChange}
+                      value={formData.phone}
                       required
                     />
                   </div>
 
-                  {/* Catégories (Menu déroulant) */}
                   <div className="mb-4">
                     <label
                       htmlFor="category"
@@ -176,9 +183,9 @@ const Contact = () => {
                       name="category"
                       className="forminputFields bg-white"
                       required
-                      onChange={handleChange} // Ajout de la gestion du changement
+                      value={formData.category}
+                      onChange={handleChange}
                     >
-                      {/* Remplacez les options par vos propres catégories */}
                       <option value="Renault Captur">Renault Captur</option>
                       <option value="Renault Megane3">Renault Megane 3</option>
                       <option value="Renault Megane4">Renault Megane 4</option>
@@ -192,7 +199,6 @@ const Contact = () => {
                   </div>
                 </div>
 
-                {/* Message */}
                 <div className="mt-4">
                   <label
                     htmlFor="message"
@@ -208,6 +214,7 @@ const Contact = () => {
                     required
                     className="forminputFields bg-white"
                     onChange={handleChange}
+                    value={formData.message}
                   ></textarea>
                 </div>
 
@@ -223,7 +230,6 @@ const Contact = () => {
                   {isOk ? "Formulaire envoyé avec succès" : ""}
                 </p>
 
-                {/* Bouton Envoyer */}
                 <div className="mt-4">
                   <button
                     type="submit"
@@ -237,47 +243,49 @@ const Contact = () => {
           </div>
         </div>
       </section>
+
       {showModal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-white rounded-lg shadow-2xl md:w-1/4 border border-gray-200">
-            {/* Header */}
             <div className="px-4 py-3 border-b border-gray-200">
               <h3 className="text-sm text-center text-gray-600 font-medium">
                 Confirmez que vous êtes humain
               </h3>
             </div>
 
-            {/* Main Content */}
             <div className="p-4 flex gap-8 items-center justify-between">
-              {/* Checkbox Section */}
               <div className="flex items-center gap-3 relative">
-                <input
-                  type="checkbox"
-                  checked={isVerified}
-                  onChange={handleCheckboxChange}
-                  className="w-6 h-6 border-2 border-gray-300 rounded cursor-pointer accent-blue-600"
-                />
-                {isVerified && (
-                  <svg
-                    className="absolute left-1 top-1 w-4 h-4 text-white pointer-events-none"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="3"
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                )}
-                <span className="text-sm text-gray-700 font-medium">
+                <div
+                  className={`w-6 h-6 border-2 rounded cursor-pointer flex items-center justify-center ${
+                    isVerified
+                      ? "bg-blue-600 border-blue-600"
+                      : "border-gray-300"
+                  }`}
+                  onClick={handleCheckboxChange}
+                >
+                  {isLoadingCaptcha ? (
+                    <div className="animate-spin rounded-full h-4 w-4 border-2 border-t-transparent border-blue-500"></div>
+                  ) : isVerified ? (
+                    <svg
+                      className="w-4 h-4 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="3"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  ) : null}
+                </div>
+                <span className="text-sm text-gray-700 font-medium select-none">
                   Je ne suis pas un robot
                 </span>
               </div>
 
-              {/* Cloudflare Logo */}
               <div className="flex flex-col items-end">
                 <Image
                   unoptimized
@@ -291,6 +299,7 @@ const Contact = () => {
           </div>
         </div>
       )}
+
       <Footer />
     </main>
   );
