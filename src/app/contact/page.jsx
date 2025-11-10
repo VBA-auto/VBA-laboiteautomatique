@@ -14,7 +14,6 @@ const Contact = () => {
   const [isError, setIsError] = useState(false);
   const [isTel, setIsTel] = useState(false);
   const [isOk, setIsOk] = useState(false);
-  const [showModal, setShowModal] = useState(false);
   const [isVerified, setIsVerified] = useState(false);
   const [isLoadingCaptcha, setIsLoadingCaptcha] = useState(false);
 
@@ -44,13 +43,12 @@ const Contact = () => {
       return;
     }
 
-    // If user not verified, show captcha modal
+    // Block if CAPTCHA not verified
     if (!isVerified) {
-      setShowModal(true);
+      alert("Veuillez confirmer que vous n'êtes pas un robot.");
       return;
     }
 
-    // If verified, send the form
     try {
       const response = await fetch("/api/contactForm", {
         method: "POST",
@@ -81,14 +79,12 @@ const Contact = () => {
   // Handle CAPTCHA checkbox click
   const handleCheckboxChange = () => {
     if (isVerified || isLoadingCaptcha) return;
-
     setIsLoadingCaptcha(true);
 
-    // Simulate 2 seconds of verification
+    // Simulate verification delay
     setTimeout(() => {
       setIsLoadingCaptcha(false);
       setIsVerified(true);
-      setShowModal(false);
     }, 1000);
   };
 
@@ -230,10 +226,54 @@ const Contact = () => {
                   {isOk ? "Formulaire envoyé avec succès" : ""}
                 </p>
 
-                <div className="mt-4">
+                {/* Captcha and Button Side by Side */}
+                <div className="mt-6 flex flex-col md:flex-row items-center justify-between gap-4">
+                  {/* CAPTCHA Section */}
+                  <div
+                    className="flex items-center gap-3 cursor-pointer select-none"
+                    onClick={handleCheckboxChange}
+                  >
+                    <div
+                      className={`w-6 h-6 border-2 rounded flex items-center justify-center ${
+                        isVerified
+                          ? "bg-blue-600 border-blue-600"
+                          : "border-gray-300"
+                      }`}
+                    >
+                      {isLoadingCaptcha ? (
+                        <div className="animate-spin rounded-full h-4 w-4 border-2 border-t-transparent border-blue-500"></div>
+                      ) : isVerified ? (
+                        <svg
+                          className="w-4 h-4 text-white"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="3"
+                            d="M5 13l4 4L19 7"
+                          />
+                        </svg>
+                      ) : null}
+                    </div>
+                    <span className="text-sm text-gray-700 font-medium">
+                      Je ne suis pas un robot
+                    </span>
+                    {/* <Image
+                      unoptimized
+                      width={60}
+                      height={80}
+                      src={googleLogo}
+                      alt="Google"
+                    /> */}
+                  </div>
+
+                  {/* Submit Button */}
                   <button
                     type="submit"
-                    className="text-[#2C80EF] bg-transparent text-[15px] border border-[#2c80ef] py-2 px-10 rounded-md hover:bg-[#2C80EF] hover:text-white block mx-auto"
+                    className="text-[#2C80EF] bg-transparent text-[15px] border border-[#2c80ef] py-2 px-10 rounded-md hover:bg-[#2C80EF] hover:text-white"
                   >
                     Envoyer
                   </button>
@@ -243,63 +283,6 @@ const Contact = () => {
           </div>
         </div>
       </section>
-
-      {showModal && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white rounded-lg shadow-2xl md:w-1/4 border border-gray-200">
-            <div className="px-4 py-3 border-b border-gray-200">
-              <h3 className="text-sm text-center text-gray-600 font-medium">
-                Confirmez que vous êtes humain
-              </h3>
-            </div>
-
-            <div className="p-4 flex gap-8 items-center justify-between">
-              <div className="flex items-center gap-3 relative">
-                <div
-                  className={`w-6 h-6 border-2 rounded cursor-pointer flex items-center justify-center ${
-                    isVerified
-                      ? "bg-blue-600 border-blue-600"
-                      : "border-gray-300"
-                  }`}
-                  onClick={handleCheckboxChange}
-                >
-                  {isLoadingCaptcha ? (
-                    <div className="animate-spin rounded-full h-4 w-4 border-2 border-t-transparent border-blue-500"></div>
-                  ) : isVerified ? (
-                    <svg
-                      className="w-4 h-4 text-white"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="3"
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                  ) : null}
-                </div>
-                <span className="text-sm text-gray-700 font-medium select-none">
-                  Je ne suis pas un robot
-                </span>
-              </div>
-
-              <div className="flex flex-col items-end">
-                <Image
-                  unoptimized
-                  width={70}
-                  height={100}
-                  src={googleLogo}
-                  alt="Google Reviews"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-
       <Footer />
     </main>
   );
