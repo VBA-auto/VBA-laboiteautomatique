@@ -611,5 +611,17 @@
     "description": "Circuit moteur tambour Vitesse 2. Court circuit au +12 volts",
     "subTitle": "Drum motor circuit Speed 2. Short circuit to +12 volts",
     "aide": "Problème de calculateur"
+  },
+  {
+    "code": "DF427",
+    "description": "Circuit contacteur position levier signal constant",
+    "subTitle": "Lever position switch circuit – constant signal",
+    "aide": "Problème avec le selecteur"
+  },
+  {
+    "code": "DF425",
+    "description": "Circuit contacteur position levier signal non plausible",
+    "subTitle": "Lever position switch circuit – implausible signal",
+    "aide": "Problème avec le selecteur"
   }
 ]
