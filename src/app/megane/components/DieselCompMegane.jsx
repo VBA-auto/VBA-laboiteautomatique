@@ -138,7 +138,7 @@ const DieselCompMegane = () => {
                       <p className="text-[14px] text-gray-400">
                         Info complémentaire
                       </p>
-                      <p className="text-[15px]">Mégane de 2008 à 2012</p>
+                      <p className="text-[15px]">Mégane à partir de 2009</p>
                     </div>
                     <div className="px-4 mb-3">
                       <p className="text-[14px] text-gray-400">Référence OE</p>
